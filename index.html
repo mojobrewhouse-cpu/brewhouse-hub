@@ -2,219 +2,106 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>The Brewhouse — Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brewhouse Hub</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-:root {
-  --bg: #0f0a04; --panel: #1c1207; --card: #231608;
-  --border: #3d2a10; --copper: #b5651d; --amber: #d4900a;
-  --cream: #f5ead8; --muted: #7a6648;
-}
-body {
-  background: var(--bg);
-  color: var(--cream);
-  font-family: -apple-system, 'Segoe UI', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 16px;
-}
-.logo { font-size: 56px; margin-bottom: 10px; }
-h1 {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  color: var(--amber);
-  letter-spacing: 2px;
-  margin-bottom: 4px;
-}
-.sub { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  width: 100%;
-  max-width: 500px;
-}
-@media (min-width: 600px) {
-  .grid { grid-template-columns: 1fr 1fr 1fr; max-width: 700px; }
-}
-
-.tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-decoration: none;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px 14px;
-  transition: border-color 0.2s, transform 0.15s;
-  min-height: 130px;
-}
-.tile:hover, .tile:active {
-  border-color: var(--copper);
-  transform: scale(0.97);
-}
-.tile .t-icon { font-size: 38px; margin-bottom: 10px; }
-.tile .t-label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--cream);
-  line-height: 1.3;
-}
-.tile .t-sub {
-  font-size: 11px;
-  color: var(--muted);
-  margin-top: 4px;
-}
-
-.tile.featured {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  gap: 16px;
-  text-align: left;
-  padding: 20px 24px;
-  background: linear-gradient(135deg, #231608, #2c1f0e);
-  border-color: var(--copper);
-  min-height: auto;
-}
-.tile.featured .t-icon { font-size: 44px; margin-bottom: 0; flex-shrink: 0; }
-.tile.featured .t-label { font-size: 17px; }
-
-.divider {
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-  font-size: 11px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 20px 0 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.divider::before, .divider::after {
-  content: ''; flex: 1; height: 1px; background: var(--border);
-}
-@media (min-width: 600px) {
-  .divider { max-width: 700px; }
-}
-
-footer {
-  margin-top: 36px;
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0f0f12;
+    color: #e0e0e8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  h1 {
+    font-size: 2.2rem;
+    color: #f0c040;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #8888a0;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+  }
+  .card {
+    background: #1a1a24;
+    border: 1px solid #2a2a3a;
+    border-radius: 12px;
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .card:hover {
+    border-color: #f0c040;
+    transform: translateY(-3px);
+  }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f0c040;
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    font-size: 0.85rem;
+    color: #8888a0;
+    line-height: 1.4;
+  }
+  .footer {
+    margin-top: 40px;
+    color: #555568;
+    font-size: 0.8rem;
+  }
 </style>
 </head>
 <body>
+  <h1>🎿 Brewhouse Hub</h1>
+  <p class="subtitle">Santa Barbara Brewhouse – Morning Dashboard</p>
 
-<div class="logo">🍺</div>
-<h1>The Brewhouse</h1>
-<p class="sub">Internal Hub · For staff and management use only</p>
+  <div class="cards">
 
-<div class="grid">
+    <a class="card" href="Brewhouse_Command_Center.html">
+      <div class="card-icon">👏</div>
+      <div class="card-title">Command Center</div>
+      <div class="card-desc">Morning brief, sales, staff, reviews & action items</div>
+    </a>
 
-  <!-- FEATURED: Command Center -->
-  <a class="tile featured" href="Brewhouse_Command_Center.html">
-    <span class="t-icon">📊</span>
-    <div>
-      <div class="t-label">Command Center</div>
-      <div class="t-sub">Morning briefing · Sales · Staff · Social posts · Daily checklist</div>
-    </div>
-  </a>
+    <a class="card" href="Brewhouse_Morning_Report.html">
+      <div class="card-icon">📅</div>
+      <div class="card-title">Morning Report</div>
+      <div class="card-desc">Auto-updating daily report from Toast & Sling</div>
+    </a>
 
-</div>
+    <a class="card" href="Brewhouse_Menu_Builder.html">
+      <div class="card-icon">🖨️</div>
+      <div class="card-title">Menu Builder</div>
+      <div class="card-desc">Print-ready weekly specials menu</div>
+    </a>
 
-<div class="divider">Management Tools</div>
+    <a class="card" href="Brewhouse_Staff_Hub.html">
+      <div class="card-icon">📱</div>
+      <div class="card-title">Staff Hub</div>
+      <div class="card-desc">Tips, floor notes & shift summaries</div>
+    </a>
 
-<div class="grid">
-  <a class="tile" href="Brewhouse_Menu_Builder.html">
-    <span class="t-icon">🖨️</span>
-    <div class="t-label">Menu Builder</div>
-    <div class="t-sub">Print weekly specials</div>
-  </a>
+  </div>
 
-  <a class="tile" href="Brewhouse_Staff_Hub.html">
-    <span class="t-icon">👥</span>
-    <div class="t-label">Staff Hub</div>
-    <div class="t-sub">Kitchen · Bar · Host Stand</div>
-  </a>
-
-  <a class="tile" href="https://www.spothopperapp.com/admin/spots/82093" target="_blank">
-    <span class="t-icon">🌐</span>
-    <div class="t-label">Spothopper</div>
-    <div class="t-sub">Website & marketing</div>
-  </a>
-
-  <a class="tile" href="https://www.toasttab.com/restaurants/admin" target="_blank">
-    <span class="t-icon">🥂</span>
-    <div class="t-label">Toast POS</div>
-    <div class="t-sub">Sales & reports</div>
-  </a>
-
-  <a class="tile" href="https://app.getsling.com" target="_blank">
-    <span class="t-icon">📅</span>
-    <div class="t-label">Sling</div>
-    <div class="t-sub">Staff scheduling</div>
-  </a>
-
-  <a class="tile" href="https://www.instacart.com/" target="_blank">
-    <span class="t-icon">🛒</span>
-    <div class="t-label">Instacart</div>
-    <div class="t-sub">Order supplies</div>
-  </a>
-</div>
-
-<div class="divider">Marketing</div>
-
-<div class="grid">
-  <a class="tile" href="https://ads.google.com" target="_blank">
-    <span class="t-icon">📣</span>
-    <div class="t-label">Google Ads</div>
-    <div class="t-sub">Campaigns & spend</div>
-  </a>
-
-  <a class="tile" href="https://business.google.com" target="_blank">
-    <span class="t-icon">⭐</span>
-    <div class="t-label">Google Business</div>
-    <div class="t-sub">Reviews & profile</div>
-  </a>
-
-  <a class="tile" href="https://biz.yelp.com" target="_blank">
-    <span class="t-icon">🌟</span>
-    <div class="t-label">Yelp Business</div>
-    <div class="t-sub">Reviews & stats</div>
-  </a>
-
-  <a class="tile" href="https://twitter.com" target="_blank">
-    <span class="t-icon">𝕏</span>
-    <div class="t-label">X / Twitter</div>
-    <div class="t-sub">Post & monitor</div>
-  </a>
-
-  <a class="tile" href="https://sbbrewhouse.com" target="_blank">
-    <span class="t-icon">🏠</span>
-    <div class="t-label">Our Website</div>
-    <div class="t-sub">sbbrewhouse.com</div>
-  </a>
-
-  <a class="tile" href="https://www.spothopperapp.com/admin/spots/82093/qr_code_flyers" target="_blank">
-    <span class="t-icon">📲</span>
-    <div class="t-label">QR Flyers</div>
-    <div class="t-sub">Table tents & menus</div>
-  </a>
-</div>
-
-<footer>The Brewhouse Santa Barbara · 229 West Montecito Street · Internal use only</footer>
-
+  <p class="footer">Auto-updates each morning at :40AM . Santa Barbara Brewhouse · Confidential</p>
 </body>
 </html>
