@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brewhouse Menu Builder</title>
+<style>
+/* ════════════════════════════
+   RESET & BASE
+════════════════════════════ */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#111;color:#ddd;height:100vh;overflow:hidden;}
+
+/* ════════════════════════════
+   APP SHELL — 3 zones
+════════════════════════════ */
+.app{display:flex;height:100vh;}
+
+/* Zone 1 – Library sidebar */
+.lib{width:240px;flex-shrink:0;background:#1a1a1a;border-right:1px solid #2a2a2a;display:flex;flex-direction:column;overflow:hidden;}
+
+/* Zone 2 – Editor */
+.editor{width:400px;flex-shrink:0;background:#222;border-right:1px solid #2a2a2a;display:flex;flex-direction:column;overflow:hidden;}
+
+/* Zone 3 – Preview */
+.preview{flex:1;background:#2c2c2c;display:flex;flex-direction:column;overflow:hidden;}
+
+/* ════════════════════════════
+   SHARED HEADER BARS
+════════════════════════════ */
+.bar{background:#0a0a0a;padding:10px 14px;display:flex;align-items:center;gap:8px;flex-shrink:0;border-bottom:1px solid #2a2a2a;}
+.bar h2{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#aaa;flex:1;}
+.bar .icon{font-size:16px;}
+
+/* ════════════════════════════
+   LIBRARY PANEL
+════════════════════════════ */
+.lib-scroll{flex:1;overflow-y:auto;padding:10px;}
+.lib-empty{text-align:center;padding:30px 10px;color:#555;font-size:12px;line-height:1.6;}
+.lib-empty .e{font-size:28px;margin-bottom:8px;}
+
+.lib-card{background:#2a2a2a;border:1px solid #333;border-radius:8px;padding:10px;margin-bottom:8px;cursor:pointer;transition:all .15s;position:relative;}
+.lib-card:hover{border-color:#c8a96e;background:#2e2a20;}
+.lib-card .lc-date{font-size:10px;color:#c8a96e;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px;}
+.lib-card .lc-title{font-size:13px;font-weight:600;color:#eee;line-height:1.3;}
+.lib-card .lc-count{font-size:11px;color:#666;margin-top:3px;}
+.lib-card .lc-del{position:absolute;top:8px;right:8px;background:none;border:none;color:#444;cursor:pointer;font-size:14px;line-height:1;padding:2px;}
+.lib-card .lc-del:hover{color:#e55;}
+
+.lib-section{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#555;margin:12px 0 6px;padding:0 2px;}
+
+/* ════════════════════════════
+   TAB STRIP (editor tabs)
+════════════════════════════ */
+.tabs{display:flex;background:#111;border-bottom:1px solid #2a2a2a;flex-shrink:0;}
+.tab{flex:1;padding:9px 4px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#555;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;}
+.tab.active{color:#c8a96e;border-bottom-color:#c8a96e;background:#1a1a1a;}
+.tab:hover:not(.active){color:#999;background:#1a1a1a;}
+
+/* ════════════════════════════
+   EDITOR BODY
+════════════════════════════ */
+.editor-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:12px;}
+.panel{display:none;}
+.panel.active{display:flex;flex-direction:column;gap:12px;}
+
+/* ════════════════════════════
+   CARDS
+════════════════════════════ */
+.card{background:#1a1a1a;border:1px solid #2e2e2e;border-radius:9px;padding:13px;}
+.card-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c8a96e;margin-bottom:10px;}
+
+/* ════════════════════════════
+   FORM ELEMENTS
+════════════════════════════ */
+.fl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:5px;margin-top:8px;}
+.fl:first-child{margin-top:0;}
+input[type=text],textarea,select{width:100%;background:#111;border:1px solid #333;border-radius:6px;color:#ddd;padding:8px 10px;font-size:13px;font-family:inherit;outline:none;transition:border-color .15s;}
+input[type=text]:focus,textarea:focus{border-color:#c8a96e;}
+textarea{resize:vertical;min-height:50px;line-height:1.4;}
+input::placeholder,textarea::placeholder{color:#444;}
+.row2{display:flex;gap:8px;}
+.row2>*{flex:1;}
+
+/* ════════════════════════════
+   SIZE TOGGLE
+════════════════════════════ */
+.size-toggle{display:flex;border:1px solid #333;border-radius:7px;overflow:hidden;}
+.sz{flex:1;background:#111;color:#666;border:none;padding:8px 6px;cursor:pointer;font-size:11px;font-weight:700;font-family:inherit;letter-spacing:.05em;text-align:center;transition:all .15s;}
+.sz small{display:block;font-weight:400;font-size:9px;color:#555;margin-top:1px;}
+.sz.active{background:#c8a96e;color:#000;}
+.sz small.active-sub{color:#7a6010;}
+.sz:hover:not(.active){background:#1e1e1e;color:#aaa;}
+
+/* ════════════════════════════
+   ITEM CARDS
+════════════════════════════ */
+.items-wrap{display:flex;flex-direction:column;gap:9px;}
+.ic{background:#111;border:1px solid #2e2e2e;border-radius:8px;padding:11px;position:relative;}
+.ic:hover{border-color:#3a3a3a;}
+.ic-top{display:flex;gap:7px;align-items:center;margin-bottom:7px;}
+.ic-num{font-size:10px;color:#555;font-weight:700;width:16px;flex-shrink:0;}
+.ic-name{flex:1;}
+.ic-price{width:64px!important;flex:none!important;text-align:center;}
+.ic-del{background:none;border:none;color:#444;cursor:pointer;font-size:14px;padding:2px 4px;border-radius:4px;line-height:1;flex-shrink:0;}
+.ic-del:hover{color:#e55;background:#2a1010;}
+
+/* ════════════════════════════
+   BUTTONS
+════════════════════════════ */
+.btn{border:none;border-radius:7px;font-size:12px;font-weight:700;cursor:pointer;padding:8px 14px;display:inline-flex;align-items:center;gap:5px;transition:all .15s;font-family:inherit;letter-spacing:.03em;}
+.btn-add{background:#152015;color:#6db86d;border:1px dashed #3a6a3a;width:100%;justify-content:center;margin-top:4px;}
+.btn-add:hover{background:#1e2e1e;border-color:#6db86d;}
+.btn-gold{background:#2a2010;color:#c8a96e;border:1px solid #5a4020;}
+.btn-gold:hover{background:#332818;}
+.btn-blue{background:#0f1e2e;color:#6aaad8;border:1px solid #1e4060;}
+.btn-blue:hover{background:#152535;}
+.btn-red{background:#200f0f;color:#d87878;border:1px solid #502020;}
+.btn-red:hover{background:#2a1212;}
+.btn-print{background:#000;color:#fff;border:1px solid #444;padding:9px 18px;font-size:13px;}
+.btn-print:hover{background:#1a1a1a;}
+.btn-green{background:#0f2010;color:#78d878;border:1px solid #205020;}
+.btn-green:hover{background:#142814;}
+
+/* ════════════════════════════
+   TOAST IMPORT
+════════════════════════════ */
+.toast-box{background:#111;border:1px dashed #2a4a2a;border-radius:8px;padding:10px;}
+.toast-box textarea{min-height:80px;font-size:11px;}
+.toast-hint{font-size:11px;color:#556655;line-height:1.5;margin-bottom:8px;}
+.toast-hint strong{color:#7a9a7a;}
+
+/* ════════════════════════════
+   PREVIEW AREA
+════════════════════════════ */
+.preview-bar{background:#0a0a0a;padding:9px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #2a2a2a;flex-shrink:0;}
+.preview-bar span{font-size:11px;color:#555;letter-spacing:.08em;text-transform:uppercase;flex:1;}
+.preview-scroll{flex:1;overflow-y:auto;padding:20px;display:flex;justify-content:center;}
+
+/* ════════════════════════════
+   NOTIFICATION
+════════════════════════════ */
+.notif{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:#2a2a2a;color:#fff;padding:9px 20px;border-radius:20px;font-size:13px;font-weight:600;transition:transform .25s;z-index:9999;pointer-events:none;border:1px solid #444;}
+.notif.show{transform:translateX(-50%) translateY(0);}
+
+/* ════════════════════════════
+   MENU CARD (print output)
+════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+.menu-card{background:#fff;color:#000;font-family:'Pristina','Cormorant Garamond','Palatino Linotype',Georgia,serif;box-shadow:0 6px 40px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;}
+
+.menu-card.s5{width:5in;min-height:7in;padding:.32in .38in .28in;border:2px solid #000;}
+.menu-card.sf{width:8.5in;min-height:11in;padding:.5in .6in .4in;border:2px solid #000;}
+
+.mh{text-align:center;width:100%;margin-bottom:6px;}
+.mn{font-size:30pt;font-weight:700;letter-spacing:.05em;text-transform:uppercase;line-height:1;color:#000;}
+.ms{font-size:10pt;letter-spacing:.28em;text-transform:uppercase;color:#000;margin-top:2px;}
+.ma{font-size:8.5pt;letter-spacing:.1em;color:#000;margin-top:2px;}
+.mr{border:none;border-top:1.5px solid #000;width:100%;margin:5px 0;}
+.mrt{border:none;border-top:.5px solid #888;width:100%;margin:4px 0;}
+.msh{text-align:center;width:100%;margin:4px 0;}
+.mst{font-size:20pt;font-style:italic;color:#000;letter-spacing:.03em;}
+.msd{font-size:9pt;letter-spacing:.18em;text-transform:uppercase;color:#000;margin-top:1px;}
+.mi{margin-bottom:8px;}
+.mir{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+.min{font-style:italic;font-size:13pt;color:#000;line-height:1.2;flex:1;}
+.mip{font-weight:700;font-size:12pt;color:#000;white-space:nowrap;}
+.mid{font-size:8.5pt;color:#333;line-height:1.4;margin-top:1px;}
+.mtag{display:inline-block;font-size:7pt;letter-spacing:.08em;text-transform:uppercase;border:.5px solid #aaa;color:#666;padding:0 4px;border-radius:2px;margin-left:4px;vertical-align:middle;}
+.mf{margin-top:auto;padding-top:8px;border-top:1px solid #000;text-align:center;width:100%;font-size:7.5pt;letter-spacing:.1em;color:#000;}
+.mft{font-style:italic;font-size:9pt;display:block;margin-top:2px;}
+
+/* full-size two-col */
+.menu-card.sf .mn{font-size:42pt;}
+.menu-card.sf .mst{font-size:26pt;}
+.menu-card.sf .min{font-size:14pt;}
+.menu-card.sf .mip{font-size:13pt;}
+.menu-card.sf .mid{font-size:9pt;}
+.menu-card.sf .mi{margin-bottom:11px;}
+.mcols{display:flex;gap:.4in;width:100%;flex:1;}
+.mcol{flex:1;}
+.mcdiv{width:1px;background:#000;flex-shrink:0;}
+.msec{font-size:9pt;font-weight:700;letter-spacing:.22em;text-transform:uppercase;text-align:center;border-top:1px solid #000;border-bottom:1px solid #000;padding:3px 0;margin:0 0 8px;color:#000;}
+.empty-prev{text-align:center;padding:60px 20px;color:#666;font-family:-apple-system,sans-serif;font-size:14px;line-height:1.8;}
+.empty-prev .ep{font-size:36px;margin-bottom:8px;}
+
+/* ════════════════════════════
+   PRINT
+════════════════════════════ */
+@media print{
+  .lib,.editor,.preview-bar,.notif{display:none!important;}
+  .preview{display:block!important;background:white!important;overflow:visible!important;}
+  .preview-scroll{display:block;padding:0;overflow:visible;}
+  body{background:white!important;overflow:visible!important;}
+  .menu-card{margin:0!important;box-shadow:none!important;}
+  @page{margin:0;}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+<!-- ══════════════════════════════
+     ZONE 1: LIBRARY
+══════════════════════════════ -->
+<div class="lib">
+  <div class="bar">
+    <span class="icon">📚</span>
+    <h2>Specials Library</h2>
+  </div>
+  <div class="lib-scroll" id="lib-list">
+    <div class="lib-empty"><div class="e">📋</div>Saved specials will appear here.<br>Build a week and hit<br><strong style="color:#c8a96e">Save to Library</strong>.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     ZONE 2: EDITOR
+══════════════════════════════ -->
+<div class="editor">
+  <div class="bar">
+    <span class="icon">🍺</span>
+    <h2>Brewhouse Menu Builder</h2>
+  </div>
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('build',this)">✏️ Build</div>
+    <div class="tab" onclick="switchTab('toast',this)">🍞 From Toast</div>
+    <div class="tab" onclick="switchTab('settings',this)">⚙️ Settings</div>
+  </div>
+
+  <div class="editor-body">
+
+    <!-- ── TAB: BUILD ── -->
+    <div class="panel active" id="tab-build">
+
+      <div class="card">
+        <div class="card-label">📋 Heading &amp; Date</div>
+        <div class="fl">Specials Title</div>
+        <input type="text" id="sp-title" value="This Week's Specials" oninput="renderMenu()">
+        <div class="fl">Date / Range</div>
+        <input type="text" id="sp-date" placeholder="e.g. March 17 – 23, 2026" oninput="renderMenu()">
+      </div>
+
+      <div class="card">
+        <div class="card-label">📐 Print Size</div>
+        <div class="size-toggle">
+          <button class="sz active" onclick="setSize('5x7',this)">5 × 7 in<small>Table Card</small></button>
+          <button class="sz" onclick="setSize('full',this)">8.5 × 11 in<small>Full Size</small></button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">🍽️ Special Items</div>
+        <div class="items-wrap" id="items-list"></div>
+        <button class="btn btn-add" onclick="addItem()">+ Add Item</button>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn btn-gold" onclick="saveToLibrary()" style="flex:1;">💾 Save to Library</button>
+        <button class="btn btn-blue" onclick="exportFile()" style="flex:1;">⬇ Export File</button>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-red" onclick="clearAll()" style="flex:1;">✕ Clear</button>
+        <label style="flex:1;">
+          <button class="btn btn-blue" onclick="this.closest('label').querySelector('input').click()" style="width:100%;">⬆ Import File</button>
+          <input type="file" accept=".json" style="display:none" onchange="importFile(event)">
+        </label>
+      </div>
+
+    </div><!-- /tab-build -->
+
+    <!-- ── TAB: TOAST IMPORT ── -->
+    <div class="panel" id="tab-toast">
+      <div class="card">
+        <div class="card-label">🍞 Import from Toast POS</div>
+        <div class="toast-hint">
+          <strong>Option A — Paste:</strong> In Toast, go to your menu items and copy the name &amp; description for each special. Paste them below, one item per line, like:<br>
+          <span style="font-family:monospace;color:#8ab88a;font-size:10px;">Chicken Parmesan | Crispy breaded chicken, marinara | 18<br>Fish Tacos | Beer-battered cod, slaw | 13</span>
+        </div>
+        <textarea id="toast-paste" placeholder="Paste your Toast items here — one per line&#10;Format: Name | Description | Price" style="min-height:120px;font-size:12px;"></textarea>
+        <button class="btn btn-green" onclick="parsePaste()" style="width:100%;margin-top:8px;justify-content:center;">→ Load These Items</button>
+      </div>
+
+      <div class="card">
+        <div class="card-label">📄 Upload Toast CSV Export</div>
+        <div class="toast-hint">
+          <strong>Option B — CSV:</strong> From Toast go to <em>Menu → Export</em>. Upload that CSV file here and we'll pull in the items automatically.
+        </div>
+        <label>
+          <button class="btn btn-blue" onclick="this.closest('label').querySelector('input').click()" style="width:100%;justify-content:center;">📂 Upload Toast CSV</button>
+          <input type="file" accept=".csv,.txt" style="display:none" onchange="parseCSV(event)">
+        </label>
+      </div>
+
+      <div class="card" style="background:#151515;">
+        <div class="card-label" style="color:#666;">💡 Tips</div>
+        <div style="font-size:11px;color:#555;line-height:1.7;">
+          • After loading, switch to the <strong style="color:#aaa">Build</strong> tab to review &amp; edit items<br>
+          • You can add a price or description to any item after importing<br>
+          • Toast descriptions carry over automatically if you've added them in the POS
+        </div>
+      </div>
+    </div><!-- /tab-toast -->
+
+    <!-- ── TAB: SETTINGS ── -->
+    <div class="panel" id="tab-settings">
+      <div class="card">
+        <div class="card-label">🏠 Restaurant Info</div>
+        <div class="fl">Name (top of menu)</div>
+        <input type="text" id="set-name" value="The Brewhouse" oninput="renderMenu()">
+        <div class="fl">Tagline / City</div>
+        <input type="text" id="set-sub" value="Santa Barbara" oninput="renderMenu()">
+        <div class="fl">Address (full-size only)</div>
+        <input type="text" id="set-addr" value="229 W. Montecito Street · Santa Barbara, CA · (805) 965-6655" oninput="renderMenu()">
+        <div class="fl">Footer Note</div>
+        <input type="text" id="set-footer" value="Ask your server about daily features" oninput="renderMenu()">
+      </div>
+      <div class="card">
+        <div class="card-label">🗑️ Library Management</div>
+        <div style="font-size:11px;color:#666;margin-bottom:10px;line-height:1.5;">Total saved: <strong id="lib-count" style="color:#c8a96e;">0</strong> weeks</div>
+        <button class="btn btn-red" onclick="clearLibrary()" style="width:100%;justify-content:center;">Clear Entire Library</button>
+      </div>
+    </div><!-- /tab-settings -->
+
+  </div><!-- /editor-body -->
+</div><!-- /editor -->
+
+<!-- ══════════════════════════════
+     ZONE 3: PREVIEW
+══════════════════════════════ -->
+<div class="preview">
+  <div class="preview-bar">
+    <span>Live Preview</span>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+  <div class="preview-scroll">
+    <div id="menu-out"></div>
+  </div>
+</div>
+
+</div><!-- /app -->
+<div class="notif" id="notif"></div>
+
+<script>
+// ════════════════════════════
+//  STATE
+// ════════════════════════════
+let curSize = '5x7';
+let items = [];
+
+const DEFAULT = [
+  {name:'',price:'',desc:'',tag:''},
+  {name:'',price:'',desc:'',tag:''},
+  {name:'',price:'',desc:'',tag:''},
+];
+
+// ════════════════════════════
+//  INIT
+// ════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  items = DEFAULT.map(i=>({...i}));
+  renderEditors();
+  renderMenu();
+  loadLibraryUI();
+  updateLibCount();
+});
+
+// ════════════════════════════
+//  TABS
+// ════════════════════════════
+function switchTab(name, el) {
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-'+name).classList.add('active');
+}
+
+// ════════════════════════════
+//  SIZE
+// ════════════════════════════
+function setSize(s, btn) {
+  curSize = s;
+  document.querySelectorAll('.sz').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  renderMenu();
+}
+
+// ════════════════════════════
+//  ITEMS EDITOR
+// ════════════════════════════
+function addItem() {
+  items.push({name:'',price:'',desc:'',tag:''});
+  renderEditors();
+  renderMenu();
+}
+
+function removeItem(i) {
+  items.splice(i,1);
+  renderEditors();
+  renderMenu();
+}
+
+function upd(i, field, val) {
+  items[i][field] = val;
+  renderMenu();
+}
+
+function renderEditors() {
+  const list = document.getElementById('items-list');
+  list.innerHTML = items.map((it,i) => `
+    <div class="ic">
+      <div class="ic-top">
+        <span class="ic-num">${i+1}</span>
+        <input type="text" class="ic-name" placeholder="Item name"
+          value="${esc(it.name)}" oninput="upd(${i},'name',this.value)">
+        <input type="text" class="ic-price" placeholder="$0"
+          value="${esc(it.price)}" oninput="upd(${i},'price',this.value)">
+        <button class="ic-del" onclick="removeItem(${i})" title="Remove">✕</button>
+      </div>
+      <textarea placeholder="Description (ingredients, how it's made…)"
+        oninput="upd(${i},'desc',this.value)">${esc(it.desc)}</textarea>
+      <input type="text" placeholder='Tag — "Local" / "GF" / "Chef\'s Pick" (optional)'
+        value="${esc(it.tag)}" oninput="upd(${i},'tag',this.value)"
+        style="margin-top:6px;font-size:11px;">
+    </div>`).join('');
+}
+
+// ════════════════════════════
+//  RENDER MENU
+// ════════════════════════════
+function renderMenu() {
+  const title  = v('sp-title')   || "This Week's Specials";
+  const date   = v('sp-date')    || '';
+  const name   = v('set-name')   || 'The Brewhouse';
+  const sub    = v('set-sub')    || 'Santa Barbara';
+  const addr   = v('set-addr')   || '';
+  const footer = v('set-footer') || '';
+  const filled = items.filter(it=>it.name||it.desc);
+  const out = document.getElementById('menu-out');
+
+  if (!filled.length) {
+    out.innerHTML = `<div class="empty-prev"><div class="ep">🍽️</div>Fill in your specials on the left<br>and they'll appear here, print-ready.</div>`;
+    return;
+  }
+
+  out.innerHTML = curSize === '5x7'
+    ? build5x7(title,date,name,sub,footer,filled)
+    : buildFull(title,date,name,sub,addr,footer,filled);
+}
+
+function iHtml(list) {
+  return list.map(it=>`
+    <div class="mi">
+      <div class="mir">
+        <span class="min">${h(it.name||'—')}${it.tag?`<span class="mtag">${h(it.tag)}</span>`:''}</span>
+        ${it.price?`<span class="mip">${h(it.price)}</span>`:''}
+      </div>
+      ${it.desc?`<div class="mid">${h(it.desc)}</div>`:''}
+    </div>`).join('');
+}
+
+function build5x7(title,date,name,sub,footer,filled) {
+  return `<div class="menu-card s5">
+    <div class="mh"><div class="mn">${h(name)}</div><div class="ms">${h(sub)}</div></div>
+    <hr class="mr">
+    <div class="msh"><div class="mst">${h(title)}</div>${date?`<div class="msd">${h(date)}</div>`:''}</div>
+    <hr class="mrt">
+    <div style="width:100%">${iHtml(filled)}</div>
+    ${footer?`<hr class="mr" style="margin-top:auto"><div class="mf">229 W. Montecito St. · Santa Barbara, CA<span class="mft">${h(footer)}</span></div>`:''}
+  </div>`;
+}
+
+function buildFull(title,date,name,sub,addr,footer,filled) {
+  const half = Math.ceil(filled.length/2);
+  const L = filled.slice(0,half), R = filled.slice(half);
+  return `<div class="menu-card sf">
+    <div class="mh">
+      <div class="mn">${h(name)}</div>
+      <div class="ms">${h(sub)}</div>
+      ${addr?`<div class="ma">${h(addr)}</div>`:''}
+    </div>
+    <hr class="mr">
+    <div class="msh"><div class="mst">${h(title)}</div>${date?`<div class="msd">${h(date)}</div>`:''}</div>
+    <hr class="mr">
+    <div class="mcols">
+      <div class="mcol"><div class="msec">Specials</div>${iHtml(L)}</div>
+      ${R.length?`<div class="mcdiv"></div><div class="mcol"><div class="msec">&nbsp;</div>${iHtml(R)}</div>`:''}
+    </div>
+    ${footer?`<hr class="mr" style="margin-top:auto"><div class="mf">${h(addr||'229 W. Montecito St. · Santa Barbara, CA')}<span class="mft">${h(footer)}</span></div>`:''}
+  </div>`;
+}
+
+// ════════════════════════════
+//  LIBRARY (localStorage)
+// ════════════════════════════
+const LIB_KEY = 'brewhouse_specials_library';
+
+function getLib() {
+  try { return JSON.parse(localStorage.getItem(LIB_KEY)||'[]'); }
+  catch(e) { return []; }
+}
+function setLib(arr) {
+  localStorage.setItem(LIB_KEY, JSON.stringify(arr));
+}
+
+function saveToLibrary() {
+  const title = v('sp-title') || "This Week's Specials";
+  const date  = v('sp-date')  || new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const filled = items.filter(it=>it.name||it.desc);
+  if (!filled.length) { notify('⚠️ Add some items first'); return; }
+
+  const lib = getLib();
+  const entry = {
+    id: Date.now(),
+    title,
+    date,
+    footer: v('set-footer'),
+    items: JSON.parse(JSON.stringify(items)),
+    saved: new Date().toISOString()
+  };
+  lib.unshift(entry);
+  setLib(lib);
+  loadLibraryUI();
+  updateLibCount();
+  notify('✅ Saved to Library!');
+}
+
+function loadFromLibrary(id) {
+  const lib = getLib();
+  const entry = lib.find(e=>e.id===id);
+  if (!entry) return;
+  document.getElementById('sp-title').value = entry.title||'';
+  document.getElementById('sp-date').value  = entry.date||'';
+  if (entry.footer) document.getElementById('set-footer').value = entry.footer;
+  items = entry.items||[];
+  renderEditors();
+  renderMenu();
+  // Switch to build tab
+  switchTab('build', document.querySelector('.tab'));
+  document.querySelectorAll('.tab')[0].classList.add('active');
+  notify('✅ Loaded: ' + (entry.date||entry.title));
+}
+
+function deleteFromLibrary(id, e) {
+  e.stopPropagation();
+  const lib = getLib().filter(en=>en.id!==id);
+  setLib(lib);
+  loadLibraryUI();
+  updateLibCount();
+  notify('Deleted');
+}
+
+function loadLibraryUI() {
+  const lib = getLib();
+  const el = document.getElementById('lib-list');
+  if (!lib.length) {
+    el.innerHTML = `<div class="lib-empty"><div class="e">📋</div>Saved specials will appear here.<br>Build a week and hit<br><strong style="color:#c8a96e">Save to Library</strong>.</div>`;
+    return;
+  }
+  el.innerHTML = `<div class="lib-section">Tap to load a week</div>` +
+    lib.map(e=>`
+      <div class="lib-card" onclick="loadFromLibrary(${e.id})">
+        <button class="lc-del" onclick="deleteFromLibrary(${e.id},event)" title="Delete">✕</button>
+        <div class="lc-date">${esc(e.date||'')}</div>
+        <div class="lc-title">${esc(e.title||'Specials')}</div>
+        <div class="lc-count">${(e.items||[]).filter(i=>i.name).length} items</div>
+      </div>`).join('');
+}
+
+function clearLibrary() {
+  if (!confirm('Delete ALL saved specials from the library? This cannot be undone.')) return;
+  localStorage.removeItem(LIB_KEY);
+  loadLibraryUI();
+  updateLibCount();
+  notify('Library cleared');
+}
+
+function updateLibCount() {
+  const el = document.getElementById('lib-count');
+  if (el) el.textContent = getLib().length;
+}
+
+// ════════════════════════════
+//  EXPORT / IMPORT FILE
+// ════════════════════════════
+function exportFile() {
+  const data = {
+    title:  v('sp-title'), date: v('sp-date'),
+    footer: v('set-footer'), items,
+    saved: new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})
+  };
+  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  const fn = (data.date||data.saved).replace(/[^a-z0-9]/gi,'_');
+  a.download = `Brewhouse_Specials_${fn}.json`;
+  a.click();
+  notify('✅ File exported');
+}
+
+function importFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const d = JSON.parse(e.target.result);
+      document.getElementById('sp-title').value = d.title||'';
+      document.getElementById('sp-date').value  = d.date||'';
+      if (d.footer) document.getElementById('set-footer').value = d.footer;
+      items = d.items||[];
+      renderEditors(); renderMenu();
+      notify('✅ Loaded: '+(d.date||file.name));
+    } catch { notify('❌ Could not read file'); }
+  };
+  r.readAsText(file);
+  event.target.value='';
+}
+
+// ════════════════════════════
+//  TOAST IMPORT
+// ════════════════════════════
+function parsePaste() {
+  const raw = document.getElementById('toast-paste').value.trim();
+  if (!raw) { notify('⚠️ Nothing pasted'); return; }
+  const newItems = [];
+  raw.split('\n').forEach(line => {
+    line = line.trim();
+    if (!line) return;
+    // Try pipe-separated: Name | Desc | Price
+    if (line.includes('|')) {
+      const parts = line.split('|').map(s=>s.trim());
+      newItems.push({ name: parts[0]||'', desc: parts[1]||'', price: parts[2]||'', tag:'' });
+    } else {
+      // Just a name
+      newItems.push({ name: line, desc:'', price:'', tag:'' });
+    }
+  });
+  if (!newItems.length) { notify('⚠️ Could not parse items'); return; }
+  items = newItems;
+  renderEditors(); renderMenu();
+  document.getElementById('toast-paste').value = '';
+  switchTab('build', document.querySelectorAll('.tab')[0]);
+  document.querySelectorAll('.tab')[0].classList.add('active');
+  notify(`✅ Loaded ${newItems.length} items from paste`);
+}
+
+function parseCSV(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = e => {
+    const lines = e.target.result.split('\n');
+    const newItems = [];
+    // Detect header row
+    let start = 0;
+    const header = lines[0].toLowerCase();
+    if (header.includes('name') || header.includes('item') || header.includes('menu')) start = 1;
+
+    for (let i = start; i < lines.length; i++) {
+      const row = parseCSVRow(lines[i]);
+      if (!row || !row[0]) continue;
+      // Common Toast export columns: Name, Description, Price, Category
+      const name  = (row[0]||'').trim();
+      const desc  = (row[1]||'').trim();
+      const price = (row[2]||'').trim();
+      if (name) newItems.push({ name, desc, price, tag:'' });
+    }
+
+    if (!newItems.length) { notify('⚠️ No items found in CSV'); return; }
+    items = newItems;
+    renderEditors(); renderMenu();
+    switchTab('build', document.querySelectorAll('.tab')[0]);
+    document.querySelectorAll('.tab')[0].classList.add('active');
+    notify(`✅ Imported ${newItems.length} items from CSV`);
+  };
+  r.readAsText(file);
+  event.target.value='';
+}
+
+function parseCSVRow(line) {
+  // Handle quoted CSV fields
+  const result = [];
+  let cur = '', inQ = false;
+  for (let ch of line) {
+    if (ch==='"') { inQ=!inQ; }
+    else if (ch===',' && !inQ) { result.push(cur); cur=''; }
+    else cur += ch;
+  }
+  result.push(cur);
+  return result.map(s=>s.replace(/^"|"$/g,'').trim());
+}
+
+// ════════════════════════════
+//  CLEAR
+// ════════════════════════════
+function clearAll() {
+  if (!confirm('Clear current items and start fresh?')) return;
+  document.getElementById('sp-title').value = "This Week's Specials";
+  document.getElementById('sp-date').value  = '';
+  items = [{name:'',price:'',desc:'',tag:''}];
+  renderEditors(); renderMenu();
+}
+
+// ════════════════════════════
+//  HELPERS
+// ════════════════════════════
+function v(id) { return (document.getElementById(id)?.value||'').trim(); }
+function esc(s){ return(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function h(s)  { return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function notify(msg) {
+  const el = document.getElementById('notif');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._t);
+  el._t = setTimeout(()=>el.classList.remove('show'), 2600);
+}
+</script>
+</body>
+</html>
