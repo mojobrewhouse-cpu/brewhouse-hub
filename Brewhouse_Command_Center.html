@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Brewhouse Command Center</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+:root {
+  --bg:       #0f0a04;
+  --panel:    #1c1207;
+  --card:     #231608;
+  --border:   #3d2a10;
+  --copper:   #b5651d;
+  --amber:    #d4900a;
+  --gold:     #f0c040;
+  --cream:    #f5ead8;
+  --muted:    #7a6648;
+  --green:    #2a7a40;
+  --red:      #8a2020;
+  --blue:     #1a4a7a;
+  --purple:   #5a2a8a;
+  --teal:     #1a7070;
+  --success:  #3a9a50;
+  --warn:     #c07a10;
+}
+
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: -apple-system, 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+/* ─── TOP BAR ─── */
+.topbar {
+  background: var(--panel);
+  border-bottom: 2px solid var(--copper);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.6);
+}
+
+.topbar-logo {
+  width: 46px; height: 46px;
+  background: var(--copper);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px var(--amber);
+}
+
+.topbar-title h1 {
+  font-size: 18px;
+  color: var(--amber);
+  letter-spacing: 1px;
+  font-family: Georgia, serif;
+}
+.topbar-title p { font-size: 11px; color: var(--muted); }
+
+#greeting {
+  margin-left: auto;
+  text-align: right;
+}
+#greeting .g-time {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1;
+}
+#greeting .g-date { font-size: 11px; color: var(--muted); }
+#greeting .g-msg  { font-size: 12px; color: var(--amber); }
+
+/* ─── MORNING BRIEF ─── */
+.morning-brief {
+  max-width: 1400px;
+  margin: 16px auto 0;
+  padding: 0 16px;
+}
+
+.brief-headline {
+  background: linear-gradient(135deg, #0d2e10, #153a18);
+  border: 2px solid #2a9040;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.brief-headline .bh-left {
+  flex: 1;
+  min-width: 200px;
+}
+.brief-headline h2 {
+  font-size: 16px;
+  color: #7ae090;
+  font-family: Georgia, serif;
+  margin-bottom: 4px;
+}
+.brief-headline p {
+  font-size: 12px;
+  color: #5aaa70;
+  line-height: 1.5;
+}
+.brief-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.bflag {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bflag-red    { background: #4a0e0e; color: #ff8a8a; border: 1px solid #c03030; }
+.bflag-yellow { background: #3a2800; color: #ffd060; border: 1px solid #c09020; }
+.bflag-green  { background: #0a3018; color: #60e080; border: 1px solid #20a040; }
+
+/* Priority actions panel */
+.brief-actions {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.brief-actions .ba-header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.ba-list {
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ba-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  background: var(--panel);
+  border-left: 4px solid #555;
+  cursor: default;
+}
+.ba-item.urgent  { border-left-color: #c03030; background: #1f0808; }
+.ba-item.warning { border-left-color: #c09020; background: #1c1500; }
+.ba-item.info    { border-left-color: #2060c0; background: #080e1c; }
+.ba-item .ba-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.ba-item .ba-content { flex: 1; }
+.ba-item .ba-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 3px;
+}
+.ba-item.urgent  .ba-title { color: #ff9090; }
+.ba-item.warning .ba-title { color: #ffd060; }
+.ba-item.info    .ba-title { color: #80b8ff; }
+.ba-item .ba-detail {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.ba-item .ba-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--amber);
+  text-decoration: none;
+  padding: 3px 10px;
+  border: 1px solid var(--copper);
+  border-radius: 6px;
+  background: rgba(181,101,29,0.15);
+}
+.ba-item .ba-link:hover { background: rgba(181,101,29,0.3); }
+
+/* Sales summary strip */
+.brief-sales-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.bss-item {
+  text-align: center;
+  padding: 10px;
+  background: var(--panel);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+.bss-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 5px; }
+.bss-value { font-size: 20px; font-weight: 800; color: var(--cream); }
+.bss-sub   { font-size: 10px; color: var(--muted); margin-top: 2px; }
+.bss-sub.up  { color: #50d070; }
+.bss-sub.bad { color: #e07070; }
+
+/* ─── LAYOUT ─── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+@media (min-width: 900px) {
+  .layout { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (min-width: 1200px) {
+  .layout { grid-template-columns: 2fr 1fr 1fr; }
+}
+
+/* ─── PANELS ─── */
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 12px 16px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.panel-header .ph-icon { font-size: 20px; }
+.panel-header .ph-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--amber);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.panel-header .ph-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.panel-body { padding: 14px; }
+
+/* ─── METRICS CARDS ─── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.metric-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, background 0.2s;
+  cursor: pointer;
+}
+.metric-card:hover, .metric-card:active {
+  border-color: var(--copper);
+  background: #2c1f0e;
+}
+.metric-card .mc-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.metric-card .mc-icon { font-size: 22px; }
+.metric-card .mc-name {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.metric-card .mc-val {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--cream);
+  line-height: 1;
+}
+.metric-card .mc-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.metric-card .mc-action {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: auto;
+}
+.badge-green { background: rgba(42,122,64,0.3); color: #6adf8a; }
+.badge-red   { background: rgba(138,32,32,0.3); color: #f08080; }
+.badge-warn  { background: rgba(192,122,16,0.3); color: #f0c040; }
+
+/* ─── CHECKLIST ─── */
+.checklist { list-style: none; }
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.checklist li:last-child { border-bottom: none; }
+.checklist li.done .cl-label {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.checklist input[type="checkbox"] {
+  width: 20px; height: 20px;
+  accent-color: var(--amber);
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.cl-label { font-size: 14px; flex: 1; line-height: 1.4; }
+.cl-meta  { font-size: 11px; color: var(--muted); }
+.cl-link  {
+  font-size: 11px;
+  color: var(--amber);
+  text-decoration: none;
+  flex-shrink: 0;
+  border: 1px solid var(--amber);
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+.cl-link:hover { background: var(--amber); color: #000; }
+
+.add-task-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.add-task-input {
+  flex: 1;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--cream);
+  font-size: 13px;
+  padding: 8px 12px;
+}
+.add-task-input::placeholder { color: var(--muted); }
+.add-task-btn {
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ─── X POSTS ─── */
+.x-post-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.x-post-card .xp-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.x-post-card textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  font-size: 14px;
+  line-height: 1.6;
+  resize: none;
+  min-height: 80px;
+  font-family: inherit;
+}
+.x-post-card textarea:focus { outline: none; }
+.x-post-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.x-btn {
+  padding: 7px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.x-btn-post { background: #1a8cd8; color: #fff; }
+.x-btn-fb   { background: #1877f2; color: #fff; }
+.x-btn-insta{ background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); color: #fff; }
+.x-btn-copy { background: var(--panel); border: 1px solid var(--border); color: var(--cream); }
+.x-char-count { font-size: 11px; color: var(--muted); margin-left: auto; align-self: center; }
+
+/* ─── QUICK LINKS ─── */
+.qlinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.qlink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.qlink:hover, .qlink:active { border-color: var(--copper); }
+.qlink .ql-icon { font-size: 20px; flex-shrink: 0; }
+.qlink .ql-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.3;
+}
+.qlink .ql-sub { font-size: 10px; color: var(--muted); }
+
+/* ─── SPECIALS PREVIEW ─── */
+.specials-this-week {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.specials-this-week h4 {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.specials-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.specials-day:last-child { border-bottom: none; }
+.sd-day { font-weight: 700; color: var(--amber); width: 80px; flex-shrink: 0; }
+.sd-item { color: var(--cream); flex: 1; }
+.sd-status {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 8px;
+}
+.sd-live { background: rgba(42,122,64,0.3); color: #6adf8a; }
+.sd-empty { background: rgba(138,32,32,0.2); color: #f08080; }
+
+/* ─── EVENTS ─── */
+.event-row {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+.event-row:last-child { border-bottom: none; }
+.event-date-badge {
+  background: var(--copper);
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  flex-shrink: 0;
+  min-width: 52px;
+}
+.event-info .e-name { font-size: 14px; font-weight: 600; }
+.event-info .e-time { font-size: 11px; color: var(--muted); }
+
+/* ─── TOAST SECTION ─── */
+.toast-coming {
+  background: rgba(181,101,29,0.1);
+  border: 1px dashed var(--copper);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+.toast-coming .tc-icon { font-size: 32px; margin-bottom: 8px; }
+.toast-coming h4 { font-size: 14px; color: var(--amber); margin-bottom: 4px; }
+.toast-coming p  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* ─── NOTES ─── */
+.morning-note-area {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--cream);
+  font-size: 14px;
+  padding: 12px;
+  min-height: 80px;
+  resize: none;
+  font-family: inherit;
+  line-height: 1.6;
+}
+.morning-note-area::placeholder { color: var(--muted); }
+.save-note-btn {
+  margin-top: 8px;
+  padding: 7px 16px;
+  background: var(--copper);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.saved-flash {
+  display: none;
+  color: var(--success);
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* ─── REVIEW ALERT ─── */
+.review-alert {
+  background: rgba(192,122,16,0.12);
+  border: 1px solid var(--warn);
+  border-radius: 9px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.review-alert .ra-icon { font-size: 20px; flex-shrink: 0; }
+.review-alert .ra-body { flex: 1; }
+.review-alert .ra-platform { font-size: 11px; font-weight: 700; color: var(--warn); text-transform: uppercase; letter-spacing: 0.5px; }
+.review-alert .ra-text  { font-size: 13px; color: var(--cream); margin: 3px 0; line-height: 1.5; }
+.review-alert .ra-reply {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #fff;
+  background: var(--warn);
+  padding: 3px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ─── MISC ─── */
+.section-divider {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  margin: 12px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.full-width { grid-column: 1 / -1; }
+.copy-toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--success);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-logo">🍺</div>
+  <div class="topbar-title">
+    <h1>The Brewhouse</h1>
+    <p>Command Center · Management View</p>
+  </div>
+  <div id="greeting">
+    <div class="g-time" id="g-time">--:--</div>
+    <div class="g-date" id="g-date">--</div>
+    <div class="g-msg" id="g-msg">Good morning, Joal</div>
+  </div>
+</div>
+
+<!-- ════════════════════ MORNING BRIEF ════════════════════ -->
+<div class="layout">
+
+  <!-- ════════════════════════════════════
+       COL 1: METRICS + CHECKLIST + NOTES
+       ════════════════════════════════════ -->
+
+
+  <!-- TOAST POS DAILY REPORT -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">🥂</span>
+      <span class="ph-title">Toast — Yesterday's Sales</span>
+      <span class="ph-sub"><a href="https://www.toasttab.com/restaurants/admin" target="_blank" style="color:var(--amber);text-decoration:none;">Full Report →</a></span>
+    </div>
+    <div class="panel-body">
+
+      <div class="metrics-grid">
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top">
+            <span class="mc-icon">💰</span>
+            <span class="mc-name">Gross Sales</span>
+          </div>
+          <div class="mc-val" id="toast-gross">—</div>
+          <div class="mc-note" id="toast-date">Loading from email…</div>
+        </div>
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top">
+            <span class="mc-icon">📈</span>
+            <span class="mc-name">Net Sales</span>
+          </div>
+          <div class="mc-val" id="toast-net">—</div>
+          <div class="mc-note">After discounts</div>
+        </div>
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top">
+            <span class="mc-icon">🪑</span>
+            <span class="mc-name">Covers</span>
+          </div>
+          <div class="mc-val" id="toast-guests">—</div>
+          <div class="mc-note" id="toast-orders">— orders</div>
+        </div>
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top">
+            <span class="mc-icon">🧾</span>
+            <span class="mc-name">Avg / Guest</span>
+          </div>
+          <div class="mc-val" id="toast-avg">—</div>
+          <div class="mc-note" id="toast-labor">Labor —%</div>
+        </div>
+      </div>
+
+      <div class="section-divider" style="margin-top:12px;">Key Stats</div>
+      <div style="display:flex;flex-direction:column;gap:6px;" id="toast-stats">
+        <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--muted);">Discount %</span><span id="toast-discount">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--muted);">Labor % of Net</span><span id="toast-labor-pct">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--muted);">Card Payments</span><span id="toast-cards">—</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;">
+          <span style="color:var(--muted);">Refunds / Voids</span><span id="toast-refunds">—</span>
+        </div>
+      </div>
+
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">
+        Data from your daily Toast email · Updated each morning by scheduled task
+      </p>
+    </div>
+  </div>
+
+
+  <!-- SLING STAFF SCHEDULE -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">👥</span>
+      <span class="ph-title">Sling — Today's Staff</span>
+      <span class="ph-sub"><a href="https://app.getsling.com" target="_blank" style="color:var(--amber);text-decoration:none;">Open Sling →</a></span>
+    </div>
+    <div class="panel-body">
+
+      <div class="metrics-grid" style="margin-bottom:12px;">
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top"><span class="mc-icon">🧑‍🍳</span><span class="mc-name">On Schedule</span></div>
+          <div class="mc-val" id="sling-count">—</div>
+          <div class="mc-note">employees today</div>
+        </div>
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top"><span class="mc-icon">⏱️</span><span class="mc-name">Total Hours</span></div>
+          <div class="mc-val" id="sling-hours">—</div>
+          <div class="mc-note" id="sling-overtime">0 overtime hrs</div>
+        </div>
+      </div>
+
+      <div class="section-divider">Who's Working Today</div>
+      <div id="sling-staff-list" style="display:flex;flex-direction:column;gap:6px;">
+        <!-- Populated by JS -->
+      </div>
+
+      <div id="sling-uncovered-alert" style="display:none;margin-top:10px;" class="review-alert">
+        <span class="ra-icon">⚠️</span>
+        <div class="ra-body">
+          <div class="ra-platform">Uncovered Shifts</div>
+          <div class="ra-text" id="sling-uncovered-text">You have uncovered shifts today.</div>
+          <a class="ra-reply" href="https://app.getsling.com" target="_blank">Fix in Sling →</a>
+        </div>
+      </div>
+
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">
+        Data from your daily Sling email · Updated each morning by scheduled task
+      </p>
+    </div>
+  </div>
+
+
+  <!-- X / SOCIAL POSTS -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">📱</span>
+      <span class="ph-title">Social Posts — Ready to Send</span>
+      <span class="ph-sub">Edit & post</span>
+    </div>
+    <div class="panel-body">
+
+      <div class="x-post-card" id="xpost-0">
+        <div class="xp-tag">✏️ Draft Post 1 — Edit before posting</div>
+        <textarea id="xpost-text-0" onkeyup="updateCharCount(0)">🍺 Happy Wednesday, Santa Barbara! Stop in tonight for Happy Hour 4–6 PM. Beer $1 off, House Wine $1, all wells $8. No better way to break up the week. See you at The Brewhouse! 🌿 #SantaBarbara #HappyHour #Brewhouse</textarea>
+        <div class="x-post-actions">
+          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-0" target="_blank" onclick="setTweetLink(0)">Post to X</a>
+          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
+          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
+          <button class="x-btn x-btn-copy" onclick="copyPost(0)">Copy</button>
+          <span class="x-char-count" id="xcount-0">0/280</span>
+        </div>
+      </div>
+
+      <div class="x-post-card" id="xpost-1">
+        <div class="xp-tag">✏️ Draft Post 2 — Edit before posting</div>
+        <textarea id="xpost-text-1" onkeyup="updateCharCount(1)">⭐ This week's specials are here! Fresh from the kitchen — ask your server or check our website for what's on the menu. New specials every week at The Brewhouse, Santa Barbara. 🍽️ sbbrewhouse.com #SBEats #CraftBeer #SantaBarbaraFood</textarea>
+        <div class="x-post-actions">
+          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-1" target="_blank" onclick="setTweetLink(1)">Post to X</a>
+          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
+          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
+          <button class="x-btn x-btn-copy" onclick="copyPost(1)">Copy</button>
+          <span class="x-char-count" id="xcount-1">0/280</span>
+        </div>
+      </div>
+
+      <div class="x-post-card" id="xpost-2">
+        <div class="xp-tag">✏️ Draft Post 3 — Edit before posting</div>
+        <textarea id="xpost-text-2" onkeyup="updateCharCount(2)">🎸 Live music coming up this weekend! Check our events page for the full lineup. Great food, cold craft beer, and live entertainment in Santa Barbara. 🍻 sbbrewhouse.com/events #LiveMusic #SantaBarbara #Brewhouse</textarea>
+        <div class="x-post-actions">
+          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-2" target="_blank" onclick="setTweetLink(2)">Post to X</a>
+          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
+          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
+          <button class="x-btn x-btn-copy" onclick="copyPost(2)">Copy</button>
+          <span class="x-char-count" id="xcount-2">0/280</span>
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--muted);text-align:center;padding:6px 0;">
+        💡 Ask Claude each morning to refresh these posts with trending ideas
+      </p>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       COL 3: SPECIALS + EVENTS + TOOLS
+       ════════════════════════════════════ -->
+
+
+  <!-- THIS WEEK'S SPECIALS -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">🍽️</span>
+      <span class="ph-title">This Week's Specials</span>
+      <span class="ph-sub"><a href="https://www.spothopperapp.com/admin/spots/82093/specials" target="_blank" style="color:var(--amber);text-decoration:none;">Edit in Spothopper →</a></span>
+    </div>
+    <div class="panel-body">
+      <div class="specials-this-week">
+        <div class="specials-day">
+          <span class="sd-day">Sunday</span>
+          <span class="sd-item">Happy Hour 4–6 PM</span>
+          <span class="sd-status sd-live">Live</span>
+        </div>
+        <div class="specials-day">
+          <span class="sd-day">Monday</span>
+          <span class="sd-item">Limited menu + MoJo</span>
+          <span class="sd-status sd-live">Live</span>
+        </div>
+        <div class="specials-day">
+          <span class="sd-day">Tuesday</span>
+          <span class="sd-item">Kids Eat Free + Happy Hour</span>
+          <span class="sd-status sd-live">Live</span>
+        </div>
+        <div class="specials-day">
+          <span class="sd-day">Wednesday</span>
+          <span class="sd-item">Kids Eat Free + Happy Hour</span>
+          <span class="sd-status sd-live">Live</span>
+        </div>
+        <div class="specials-day">
+          <span class="sd-day">Fri/Sat</span>
+          <span class="sd-item">— Chef's weekend specials</span>
+          <span class="sd-status sd-empty">Update</span>
+        </div>
+      </div>
+      <div class="qlinks" style="margin-top:10px;">
+        <a class="qlink" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+          <span class="ql-icon">🖨️</span>
+          <div><div class="ql-label">Menu Builder</div><div class="ql-sub">Print specials menu</div></div>
+        </a>
+        <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093/specials" target="_blank">
+          <span class="ql-icon">⭐</span>
+          <div><div class="ql-label">Update Specials</div><div class="ql-sub">Spothopper</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- UPCOMING EVENTS -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">🎸</span>
+      <span class="ph-title">Upcoming Events</span>
+      <span class="ph-sub"><a href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank" style="color:var(--amber);text-decoration:none;">Manage →</a></span>
+    </div>
+    <div class="panel-body">
+      <div id="events-list">
+        <div class="event-row">
+          <div class="event-date-badge">MAR<br>17</div>
+          <div class="event-info">
+            <div class="e-name">☘️ St. Patrick's Day</div>
+            <div class="e-time">All Day · Food & Drink Specials Live</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);padding:10px 0 0;text-align:center;">Add your next event in Spothopper → it'll appear on the website and here.</p>
+      </div>
+      <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank" style="margin-top:10px;display:flex;">
+        <span class="ql-icon">➕</span>
+        <div><div class="ql-label">Add Band / Event</div><div class="ql-sub">Post to website + social blast</div></div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- PLATFORM METRICS -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">📊</span>
+      <span class="ph-title">Morning Metrics</span>
+      <span class="ph-sub">Tap any card to open that platform</span>
+    </div>
+    <div class="panel-body">
+      <div class="metrics-grid">
+
+        <a class="metric-card" href="https://ads.google.com" target="_blank">
+          <div class="mc-top">
+            <span class="mc-icon">📣</span>
+            <span class="mc-name">Google Ads</span>
+            <span class="badge badge-warn" id="ads-badge">Check</span>
+          </div>
+          <div class="mc-val" id="ads-spend">—</div>
+          <div class="mc-note">Today's spend · tap to view</div>
+          <span class="mc-action">Open Google Ads →</span>
+        </a>
+
+        <a class="metric-card" href="https://business.google.com" target="_blank">
+          <div class="mc-top">
+            <span class="mc-icon">⭐</span>
+            <span class="mc-name">Google Reviews</span>
+            <span class="badge badge-green" id="google-badge">Live</span>
+          </div>
+          <div class="mc-val" id="google-rating">4.6★</div>
+          <div class="mc-note">Your current rating</div>
+          <span class="mc-action">Open Business Profile →</span>
+        </a>
+
+        <a class="metric-card" href="https://biz.yelp.com" target="_blank">
+          <div class="mc-top">
+            <span class="mc-icon">🌟</span>
+            <span class="mc-name">Yelp</span>
+            <span class="badge badge-green" id="yelp-badge">Live</span>
+          </div>
+          <div class="mc-val" id="yelp-rating">—★</div>
+          <div class="mc-note">Yelp rating · tap to view</div>
+          <span class="mc-action">Open Yelp Biz →</span>
+        </a>
+
+        <a class="metric-card" href="https://www.toasttab.com/restaurants/admin" target="_blank">
+          <div class="mc-top">
+            <span class="mc-icon">🥂</span>
+            <span class="mc-name">Toast POS</span>
+            <span class="badge badge-warn">Dashboard</span>
+          </div>
+          <div class="mc-val">Sales</div>
+          <div class="mc-note">Today's sales & covers</div>
+          <span class="mc-action">Open Toast →</span>
+        </a>
+
+      </div>
+
+      <!-- Reviews needing reply -->
+      <div class="section-divider">Reviews Needing Reply (5 unanswered)</div>
+      <div id="review-alerts">
+
+        <div class="review-alert" style="border-left:3px solid #c03030;background:#1a0808;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+          <span class="ra-icon">⭐</span>
+          <div class="ra-body">
+            <div class="ra-platform" style="color:#ff9090;font-weight:700;">Alexander Jonasson — ★★★☆☆ · Mar 6</div>
+            <div class="ra-text">Left a 3-star rating only — needs a personal reply to understand why.</div>
+            <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Hi Alexander, thanks for visiting! We'd love to hear more — if anything wasn't right, let us know so we can do better."</div>
+            <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+          </div>
+        </div>
+
+        <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+          <span class="ra-icon">⭐</span>
+          <div class="ra-body">
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Michael Wallace — ★★★★★ · Feb 24</div>
+            <div class="ra-text">"Jerk chicken was awesome"</div>
+            <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Thanks Michael! So glad you loved the jerk chicken — we'll pass that to the kitchen! See you soon 🍻"</div>
+            <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+          </div>
+        </div>
+
+        <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+          <span class="ra-icon">⭐</span>
+          <div class="ra-body">
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Abe Nino — ★★★★★ · Feb 20</div>
+            <div class="ra-text">"Hidden gem for sure. Had a burger with this apricot sauce..."</div>
+            <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Abe, this made our day! That apricot burger is a labor of love. Come back soon!"</div>
+            <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+          </div>
+        </div>
+
+        <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+          <span class="ra-icon">⭐</span>
+          <div class="ra-body">
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Chris Herlihy — ★★★★★ · Feb 18</div>
+            <div class="ra-text">"Terrific place. The beer was flavorful and cold. Food was delicious..."</div>
+            <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Chris, thank you — cold beer & great food is the Brewhouse way! 🍺"</div>
+            <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+          </div>
+        </div>
+
+        <div class="review-alert" style="border-left:3px solid #205020;background:#0a180a;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+          <span class="ra-icon">⭐</span>
+          <div class="ra-body">
+            <div class="ra-platform" style="color:#80e090;font-weight:700;">Susan Komins — ★★★★★ · Feb 17</div>
+            <div class="ra-text">5-star rating only — a quick thank-you reply is all it needs.</div>
+            <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Susan, thank you for the 5 stars! Hope to see you again soon! 🙌"</div>
+            <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+          </div>
+        </div>
+
+      </div></div>
+    </div>
+  </div>
+
+
+  <!-- TODAY'S CHECKLIST -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">✅</span>
+      <span class="ph-title">Today's Checklist</span>
+      <span class="ph-sub" id="checklist-progress">0 of 0 done</span>
+    </div>
+    <div class="panel-body">
+      <ul class="checklist" id="checklist">
+        <!-- Items injected by JS -->
+      </ul>
+      <div class="add-task-row">
+        <input class="add-task-input" id="new-task-input" placeholder="Add a task for today..." onkeydown="if(event.key==='Enter')addTask()">
+        <button class="add-task-btn" onclick="addTask()">+ Add</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MORNING NOTES -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">📝</span>
+      <span class="ph-title">Morning Notes</span>
+      <span class="ph-sub">Saved locally on this device</span>
+    </div>
+    <div class="panel-body">
+      <textarea class="morning-note-area" id="morning-note" placeholder="Anything on your mind today? Staff updates, supply notes, ideas..."></textarea>
+      <div>
+        <button class="save-note-btn" onclick="saveMorningNote()">Save Note</button>
+        <span class="saved-flash" id="note-saved-flash">✓ Saved!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+       COL 2: X POSTS + SOCIAL
+       ════════════════════════════════════ -->
+
+
+  <!-- ALL TOOLS - FULL WIDTH -->
+  <div class="panel full-width">
+    <div class="panel-header">
+      <span class="ph-icon">🔧</span>
+      <span class="ph-title">All Tools — Quick Access</span>
+    </div>
+    <div class="panel-body">
+      <div class="qlinks" style="grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));">
+        <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093" target="_blank">
+          <span class="ql-icon">⚙️</span>
+          <div><div class="ql-label">Spothopper Admin</div><div class="ql-sub">Website & blasts</div></div>
+        </a>
+        <a class="qlink" href="https://sbbrewhouse.com" target="_blank">
+          <span class="ql-icon">🌐</span>
+          <div><div class="ql-label">Our Website</div><div class="ql-sub">sbbrewhouse.com</div></div>
+        </a>
+        <a class="qlink" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+          <span class="ql-icon">🖨️</span>
+          <div><div class="ql-label">Menu Builder</div><div class="ql-sub">Print weekly specials</div></div>
+        </a>
+        <a class="qlink" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Staff_Hub.html" target="_blank">
+          <span class="ql-icon">📱</span>
+          <div><div class="ql-label">Staff Hub</div><div class="ql-sub">iPad dashboards</div></div>
+        </a>
+        <a class="qlink" href="https://www.instacart.com/" target="_blank">
+          <span class="ql-icon">🛒</span>
+          <div><div class="ql-label">Instacart</div><div class="ql-sub">Order supplies</div></div>
+        </a>
+        <a class="qlink" href="https://ads.google.com" target="_blank">
+          <span class="ql-icon">📣</span>
+          <div><div class="ql-label">Google Ads</div><div class="ql-sub">Manage campaigns</div></div>
+        </a>
+        <a class="qlink" href="https://business.google.com" target="_blank">
+          <span class="ql-icon">🗺️</span>
+          <div><div class="ql-label">Google Business</div><div class="ql-sub">Reviews & hours</div></div>
+        </a>
+        <a class="qlink" href="https://biz.yelp.com" target="_blank">
+          <span class="ql-icon">🌟</span>
+          <div><div class="ql-label">Yelp Business</div><div class="ql-sub">Reviews & stats</div></div>
+        </a>
+        <a class="qlink" href="https://twitter.com" target="_blank">
+          <span class="ql-icon">𝕏</span>
+          <div><div class="ql-label">X / Twitter</div><div class="ql-sub">Post & check feed</div></div>
+        </a>
+        <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093/promotions" target="_blank">
+          <span class="ql-icon">🎉</span>
+          <div><div class="ql-label">Promotions</div><div class="ql-sub">Holiday blasts</div></div>
+        </a>
+        <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093/qr_code_flyers" target="_blank">
+          <span class="ql-icon">📲</span>
+          <div><div class="ql-label">QR Code Flyers</div><div class="ql-sub">Table tents</div></div>
+        </a>
+        <a class="qlink" href="https://www.toasttab.com/restaurants/admin" target="_blank">
+          <span class="ql-icon">🥂</span>
+          <div><div class="ql-label">Toast POS</div><div class="ql-sub">Sales reports</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /layout -->
+
+<div class="morning-brief">
+
+  <!-- Headline -->
+  <div class="brief-headline">
+    <div class="bh-left">
+      <h2 id="brief-headline-text">Wednesday — $4,024 net, 140 guests, labor ⚠️ 21.7%</h2>
+      <p id="brief-headline-sub">Mar 18 · Net $4,024 · Gross $4,236 · 140 covers · Avg $28.74 · Labor 21.7% ⚠️ up vs last Wed (17.8%) · -11.7% vs SDLW</p>
+    </div>
+    <div class="brief-flags">
+      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 Yelp quote 7 days old</span>
+      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⭐ 5 Google reviews unanswered</span>
+      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">📢 Google Ad disapproved</span>
+      <span class="bflag bflag-green">✓ Staff covered</span>
+    </div>
+  </div>
+
+  <!-- Yesterday's Sales Strip -->
+  <div class="brief-sales-strip">
+    <div class="bss-item">
+      <div class="bss-label">Net Sales</div>
+      <div class="bss-value" id="bs-net">$4,024</div>
+      <div class="bss-sub up" id="bs-net-sub" class="bss-sub down">-11.7% vs last Wed</div>
+    </div>
+    <div class="bss-item">
+      <div class="bss-label">Covers</div>
+      <div class="bss-value" id="bs-covers">140</div>
+      <div class="bss-sub up" id="bs-covers-sub" class="bss-sub down">-15.2% vs last Wed</div>
+    </div>
+    <div class="bss-item">
+      <div class="bss-label">Avg / Guest</div>
+      <div class="bss-value" id="bs-avg">$28.74</div>
+      <div class="bss-sub" id="bs-avg-sub" class="bss-sub up">+4.1% vs last Wed</div>
+    </div>
+    <div class="bss-item">
+      <div class="bss-label">Labor %</div>
+      <div class="bss-value" id="bs-labor" style="color:#f0c040; font-size:20px; font-weight:800;">21.7%</div>
+      <div class="bss-sub up" id="bs-labor-sub" class="bss-sub bad">⚠️ Above 20% target</div>
+    </div>
+    <div class="bss-item">
+      <div class="bss-label">Voids</div>
+      <div class="bss-value" id="bs-voids" style="color:#a0e080; font-size:20px; font-weight:800;">$78</div>
+      <div class="bss-sub bad" id="bs-voids-sub" class="bss-sub up">✓ 6 items — normal</div>
+    </div>
+    <div class="bss-item">
+      <div class="bss-label">Today's Staff</div>
+      <div class="bss-value" id="bs-staff">8</div>
+      <div class="bss-sub up" id="bs-staff-sub" class="bss-sub up">✓ All shifts covered</div>
+    </div>
+  </div>
+
+  <!-- Priority Action Items -->
+  <div class="brief-actions" id="brief-actions-panel">
+    <div class="ba-header">
+      <span>🎯</span> Today's Priority Actions
+    </div>
+    <div class="ba-list">
+      <div class="ba-item urgent">
+        <span class="ba-icon">🚨</span>
+        <div class="ba-content">
+          <div class="ba-title">Reply to Ben's Yelp Quote — NOW 7 Days Unanswered</div>
+          <div class="ba-detail">Company retreat for ~18 guests, April 28–May 1. Sent March 12. Every day without a reply risks losing this booking. Suggested reply: "Hi Ben! We'd love to host your group of 18 for April 28–May 1. Let me put some options together — what are you envisioning (dinner, cocktail hour, full buyout)? Reach me at [phone/email] to chat!"</div>
+          <a class="ba-link" href="https://biz.yelp.com/inbox" target="_blank">Reply on Yelp →</a>
+        </div>
+      </div>
+
+      <div class="ba-item warning">
+        <span class="ba-icon">📊</span>
+        <div class="ba-content">
+          <div class="ba-title">Labor at 21.7% Wednesday — Review Staffing</div>
+          <div class="ba-detail">Wednesday labor hit 21.7% of net sales ($872), up from 17.8% last Wednesday. Your target is under 20%. With sales down 11.7% vs last week, the labor ratio gets stretched. Consider adjusting Wednesday staffing levels if this trend continues.</div>
+          <a class="ba-link" href="https://www.toasttab.com/restaurants/admin" target="_blank">View in Toast →</a>
+        </div>
+      </div>
+
+      <div class="ba-item warning">
+        <span class="ba-icon">⭐</span>
+        <div class="ba-content">
+          <div class="ba-title">Reply to 5 Unanswered Google Reviews</div>
+          <div class="ba-detail">
+            <strong style="color:#f0d090;">Alexander Jonasson</strong> (Mar 6) — 3★ no comment. Say: "Hi Alexander, thanks for visiting — we'd love to hear more so we can do better!"<br>
+            <strong style="color:#f0d090;">Michael Wallace</strong> (Feb 24) — 5★ "Jerk chicken was awesome." Say: "Thanks Michael! So glad — we'll pass that to the kitchen!"<br>
+            <strong style="color:#f0d090;">Abe Nino</strong> (Feb 20) — 5★ "Hidden gem, apricot burger..." Say: "Abe, this made our day — that apricot burger is a labor of love. Come back soon!"<br>
+            <strong style="color:#f0d090;">Chris Herlihy</strong> (Feb 18) — 5★ "Terrific, beer flavorful and cold..." Say: "Chris, thank you — cold beer and great food is the Brewhouse way!"<br>
+            <strong style="color:#f0d090;">Susan Komins</strong> (Feb 17) — 5★ rating only. Say: "Susan, thank you for the 5 stars! See you soon!"
+          </div>
+          <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
+        </div>
+      </div>
+
+      <div class="ba-item warning">
+        <span class="ba-icon">📢</span>
+        <div class="ba-content">
+          <div class="ba-title">Fix Disapproved Google Ad — "Event Ticket Sale" Policy</div>
+          <div class="ba-detail">Flagged Feb 23. Rephrase the ad asset to say "upcoming event" or "live music night" instead of language that implies ticket sales. This will re-enable your ad.</div>
+          <a class="ba-link" href="https://ads.google.com" target="_blank">Fix in Google Ads →</a>
+        </div>
+      </div>
+
+      <div class="ba-item info">
+        <span class="ba-icon">📈</span>
+        <div class="ba-content">
+          <div class="ba-title">Google Ads Daily Report Ready + Budget Suggestion</div>
+          <div class="ba-detail">Your Brewhouse Daily Campaign Report is ready to view. Google also flagged March 14: "Your ads could be reaching more customers" — a small budget increase ($5–10/day) could expand reach if ROI looks good.</div>
+          <a class="ba-link" href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582" target="_blank">View Report →</a>
+        </div>
+      </div>
+</div>
+  </div>
+
+</div><!-- /morning-brief -->
+
+<!-- COPY TOAST -->
+<div class="copy-toast" id="copy-toast">✓ Copied to clipboard!</div>
+
+<script>
+// ── CLOCK + GREETING ──
+function updateClock() {
+  const now = new Date();
+  const h = now.getHours(), m = String(now.getMinutes()).padStart(2,'0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const h12 = h % 12 || 12;
+  document.getElementById('g-time').textContent = `${h12}:${m} ${ampm}`;
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('g-date').textContent =
+    `${days[now.getDay()]} · ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+  const greetings = {
+    morning: ['Good morning, Joal! ☀️','Rise & shine, Joal! 🌅','Morning, boss! ☕'],
+    afternoon: ['Good afternoon, Joal! 🍺','How\'s the afternoon looking? 👋'],
+    evening: ['Good evening, Joal! 🌙','Evening shift, Joal! 🍺']
+  };
+  const period = h < 12 ? 'morning' : h < 17 ? 'afternoon' : 'evening';
+  const list = greetings[period];
+  // Change greeting once per session
+  if (!window._greetingSet) {
+    document.getElementById('g-msg').textContent = list[Math.floor(Math.random() * list.length)];
+    window._greetingSet = true;
+  }
+}
+updateClock();
+setInterval(updateClock, 30000);
+
+// ── CHECKLIST ──
+const DEFAULT_TASKS = [
+  { text: '🚨 Reply to Ben\'s Yelp quote — 7 days old! (18-person retreat Apr 28)',  link: 'https://biz.yelp.com/inbox',                                             linkLabel: 'Reply' },
+  { text: '⭐ Reply to 5 unanswered Google reviews (Alexander 3★ most urgent)',       link: 'https://business.google.com/n/14883478205426286749/reviews',              linkLabel: 'Reply' },
+  { text: '📊 Review Wednesday labor at 21.7% — above 20% target',                   link: 'https://www.toasttab.com/restaurants/admin',                             linkLabel: 'Check' },
+  { text: '📢 Fix disapproved Google Ad (remove event ticket sale language)',          link: 'https://ads.google.com',                                                 linkLabel: 'Fix'   },
+  { text: '📈 Review Google Ads daily campaign report',                               link: 'https://ads.google.com/aw/reporting/reporteditor/list',                  linkLabel: 'Open'  },
+  { text: '📱 Post to social media — Thursday content',                               link: null,                                                                     linkLabel: null    },
+];
+
+let tasks = [];
+
+function loadChecklist() {
+  const saved = localStorage.getItem('brewhouse-tasks-' + todayKey());
+  if (saved) {
+    tasks = JSON.parse(saved);
+  } else {
+    tasks = DEFAULT_TASKS.map((t, i) => ({ id: i, text: t.text, done: false, link: t.link, linkLabel: t.linkLabel }));
+  }
+  renderChecklist();
+}
+
+function todayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+}
+
+function renderChecklist() {
+  const ul = document.getElementById('checklist');
+  ul.innerHTML = '';
+  tasks.forEach((task, i) => {
+    const li = document.createElement('li');
+    if (task.done) li.classList.add('done');
+    li.innerHTML = `
+      <input type="checkbox" ${task.done ? 'checked' : ''} onchange="toggleTask(${i})">
+      <div class="cl-label">
+        <span>${task.text}</span>
+        <div class="cl-meta">${task.done ? '✓ Done' : ''}</div>
+      </div>
+      ${task.link ? `<a class="cl-link" href="${task.link}" target="_blank">${task.linkLabel}</a>` : ''}
+      <span style="cursor:pointer;color:var(--muted);font-size:16px;padding:2px 6px;" onclick="deleteTask(${i})">×</span>
+    `;
+    ul.appendChild(li);
+  });
+  updateProgress();
+}
+
+function toggleTask(i) {
+  tasks[i].done = !tasks[i].done;
+  saveTasks();
+  renderChecklist();
+}
+
+function deleteTask(i) {
+  tasks.splice(i, 1);
+  saveTasks();
+  renderChecklist();
+}
+
+function addTask() {
+  const inp = document.getElementById('new-task-input');
+  const text = inp.value.trim();
+  if (!text) return;
+  tasks.push({ id: Date.now(), text, done: false, link: null });
+  inp.value = '';
+  saveTasks();
+  renderChecklist();
+}
+
+function saveTasks() {
+  localStorage.setItem('brewhouse-tasks-' + todayKey(), JSON.stringify(tasks));
+}
+
+function updateProgress() {
+  const done = tasks.filter(t => t.done).length;
+  document.getElementById('checklist-progress').textContent = `${done} of ${tasks.length} done`;
+}
+
+loadChecklist();
+
+// ── MORNING NOTES ──
+const noteArea = document.getElementById('morning-note');
+const savedNote = localStorage.getItem('brewhouse-note-' + todayKey());
+if (savedNote) noteArea.value = savedNote;
+
+function saveMorningNote() {
+  localStorage.setItem('brewhouse-note-' + todayKey(), noteArea.value);
+  const flash = document.getElementById('note-saved-flash');
+  flash.style.display = 'inline';
+  setTimeout(() => flash.style.display = 'none', 2000);
+}
+
+// Auto-save note as you type
+noteArea.addEventListener('input', () => {
+  clearTimeout(window._noteTimer);
+  window._noteTimer = setTimeout(saveMorningNote, 1500);
+});
+
+// ── X POSTS: char count + tweet links ──
+function updateCharCount(idx) {
+  const ta = document.getElementById(`xpost-text-${idx}`);
+  const ct = document.getElementById(`xcount-${idx}`);
+  const len = ta.value.length;
+  ct.textContent = `${len}/280`;
+  ct.style.color = len > 260 ? '#f08080' : len > 240 ? '#f0c040' : 'var(--muted)';
+}
+
+function setTweetLink(idx) {
+  const text = document.getElementById(`xpost-text-${idx}`).value;
+  document.getElementById(`xtweet-${idx}`).href =
+    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+}
+
+function copyPost(idx) {
+  const text = document.getElementById(`xpost-text-${idx}`).value;
+  navigator.clipboard.writeText(text).then(() => showCopyToast());
+}
+
+function showCopyToast() {
+  const t = document.getElementById('copy-toast');
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 2200);
+}
+
+// Save X posts to localStorage
+function saveXPosts() {
+  for (let i = 0; i < 3; i++) {
+    const ta = document.getElementById(`xpost-text-${i}`);
+    if (ta) localStorage.setItem(`xpost-${i}-${todayKey()}`, ta.value);
+  }
+}
+
+// ── TOAST + SLING DATA (loaded from localStorage, updated by scheduled task) ──
+function loadReportData() {
+  // Try localStorage first (updated by scheduled task each morning)
+  const toastRaw = localStorage.getItem('brewhouse-toast-report');
+  const slingRaw = localStorage.getItem('brewhouse-sling-report');
+
+  // If no saved data, use the most recent email data we pulled
+  const toast = toastRaw ? JSON.parse(toastRaw) : {
+    date: 'Wednesday, Mar 18',
+    gross: '$4,236',
+    net: '$4,024',
+    guests: '140',
+    orders: '90',
+    avgPerGuest: '$28.74',
+    laborPct: '21.7%',
+    discountPct: '$213 / 5.0%',
+    cardPayments: '—',
+    refunds: '$78.00 / 6 voids'
+  };
+
+  const sling = slingRaw ? JSON.parse(slingRaw) : {
+    date: 'Thursday, March 19',
+    count: 8,
+    hours: '37.99',
+    overtime: 0,
+    uncovered: 0,
+    staff: [
+      { name: 'Tony Rincon',             role: 'Bartender' },
+      { name: 'Jackson Wright',          role: 'Bartender' },
+      { name: 'Katharine Brown',         role: 'Bartender' },
+      { name: 'Noel Nunez',              role: 'Chef'      },
+      { name: 'Isael Narciso',           role: 'Cook'      },
+      { name: 'Christine Vargas',        role: 'Server'    },
+      { name: 'Bri Kelley',             role: 'Server'    },
+      { name: 'Grant Oakeson',           role: 'Busser'    }
+    ]
+  };
+
+  // Render Toast
+  document.getElementById('toast-gross').textContent   = toast.gross;
+  document.getElementById('toast-net').textContent     = toast.net;
+  document.getElementById('toast-date').textContent    = toast.date;
+  document.getElementById('toast-guests').textContent  = toast.guests;
+  document.getElementById('toast-orders').textContent  = toast.orders + ' orders';
+  document.getElementById('toast-avg').textContent     = toast.avgPerGuest;
+  document.getElementById('toast-labor').textContent   = 'Labor ' + toast.laborPct;
+  document.getElementById('toast-discount').textContent   = toast.discountPct;
+  document.getElementById('toast-labor-pct').textContent  = toast.laborPct;
+  document.getElementById('toast-cards').textContent   = toast.cardPayments + ' transactions';
+  document.getElementById('toast-refunds').textContent = toast.refunds;
+
+  // Color-code labor % (good < 20%, warn 20-30%, bad > 30%)
+  const laborNum = parseFloat(toast.laborPct);
+  const laborEl = document.getElementById('toast-labor-pct');
+  if (laborNum < 20)       { laborEl.style.color = '#6adf8a'; }
+  else if (laborNum < 30)  { laborEl.style.color = '#f0c040'; }
+  else                     { laborEl.style.color = '#f08080'; }
+
+  // Render Sling
+  document.getElementById('sling-count').textContent   = sling.count;
+  document.getElementById('sling-hours').textContent   = sling.hours + ' hrs';
+  document.getElementById('sling-overtime').textContent = sling.overtime + ' overtime hrs';
+
+  const roleIcons = {
+    'Bartender': '🍺', 'Chef': '🍳', 'Server': '🍽️',
+    'Busser': '🧹', 'Host': '🏠', 'Manager': '⭐', 'Cook': '👨‍🍳'
+  };
+
+  const staffList = document.getElementById('sling-staff-list');
+  staffList.innerHTML = '';
+  sling.staff.forEach(person => {
+    const icon = roleIcons[person.role] || '👤';
+    const div = document.createElement('div');
+    div.style.cssText = 'display:flex;align-items:center;gap:10px;padding:7px 10px;background:var(--panel);border-radius:8px;border:1px solid var(--border);';
+    div.innerHTML = `
+      <span style="font-size:18px;">${icon}</span>
+      <div style="flex:1;">
+        <div style="font-size:13px;font-weight:600;">${person.name}</div>
+        <div style="font-size:11px;color:var(--muted);">${person.role}</div>
+      </div>
+    `;
+    staffList.appendChild(div);
+  });
+
+  // Show uncovered shift alert if needed
+  if (sling.uncovered > 0) {
+    document.getElementById('sling-uncovered-alert').style.display = 'flex';
+    document.getElementById('sling-uncovered-text').textContent =
+      `${sling.uncovered} uncovered shift${sling.uncovered > 1 ? 's' : ''} today — find coverage now.`;
+  }
+}
+
+loadReportData();
+
+// Load saved X posts
+for (let i = 0; i < 3; i++) {
+  const saved = localStorage.getItem(`xpost-${i}-${todayKey()}`);
+  const ta = document.getElementById(`xpost-text-${i}`);
+  if (saved && ta) ta.value = saved;
+  updateCharCount(i);
+  const t = ta; const idx = i;
+  if (ta) ta.addEventListener('input', () => { saveXPosts(); updateCharCount(idx); });
+}
+</script>
+</body>
+</html>
