@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>The Brewhouse â€” Staff Hub</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  :root {
+    --dark:    #1a1209;
+    --wood:    #2c1f0e;
+    --copper:  #b5651d;
+    --amber:   #d4900a;
+    --cream:   #f5ead8;
+    --muted:   #8c7a60;
+    --green:   #2d6a3f;
+    --blue:    #1a4a6b;
+    --red:     #7a1f1f;
+    --purple:  #4a2070;
+  }
+
+  body {
+    background: var(--dark);
+    color: var(--cream);
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* â”€â”€ HEADER â”€â”€ */
+  header {
+    background: var(--wood);
+    border-bottom: 3px solid var(--copper);
+    padding: 14px 20px 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-badge {
+    width: 52px;
+    height: 52px;
+    background: var(--copper);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px var(--amber);
+  }
+
+  .header-text h1 {
+    font-size: 22px;
+    color: var(--amber);
+    letter-spacing: 1px;
+  }
+
+  .header-text p {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: sans-serif;
+  }
+
+  #clock {
+    margin-left: auto;
+    text-align: right;
+    font-family: sans-serif;
+  }
+
+  #clock .time {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1;
+  }
+
+  #clock .date {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* â”€â”€ STATION TABS â”€â”€ */
+  .station-tabs {
+    display: flex;
+    background: #120d05;
+    border-bottom: 2px solid var(--copper);
+  }
+
+  .station-tab {
+    flex: 1;
+    padding: 14px 8px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition: all 0.2s;
+    border-bottom: 4px solid transparent;
+    letter-spacing: 0.5px;
+  }
+
+  .station-tab.active {
+    color: var(--amber);
+    border-bottom-color: var(--amber);
+    background: rgba(212,144,10,0.08);
+  }
+
+  .station-tab .tab-icon {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 3px;
+  }
+
+  /* â”€â”€ STATION PANELS â”€â”€ */
+  .station-panel {
+    display: none;
+    padding: 20px 16px;
+    flex: 1;
+  }
+
+  .station-panel.active {
+    display: block;
+  }
+
+  .station-label {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    padding-left: 4px;
+    border-left: 3px solid var(--copper);
+    padding-left: 10px;
+  }
+
+  /* â”€â”€ BUTTON GRID â”€â”€ */
+  .btn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .btn-grid.wide {
+    grid-template-columns: 1fr;
+  }
+
+  .hub-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+    min-height: 140px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  }
+
+  .hub-btn:active {
+    transform: scale(0.96);
+    filter: brightness(0.9);
+  }
+
+  .hub-btn .btn-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .hub-btn .btn-label {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .hub-btn .btn-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    font-family: sans-serif;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+
+  /* Button color themes */
+  .btn-green  { background: linear-gradient(135deg, #1e5c30, #2d8a47); }
+  .btn-amber  { background: linear-gradient(135deg, #9a5c00, #d4900a); }
+  .btn-blue   { background: linear-gradient(135deg, #0e3352, #1a6090); }
+  .btn-red    { background: linear-gradient(135deg, #6b1515, #a52828); }
+  .btn-purple { background: linear-gradient(135deg, #3a1860, #6a32a8); }
+  .btn-teal   { background: linear-gradient(135deg, #0e4a4a, #1a8080); }
+  .btn-copper { background: linear-gradient(135deg, #7a3d0a, #b5651d); }
+  .btn-slate  { background: linear-gradient(135deg, #2a3040, #445070); }
+
+  /* â”€â”€ SECTION DIVIDER â”€â”€ */
+  .section-title {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin: 20px 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--wood);
+  }
+
+  /* â”€â”€ RECIPE QUICK LIST (Kitchen) â”€â”€ */
+  .recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .recipe-item {
+    background: var(--wood);
+    border: 1px solid rgba(181,101,29,0.3);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+
+  .recipe-item:active {
+    background: #3d2a10;
+  }
+
+  .recipe-item .r-icon { font-size: 28px; }
+  .recipe-item .r-info { flex: 1; }
+  .recipe-item .r-name {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: var(--cream);
+  }
+  .recipe-item .r-detail {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: sans-serif;
+    margin-top: 2px;
+  }
+  .recipe-item .r-arrow {
+    color: var(--copper);
+    font-size: 18px;
+  }
+
+  /* â”€â”€ TODAY'S NOTE (Communication) â”€â”€ */
+  .staff-note {
+    background: var(--wood);
+    border: 1px solid var(--copper);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .staff-note h3 {
+    font-size: 13px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+
+  .staff-note p {
+    font-size: 14px;
+    color: var(--cream);
+    font-family: sans-serif;
+    line-height: 1.6;
+  }
+
+  .note-edit-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background: var(--copper);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* â”€â”€ MODAL (Staff Message Editor) â”€â”€ */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .modal-overlay.open {
+    display: flex;
+  }
+
+  .modal {
+    background: var(--wood);
+    border: 2px solid var(--copper);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .modal h2 {
+    font-size: 18px;
+    color: var(--amber);
+    margin-bottom: 12px;
+    font-family: sans-serif;
+  }
+
+  .modal textarea {
+    width: 100%;
+    min-height: 120px;
+    background: #120d05;
+    border: 1px solid var(--copper);
+    border-radius: 8px;
+    color: var(--cream);
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 12px;
+    resize: vertical;
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    justify-content: flex-end;
+  }
+
+  .modal-actions button {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .btn-save-msg { background: var(--copper); color: #fff; }
+  .btn-cancel-msg { background: #333; color: var(--cream); }
+
+  /* â”€â”€ FOOTER â”€â”€ */
+  footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    color: var(--muted);
+    font-family: sans-serif;
+    background: #120d05;
+    border-top: 1px solid var(--wood);
+  }
+
+  /* â”€â”€ RESPONSIVE: iPad landscape â”€â”€ */
+  @media (min-width: 768px) {
+    .btn-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .station-tab { font-size: 17px; }
+    .hub-btn { min-height: 160px; }
+    .hub-btn .btn-icon { font-size: 46px; }
+    .hub-btn .btn-label { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-badge">ğŸº</div>
+  <div class="header-text">
+    <h1>The Brewhouse</h1>
+    <p>Staff Hub Â· Internal Use Only</p>
+  </div>
+  <div id="clock">
+    <div class="time" id="clock-time">--:--</div>
+    <div class="date" id="clock-date">--</div>
+  </div>
+</header>
+
+<!-- STATION TABS -->
+<div class="station-tabs">
+  <button class="station-tab active" onclick="switchStation('kitchen')">
+    <span class="tab-icon">ğŸ³</span>Kitchen
+  </button>
+  <button class="station-tab" onclick="switchStation('bar')">
+    <span class="tab-icon">ğŸº</span>Bar
+  </button>
+  <button class="station-tab" onclick="switchStation('host')">
+    <span class="tab-icon">ğŸ </span>Host Stand
+  </button>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- KITCHEN STATION                   -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="station-panel active" id="panel-kitchen">
+  <div class="station-label">ğŸ³ Kitchen Station</div>
+
+  <!-- Staff Note -->
+  <div class="staff-note" id="kitchen-note-box">
+    <h3>ğŸ“¢ Today's Kitchen Notes</h3>
+    <p id="kitchen-note-text">No notes posted yet. Tap Edit to add a message for the kitchen.</p>
+    <button class="note-edit-btn" onclick="openNoteEditor('kitchen')">âœï¸ Edit Note</button>
+  </div>
+
+  <div class="section-title">Quick Actions</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-amber" href="https://www.spothopperapp.com/admin/spots/82093/specials" target="_blank">
+      <span class="btn-icon">ğŸ“‹</span>
+      <span class="btn-label">Today's Specials</span>
+      <span class="btn-sub">View current menu</span>
+    </a>
+    <a class="hub-btn btn-green" href="https://www.instacart.com/" target="_blank">
+      <span class="btn-icon">ğŸ›’</span>
+      <span class="btn-label">Instacart Order</span>
+      <span class="btn-sub">Reorder supplies</span>
+    </a>
+    <a class="hub-btn btn-copper" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+      <span class="btn-icon">ğŸ–¨ï¸</span>
+      <span class="btn-label">Menu Builder</span>
+      <span class="btn-sub">Print weekly specials</span>
+    </a>
+    <a class="hub-btn btn-slate" href="https://www.spothopperapp.com/admin/spots/82093" target="_blank">
+      <span class="btn-icon">âš™ï¸</span>
+      <span class="btn-label">Spothopper Admin</span>
+      <span class="btn-sub">Website controls</span>
+    </a>
+  </div>
+
+  <div class="section-title">Kitchen Recipes</div>
+  <div class="recipe-list">
+    <a class="recipe-item" href="#" onclick="showRecipe('corned-beef'); return false;">
+      <span class="r-icon">ğŸ¥©</span>
+      <div class="r-info">
+        <div class="r-name">Corned Beef & Cabbage</div>
+        <div class="r-detail">St. Patrick's Special Â· Serves 1</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('shepherds-pie'); return false;">
+      <span class="r-icon">ğŸ¥§</span>
+      <div class="r-info">
+        <div class="r-name">Shepherd's Pie</div>
+        <div class="r-detail">St. Patrick's Special Â· Serves 1</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('reuben'); return false;">
+      <span class="r-icon">ğŸ¥ª</span>
+      <div class="r-info">
+        <div class="r-name">Reuben Sandwich</div>
+        <div class="r-detail">St. Patrick's Special Â· Serves 1</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('add'); return false;">
+      <span class="r-icon">â•</span>
+      <div class="r-info">
+        <div class="r-name">Add New Recipe</div>
+        <div class="r-detail">Save a recipe for the kitchen</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- BAR STATION                       -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="station-panel" id="panel-bar">
+  <div class="station-label">ğŸº Bar Station</div>
+
+  <div class="staff-note" id="bar-note-box">
+    <h3>ğŸ“¢ Bar Notes</h3>
+    <p id="bar-note-text">No notes posted yet. Tap Edit to add a message for bar staff.</p>
+    <button class="note-edit-btn" onclick="openNoteEditor('bar')">âœï¸ Edit Note</button>
+  </div>
+
+  <div class="section-title">Quick Actions</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-amber" href="https://www.spothopperapp.com/admin/spots/82093/specials" target="_blank">
+      <span class="btn-icon">ğŸ½ï¸</span>
+      <span class="btn-label">Today's Specials</span>
+      <span class="btn-sub">Food & drink specials</span>
+    </a>
+    <a class="hub-btn btn-green" href="https://www.instacart.com/" target="_blank">
+      <span class="btn-icon">ğŸ›’</span>
+      <span class="btn-label">Instacart Order</span>
+      <span class="btn-sub">Order bar supplies</span>
+    </a>
+    <a class="hub-btn btn-copper" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+      <span class="btn-icon">ğŸ–¨ï¸</span>
+      <span class="btn-label">Menu Builder</span>
+      <span class="btn-sub">Print specials menu</span>
+    </a>
+    <a class="hub-btn btn-teal" href="https://sbbrewhouse.com" target="_blank">
+      <span class="btn-icon">ğŸŒ</span>
+      <span class="btn-label">Our Website</span>
+      <span class="btn-sub">View live site</span>
+    </a>
+    <a class="hub-btn btn-blue" href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank">
+      <span class="btn-icon">ğŸµ</span>
+      <span class="btn-label">Upcoming Events</span>
+      <span class="btn-sub">Bands & live music</span>
+    </a>
+    <a class="hub-btn btn-slate" href="https://www.spothopperapp.com/admin/spots/82093" target="_blank">
+      <span class="btn-icon">âš™ï¸</span>
+      <span class="btn-label">Spothopper Admin</span>
+      <span class="btn-sub">Manage website</span>
+    </a>
+  </div>
+
+  <div class="section-title">Drink Recipes</div>
+  <div class="recipe-list">
+    <a class="recipe-item" href="#" onclick="showRecipe('irish-mule'); return false;">
+      <span class="r-icon">ğŸ‹</span>
+      <div class="r-info">
+        <div class="r-name">Irish Mule</div>
+        <div class="r-detail">Jameson Â· Lime Â· Ginger Beer Â· $12</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('brewhouse-bomb'); return false;">
+      <span class="r-icon">ğŸ’£</span>
+      <div class="r-info">
+        <div class="r-name">Brewhouse Bomb</div>
+        <div class="r-detail">Bailey's & Jameson shot Â· $12</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('green-tea-shot'); return false;">
+      <span class="r-icon">ğŸµ</span>
+      <div class="r-info">
+        <div class="r-name">Green Tea Shot</div>
+        <div class="r-detail">Jameson Orange Â· Peach Schnapps Â· Sweet & Sour Â· $12</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+    <a class="recipe-item" href="#" onclick="showRecipe('add'); return false;">
+      <span class="r-icon">â•</span>
+      <div class="r-info">
+        <div class="r-name">Add New Drink Recipe</div>
+        <div class="r-detail">Save a cocktail recipe</div>
+      </div>
+      <span class="r-arrow">â€º</span>
+    </a>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- HOST STAND STATION                -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="station-panel" id="panel-host">
+  <div class="station-label">ğŸ  Host Stand</div>
+
+  <div class="staff-note" id="host-note-box">
+    <h3>ğŸ“¢ Staff Communication</h3>
+    <p id="host-note-text">No notes posted yet. Tap Edit to add a message for all staff.</p>
+    <button class="note-edit-btn" onclick="openNoteEditor('host')">âœï¸ Edit Note</button>
+  </div>
+
+  <div class="section-title">Website & Events</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-blue" href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank">
+      <span class="btn-icon">ğŸ¸</span>
+      <span class="btn-label">Add Band / Event</span>
+      <span class="btn-sub">Post to website & blast</span>
+    </a>
+    <a class="hub-btn btn-amber" href="https://www.spothopperapp.com/admin/spots/82093/specials" target="_blank">
+      <span class="btn-icon">â­</span>
+      <span class="btn-label">Update Specials</span>
+      <span class="btn-sub">Edit this week's specials</span>
+    </a>
+    <a class="hub-btn btn-green" href="https://www.spothopperapp.com/admin/spots/82093/promotions" target="_blank">
+      <span class="btn-icon">ğŸ“£</span>
+      <span class="btn-label">Promotions</span>
+      <span class="btn-sub">Holiday blasts & pop-ups</span>
+    </a>
+    <a class="hub-btn btn-teal" href="https://sbbrewhouse.com" target="_blank">
+      <span class="btn-icon">ğŸŒ</span>
+      <span class="btn-label">View Website</span>
+      <span class="btn-sub">sbbrewhouse.com live</span>
+    </a>
+  </div>
+
+  <div class="section-title">Ordering & Operations</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-green" href="https://www.instacart.com/" target="_blank">
+      <span class="btn-icon">ğŸ›’</span>
+      <span class="btn-label">Instacart Order</span>
+      <span class="btn-sub">Reorder supplies</span>
+    </a>
+    <a class="hub-btn btn-copper" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+      <span class="btn-icon">ğŸ–¨ï¸</span>
+      <span class="btn-label">Menu Builder</span>
+      <span class="btn-sub">Print weekly specials</span>
+    </a>
+    <a class="hub-btn btn-red" href="https://www.spothopperapp.com/admin/spots/82093/email_blasts" target="_blank">
+      <span class="btn-icon">ğŸ“§</span>
+      <span class="btn-label">Email Blast</span>
+      <span class="btn-sub">Send to subscribers</span>
+    </a>
+    <a class="hub-btn btn-purple" href="https://www.spothopperapp.com/admin/spots/82093/texting" target="_blank">
+      <span class="btn-icon">ğŸ“±</span>
+      <span class="btn-label">Text Blast</span>
+      <span class="btn-sub">Send to text list</span>
+    </a>
+  </div>
+
+  <div class="section-title">Social Media</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-blue" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">
+      <span class="btn-icon">ğŸ“¸</span>
+      <span class="btn-label">Post to Instagram</span>
+      <span class="btn-sub">Preview & schedule posts</span>
+    </a>
+    <a class="hub-btn btn-slate" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">
+      <span class="btn-icon">ğŸ‘</span>
+      <span class="btn-label">Post to Facebook</span>
+      <span class="btn-sub">Preview & schedule posts</span>
+    </a>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- NOTE EDITOR MODAL                 -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="modal-overlay" id="note-modal">
+  <div class="modal">
+    <h2>âœï¸ Edit Staff Note</h2>
+    <p style="font-size:12px;color:#8c7a60;font-family:sans-serif;margin-bottom:10px;">This note will show on this iPad until changed.</p>
+    <textarea id="note-textarea" placeholder="Type a note for staff (e.g. 'Sourdough 86'd tonight. Check fridge for fish delivery.')"></textarea>
+    <div class="modal-actions">
+      <button class="btn-cancel-msg" onclick="closeNoteEditor()">Cancel</button>
+      <button class="btn-save-msg" onclick="saveNote()">Save Note</button>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- RECIPE MODAL                      -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="modal-overlay" id="recipe-modal">
+  <div class="modal">
+    <h2 id="recipe-modal-title">Recipe</h2>
+    <div id="recipe-modal-body" style="font-family:sans-serif;font-size:15px;color:#f5ead8;line-height:1.8;"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel-msg" onclick="document.getElementById('recipe-modal').classList.remove('open')">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer>The Brewhouse Staff Hub Â· Internal Use Only Â· Tap any button to open</footer>
+
+<script>
+// â”€â”€ CLOCK â”€â”€
+function updateClock() {
+  const now = new Date();
+  const h = now.getHours();
+  const m = String(now.getMinutes()).padStart(2,'0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const h12 = h % 12 || 12;
+  document.getElementById('clock-time').textContent = `${h12}:${m} ${ampm}`;
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('clock-date').textContent =
+    `${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()}`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// â”€â”€ STATION SWITCHER â”€â”€
+function switchStation(station) {
+  document.querySelectorAll('.station-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.station-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + station).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// â”€â”€ STAFF NOTES (localStorage) â”€â”€
+let currentNoteStation = null;
+
+function openNoteEditor(station) {
+  currentNoteStation = station;
+  const saved = localStorage.getItem('note-' + station) || '';
+  document.getElementById('note-textarea').value = saved;
+  document.getElementById('note-modal').classList.add('open');
+}
+
+function saveNote() {
+  const text = document.getElementById('note-textarea').value.trim();
+  if (currentNoteStation) {
+    localStorage.setItem('note-' + currentNoteStation, text);
+    const el = document.getElementById(currentNoteStation + '-note-text');
+    if (el) el.textContent = text || 'No notes posted yet.';
+  }
+  closeNoteEditor();
+}
+
+function closeNoteEditor() {
+  document.getElementById('note-modal').classList.remove('open');
+}
+
+// Load saved notes on startup
+['kitchen','bar','host'].forEach(s => {
+  const saved = localStorage.getItem('note-' + s);
+  if (saved) {
+    const el = document.getElementById(s + '-note-text');
+    if (el) el.textContent = saved;
+  }
+});
+
+// â”€â”€ RECIPES â”€â”€
+const recipes = {
+  'corned-beef': {
+    title: 'ğŸ¥© Corned Beef & Cabbage â€” $24',
+    body: `<b>Ingredients (1 portion):</b><br>
+â€¢ Corned beef brisket â€” 6 oz, sliced<br>
+â€¢ Green cabbage â€” 2 wedges, braised<br>
+â€¢ Boiled red potatoes â€” 3â€“4 small<br>
+â€¢ Baby carrots â€” handful, cooked<br>
+â€¢ Mustard dipping sauce â€” 1 oz<br>
+â€¢ Parsley garnish<br><br>
+<b>Plate:</b> Arrange beef in center, cabbage wedges and potatoes around. Sauce on side. Garnish with parsley.`
+  },
+  'shepherds-pie': {
+    title: 'ğŸ¥§ Shepherd\'s Pie â€” $22',
+    body: `<b>Ingredients (1 portion):</b><br>
+â€¢ Ground beef â€” 5 oz<br>
+â€¢ Peas & carrots â€” Â¼ cup each<br>
+â€¢ Mushrooms â€” ã
+ğÕÀ°Í±¥•€˜Í…ÕÓ¥•ñ‰Èø4+Šˆ…É…µ•±¥é•½¹¥½¹ÌƒŠP€ÈÑ‰ÍÀñ‰Èø4+Šˆ	••˜É…ÙäƒŠP€Ì½èñ‰Èø4+Šˆ…É±¥Œµ…Í¡•Á½Ñ…Ñ½•ÌƒŠP•¹•É½ÕÌÑ½À±…å•Èñ‰Èø4+ŠˆA…Éµ•Í…¸ƒŠPÍÁÉ¥¹­±”½¸Ñ½Àñ‰Èøñ‰Èø4(ñˆùAÉ•Àèğ½ˆø½½¬‰••˜µ¥áÑÕÉ”İ¥Ñ Ù•œ…¹É…Ùä¸Q½Àİ¥Ñ µ…Í¡•Á½Ñ…Ñ½•Ì…¹Á…Éµ•Í…¸¸	É½¥°Õ¹Ñ¥°½±‘•¸¹€4(€ô°4(€€É•Õ‰•¸œèì4(€€€Ñ¥Ñ±”è€ŸÂ~–¨I•Õ‰•¸M…¹‘İ¥ ƒŠP€ÈÀœ°4(€€€‰½‘äè€ñˆù%¹É•‘¥•¹ÑÌ€ ÄÁ½ÉÑ¥½¸¤èğ½ˆøñ‰Èø4+Šˆ½É¹•‰••˜ƒŠP€Ô½è°İ…Éµ•ñ‰Èø4+ŠˆM…Õ•É­É…ÕĞƒŠP€È½è°‘É…¥¹•ñ‰Èø4+ŠˆA•ÁÁ•È©…¬¡••Í”ƒŠP€ÈÍ±¥•Ìñ‰Èø4+ŠˆIå”‰É•…ƒŠP€ÈÍ±¥•Ì°‰ÕÑÑ•É•ñ‰Èø4+ŠˆQ¡½ÕÍ…¹%Í±…¹‘É•ÍÍ¥¹œƒŠP€Ä½èñ‰Èø4+ŠˆA¥­±”ÍÁ•…È€˜™É¥•Ì½¡¥ÁÌ½¸Í¥‘”ñ‰Èøñ‰Èø4(ñˆùAÉ•Àèğ½ˆøÉ¥±°‰É•…°±…å•È‰••˜°Í…Õ•É­É…ÕĞ°¡••Í”¸AÉ•ÍÌ½¸™±…ĞÑ½ÀÕ¹Ñ¥°½±‘•¸…¹¡••Í”µ•±ÑÌ¹€4(€ô°4(€€¥É¥Í µµÕ±”œèì4(€€€Ñ¥Ñ±”è€ŸÂ~6,%É¥Í 5Õ±”ƒŠP€ÄÈœ°4(€€€‰½‘äè€ñˆù%¹É•‘¥•¹ÑÌèğ½ˆøñ‰Èø4+Šˆ)…µ•Í½¸%É¥Í ]¡¥Í­•äƒŠP€È½èñ‰Èø4+ŠˆÉ•Í ±¥µ”©Õ¥”ƒŠPƒŒ+Ò÷£Æ'#àĞ®(
+"v–ævW"&VW"(	BB÷¢‡F÷“Æ'#àĞ®(
+"–6R(	Bf–ÆÂ6÷W"×VsÆ'#àĞ®(
+"Æ–ÖRvVFvRv&æ—6ƒÆ'#ãÆ'#àĞ£Æ#äÖWF†öC£Âö#âf–ÆÂ6÷W"×Vrv—F‚–6RâFB¦ÖW6öâæBÆ–ÖR§V–6RâF÷v—F‚v–ævW"&VW"âv&æ—6‚v—F‚Æ–ÖRvVFvRæ Ğ¢ÒÀĞ¢v'&Wv†÷W6RÖ&öÖ"s¢°Ğ¢F—FÆS¢	ù*2'&Wv†÷W6R&öÖ"(	BC"rÀĞ¢&öG“¢Æ#ä–æw&VF–VçG3£Âö#ãÆ'#àĞ®(
+"&–ÆW—2—&—6‚7&VÒ(	B÷£Æ'#àĞ®(
+"¦ÖW6öâ—&—6‚v†—6¶W’(	B÷£Æ'#ãÆ'#àĞ£Æ#äÖWF†öC£Âö#âÆ–W"÷"Ö—‚–â6†÷BvÆ72â6W'fR26†÷BÆöæw6–FRwV–ææW72÷"&VW"öb6†ö–6Rf÷"6"&öÖ"7G–ÆRæ Ğ¢ÒÀĞ¢vw&VVâ×FV×6†÷Bs¢°Ğ¢F—FÆS¢	øÛRw&VVâFV6†÷B(	BC"rÀĞ¢&öG“¢Æ#ä–æw&VF–VçG3£Âö#ãÆ'#àĞ®(
+"¦ÖW6öâ÷&ævR(	B÷£Æ'#àĞ®(
+"V6‚66†æ2(	B0¯HŞœƒB¸ (ˆİÙY]	ˆÛİ\ˆZ^8 %0Â½ oz<br>
+â€¢ Ice for shaking<br><br>
+<b>Method:</b> Combine all in shaker with ice. Shake well. Strain into a chilled shot glass. Serve immediately.`
+  },
+  'add': {
+    title: 'â• Add a Recipe',
+    body: `<p style="color:#8c7acials" target="_blank">
+      <span class="btn-icon">â­</span>
+      <span class="btn-label">Update Specials</span>
+      <span class="btn-sub">Edit this week's specials</span>
+    </a>
+    <a class="hub-btn btn-green" href="https://www.spothopperapp.com/admin/spots/82093/promotions" target="_blank">
+      <span class="btn-icon">ğŸ“£</span>
+      <span class="btn-label">Promotions</span>
+      <span class="btn-sub">Holiday blasts & pop-ups</span>
+    </a>
+    <a class="hub-btn btn-teal" href="https://sbbrewhouse.com" target="_blank">
+      <span class="btn-icon">ğŸŒ</span>
+      <span class="btn-label">View Website</span>
+      <span class="btn-sub">sbbrewhouse.com live</span>
+    </a>
+  </div>
+
+  <div class="section-title">Ordering & Operations</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-green" href="https://www.instacart.com/" target="_blank">
+      <span class="btn-icon">ğŸ›’</span>
+      <span class="btn-label">Instacart Order</span>
+      <span class="btn-sub">Reorder supplies</span>
+    </a>
+    <a class="hub-btn btn-copper" href="https://brewhouse-dashboard.netlify.app/Brewhouse_Menu_Builder.html" target="_blank">
+      <span class="btn-icon">ğŸ–¨ï¸</span>
+      <span class="btn-label">Menu Builder</span>
+      <span class="btn-sub">Print weekly specials</span>
+    </a>
+    <a class="hub-btn btn-red" href="https://www.spothopperapp.com/admin/spots/82093/email_blasts" target="_blank">
+      <span class="btn-icon">ğŸ“§</span>
+      <span class="btn-label">Email Blast</span>
+      <span class="btn-sub">Send to subscribers</span>
+    </a>
+    <a class="hub-btn btn-purple" href="https://www.spothopperapp.com/admin/spots/82093/texting" target="_blank">
+      <span class="btn-icon">ğŸ“±</span>
+      <span class="btn-label">Text Blast</span>
+      <span class="btn-sub">Send to text list</span>
+    </a>
+  </div>
+
+  <div class="section-title">Social Media</div>
+  <div class="btn-grid">
+    <a class="hub-btn btn-blue" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">
+      <span class="btn-icon">ğŸ“¸</span>
+      <span class="btn-label">Post to Instagram</span>
+      <span class="btn-sub">Preview & schedule posts</span>
+    </a>
+    <a class="hub-btn btn-slate" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">
+      <span class="btn-icon">ğŸ‘</span>
+      <span class="btn-label">Post to Facebook</span>
+      <span class="btn-sub">Preview & schedule posts</span>
+    </a>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- NOTE EDITOR MODAL                 -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="modal-overlay" id="note-modal">
+  <div class="modal">
+    <h2>âœï¸ Edit Staff Note</h2>
+    <p style="font-size:12px;color:#8c7a60;font-family:sans-serif;margin-bottom:10px;">This note will show on this iPad until changed.</p>
+    <textarea id="note-textarea" placeholder="Type a note for staff (e.g. 'Sourdough 86'd tonight. Check fridge for fish delivery.')"></textarea>
+    <div class="modal-actions">
+      <button class="btn-cancel-msg" onclick="closeNoteEditor()">Cancel</button>
+      <button class="btn-save-msg" onclick="saveNote()">Save Note</button>
+    </div>
+  </div>
+</div>
+
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- RECIPE MODAL                      -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<div class="modal-overlay" id="recipe-modal">
+  <div class="modal">
+    <h2 id="recipe-modal-title">Recipe</h2>
+    <div id="recipe-modal-body" style="font-family:sans-serif;font-size:15px;color:#f5ead8;line-height:1.8;"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel-msg" onclick="document.getElementById('recipe-modal').classList.remove('open')">Close</button>
+    </div>
+  </div>
+</div>
+
+<footer>The Brewhouse Staff Hub Â· Internal Use Only Â· Tap any button to open</footer>
+
+<script>
+// â”€â”€ CLOCK â”€â”€
+function updateClock() {
+  const now = new Date();
+  const h = now.getHours();
+  const m = String(now.getMinutes()).padStart(2,'0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const h12 = h % 12 || 12;
+  document.getElementById('clock-time').textContent = `${h12}:${m} ${ampm}`;
+  const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('clock-date').textContent =
+    `${days[now.getDay()]} ${months[now.getMonth()]} ${now.getDate()}`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// â”€â”€ STATION SWITCHER â”€â”€
+function switchStation(station) {
+  document.querySelectorAll('.station-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.station-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + station).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// â”€â”€ STAFF NOTES (localStorage) â”€â”€
+let currentNoteStation = null;
+
+function openNoteEditor(station) {
+  currentNoteStation = station;
+  const saved = localStorage.getItem('note-' + station) || '';
+  document.getElementById('note-textarea').value = saved;
+  document.getElementById('note-modal').classList.add('open');
+}
+
+function saveNote() {
+  const text = document.getElementById('note-textarea').value.trim();
+  if (currentNoteStation) {
+    localStorage.setItem('note-' + currentNoteStation, text);
+    const el = document.getElementById(currentNoteStation + '-note-text');
+    if (el) el.textContent = text || 'No notes posted yet.';
+  }
+  closeNoteEditor();
+}
+
+function closeNoteEditor() {
+  document.getElementById('note-modal').classList.remove('open');
+}
+
+// Load saved notes on startup
+['kitchen','bar','host'].forEach(s => {
+  const saved = localStorage.getItem('note-' + s);
+  if (saved) {
+    const el = document.getElementById(s + '-note-text');
+    if (el) el.textContent = saved;
+  }
+});
+
+// â”€â”€ RECIPES â”€â”€
+const recipes = {
+  'corned-beef': {
+    title: 'ğŸ¥© Corned Beef & Cabbage â€” $24',
+    body: `<b>Ingredients (1 portion):</b><br>
+â€¢ Corned beef brisket â€” 6 oz, sliced<br>
+â€¢ Green cabbage â€” 2 wedges, braised<br>
+â€¢ Boiled red potatoes â€” 3â€“4 small<br>
+â€¢ Baby carrots â€” handful, cooked<br>
+â€¢ Mustard dipping sauce â€” 1 oz<br>
+â€¢ Parsley garnish<br><br>
+<b>Plate:</b> Arrange beef in center, cabbage wedges and potatoes around. Sauce on side. Garnish with parsley.`
+  },
+  'shepherds-pie': {
+    title: 'ğŸ¥§ Shepherd\'s Pie â€” $22',
+    body: `<b>Ingredients (1 portion):</b><br>
+â€¢ Ground beef â€” 5 oz<br>
+â€¢ Peas & carrots â€” Â¼ cup each<br>
+â€¢ Mushrooms â€” ã
+ğÕÀ°Í±¥•€˜Í…ÕÓ¥•ñ‰Èø4+Šˆ…É…µ•±¥é•½¹¥½¹ÌƒŠP€ÈÑ‰ÍÀñ‰Èø4+Šˆ	••˜É…ÙäƒŠP€Ì½èñ‰Èø4+Šˆ…É±¥Œµ…Í¡•Á½Ñ…Ñ½•ÌƒŠP•¹•É½ÕÌÑ½À±…å•Èñ‰Èø4+ŠˆA…Éµ•Í…¸ƒŠPÍÁÉ¥¹­±”½¸Ñ½Àñ‰Èøñ‰Èø4(ñˆùAÉ•Àèğ½ˆø½½¬‰••˜µ¥áÑÕÉ”İ¥Ñ Ù•œ…¹É…Ùä¸Q½Àİ¥Ñ µ…Í¡•Á½Ñ…Ñ½•Ì…¹Á…Éµ•Í…¸¸	É½¥°Õ¹Ñ¥°½±‘•¸¹€4(€ô°4(€€É•Õ‰•¸œèì4(€€€Ñ¥Ñ±”è€ŸÂ~–¨I•Õ‰•¸M…¹‘İ¥ ƒŠP€ÈÀœ°4(€€€‰½‘äè€ñˆù%¹É•‘¥•¹ÑÌ€ ÄÁ½ÉÑ¥½¸¤èğ½ˆøñ‰Èø4+Šˆ½É¹•‰••˜ƒŠP€Ô½è°İ…Éµ•ñ‰Èø4+ŠˆM…Õ•É­É…ÕĞƒŠP€È½è°‘É…¥¹•ñ‰Èø4+ŠˆA•ÁÁ•È©…¬¡••Í”ƒŠP€ÈÍ±¥•Ìñ‰Èø4+ŠˆIå”‰É•…ƒŠP€ÈÍ±¥•Ì°‰ÕÑÑ•É•ñ‰Èø4+ŠˆQ¡½ÕÍ…¹%Í±…¹‘É•ÍÍ¥¹œƒŠP€Ä½èñ‰Èø4+ŠˆA¥­±”ÍÁ•…È€˜™É¥•Ì½¡¥ÁÌ½¸Í¥‘”ñ‰Èøñ‰Èø4(ñˆùAÉ•Àèğ½ˆøÉ¥±°‰É•…°±…å•È‰••˜°Í…Õ•É­É…ÕĞ°¡••Í”¸AÉ•ÍÌ½¸™±…ĞÑ½ÀÕ¹Ñ¥°½±‘•¸…¹¡••Í”µ•±ÑÌ¹€4(€ô°4(€€¥É¥Í µµÕ±”œèì4(€€€Ñ¥Ñ±”è€ŸÂ~6,%É¥Í 5Õ±”ƒŠP€ÄÈœ°4(€€€‰½‘äè€ñˆù%¹É•‘¥•¹ÑÌèğ½ˆøñ‰Èø4+Šˆ)…µ•Í½¸%É¥Í ]¡¥Í­•äƒŠP€È½èñ‰Èø4+ŠˆÉ•Í ±¥µ”©Õ¥”ƒŠPƒŒ+Ò÷£Æ'#àĞ®(
+"v–ævW"&VW"(	BB÷¢‡F÷“Æ'#àĞ®(
+"–6R(	Bf–ÆÂ6÷W"×VsÆ'#àĞ®(
+"Æ–ÖRvVFvRv&æ—6ƒÆ'#ãÆ'#àĞ£Æ#äÖWF†öC£Âö#âf–ÆÂ6÷W"×Vrv—F‚–6RâFB¦ÖW6öâæBÆ–ÖR§V–6RâF÷v—F‚v–ævW"&VW"âv&æ—6‚v—F‚Æ–ÖRvVFvRæ Ğ¢ÒÀĞ¢v'&Wv†÷W6RÖ&öÖ"s¢°Ğ¢F—FÆS¢	ù*2'&Wv†÷W6R&öÖ"(	BC"rÀĞ¢&öG“¢Æ#ä–æw&VF–VçG3£Âö#ãÆ'#àĞ®(
+"&–ÆW—2—&—6‚7&VÒ(	B÷£Æ'#àĞ®(
+"¦ÖW6öâ—&—6‚v†—6¶W’(	B÷£Æ'#ãÆ'#àĞ£Æ#äÖWF†öC£Âö#âÆ–W"÷"Ö—‚–â6†÷BvÆ72â6W'fR26†÷BÆöæw6–FRwV–ææW72÷"&VW"öb6†ö–6Rf÷"6"&öÖ"7G–ÆRæ Ğ¢ÒÀĞ¢vw&VVâ×FV×6†÷Bs¢°Ğ¢F—FÆS¢	øÛRw&VVâFV6†÷B(	BC"rÀĞ¢&öG“¢Æ#ä–æw&VF–VçG3£Âö#ãÆ'#àĞ®(
+"¦ÖW6öâ÷&ævR(	B÷£Æ'#àĞ®(
+"V6‚66†æ2(	B0¯HŞœƒB¸ (ˆİÙY]	ˆÛİ\ˆZ^8 %0Â½ oz<br>
+â€¢ Ice for shaking<br><br>
+<b>Method:</b> Combine all in shaker with ice. Shake well. Strain into a chilled shot glass. Serve immediately.`
+  },
+  'add': {
+    title: 'â• Add a Recipe',
+    body: `<p style="color:#8c7a60;">To add a new recipe to this hub, just ask Claude to add it and it will appear here on the next update.</p><br><p>You can also tell Joal or the manager to add it to the system.</p>`
+  }
+};
+
+function showRecipe(id) {
+  const r = recipes[id];
+  if (!r) return;
+  document.getElementById('recipe-modal-title').textContent = r.title;
+  document.getElementById('recipe-modal-body').innerHTML = r.body;
+  document.getElementById('recipe-modal').classList.add('open');
+}
+
+// Close modals on overlay click
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) overlay.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
