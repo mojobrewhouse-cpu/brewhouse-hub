@@ -3,343 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brewhouse Morning Report — March 18, 2026</title>
+<title>Brewhouse Morning Report — March 20, 2026</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Georgia', serif;
-    background: #1a1008;
-    color: #f0e8d8;
-    min-height: 100vh;
-  }
-  .header {
-    background: linear-gradient(135deg, #2d1a06, #4a2c0a);
-    border-bottom: 3px solid #c8841a;
-    padding: 24px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header h1 {
-    font-size: 1.8rem;
-    color: #f0c060;
-    letter-spacing: 1px;
-  }
-  .header .date {
-    color: #c8a060;
-    font-size: 1rem;
-    font-family: sans-serif;
-  }
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 28px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  .card {
-    background: #2a1a08;
-    border: 1px solid #4a3010;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .card-header {
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.05rem;
-    font-weight: bold;
-    font-family: sans-serif;
-    letter-spacing: 0.5px;
-  }
-  .card-body { padding: 18px 20px; }
-  .card-header .icon { font-size: 1.2rem; }
-
-  /* Alert levels */
-  .alert-red .card-header { background: #5a1010; color: #ff9090; border-bottom: 2px solid #c03030; }
-  .alert-yellow .card-header { background: #4a3800; color: #ffe080; border-bottom: 2px solid #c09010; }
-  .alert-green .card-header { background: #0a3a18; color: #80f0a0; border-bottom: 2px solid #20a040; }
-  .alert-blue .card-header { background: #0a2040; color: #80c0ff; border-bottom: 2px solid #2060c0; }
-
-  /* Metrics grid */
-  .metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-  .metric {
-    background: #1a1008;
-    border: 1px solid #4a3010;
-    border-radius: 8px;
-    padding: 12px 14px;
-    text-align: center;
-  }
-  .metric .label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #a08050;
-    font-family: sans-serif;
-    margin-bottom: 6px;
-  }
-  .metric .value {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #f0c060;
-  }
-  .metric .sub {
-    font-size: 0.75rem;
-    color: #a08050;
-    font-family: sans-serif;
-    margin-top: 3px;
-  }
-  .metric .up { color: #50e070; }
-  .metric .down { color: #e05050; }
-
-  /* Review items */
-  .review-item {
-    border-bottom: 1px solid #3a2510;
-    padding: 12px 0;
-  }
-  .review-item:last-child { border-bottom: none; padding-bottom: 0; }
-  .review-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 6px;
-  }
-  .reviewer-name {
-    font-weight: bold;
-    color: #f0c060;
-    font-family: sans-serif;
-  }
-  .review-date {
-    font-size: 0.78rem;
-    color: #806040;
-    font-family: sans-serif;
-  }
-  .stars { color: #f0c000; font-size: 1rem; letter-spacing: 1px; }
-  .stars.low { color: #e06020; }
-  .review-text {
-    font-size: 0.9rem;
-    color: #c8b090;
-    line-height: 1.5;
-    font-style: italic;
-  }
-  .no-response-badge {
-    display: inline-block;
-    background: #5a2010;
-    color: #ff9060;
-    font-size: 0.7rem;
-    font-family: sans-serif;
-    padding: 2px 8px;
-    border-radius: 10px;
-    margin-left: 8px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-  }
-  .suggested-reply {
-    margin-top: 8px;
-    background: #0d1a10;
-    border-left: 3px solid #20a040;
-    padding: 8px 12px;
-    font-size: 0.85rem;
-    color: #90d0a0;
-    font-style: normal;
-    line-height: 1.5;
-    border-radius: 0 6px 6px 0;
-  }
-  .suggested-reply .reply-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #40a060;
-    font-family: sans-serif;
-    margin-bottom: 4px;
-    font-style: normal;
-  }
-
-  /* Staff table */
-  .staff-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    font-size: 0.9rem;
-  }
-  .staff-table th {
-    background: #1a1008;
-    color: #a08050;
-    text-align: left;
-    padding: 8px 12px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #3a2510;
-  }
-  .staff-table td {
-    padding: 9px 12px;
-    border-bottom: 1px solid #3a2510;
-    color: #e0d0b0;
-  }
-  .staff-table tr:last-child td { border-bottom: none; }
-  .role-badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
-  .role-bartender { background: #2a1040; color: #c080ff; }
-  .role-chef { background: #1a2800; color: #80e040; }
-  .role-server { background: #001828; color: #60c0ff; }
-  .role-busser { background: #281800; color: #f0a040; }
-
-  /* Sales breakdown */
-  .sales-bar-container {
-    margin: 12px 0;
-  }
-  .sales-bar-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .sales-bar-label {
-    width: 110px;
-    font-size: 0.82rem;
-    color: #c8a060;
-    font-family: sans-serif;
-    text-align: right;
-    flex-shrink: 0;
-  }
-  .sales-bar-track {
-    flex: 1;
-    background: #1a1008;
-    border-radius: 4px;
-    height: 18px;
-    overflow: hidden;
-  }
-  .sales-bar-fill {
-    height: 100%;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    padding-left: 8px;
-    font-size: 0.72rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-  .bar-food { background: linear-gradient(90deg, #c06020, #e08030); color: #fff; }
-  .bar-liquor { background: linear-gradient(90deg, #6020a0, #9040d0); color: #fff; }
-  .bar-draft { background: linear-gradient(90deg, #1060a0, #2090d0); color: #fff; }
-  .bar-wine { background: linear-gradient(90deg, #800030, #c04060); color: #fff; }
-  .bar-beer { background: linear-gradient(90deg, #305000, #508020); color: #fff; }
-
-  /* Yelp / action items */
-  .action-item {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    padding: 12px 0;
-    border-bottom: 1px solid #3a2510;
-  }
-  .action-item:last-child { border-bottom: none; }
-  .action-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-  .action-content h4 {
-    font-family: sans-serif;
-    font-size: 0.95rem;
-    color: #f0c060;
-    margin-bottom: 4px;
-  }
-  .action-content p {
-    font-size: 0.85rem;
-    color: #c8a070;
-    line-height: 1.5;
-  }
-  .priority-badge {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 10px;
-    font-size: 0.7rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    margin-top: 6px;
-  }
-  .priority-urgent { background: #6a1010; color: #ff8080; }
-  .priority-high { background: #5a3a00; color: #ffc060; }
-  .priority-medium { background: #0a2a40; color: #60b0ff; }
-
-  /* Summary / headline */
-  .headline {
-    background: linear-gradient(135deg, #0a2808, #0d3a0a);
-    border: 2px solid #20a040;
-    border-radius: 12px;
-    padding: 20px 24px;
-    text-align: center;
-  }
-  .headline h2 {
-    font-size: 1.4rem;
-    color: #80f090;
-    margin-bottom: 8px;
-  }
-  .headline p {
-    color: #b0e0b8;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-family: sans-serif;
-  }
-
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #4a3010, transparent);
-    margin: 4px 0;
-  }
-
-  .link-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 7px 18px;
-    background: #4a2c0a;
-    color: #f0c060;
-    border-radius: 6px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 0.82rem;
-    border: 1px solid #c8841a;
-  }
-  .link-btn:hover { background: #6a4010; }
-
-  .flag-row {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-  }
-  .flag {
-    padding: 4px 12px;
-    border-radius: 14px;
-    font-size: 0.78rem;
-    font-family: sans-serif;
-    font-weight: bold;
-  }
-  .flag-good { background: #0a3010; color: #60e080; border: 1px solid #20a040; }
-  .flag-warn { background: #3a2800; color: #f0c060; border: 1px solid #c09020; }
-  .flag-bad { background: #3a0a08; color: #ff8070; border: 1px solid #c03020; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Georgia', serif; background: #1a1008; color: #f0e8d8; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #2d1a06, #4a2c0a); border-bottom: 3px solid #c8841a; padding: 24px 32px; display: flex; align-items: center; justify-content: space-between; }
+.header h1 { font-size: 1.8rem; color: #f0c060; letter-spacing: 1px; }
+.header .date { color: #c8a060; font-size: 1rem; font-family: sans-serif; }
+.container { max-width: 900px; margin: 0 auto; padding: 28px 20px; display: flex; flex-direction: column; gap: 24px; }
+.card { background: #2a1a08; border: 1px solid #4a3010; border-radius: 12px; overflow: hidden; }
+.card-header { padding: 14px 20px; display: flex; align-items: center; gap: 10px; font-size: 1.05rem; font-weight: bold; font-family: sans-serif; letter-spacing: 0.5px; }
+.card-body { padding: 18px 20px; }
+.card-header .icon { font-size: 1.2rem; }
+.alert-red .card-header { background: #5a1010; color: #ff9090; border-bottom: 2px solid #c03030; }
+.alert-yellow .card-header { background: #4a3800; color: #ffe080; border-bottom: 2px solid #c09010; }
+.alert-green .card-header { background: #0a3a18; color: #80f0a0; border-bottom: 2px solid #20a040; }
+.alert-blue .card-header { background: #0a2040; color: #80c0ff; border-bottom: 2px solid #2060c0; }
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin-bottom: 14px; }
+.metric { background: #1a1008; border: 1px solid #4a3010; border-radius: 8px; padding: 12px 14px; text-align: center; }
+.metric .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: #a08050; font-family: sans-serif; margin-bottom: 6px; }
+.metric .value { font-size: 1.4rem; font-weight: bold; color: #f0c060; }
+.metric .sub { font-size: 0.75rem; color: #a08050; font-family: sans-serif; margin-top: 3px; }
+.metric .up { color: #50e070; }
+.metric .down { color: #e05050; }
+.staff-table { width: 100%; border-collapse: collapse; font-family: sans-serif; font-size: 0.9rem; }
+.staff-table th { background: #1a1008; color: #a08050; text-align: left; padding: 8px 12px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #3a2510; }
+.staff-table td { padding: 9px 12px; border-bottom: 1px solid #3a2510; color: #e0d0b0; }
+.staff-table tr:last-child td { border-bottom: none; }
+.role-badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: bold; }
+.role-bartender { background: #2a1040; color: #c080ff; }
+.role-chef { background: #1a2800; color: #80e040; }
+.role-cook { background: #1a2800; color: #a0e060; }
+.role-server { background: #001828; color: #60c0ff; }
+.role-busser { background: #281800; color: #f0a040; }
+.role-gm { background: #1a0a30; color: #e080ff; }
+.sales-bar-container { margin: 12px 0; }
+.sales-bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.sales-bar-label { width: 110px; font-size: 0.82rem; color: #c8a060; font-family: sans-serif; text-align: right; flex-shrink: 0; }
+.sales-bar-track { flex: 1; background: #1a1008; border-radius: 4px; height: 18px; overflow: hidden; }
+.sales-bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; font-size: 0.72rem; font-family: sans-serif; font-weight: bold; }
+.bar-food { background: linear-gradient(90deg, #c06020, #e08030); color: #fff; }
+.bar-liquor { background: linear-gradient(90deg, #6020a0, #9040d0); color: #fff; }
+.bar-draft { background: linear-gradient(90deg, #1060a0, #2090d0); color: #fff; }
+.bar-wine { background: linear-gradient(90deg, #800030, #c04060); color: #fff; }
+.bar-beer { background: linear-gradient(90deg, #305000, #508020); color: #fff; }
+.section-divider { height: 1px; background: linear-gradient(90deg, transparent, #4a3010, transparent); margin: 4px 0; }
+.headline { background: linear-gradient(135deg, #0a2808, #0d3a0a); border: 2px solid #20a040; border-radius: 12px; padding: 20px 24px; text-align: center; }
+.headline h2 { font-size: 1.4rem; color: #80f090; margin-bottom: 8px; }
+.headline p { color: #b0e0b8; font-size: 0.95rem; line-height: 1.6; font-family: sans-serif; }
+.flag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+.flag { padding: 4px 12px; border-radius: 14px; font-size: 0.78rem; font-family: sans-serif; font-weight: bold; }
+.flag-good { background: #0a3010; color: #60e080; border: 1px solid #20a040; }
+.flag-warn { background: #3a2800; color: #f0c060; border: 1px solid #c09020; }
+.flag-bad { background: #3a0a08; color: #ff8070; border: 1px solid #c03020; }
+.action-item { display: flex; gap: 14px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid #3a2510; }
+.action-item:last-child { border-bottom: none; }
+.action-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+.action-content h4 { font-family: sans-serif; font-size: 0.95rem; color: #f0c060; margin-bottom: 4px; }
+.action-content p { font-size: 0.85rem; color: #c8a070; line-height: 1.5; }
+.priority-badge { display: inline-block; padding: 2px 10px; border-radius: 10px; font-size: 0.7rem; font-family: sans-serif; font-weight: bold; letter-spacing: 0.5px; margin-top: 6px; }
+.priority-urgent { background: #6a1010; color: #ff8080; }
+.priority-high { background: #5a3a00; color: #ffc060; }
+.priority-medium { background: #0a2a40; color: #60b0ff; }
+.link-btn { display: inline-block; margin-top: 10px; padding: 7px 18px; background: #4a2c0a; color: #f0c060; border-radius: 6px; text-decoration: none; font-family: sans-serif; font-size: 0.82rem; border: 1px solid #c8841a; }
+.review-item { border-bottom: 1px solid #3a2510; padding: 12px 0; }
+.review-item:last-child { border-bottom: none; padding-bottom: 0; }
+.review-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.reviewer-name { font-weight: bold; color: #f0c060; font-family: sans-serif; }
+.review-date { font-size: 0.78rem; color: #806040; font-family: sans-serif; }
+.stars { color: #f0c000; font-size: 1rem; letter-spacing: 1px; }
+.stars.low { color: #e06020; }
+.review-text { font-size: 0.9rem; color: #c8b090; line-height: 1.5; font-style: italic; }
+.no-response-badge { display: inline-block; background: #5a2010; color: #ff9060; font-size: 0.7rem; font-family: sans-serif; padding: 2px 8px; border-radius: 10px; margin-left: 8px; font-weight: bold; letter-spacing: 0.5px; }
+.suggested-reply { margin-top: 8px; background: #0d1a10; border-left: 3px solid #20a040; padding: 8px 12px; font-size: 0.85rem; color: #90d0a0; font-style: normal; line-height: 1.5; border-radius: 0 6px 6px 0; }
+.suggested-reply .reply-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #40a060; font-family: sans-serif; margin-bottom: 4px; font-style: normal; }
 </style>
 </head>
 <body>
 
 <div class="header">
   <div>
-    <div class="date">WEDNESDAY, MARCH 18, 2026</div>
+    <div class="date">FRIDAY, MARCH 20, 2026</div>
     <h1>🍺 Brewhouse Morning Report</h1>
   </div>
   <div style="text-align:right; font-family:sans-serif; font-size:0.85rem; color:#c8a060;">
@@ -351,87 +95,65 @@
 
   <!-- HEADLINE SUMMARY -->
   <div class="headline">
-    <h2>🎉 St. Patrick's Day: Big Night!</h2>
-    <p>Yesterday's St. Patrick's Day brought in <strong>$6,244</strong> net — up <strong>+83.8%</strong> vs last Tuesday.
-    212 guests through the door. Labor held at a clean <strong>17.3%</strong>.
-    Today's crew is lean and covered with <strong>7 staff / no gaps</strong>.</p>
+    <h2>🍺 Strong Thursday — $4,858 Net</h2>
+    <p>Yesterday's Thursday brought in <strong>$4,858</strong> net with <strong>220 guests</strong> through the door. Labor came in clean at <strong>15.5%</strong> — well below the healthy 20% target. Today you've got a full crew of <strong>10 staff / no gaps</strong>.</p>
     <div class="flag-row" style="justify-content:center; margin-top:14px;">
-      <span class="flag flag-bad">⚠️ 5 Google reviews need replies</span>
-      <span class="flag flag-bad">🚨 Yelp quote unanswered 6 days</span>
-      <span class="flag flag-warn">⚡ Google Ad disapproved</span>
+      <span class="flag flag-good">✓ Labor 15.5% — Excellent</span>
+      <span class="flag flag-good">✓ 10 staff / 0 gaps today</span>
+      <span class="flag flag-warn">⭐ Google reviews still need replies</span>
     </div>
   </div>
 
   <!-- TOAST SALES -->
   <div class="card alert-green">
     <div class="card-header">
-      <span class="icon">🍞</span> Toast — St. Patrick's Day Sales (Tue Mar 17)
+      <span class="icon">🍞</span> Toast — Thursday, March 19 Sales
     </div>
     <div class="card-body">
       <div class="metrics-grid">
         <div class="metric">
           <div class="label">Net Sales</div>
-          <div class="value">$6,244</div>
-          <div class="sub up">+83.8% vs last Tue</div>
+          <div class="value">$4,858</div>
+          <div class="sub">yesterday</div>
         </div>
         <div class="metric">
           <div class="label">Gross Sales</div>
-          <div class="value">$6,469</div>
+          <div class="value">$5,089</div>
           <div class="sub">incl. discounts</div>
         </div>
         <div class="metric">
-          <div class="label">Covers</div>
-          <div class="value">212</div>
-          <div class="sub up">+60.6% vs last Tue</div>
+          <div class="label">Guests</div>
+          <div class="value">220</div>
+        </div>
+        <div class="metric">
+          <div class="label">Orders</div>
+          <div class="value">127</div>
+          <div class="sub">$38.26 avg/order</div>
         </div>
         <div class="metric">
           <div class="label">Avg / Guest</div>
-          <div class="value">$29.45</div>
+          <div class="value">$22.08</div>
         </div>
         <div class="metric">
           <div class="label">Labor %</div>
-          <div class="value" style="color:#50e070;">17.3%</div>
-          <div class="sub up">✓ Healthy</div>
+          <div class="value" style="color:#50e070;">15.5%</div>
+          <div class="sub up">✓ Excellent</div>
         </div>
         <div class="metric">
           <div class="label">Discounts</div>
-          <div class="value" style="font-size:1.1rem;">$224.40</div>
+          <div class="value" style="font-size:1.1rem;">4.5%</div>
+          <div class="sub">of gross</div>
+        </div>
+        <div class="metric">
+          <div class="label">Voids</div>
+          <div class="value" style="font-size:1.1rem;">10 items</div>
+          <div class="sub">review if recurring</div>
         </div>
       </div>
-
       <div class="section-divider"></div>
-      <div style="margin-top:14px;">
-        <div style="font-family:sans-serif; font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; color:#a08050; margin-bottom:10px;">Revenue by Category</div>
-        <div class="sales-bar-container">
-          <div class="sales-bar-row">
-            <div class="sales-bar-label">Food</div>
-            <div class="sales-bar-track"><div class="sales-bar-fill bar-food" style="width:45%">$2,826 · 45%</div></div>
-          </div>
-          <div class="sales-bar-row">
-            <div class="sales-bar-label">Liquor</div>
-            <div class="sales-bar-track"><div class="sales-bar-fill bar-liquor" style="width:20%">$1,255 · 20%</div></div>
-          </div>
-          <div class="sales-bar-row">
-            <div class="sales-bar-label">Draft Beer</div>
-            <div class="sales-bar-track"><div class="sales-bar-fill bar-draft" style="width:17%">$1,070 · 17%</div></div>
-          </div>
-          <div class="sales-bar-row">
-            <div class="sales-bar-label">Wine</div>
-            <div class="sales-bar-track"><div class="sales-bar-fill bar-wine" style="width:4%"></div></div>
-            <span style="font-size:0.78rem; color:#c8a060; font-family:sans-serif;">$230</span>
-          </div>
-          <div class="sales-bar-row">
-            <div class="sales-bar-label">Bottled Beer</div>
-            <div class="sales-bar-track"><div class="sales-bar-fill bar-beer" style="width:3%"></div></div>
-            <span style="font-size:0.78rem; color:#c8a060; font-family:sans-serif;">$165</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-divider" style="margin-top:14px;"></div>
-      <div style="margin-top:12px; padding: 10px 14px; background:#3a1a08; border-radius:8px; border-left: 3px solid #f0a040;">
-        <div style="font-family:sans-serif; font-size:0.78rem; color:#f0a040; font-weight:bold; margin-bottom:4px;">⚠️ FLAG: High Voids</div>
-        <div style="font-size:0.85rem; color:#d0c0a0;">$273.95 in voids (22 items) — significantly higher than the typical ~$21.50 Tuesday average. Worth reviewing with kitchen/bar staff. Could be training, system errors, or item returns from the St. Patrick's Day rush.</div>
+      <div style="margin-top:14px; padding: 10px 14px; background:#0a3010; border-radius:8px; border-left: 3px solid #20a040;">
+        <div style="font-family:sans-serif; font-size:0.78rem; color:#40d060; font-weight:bold; margin-bottom:4px;">✓ Strong Labor Control</div>
+        <div style="font-size:0.85rem; color:#d0c0a0;">Labor at 15.5% of net is well under the 20% target. Great efficiency for a busy Thursday. Full detailed breakdown (sales by category, revenue centers) will arrive in your inbox by ~7:40 AM today.</div>
       </div>
     </div>
   </div>
@@ -439,18 +161,18 @@
   <!-- SLING STAFFING -->
   <div class="card alert-blue">
     <div class="card-header">
-      <span class="icon">👥</span> Sling — Today's Staff (Wed Mar 18)
+      <span class="icon">👥</span> Sling — Today's Staff (Fri March 20)
     </div>
     <div class="card-body">
       <div class="metrics-grid" style="margin-bottom:16px;">
         <div class="metric">
           <div class="label">Scheduled</div>
-          <div class="value">7</div>
+          <div class="value">10</div>
           <div class="sub">employees</div>
         </div>
         <div class="metric">
           <div class="label">Total Hours</div>
-          <div class="value">37.99</div>
+          <div class="value">46.74</div>
         </div>
         <div class="metric">
           <div class="label">Overtime</div>
@@ -468,72 +190,45 @@
           <tr><th>Name</th><th>Role</th></tr>
         </thead>
         <tbody>
-          <tr><td>Tony</td><td><span class="role-badge role-bartender">🍸 Bartender</span></td></tr>
-          <tr><td>Jackson</td><td><span class="role-badge role-bartender">🍸 Bartender</span></td></tr>
-          <tr><td>Andrew</td><td><span class="role-badge role-bartender">🍸 Bartender</span></td></tr>
-          <tr><td>Noel</td><td><span class="role-badge role-chef">👨‍🍳 Chef</span></td></tr>
-          <tr><td>Katharine</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
-          <tr><td>Emily</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
-          <tr><td>Cal</td><td><span class="role-badge role-busser">🧹 Busser</span></td></tr>
+          <tr><td>Casey Smith</td><td><span class="role-badge role-gm">⭐ General Manager</span></td></tr>
+          <tr><td>Noel Nunez</td><td><span class="role-badge role-chef">👨‍🍳 Chef</span></td></tr>
+          <tr><td>Isael Salvador Narciso</td><td><span class="role-badge role-cook">🍳 Cook</span></td></tr>
+          <tr><td>Christine Vargas</td><td><span class="role-badge role-bartender">🍸 Bartender</span></td></tr>
+          <tr><td>Andrew Turner</td><td><span class="role-badge role-bartender">🍸 Bartender</span></td></tr>
+          <tr><td>Augustine Arroyo</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
+          <tr><td>Gabriel Lopez Galindo</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
+          <tr><td>Bri Kelley</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
+          <tr><td>Fred De Leon</td><td><span class="role-badge role-server">🍽️ Server</span></td></tr>
+          <tr><td>James Hernandez</td><td><span class="role-badge role-busser">🧹 Busser</span></td></tr>
         </tbody>
       </table>
-    </div>
-  </div>
-
-  <!-- URGENT: YELP QUOTE -->
-  <div class="card alert-red">
-    <div class="card-header">
-      <span class="icon">🚨</span> URGENT — Yelp Quote Request (6 Days Unanswered)
-    </div>
-    <div class="card-body">
-      <div class="action-item">
-        <div class="action-icon">📋</div>
-        <div class="action-content">
-          <h4>Ben — Company Retreat Inquiry</h4>
-          <p><strong>Sent:</strong> March 12, 2026 &nbsp;|&nbsp; <strong>Now 6 days old — needs a reply TODAY</strong></p>
-          <p style="margin-top:6px;">Requesting a quote for a company retreat event: approximately <strong>18 guests</strong>, dates <strong>April 28 – May 1</strong>. This is a multi-day private event inquiry — potentially significant revenue. No response yet = risk of losing the booking.</p>
-          <span class="priority-badge priority-urgent">🚨 URGENT — Reply Today</span>
-          <div class="suggested-reply">
-            <div class="reply-label">Suggested Reply to Ben</div>
-            Hi Ben! Thanks so much for thinking of The Brewhouse for your company retreat — that sounds like a great time! We'd love to host your group of 18 for April 28–May 1. Let me put together some options for you. Could you share a bit more about what you're envisioning — sit-down dinner, cocktail hour, full buyout, or a mix? You can also reach me directly at [your phone/email] to chat through the details. Looking forward to making this a memorable event!
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 
   <!-- GOOGLE REVIEWS -->
   <div class="card alert-yellow">
     <div class="card-header">
-      <span class="icon">⭐</span> Google Reviews — 5 Unanswered
+      <span class="icon">⭐</span> Google Reviews — Still Need Replies
     </div>
     <div class="card-body">
-      <div style="font-family:sans-serif; font-size:0.82rem; color:#a08050; margin-bottom:14px;">None of these have received a reply. Responding to reviews helps your Google ranking and shows customers you care.</div>
+      <div style="font-family:sans-serif; font-size:0.82rem; color:#a08050; margin-bottom:14px;">These reviews are unanswered. Responding helps your Google ranking and shows guests you care. Suggested replies are ready to copy-paste below.</div>
 
-      <!-- Alexander - 3 star -->
       <div class="review-item">
         <div class="review-meta">
-          <div>
-            <span class="reviewer-name">Alexander Jonasson</span>
-            <span class="no-response-badge">NO REPLY</span>
-          </div>
+          <div><span class="reviewer-name">Alexander Jonasson</span><span class="no-response-badge">NO REPLY</span></div>
           <span class="review-date">Mar 6, 2026</span>
         </div>
         <div class="stars low">★★★☆☆</div>
-        <div class="review-text" style="margin-top:6px; color:#d09070;">Left a 3-star rating only — no written comment.</div>
+        <div class="review-text" style="margin-top:6px;">Left a 3-star rating only — no written comment.</div>
         <div class="suggested-reply">
           <div class="reply-label">Suggested Reply</div>
           Hi Alexander, thanks for stopping by The Brewhouse and for leaving your rating. We'd love to hear more about your experience — if anything wasn't quite right, please don't hesitate to reach out so we can make it better. Hope to see you again soon!
         </div>
       </div>
 
-      <!-- Michael - 5 star -->
       <div class="review-item">
         <div class="review-meta">
-          <div>
-            <span class="reviewer-name">Michael Wallace</span>
-            <span class="no-response-badge">NO REPLY</span>
-          </div>
+          <div><span class="reviewer-name">Michael Wallace</span><span class="no-response-badge">NO REPLY</span></div>
           <span class="review-date">Feb 24, 2026</span>
         </div>
         <div class="stars">★★★★★</div>
@@ -544,47 +239,35 @@
         </div>
       </div>
 
-      <!-- Abe - 5 star -->
       <div class="review-item">
         <div class="review-meta">
-          <div>
-            <span class="reviewer-name">Abe Nino</span>
-            <span class="no-response-badge">NO REPLY</span>
-          </div>
+          <div><span class="reviewer-name">Abe Nino</span><span class="no-response-badge">NO REPLY</span></div>
           <span class="review-date">Feb 20, 2026</span>
         </div>
         <div class="stars">★★★★★</div>
-        <div class="review-text">"Hidden gem for sure. Had a burger with this apricot sauce that wasn't sweet, just gave it this..." (review continues on Google)</div>
+        <div class="review-text">"Hidden gem for sure. Had a burger with this apricot sauce that wasn't sweet, just gave it this..." (continues on Google)</div>
         <div class="suggested-reply">
           <div class="reply-label">Suggested Reply</div>
           Abe, this made our day — thank you! That apricot burger is a labor of love, so it means a lot to hear it landed! We love being a hidden gem but we're even happier when guests like you spread the word. Come back soon!
         </div>
       </div>
 
-      <!-- Chris - 5 star -->
       <div class="review-item">
         <div class="review-meta">
-          <div>
-            <span class="reviewer-name">Chris Herlihy</span>
-            <span class="no-response-badge">NO REPLY</span>
-          </div>
+          <div><span class="reviewer-name">Chris Herlihy</span><span class="no-response-badge">NO REPLY</span></div>
           <span class="review-date">Feb 18, 2026</span>
         </div>
         <div class="stars">★★★★★</div>
-        <div class="review-text">"Terrific place to stop by. The beer was flavorful and cold. The food was delicious...my favorite was..." (review continues on Google)</div>
+        <div class="review-text">"Terrific place to stop by. The beer was flavorful and cold. The food was delicious..." (continues on Google)</div>
         <div class="suggested-reply">
           <div class="reply-label">Suggested Reply</div>
           Chris, thank you so much — "terrific" is exactly what we're going for! Cold beer, great food, good vibes... that's the Brewhouse way. We'd love to hear what your favorite was — come back in and tell us! 🍺
         </div>
       </div>
 
-      <!-- Susan - 5 star -->
       <div class="review-item">
         <div class="review-meta">
-          <div>
-            <span class="reviewer-name">Susan Komins</span>
-            <span class="no-response-badge">NO REPLY</span>
-          </div>
+          <div><span class="reviewer-name">Susan Komins</span><span class="no-response-badge">NO REPLY</span></div>
           <span class="review-date">Feb 17, 2026</span>
         </div>
         <div class="stars">★★★★★</div>
@@ -599,31 +282,6 @@
     </div>
   </div>
 
-  <!-- GOOGLE ADS -->
-  <div class="card alert-yellow">
-    <div class="card-header">
-      <span class="icon">📢</span> Google Ads — Action Needed
-    </div>
-    <div class="card-body">
-      <div class="action-item">
-        <div class="action-icon">🚫</div>
-        <div class="action-content">
-          <h4>Disapproved Ad Asset</h4>
-          <p><strong>Policy violation:</strong> "Event ticket sale" — flagged Feb 23, 2026. Google disapproved an ad asset because it appears to promote ticket sales for events. To fix: remove the ad asset or provide a certificate showing you're a licensed event ticket seller. If this was just promoting a restaurant event (not selling tickets), rephrase the ad copy to avoid that language.</p>
-          <span class="priority-badge priority-high">⚡ High — Fixing This Gets Your Ads Running Again</span>
-        </div>
-      </div>
-      <div class="action-item">
-        <div class="action-icon">📈</div>
-        <div class="action-content">
-          <h4>Budget Opportunity</h4>
-          <p>Google flagged March 14: <em>"Your ads could be reaching more customers."</em> Your current budget is limiting impressions. Worth considering a modest increase — even $5–10/day more could meaningfully expand your reach if you're seeing good returns.</p>
-          <span class="priority-badge priority-medium">ℹ️ Consider When Ready</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- TODAY'S PRIORITY LIST -->
   <div class="card">
     <div class="card-header" style="background:#3a2808; color:#f0d090; border-bottom:2px solid #c8841a;">
@@ -631,28 +289,28 @@
     </div>
     <div class="card-body">
       <div style="display:flex; flex-direction:column; gap:10px; font-family:sans-serif;">
-        <div style="display:flex; gap:12px; align-items:flex-start; padding:10px; background:#1a1008; border-radius:8px; border-left:4px solid #c03020;">
-          <span style="font-size:1.2rem;">🚨</span>
-          <div><strong style="color:#ff8070;">Reply to Ben's Yelp quote</strong> — 6 days old, company retreat April 28. Use the suggested reply above and reach out ASAP.</div>
-        </div>
         <div style="display:flex; gap:12px; align-items:flex-start; padding:10px; background:#1a1008; border-radius:8px; border-left:4px solid #f0a020;">
           <span style="font-size:1.2rem;">⭐</span>
-          <div><strong style="color:#f0c060;">Reply to 5 Google reviews</strong> — especially Alexander's 3-star. Suggested responses are written above, ready to copy-paste.</div>
+          <div><strong style="color:#f0c060;">Reply to 5 Google reviews</strong> — especially Alexander's 3-star. Suggested responses are ready above, copy-paste from here directly.</div>
         </div>
         <div style="display:flex; gap:12px; align-items:flex-start; padding:10px; background:#1a1008; border-radius:8px; border-left:4px solid #f0a020;">
           <span style="font-size:1.2rem;">📢</span>
-          <div><strong style="color:#f0c060;">Fix disapproved Google Ad</strong> — remove or rephrase the "Event ticket sale" language in the ad asset.</div>
+          <div><strong style="color:#f0c060;">Fix disapproved Google Ad</strong> — remove "Event ticket sale" language from ad asset flagged Feb 23. Gets your ads running again.</div>
         </div>
         <div style="display:flex; gap:12px; align-items:flex-start; padding:10px; background:#1a1008; border-radius:8px; border-left:4px solid #4080c0;">
-          <span style="font-size:1.2rem;">🔍</span>
-          <div><strong style="color:#90c0f0;">Review high voids</strong> — $273.95 in voids (22 items) from St. Patrick's Day. Chat with kitchen/bar to understand why.</div>
+          <span style="font-size:1.2rem;">🍞</span>
+          <div><strong style="color:#90c0f0;">Full Toast detail arriving ~7:40 AM</strong> — sales by category, revenue centers, and full labor breakdown for Thursday March 19 will be in your inbox shortly.</div>
+        </div>
+        <div style="display:flex; gap:12px; align-items:flex-start; padding:10px; background:#1a1008; border-radius:8px; border-left:4px solid #20a040;">
+          <span style="font-size:1.2rem;">👥</span>
+          <div><strong style="color:#80f0a0;">Full house today</strong> — 10 staff, 0 gaps, 0 overtime. Casey Smith (GM) is on — smooth Friday ahead.</div>
         </div>
       </div>
     </div>
   </div>
 
   <div style="text-align:center; font-family:sans-serif; font-size:0.75rem; color:#604020; padding-bottom:20px;">
-    Brewhouse Morning Report · Generated by AI from Toast, Sling, Google, and Yelp emails · March 18, 2026
+    Brewhouse Morning Report · Generated from Toast, Sling, Google & Yelp emails · March 20, 2026
   </div>
 
 </div>
