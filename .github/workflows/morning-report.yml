@@ -1,0 +1,43 @@
+name: Brewhouse Morning Report
+
+on:
+  schedule:
+    # 7:00 AM PDT = 14:00 UTC
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install beautifulsoup4 lxml playwright
+          playwright install chromium --with-deps
+
+      - name: Generate Morning Report
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          YELP_USER: ${{ secrets.YELP_USER }}
+          YELP_PASSWORD: ${{ secrets.YELP_PASSWORD }}
+        run: python scripts/generate_report.py
+
+      - name: Commit and push report
+        run: |
+          git config --local user.email "brewhouse-bot@users.noreply.github.com"
+          git config --local user.name "Brewhouse Bot"
+          git add Brewhouse_Morning_Report.html
+          git diff --staged --quiet || git commit -m "Auto-update Morning Report - $(date -u +'%B %d, %Y')"
+          git push
