@@ -17,7 +17,7 @@
   .header h1 { font-size: 2rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
   .date { font-size: 0.9rem; color: var(--muted); margin-top: 6px; letter-spacing: 2px; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
-  .section-title { font-size: 1rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .section-title { font-size: 1rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
   .metric { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 16px; text-align: center; }
   .metric-value { font-size: 1.6rem; font-weight: 700; color: var(--green); margin-bottom: 4px; }
@@ -41,9 +41,10 @@
   .ads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media(max-width: 640px) { .ads-grid { grid-template-columns: 1fr; } }
   .ads-platform { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
-  .ads-platform-title { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+  .ads-platform-title { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
   .live-badge { background: #1a3a2a; color: var(--green); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
   .fallback-badge { background: #2a2010; color: var(--orange); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
+  .info-badge { background: #1a2a3a; color: var(--blue); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
   .ads-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .ads-metric { text-align: center; padding: 10px; background: var(--card); border-radius: 6px; }
   .ads-metric-value { font-size: 1.2rem; font-weight: 700; color: var(--blue); }
@@ -66,35 +67,35 @@
   <div class="section-title">📊 Sales Summary <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Toast)</span></div>
   <div class="metrics">
     <div class="metric">
-      <div class="metric-value">$--</div>
+      <div class="metric-value">$4,858.45</div>
       <div class="metric-label">Net Sales</div>
     </div>
     <div class="metric amber">
-      <div class="metric-value">$--</div>
+      <div class="metric-value">$5,089.45</div>
       <div class="metric-label">Gross Sales</div>
     </div>
     <div class="metric blue">
-      <div class="metric-value">--</div>
+      <div class="metric-value">220</div>
       <div class="metric-label">Guests</div>
     </div>
     <div class="metric blue">
-      <div class="metric-value">--</div>
+      <div class="metric-value">127</div>
       <div class="metric-label">Orders</div>
     </div>
     <div class="metric">
-      <div class="metric-value">$--</div>
+      <div class="metric-value">$38.26</div>
       <div class="metric-label">Avg / Order</div>
     </div>
     <div class="metric">
-      <div class="metric-value">$--</div>
+      <div class="metric-value">$22.08</div>
       <div class="metric-label">Avg / Guest</div>
     </div>
     <div class="metric amber">
-      <div class="metric-value">--</div>
+      <div class="metric-value">15.5%</div>
       <div class="metric-label">Labor %</div>
     </div>
     <div class="metric purple">
-      <div class="metric-value">--</div>
+      <div class="metric-value">$80.08</div>
       <div class="metric-label">Voids</div>
     </div>
   </div>
@@ -111,38 +112,58 @@
     <thead><tr><th>Role</th><th>Name</th><th>Hours</th></tr></thead>
     <tbody>
         <tr>
-          <td><span class="role-badge staff">👤 </span></td>
-          <td>Your daily summary for The Brewhouse Santa Barbara Management Group20th of March10Scheduled employees1Employees off10Scheduled shifts0Uncovered shifts46.74Scheduled hours0Overtime hoursView full scheduleThe Brewhouse Santa Barbara10 shiftsISIsael Salvador NarcisoCook4:56A - 4:56ACSCasey SmithGeneral Manager6:10A - 6:10ACVChristine VargasBartender10:15A - 4:30PAAAugustine ArroyoServer11:00A - 3:30PNNNoel NunezChef4:00P - 10:30PATAndrew TurnerBartender4:00P - 11:30PGLGabriel Lopez galindoServer4:30P - 10:30PJHJames HernadezBusser5:00P - 11:30PBKBri KelleyServer5:30P - 11:00PFDFred De LeonServer6:00P - 11:30PUnderstand your dataUnderstand your labor data better by pulling reports for a day, week or month or for
-                        customizable
-                        periods. Spot trends and inconsistencies to make smarter scheduling decisions for your business.Explore reportsChange your notification preferenceshereif you want to stop receiving this email.</td>
-          <td>Your daily summary for The Brewhouse Santa Barbara Management Group20th of March10Scheduled employees1Employees off10Scheduled shifts0Uncovered shifts46.74Scheduled hours0Overtime hoursView full scheduleThe Brewhouse Santa Barbara10 shiftsISIsael Salvador NarcisoCook4:56A - 4:56ACSCasey SmithGeneral Manager6:10A - 6:10ACVChristine VargasBartender10:15A - 4:30PAAAugustine ArroyoServer11:00A - 3:30PNNNoel NunezChef4:00P - 10:30PATAndrew TurnerBartender4:00P - 11:30PGLGabriel Lopez galindoServer4:30P - 10:30PJHJames HernadezBusser5:00P - 11:30PBKBri KelleyServer5:30P - 11:00PFDFred De LeonServer6:00P - 11:30PUnderstand your dataUnderstand your labor data better by pulling reports for a day, week or month or for
-                        customizable
-                        periods. Spot trends and inconsistencies to make smarter scheduling decisions for your business.Explore reportsChange your notification preferenceshereif you want to stop receiving this email.</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge staff">👤 </span></td>
-          <td>Your daily summary for The Brewhouse Santa Barbara Management Group20th of March10Scheduled employees1Employees off10Scheduled shifts0Uncovered shifts46.74Scheduled hours0Overtime hoursView full scheduleThe Brewhouse Santa Barbara10 shiftsISIsael Salvador NarcisoCook4:56A - 4:56ACSCasey SmithGeneral Manager6:10A - 6:10ACVChristine VargasBartender10:15A - 4:30PAAAugustine ArroyoServer11:00A - 3:30PNNNoel NunezChef4:00P - 10:30PATAndrew TurnerBartender4:00P - 11:30PGLGabriel Lopez galindoServer4:30P - 10:30PJHJames HernadezBusser5:00P - 11:30PBKBri KelleyServer5:30P - 11:00PFDFred De LeonServer6:00P - 11:30PUnderstand your dataUnderstand your labor data better by pulling reports for a day, week or month or for
-                        customizable
-                        periods. Spot trends and inconsistencies to make smarter scheduling decisions for your business.Explore reports</td>
-          <td>Your daily summary for The Brewhouse Santa Barbara Management Group20th of March10Scheduled employees1Employees off10Scheduled shifts0Uncovered shifts46.74Scheduled hours0Overtime hoursView full scheduleThe Brewhouse Santa Barbara10 shiftsISIsael Salvador NarcisoCook4:56A - 4:56ACSCasey SmithGeneral Manager6:10A - 6:10ACVChristine VargasBartender10:15A - 4:30PAAAugustine ArroyoServer11:00A - 3:30PNNNoel NunezChef4:00P - 10:30PATAndrew TurnerBartender4:00P - 11:30PGLGabriel Lopez galindoServer4:30P - 10:30PJHJames HernadezBusser5:00P - 11:30PBKBri KelleyServer5:30P - 11:00PFDFred De LeonServer6:00P - 11:30PUnderstand your dataUnderstand your labor data better by pulling reports for a day, week or month or for
-                        customizable
-                        periods. Spot trends and inconsistencies to make smarter scheduling decisions for your business.Explore reports</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge staff">👤 </span></td>
-          <td>Understand your labor data better by pulling reports for a day, week or month or for
-                        customizable
-                        periods. Spot trends and inconsistencies to make smarter scheduling decisions for your business.</td>
+          <td><span class="role-badge cook">🍳 Cook</span></td>
+          <td>Isael Salvador Narciso</td>
           <td>--</td>
         </tr>
         <tr>
-          <td><span class="role-badge staff">👤 </span></td>
-          <td>Change your notification preferenceshereif you want to stop receiving this email.</td>
-          <td>Change your notification preferenceshereif you want to stop receiving this email.</td>
+          <td><span class="role-badge gm">👑 GM</span></td>
+          <td>Casey Smith</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge bartender">🍺 Bartender</span></td>
+          <td>Christine Vargas</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Augustine Arroyo</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge chef">👨‍🍳 Chef</span></td>
+          <td>Noel Nunez</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge bartender">🍺 Bartender</span></td>
+          <td>Andrew Turner</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Gabriel Lopez galindo</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge busser">🧹 Busser</span></td>
+          <td>James Hernadez</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Bri Kelley</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Fred De Leon</td>
+          <td>--</td>
         </tr></tbody>
   </table>
   <div style="margin-top:14px;color:var(--muted);font-size:0.82rem;">
-    Total scheduled: <strong style="color:var(--text)">-- hrs</strong>
+    Total scheduled: <strong style="color:var(--text)">46.74 hrs</strong>
     &nbsp;·&nbsp; Overtime: <strong style="color:var(--green)">0 hrs</strong>
     &nbsp;·&nbsp; Uncovered shifts: <strong style="color:var(--green)">0</strong>
   </div>
@@ -157,7 +178,7 @@
     <div class="ads-platform">
       <div class="ads-platform-title">
         <span>🔵 Google Ads — Yesterday</span>
-        <span class="live-badge">📧 Email</span>
+        <span class="info-badge">📧 Notification</span> <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932501638&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.72rem;text-decoration:none">📄 View Report →</a>
       </div>
       <div class="ads-metrics">
         <div class="ads-metric">
@@ -217,7 +238,7 @@
 </div>
 
 <div class="footer">
-  Generated automatically · March 21, 2026 at 11:19 AM UTC · The Brewhouse Morning Report
+  Generated automatically · March 21, 2026 at 12:48 PM UTC · The Brewhouse Morning Report
 </div>
 </body>
 </html>
