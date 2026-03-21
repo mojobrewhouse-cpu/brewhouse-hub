@@ -23,9 +23,13 @@ def connect_gmail():
     if not user or not pwd:
         print("WARNING: No Gmail credentials found. Using fallback data.")
         return None
-    mail = imaplib.IMAP4_SSL('imap.gmail.com')
-    mail.login(user, pwd)
-    return mail
+    try:
+        mail = imaplib.IMAP4_SSL('imap.gmail.com')
+        mail.login(user, pwd)
+        return mail
+    except Exception as e:
+        print(f"WARNING: Gmail login failed: {e}. Using fallback data.")
+        return None
 
 def fetch_emails(mail, days_back=2):
     """Fetch all emails from the last N days."""
