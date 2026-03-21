@@ -399,53 +399,93 @@ body {
 }
 
 /* ─── X POSTS ─── */
-.x-post-card {
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 12px;
-  margin-bottom: 10px;
+/* ─── SOCIAL COMPOSER ─── */
+.sc-tabs { display:flex; gap:0; margin-bottom:0; }
+.sc-tab {
+  flex:1; padding:10px; text-align:center;
+  background:var(--card); border:1px solid var(--border);
+  color:var(--muted); font-size:12px; font-weight:700;
+  cursor:pointer; transition:all 0.2s; letter-spacing:0.5px;
 }
-.x-post-card .xp-tag {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted);
-  margin-bottom: 6px;
+.sc-tab:first-child { border-radius:8px 0 0 0; }
+.sc-tab:last-child  { border-radius:0 8px 0 0; }
+.sc-tab.active { background:var(--amber); color:#000; border-color:var(--amber); }
+.sc-panel {
+  background:var(--card); border:1px solid var(--border);
+  border-top:none; border-radius:0 0 10px 10px; padding:14px;
 }
-.x-post-card textarea {
-  width: 100%;
-  background: transparent;
-  border: none;
-  color: var(--cream);
-  font-size: 14px;
-  line-height: 1.6;
-  resize: none;
-  min-height: 80px;
-  font-family: inherit;
+.sc-type-row { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+.sc-type-btn {
+  padding:5px 11px; border-radius:20px; border:1px solid var(--border);
+  background:transparent; color:var(--muted); font-size:11px;
+  cursor:pointer; transition:all 0.2s;
 }
-.x-post-card textarea:focus { outline: none; }
-.x-post-actions {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
-  flex-wrap: wrap;
+.sc-type-btn.active { background:var(--copper); color:#fff; border-color:var(--copper); }
+.sc-main-textarea {
+  width:100%; background:var(--panel); border:1px solid var(--border);
+  border-radius:8px; color:var(--cream); font-size:14px;
+  line-height:1.6; padding:10px; min-height:100px;
+  font-family:inherit; resize:vertical; box-sizing:border-box;
 }
-.x-btn {
-  padding: 7px 14px;
-  border-radius: 6px;
-  border: none;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
+.sc-main-textarea:focus { outline:none; border-color:var(--copper); }
+.sc-meta-row { display:flex; align-items:center; gap:8px; margin-top:8px; flex-wrap:wrap; }
+.sc-char { font-size:11px; font-weight:700; color:var(--muted); }
+.sc-char.warn { color:var(--warn); }
+.sc-char.over { color:#f08080; }
+.sc-tags-label { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; margin-top:8px; }
+.sc-tag-chip {
+  display:inline-block; padding:3px 9px; border-radius:12px;
+  background:var(--panel); border:1px solid var(--border);
+  color:var(--muted); font-size:11px; margin:2px 2px 0 0;
+  cursor:pointer; transition:all 0.15s;
 }
-.x-btn-post { background: #1a8cd8; color: #fff; }
-.x-btn-fb   { background: #1877f2; color: #fff; }
-.x-btn-insta{ background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); color: #fff; }
-.x-btn-copy { background: var(--panel); border: 1px solid var(--border); color: var(--cream); }
-.x-char-count { font-size: 11px; color: var(--muted); margin-left: auto; align-self: center; }
+.sc-tag-chip.sel { background:var(--blue); color:#fff; border-color:var(--blue); }
+.sc-previews { margin-top:10px; }
+.sc-preview-item {
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:8px; padding:8px 10px; margin-bottom:6px;
+}
+.sc-preview-plat { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin-bottom:4px; }
+.sc-preview-text { font-size:12px; color:var(--cream); line-height:1.5; white-space:pre-wrap; word-break:break-word; max-height:70px; overflow:hidden; cursor:pointer; }
+.sc-preview-text.expanded { max-height:none; }
+.sc-btn-row { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
+.sc-btn {
+  padding:9px 14px; border-radius:7px; border:none;
+  font-size:12px; font-weight:700; cursor:pointer;
+  text-decoration:none; display:inline-flex; align-items:center; gap:5px;
+  flex:1; justify-content:center; min-width:80px;
+}
+.sc-btn-x    { background:#1a8cd8; color:#fff; }
+.sc-btn-fb   { background:#1877f2; color:#fff; }
+.sc-btn-ig   { background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); color:#fff; }
+.sc-btn-copy { background:var(--panel); border:1px solid var(--border); color:var(--cream); flex:none; }
+.sc-btn-spot { background:var(--teal); color:#fff; }
+.sc-api-note { font-size:10px; color:var(--muted); text-align:center; margin-top:8px; line-height:1.5; }
+/* Event builder */
+.ev-fields { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px; }
+.ev-field-full { grid-column:1/-1; }
+.ev-label { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; margin-bottom:3px; }
+.ev-input {
+  width:100%; background:var(--panel); border:1px solid var(--border);
+  border-radius:7px; color:var(--cream); font-size:13px;
+  padding:8px 10px; font-family:inherit; box-sizing:border-box;
+}
+.ev-input:focus { outline:none; border-color:var(--copper); }
+.ev-textarea {
+  width:100%; background:var(--panel); border:1px solid var(--border);
+  border-radius:7px; color:var(--cream); font-size:13px;
+  padding:8px 10px; font-family:inherit; resize:vertical; min-height:70px; box-sizing:border-box;
+}
+.ev-textarea:focus { outline:none; border-color:var(--copper); }
+.ev-preview-box {
+  background:var(--panel); border:1px solid var(--border);
+  border-radius:8px; padding:10px; margin-bottom:10px;
+  font-size:13px; color:var(--cream); line-height:1.6;
+  min-height:60px; white-space:pre-wrap;
+}
+/* Keep old x-btn for copy toast compatibility */
+.x-btn { padding:7px 14px; border-radius:6px; border:none; font-size:12px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; }
+.x-btn-copy { background:var(--panel); border:1px solid var(--border); color:var(--cream); }
 
 /* ─── QUICK LINKS ─── */
 .qlinks {
@@ -685,7 +725,7 @@ body {
           <div class="mc-top">
             <span class="mc-icon">📈</span>
             <span class="mc-name">Net Sales</span>
-          </div>
+ &        </div>
           <div class="mc-val" id="toast-net">—</div>
           <div class="mc-note">After discounts</div>
         </div>
@@ -773,54 +813,117 @@ body {
   </div>
 
 
-  <!-- X / SOCIAL POSTS -->
+  <!-- SOCIAL MEDIA HUB -->
   <div class="panel">
     <div class="panel-header">
       <span class="ph-icon">📱</span>
-      <span class="ph-title">Social Posts — Ready to Send</span>
-      <span class="ph-sub">Edit & post</span>
+      <span class="ph-title">Social Media Hub</span>
+      <span class="ph-sub">Write once → post everywhere</span>
     </div>
     <div class="panel-body">
 
-      <div class="x-post-card" id="xpost-0">
-        <div class="xp-tag">✏️ Draft Post 1 — Edit before posting</div>
-        <textarea id="xpost-text-0" onkeyup="updateCharCount(0)">🍺 Happy Wednesday, Santa Barbara! Stop in tonight for Happy Hour 4–6 PM. Beer $1 off, House Wine $1, all wells $8. No better way to break up the week. See you at The Brewhouse! 🌿 #SantaBarbara #HappyHour #Brewhouse</textarea>
-        <div class="x-post-actions">
-          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-0" target="_blank" onclick="setTweetLink(0)">Post to X</a>
-          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
-          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
-          <button class="x-btn x-btn-copy" onclick="copyPost(0)">Copy</button>
-          <span class="x-char-count" id="xcount-0">0/280</span>
-        </div>
+      <!-- TABS -->
+      <div class="sc-tabs">
+        <button class="sc-tab active" onclick="scShowTab('compose')">✏️ Compose Post</button>
+        <button class="sc-tab" onclick="scShowTab('event')">🎸 Event / Band</button>
       </div>
 
-      <div class="x-post-card" id="xpost-1">
-        <div class="xp-tag">✏️ Draft Post 2 — Edit before posting</div>
-        <textarea id="xpost-text-1" onkeyup="updateCharCount(1)">⭐ This week's specials are here! Fresh from the kitchen — ask your server or check our website for what's on the menu. New specials every week at The Brewhouse, Santa Barbara. 🍽️ sbbrewhouse.com #SBEats #CraftBeer #SantaBarbaraFood</textarea>
-        <div class="x-post-actions">
-          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-1" target="_blank" onclick="setTweetLink(1)">Post to X</a>
-          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
-          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
-          <button class="x-btn x-btn-copy" onclick="copyPost(1)">Copy</button>
-          <span class="x-char-count" id="xcount-1">0/280</span>
+      <!-- ── COMPOSE TAB ── -->
+      <div id="sc-compose-panel" class="sc-panel">
+
+        <!-- Post type selector -->
+        <div class="sc-type-row">
+          <button class="sc-type-btn active" onclick="scSetType(this,'special')">🎉 Special</button>
+          <button class="sc-type-btn" onclick="scSetType(this,'event')">🎸 Event</button>
+          <button class="sc-type-btn" onclick="scSetType(this,'daily')">☕ Daily</button>
+          <button class="sc-type-btn" onclick="scSetType(this,'beer')">🍺 Beer/Menu</button>
+          <button class="sc-type-btn" onclick="scSetType(this,'promo')">⭐ Promo</button>
         </div>
+
+        <!-- Main textarea -->
+        <textarea id="sc-main-text" class="sc-main-textarea"
+          placeholder="Write your post here — it auto-formats for X (280 chars), Facebook (full), and Instagram (hashtag block added)."
+          oninput="scUpdate()"></textarea>
+
+        <!-- Char count row -->
+        <div class="sc-meta-row">
+          <span class="sc-char" id="sc-char-x">0 chars</span>
+          <button class="x-btn x-btn-copy" style="padding:5px 12px;font-size:11px;" onclick="scCopyMain()">📋 Copy All</button>
+        </div>
+
+        <!-- Hashtag chips -->
+        <div class="sc-tags-label">Hashtags (tap to toggle):</div>
+        <div id="sc-tag-chips"></div>
+
+        <!-- Per-platform previews -->
+        <div class="sc-previews">
+          <div class="sc-preview-item">
+            <div class="sc-preview-plat" style="color:#1a8cd8;">🐦 X — auto-trimmed to 280</div>
+            <div class="sc-preview-text" id="sc-prev-x" onclick="this.classList.toggle('expanded')">Start typing above...</div>
+          </div>
+          <div class="sc-preview-item">
+            <div class="sc-preview-plat" style="color:#1877f2;">📘 Facebook — full version</div>
+            <div class="sc-preview-text" id="sc-prev-fb" onclick="this.classList.toggle('expanded')">Start typing above...</div>
+          </div>
+          <div class="sc-preview-item">
+            <div class="sc-preview-plat" style="color:#c13584;">📸 Instagram — hashtag block added</div>
+            <div class="sc-preview-text" id="sc-prev-ig" onclick="this.classList.toggle('expanded')">Start typing above...</div>
+          </div>
+        </div>
+
+        <!-- Platform buttons -->
+        <div class="sc-btn-row">
+          <a class="sc-btn sc-btn-x" id="sc-post-x" href="https://twitter.com/intent/tweet?text=" target="_blank" onclick="scSetXLink()">🐦 Post to X</a>
+          <a class="sc-btn sc-btn-fb" id="sc-post-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank" onclick="scCopyFB()">📘 Facebook</a>
+          <a class="sc-btn sc-btn-ig" id="sc-post-ig" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank" onclick="scCopyIG()">📸 Instagram</a>
+        </div>
+        <p class="sc-api-note">
+          💡 X opens Twitter with your post pre-filled. Facebook &amp; Instagram open Spothopper — your formatted text is auto-copied to clipboard so you can paste it in.
+          <br>🔌 Direct API posting coming once Meta credentials are connected.
+        </p>
+
       </div>
 
-      <div class="x-post-card" id="xpost-2">
-        <div class="xp-tag">✏️ Draft Post 3 — Edit before posting</div>
-        <textarea id="xpost-text-2" onkeyup="updateCharCount(2)">🎸 Live music coming up this weekend! Check our events page for the full lineup. Great food, cold craft beer, and live entertainment in Santa Barbara. 🍻 sbbrewhouse.com/events #LiveMusic #SantaBarbara #Brewhouse</textarea>
-        <div class="x-post-actions">
-          <a class="x-btn x-btn-post" href="https://twitter.com/intent/tweet?text=" id="xtweet-2" target="_blank" onclick="setTweetLink(2)">Post to X</a>
-          <a class="x-btn x-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank">Facebook</a>
-          <a class="x-btn x-btn-insta" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank">Instagram</a>
-          <button class="x-btn x-btn-copy" onclick="copyPost(2)">Copy</button>
-          <span class="x-char-count" id="xcount-2">0/280</span>
-        </div>
-      </div>
+      <!-- ── EVENT / BAND TAB ── -->
+      <div id="sc-event-panel" class="sc-panel" style="display:none;">
 
-      <p style="font-size:12px;color:var(--muted);text-align:center;padding:6px 0;">
-        💡 Ask Claude each morning to refresh these posts with trending ideas
-      </p>
+        <div class="ev-fields">
+          <div>
+            <div class="ev-label">Event / Band Name</div>
+ &          <input id="ev-name" class="ev-input" placeholder="e.g. The Midnight Cowboys" oninput="evUpdate()">
+          </div>
+          <div>
+            <div class="ev-label">Date</div>
+            <input id="ev-date" class="ev-input" placeholder="e.g. Saturday, March 22" oninput="evUpdate()">
+          </div>
+          <div>
+            <div class="ev-label">Start Time</div>
+            <input id="ev-time" class="ev-input" placeholder="e.g. 7:00 PM – 10:00 PM" oninput="evUpdate()">
+          </div>
+ &        <div>
+            <div class="ev-label">Cover / Ticket Info</div>
+            <input id="ev-cover" class="ev-input" placeholder="e.g. Free / $10 at door" oninput="evUpdate()">
+          </div>
+          <div class="ev-field-full">
+            <div class="ev-label">Additional Details</div>
+ &          <textarea id="ev-desc" class="ev-textarea" placeholder="Drink specials, genre, age info, etc." oninput="evUpdate()"></textarea>
+          </div>
+        </div>
+
+        <div class="ev-label" style="margin-bottom:6px;">Generated Post (tap preview to copy):</div>
+        <div class="ev-preview-box" id="ev-preview" onclick="evCopyPreview()" title="Click to copy">Fill in event details above to generate a post...</div>
+
+        <div class="sc-btn-row">
+          <a class="sc-btn sc-btn-x" id="ev-post-x" href="https://twitter.com/intent/tweet?text=" target="_blank" onclick="evSetXLink()">🐦 Post to X</a>
+          <a class="sc-btn sc-btn-fb" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=facebook" target="_blank" onclick="evCopyPreview()">📘 Facebook</a>
+          <a class="sc-btn sc-btn-ig" href="https://www.spothopperapp.com/admin/spots/82093/preview#?postType=instagram" target="_blank" onclick="evCopyPreview()">📸 Instagram</a>
+          <a class="sc-btn sc-btn-spot" href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank">📅 Spothopper</a>
+        </div>
+        <p class="sc-api-note">
+          💡 Tap the preview box or a platform button to copy the post text, then paste into Spothopper or the platform.
+ &      </p>
+
+      </div>
 
     </div>
   </div>
@@ -859,7 +962,7 @@ body {
           <span class="sd-item">Kids Eat Free + Happy Hour</span>
           <span class="sd-status sd-live">Live</span>
         </div>
-        <div class="specials-day">
+     &  <div class="specials-day">
           <span class="sd-day">Fri/Sat</span>
           <span class="sd-item">— Chef's weekend specials</span>
           <span class="sd-status sd-empty">Update</span>
@@ -891,11 +994,11 @@ body {
         <div class="event-row">
           <div class="event-date-badge">MAR<br>17</div>
           <div class="event-info">
-            <div class="e-name">☘️ St. Patrick's Day</div>
-            <div class="e-time">All Day · Food & Drink Specials Live</div>
+     &      <div class="e-name">☘️ St. Patrick's Day</div>
+  &          <div class="e-time">All Day �� Food & Drink Specials Live</div>
           </div>
         </div>
-        <p style="font-size:12px;color:var(--muted);padding:10px 0 0;text-align:center;">Add your next event in Spothopper → it'll appear on the website and here.</p>
+        <p style="font-size:12px;color:var(--muted);padding:10px 0 0;text-align:center;">Add your next event in Spothopper → it's appear on the website and here.</p>
       </div>
       <a class="qlink" href="https://www.spothopperapp.com/admin/spots/82093/events" target="_blank" style="margin-top:10px;display:flex;">
         <span class="ql-icon">➕</span>
@@ -1362,39 +1465,205 @@ noteArea.addEventListener('input', () => {
   window._noteTimer = setTimeout(saveMorningNote, 1500);
 });
 
-// ── X POSTS: char count + tweet links ──
-function updateCharCount(idx) {
-  const ta = document.getElementById(`xpost-text-${idx}`);
-  const ct = document.getElementById(`xcount-${idx}`);
-  const len = ta.value.length;
-  ct.textContent = `${len}/280`;
-  ct.style.color = len > 260 ? '#f08080' : len > 240 ? '#f0c040' : 'var(--muted)';
+// ── SOCIAL COMPOSER ──
+const SC_HASHTAGS = {
+  special: ['#HappyHour','#SantaBarbara','#Brewhouse','#DrinkLocal','#SBEats','#TGIF','#HappyHourSB'],
+  event:   ['#LiveMusic','#SantaBarbara','#Brewhouse','#SBLive','#MusicSB','#SantaBarbaraMusic'],
+  daily:   ['#Brewhouse','#SantaBarbara','#GoodFood','#CraftBeer','#SBBars','#BreweryLife'],
+  beer:    ['#CraftBeer','#SantaBarbara','#Brewhouse','#LocalBeer','#TaproomLife','#DrinkCraftBeer'],
+  promo:   ['#SantaBarbara','#Brewhouse','#SBEats','#DrinkLocal','#BreweryLife','#SantaBarbaraCA']
+};
+
+let scType = 'special';
+let scSelectedTags = new Set(['#SantaBarbara','#Brewhouse']);
+
+function scShowTab(tab) {
+  document.getElementById('sc-compose-panel').style.display = tab === 'compose' ? '' : 'none';
+  document.getElementById('sc-event-panel').style.display   = tab === 'event'   ? '' : 'none';
+  document.querySelectorAll('.sc-tab').forEach((t,i) => {
+    t.classList.toggle('active', (tab==='compose' && i===0) || (tab==='event' && i===1));
+  });
 }
 
-function setTweetLink(idx) {
-  const text = document.getElementById(`xpost-text-${idx}`).value;
-  document.getElementById(`xtweet-${idx}`).href =
-    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text);
+function scSetType(btn, type) {
+  scType = type;
+  document.querySelectorAll('.sc-type-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  scRenderTagChips();
+  scUpdate();
 }
 
-function copyPost(idx) {
-  const text = document.getElementById(`xpost-text-${idx}`).value;
-  navigator.clipboard.writeText(text).then(() => showCopyToast());
+function scRenderTagChips() {
+  const tags = SC_HASHTAGS[scType] || [];
+  const container = document.getElementById('sc-tag-chips');
+  container.innerHTML = '';
+  tags.forEach(tag => {
+    const chip = document.createElement('span');
+    chip.className = 'sc-tag-chip' + (scSelectedTags.has(tag) ? ' sel' : '');
+    chip.textContent = tag;
+    chip.onclick = () => {
+      if (scSelectedTags.has(tag)) scSelectedTags.delete(tag);
+      else scSelectedTags.add(tag);
+      chip.classList.toggle('sel');
+      scUpdate();
+    };
+    container.appendChild(chip);
+  });
 }
 
-function showCopyToast() {
-  const t = document.getElementById('copy-toast');
-  t.style.display = 'block';
-  setTimeout(() => t.style.display = 'none', 2200);
+function scGetHashtagStr() {
+  return [...scSelectedTags].join(' ');
 }
 
-// Save X posts to localStorage
-function saveXPosts() {
-  for (let i = 0; i < 3; i++) {
-    const ta = document.getElementById(`xpost-text-${i}`);
-    if (ta) localStorage.setItem(`xpost-${i}-${todayKey()}`, ta.value);
+function scFormatForX(text) {
+  const tags = scGetHashtagStr();
+  let full = text + (tags ? '\n' + tags : '');
+  if (full.length > 280) full = full.substring(0, 277) + '...';
+  return full;
+}
+
+function scFormatForFB(text) {
+  const tags = scGetHashtagStr();
+  return text + (tags ? '\n\n' + tags : '');
+}
+
+function scFormatForIG(text) {
+  const tags = scGetHashtagStr();
+  const extra = ' #SantaBarbaraCA #BrewhouseSB #LocalEats #VisitSB #CraftBeerLover';
+  return text + '\n.\n.\n.\n' + tags + extra;
+}
+
+function scUpdate() {
+  const raw = document.getElementById('sc-main-text').value;
+  const xText  = scFormatForX(raw);
+  const fbText = scFormatForFB(raw);
+  const igText = scFormatForIG(raw);
+
+  document.getElementById('sc-prev-x').textContent  = xText  || 'Start typing above...';
+  document.getElementById('sc-prev-fb').textContent = fbText || 'Start typing above...';
+  document.getElementById('sc-prev-ig').textContent = igText || 'Start typing above...';
+
+  const charEl = document.getElementById('sc-char-x');
+  const xLen = xText.length;
+  charEl.textContent = `${raw.length} chars  ·  X: ${xLen}/280`;
+  charEl.className = 'sc-char' + (xLen > 280 ? ' over' : xLen > 260 ? ' warn' : '');
+
+  localStorage.setItem('sc-main-text', raw);
+  localStorage.setItem('sc-type', scType);
+  localStorage.setItem('sc-tags', JSON.stringify([...scSelectedTags]));
+}
+
+function scSetXLink() {
+  const raw = document.getElementById('sc-main-text').value;
+  document.getElementById('sc-post-x').href =
+    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(scFormatForX(raw));
+}
+
+function scCopyFB() {
+  const raw = document.getElementById('sc-main-text').value;
+  navigator.clipboard.writeText(scFormatForFB(raw)).then(() => showCopyToast('📘 Facebook text copied!'));
+}
+
+function scCopyIG() {
+  const raw = document.getElementById('sc-main-text').value;
+  navigator.clipboard.writeText(scFormatForIG(raw)).then(() => showCopyToast('📸 Instagram text copied!'));
+}
+
+function scCopyMain() {
+  const raw = document.getElementById('sc-main-text').value;
+  navigator.clipboard.writeText(raw + '\n\n' + scGetHashtagStr()).then(() => showCopyToast());
+}
+
+// ── EVENT BUILDER ──
+function evUpdate() {
+  const name  = (document.getElementById('ev-name').value  || '').trim();
+  const date  = (document.getElementById('ev-date').value  || '').trim();
+  const time  = (document.getElementById('ev-time').value  || '').trim();
+  const cover = (document.getElementById('ev-cover').value || '').trim();
+  const desc  = (document.getElementById('ev-desc').value  || '').trim();
+
+  if (!name) {
+    document.getElementById('ev-preview').textContent = 'Fill in the event details above to generate a post...';
+    return;
   }
+
+  let post = '🎸 LIVE MUSIC @ The Brewhouse!\n\n';
+  post += name + '\n';
+  if (date || time) {
+    post += '📅 ' + [date, time].filter(Boolean).join(' · ') + '\n';
+  }
+  if (cover) post += '🎟️ ' + cover + '\n';
+  post += '\n📍 229 W. Montecito St, Santa Barbara\n';
+  if (desc) post += '\n' + desc + '\n';
+  post += '\nsbbrewhouse.com/events\n#LiveMusic #SantaBarbara #Brewhouse #SBLive #MusicSB';
+
+  document.getElementById('ev-preview').textContent = post;
+  document.getElementById('ev-preview').style.cursor = 'pointer';
+
+  // Update X link
+  const truncated = post.length > 280 ? post.substring(0, 277) + '...' : post;
+  document.getElementById('ev-post-x').href =
+    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(truncated);
+
+  localStorage.setItem('ev-draft', JSON.stringify({name,date,time,cover,desc}));
 }
+
+function evSetXLink() {
+  const text = document.getElementById('ev-preview').textContent;
+  const truncated = text.length > 280 ? text.substring(0, 277) + '...' : text;
+  document.getElementById('ev-post-x').href =
+    'https://twitter.com/intent/tweet?text=' + encodeURIComponent(truncated);
+}
+
+function evCopyPreview() {
+  const text = document.getElementById('ev-preview').textContent;
+  navigator.clipboard.writeText(text).then(() => showCopyToast('📋 Event post copied!'));
+}
+
+// ── COPY TOAST ──
+function showCopyToast(msg) {
+  const t = document.getElementById('copy-toast');
+  if (!t) return;
+  if (msg) t.textContent = msg;
+  t.style.display = 'block';
+  setTimeout(() => { t.style.display = 'none'; if (msg) t.textContent = '✅ Copied!'; }, 2200);
+}
+
+// ── INIT SOCIAL ──
+(function initSocial() {
+  const savedText = localStorage.getItem('sc-main-text');
+  if (savedText) document.getElementById('sc-main-text').value = savedText;
+
+  const savedType = localStorage.getItem('sc-type');
+  if (savedType) {
+    scType = savedType;
+    document.querySelectorAll('.sc-type-btn').forEach(btn => {
+      const onclickStr = btn.getAttribute('onclick') || '';
+      btn.classList.toggle('active', onclickStr.includes("'" + savedType + "'"));
+    });
+  }
+
+  const savedTags = localStorage.getItem('sc-tags');
+  if (savedTags) {
+    try { scSelectedTags = new Set(JSON.parse(savedTags)); } catch(e) {}
+  }
+
+  scRenderTagChips();
+  scUpdate();
+
+  const evDraft = localStorage.getItem('ev-draft');
+  if (evDraft) {
+    try {
+      const d = JSON.parse(evDraft);
+      if (d.name)  document.getElementById('ev-name').value  = d.name;
+      if (d.date)  document.getElementById('ev-date').value  = d.date;
+      if (d.time)  document.getElementById('ev-time').value  = d.time;
+      if (d.cover) document.getElementById('ev-cover').value = d.cover;
+      if (d.desc)  document.getElementById('ev-desc').value  = d.desc;
+      evUpdate();
+    } catch(e) {}
+  }
+})();
 
 // ── TOAST + SLING DATA (loaded from localStorage, updated by scheduled task) ──
 function loadReportData() {
@@ -1489,16 +1758,6 @@ function loadReportData() {
 }
 
 loadReportData();
-
-// Load saved X posts
-for (let i = 0; i < 3; i++) {
-  const saved = localStorage.getItem(`xpost-${i}-${todayKey()}`);
-  const ta = document.getElementById(`xpost-text-${i}`);
-  if (saved && ta) ta.value = saved;
-  updateCharCount(i);
-  const t = ta; const idx = i;
-  if (ta) ta.addEventListener('input', () => { saveXPosts(); updateCharCount(idx); });
-}
 </script>
 </body>
 </html>
