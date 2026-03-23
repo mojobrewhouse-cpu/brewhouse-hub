@@ -774,7 +774,7 @@ body {
   <div class="panel">
     <div class="panel-header">
       <span class="ph-icon">👥</span>
-      <span class="ph-title">Sling — Today's Staff</span>
+      <span class="ph-title">Sling — Yesterday’s Staff</span>
       <span class="ph-sub"><a href="https://app.getsling.com" target="_blank" style="color:var(--amber);text-decoration:none;">Open Sling →</a></span>
     </div>
     <div class="panel-body">
@@ -783,7 +783,7 @@ body {
         <div class="metric-card" style="cursor:default;">
           <div class="mc-top"><span class="mc-icon">🧑‍🍳</span><span class="mc-name">On Schedule</span></div>
           <div class="mc-val" id="sling-count">—</div>
-          <div class="mc-note">employees today</div>
+          <div class="mc-note">employees yesterday</div>
         </div>
         <div class="metric-card" style="cursor:default;">
           <div class="mc-top"><span class="mc-icon">⏱️</span><span class="mc-name">Total Hours</span></div>
@@ -792,7 +792,7 @@ body {
         </div>
       </div>
 
-      <div class="section-divider">Who's Working Today</div>
+      <div class="section-divider">Who Worked Yesterday</div>
       <div id="sling-staff-list" style="display:flex;flex-direction:column;gap:6px;">
         <!-- Populated by JS -->
       </div>
@@ -812,6 +812,40 @@ body {
     </div>
   </div>
 
+
+  <!-- SLING TODAY'S STAFF -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">📋</span>
+      <span class="ph-title">Sling — Today's Staff</span>
+      <span class="ph-sub"><a href="https://app.getsling.com" target="_blank" style="color:var(--amber);text-decoration:none;">Open Sling →</a></span>
+    </div>
+    <div class="panel-body">
+      <div class="metrics-grid" style="margin-bottom:12px;">
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top"><span class="mc-icon">🧑‍🍳</span><span class="mc-name">On Schedule</span></div>
+          <div class="mc-val" id="sling-today-count">—</div>
+          <div class="mc-note">employees today</div>
+        </div>
+        <div class="metric-card" style="cursor:default;">
+          <div class="mc-top"><span class="mc-icon">⏱️</span><span class="mc-name">Total Hours</span></div>
+          <div class="mc-val" id="sling-today-hours">—</div>
+          <div class="mc-note" id="sling-today-overtime">0 overtime hrs</div>
+        </div>
+      </div>
+      <div class="section-divider">Who's Working Today</div>
+      <div id="sling-today-staff-list" style="display:flex;flex-direction:column;gap:6px;"><!-- Populated by JS --></div>
+      <div id="sling-today-uncovered-alert" style="display:none;margin-top:10px;" class="review-alert">
+        <span class="ra-icon">⚠️</span>
+        <div class="ra-body">
+          <div class="ra-platform">Uncovered Shifts</div>
+          <div class="ra-text" id="sling-today-uncovered-text">You have uncovered shifts today.</div>
+          <a class="ra-reply" href="https://app.getsling.com" target="_blank">Fix in Sling →</a>
+        </div>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">Data from your daily Sling email · Updated each morning by scheduled task</p>
+    </div>
+  </div>
 
   <!-- SOCIAL MEDIA HUB -->
   <div class="panel">
@@ -1670,6 +1704,7 @@ function loadReportData() {
   // Try localStorage first (updated by scheduled task each morning)
   const toastRaw = localStorage.getItem('brewhouse-toast-report');
   const slingRaw = localStorage.getItem('brewhouse-sling-report');
+  const slingTodayRaw = localStorage.getItem('brewhouse-sling-today-report');
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
@@ -1754,6 +1789,31 @@ function loadReportData() {
     document.getElementById('sling-uncovered-alert').style.display = 'flex';
     document.getElementById('sling-uncovered-text').textContent =
       `${sling.uncovered} uncovered shift${sling.uncovered > 1 ? 's' : ''} today — find coverage now.`;
+  }
+
+  // Render Sling Today
+  const slingToday = slingTodayRaw ? JSON.parse(slingTodayRaw) : null;
+  const todayListEl = document.getElementById('sling-today-staff-list');
+  if (todayListEl) {
+    if (slingToday && slingToday.staff && slingToday.staff.length > 0) {
+      document.getElementById('sling-today-count').textContent = slingToday.count;
+      document.getElementById('sling-today-hours').textContent = slingToday.hours + ' hrs';
+      document.getElementById('sling-today-overtime').textContent = slingToday.overtime + ' overtime hrs';
+      todayListEl.innerHTML = '';
+      slingToday.staff.forEach(person => {
+        const icon = roleIcons[person.role] || '👤';
+        const div = document.createElement('div');
+        div.style.cssText = 'display:flex;align-items:center;gap:10px;padding:7px 10px;background:var(--panel);border-radius:8px;border:1px solid var(--border);';
+        div.innerHTML = `<span style="font-size:18px;">${icon}</span><div style="flex:1;"><div style="font-size:13px;font-weight:600;">${person.name}</div><div style="font-size:11px;color:var(--muted);">${person.role}</div></div>`;
+        todayListEl.appendChild(div);
+      });
+      if (slingToday.uncovered > 0) {
+        document.getElementById('sling-today-uncovered-alert').style.display = 'flex';
+        document.getElementById('sling-today-uncovered-text').textContent = `${slingToday.uncovered} uncovered shift${slingToday.uncovered>1?'s':''} today — find coverage now.`;
+      }
+    } else {
+      todayListEl.innerHTML = '<p style="text-align:center;color:var(--muted);font-size:12px;padding:12px 0;">No schedule data yet — check back after 7am</p>';
+    }
   }
 }
 
