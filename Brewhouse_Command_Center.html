@@ -995,7 +995,7 @@ body {
           <div class="event-date-badge">MAR<br>17</div>
           <div class="event-info">
      &      <div class="e-name">☘️ St. Patrick's Day</div>
-  &          <div class="e-time">All Day �� Food & Drink Specials Live</div>
+  &          <div class="e-time">All Day �� Food & Drink Specials Live</div>
           </div>
         </div>
         <p style="font-size:12px;color:var(--muted);padding:10px 0 0;text-align:center;">Add your next event in Spothopper → it's appear on the website and here.</p>
@@ -1230,8 +1230,8 @@ body {
   <!-- Headline -->
   <div class="brief-headline">
     <div class="bh-left">
-      <h2 id="brief-headline-text">Wednesday — $4,024 net, 140 guests, labor ⚠️ 21.7%</h2>
-      <p id="brief-headline-sub">Mar 18 · Net $4,024 · Gross $4,236 · 140 covers · Avg $28.74 · Labor 21.7% ⚠️ up vs last Wed (17.8%) · -11.7% vs SDLW</p>
+      <h2 id="brief-headline-text">Friday ✅ $6,487 net, 232 guests, labor 16.1%</h2>
+      <p id="brief-headline-sub">Mar 20 · Net $6,487.75 · Gross $7,065.75 · 232 covers · Avg $27.96 · Labor 16.1% ✅ under target · +17.0% vs last Friday</p>
     </div>
     <div class="brief-flags">
       <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 Yelp quote 7 days old</span>
@@ -1245,32 +1245,32 @@ body {
   <div class="brief-sales-strip">
     <div class="bss-item">
       <div class="bss-label">Net Sales</div>
-      <div class="bss-value" id="bs-net">$4,024</div>
-      <div class="bss-sub up" id="bs-net-sub" class="bss-sub down">-11.7% vs last Wed</div>
+      <div class="bss-value" id="bs-net">$6,487</div>
+      <div class="bss-sub up" id="bs-net-sub" class="bss-sub down">+17.0% vs last Fri</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Covers</div>
-      <div class="bss-value" id="bs-covers">140</div>
-      <div class="bss-sub up" id="bs-covers-sub" class="bss-sub down">-15.2% vs last Wed</div>
+      <div class="bss-value" id="bs-covers">232</div>
+      <div class="bss-sub up" id="bs-covers-sub" class="bss-sub down">+16.0% vs last Fri</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Avg / Guest</div>
-      <div class="bss-value" id="bs-avg">$28.74</div>
+      <div class="bss-value" id="bs-avg">$27.96</div>
       <div class="bss-sub" id="bs-avg-sub" class="bss-sub up">+4.1% vs last Wed</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Labor %</div>
-      <div class="bss-value" id="bs-labor" style="color:#f0c040; font-size:20px; font-weight:800;">21.7%</div>
-      <div class="bss-sub up" id="bs-labor-sub" class="bss-sub bad">⚠️ Above 20% target</div>
+      <div class="bss-value" id="bs-labor" style="color:#6adf8a; font-size:20px; font-weight:800;">16.1%</div>
+      <div class="bss-sub up" id="bs-labor-sub" class="bss-sub bad">✅ Under 20% target</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Voids</div>
-      <div class="bss-value" id="bs-voids" style="color:#a0e080; font-size:20px; font-weight:800;">$78</div>
+      <div class="bss-value" id="bs-voids" style="color:#a0e080; font-size:20px; font-weight:800;">$117.50</div>
       <div class="bss-sub bad" id="bs-voids-sub" class="bss-sub up">✓ 6 items — normal</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Today's Staff</div>
-      <div class="bss-value" id="bs-staff">8</div>
+      <div class="bss-value" id="bs-staff">10</div>
       <div class="bss-sub up" id="bs-staff-sub" class="bss-sub up">✓ All shifts covered</div>
     </div>
   </div>
@@ -1673,15 +1673,15 @@ function loadReportData() {
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
-    date: 'Wednesday, Mar 18',
-    gross: '$4,236',
-    net: '$4,024',
-    guests: '140',
-    orders: '90',
-    avgPerGuest: '$28.74',
-    laborPct: '21.7%',
-    discountPct: '$213 / 5.0%',
-    cardPayments: '—',
+    date: 'Friday, Mar 20',
+    gross: '$7,065.75',
+    net: '$6,487.75',
+    guests: '232',
+    orders: '149',
+    avgPerGuest: '$27.96',
+    laborPct: '16.1%',
+    discountPct: '$578.00 / 8.9%',
+    cardPayments: '149',
     refunds: '$78.00 / 6 voids'
   };
 
@@ -1757,7 +1757,21 @@ function loadReportData() {
   }
 }
 
-loadReportData();
+(async()=>{
+  try {
+    const _r = await fetch('./data.json?_='+Date.now());
+    if (_r.ok) {
+      const _d = await _r.json();
+      if (_d.toast) localStorage.setItem('brewhouse-toast-report',JSON.stringify(_d.toast));
+      if (_d.sling) localStorage.setItem('brewhouse-sling-report',JSON.stringify(_d.sling));
+      const _f={'brief-headline-text':_d.toast&&_d.toast.headline,'brief-headline-sub':_d.toast&&_d.toast.headlineSub,'bs-net':_d.toast&&_d.toast.net,'bs-covers':_d.toast&&_d.toast.guests,'bs-avg':_d.toast&&_d.toast.avgPerGuest,'bs-labor':_d.toast&&_d.toast.laborPct,'bs-voids':_d.toast&&_d.toast.refunds,'bs-staff':_d.sling&&String(_d.sling.count)};
+      Object.entries(_f).forEach(([id,v])=>{const el=document.getElementById(id);if(el&&v)el.textContent=v;});
+      const _le=document.getElementById('bs-labor');
+      if(_le&&_d.toast){const _ln=parseFloat(_d.toast.laborPct);_le.style.color=_ln<20?'#6adf8a':_ln<30?'#f0c040':'#f08080';}
+    }
+  }catch(e){}
+  loadReportData();
+})();
 </script>
 </body>
 </html>
