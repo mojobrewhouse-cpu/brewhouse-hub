@@ -846,6 +846,50 @@ body {
       <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">Data from your daily Sling email · Updated each morning by scheduled task</p>
     </div>
   </div>
+  <!-- GOOGLE ADS PERFORMANCE -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">📢</span>
+      <span class="ph-title">Google Ads — Performance</span>
+      <span class="ph-sub"><a href="https://ads.google.com/aw/reporting/reporteditor/view?reportId=932529582&ocid=7881882883" target="_blank" style="color:var(--amber);text-decoration:none;">Open Report →</a></span>
+    </div>
+    <div class="panel-body">
+      <div class="metrics-grid" style="margin-bottom:12px;">
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">💰</span><span class="mc-name">Yesterday Spend</span></div><div class="mc-val" id="gads-spend">—</div><div class="mc-note" id="gads-spend-note">—</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">👆</span><span class="mc-name">Clicks</span></div><div class="mc-val" id="gads-clicks">—</div><div class="mc-note" id="gads-cpc">— per click</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">👁️</span><span class="mc-name">Impressions</span></div><div class="mc-val" id="gads-impr">—</div><div class="mc-note" id="gads-ctr">— CTR</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">🚶</span><span class="mc-name">Store Visits</span></div><div class="mc-val" id="gads-conv">—</div><div class="mc-note">conversions tracked</div></div>
+      </div>
+      <div class="section-divider">Last 7 Days</div>
+      <div id="gads-table" style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:12px;"><thead><tr style="color:var(--muted);border-bottom:1px solid var(--border);"><th style="text-align:left;padding:6px 4px;">Date</th><th style="text-align:right;padding:6px 4px;">Spend</th><th style="text-align:right;padding:6px 4px;">Clicks</th><th style="text-align:right;padding:6px 4px;">Impr.</th><th style="text-align:right;padding:6px 4px;">CPC</th><th style="text-align:right;padding:6px 4px;">Visits</th></tr></thead><tbody id="gads-rows"><tr><td colspan="6" style="text-align:center;color:var(--muted);padding:12px;">Loading…</td></tr></tbody></table></div>
+      <div style="margin-top:10px;padding:8px 12px;background:var(--panel);border-radius:8px;border:1px solid var(--border);display:flex;justify-content:space-between;font-size:12px;"><span style="color:var(--muted);">7-day total spend</span><span id="gads-week-spend" style="font-weight:700;color:var(--amber);">—</span></div>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">Data from Google Ads report · Updated each morning by scheduled task</p>
+    </div>
+  </div>
+
+  <!-- YELP ADS PERFORMANCE -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="ph-icon">⭐</span>
+      <span class="ph-title">Yelp Ads — Performance</span>
+      <span class="ph-sub"><a href="https://biz.yelp.com/ads/FTFaEinJgzqY0ZHQMUSpQQ/dashboard" target="_blank" style="color:var(--amber);text-decoration:none;">Open Yelp Biz →</a></span>
+    </div>
+    <div class="panel-body">
+      <div class="metrics-grid" style="margin-bottom:12px;">
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">💰</span><span class="mc-name">Month Spend</span></div><div class="mc-val" id="yelp-spend">—</div><div class="mc-note" id="yelp-period">this billing period</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">👁️</span><span class="mc-name">Impressions</span></div><div class="mc-val" id="yelp-impr">—</div><div class="mc-note">last 30 days</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">📍</span><span class="mc-name">Page Visits</span></div><div class="mc-val" id="yelp-visits">—</div><div class="mc-note" id="yelp-cpc">— per click</div></div>
+        <div class="metric-card" style="cursor:default;"><div class="mc-top"><span class="mc-icon">📞</span><span class="mc-name">Leads</span></div><div class="mc-val" id="yelp-leads">—</div><div class="mc-note" id="yelp-cpl">— per lead</div></div>
+      </div>
+      <div class="section-divider">Bonus Budget</div>
+      <div style="background:var(--panel);border-radius:8px;border:1px solid var(--border);padding:10px 12px;">
+        <div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:6px;"><span style="color:var(--muted);">Yelp Bonus Ads</span><span id="yelp-bonus-label" style="font-weight:600;">— of — used</span></div>
+        <div style="background:var(--border);border-radius:4px;height:8px;overflow:hidden;"><div id="yelp-bonus-fill" style="height:8px;border-radius:4px;background:var(--amber);width:0%;transition:width 0.5s;"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px;"><span id="yelp-bonus-used">—</span><span id="yelp-bonus-expires">expires —</span></div>
+      </div>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;">Data from Yelp for Business · Updated each morning by scheduled task</p>
+    </div>
+  </div>
 
   <!-- SOCIAL MEDIA HUB -->
   <div class="panel">
@@ -1705,6 +1749,8 @@ function loadReportData() {
   const toastRaw = localStorage.getItem('brewhouse-toast-report');
   const slingRaw = localStorage.getItem('brewhouse-sling-report');
   const slingTodayRaw = localStorage.getItem('brewhouse-sling-today-report');
+  const googleAdsRaw = localStorage.getItem('brewhouse-google-ads');
+  const yelpAdsRaw   = localStorage.getItem('brewhouse-yelp-ads');
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
@@ -1813,6 +1859,50 @@ function loadReportData() {
       }
     } else {
       todayListEl.innerHTML = '<p style="text-align:center;color:var(--muted);font-size:12px;padding:12px 0;">No schedule data yet — check back after 7am</p>';
+    }
+  }
+
+  // Render Google Ads
+  const gads = googleAdsRaw ? JSON.parse(googleAdsRaw) : null;
+  if (gads && document.getElementById('gads-spend')) {
+    const y = gads.yesterday;
+    document.getElementById('gads-spend').textContent = y.spend;
+    document.getElementById('gads-spend-note').textContent = y.date;
+    document.getElementById('gads-clicks').textContent = y.clicks;
+    document.getElementById('gads-cpc').textContent = y.cpc + ' per click';
+    document.getElementById('gads-impr').textContent = y.impressions;
+    document.getElementById('gads-ctr').textContent = y.ctr + ' CTR';
+    document.getElementById('gads-conv').textContent = y.conversions;
+    document.getElementById('gads-week-spend').textContent = gads.weekTotal;
+    const tbody = document.getElementById('gads-rows');
+    if (tbody && gads.days) {
+      tbody.innerHTML = '';
+      gads.days.forEach(d => {
+        const tr = document.createElement('tr');
+        tr.style.cssText = 'border-bottom:1px solid var(--border);';
+        const convColor = d.conversions > 0 ? '#6adf8a' : 'var(--muted)';
+        tr.innerHTML = `<td style="padding:5px 4px;font-size:12px;">${d.date}</td><td style="padding:5px 4px;text-align:right;font-weight:600;">${d.spend}</td><td style="padding:5px 4px;text-align:right;">${d.clicks}</td><td style="padding:5px 4px;text-align:right;color:var(--muted);">${d.impressions}</td><td style="padding:5px 4px;text-align:right;color:var(--muted);">${d.cpc}</td><td style="padding:5px 4px;text-align:right;color:${convColor};font-weight:600;">${d.conversions}</td>`;
+        tbody.appendChild(tr);
+      });
+    }
+  }
+
+  // Render Yelp Ads
+  const yelp = yelpAdsRaw ? JSON.parse(yelpAdsRaw) : null;
+  if (yelp && document.getElementById('yelp-spend')) {
+    document.getElementById('yelp-spend').textContent = yelp.spend;
+    document.getElementById('yelp-period').textContent = yelp.period;
+    document.getElementById('yelp-impr').textContent = yelp.impressions;
+    document.getElementById('yelp-visits').textContent = yelp.pageVisits;
+    document.getElementById('yelp-cpc').textContent = yelp.cpc + ' per click';
+    document.getElementById('yelp-leads').textContent = yelp.leads;
+    document.getElementById('yelp-cpl').textContent = yelp.cpl + ' per lead';
+    if (yelp.bonus) {
+      const pct = Math.round((parseFloat(yelp.bonus.used.replace(/[$,]/g,'')) / parseFloat(yelp.bonus.total.replace(/[$,]/g,''))) * 100);
+      document.getElementById('yelp-bonus-label').textContent = yelp.bonus.used + ' of ' + yelp.bonus.total + ' used';
+      document.getElementById('yelp-bonus-fill').style.width = pct + '%';
+      document.getElementById('yelp-bonus-used').textContent = yelp.bonus.unused + ' remaining';
+      document.getElementById('yelp-bonus-expires').textContent = 'expires ' + yelp.bonus.expires;
     }
   }
 }
