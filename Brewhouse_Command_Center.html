@@ -1914,6 +1914,9 @@ function loadReportData() {
       const _d = await _r.json();
       if (_d.toast) localStorage.setItem('brewhouse-toast-report',JSON.stringify(_d.toast));
       if (_d.sling) localStorage.setItem('brewhouse-sling-report',JSON.stringify(_d.sling));
+      if (_d.slingToday) localStorage.setItem('brewhouse-sling-today-report',JSON.stringify(_d.slingToday));
+      if (_d.googleAds) localStorage.setItem('brewhouse-google-ads',JSON.stringify(_d.googleAds));
+      if (_d.yelpAds) localStorage.setItem('brewhouse-yelp-ads',JSON.stringify(_d.yelpAds));
       const _f={'brief-headline-text':_d.toast&&_d.toast.headline,'brief-headline-sub':_d.toast&&_d.toast.headlineSub,'bs-net':_d.toast&&_d.toast.net,'bs-covers':_d.toast&&_d.toast.guests,'bs-avg':_d.toast&&_d.toast.avgPerGuest,'bs-labor':_d.toast&&_d.toast.laborPct,'bs-voids':_d.toast&&_d.toast.refunds,'bs-staff':_d.sling&&String(_d.sling.count)};
       Object.entries(_f).forEach(([id,v])=>{const el=document.getElementById(id);if(el&&v)el.textContent=v;});
       const _le=document.getElementById('bs-labor');
