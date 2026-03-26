@@ -1,7 +1,454 @@
-%$!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Brewhouse Command Center</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Brewhouse Command Center</title>
+  <style>
+    :root {
+      --bg: #1c1207; --card: #251a0a; --border: #3d2a10;
+      --text: #f5ead8; --muted: #a08060; --accent: #d4900a;
+      --green: #4caf72; --red: #e05252; --blue: #5a9fd4;
+      --yellow: #e8c84a; --orange: #e0883a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height: 100vh; }
+
+    /* ── HEADER ── */
+    .hdr { background: #140e04; border-bottom: 2px solid var(--accent); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .hdr-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+    .hdr-sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .hdr-date { font-size: 0.82rem; color: var(--muted); text-align: right; }
+
+    /* ── BRIEF HEADLINE ── */
+    .brief-band { background: linear-gradient(135deg,#2a1a06,#1c1207); border-bottom: 1px solid var(--border); padding: 20px 24px; }
+    .brief-headline { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    .brief-sub { font-size: 0.88rem; color: var(--muted); margin-top: 6px; }
+
+    /* ── SALES STRIP ── */
+    .sales-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--border); border-bottom: 2px solid var(--border); }
+    .ss-cell { background: var(--card); padding: 16px 14px; text-align: center; }
+    .ss-val { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+    .ss-val.green { color: var(--green); }
+    .ss-val.amber { color: var(--accent); }
+    .ss-val.blue { color: var(--blue); }
+    .ss-val.red { color: var(--red); }
+    .ss-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+    .ss-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── MAIN LAYOUT ── */
+    .main { display: grid; grid-template-columns: 1fr 340px; gap: 20px; padding: 20px; max-width: 1400px; margin: 0 auto; }
+    @media(max-width: 900px) { .main { grid-template-columns: 1fr; } }
+
+    /* ── PANELS ── */
+    .panel { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+    .panel-head { background: #1e1408; border-bottom: 1px solid var(--border); padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .panel-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+    .panel-body { padding: 16px 18px; }
+
+    /* ── ACTIONS ── */
+    .ba-list { display: flex; flex-direction: column; gap: 10px; }
+    .ba-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 8px; border-left: 4px solid transparent; }
+    .ba-item.urgent { background: rgba(224,82,82,0.1); border-color: var(--red); }
+    .ba-item.warning { background: rgba(212,144,10,0.1); border-color: var(--accent); }
+    .ba-item.info { background: rgba(90,159,212,0.1); border-color: var(--blue); }
+    .ba-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+    .ba-content { flex: 1; min-width: 0; }
+    .ba-title { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .ba-detail { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .ba-link { display: inline-block; margin-top: 6px; font-size: 0.73rem; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
+    .ba-link:hover { background: var(--border); }
+
+    /* ── REVIEW ALERTS ── */
+    .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+    .review-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+    .review-name { font-weight: 700; font-size: 0.9rem; }
+    .review-stars { color: var(--accent); letter-spacing: 1px; }
+    .review-date { font-size: 0.72rem; color: var(--muted); }
+    .review-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
+    .review-reply { font-size: 0.8rem; color: var(--green); background: rgba(76,175,114,0.08); border-radius: 6px; padding: 8px 10px; line-height: 1.5; }
+    .review-reply-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green); margin-bottom: 4px; font-weight: 700; }
+
+    /* ── TOAST DATA TABLE ── */
+    .data-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
+    .data-row:last-child { border-bottom: none; }
+    .data-key { color: var(--muted); }
+    .data-val { font-weight: 700; color: var(--text); }
+    .data-val.green { color: var(--green); }
+    .data-val.amber { color: var(--accent); }
+    .data-val.red { color: var(--red); }
+
+    /* ── STAFF TABLE ── */
+    .staff-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    .staff-table th { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+    .staff-table td { padding: 9px 10px; border-bottom: 1px solid #2a1e0c; }
+    .staff-table tr:last-child td { border-bottom: none; }
+    .role-badge { padding: 2px 8px; border-radius: 20px; font-size: 0.73rem; font-weight: 600; }
+    .role-badge.bartender { background: #1a2a3a; color: var(--blue); }
+    .role-badge.chef { background: #1a3a2a; color: var(--green); }
+    .role-badge.server { background: #3a2a1a; color: var(--orange); }
+    .role-badge.busser { background: #2a2010; color: var(--muted); }
+
+    /* ── TASK LIST ── */
+    .task-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
+    .task-item:last-child { border-bottom: none; }
+    .task-check { width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; margin-top: 1px; cursor: pointer; }
+    .task-text { flex: 1; }
+    .task-link { color: var(--accent); font-size: 0.73rem; margin-top: 3px; display: block; text-decoration: none; }
+
+    /* ── DISTRIBUTOR ALERT ── */
+    .dist-alert { background: rgba(212,144,10,0.1); border: 1px solid var(--accent); border-radius: 8px; padding: 12px 14px; font-size: 0.84rem; }
+
+    /* ── FOOTER ── */
+    .footer { text-align: center; padding: 20px; color: var(--muted); font-size: 0.73rem; border-top: 1px solid var(--border); margin-top: 20px; }
+
+    /* ── BADGE ── */
+    .badge { display: inline-block; font-size: 0.68rem; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
+    .badge.ok { background: rgba(76,175,114,0.15); color: var(--green); }
+    .badge.warn { background: rgba(212,144,10,0.15); color: var(--accent); }
+    .badge.alert { background: rgba(224,82,82,0.15); color: var(--red); }
+    .badge.info { background: rgba(90,159,212,0.15); color: var(--blue); }
+
+    /* ── NO DATA ── */
+    .no-data { color: var(--muted); font-size: 0.82rem; text-align: center; padding: 20px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <div class="hdr-title">🍺 Brewhouse Command Center</div>
+    <div class="hdr-sub">229 West Montecito Street · Santa Barbara, CA</div>
+  </div>
+  <div class="hdr-date">
+    <div>Thursday, March 26, 2026</div>
+    <div style="margin-top:3px;font-size:0.7rem;">Auto-updated · Morning Brief</div>
+  </div>
+</div>
+
+<!-- BRIEF HEADLINE -->
+<div class="brief-band">
+  <div class="brief-headline" id="brief-headline-text">Strong Tuesday — $6,212 net · 212 guests · 16% labor</div>
+  <div class="brief-sub" id="brief-headline-sub">Most recent data: Tue Mar 17 · Net $6,212.30 · 212 guests · Labor 16.0% · 22 void items</div>
+</div>
+
+<!-- SALES STRIP -->
+<div class="sales-strip">
+  <div class="ss-cell">
+    <div class="ss-val green" id="bs-net">$6,212</div>
+    <div class="ss-label">Net Sales</div>
+    <div class="ss-sub" id="bs-net-sub">Tue Mar 17</div>
+  </div>
+  <div class="ss-cell">
+    <div class="ss-val amber" id="bs-covers">212</div>
+    <div class="ss-label">Covers</div>
+    <div class="ss-sub" id="bs-covers-sub">$29.30 avg/guest</div>
+  </div>
+  <div class="ss-cell">
+    <div class="ss-val blue" id="bs-avg">$47.79</div>
+    <div class="ss-label">Avg / Order</div>
+    <div class="ss-sub">130 orders</div>
+  </div>
+  <div class="ss-cell">
+    <div class="ss-val green" id="bs-labor">16.0%</div>
+    <div class="ss-label">Labor %</div>
+    <div class="ss-sub" id="bs-labor-sub">✓ Under 25% target</div>
+  </div>
+  <div class="ss-cell">
+    <div class="ss-val" id="bs-voids">22 items</div>
+    <div class="ss-label">Voids</div>
+    <div class="ss-sub" id="bs-voids-sub">$0.00 refunds</div>
+  </div>
+  <div class="ss-cell">
+    <div class="ss-val blue" id="bs-staff">7</div>
+    <div class="ss-label">Staff Today</div>
+    <div class="ss-sub" id="bs-staff-sub">No Sling email today</div>
+  </div>
+</div>
+
+<div class="main">
+  <!-- LEFT COLUMN -->
+  <div>
+
+    <!-- PRIORITY ACTIONS -->
+    <div class="panel" id="brief-actions-panel">
+      <div class="panel-head">
+        <span class="panel-title">⚡ Priority Actions</span>
+        <span class="badge warn">3 items need attention</span>
+      </div>
+      <div class="panel-body">
+        <div class="ba-list">
+
+          <div class="ba-item warning">
+            <div class="ba-icon">💳</div>
+            <div class="ba-content">
+              <div class="ba-title">Toast KDS &amp; Terminal — Billing Starts April 1st</div>
+              <div class="ba-detail">DocuSign agreement completed yesterday (Mar 25). New monthly charge kicks in April 1. Verify the billing amount and confirm it's in your budget before month-end.</div>
+              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Review Toast Account →</a>
+            </div>
+          </div>
+
+          <div class="ba-item warning">
+            <div class="ba-icon">📦</div>
+            <div class="ba-content">
+              <div class="ba-title">11 Upcoming Distributor Invoices Due</div>
+              <div class="ba-detail">Fintech autopay recap for March 26: 1 invoice already paid, 11 upcoming invoices pending for The Brewhouse. Review and confirm payment schedule.</div>
+              <a class="ba-link" href="https://fintech.net" target="_blank">Review Fintech Payments →</a>
+            </div>
+          </div>
+
+          <div class="ba-item info">
+            <div class="ba-icon">📅</div>
+            <div class="ba-content">
+              <div class="ba-title">No Sling Schedule Email Today</div>
+              <div class="ba-detail">No schedule summary email received from Sling this morning. Staff shown below is from prior data. Log into Sling to confirm today's roster and check for uncovered shifts.</div>
+              <a class="ba-link" href="https://app.getsling.com" target="_blank">Open Sling →</a>
+            </div>
+          </div>
+
+          <div class="ba-item info">
+            <div class="ba-icon">⭐</div>
+            <div class="ba-content">
+              <div class="ba-title">Check Google &amp; Yelp Reviews</div>
+              <div class="ba-detail">No new review notification emails found today. Log in to Google Business and Yelp to check for any new reviews that may need a response.</div>
+              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+
+          <div class="ba-item info">
+            <div class="ba-icon">📊</div>
+            <div class="ba-content">
+              <div class="ba-title">Toast Data: Most Recent Report is Mar 17</div>
+              <div class="ba-detail">The latest Toast daily summary email shows Tuesday, March 17. There may be a delivery gap in your Toast email settings — no daily reports received for Mar 18–25.</div>
+              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Check Toast Settings →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST SALES DATA -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">📊 Toast Sales — Tue March 17</span>
+        <span class="badge warn">Most Recent Available</span>
+      </div>
+      <div class="panel-body">
+        <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$6,469.70</span></div>
+        <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$6,212.30</span></div>
+        <div class="data-row"><span class="data-key">Guests</span><span class="data-val">212</span></div>
+        <div class="data-row"><span class="data-key">Total Orders</span><span class="data-val">130</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Order</span><span class="data-val">$47.79</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Guest</span><span class="data-val">$29.30</span></div>
+        <div class="data-row"><span class="data-key">Labor % (of Net)</span><span class="data-val green">16.0% ✓</span></div>
+        <div class="data-row"><span class="data-key">Discount % (of Gross)</span><span class="data-val">4.0%</span></div>
+        <div class="data-row"><span class="data-key">Void Items (qty)</span><span class="data-val amber">22</span></div>
+        <div class="data-row"><span class="data-key">Refund Total</span><span class="data-val green">$0.00 ✓</span></div>
+        <div class="data-row"><span class="data-key">Card Payments</span><span class="data-val">104</span></div>
+        <div class="data-row"><span class="data-key">Takeout Orders</span><span class="data-val">4 ($135.60)</span></div>
+        <div class="data-row"><span class="data-key">Open Orders at Close</span><span class="data-val green">0</span></div>
+      </div>
+    </div>
+
+    <!-- STAFF SCHEDULE -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">👥 Staff Schedule</span>
+        <span class="badge warn">No Sling Email — Prior Data</span>
+      </div>
+      <div class="panel-body">
+        <table class="staff-table">
+          <thead><tr><th>Name</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td>Tony Rincon</td><td><span class="role-badge bartender">Bartender</span></td></tr>
+            <tr><td>Jackson Wright</td><td><span class="role-badge bartender">Bartender</span></td></tr>
+            <tr><td>Andrew Turner</td><td><span class="role-badge bartender">Bartender</span></td></tr>
+            <tr><td>Noel Nunez</td><td><span class="role-badge chef">Chef</span></td></tr>
+            <tr><td>Katharine Brown</td><td><span class="role-badge server">Server</span></td></tr>
+            <tr><td>Emily Lanzel</td><td><span class="role-badge server">Server</span></td></tr>
+            <tr><td>James Hernandez</td><td><span class="role-badge busser">Busser</span></td></tr>
+          </tbody>
+        </table>
+        <div style="margin-top:12px;font-size:0.8rem;color:var(--muted);">
+          Prior scheduled hrs: <strong style="color:var(--text)">36.82 hrs</strong> &nbsp;·&nbsp;
+          Overtime: <strong style="color:var(--green)">0 hrs</strong> &nbsp;·&nbsp;
+          Uncovered: <strong style="color:var(--green)">0</strong>
+        </div>
+        <div style="margin-top:8px;">
+          <a href="https://app.getsling.com" target="_blank" class="ba-link">Verify today's schedule in Sling →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DISTRIBUTOR AUTOPAY -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">💰 Distributor Autopay</span>
+        <span class="badge warn">Action Needed</span>
+      </div>
+      <div class="panel-body">
+        <div class="dist-alert">
+          <strong style="color:var(--accent);">March 26, 2026 Recap</strong><br>
+          <span style="font-size:0.84rem;color:var(--text);">1 invoice paid · <strong>11 upcoming invoices</strong> pending for 1 location</span><br>
+          <a href="https://fintech.net" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review payments on Fintech →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div>
+
+    <!-- TODAY'S TASKS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">✅ Today's Tasks</span>
+      </div>
+      <div class="panel-body">
+        <div id="task-list">
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Verify Toast KDS billing starts April 1 — confirm amount
+              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast account →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Review 11 upcoming distributor invoices on Fintech
+              <a class="task-link" href="https://fintech.net" target="_blank">Fintech →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Check Sling for today's full schedule
+              <a class="task-link" href="https://app.getsling.com" target="_blank">Sling →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Check Google Business for new reviews
+              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Check Yelp for messages or new reviews
+              <a class="task-link" href="https://biz.yelp.com" target="_blank">Yelp Biz →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Post tonight's social media content (3 drafts in report)
+              <a class="task-link" href="https://twitter.com" target="_blank">X/Twitter →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Investigate Toast daily email gap (no reports Mar 18–25)
+              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast settings →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVIEW ALERTS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">⭐ Review Alerts</span>
+        <span class="badge info">No New Emails Today</span>
+      </div>
+      <div class="panel-body" id="review-alerts">
+        <div class="no-data">No new Google review notification emails found today.<br><br>
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color:var(--accent);font-size:0.82rem;text-decoration:none;">Check Google Business Profile →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">🔗 Quick Links</span>
+      </div>
+      <div class="panel-body">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="https://pos.toasttab.com" target="_blank" class="ba-link" style="display:block;text-align:center;">🍞 Toast POS Dashboard</a>
+          <a href="https://app.getsling.com" target="_blank" class="ba-link" style="display:block;text-align:center;">📅 Sling Scheduling</a>
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="ba-link" style="display:block;text-align:center;">⭐ Google Business Reviews</a>
+          <a href="https://biz.yelp.com" target="_blank" class="ba-link" style="display:block;text-align:center;">🔴 Yelp Business</a>
+          <a href="https://fintech.net" target="_blank" class="ba-link" style="display:block;text-align:center;">💰 Fintech Distributor Pay</a>
+          <a href="https://ads.google.com" target="_blank" class="ba-link" style="display:block;text-align:center;">📣 Google Ads</a>
+          <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/Brewhouse_Morning_Report.html" target="_blank" class="ba-link" style="display:block;text-align:center;">📋 Morning Report</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  Auto-generated · Thursday March 26, 2026 · The Brewhouse Command Center<br>
+  <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/" target="_blank" style="color:var(--accent);text-decoration:none;">🌐 Live Dashboard</a>
+</div>
+
+<script>
+// Fallback data from latest Toast email (Tue Mar 17, 2026)
+const toastRaw = null;
+const slingRaw = null;
+
+const toast = toastRaw ? JSON.parse(toastRaw) : {
+  date: 'Tuesday, March 17',
+  gross: 6469.70,
+  net: 6212.30,
+  guests: 212,
+  orders: 130,
+  avgPerGuest: 29.30,
+  avgPerOrder: 47.79,
+  laborPct: 16.0,
+  discountPct: 4.0,
+  cardPayments: 104,
+  refunds: 0.00,
+  voidQty: 22,
+  takeoutOrders: 4,
+  takeoutSales: 135.60
+};
+
+const sling = slingRaw ? JSON.parse(slingRaw) : {
+  date: 'Thursday, March 26',
+  count: 7,
+  hours: 36.82,
+  overtime: 0,
+  uncovered: 0,
+  staff: [
+    { name: 'Tony Rincon', role: 'Bartender' },
+    { name: 'Jackson Wright', role: 'Bartender' },
+    { name: 'Andrew Turner', role: 'Bartender' },
+    { name: 'Noel Nunez', role: 'Chef' },
+    { name: 'Katharine Brown', role: 'Server' },
+    { name: 'Emily Lanzel', role: 'Server' },
+    { name: 'James Hernandez', role: 'Busser' }
+  ]
+};
+
+const DEFAULT_TASKS = [
+  { text: 'Verify Toast KDS billing starts April 1 — confirm charge amount', link: 'https://pos.toasttab.com', linkLabel: 'Toast →' },
+  { text: 'Review 11 upcoming distributor invoices on Fintech autopay', link: 'https://fintech.net', linkLabel: 'Fintech →' },
+  { text: 'Check Sling for today\'s full schedule (no email received)', link: 'https://app.getsling.com', linkLabel: 'Sling →' },
+  { text: 'Check Google Business for new reviews needing response', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
+  { text: 'Check Yelp for quote requests or messages', link: 'https://biz.yelp.com', linkLabel: 'Yelp →' },
+  { text: 'Post social media content for tonight', link: 'https://twitter.com', linkLabel: 'X →' },
+  { text: 'Investigate Toast daily email gap (no reports Mar 18–25)', link: 'https://pos.toasttab.com', linkLabel: 'Toast settings →' }
+];
+</script>
+</body>
+</html>
