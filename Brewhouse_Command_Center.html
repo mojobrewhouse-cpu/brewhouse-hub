@@ -106,14 +106,22 @@
     .ads-day-metric { text-align: right; min-width: 55px; }
     .ads-day-metric .val { font-weight: 700; color: var(--text); }
     .ads-day-metric .label { font-size: 0.6rem; color: var(--muted); }
-    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px12px; margin-top: 10px; }
+    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
     .yelp-bonus-title { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
     .yelp-bonus-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 6px 0; }
     .yelp-bonus-fill { height: 100%; background: var(--green); border-radius: 4px; }
     .yelp-bonus-detail { font-size: 0.75rem; color: var(--muted); }
 
-    /* Staff Grid */
-    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    /* Staff Grid — compact */
+    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .staff-grid .panel { margin-bottom: 0; }
+    .staff-grid .panel-head { padding: 6px 10px; }
+    .staff-grid .panel-title { font-size: 0.68rem; letter-spacing: 1px; }
+    .staff-grid .panel-body { padding: 8px 10px; }
+    .staff-grid .staff-table { font-size: 0.72rem; }
+    .staff-grid .staff-table th { padding: 3px 6px; font-size: 0.6rem; }
+    .staff-grid .staff-table td { padding: 4px 6px; }
+    .staff-grid .role-badge { font-size: 0.62rem; padding: 1px 6px; }
     @media(max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } }
 
     /* X Posting */
@@ -246,8 +254,8 @@
         <div class="ba-list">
           <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
           <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: \"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps.\" This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: \"Menu online doesn't match in bar, food very basic.\" This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
           <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
           <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
           <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
@@ -268,7 +276,7 @@
           <button class="x-tab active" onclick="switchXTab('brewhouse')" id="x-tab-brewhouse">@SBrewhouse805</button>
           <button class="x-tab" onclick="switchXTab('figtree')" id="x-tab-figtree">@sbfigtree93101</button>
         </div>
-        <textarea id=\"x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
+        <textarea id="x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
         <div class="x-footer">
           <span class="x-char-count"><span id="x-chars">0</span>/280</span>
           <button class="x-post-btn" onclick="postToX()">Post via X →</button>
@@ -349,7 +357,7 @@
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 26</span>
           </div>
-          <div class="review-text">\"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps.\"</div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
         </div>
         <div class="review-card">
@@ -358,7 +366,7 @@
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 22</span>
           </div>
-          <div class="review-text">\"Menu online doesn't match in bar, food very basic.\"</div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
         </div>
         <div class="review-card">
@@ -367,7 +375,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 24</span>
           </div>
-          <div class="review-text">\"Amazing atmosphere and great service. The bartender recommended the perfect drink!\"</div>
+          <div class="review-text">"Amazing atmosphere and great service. The bartender recommended the perfect drink!"</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div class="review-card">
@@ -376,7 +384,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 23</span>
           </div>
-          <div class="review-text">\"Food was fantastic and the vibe is perfect for a date night. Will definitely be back.\"</div>
+          <div class="review-text">"Food was fantastic and the vibe is perfect for a date night. Will definitely be back."</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div class="review-card">
@@ -385,7 +393,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 21</span>
           </div>
-          <div class="review-text">\"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming.\"</div>
+          <div class="review-text">"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming."</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem;">
@@ -468,16 +476,14 @@ function renderStaffPanel(containerId, badgeId, data, label) {
     html += '<tr><td>' + s.name + '</td><td><span class="role-badge ' + roleClass + '">' + s.role + '</span></td></tr>';
   });
   html += '</tbody></table>';
-  html += '<div style="margin-top:12px;font-size:0.8rem;color:var(--muted);">';
-  html += 'Scheduled hrs: <strong style="color:var(--text)">' + data.hours + ' hrs</strong> &nbsp;·&nbsp;';
-  html += 'Overtime: <strong style="color:var(--green)">' + (data.overtime || 0) + ' hrs</strong> &nbsp;·&nbsp;';
+  html += '<div style="margin-top:6px;font-size:0.68rem;color:var(--muted);">';
+  html += data.hours + ' hrs';
   if (uncov > 0) {
-    html += 'Uncovered: <strong style="color:var(--red);">' + uncov + ' shift' + (uncov > 1 ? 's' : '') + ' ⚠️</strong>';
+    html += ' · <strong style="color:var(--red);">' + uncov + ' uncov ⚠️</strong>';
   } else {
-    html += 'Uncovered: <strong style="color:var(--green);">0 ✓</strong>';
+    html += ' · <span style="color:var(--green);">All covered ✓</span>';
   }
   html += '</div>';
-  html += '<div style="margin-top:8px;"><a href="https://app.getsling.com" target="_blank" class="ba-link">Check in Sling →</a></div>';
   document.getElementById(containerId).innerHTML = html;
 }
 
@@ -497,43 +503,13 @@ function renderGoogleAds(data) {
   });
   var avgCpc = totalClicks > 0 ? (totalSpend / totalClicks).toFixed(2) : '0';
   var html = '';
-  // KPI cards
+  // Compact KPI cards — spend, clicks, conversions only
   html += '<div class="ads-kpi-grid">';
   html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + totalSpend.toFixed(0) + '</div><div class="ads-kpi-label">7-Day Spend</div></div>';
   html += '<div class="ads-kpi"><div class="ads-kpi-val">' + totalClicks.toLocaleString() + '</div><div class="ads-kpi-label">Clicks</div></div>';
   html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + totalConv + '</div><div class="ads-kpi-label">Conversions</div></div>';
-  html += '<div class="ads-kpi"><div class="ads-kpi-val">$' + avgCpc + '</div><div class="ads-kpi-label">Avg CPC</div></div>';
   html += '</div>';
-  // Bar chart
-  var maxClicks = Math.max.apply(null, days.map(function(d){ return d.clicks; }));
-  html += '<div class="ads-legend">';
-  html += '<span class="ads-legend-item"><span class="ads-legend-dot" style="background:var(--blue)"></span>Clicks</span>';
-  html += '<span class="ads-legend-item"><span class="ads-legend-dot" style="background:var(--green)"></span>Conversions</span>';
-  html += '</div>';
-  html += '<div class="ads-chart">';
-  days.slice().reverse().forEach(function(d) {
-    var clickH = maxClicks > 0 ? Math.max(4, (d.clicks / maxClicks) * 65) : 4;
-    var convH = maxClicks > 0 ? Math.max(2, (d.conversions / maxClicks) * 65) : 2;
-    var label = d.date.replace('Mar ', '3/');
-    html += '<div class="ads-bar-wrap">';
-    html += '<div class="ads-bar clicks" style="height:' + clickH + 'px" title="' + d.clicks + ' clicks"></div>';
-    html += '<div class="ads-bar conv" style="height:' + convH + 'px" title="' + d.conversions + ' conversions"></div>';
-    html += '<div class="ads-bar-label">' + label + '</div>';
-    html += '</div>';
-  });
-  html += '</div>';
-  // Daily breakdown
-  days.forEach(function(d) {
-    html += '<div class="ads-day-row">';
-    html += '<span class="ads-day-date">' + d.date + '</span>';
-    html += '<div class="ads-day-metrics">';
-    html += '<div class="ads-day-metric"><span class="val">' + d.spend + '</span><br><span class="label">Spend</span></div>';
-    html += '<div class="ads-day-metric"><span class="val">' + d.clicks + '</span><br><span class="label">Clicks</span></div>';
-    html += '<div class="ads-day-metric"><span class="val" style="color:var(--green)">' + d.conversions + '</span><br><span class="label">Conv</span></div>';
-    html += '</div>';
-    html += '</div>';
-  });
-  html += '<div style="margin-top:10px;text-align:center;"><a href="https://ads.google.com" target="_blank" class="ba-link">Open Google Ads →</a></div>';
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://ads.google.com" target="_blank" class="ba-link">Open Google Ads →</a></div>';
   document.getElementById('gads-body').innerHTML = html;
 }
 
@@ -544,28 +520,13 @@ function renderYelpAds(data) {
     return;
   }
   var html = '';
+  // Compact KPI cards — spend, page visits, leads only
   html += '<div class="ads-kpi-grid">';
   html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + data.spend.replace('$','') + '</div><div class="ads-kpi-label">Spend (' + data.period + ')</div></div>';
-  html += '<div class="ads-kpi"><div class="ads-kpi-val">' + data.impressions + '</div><div class="ads-kpi-label">Impressions</div></div>';
   html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + data.pageVisits + '</div><div class="ads-kpi-label">Page Visits</div></div>';
   html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + data.leads + '</div><div class="ads-kpi-label">Leads</div></div>';
   html += '</div>';
-  // Cost metrics
-  html += '<div class="data-row"><span class="data-key">Cost per Click</span><span class="data-val">' + data.cpc + '</span></div>';
-  html += '<div class="data-row"><span class="data-key">Cost per Lead</span><span class="data-val green">' + data.cpl + '</span></div>';
-  // Bonus credits
-  if (data.bonus) {
-    var usedPct = 0;
-    var totalBonus = parseFloat(data.bonus.total.replace('$','').replace(',',''));
-    var usedBonus = parseFloat(data.bonus.used.replace('$','').replace(',',''));
-    if (totalBonus > 0) usedPct = ((usedBonus / totalBonus) * 100).toFixed(0);
-    html += '<div class="yelp-bonus">';
-    html += '<div class="yelp-bonus-title">🎁 Bonus Ad Credits</div>';
-    html += '<div class="yelp-bonus-bar"><div class="yelp-bonus-fill" style="width:' + usedPct + '%"></div></div>';
-    html += '<div class="yelp-bonus-detail"><strong style="color:var(--green)">' + data.bonus.used + '</strong> of ' + data.bonus.total + ' used · <strong style="color:var(--accent)">' + data.bonus.unused + '</strong> remaining · Expires ' + data.bonus.expires + '</div>';
-    html += '</div>';
-  }
-  html += '<div style="margin-top:10px;text-align:center;"><a href="https://biz.yelp.com" target="_blank" class="ba-link">Open Yelp Business →</a></div>';
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://biz.yelp.com" target="_blank" class="ba-link">Open Yelp Business →</a></div>';
   document.getElementById('yelp-body').innerHTML = html;
   document.getElementById('yelp-badge').textContent = data.period;
 }
@@ -595,7 +556,8 @@ fetch('data.json')
   })
   .catch(function(e) {
     console.error('data.json fetch failed:', e);
-    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';    document.getElementById('staff-today-badge').textContent = 'Pending';
+    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';
+    document.getElementById('staff-today-badge').textContent = 'Pending';
     document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
     document.getElementById('staff-yesterday-badge').textContent = 'No Data';
   });
