@@ -106,7 +106,7 @@
     .ads-day-metric { text-align: right; min-width: 55px; }
     .ads-day-metric .val { font-weight: 700; color: var(--text); }
     .ads-day-metric .label { font-size: 0.6rem; color: var(--muted); }
-    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px12px; margin-top: 10px; }
     .yelp-bonus-title { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
     .yelp-bonus-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 6px 0; }
     .yelp-bonus-fill { height: 100%; background: var(--green); border-radius: 4px; }
@@ -162,20 +162,43 @@
 <div class="main">
   <!-- LEFT COLUMN -->
   <div>
-    <!-- PRIORITY ACTIONS -->
-    <div class="panel" id="brief-actions-panel">
-      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">8 items need attention</span></div>
-      <div class="panel-body">
-        <div class="ba-list">
-          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
-          <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
-          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Google Ads Daily Reports Ready</div><div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div><a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a></div></div>
+    <!-- STAFF SCHEDULE — TWO PANELS SIDE BY SIDE -->
+    <div class="staff-grid" id="staff-grid">
+      <!-- TODAY'S STAFF (from slingToday in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Today</span><span class="badge ok" id="staff-today-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-today-body">
+          <div class="no-data">Loading today's staff from data.json...</div>
         </div>
+      </div>
+      <!-- YESTERDAY'S STAFF (from sling in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Yesterday</span><span class="badge warn" id="staff-yesterday-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-yesterday-body">
+          <div class="no-data">Loading yesterday's staff from data.json...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOOGLE ADS ANALYTICS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">📊 Google Ads Performance</span>
+        <span class="badge info" id="gads-badge">7-Day View</span>
+      </div>
+      <div class="panel-body" id="gads-body">
+        <div class="no-data">Loading Google Ads data...</div>
+      </div>
+    </div>
+
+    <!-- YELP ADS ANALYTICS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">🍽️ Yelp Ads Performance</span>
+        <span class="badge info" id="yelp-badge">Monthly</span>
+      </div>
+      <div class="panel-body" id="yelp-body">
+        <div class="no-data">Loading Yelp Ads data...</div>
       </div>
     </div>
 
@@ -208,24 +231,6 @@
       </div>
     </div>
 
-    <!-- STAFF SCHEDULE — TWO PANELS SIDE BY SIDE -->
-    <div class="staff-grid" id="staff-grid">
-      <!-- TODAY'S STAFF (from slingToday in data.json) -->
-      <div class="panel">
-        <div class="panel-head"><span class="panel-title">👥 Staff Today</span><span class="badge ok" id="staff-today-badge">Loading...</span></div>
-        <div class="panel-body" id="staff-today-body">
-          <div class="no-data">Loading today's staff from data.json...</div>
-        </div>
-      </div>
-      <!-- YESTERDAY'S STAFF (from sling in data.json) -->
-      <div class="panel">
-        <div class="panel-head"><span class="panel-title">👥 Staff Yesterday</span><span class="badge warn" id="staff-yesterday-badge">Loading...</span></div>
-        <div class="panel-body" id="staff-yesterday-body">
-          <div class="no-data">Loading yesterday's staff from data.json...</div>
-        </div>
-      </div>
-    </div>
-
     <!-- DISTRIBUTOR AUTOPAY -->
     <div class="panel">
       <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Upcoming</span></div>
@@ -234,25 +239,20 @@
       </div>
     </div>
 
-    <!-- GOOGLE ADS ANALYTICS -->
-    <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">📊 Google Ads Performance</span>
-        <span class="badge info" id="gads-badge">7-Day View</span>
-      </div>
-      <div class="panel-body" id="gads-body">
-        <div class="no-data">Loading Google Ads data...</div>
-      </div>
-    </div>
-
-    <!-- YELP ADS ANALYTICS -->
-    <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">🍽️ Yelp Ads Performance</span>
-        <span class="badge info" id="yelp-badge">Monthly</span>
-      </div>
-      <div class="panel-body" id="yelp-body">
-        <div class="no-data">Loading Yelp Ads data...</div>
+    <!-- PRIORITY ACTIONS -->
+    <div class="panel" id="brief-actions-panel">
+      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">8 items need attention</span></div>
+      <div class="panel-body">
+        <div class="ba-list">
+          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
+          <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: \"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps.\" This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: \"Menu online doesn't match in bar, food very basic.\" This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Google Ads Daily Reports Ready</div><div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div><a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a></div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -268,7 +268,7 @@
           <button class="x-tab active" onclick="switchXTab('brewhouse')" id="x-tab-brewhouse">@SBrewhouse805</button>
           <button class="x-tab" onclick="switchXTab('figtree')" id="x-tab-figtree">@sbfigtree93101</button>
         </div>
-        <textarea id="x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
+        <textarea id=\"x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
         <div class="x-footer">
           <span class="x-char-count"><span id="x-chars">0</span>/280</span>
           <button class="x-post-btn" onclick="postToX()">Post via X →</button>
@@ -349,7 +349,7 @@
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 26</span>
           </div>
-          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+          <div class="review-text">\"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps.\"</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
         </div>
         <div class="review-card">
@@ -358,7 +358,7 @@
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 22</span>
           </div>
-          <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
+          <div class="review-text">\"Menu online doesn't match in bar, food very basic.\"</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
         </div>
         <div class="review-card">
@@ -367,7 +367,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 24</span>
           </div>
-          <div class="review-text">"Amazing atmosphere and great service. The bartender recommended the perfect drink!"</div>
+          <div class="review-text">\"Amazing atmosphere and great service. The bartender recommended the perfect drink!\"</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div class="review-card">
@@ -376,7 +376,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 23</span>
           </div>
-          <div class="review-text">"Food was fantastic and the vibe is perfect for a date night. Will definitely be back."</div>
+          <div class="review-text">\"Food was fantastic and the vibe is perfect for a date night. Will definitely be back.\"</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div class="review-card">
@@ -385,7 +385,7 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 21</span>
           </div>
-          <div class="review-text">"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming."</div>
+          <div class="review-text">\"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming.\"</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
         <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem;">
@@ -595,8 +595,7 @@ fetch('data.json')
   })
   .catch(function(e) {
     console.error('data.json fetch failed:', e);
-    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';
-    document.getElementById('staff-today-badge').textContent = 'Pending';
+    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';    document.getElementById('staff-today-badge').textContent = 'Pending';
     document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
     document.getElementById('staff-yesterday-badge').textContent = 'No Data';
   });
