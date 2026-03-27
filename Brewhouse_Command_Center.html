@@ -81,6 +81,37 @@
     .badge.info { background: rgba(90,159,212,0.15); color: var(--blue); }
     .no-data { color: var(--muted); font-size: 0.82rem; text-align: center; padding: 20px; opacity: 0.7; }
 
+    /* Ads Analytics */
+    .ads-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; margin-bottom: 14px; }
+    .ads-kpi { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .ads-kpi-val { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .ads-kpi-val.green { color: var(--green); }
+    .ads-kpi-val.amber { color: var(--accent); }
+    .ads-kpi-val.red { color: var(--red); }
+    .ads-kpi-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+    .ads-chart { display: flex; align-items: flex-end; gap: 4px; height: 80px; margin-bottom: 12px; padding: 0 2px; }
+    .ads-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; height: 100%; justify-content: flex-end; }
+    .ads-bar { width: 100%; min-height: 4px; border-radius: 3px 3px 0 0; transition: height 0.3s; }
+    .ads-bar.clicks { background: var(--blue); }
+    .ads-bar.spend { background: var(--accent); }
+    .ads-bar.conv { background: var(--green); }
+    .ads-bar-label { font-size: 0.58rem; color: var(--muted); white-space: nowrap; }
+    .ads-legend { display: flex; gap: 14px; justify-content: center; margin-bottom: 10px; }
+    .ads-legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.68rem; color: var(--muted); }
+    .ads-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .ads-day-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.8rem; }
+    .ads-day-row:last-child { border-bottom: none; }
+    .ads-day-date { color: var(--muted); min-width: 50px; }
+    .ads-day-metrics { display: flex; gap: 12px; }
+    .ads-day-metric { text-align: right; min-width: 55px; }
+    .ads-day-metric .val { font-weight: 700; color: var(--text); }
+    .ads-day-metric .label { font-size: 0.6rem; color: var(--muted); }
+    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+    .yelp-bonus-title { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .yelp-bonus-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 6px 0; }
+    .yelp-bonus-fill { height: 100%; background: var(--green); border-radius: 4px; }
+    .yelp-bonus-detail { font-size: 0.75rem; color: var(--muted); }
+
     /* Staff Grid */
     .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     @media(max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } }
@@ -200,6 +231,28 @@
       <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Upcoming</span></div>
       <div class="panel-body">
         <div class="dist-alert"><strong style="color:var(--accent);">Upcoming Charges</strong><br><span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br><a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a></div>
+      </div>
+    </div>
+
+    <!-- GOOGLE ADS ANALYTICS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">📊 Google Ads Performance</span>
+        <span class="badge info" id="gads-badge">7-Day View</span>
+      </div>
+      <div class="panel-body" id="gads-body">
+        <div class="no-data">Loading Google Ads data...</div>
+      </div>
+    </div>
+
+    <!-- YELP ADS ANALYTICS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">🍽️ Yelp Ads Performance</span>
+        <span class="badge info" id="yelp-badge">Monthly</span>
+      </div>
+      <div class="panel-body" id="yelp-body">
+        <div class="no-data">Loading Yelp Ads data...</div>
       </div>
     </div>
   </div>
@@ -428,6 +481,95 @@ function renderStaffPanel(containerId, badgeId, data, label) {
   document.getElementById(containerId).innerHTML = html;
 }
 
+// Render Google Ads Panel
+function renderGoogleAds(data) {
+  if (!data || !data.days) {
+    document.getElementById('gads-body').innerHTML = '<div class="no-data">No Google Ads data available</div>';
+    return;
+  }
+  var days = data.days;
+  var totalSpend = 0, totalClicks = 0, totalConv = 0, totalImpr = 0;
+  days.forEach(function(d) {
+    totalSpend += parseFloat(d.spend.replace('$','').replace(',',''));
+    totalClicks += d.clicks;
+    totalConv += d.conversions;
+    totalImpr += parseInt(String(d.impressions).replace(',',''));
+  });
+  var avgCpc = totalClicks > 0 ? (totalSpend / totalClicks).toFixed(2) : '0';
+  var html = '';
+  // KPI cards
+  html += '<div class="ads-kpi-grid">';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + totalSpend.toFixed(0) + '</div><div class="ads-kpi-label">7-Day Spend</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val">' + totalClicks.toLocaleString() + '</div><div class="ads-kpi-label">Clicks</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + totalConv + '</div><div class="ads-kpi-label">Conversions</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val">$' + avgCpc + '</div><div class="ads-kpi-label">Avg CPC</div></div>';
+  html += '</div>';
+  // Bar chart
+  var maxClicks = Math.max.apply(null, days.map(function(d){ return d.clicks; }));
+  html += '<div class="ads-legend">';
+  html += '<span class="ads-legend-item"><span class="ads-legend-dot" style="background:var(--blue)"></span>Clicks</span>';
+  html += '<span class="ads-legend-item"><span class="ads-legend-dot" style="background:var(--green)"></span>Conversions</span>';
+  html += '</div>';
+  html += '<div class="ads-chart">';
+  days.slice().reverse().forEach(function(d) {
+    var clickH = maxClicks > 0 ? Math.max(4, (d.clicks / maxClicks) * 65) : 4;
+    var convH = maxClicks > 0 ? Math.max(2, (d.conversions / maxClicks) * 65) : 2;
+    var label = d.date.replace('Mar ', '3/');
+    html += '<div class="ads-bar-wrap">';
+    html += '<div class="ads-bar clicks" style="height:' + clickH + 'px" title="' + d.clicks + ' clicks"></div>';
+    html += '<div class="ads-bar conv" style="height:' + convH + 'px" title="' + d.conversions + ' conversions"></div>';
+    html += '<div class="ads-bar-label">' + label + '</div>';
+    html += '</div>';
+  });
+  html += '</div>';
+  // Daily breakdown
+  days.forEach(function(d) {
+    html += '<div class="ads-day-row">';
+    html += '<span class="ads-day-date">' + d.date + '</span>';
+    html += '<div class="ads-day-metrics">';
+    html += '<div class="ads-day-metric"><span class="val">' + d.spend + '</span><br><span class="label">Spend</span></div>';
+    html += '<div class="ads-day-metric"><span class="val">' + d.clicks + '</span><br><span class="label">Clicks</span></div>';
+    html += '<div class="ads-day-metric"><span class="val" style="color:var(--green)">' + d.conversions + '</span><br><span class="label">Conv</span></div>';
+    html += '</div>';
+    html += '</div>';
+  });
+  html += '<div style="margin-top:10px;text-align:center;"><a href="https://ads.google.com" target="_blank" class="ba-link">Open Google Ads →</a></div>';
+  document.getElementById('gads-body').innerHTML = html;
+}
+
+// Render Yelp Ads Panel
+function renderYelpAds(data) {
+  if (!data) {
+    document.getElementById('yelp-body').innerHTML = '<div class="no-data">No Yelp Ads data available</div>';
+    return;
+  }
+  var html = '';
+  html += '<div class="ads-kpi-grid">';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + data.spend.replace('$','') + '</div><div class="ads-kpi-label">Spend (' + data.period + ')</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val">' + data.impressions + '</div><div class="ads-kpi-label">Impressions</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + data.pageVisits + '</div><div class="ads-kpi-label">Page Visits</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + data.leads + '</div><div class="ads-kpi-label">Leads</div></div>';
+  html += '</div>';
+  // Cost metrics
+  html += '<div class="data-row"><span class="data-key">Cost per Click</span><span class="data-val">' + data.cpc + '</span></div>';
+  html += '<div class="data-row"><span class="data-key">Cost per Lead</span><span class="data-val green">' + data.cpl + '</span></div>';
+  // Bonus credits
+  if (data.bonus) {
+    var usedPct = 0;
+    var totalBonus = parseFloat(data.bonus.total.replace('$','').replace(',',''));
+    var usedBonus = parseFloat(data.bonus.used.replace('$','').replace(',',''));
+    if (totalBonus > 0) usedPct = ((usedBonus / totalBonus) * 100).toFixed(0);
+    html += '<div class="yelp-bonus">';
+    html += '<div class="yelp-bonus-title">🎁 Bonus Ad Credits</div>';
+    html += '<div class="yelp-bonus-bar"><div class="yelp-bonus-fill" style="width:' + usedPct + '%"></div></div>';
+    html += '<div class="yelp-bonus-detail"><strong style="color:var(--green)">' + data.bonus.used + '</strong> of ' + data.bonus.total + ' used · <strong style="color:var(--accent)">' + data.bonus.unused + '</strong> remaining · Expires ' + data.bonus.expires + '</div>';
+    html += '</div>';
+  }
+  html += '<div style="margin-top:10px;text-align:center;"><a href="https://biz.yelp.com" target="_blank" class="ba-link">Open Yelp Business →</a></div>';
+  document.getElementById('yelp-body').innerHTML = html;
+  document.getElementById('yelp-badge').textContent = data.period;
+}
+
 // Load data.json
 fetch('data.json')
   .then(function(r) {
@@ -444,6 +586,8 @@ fetch('data.json')
         var uncov = d.slingToday.uncovered || 0;
         document.getElementById('bs-staff-sub').textContent = uncov > 0 ? uncov + ' uncovered shift' + (uncov > 1 ? 's' : '') + ' ⚠️' : 'All shifts covered ✓';
       }
+      renderGoogleAds(d.googleAds);
+      renderYelpAds(d.yelpAds);
       console.log('Staff panels loaded successfully');
     } catch(renderErr) {
       console.error('Staff render error:', renderErr);
