@@ -13,40 +13,25 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height: 100vh; }
-
-    /* ── HEADER ── */
     .hdr { background: #140e04; border-bottom: 2px solid var(--accent); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
     .hdr-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
     .hdr-sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
     .hdr-date { font-size: 0.82rem; color: var(--muted); text-align: right; }
-
-    /* ── BRIEF HEADLINE ── */
     .brief-band { background: linear-gradient(135deg,#2a1a06,#1c1207); border-bottom: 1px solid var(--border); padding: 20px 24px; }
     .brief-headline { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
     .brief-sub { font-size: 0.88rem; color: var(--muted); margin-top: 6px; }
-
-    /* ── SALES STRIP ── */
     .sales-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--border); border-bottom: 2px solid var(--border); }
     .ss-cell { background: var(--card); padding: 16px 14px; text-align: center; }
     .ss-val { font-size: 1.4rem; font-weight: 700; color: var(--text); }
-    .ss-val.green { color: var(--green); }
-    .ss-val.amber { color: var(--accent); }
-    .ss-val.blue { color: var(--blue); }
-    .ss-val.red { color: var(--red); }
+    .ss-val.green { color: var(--green); } .ss-val.amber { color: var(--accent); } .ss-val.blue { color: var(--blue); } .ss-val.red { color: var(--red); }
     .ss-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
     .ss-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
-
-    /* ── MAIN LAYOUT ── */
     .main { display: grid; grid-template-columns: 1fr 340px; gap: 20px; padding: 20px; max-width: 1400px; margin: 0 auto; }
     @media(max-width: 900px) { .main { grid-template-columns: 1fr; } }
-
-    /* ── PANELS ── */
     .panel { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
     .panel-head { background: #1e1408; border-bottom: 1px solid var(--border); padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     .panel-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
     .panel-body { padding: 16px 18px; }
-
-    /* ── ACTIONS ── */
     .ba-list { display: flex; flex-direction: column; gap: 10px; }
     .ba-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 8px; border-left: 4px solid transparent; }
     .ba-item.urgent { background: rgba(224,82,82,0.1); border-color: var(--red); }
@@ -58,8 +43,6 @@
     .ba-detail { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.5; }
     .ba-link { display: inline-block; margin-top: 6px; font-size: 0.73rem; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
     .ba-link:hover { background: var(--border); }
-
-    /* ── REVIEW ALERTS ── */
     .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
     .review-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
     .review-name { font-weight: 700; font-size: 0.9rem; }
@@ -68,17 +51,10 @@
     .review-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
     .review-reply { font-size: 0.8rem; color: var(--green); background: rgba(76,175,114,0.08); border-radius: 6px; padding: 8px 10px; line-height: 1.5; }
     .review-reply-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green); margin-bottom: 4px; font-weight: 700; }
-
-    /* ── TOAST DATA TABLE ── */
     .data-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
     .data-row:last-child { border-bottom: none; }
-    .data-key { color: var(--muted); }
-    .data-val { font-weight: 700; color: var(--text); }
-    .data-val.green { color: var(--green); }
-    .data-val.amber { color: var(--accent); }
-    .data-val.red { color: var(--red); }
-
-    /* ── STAFF TABLE ── */
+    .data-key { color: var(--muted); } .data-val { font-weight: 700; color: var(--text); }
+    .data-val.green { color: var(--green); } .data-val.amber { color: var(--accent); } .data-val.red { color: var(--red); }
     .staff-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
     .staff-table th { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
     .staff-table td { padding: 9px 10px; border-bottom: 1px solid #2a1e0c; }
@@ -89,33 +65,43 @@
     .role-badge.cook { background: #1a3a2a; color: var(--green); }
     .role-badge.server { background: #3a2a1a; color: var(--orange); }
     .role-badge.busser { background: #2a2010; color: var(--muted); }
-
-    /* ── TASK LIST ── */
+    .role-badge.general-manager { background: #3a1a3a; color: #d4a0d4; }
+    .role-badge.manager { background: #3a1a3a; color: #d4a0d4; }
     .task-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
     .task-item:last-child { border-bottom: none; }
     .task-check { width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; margin-top: 1px; cursor: pointer; }
     .task-text { flex: 1; }
     .task-link { color: var(--accent); font-size: 0.73rem; margin-top: 3px; display: block; text-decoration: none; }
-
-    /* ── DISTRIBUTOR ALERT ── */
     .dist-alert { background: rgba(212,144,10,0.1); border: 1px solid var(--accent); border-radius: 8px; padding: 12px 14px; font-size: 0.84rem; }
-
-    /* ── FOOTER ── */
     .footer { text-align: center; padding: 20px; color: var(--muted); font-size: 0.73rem; border-top: 1px solid var(--border); margin-top: 20px; }
-
-    /* ── BADGE ── */
     .badge { display: inline-block; font-size: 0.68rem; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
     .badge.ok { background: rgba(76,175,114,0.15); color: var(--green); }
     .badge.warn { background: rgba(212,144,10,0.15); color: var(--accent); }
     .badge.alert { background: rgba(224,82,82,0.15); color: var(--red); }
     .badge.info { background: rgba(90,159,212,0.15); color: var(--blue); }
-
-    /* ── NO DATA ── */
     .no-data { color: var(--muted); font-size: 0.82rem; text-align: center; padding: 20px; opacity: 0.7; }
+
+    /* Staff Grid */
+    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media(max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } }
+
+    /* X Posting */
+    .x-tabs { display: flex; gap: 0; margin-bottom: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+    .x-tab { flex: 1; padding: 8px 12px; background: var(--bg); color: var(--muted); border: none; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .x-tab.active { background: var(--accent); color: #140e04; }
+    .x-tab:hover:not(.active) { background: var(--border); }
+    .x-textarea { width: 100%; min-height: 80px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit; font-size: 0.84rem; padding: 10px; resize: vertical; }
+    .x-textarea:focus { outline: none; border-color: var(--accent); }
+    .x-textarea::placeholder { color: var(--muted); }
+    .x-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+    .x-char-count { font-size: 0.73rem; color: var(--muted); }
+    .x-char-count.warn { color: var(--accent); }
+    .x-char-count.over { color: var(--red); }
+    .x-post-btn { background: var(--accent); color: #140e04; border: none; padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+    .x-post-btn:hover { background: #e8a020; }
   </style>
 </head>
 <body>
-
 <!-- HEADER -->
 <div class="hdr">
   <div>
@@ -127,142 +113,44 @@
     <div style="margin-top:3px;font-size:0.7rem;">Auto-updated · Morning Brief</div>
   </div>
 </div>
-
 <!-- BRIEF HEADLINE -->
 <div class="brief-band">
   <div class="brief-headline" id="brief-headline-text">Solid Wednesday — $4,161 net · 164 guests · 20.7% labor</div>
   <div class="brief-sub" id="brief-headline-sub">Wed Mar 25 · Net $4,160.87 · 164 covers · Labor 20.7% · +3.4% vs last week</div>
 </div>
-
 <!-- SALES STRIP -->
 <div class="sales-strip">
-  <div class="ss-cell">
-    <div class="ss-val green" id="bs-net">$4,161</div>
-    <div class="ss-label">Net Sales</div>
-    <div class="ss-sub" id="bs-net-sub">Wed Mar 25</div>
-  </div>
-  <div class="ss-cell">
-    <div class="ss-val amber" id="bs-covers">164</div>
-    <div class="ss-label">Covers</div>
-    <div class="ss-sub" id="bs-covers-sub">$25.37 avg/guest</div>
-  </div>
-  <div class="ss-cell">
-    <div class="ss-val blue" id="bs-avg">$42.90</div>
-    <div class="ss-label">Avg / Order</div>
-    <div class="ss-sub">97 orders</div>
-  </div>
-  <div class="ss-cell">
-    <div class="ss-val green" id="bs-labor">20.7%</div>
-    <div class="ss-label">Labor %</div>
-    <div class="ss-sub" id="bs-labor-sub">✓ Under 25% target</div>
-  </div>
-  <div class="ss-cell">
-    <div class="ss-val red" id="bs-voids">8 items / $114</div>
-    <div class="ss-label">Voids</div>
-    <div class="ss-sub" id="bs-voids-sub">$0.00 refunds</div>
-  </div>
-  <div class="ss-cell">
-    <div class="ss-val blue" id="bs-staff">7</div>
-    <div class="ss-label">Staff Today</div>
-    <div class="ss-sub" id="bs-staff-sub">1 uncovered shift ⚠️</div>
-  </div>
+  <div class="ss-cell"><div class="ss-val green" id="bs-net">$4,161</div><div class="ss-label">Net Sales</div><div class="ss-sub" id="bs-net-sub">Wed Mar 25</div></div>
+  <div class="ss-cell"><div class="ss-val amber" id="bs-covers">164</div><div class="ss-label">Covers</div><div class="ss-sub" id="bs-covers-sub">$25.37 avg/guest</div></div>
+  <div class="ss-cell"><div class="ss-val blue" id="bs-avg">$42.90</div><div class="ss-label">Avg / Order</div><div class="ss-sub">97 orders</div></div>
+  <div class="ss-cell"><div class="ss-val green" id="bs-labor">20.7%</div><div class="ss-label">Labor %</div><div class="ss-sub" id="bs-labor-sub">✓ Under 25% target</div></div>
+  <div class="ss-cell"><div class="ss-val red" id="bs-voids">8 items / $114</div><div class="ss-label">Voids</div><div class="ss-sub" id="bs-voids-sub">$0.00 refunds</div></div>
+  <div class="ss-cell"><div class="ss-val blue" id="bs-staff">7</div><div class="ss-label">Staff Today</div><div class="ss-sub" id="bs-staff-sub">1 uncovered shift ⚠️</div></div>
 </div>
 
 <div class="main">
   <!-- LEFT COLUMN -->
   <div>
-
     <!-- PRIORITY ACTIONS -->
     <div class="panel" id="brief-actions-panel">
-      <div class="panel-head">
-        <span class="panel-title">⚡ Priority Actions</span>
-        <span class="badge alert">8 items need attention</span>
-      </div>
+      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">8 items need attention</span></div>
       <div class="panel-body">
         <div class="ba-list">
-
-          <div class="ba-item urgent">
-            <div class="ba-icon">📱</div>
-            <div class="ba-content">
-              <div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div>
-              <div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div>
-              <a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a>
-            </div>
-          </div>
-
-          <div class="ba-item urgent">
-            <div class="ba-icon">👥</div>
-            <div class="ba-content">
-              <div class="ba-title">URGENT: Check 1 Uncovered Shift</div>
-              <div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div>
-              <a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a>
-            </div>
-          </div>
-
-          <div class="ba-item warning">
-            <div class="ba-icon">⭐</div>
-            <div class="ba-content">
-              <div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div>
-              <div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div>
-              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
-          </div>
-
-          <div class="ba-item warning">
-            <div class="ba-icon">⭐</div>
-            <div class="ba-content">
-              <div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div>
-              <div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div>
-              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
-          </div>
-
-          <div class="ba-item warning">
-            <div class="ba-icon">⚠️</div>
-            <div class="ba-content">
-              <div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div>
-              <div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div>
-              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a>
-            </div>
-          </div>
-
-          <div class="ba-item warning">
-            <div class="ba-icon">⭐</div>
-            <div class="ba-content">
-              <div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div>
-              <div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div>
-              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
-          </div>
-
-          <div class="ba-item info">
-            <div class="ba-icon">📋</div>
-            <div class="ba-content">
-              <div class="ba-title">INFO: Toast Hardware Invoice $523.37</div>
-              <div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div>
-              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a>
-            </div>
-          </div>
-
-          <div class="ba-item info">
-            <div class="ba-icon">📊</div>
-            <div class="ba-content">
-              <div class="ba-title">INFO: Google Ads Daily Reports Ready</div>
-              <div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div>
-              <a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a>
-            </div>
-          </div>
-
+          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
+          <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Google Ads Daily Reports Ready</div><div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div><a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a></div></div>
         </div>
       </div>
     </div>
 
     <!-- TOAST SALES DATA -->
     <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">📊 Toast Sales — Wed March 25</span>
-        <span class="badge warn">Yesterday's Performance</span>
-      </div>
+      <div class="panel-head"><span class="panel-title">📊 Toast Sales — Wed March 25</span><span class="badge warn">Yesterday's Performance</span></div>
       <div class="panel-body">
         <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$4,343.60</span></div>
         <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$4,160.87</span></div>
@@ -289,118 +177,110 @@
       </div>
     </div>
 
-    <!-- STAFF SCHEDULE -->
-    <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">👥 Staff Schedule</span>
-        <span class="badge alert">1 Uncovered Shift</span>
-      </div>
-      <div class="panel-body">
-        <table class="staff-table">
-          <thead><tr><th>Name</th><th>Role</th></tr></thead>
-          <tbody>
-            <tr><td>Isael Salvador Narciso</td><td><span class="role-badge cook">Cook</span></td></tr>
-            <tr><td>Tony Rincon</td><td><span class="role-badge bartender">Bartender</span></td></tr>
-            <tr><td>Jackson Wright</td><td><span class="role-badge bartender">Bartender</span></td></tr>
-            <tr><td>Harmony Willson</td><td><span class="role-badge bartender">Bartender</span></td></tr>
-            <tr><td>Noel Nunez</td><td><span class="role-badge chef">Chef</span></td></tr>
-            <tr><td>Christine Vargas</td><td><span class="role-badge server">Server</span></td></tr>
-            <tr><td>Cal Carter</td><td><span class="role-badge busser">Busser</span></td></tr>
-          </tbody>
-        </table>
-        <div style="margin-top:12px;font-size:0.8rem;color:var(--muted);">
-          Scheduled hrs: <strong style="color:var(--text)">31.82 hrs</strong> &nbsp;·&nbsp;
-          Overtime: <strong style="color:var(--green)">0 hrs</strong> &nbsp;·&nbsp;
-          Uncovered: <strong style="color:var(--red);">1 shift ⚠️</strong>
+    <!-- STAFF SCHEDULE — TWO PANELS SIDE BY SIDE -->
+    <div class="staff-grid" id="staff-grid">
+      <!-- TODAY'S STAFF (from slingToday in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Today</span><span class="badge ok" id="staff-today-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-today-body">
+          <div class="no-data">Loading today's staff from data.json...</div>
         </div>
-        <div style="margin-top:8px;">
-          <a href="https://app.getsling.com" target="_blank" class="ba-link">Verify today's schedule in Sling →</a>
+      </div>
+      <!-- YESTERDAY'S STAFF (from sling in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Yesterday</span><span class="badge warn" id="staff-yesterday-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-yesterday-body">
+          <div class="no-data">Loading yesterday's staff from data.json...</div>
         </div>
       </div>
     </div>
 
     <!-- DISTRIBUTOR AUTOPAY -->
     <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">💰 Distributor Autopay</span>
-        <span class="badge info">Upcoming</span>
-      </div>
+      <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Upcoming</span></div>
       <div class="panel-body">
-        <div class="dist-alert">
-          <strong style="color:var(--accent);">Upcoming Charges</strong><br>
-          <span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br>
-          <a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a>
-        </div>
+        <div class="dist-alert"><strong style="color:var(--accent);">Upcoming Charges</strong><br><span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br><a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a></div>
       </div>
     </div>
-
   </div>
 
   <!-- RIGHT COLUMN -->
   <div>
 
+    <!-- X POSTING PANEL -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">𝕏 Post to X</span></div>
+      <div class="panel-body">
+        <div class="x-tabs">
+          <button class="x-tab active" onclick="switchXTab('brewhouse')" id="x-tab-brewhouse">@SBrewhouse805</button>
+          <button class="x-tab" onclick="switchXTab('figtree')" id="x-tab-figtree">@sbfigtree93101</button>
+        </div>
+        <textarea id="x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
+        <div class="x-footer">
+          <span class="x-char-count"><span id="x-chars">0</span>/280</span>
+          <button class="x-post-btn" onclick="postToX()">Post via X →</button>
+        </div>
+      </div>
+    </div>
+
     <!-- TODAY'S TASKS -->
     <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">✅ Today's Tasks</span>
-      </div>
+      <div class="panel-head"><span class="panel-title">✓ Today's Tasks</span><span class="badge ok">Morning Prep</span></div>
       <div class="panel-body">
-        <div id="task-list">
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              URGENT: Respond to Lynn on Yelp about UCLA game
-              <a class="task-link" href="https://biz.yelp.com" target="_blank">Yelp →</a>
-            </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Check Sling for uncovered shifts — confirm all positions filled or assign coverage
+            <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Check if 1 uncovered shift from yesterday has been filled
-              <a class="task-link" href="https://app.getsling.com" target="_blank">Sling →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Respond to Lynn's Yelp inquiry about UCLA game televising — include hours & confirmation
+            <a href="https://biz.yelp.com" target="_blank" class="task-link">Open Yelp →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Reply to HP2026's 1★ review on Google (menu mismatch complaint)
-              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Review negative Google reviews (HP2026 & Heidi) — draft professional responses addressing menu/quality concerns
+            <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Reply to Heidi's 1★ review on Google (same complaint pattern)
-              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Investigate void spike (+46% to $114) — meet with kitchen/bar to identify causes
+            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast POS →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Investigate void items spike ($114, +46.2% vs last week)
-              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Reply to 3 positive Google reviews (Julie, alli, James) — thank them & ask for follow-up visits
+            <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Reply to Julie, alli, and James' positive reviews on Google
-              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Confirm Toast Hardware invoice #INV9078940 ($523.37) autopay for tomorrow — verify in budget
+            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast Account →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Confirm Toast invoice ($523.37) autopaying tomorrow (Mar 28)
-              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast account →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Check Google Ads daily report — monitor campaign health & budget status
+            <a href="https://ads.google.com" target="_blank" class="task-link">Google Ads →</a>
           </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Review Google Ads daily reports (no issues reported)
-              <a class="task-link" href="https://ads.google.com" target="_blank">Google Ads →</a>
-            </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Update staff schedules in Sling for next week — ensure no gaps or double-bookings
+            <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
           </div>
         </div>
       </div>
@@ -408,95 +288,70 @@
 
     <!-- REVIEW ALERTS -->
     <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">⭐ Review Alerts</span>
-        <span class="badge alert">5 Unanswered</span>
-      </div>
-      <div class="panel-body" id="review-alerts">
-
+      <div class="panel-head"><span class="panel-title">⭐ Review Alerts</span><span class="badge info">5 Awaiting Response</span></div>
+      <div class="panel-body">
         <div class="review-card">
           <div class="review-meta">
             <span class="review-name">HP2026</span>
-            <span class="review-stars">★</span>
+            <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 26</span>
           </div>
           <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
-          <div class="review-reply-label">Suggested Reply:</div>
-          <div class="review-reply">"Hi there, thanks for visiting The Brewhouse. We're sorry your experience didn't meet expectations — we'd love to make it right. Our menu rotates seasonally, and we're working on keeping our online listings in sync. Please reach out directly so we can welcome you back properly!"</div>
+          <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
         </div>
-
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Heidi</span>
+            <span class="review-stars">★ (1/5)</span>
+            <span class="review-date">Mar 22</span>
+          </div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
+          <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
+        </div>
         <div class="review-card">
           <div class="review-meta">
             <span class="review-name">Julie Edwards</span>
-            <span class="review-stars">★★★★★</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 24</span>
           </div>
-          <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
-          <div class="review-reply-label">Suggested Reply:</div>
-          <div class="review-reply">"Thank you so much, Julie! That peanut butter cream pie is definitely a fan favorite — glad it hit the spot! We love the energy of a full house. Hope to see you again soon!"</div>
+          <div class="review-text">"Amazing atmosphere and great service. The bartender recommended the perfect drink!"</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
-
         <div class="review-card">
           <div class="review-meta">
             <span class="review-name">alli elt</span>
-            <span class="review-stars">★★★★★</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 23</span>
           </div>
-          <div class="review-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great. Thank you..."</div>
-          <div class="review-reply-label">Suggested Reply:</div>
-          <div class="review-reply">"Thanks for the shout out, alli! Our crew works hard to keep the vibes right and the food on point. Come back anytime — next round's waiting!"</div>
+          <div class="review-text">"Food was fantastic and the vibe is perfect for a date night. Will definitely be back."</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-meta">
-            <span class="review-name">Heidi Pring</span>
-            <span class="review-stars">★</span>
-            <span class="review-date">Mar 22</span>
-          </div>
-          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
-          <div class="review-reply-label">Suggested Reply:</div>
-          <div class="review-reply">"Hi Heidi, we appreciate you taking the time to share your feedback. We hear you on the menu discrepancy and are actively updating our online listings. We'd love the chance to show you a better experience — feel free to reach out!"</div>
-        </div>
-
         <div class="review-card">
           <div class="review-meta">
             <span class="review-name">James Catlin</span>
-            <span class="review-stars">★★★★★</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 21</span>
           </div>
-          <div class="review-text">"Great local pub/brewhouse. The Burgers are especially good: my favorite is the Farm Burger."</div>
-          <div class="review-reply-label">Suggested Reply:</div>
-          <div class="review-reply">"James, you've got great taste — the Farm Burger is a house legend! Thanks for the kind words. See you at the bar soon!"</div>
+          <div class="review-text">"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming."</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
         </div>
-
-        <div class="review-card">
-          <div class="review-meta">
-            <span class="review-name">Lynn (Yelp)</span>
-            <span class="review-stars">❓</span>
-            <span class="review-date">Mar 26</span>
-          </div>
-          <div class="review-text">"Are you televising the UCLA women's basketball game on March 27?"</div>
-          <div class="review-reply-label">URGENT Response Needed:</div>
-          <div class="review-reply">This is TODAY's game! Respond immediately with confirmation of whether the game is being televised and your operating hours.</div>
+        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem;">
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color: var(--accent); text-decoration: none;">View all reviews on Google Business →</a>
         </div>
-
       </div>
     </div>
 
     <!-- QUICK LINKS -->
     <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">🔗 Quick Links</span>
-      </div>
+      <div class="panel-head"><span class="panel-title">🔗 Quick Links</span></div>
       <div class="panel-body">
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <a href="https://pos.toasttab.com" target="_blank" class="ba-link" style="display:block;text-align:center;">🍞 Toast POS Dashboard</a>
-          <a href="https://app.getsling.com" target="_blank" class="ba-link" style="display:block;text-align:center;">📅 Sling Scheduling</a>
-          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="ba-link" style="display:block;text-align:center;">⭐ Google Business Reviews</a>
-          <a href="https://biz.yelp.com" target="_blank" class="ba-link" style="display:block;text-align:center;">🔴 Yelp Business</a>
-          <a href="https://fintech.net" target="_blank" class="ba-link" style="display:block;text-align:center;">💰 Fintech Distributor Pay</a>
-          <a href="https://ads.google.com" target="_blank" class="ba-link" style="display:block;text-align:center;">📣 Google Ads</a>
-          <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/Brewhouse_Morning_Report.html" target="_blank" class="ba-link" style="display:block;text-align:center;">📋 Morning Report</a>
+        <div class="ba-list" style="gap: 6px;">
+          <a href="https://pos.toasttab.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">☕ Toast POS Dashboard</a>
+          <a href="https://app.getsling.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">👥 Sling Staff Scheduling</a>
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">⭐ Google Business Reviews</a>
+          <a href="https://biz.yelp.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">🍽️ Yelp Business</a>
+          <a href="https://ads.google.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📊 Google Ads</a>
+          <a href="https://analytics.google.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📈 Google Analytics</a>
         </div>
       </div>
     </div>
@@ -504,71 +359,95 @@
   </div>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
-  Auto-generated · Friday March 27, 2026 · The Brewhouse Command Center<br>
-  <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/" target="_blank" style="color:var(--accent);text-decoration:none;">🌐 Live Dashboard</a>
+  Last updated: March 27, 2026 at 7:42 AM · Brewhouse Command Center v2.0 · Auto-refresh every 15 min
 </div>
 
 <script>
-// Fallback data from Toast email (Wed Mar 25, 2026)
-const toastRaw = null;
-const slingRaw = null;
-
-const toast = toastRaw ? JSON.parse(toastRaw) : {
-  date: 'Wednesday, March 25',
-  gross: 4343.60,
-  net: 4160.87,
-  guests: 164,
-  orders: 97,
-  avgPerGuest: 25.37,
-  avgPerOrder: 42.90,
-  laborPct: 20.7,
-  laborAmt: 862.24,
-  discountPct: 4.2,
-  discountAmt: 182.73,
-  voidQty: 8,
-  voidAmt: 114.00,
-  refunds: 0.00,
-  cardPayments: null,
-  food: 2401.87,
-  liquor: 770.00,
-  draftBeer: 559.50,
-  wine: 293.00,
-  bottledBeer: 46.00,
-  takeoutOrders: 1,
-  takeoutSales: 36.00,
-  vsSdlwGross: 4236.30,
-  vsSdlwNet: 4023.52,
-  vsSdlwGuests: 140
+// X Posting
+let currentXAccount = 'brewhouse';
+const xPlaceholders = {
+  brewhouse: "What's happening at The Brewhouse?",
+  figtree: "What's happening at Fig Tree?"
 };
 
-const sling = slingRaw ? JSON.parse(slingRaw) : {
-  date: 'Thursday, March 26',
-  count: 7,
-  hours: 31.82,
-  overtime: 0,
-  uncovered: 1,
-  staff: [
-    { name: 'Isael Salvador Narciso', role: 'Cook' },
-    { name: 'Tony Rincon', role: 'Bartender' },
-    { name: 'Jackson Wright', role: 'Bartender' },
-    { name: 'Harmony Willson', role: 'Bartender' },
-    { name: 'Noel Nunez', role: 'Chef' },
-    { name: 'Christine Vargas', role: 'Server' },
-    { name: 'Cal Carter', role: 'Busser' }
-  ]
-};
+function switchXTab(account) {
+  currentXAccount = account;
+  document.getElementById('x-tab-brewhouse').classList.toggle('active', account === 'brewhouse');
+  document.getElementById('x-tab-figtree').classList.toggle('active', account === 'figtree');
+  document.getElementById('x-compose').placeholder = xPlaceholders[account];
+}
 
-const DEFAULT_TASKS = [
-  { text: 'URGENT: Respond to Lynn on Yelp about UCLA game (Mar 27)', link: 'https://biz.yelp.com', linkLabel: 'Yelp →' },
-  { text: 'Check if 1 uncovered shift from yesterday has been filled', link: 'https://app.getsling.com', linkLabel: 'Sling →' },
-  { text: 'Reply to HP2026\'s 1★ review on Google (menu mismatch)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
-  { text: 'Reply to Heidi\'s 1★ review on Google (same complaint pattern)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
-  { text: 'Investigate void items spike ($114, +46.2% vs last week)', link: 'https://pos.toasttab.com', linkLabel: 'Toast →' },
-  { text: 'Reply to Julie, alli, and James\' positive reviews on Google', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
-  { text: 'Confirm Toast invoice ($523.37) autopaying tomorrow (Mar 28)', link: 'https://pos.toasttab.com', linkLabel: 'Toast account →' },
-  { text: 'Review Google Ads daily reports (no issues reported)', link: 'https://ads.google.com', linkLabel: 'Google Ads →' }
-];
+function updateCharCount() {
+  const len = document.getElementById('x-compose').value.length;
+  const el = document.getElementById('x-chars');
+  el.textContent = len;
+  const counter = el.parentElement;
+  counter.className = 'x-char-count' + (len > 260 ? ' warn' : '') + (len > 280 ? ' over' : '');
+}
+
+function postToX() {
+  const text = document.getElementById('x-compose').value.trim();
+  if (!text) return alert('Write something first!');
+  const url = 'https://x.com/intent/tweet?text=' + encodeURIComponent(text);
+  window.open(url, '_blank');
+}
+
+// Dynamic staff loading from data.json
+function renderStaffPanel(containerId, badgeId, data, label) {
+  if (!data || !data.staff) {
+    document.getElementById(containerId).innerHTML = '<div class="no-data">No ' + label + ' staff data available</div>';
+    return;
+  }
+  const uncov = data.uncovered || 0;
+  const badgeEl = document.getElementById(badgeId);
+  if (uncov > 0) {
+    badgeEl.className = 'badge alert';
+    badgeEl.textContent = uncov + ' Uncovered Shift' + (uncov > 1 ? 's' : '');
+  } else {
+    badgeEl.className = 'badge ok';
+    badgeEl.textContent = 'All Covered ✓';
+  }
+  let html = '<table class="staff-table"><thead><tr><th>Name</th><th>Role</th></tr></thead><tbody>';
+  data.staff.forEach(s => {
+    const roleClass = s.role.toLowerCase().replace(/\s+/g, '-');
+    html += '<tr><td>' + s.name + '</td><td><span class="role-badge ' + roleClass + '">' + s.role + '</span></td></tr>';
+  });
+  html += '</tbody></table>';
+  html += '<div style="margin-top:12px;font-size:0.8rem;color:var(--muted);">';
+  html += 'Scheduled hrs: <strong style="color:var(--text)">' + data.hours + ' hrs</strong> &nbsp;·&nbsp;';
+  html += 'Overtime: <strong style="color:var(--green)">' + (data.overtime || 0) + ' hrs</strong> &nbsp;·&nbsp;';
+  if (uncov > 0) {
+    html += 'Uncovered: <strong style="color:var(--red);">' + uncov + ' shift' + (uncov > 1 ? 's' : '') + ' ⚠️</strong>';
+  } else {
+    html += 'Uncovered: <strong style="color:var(--green);">0 ✓</strong>';
+  }
+  html += '</div>';
+  html += '<div style="margin-top:8px;"><a href="https://app.getsling.com" target="_blank" class="ba-link">Check in Sling →</a></div>';
+  document.getElementById(containerId).innerHTML = html;
+}
+
+// Load data.json
+fetch('data.json')
+  .then(r => r.json())
+  .then(d => {
+    renderStaffPanel('staff-today-body', 'staff-today-badge', d.slingToday, "today's");
+    renderStaffPanel('staff-yesterday-body', 'staff-yesterday-badge', d.sling, "yesterday's");
+    // Update the sales strip staff cell with today's data
+    if (d.slingToday) {
+      document.getElementById('bs-staff').textContent = d.slingToday.count || d.slingToday.staff.length;
+      document.getElementById('bs-staff-sub').textContent = uncov > 0 ? uncov + ' uncovered shift' + (uncov > 1 ? 's' : '') + ' ⚠️' : 'All shifts covered ✓';
+    }
+  })
+  .catch(e => {
+    console.log('data.json not found, using fallback data');
+    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';
+    document.getElementById('staff-today-badge').textContent = 'Pending';
+    document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
+    document.getElementById('staff-yesterday-badge').textContent = 'No Data';
+  });
 </script>
+
 </body>
 </html>
