@@ -86,6 +86,7 @@
     .role-badge { padding: 2px 8px; border-radius: 20px; font-size: 0.73rem; font-weight: 600; }
     .role-badge.bartender { background: #1a2a3a; color: var(--blue); }
     .role-badge.chef { background: #1a3a2a; color: var(--green); }
+    .role-badge.cook { background: #1a3a2a; color: var(--green); }
     .role-badge.server { background: #3a2a1a; color: var(--orange); }
     .role-badge.busser { background: #2a2010; color: var(--muted); }
 
@@ -122,48 +123,48 @@
     <div class="hdr-sub">229 West Montecito Street · Santa Barbara, CA</div>
   </div>
   <div class="hdr-date">
-    <div>Thursday, March 26, 2026</div>
+    <div>Friday, March 27, 2026</div>
     <div style="margin-top:3px;font-size:0.7rem;">Auto-updated · Morning Brief</div>
   </div>
 </div>
 
 <!-- BRIEF HEADLINE -->
 <div class="brief-band">
-  <div class="brief-headline" id="brief-headline-text">Strong Tuesday — $6,212 net · 212 guests · 16% labor</div>
-  <div class="brief-sub" id="brief-headline-sub">Most recent data: Tue Mar 17 · Net $6,212.30 · 212 guests · Labor 16.0% · 22 void items</div>
+  <div class="brief-headline" id="brief-headline-text">Solid Wednesday — $4,161 net · 164 guests · 20.7% labor</div>
+  <div class="brief-sub" id="brief-headline-sub">Wed Mar 25 · Net $4,160.87 · 164 covers · Labor 20.7% · +3.4% vs last week</div>
 </div>
 
 <!-- SALES STRIP -->
 <div class="sales-strip">
   <div class="ss-cell">
-    <div class="ss-val green" id="bs-net">$6,212</div>
+    <div class="ss-val green" id="bs-net">$4,161</div>
     <div class="ss-label">Net Sales</div>
-    <div class="ss-sub" id="bs-net-sub">Tue Mar 17</div>
+    <div class="ss-sub" id="bs-net-sub">Wed Mar 25</div>
   </div>
   <div class="ss-cell">
-    <div class="ss-val amber" id="bs-covers">212</div>
+    <div class="ss-val amber" id="bs-covers">164</div>
     <div class="ss-label">Covers</div>
-    <div class="ss-sub" id="bs-covers-sub">$29.30 avg/guest</div>
+    <div class="ss-sub" id="bs-covers-sub">$25.37 avg/guest</div>
   </div>
   <div class="ss-cell">
-    <div class="ss-val blue" id="bs-avg">$47.79</div>
+    <div class="ss-val blue" id="bs-avg">$42.90</div>
     <div class="ss-label">Avg / Order</div>
-    <div class="ss-sub">130 orders</div>
+    <div class="ss-sub">97 orders</div>
   </div>
   <div class="ss-cell">
-    <div class="ss-val green" id="bs-labor">16.0%</div>
+    <div class="ss-val green" id="bs-labor">20.7%</div>
     <div class="ss-label">Labor %</div>
     <div class="ss-sub" id="bs-labor-sub">✓ Under 25% target</div>
   </div>
   <div class="ss-cell">
-    <div class="ss-val" id="bs-voids">22 items</div>
+    <div class="ss-val red" id="bs-voids">8 items / $114</div>
     <div class="ss-label">Voids</div>
     <div class="ss-sub" id="bs-voids-sub">$0.00 refunds</div>
   </div>
   <div class="ss-cell">
     <div class="ss-val blue" id="bs-staff">7</div>
     <div class="ss-label">Staff Today</div>
-    <div class="ss-sub" id="bs-staff-sub">No Sling email today</div>
+    <div class="ss-sub" id="bs-staff-sub">1 uncovered shift ⚠️</div>
   </div>
 </div>
 
@@ -175,53 +176,80 @@
     <div class="panel" id="brief-actions-panel">
       <div class="panel-head">
         <span class="panel-title">⚡ Priority Actions</span>
-        <span class="badge warn">3 items need attention</span>
+        <span class="badge alert">8 items need attention</span>
       </div>
       <div class="panel-body">
         <div class="ba-list">
 
-          <div class="ba-item warning">
-            <div class="ba-icon">💳</div>
+          <div class="ba-item urgent">
+            <div class="ba-icon">📱</div>
             <div class="ba-content">
-              <div class="ba-title">Toast KDS &amp; Terminal — Billing Starts April 1st</div>
-              <div class="ba-detail">DocuSign agreement completed yesterday (Mar 25). New monthly charge kicks in April 1. Verify the billing amount and confirm it's in your budget before month-end.</div>
-              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Review Toast Account →</a>
+              <div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div>
+              <div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div>
+              <a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a>
+            </div>
+          </div>
+
+          <div class="ba-item urgent">
+            <div class="ba-icon">👥</div>
+            <div class="ba-content">
+              <div class="ba-title">URGENT: Check 1 Uncovered Shift</div>
+              <div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div>
+              <a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a>
             </div>
           </div>
 
           <div class="ba-item warning">
-            <div class="ba-icon">📦</div>
-            <div class="ba-content">
-              <div class="ba-title">11 Upcoming Distributor Invoices Due</div>
-              <div class="ba-detail">Fintech autopay recap for March 26: 1 invoice already paid, 11 upcoming invoices pending for The Brewhouse. Review and confirm payment schedule.</div>
-              <a class="ba-link" href="https://fintech.net" target="_blank">Review Fintech Payments →</a>
-            </div>
-          </div>
-
-          <div class="ba-item info">
-            <div class="ba-icon">📅</div>
-            <div class="ba-content">
-              <div class="ba-title">No Sling Schedule Email Today</div>
-              <div class="ba-detail">No schedule summary email received from Sling this morning. Staff shown below is from prior data. Log into Sling to confirm today's roster and check for uncovered shifts.</div>
-              <a class="ba-link" href="https://app.getsling.com" target="_blank">Open Sling →</a>
-            </div>
-          </div>
-
-          <div class="ba-item info">
             <div class="ba-icon">⭐</div>
             <div class="ba-content">
-              <div class="ba-title">Check Google &amp; Yelp Reviews</div>
-              <div class="ba-detail">No new review notification emails found today. Log in to Google Business and Yelp to check for any new reviews that may need a response.</div>
+              <div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div>
+              <div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div>
               <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+
+          <div class="ba-item warning">
+            <div class="ba-icon">⭐</div>
+            <div class="ba-content">
+              <div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div>
+              <div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div>
+              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+
+          <div class="ba-item warning">
+            <div class="ba-icon">⚠️</div>
+            <div class="ba-content">
+              <div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div>
+              <div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div>
+              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a>
+            </div>
+          </div>
+
+          <div class="ba-item warning">
+            <div class="ba-icon">⭐</div>
+            <div class="ba-content">
+              <div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div>
+              <div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div>
+              <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+
+          <div class="ba-item info">
+            <div class="ba-icon">📋</div>
+            <div class="ba-content">
+              <div class="ba-title">INFO: Toast Hardware Invoice $523.37</div>
+              <div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div>
+              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a>
             </div>
           </div>
 
           <div class="ba-item info">
             <div class="ba-icon">📊</div>
             <div class="ba-content">
-              <div class="ba-title">Toast Data: Most Recent Report is Mar 17</div>
-              <div class="ba-detail">The latest Toast daily summary email shows Tuesday, March 17. There may be a delivery gap in your Toast email settings — no daily reports received for Mar 18–25.</div>
-              <a class="ba-link" href="https://pos.toasttab.com" target="_blank">Check Toast Settings →</a>
+              <div class="ba-title">INFO: Google Ads Daily Reports Ready</div>
+              <div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div>
+              <a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a>
             </div>
           </div>
 
@@ -232,23 +260,32 @@
     <!-- TOAST SALES DATA -->
     <div class="panel">
       <div class="panel-head">
-        <span class="panel-title">📊 Toast Sales — Tue March 17</span>
-        <span class="badge warn">Most Recent Available</span>
+        <span class="panel-title">📊 Toast Sales — Wed March 25</span>
+        <span class="badge warn">Yesterday's Performance</span>
       </div>
       <div class="panel-body">
-        <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$6,469.70</span></div>
-        <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$6,212.30</span></div>
-        <div class="data-row"><span class="data-key">Guests</span><span class="data-val">212</span></div>
-        <div class="data-row"><span class="data-key">Total Orders</span><span class="data-val">130</span></div>
-        <div class="data-row"><span class="data-key">Avg Sales / Order</span><span class="data-val">$47.79</span></div>
-        <div class="data-row"><span class="data-key">Avg Sales / Guest</span><span class="data-val">$29.30</span></div>
-        <div class="data-row"><span class="data-key">Labor % (of Net)</span><span class="data-val green">16.0% ✓</span></div>
-        <div class="data-row"><span class="data-key">Discount % (of Gross)</span><span class="data-val">4.0%</span></div>
-        <div class="data-row"><span class="data-key">Void Items (qty)</span><span class="data-val amber">22</span></div>
+        <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$4,343.60</span></div>
+        <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$4,160.87</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Gross</span><span class="data-val green">+2.5% ($4,236.30)</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Net</span><span class="data-val green">+3.4% ($4,023.52)</span></div>
+        <div class="data-row"><span class="data-key">Guests</span><span class="data-val">164</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Guests</span><span class="data-val green">+17.1% (140)</span></div>
+        <div class="data-row"><span class="data-key">Total Orders</span><span class="data-val">97</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Guest</span><span class="data-val">$25.37</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Order</span><span class="data-val">$42.90</span></div>
+        <div class="data-row"><span class="data-key">Labor % (of Net)</span><span class="data-val green">20.7% ✓</span></div>
+        <div class="data-row"><span class="data-key">Labor $ Amount</span><span class="data-val green">$862.24</span></div>
+        <div class="data-row"><span class="data-key">Discount % (of Gross)</span><span class="data-val">4.2%</span></div>
+        <div class="data-row"><span class="data-key">Discounts $</span><span class="data-val">$182.73</span></div>
+        <div class="data-row"><span class="data-key">Void Items (qty)</span><span class="data-val red">8 (+46.2%)</span></div>
+        <div class="data-row"><span class="data-key">Void Amount</span><span class="data-val red">$114.00</span></div>
         <div class="data-row"><span class="data-key">Refund Total</span><span class="data-val green">$0.00 ✓</span></div>
-        <div class="data-row"><span class="data-key">Card Payments</span><span class="data-val">104</span></div>
-        <div class="data-row"><span class="data-key">Takeout Orders</span><span class="data-val">4 ($135.60)</span></div>
-        <div class="data-row"><span class="data-key">Open Orders at Close</span><span class="data-val green">0</span></div>
+        <div class="data-row"><span class="data-key">Food Sales</span><span class="data-val">$2,401.87</span></div>
+        <div class="data-row"><span class="data-key">Liquor Sales</span><span class="data-val">$770.00</span></div>
+        <div class="data-row"><span class="data-key">Draft Beer Sales</span><span class="data-val">$559.50</span></div>
+        <div class="data-row"><span class="data-key">Wine Sales</span><span class="data-val">$293.00</span></div>
+        <div class="data-row"><span class="data-key">Bottled Beer Sales</span><span class="data-val">$46.00</span></div>
+        <div class="data-row"><span class="data-key">Takeout Orders</span><span class="data-val">1 ($36.00)</span></div>
       </div>
     </div>
 
@@ -256,25 +293,25 @@
     <div class="panel">
       <div class="panel-head">
         <span class="panel-title">👥 Staff Schedule</span>
-        <span class="badge warn">No Sling Email — Prior Data</span>
+        <span class="badge alert">1 Uncovered Shift</span>
       </div>
       <div class="panel-body">
         <table class="staff-table">
           <thead><tr><th>Name</th><th>Role</th></tr></thead>
           <tbody>
+            <tr><td>Isael Salvador Narciso</td><td><span class="role-badge cook">Cook</span></td></tr>
             <tr><td>Tony Rincon</td><td><span class="role-badge bartender">Bartender</span></td></tr>
             <tr><td>Jackson Wright</td><td><span class="role-badge bartender">Bartender</span></td></tr>
-            <tr><td>Andrew Turner</td><td><span class="role-badge bartender">Bartender</span></td></tr>
+            <tr><td>Harmony Willson</td><td><span class="role-badge bartender">Bartender</span></td></tr>
             <tr><td>Noel Nunez</td><td><span class="role-badge chef">Chef</span></td></tr>
-            <tr><td>Katharine Brown</td><td><span class="role-badge server">Server</span></td></tr>
-            <tr><td>Emily Lanzel</td><td><span class="role-badge server">Server</span></td></tr>
-            <tr><td>James Hernandez</td><td><span class="role-badge busser">Busser</span></td></tr>
+            <tr><td>Christine Vargas</td><td><span class="role-badge server">Server</span></td></tr>
+            <tr><td>Cal Carter</td><td><span class="role-badge busser">Busser</span></td></tr>
           </tbody>
         </table>
         <div style="margin-top:12px;font-size:0.8rem;color:var(--muted);">
-          Prior scheduled hrs: <strong style="color:var(--text)">36.82 hrs</strong> &nbsp;·&nbsp;
+          Scheduled hrs: <strong style="color:var(--text)">31.82 hrs</strong> &nbsp;·&nbsp;
           Overtime: <strong style="color:var(--green)">0 hrs</strong> &nbsp;·&nbsp;
-          Uncovered: <strong style="color:var(--green)">0</strong>
+          Uncovered: <strong style="color:var(--red);">1 shift ⚠️</strong>
         </div>
         <div style="margin-top:8px;">
           <a href="https://app.getsling.com" target="_blank" class="ba-link">Verify today's schedule in Sling →</a>
@@ -286,13 +323,13 @@
     <div class="panel">
       <div class="panel-head">
         <span class="panel-title">💰 Distributor Autopay</span>
-        <span class="badge warn">Action Needed</span>
+        <span class="badge info">Upcoming</span>
       </div>
       <div class="panel-body">
         <div class="dist-alert">
-          <strong style="color:var(--accent);">March 26, 2026 Recap</strong><br>
-          <span style="font-size:0.84rem;color:var(--text);">1 invoice paid · <strong>11 upcoming invoices</strong> pending for 1 location</span><br>
-          <a href="https://fintech.net" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review payments on Fintech →</a>
+          <strong style="color:var(--accent);">Upcoming Charges</strong><br>
+          <span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br>
+          <a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a>
         </div>
       </div>
     </div>
@@ -312,50 +349,57 @@
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Verify Toast KDS billing starts April 1 — confirm amount
-              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast account →</a>
+              URGENT: Respond to Lynn on Yelp about UCLA game
+              <a class="task-link" href="https://biz.yelp.com" target="_blank">Yelp →</a>
             </div>
           </div>
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Review 11 upcoming distributor invoices on Fintech
-              <a class="task-link" href="https://fintech.net" target="_blank">Fintech →</a>
-            </div>
-          </div>
-          <div class="task-item">
-            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
-            <div class="task-text">
-              Check Sling for today's full schedule
+              Check if 1 uncovered shift from yesterday has been filled
               <a class="task-link" href="https://app.getsling.com" target="_blank">Sling →</a>
             </div>
           </div>
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Check Google Business for new reviews
+              Reply to HP2026's 1★ review on Google (menu mismatch complaint)
               <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
             </div>
           </div>
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Check Yelp for messages or new reviews
-              <a class="task-link" href="https://biz.yelp.com" target="_blank">Yelp Biz →</a>
+              Reply to Heidi's 1★ review on Google (same complaint pattern)
+              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
             </div>
           </div>
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Post tonight's social media content (3 drafts in report)
-              <a class="task-link" href="https://twitter.com" target="_blank">X/Twitter →</a>
+              Investigate void items spike ($114, +46.2% vs last week)
+              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast →</a>
             </div>
           </div>
           <div class="task-item">
             <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
             <div class="task-text">
-              Investigate Toast daily email gap (no reports Mar 18–25)
-              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast settings →</a>
+              Reply to Julie, alli, and James' positive reviews on Google
+              <a class="task-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Confirm Toast invoice ($523.37) autopaying tomorrow (Mar 28)
+              <a class="task-link" href="https://pos.toasttab.com" target="_blank">Toast account →</a>
+            </div>
+          </div>
+          <div class="task-item">
+            <div class="task-check" onclick="this.style.background='var(--green)';this.style.borderColor='var(--green)'"></div>
+            <div class="task-text">
+              Review Google Ads daily reports (no issues reported)
+              <a class="task-link" href="https://ads.google.com" target="_blank">Google Ads →</a>
             </div>
           </div>
         </div>
@@ -366,12 +410,76 @@
     <div class="panel">
       <div class="panel-head">
         <span class="panel-title">⭐ Review Alerts</span>
-        <span class="badge info">No New Emails Today</span>
+        <span class="badge alert">5 Unanswered</span>
       </div>
       <div class="panel-body" id="review-alerts">
-        <div class="no-data">No new Google review notification emails found today.<br><br>
-          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color:var(--accent);font-size:0.82rem;text-decoration:none;">Check Google Business Profile →</a>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">HP2026</span>
+            <span class="review-stars">★</span>
+            <span class="review-date">Mar 26</span>
+          </div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+          <div class="review-reply-label">Suggested Reply:</div>
+          <div class="review-reply">"Hi there, thanks for visiting The Brewhouse. We're sorry your experience didn't meet expectations — we'd love to make it right. Our menu rotates seasonally, and we're working on keeping our online listings in sync. Please reach out directly so we can welcome you back properly!"</div>
         </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Julie Edwards</span>
+            <span class="review-stars">★★★★★</span>
+            <span class="review-date">Mar 24</span>
+          </div>
+          <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
+          <div class="review-reply-label">Suggested Reply:</div>
+          <div class="review-reply">"Thank you so much, Julie! That peanut butter cream pie is definitely a fan favorite — glad it hit the spot! We love the energy of a full house. Hope to see you again soon!"</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">alli elt</span>
+            <span class="review-stars">★★★★★</span>
+            <span class="review-date">Mar 23</span>
+          </div>
+          <div class="review-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great. Thank you..."</div>
+          <div class="review-reply-label">Suggested Reply:</div>
+          <div class="review-reply">"Thanks for the shout out, alli! Our crew works hard to keep the vibes right and the food on point. Come back anytime — next round's waiting!"</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Heidi Pring</span>
+            <span class="review-stars">★</span>
+            <span class="review-date">Mar 22</span>
+          </div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+          <div class="review-reply-label">Suggested Reply:</div>
+          <div class="review-reply">"Hi Heidi, we appreciate you taking the time to share your feedback. We hear you on the menu discrepancy and are actively updating our online listings. We'd love the chance to show you a better experience — feel free to reach out!"</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">James Catlin</span>
+            <span class="review-stars">★★★★★</span>
+            <span class="review-date">Mar 21</span>
+          </div>
+          <div class="review-text">"Great local pub/brewhouse. The Burgers are especially good: my favorite is the Farm Burger."</div>
+          <div class="review-reply-label">Suggested Reply:</div>
+          <div class="review-reply">"James, you've got great taste — the Farm Burger is a house legend! Thanks for the kind words. See you at the bar soon!"</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Lynn (Yelp)</span>
+            <span class="review-stars">❓</span>
+            <span class="review-date">Mar 26</span>
+          </div>
+          <div class="review-text">"Are you televising the UCLA women's basketball game on March 27?"</div>
+          <div class="review-reply-label">URGENT Response Needed:</div>
+          <div class="review-reply">This is TODAY's game! Respond immediately with confirmation of whether the game is being televised and your operating hours.</div>
+        </div>
+
       </div>
     </div>
 
@@ -397,57 +505,69 @@
 </div>
 
 <div class="footer">
-  Auto-generated · Thursday March 26, 2026 · The Brewhouse Command Center<br>
+  Auto-generated · Friday March 27, 2026 · The Brewhouse Command Center<br>
   <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/" target="_blank" style="color:var(--accent);text-decoration:none;">🌐 Live Dashboard</a>
 </div>
 
 <script>
-// Fallback data from latest Toast email (Tue Mar 17, 2026)
+// Fallback data from Toast email (Wed Mar 25, 2026)
 const toastRaw = null;
 const slingRaw = null;
 
 const toast = toastRaw ? JSON.parse(toastRaw) : {
-  date: 'Tuesday, March 17',
-  gross: 6469.70,
-  net: 6212.30,
-  guests: 212,
-  orders: 130,
-  avgPerGuest: 29.30,
-  avgPerOrder: 47.79,
-  laborPct: 16.0,
-  discountPct: 4.0,
-  cardPayments: 104,
+  date: 'Wednesday, March 25',
+  gross: 4343.60,
+  net: 4160.87,
+  guests: 164,
+  orders: 97,
+  avgPerGuest: 25.37,
+  avgPerOrder: 42.90,
+  laborPct: 20.7,
+  laborAmt: 862.24,
+  discountPct: 4.2,
+  discountAmt: 182.73,
+  voidQty: 8,
+  voidAmt: 114.00,
   refunds: 0.00,
-  voidQty: 22,
-  takeoutOrders: 4,
-  takeoutSales: 135.60
+  cardPayments: null,
+  food: 2401.87,
+  liquor: 770.00,
+  draftBeer: 559.50,
+  wine: 293.00,
+  bottledBeer: 46.00,
+  takeoutOrders: 1,
+  takeoutSales: 36.00,
+  vsSdlwGross: 4236.30,
+  vsSdlwNet: 4023.52,
+  vsSdlwGuests: 140
 };
 
 const sling = slingRaw ? JSON.parse(slingRaw) : {
   date: 'Thursday, March 26',
   count: 7,
-  hours: 36.82,
+  hours: 31.82,
   overtime: 0,
-  uncovered: 0,
+  uncovered: 1,
   staff: [
+    { name: 'Isael Salvador Narciso', role: 'Cook' },
     { name: 'Tony Rincon', role: 'Bartender' },
     { name: 'Jackson Wright', role: 'Bartender' },
-    { name: 'Andrew Turner', role: 'Bartender' },
+    { name: 'Harmony Willson', role: 'Bartender' },
     { name: 'Noel Nunez', role: 'Chef' },
-    { name: 'Katharine Brown', role: 'Server' },
-    { name: 'Emily Lanzel', role: 'Server' },
-    { name: 'James Hernandez', role: 'Busser' }
+    { name: 'Christine Vargas', role: 'Server' },
+    { name: 'Cal Carter', role: 'Busser' }
   ]
 };
 
 const DEFAULT_TASKS = [
-  { text: 'Verify Toast KDS billing starts April 1 — confirm charge amount', link: 'https://pos.toasttab.com', linkLabel: 'Toast →' },
-  { text: 'Review 11 upcoming distributor invoices on Fintech autopay', link: 'https://fintech.net', linkLabel: 'Fintech →' },
-  { text: 'Check Sling for today\'s full schedule (no email received)', link: 'https://app.getsling.com', linkLabel: 'Sling →' },
-  { text: 'Check Google Business for new reviews needing response', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
-  { text: 'Check Yelp for quote requests or messages', link: 'https://biz.yelp.com', linkLabel: 'Yelp →' },
-  { text: 'Post social media content for tonight', link: 'https://twitter.com', linkLabel: 'X →' },
-  { text: 'Investigate Toast daily email gap (no reports Mar 18–25)', link: 'https://pos.toasttab.com', linkLabel: 'Toast settings →' }
+  { text: 'URGENT: Respond to Lynn on Yelp about UCLA game (Mar 27)', link: 'https://biz.yelp.com', linkLabel: 'Yelp →' },
+  { text: 'Check if 1 uncovered shift from yesterday has been filled', link: 'https://app.getsling.com', linkLabel: 'Sling →' },
+  { text: 'Reply to HP2026\'s 1★ review on Google (menu mismatch)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
+  { text: 'Reply to Heidi\'s 1★ review on Google (same complaint pattern)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
+  { text: 'Investigate void items spike ($114, +46.2% vs last week)', link: 'https://pos.toasttab.com', linkLabel: 'Toast →' },
+  { text: 'Reply to Julie, alli, and James\' positive reviews on Google', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Google Reviews →' },
+  { text: 'Confirm Toast invoice ($523.37) autopaying tomorrow (Mar 28)', link: 'https://pos.toasttab.com', linkLabel: 'Toast account →' },
+  { text: 'Review Google Ads daily reports (no issues reported)', link: 'https://ads.google.com', linkLabel: 'Google Ads →' }
 ];
 </script>
 </body>
