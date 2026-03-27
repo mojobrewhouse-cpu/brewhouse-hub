@@ -430,18 +430,27 @@ function renderStaffPanel(containerId, badgeId, data, label) {
 
 // Load data.json
 fetch('data.json')
-  .then(r => r.json())
-  .then(d => {
-    renderStaffPanel('staff-today-body', 'staff-today-badge', d.slingToday, "today's");
-    renderStaffPanel('staff-yesterday-body', 'staff-yesterday-badge', d.sling, "yesterday's");
-    // Update the sales strip staff cell with today's data
-    if (d.slingToday) {
-      document.getElementById('bs-staff').textContent = d.slingToday.count || d.slingToday.staff.length;
-      document.getElementById('bs-staff-sub').textContent = uncov > 0 ? uncov + ' uncovered shift' + (uncov > 1 ? 's' : '') + ' ⚠️' : 'All shifts covered ✓';
+  .then(function(r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(function(d) {
+    try {
+      renderStaffPanel('staff-today-body', 'staff-today-badge', d.slingToday, "today's");
+      renderStaffPanel('staff-yesterday-body', 'staff-yesterday-badge', d.sling, "yesterday's");
+      // Update the sales strip staff cell with today's data
+      if (d.slingToday) {
+        document.getElementById('bs-staff').textContent = d.slingToday.count || d.slingToday.staff.length;
+        var uncov = d.slingToday.uncovered || 0;
+        document.getElementById('bs-staff-sub').textContent = uncov > 0 ? uncov + ' uncovered shift' + (uncov > 1 ? 's' : '') + ' ⚠️' : 'All shifts covered ✓';
+      }
+      console.log('Staff panels loaded successfully');
+    } catch(renderErr) {
+      console.error('Staff render error:', renderErr);
     }
   })
-  .catch(e => {
-    console.log('data.json not found, using fallback data');
+  .catch(function(e) {
+    console.error('data.json fetch failed:', e);
     document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';
     document.getElementById('staff-today-badge').textContent = 'Pending';
     document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
