@@ -83,7 +83,7 @@
 
     /* Ads Analytics */
     .ads-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; margin-bottom: 14px; }
-    .ads-kpi{ background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .ads-kpi { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
     .ads-kpi-val { font-size: 1.1rem; font-weight: 700; color: var(--text); }
     .ads-kpi-val.green { color: var(--green); }
     .ads-kpi-val.amber { color: var(--accent); }
@@ -135,7 +135,7 @@
     .ads-grid .ads-kpi-val { font-size: 0.9rem; }
     .ads-grid .ads-kpi-label { font-size: 0.55rem; }
     .ads-grid .ads-day-row { padding: 3px 0; font-size: 0.68rem; }
-    .ads-grid .ads-day-date { font-size: 0.62rem;min-width: 40px; }
+    .ads-grid .ads-day-date { font-size: 0.62rem; min-width: 40px; }
     .ads-grid .ads-day-metric { min-width: 42px; }
     .ads-grid .ads-day-metric .val { font-size: 0.68rem; }
     .ads-grid .ads-day-metric .label { font-size: 0.5rem; }
@@ -143,6 +143,17 @@
     .ads-grid .ba-link { font-size: 0.62rem; }
     .ads-grid .badge { font-size: 0.55rem; padding: 1px 5px; }
     @media(max-width: 900px) { .ads-grid { grid-template-columns: 1fr; } }
+
+    /* Reservations */
+    .rez-section { margin-bottom: 10px; }
+    .rez-section-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; }
+    .rez-count { font-size: 0.68rem; color: var(--muted); font-weight: 400; }
+    .rez-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--bg); border-radius: 6px; margin-bottom: 4px; font-size: 0.82rem; }
+    .rez-time { color: var(--accent); font-weight: 700; min-width: 65px; }
+    .rez-name { flex: 1; color: var(--text); margin: 0 8px; }
+    .rez-guests { color: var(--muted); font-size: 0.75rem; }
+    .rez-guests strong { color: var(--text); font-weight: 700; }
+    .rez-total { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px; background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 6px; margin-top: 10px; font-size: 0.8rem; color: var(--green); font-weight: 600; }
 
     /* X Posting */
     .x-tabs { display: flex; gap: 0; margin-bottom: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
@@ -230,6 +241,17 @@
       </div>
     </div>
 
+    <!-- RESERVATIONS -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">📅 Reservations</span>
+        <span class="badge info" id="rez-badge">SpotHopper</span>
+      </div>
+      <div class="panel-body" id="rez-body">
+        <div class="no-data">Loading reservations...</div>
+      </div>
+    </div>
+
     <!-- TOAST SALES DATA -->
     <div class="panel">
       <div class="panel-head"><span class="panel-title">📊 Toast Sales — Thu March 26</span><span class="badge ok">Yesterday's Performance</span></div>
@@ -247,7 +269,7 @@
         <div class="data-row"><span class="data-key">Labor $ Amount</span><span class="data-val green">$1,012.29</span></div>
         <div class="data-row"><span class="data-key">Discount % (of Gross)</span><span class="data-val">5.6%</span></div>
         <div class="data-row"><span class="data-key">Discounts $</span><span class="data-val">$307.25</span></div>
-        <div class="data-row"><span class="data-key">Void Items(qty)</span><span class="data-val green">2 (-78.1%)</span></div>
+        <div class="data-row"><span class="data-key">Void Items (qty)</span><span class="data-val green">2 (-78.1%)</span></div>
         <div class="data-row"><span class="data-key">Void Amount</span><span class="data-val green">$17.50</span></div>
         <div class="data-row"><span class="data-key">Refund Total</span><span class="data-val green">$0.00 ✓</span></div>
         <div class="data-row"><span class="data-key">Food Sales</span><span class="data-val">$3,086.45</span></div>
@@ -275,7 +297,7 @@
           <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
           <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
           <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
           <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
           <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
           <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
@@ -353,7 +375,7 @@
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Check Google Ads daily report — monitor campaign health & budget status
+            Check Google Ads daily report — conitor campaign health & budget status
             <a href="https://ads.google.com" target="_blank" class="task-link">Google Ads →</a>
           </div>
         </div>
@@ -431,7 +453,7 @@
           <a href="https://app.getsling.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">👥 Sling Staff Scheduling</a>
           <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">⭐ Google Business Reviews</a>
           <a href="https://biz.yelp.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">🍽️ Yelp Business</a>
-          <a href="https://ads.google.com"" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📊 Google Ads</a>
+          <a href="https://ads.google.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📊 Google Ads</a>
           <a href="https://analytics.google.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📈 Google Analytics</a>
         </div>
       </div>
@@ -575,6 +597,47 @@ function renderYelpAds(data) {
   document.getElementById('yelp-badge').textContent = data.period;
 }
 
+// Render Reservations Panel
+function renderReservations(data) {
+  if (!data) {
+    document.getElementById('rez-body').innerHTML = '<div class="no-data">No reservation data available</div>';
+    return;
+  }
+  var html = '';
+  function renderSection(title, section) {
+    if (!section || !section.bookings || section.bookings.length === 0) return '';
+    var s = '<div class="rez-section">';
+    s += '<div class="rez-section-title">' + title + ' — ' + section.date + '<span class="rez-count">' + section.totalGuests + ' guests</span></div>';
+    section.bookings.forEach(function(b) {
+      s += '<div class="rez-row">';
+      s += '<span class="rez-time">' + b.time + '</span>';
+      s += '<span class="rez-name">' + b.name + '</span>';
+      s += '<span class="rez-guests"><strong>' + b.guests + '</strong> ppl</span>';
+      s += '</div>';
+    });
+    s += '</div>';
+    return s;
+  }
+  html += renderSection('Today', data.today);
+  html += renderSection('Tomorrow', data.tomorrow);
+  if (data.upcoming && data.upcoming.length > 0) {
+    html += '<div class="rez-section"><div class="rez-section-title">Upcoming</div>';
+    data.upcoming.forEach(function(u) {
+      html += '<div class="rez-row">';
+      html += '<span class="rez-time" style="min-width:90px;font-size:0.72rem;">' + u.date + '</span>';
+      html += '<span class="rez-name">' + u.name + ' @ ' + u.time + '</span>';
+      html += '<span class="rez-guests"><strong>' + u.guests + '</strong> ppl</span>';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+  var totalToday = data.today ? data.today.totalGuests : 0;
+  var totalTomorrow = data.tomorrow ? data.tomorrow.totalGuests : 0;
+  html += '<div class="rez-total">Today: ' + totalToday + ' guests reserved &nbsp;|&nbsp; Tomorrow: ' + totalTomorrow + ' guests</div>';
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://admin.spothopperapp.com" target="_blank" class="ba-link">Open SpotHopper →</a></div>';
+  document.getElementById('rez-body').innerHTML = html;
+}
+
 // Load data.json
 fetch('data.json')
   .then(function(r) {
@@ -593,7 +656,8 @@ fetch('data.json')
       }
       renderGoogleAds(d.googleAds);
       renderYelpAds(d.yelpAds);
-      console.log('Staff panels loaded successfully');
+      renderReservations(d.reservations);
+      console.log('All panels loaded successfully');
     } catch(renderErr) {
       console.error('Staff render error:', renderErr);
     }
