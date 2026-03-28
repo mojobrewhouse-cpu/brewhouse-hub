@@ -1,1050 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brewhouse Command Center - March 28, 2026</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg: #1c1207;
-            --text: #f5ead8;
-            --accent: #d4900a;
-            --border: #3d2a10;
-            --dark-accent: #8b5a00;
-            --light-text: #e8dcc8;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.4;
-            padding: 0;
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 12px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-            padding: 16px 20px;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent);
-            letter-spacing: 1px;
-            margin-bottom: 4px;
-        }
-
-        .header-subtitle {
-            font-size: 14px;
-            color: var(--light-text);
-            opacity: 0.9;
-        }
-
-        /* Brief Band */
-        .brief-band {
-            background: linear-gradient(135deg, #3d2a10 0%, #2a1f0f 100%);
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-        }
-
-        .brief-headline {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 6px;
-        }
-
-        .brief-sub {
-            font-size: 13px;
-            color: var(--light-text);
-            line-height: 1.5;
-        }
-
-        /* Sales Strip */
-        .sales-strip {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .sales-cell {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
-        }
-
-        .sales-cell h3 {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--light-text);
-            margin-bottom: 6px;
-            opacity: 0.8;
-        }
-
-        .sales-value {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 4px;
-        }
-
-        .sales-note {
-            font-size: 12px;
-            color: var(--light-text);
-        }
-
-        .positive {
-            color: #7ec850;
-        }
-
-        .negative {
-            color: #e74c3c;
-        }
-
-        /* Main Area */
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 14px;
-            overflow: hidden;
-        }
-
-        .panel h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .staff-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-        }
-
-        .staff-item {
-            background: rgba(212, 144, 10, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 8px;
-            font-size: 12px;
-        }
-
-        .staff-name {
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 2px;
-        }
-
-        .staff-role {
-            font-size: 11px;
-            color: var(--light-text);
-            opacity: 0.8;
-        }
-
-        .staff-count {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent);
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        .staff-count-label {
-            font-size: 12px;
-            color: var(--light-text);
-            text-align: center;
-        }
-
-        .no-schedule {
-            font-size: 14px;
-            color: var(--light-text);
-            text-align: center;
-            padding: 20px;
-            font-style: italic;
-        }
-
-        /* Ads Grid */
-        .ads-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-
-        .ad-panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 14px;
-        }
-
-        .ad-panel h3 {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 8px;
-        }
-
-        .ad-content {
-            font-size: 13px;
-            line-height: 1.6;
-            color: var(--light-text);
-        }
-
-        .ad-status {
-            font-size: 12px;
-            color: #7ec850;
-            margin-top: 6px;
-            font-weight: 600;
-        }
-
-        .ad-warning {
-            color: #e74c3c;
-            font-weight: 600;
-        }
-
-        /* Toast Sales Data */
-        .sales-data-panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-
-        .sales-data-panel h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            font-size: 12px;
-        }
-
-        .data-row {
-            background: rgba(212, 144, 10, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .data-label {
-            color: var(--light-text);
-            opacity: 0.8;
-        }
-
-        .data-value {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .data-row.warning {
-            background: rgba(231, 76, 60, 0.1);
-            border-color: #e74c3c;
-        }
-
-        .data-row.warning .data-value {
-            color: #e74c3c;
-        }
-
-        /* Distributor Autopay */
-        .autopay-alert {
-            background: linear-gradient(135deg, #8b5a00 0%, #6b4300 100%);
-            border: 2px solid var(--accent);
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .autopay-alert h3 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 6px;
-        }
-
-        .autopay-detail {
-            font-size: 13px;
-            color: var(--light-text);
-            margin-bottom: 4px;
-        }
-
-        .autopay-amount {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--accent);
-            margin: 8px 0;
-        }
-
-        /* Priority Actions */
-        .priority-panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 2px solid #e74c3c;
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-
-        .priority-panel h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #e74c3c;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .priority-item {
-            background: rgba(231, 76, 60, 0.05);
-            border-left: 3px solid #e74c3c;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 3px;
-            font-size: 12px;
-        }
-
-        .priority-label {
-            font-weight: 700;
-            color: #e74c3c;
-            text-transform: uppercase;
-            font-size: 11px;
-            margin-bottom: 3px;
-        }
-
-        .priority-text {
-            color: var(--light-text);
-            line-height: 1.5;
-        }
-
-        /* Review Alerts */
-        .review-alert {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 12px;
-            margin-bottom: 10px;
-            font-size: 12px;
-        }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .review-author {
-            font-weight: 600;
-            color: var(--accent);
-        }
-
-        .review-date {
-            font-size: 11px;
-            color: var(--light-text);
-            opacity: 0.7;
-        }
-
-        .review-rating {
-            font-weight: 700;
-            margin: 0 8px;
-        }
-
-        .rating-5 {
-            color: #7ec850;
-        }
-
-        .rating-1 {
-            color: #e74c3c;
-        }
-
-        .review-text {
-            color: var(--light-text);
-            margin-bottom: 8px;
-            line-height: 1.5;
-            padding: 8px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: 8px;
-            background: rgba(212, 144, 10, 0.02);
-        }
-
-        .review-reply {
-            background: rgba(126, 200, 80, 0.1);
-            border-left: 3px solid #7ec850;
-            padding: 8px;
-            border-radius: 3px;
-            color: #7ec850;
-            font-style: italic;
-        }
-
-        /* X Posting Panel */
-        .x-panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-
-        .x-panel h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .x-input {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 10px;
-            color: var(--text);
-            font-family: inherit;
-            font-size: 12px;
-            width: 100%;
-            min-height: 60px;
-            resize: vertical;
-            margin-bottom: 8px;
-        }
-
-        .x-input::placeholder {
-            color: var(--light-text);
-            opacity: 0.6;
-        }
-
-        .x-button {
-            background: var(--accent);
-            color: var(--bg);
-            border: none;
-            border-radius: 4px;
-            padding: 8px 16px;
-            font-weight: 600;
-            font-size: 12px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .x-button:hover {
-            background: #e8a80a;
-        }
-
-        /* Today's Tasks */
-        .tasks-panel {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 12px;
-        }
-
-        .tasks-panel h2 {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent);
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .task-item {
-            background: rgba(212, 144, 10, 0.05);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 8px;
-            margin-bottom: 6px;
-            font-size: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .task-checkbox {
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .task-text {
-            color: var(--light-text);
-            flex: 1;
-        }
-
-        /* Quick Links */
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-bottom: 12px;
-        }
-
-        .link-button {
-            background: linear-gradient(135deg, #2a1f0f 0%, #1c1207 100%);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 12px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-
-        .link-button:hover {
-            background: linear-gradient(135deg, #3d2a10 0%, #2a1f0f 100%);
-            border-color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 12px;
-            border-top: 1px solid var(--border);
-            font-size: 11px;
-            color: var(--light-text);
-            opacity: 0.7;
-            margin-top: 12px;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .ads-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .links-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .sales-strip {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .data-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Brewhouse Command Center</title>
+  <style>
+    :root {
+      --bg: #1c1207; --card: #251a0a; --border: #3d2a10;
+      --text: #f5ead8; --muted: #a08060; --accent: #d4900a;
+      --green: #4caf72; --red: #e05252; --blue: #5a9fd4;
+      --yellow: #e8c84a; --orange: #e0883a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; min-height: 100vh; }
+    .hdr { background: #140e04; border-bottom: 2px solid var(--accent); padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .hdr-title { font-size: 1.3rem; font-weight: 800; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+    .hdr-sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .hdr-date { font-size: 0.82rem; color: var(--muted); text-align: right; }
+    .brief-band { background: linear-gradient(135deg,#2a1a06,#1c1207); border-bottom: 1px solid var(--border); padding: 20px 24px; }
+    .brief-headline { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    .brief-sub { font-size: 0.88rem; color: var(--muted); margin-top: 6px; }
+    .sales-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--border); border-bottom: 2px solid var(--border); }
+    .ss-cell { background: var(--card); padding: 16px 14px; text-align: center; }
+    .ss-val { font-size: 1.4rem; font-weight: 700; color: var(--text); }
+    .ss-val.green { color: var(--green); } .ss-val.amber { color: var(--accent); } .ss-val.blue { color: var(--blue); } .ss-val.red { color: var(--red); }
+    .ss-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+    .ss-sub { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+    .main { display: grid; grid-template-columns: 1fr 340px; gap: 20px; padding: 20px; max-width: 1400px; margin: 0 auto; }
+    @media(max-width: 900px) { .main { grid-template-columns: 1fr; } }
+    .panel { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+    .panel-head { background: #1e1408; border-bottom: 1px solid var(--border); padding: 12px 18px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .panel-title { font-size: 0.78rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+    .panel-body { padding: 16px 18px; }
+    .ba-list { display: flex; flex-direction: column; gap: 10px; }
+    .ba-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 8px; border-left: 4px solid transparent; }
+    .ba-item.urgent { background: rgba(224,82,82,0.1); border-color: var(--red); }
+    .ba-item.warning { background: rgba(212,144,10,0.1); border-color: var(--accent); }
+    .ba-item.info { background: rgba(90,159,212,0.1); border-color: var(--blue); }
+    .ba-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+    .ba-content { flex: 1; min-width: 0; }
+    .ba-title { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+    .ba-detail { font-size: 0.78rem; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+    .ba-link { display: inline-block; margin-top: 6px; font-size: 0.73rem; color: var(--accent); text-decoration: none; border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; }
+    .ba-link:hover { background: var(--border); }
+    .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+    .review-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+    .review-name { font-weight: 700; font-size: 0.9rem; }
+    .review-stars { color: var(--accent); letter-spacing: 1px; }
+    .review-date { font-size: 0.72rem; color: var(--muted); }
+    .review-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
+    .review-reply { font-size: 0.8rem; color: var(--green); background: rgba(76,175,114,0.08); border-radius: 6px; padding: 8px 10px; line-height: 1.5; }
+    .review-reply-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: var(--green); margin-bottom: 4px; font-weight: 700; }
+    .data-row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
+    .data-row:last-child { border-bottom: none; }
+    .data-key { color: var(--muted); } .data-val { font-weight: 700; color: var(--text); }
+    .data-val.green { color: var(--green); } .data-val.amber { color: var(--accent); } .data-val.red { color: var(--red); }
+    .staff-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; }
+    .staff-table th { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+    .staff-table td { padding: 9px 10px; border-bottom: 1px solid #2a1e0c; }
+    .staff-table tr:last-child td { border-bottom: none; }
+    .role-badge { padding: 2px 8px; border-radius: 20px; font-size: 0.73rem; font-weight: 600; }
+    .role-badge.bartender { background: #1a2a3a; color: var(--blue); }
+    .role-badge.chef { background: #1a3a2a; color: var(--green); }
+    .role-badge.cook { background: #1a3a2a; color: var(--green); }
+    .role-badge.server { background: #3a2a1a; color: var(--orange); }
+    .role-badge.busser { background: #2a2010; color: var(--muted); }
+    .role-badge.general-manager { background: #3a1a3a; color: #d4a0d4; }
+    .role-badge.manager { background: #3a1a3a; color: #d4a0d4; }
+    .task-item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.84rem; }
+    .task-item:last-child { border-bottom: none; }
+    .task-check { width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; margin-top: 1px; cursor: pointer; }
+    .task-text { flex: 1; }
+    .task-link { color: var(--accent); font-size: 0.73rem; margin-top: 3px; display: block; text-decoration: none; }
+    .dist-alert { background: rgba(212,144,10,0.1); border: 1px solid var(--accent); border-radius: 8px; padding: 12px 14px; font-size: 0.84rem; }
+    .footer { text-align: center; padding: 20px; color: var(--muted); font-size: 0.73rem; border-top: 1px solid var(--border); margin-top: 20px; }
+    .badge { display: inline-block; font-size: 0.68rem; padding: 2px 8px; border-radius: 20px; font-weight: 600; }
+    .badge.ok { background: rgba(76,175,114,0.15); color: var(--green); }
+    .badge.warn { background: rgba(212,144,10,0.15); color: var(--accent); }
+    .badge.alert { background: rgba(224,82,82,0.15); color: var(--red); }
+    .badge.info { background: rgba(90,159,212,0.15); color: var(--blue); }
+    .no-data { color: var(--muted); font-size: 0.82rem; text-align: center; padding: 20px; opacity: 0.7; }
+
+    /* Ads Analytics */
+    .ads-kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 8px; margin-bottom: 14px; }
+    .ads-kpi{ background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px; text-align: center; }
+    .ads-kpi-val { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .ads-kpi-val.green { color: var(--green); }
+    .ads-kpi-val.amber { color: var(--accent); }
+    .ads-kpi-val.red { color: var(--red); }
+    .ads-kpi-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+    .ads-chart { display: flex; align-items: flex-end; gap: 4px; height: 80px; margin-bottom: 12px; padding: 0 2px; }
+    .ads-bar-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; height: 100%; justify-content: flex-end; }
+    .ads-bar { width: 100%; min-height: 4px; border-radius: 3px 3px 0 0; transition: height 0.3s; }
+    .ads-bar.clicks { background: var(--blue); }
+    .ads-bar.spend { background: var(--accent); }
+    .ads-bar.conv { background: var(--green); }
+    .ads-bar-label { font-size: 0.58rem; color: var(--muted); white-space: nowrap; }
+    .ads-legend { display: flex; gap: 14px; justify-content: center; margin-bottom: 10px; }
+    .ads-legend-item { display: flex; align-items: center; gap: 4px; font-size: 0.68rem; color: var(--muted); }
+    .ads-legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .ads-day-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.8rem; }
+    .ads-day-row:last-child { border-bottom: none; }
+    .ads-day-date { color: var(--muted); min-width: 50px; }
+    .ads-day-metrics { display: flex; gap: 12px; }
+    .ads-day-metric { text-align: right; min-width: 55px; }
+    .ads-day-metric .val { font-weight: 700; color: var(--text); }
+    .ads-day-metric .label { font-size: 0.6rem; color: var(--muted); }
+    .yelp-bonus { background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+    .yelp-bonus-title { font-size: 0.72rem; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .yelp-bonus-bar { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin: 6px 0; }
+    .yelp-bonus-fill { height: 100%; background: var(--green); border-radius: 4px; }
+    .yelp-bonus-detail { font-size: 0.75rem; color: var(--muted); }
+
+    /* Staff Grid — extra compact */
+    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .staff-grid .panel { margin-bottom: 0; }
+    .staff-grid .panel-head { padding: 4px 8px; }
+    .staff-grid .panel-title { font-size: 0.6rem; letter-spacing: 1px; }
+    .staff-grid .panel-body { padding: 5px 8px; }
+    .staff-grid .staff-table { font-size: 0.65rem; }
+    .staff-grid .staff-table th { padding: 2px 4px; font-size: 0.55rem; }
+    .staff-grid .staff-table td { padding: 2px 4px; }
+    .staff-grid .role-badge { font-size: 0.56rem; padding: 1px 5px; }
+    @media(max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } }
+
+    /* Ads Grid — compact side-by-side */
+    .ads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .ads-grid .panel { margin-bottom: 0; }
+    .ads-grid .panel-head { padding: 4px 8px; }
+    .ads-grid .panel-title { font-size: 0.6rem; letter-spacing: 1px; }
+    .ads-grid .panel-body { padding: 6px 8px; }
+    .ads-grid .ads-kpi-grid { gap: 4px; margin-bottom: 8px; }
+    .ads-grid .ads-kpi { padding: 6px; }
+    .ads-grid .ads-kpi-val { font-size: 0.9rem; }
+    .ads-grid .ads-kpi-label { font-size: 0.55rem; }
+    .ads-grid .ads-day-row { padding: 3px 0; font-size: 0.68rem; }
+    .ads-grid .ads-day-date { font-size: 0.62rem;min-width: 40px; }
+    .ads-grid .ads-day-metric { min-width: 42px; }
+    .ads-grid .ads-day-metric .val { font-size: 0.68rem; }
+    .ads-grid .ads-day-metric .label { font-size: 0.5rem; }
+    .ads-grid .ads-day-metrics { gap: 6px; }
+    .ads-grid .ba-link { font-size: 0.62rem; }
+    .ads-grid .badge { font-size: 0.55rem; padding: 1px 5px; }
+    @media(max-width: 900px) { .ads-grid { grid-template-columns: 1fr; } }
+
+    /* X Posting */
+    .x-tabs { display: flex; gap: 0; margin-bottom: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
+    .x-tab { flex: 1; padding: 8px 12px; background: var(--bg); color: var(--muted); border: none; font-size: 0.78rem; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+    .x-tab.active { background: var(--accent); color: #140e04; }
+    .x-tab:hover:not(.active) { background: var(--border); }
+    .x-textarea { width: 100%; min-height: 80px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-family: inherit; font-size: 0.84rem; padding: 10px; resize: vertical; }
+    .x-textarea:focus { outline: none; border-color: var(--accent); }
+    .x-textarea::placeholder { color: var(--muted); }
+    .x-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 8px; }
+    .x-char-count { font-size: 0.73rem; color: var(--muted); }
+    .x-char-count.warn { color: var(--accent); }
+    .x-char-count.over { color: var(--red); }
+    .x-post-btn { background: var(--accent); color: #140e04; border: none; padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-weight: 700; cursor: pointer; }
+    .x-post-btn:hover { background: #e8a020; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>BREWHOUSE COMMAND CENTER</h1>
-            <p class="header-subtitle">Daily Operations Brief — March 28, 2026</p>
-        </header>
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <div class="hdr-title">🍺 Brewhouse Command Center</div>
+    <div class="hdr-sub">229 West Montecito Street · Santa Barbara, CA</div>
+  </div>
+  <div class="hdr-date">
+    <div>Friday, March 27, 2026</div>
+    <div style="margin-top:3px;font-size:0.7rem;">Auto-updated · Morning Brief</div>
+  </div>
+</div>
+<!-- BRIEF HEADLINE -->
+<div class="brief-band">
+  <div class="brief-headline" id="brief-headline-text">Strong Thursday — $5,203 net · 188 guests · 19.5% labor</div>
+  <div class="brief-sub" id="brief-headline-sub">Thu Mar 26 · Net $5,202.95 · 188 covers · Labor 19.5% · +7.1% vs last week</div>
+</div>
+<!-- SALES STRIP -->
+<div class="sales-strip">
+  <div class="ss-cell"><div class="ss-val green" id="bs-net">$5,203</div><div class="ss-label">Net Sales</div><div class="ss-sub" id="bs-net-sub">Thu Mar 26</div></div>
+  <div class="ss-cell"><div class="ss-val amber" id="bs-covers">188</div><div class="ss-label">Covers</div><div class="ss-sub" id="bs-covers-sub">$27.68 avg/guest</div></div>
+  <div class="ss-cell"><div class="ss-val blue" id="bs-avg">$44.09</div><div class="ss-label">Avg / Order</div><div class="ss-sub">118 orders</div></div>
+  <div class="ss-cell"><div class="ss-val green" id="bs-labor">19.5%</div><div class="ss-label">Labor %</div><div class="ss-sub" id="bs-labor-sub">✓ Under 25% target</div></div>
+  <div class="ss-cell"><div class="ss-val green" id="bs-voids">2 items / $18</div><div class="ss-label">Voids</div><div class="ss-sub" id="bs-voids-sub">$0.00 refunds</div></div>
+  <div class="ss-cell"><div class="ss-val blue" id="bs-staff">7</div><div class="ss-label">Staff Today</div><div class="ss-sub" id="bs-staff-sub">1 uncovered shift ⚠️</div></div>
+</div>
 
-        <!-- Brief Band -->
-        <div class="brief-band">
-            <div class="brief-headline">Strong Thursday — $5,203 net · 188 guests · 19.5% labor</div>
-            <div class="brief-sub">Sat Mar 28 · Yesterday's Net $5,202.95 · 188 covers · Labor 19.5% · +7.1% vs last week</div>
+<div class="main">
+  <!-- LEFT COLUMN -->
+  <div>
+    <!-- STAFF SCHEDULE — TWO PANELS SIDE BY SIDE -->
+    <div class="staff-grid" id="staff-grid">
+      <!-- TODAY'S STAFF (from slingToday in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Today</span><span class="badge ok" id="staff-today-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-today-body">
+          <div class="no-data">Loading today's staff from data.json...</div>
         </div>
-
-        <!-- Sales Strip -->
-        <div class="sales-strip">
-            <div class="sales-cell">
-                <h3>Gross Sales</h3>
-                <div class="sales-value">$5,510</div>
-                <div class="sales-note"><span class="positive">+8.3%</span> vs SDLW</div>
-            </div>
-            <div class="sales-cell">
-                <h3>Net Sales</h3>
-                <div class="sales-value">$5,203</div>
-                <div class="sales-note"><span class="positive">+7.1%</span> vs SDLW</div>
-            </div>
-            <div class="sales-cell">
-                <h3>Guests/Covers</h3>
-                <div class="sales-value">188</div>
-                <div class="sales-note"><span class="negative">-14.5%</span> vs SDLW</div>
-            </div>
-            <div class="sales-cell">
-                <h3>Avg Spend/Guest</h3>
-                <div class="sales-value">$27.68</div>
-                <div class="sales-note"><span class="positive">+25.4%</span> vs SDLW</div>
-            </div>
-            <div class="sales-cell">
-                <h3>Staff Scheduled</h3>
-                <div class="sales-value">10</div>
-                <div class="sales-note">0 uncovered shifts</div>
-            </div>
-            <div class="sales-cell">
-                <h3>Labor Cost</h3>
-                <div class="sales-value">19.5%</div>
-                <div class="sales-note">vs SDLW 18.3%</div>
-            </div>
+      </div>
+      <!-- YESTERDAY'S STAFF (from sling in data.json) -->
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">👥 Staff Yesterday</span><span class="badge warn" id="staff-yesterday-badge">Loading...</span></div>
+        <div class="panel-body" id="staff-yesterday-body">
+          <div class="no-data">Loading yesterday's staff from data.json...</div>
         </div>
-
-        <!-- Main Grid: Staff & Schedule -->
-        <div class="main-grid">
-            <!-- Staff Yesterday -->
-            <div class="panel">
-                <h2>Staff Yesterday (Fri, Mar 27)</h2>
-                <div class="staff-grid">
-                    <div class="staff-item">
-                        <div class="staff-name">Isael Salvador Narciso</div>
-                        <div class="staff-role">Cook</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Casey Smith</div>
-                        <div class="staff-role">General Manager</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Christine Vargas</div>
-                        <div class="staff-role">Bartender</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Osmar Beltran</div>
-                        <div class="staff-role">Server</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Andrew Turner</div>
-                        <div class="staff-role">Bartender</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Noel Nunez</div>
-                        <div class="staff-role">Chef</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Augustine Arroyo</div>
-                        <div class="staff-role">Server</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Gabriel Lopez Galindo</div>
-                        <div class="staff-role">Server</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Bri Kelley</div>
-                        <div class="staff-role">Server</div>
-                    </div>
-                    <div class="staff-item">
-                        <div class="staff-name">Cal Carter</div>
-                        <div class="staff-role">Busser</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Staff Today -->
-            <div class="panel">
-                <h2>Staff Today (Sat, Mar 28)</h2>
-                <div class="no-schedule">Saturday schedule not yet received</div>
-                <p style="text-align: center; font-size: 12px; color: var(--light-text); margin-top: 16px; opacity: 0.7;">Awaiting Sling update</p>
-            </div>
-        </div>
-
-        <!-- Ads Grid -->
-        <div class="ads-grid">
-            <div class="ad-panel">
-                <h3>Google Ads - Daily Report</h3>
-                <div class="ad-content">
-                    Brewhouse Daily Campaign Report ready<br>
-                    Customer ID: 343-687-4835
-                </div>
-                <div class="ad-status">✓ No disapproved ads · No budget warnings</div>
-            </div>
-
-            <div class="ad-panel">
-                <h3>Google Ads - Performance</h3>
-                <div class="ad-content">
-                    Campaign Performance report available<br>
-                    Veo video ads feature now enabled
-                </div>
-                <div class="ad-status">✓ All systems operational</div>
-            </div>
-        </div>
-
-        <!-- Toast Sales Data (Thursday) -->
-        <div class="sales-data-panel">
-            <h2>Toast Sales Data — Thursday, March 26</h2>
-            <div class="data-grid">
-                <div class="data-row">
-                    <span class="data-label">Gross Sales</span>
-                    <span class="data-value">$5,510.20</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">+8.3%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Net Sales</span>
-                    <span class="data-value">$5,202.95</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">+7.1%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">4-Week Avg Net</span>
-                    <span class="data-value">$3,878.66</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">+34.1%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Covers</span>
-                    <span class="data-value">188</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value negative">-14.5%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Avg Spend/Guest</span>
-                    <span class="data-value">$27.68</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">+25.4%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Hourly Labor Cost</span>
-                    <span class="data-value">$1,012.29</span>
-                </div>
-                <div class="data-row warning">
-                    <span class="data-label">% of Net (vs SDLW 18.3%)</span>
-                    <span class="data-value">19.5%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Discounts</span>
-                    <span class="data-value">$307.25</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">% of Gross</span>
-                    <span class="data-value">5.6%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Voids (items)</span>
-                    <span class="data-value positive">$17.50 (2)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">↓ 78.1%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Refunds</span>
-                    <span class="data-value">$0.00</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Card Payments</span>
-                    <span class="data-value">94</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Orders</span>
-                    <span class="data-value">118</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value negative">-7.1%</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Avg Order Value</span>
-                    <span class="data-value">$44.09</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">vs SDLW</span>
-                    <span class="data-value positive">+15.2%</span>
-                </div>
-            </div>
-
-            <h2 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin: 14px 0 10px 0; padding-top: 12px; border-top: 1px solid var(--border); padding-bottom: 8px;">Category Breakdown</h2>
-            <div class="data-grid">
-                <div class="data-row">
-                    <span class="data-label">Food</span>
-                    <span class="data-value">$3,086.45 (59.3%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Liquor</span>
-                    <span class="data-value">$922.00 (17.7%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Draft Beer</span>
-                    <span class="data-value">$801.00 (15.3%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Wine</span>
-                    <span class="data-value">$216.00 (4.1%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">NA Beverage</span>
-                    <span class="data-value">$86.50 (1.6%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Bottled Beer</span>
-                    <span class="data-value">$67.00 (1.2%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Retail</span>
-                    <span class="data-value">$24.00 (0.4%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Dinner / Lunch</span>
-                    <span class="data-value">71% / 29%</span>
-                </div>
-            </div>
-
-            <h2 style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); margin: 14px 0 10px 0; padding-top: 12px; border-top: 1px solid var(--border); padding-bottom: 8px;">Revenue Centers</h2>
-            <div class="data-grid">
-                <div class="data-row">
-                    <span class="data-label">Dining Room</span>
-                    <span class="data-value">$3,253.85 (62.5%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Patio</span>
-                    <span class="data-value">$1,224.70 (23.5%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Back Room</span>
-                    <span class="data-value">$448.90 (8.6%)</span>
-                </div>
-                <div class="data-row">
-                    <span class="data-label">Front Patio</span>
-                    <span class="data-value">$275.50 (5.2%)</span>
-                </div>
-            </div>
-
-            <p style="font-size: 11px; color: var(--light-text); opacity: 0.7; margin-top: 10px;">Auto-clocked out: Harmony Willson, Fabian Victoria, Katharine Brown</p>
-        </div>
-
-        <!-- Distributor Autopay Alert -->
-        <div class="autopay-alert">
-            <h3>⚠ Toast Invoice — Autopays TODAY</h3>
-            <div class="autopay-detail">Invoice #INV9078940</div>
-            <div class="autopay-detail">Post-Install Hardware</div>
-            <div class="autopay-amount">$523.37</div>
-            <div class="autopay-detail">Charging to account TODAY — March 28, 2026</div>
-        </div>
-
-        <!-- Priority Actions -->
-        <div class="priority-panel">
-            <h2>Priority Actions — Ordered by Urgency</h2>
-
-            <div class="priority-item">
-                <div class="priority-label">URGENT</div>
-                <div class="priority-text"><strong>Yelp Quote from Lynn</strong> (2 days old) — "Are you televising the UCLA women's basketball game on March 27?" — NEEDS IMMEDIATE RESPONSE</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">URGENT</div>
-                <div class="priority-text"><strong>Reply to HP2026 1★ Review</strong> (Mar 26) — Negative feedback about menu mismatch & basic food — RESPOND ASAP</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">HIGH</div>
-                <div class="priority-text"><strong>Reply to Heidi Pring 1★ Review</strong> (6 days old, Mar 22) — Similar complaint pattern as HP2026 — Consolidate messaging</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">HIGH</div>
-                <div class="priority-text"><strong>Thank Positive Reviewers</strong> — Julie Edwards (5★), alli elt (5★), James Catlin (5★) — Build momentum</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">HIGH</div>
-                <div class="priority-text"><strong>Toast Hardware Invoice $523.37</strong> — Autopays TODAY (March 28) — Verify funds available</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">INFO</div>
-                <div class="priority-text"><strong>Google Ads Reports Ready</strong> — Review daily campaign & performance reports — No issues flagged</div>
-            </div>
-
-            <div class="priority-item">
-                <div class="priority-label">INFO</div>
-                <div class="priority-text"><strong>Saturday Staffing</strong> — Check weekend schedule levels when Sling updates arrive</div>
-            </div>
-        </div>
-
-        <!-- Review Alerts -->
-        <div class="panel">
-            <h2>Review Alerts (All Unanswered)</h2>
-
-            <!-- Review 1: HP2026 1★ -->
-            <div class="review-alert">
-                <div class="review-header">
-                    <span class="review-author">HP2026</span>
-                    <span class="review-rating rating-1">★</span>
-                    <span class="review-date">Mar 26</span>
-                </div>
-                <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps. Please..."</div>
-                <div class="review-reply">💬 Suggested: "Hi there, thank you for visiting The Brewhouse. We're sorry your experience didn't meet expectations. We've recently updated our menu and are working to ensure consistency online and in-house. We'd love the chance to make it right — please reach out to us directly so we can take care of you."</div>
-            </div>
-
-            <!-- Review 2: Julie Edwards 5★ -->
-            <div class="review-alert">
-                <div class="review-header">
-                    <span class="review-author">Julie Edwards</span>
-                    <span class="review-rating rating-5">★★★★★</span>
-                    <span class="review-date">Mar 24</span>
-                </div>
-                <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
-                <div class="review-reply">💬 Suggested: "Thanks so much, Julie! So glad you loved the peanut butter cream pie — it's one of our favorites too! We appreciate you stopping by and hope to see you again soon."</div>
-            </div>
-
-            <!-- Review 3: alli elt 5★ -->
-            <div class="review-alert">
-                <div class="review-header">
-                    <span class="review-author">alli elt</span>
-                    <span class="review-rating rating-5">★★★★★</span>
-                    <span class="review-date">Mar 23</span>
-                </div>
-                <div class="review-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great. Thank you..."</div>
-                <div class="review-reply">💬 Suggested: "Thank you for the love, alli! Our team works hard to create a great vibe and we're thrilled you enjoyed it. See you next time!"</div>
-            </div>
-
-            <!-- Review 4: Heidi Pring 1★ -->
-            <div class="review-alert">
-                <div class="review-header">
-                    <span class="review-author">Heidi Pring</span>
-                    <span class="review-rating rating-1">★</span>
-                    <span class="review-date">Mar 22</span>
-                </div>
-                <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps. Please..."</div>
-                <div class="review-reply">💬 Suggested: "Hi Heidi, we appreciate your honest feedback. We take menu accuracy seriously and are actively working on updates. We'd love another chance to show you what The Brewhouse is all about — feel free to reach out to us directly."</div>
-            </div>
-
-            <!-- Review 5: James Catlin 5★ -->
-            <div class="review-alert">
-                <div class="review-header">
-                    <span class="review-author">James Catlin</span>
-                    <span class="review-rating rating-5">★★★★★</span>
-                    <span class="review-date">Mar 21</span>
-                </div>
-                <div class="review-text">"Great local pub/brewhouse. The Burgers are especially good: my favorite is the Farm Burger matched..."</div>
-                <div class="review-reply">💬 Suggested: "Thanks James! The Farm Burger is a crowd favorite for sure. Glad you're part of The Brewhouse family — cheers!"</div>
-            </div>
-        </div>
-
-        <!-- X Posting Panel -->
-        <div class="x-panel">
-            <h2>X (Twitter) Posting</h2>
-            <textarea class="x-input" placeholder="Compose your X post here... (keep under 280 characters for maximum impact)"></textarea>
-            <button class="x-button">Post to X</button>
-        </div>
-
-        <!-- Today's Tasks -->
-        <div class="tasks-panel">
-            <h2>Today's Tasks — Saturday, March 28</h2>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Verify funds available for Toast invoice autopay ($523.37)</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Respond to Yelp quote from Lynn about UCLA women's basketball</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Reply to HP2026 1★ review with suggested response</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Reply to Heidi Pring 1★ review with suggested response</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Thank Julie Edwards for 5★ review about peanut butter pie</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Thank alli elt for 5★ review about food & atmosphere</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Thank James Catlin for 5★ review about Farm Burger</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Review Google Ads daily & performance reports</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Check for Saturday Sling schedule update</div>
-            </div>
-            <div class="task-item">
-                <input type="checkbox" class="task-checkbox">
-                <div class="task-text">Monitor labor cost (19.5% vs SDLW 18.3%) — staffing optimization</div>
-            </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="links-grid">
-            <a href="#" class="link-button">📊 Toast POS Dashboard</a>
-            <a href="#" class="link-button">📅 Sling Schedule</a>
-            <a href="#" class="link-button">⭐ Google Reviews</a>
-            <a href="#" class="link-button">📱 Yelp Manager</a>
-            <a href="#" class="link-button">📢 Google Ads</a>
-            <a href="#" class="link-button">𝕏 Twitter/X</a>
-            <a href="#" class="link-button">💰 Invoice Tracker</a>
-            <a href="#" class="link-button">📞 Staff Directory</a>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            Last updated: March 28, 2026 at 7:00 AM | Brewhouse Command Center v2.0
-        </footer>
+      </div>
     </div>
+
+    <!-- ADS GRID — GOOGLE + YELP SIDE BY SIDE -->
+    <div class="ads-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">📊 Google Ads</span>
+          <span class="badge info" id="gads-badge">7-Day</span>
+        </div>
+        <div class="panel-body" id="gads-body">
+          <div class="no-data">Loading Google Ads data...</div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">🍽️ Yelp Ads</span>
+          <span class="badge info" id="yelp-badge">Monthly</span>
+        </div>
+        <div class="panel-body" id="yelp-body">
+          <div class="no-data">Loading Yelp Ads data...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST SALES DATA -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">📊 Toast Sales — Thu March 26</span><span class="badge ok">Yesterday's Performance</span></div>
+      <div class="panel-body">
+        <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$5,510.20</span></div>
+        <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$5,202.95</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Gross</span><span class="data-val green">+8.3% ($5,089.45)</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Net</span><span class="data-val green">+7.1% ($4,858.45)</span></div>
+        <div class="data-row"><span class="data-key">Guests</span><span class="data-val">188</span></div>
+        <div class="data-row"><span class="data-key">vs SDLW Guests</span><span class="data-val red">-14.5% (220)</span></div>
+        <div class="data-row"><span class="data-key">Total Orders</span><span class="data-val">118</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Guest</span><span class="data-val green">$27.68</span></div>
+        <div class="data-row"><span class="data-key">Avg Sales / Order</span><span class="data-val">$44.09</span></div>
+        <div class="data-row"><span class="data-key">Labor % (of Net)</span><span class="data-val green">19.5% ✓</span></div>
+        <div class="data-row"><span class="data-key">Labor $ Amount</span><span class="data-val green">$1,012.29</span></div>
+        <div class="data-row"><span class="data-key">Discount % (of Gross)</span><span class="data-val">5.6%</span></div>
+        <div class="data-row"><span class="data-key">Discounts $</span><span class="data-val">$307.25</span></div>
+        <div class="data-row"><span class="data-key">Void Items(qty)</span><span class="data-val green">2 (-78.1%)</span></div>
+        <div class="data-row"><span class="data-key">Void Amount</span><span class="data-val green">$17.50</span></div>
+        <div class="data-row"><span class="data-key">Refund Total</span><span class="data-val green">$0.00 ✓</span></div>
+        <div class="data-row"><span class="data-key">Food Sales</span><span class="data-val">$3,086.45</span></div>
+        <div class="data-row"><span class="data-key">Liquor Sales</span><span class="data-val">$922.00</span></div>
+        <div class="data-row"><span class="data-key">Draft Beer Sales</span><span class="data-val">$801.00</span></div>
+        <div class="data-row"><span class="data-key">Wine Sales</span><span class="data-val">$216.00</span></div>
+        <div class="data-row"><span class="data-key">Bottled Beer Sales</span><span class="data-val">$67.00</span></div>
+        <div class="data-row"><span class="data-key">Takeout Orders</span><span class="data-val">0 ($0.00)</span></div>
+      </div>
+    </div>
+
+    <!-- DISTRIBUTOR AUTOPAY -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Upcoming</span></div>
+      <div class="panel-body">
+        <div class="dist-alert"><strong style="color:var(--accent);">Upcoming Charges</strong><br><span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br><a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a></div>
+      </div>
+    </div>
+
+    <!-- PRIORITY ACTIONS -->
+    <div class="panel" id="brief-actions-panel">
+      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">8 items need attention</span></div>
+      <div class="panel-body">
+        <div class="ba-list">
+          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
+          <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Google Ads Daily Reports Ready</div><div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div><a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN -->
+  <div>
+
+    <!-- X POSTING PANEL -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">𝕏 Post to X</span></div>
+      <div class="panel-body">
+        <div class="x-tabs">
+          <button class="x-tab active" onclick="switchXTab('brewhouse')" id="x-tab-brewhouse">@SBrewhouse805</button>
+          <button class="x-tab" onclick="switchXTab('figtree')" id="x-tab-figtree">@sbfigtree93101</button>
+        </div>
+        <textarea id="x-compose" class="x-textarea" maxlength="280" placeholder="What's happening at The Brewhouse?" oninput="updateCharCount()"></textarea>
+        <div class="x-footer">
+          <span class="x-char-count"><span id="x-chars">0</span>/280</span>
+          <button class="x-post-btn" onclick="postToX()">Post via X →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODAY'S TASKS -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">✓ Today's Tasks</span><span class="badge ok">Morning Prep</span></div>
+      <div class="panel-body">
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Check Sling for uncovered shifts — confirm all positions filled or assign coverage
+            <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Respond to Lynn's Yelp inquiry about UCLA game televising — include hours & confirmation
+            <a href="https://biz.yelp.com" target="_blank" class="task-link">Open Yelp →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Review negative Google reviews (HP2026 & Heidi) — draft professional responses addressing menu/quality concerns
+            <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Investigate void spike (+46% to $114) — meet with kitchen/bar to identify causes
+            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast POS →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Reply to 3 positive Google reviews (Julie, alli, James) — thank them & ask for follow-up visits
+            <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Confirm Toast Hardware invoice #INV9078940 ($523.37) autopay for tomorrow — verify in budget
+            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast Account →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Check Google Ads daily report — monitor campaign health & budget status
+            <a href="https://ads.google.com" target="_blank" class="task-link">Google Ads →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Update staff schedules in Sling for next week — ensure no gaps or double-bookings
+            <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVIEW ALERTS -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">⭐ Review Alerts</span><span class="badge info">5 Awaiting Response</span></div>
+      <div class="panel-body">
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">HP2026</span>
+            <span class="review-stars">★ (1/5)</span>
+            <span class="review-date">Mar 26</span>
+          </div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+          <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
+        </div>
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Heidi</span>
+            <span class="review-stars">★ (1/5)</span>
+            <span class="review-date">Mar 22</span>
+          </div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
+          <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
+        </div>
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">Julie Edwards</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
+            <span class="review-date">Mar 24</span>
+          </div>
+          <div class="review-text">"Amazing atmosphere and great service. The bartender recommended the perfect drink!"</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
+        </div>
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">alli elt</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
+            <span class="review-date">Mar 23</span>
+          </div>
+          <div class="review-text">"Food was fantastic and the vibe is perfect for a date night. Will definitely be back."</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
+        </div>
+        <div class="review-card">
+          <div class="review-meta">
+            <span class="review-name">James Catlin</span>
+            <span class="review-stars">★★★★★ (5/5)</span>
+            <span class="review-date">Mar 21</span>
+          </div>
+          <div class="review-text">"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming."</div>
+          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
+        </div>
+        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem;">
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color: var(--accent); text-decoration: none;">View all reviews on Google Business →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="panel">
+      <div class="panel-head"><span class="panel-title">🔗 Quick Links</span></div>
+      <div class="panel-body">
+        <div class="ba-list" style="gap: 6px;">
+          <a href="https://pos.toasttab.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">☕ Toast POS Dashboard</a>
+          <a href="https://app.getsling.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">👥 Sling Staff Scheduling</a>
+          <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">⭐ Google Business Reviews</a>
+          <a href="https://biz.yelp.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">🍽️ Yelp Business</a>
+          <a href="https://ads.google.com"" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📊 Google Ads</a>
+          <a href="https://analytics.google.com" target="_blank" class="ba-link" style="display: block; text-align: center; background: var(--border); color: var(--accent); padding: 8px 12px; border-radius: 6px; font-weight: 600; margin: 0;">📈 Google Analytics</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Last updated: March 27, 2026 at 7:42 AM · Brewhouse Command Center v2.0 · Auto-refresh every 15 min
+</div>
+
+<script>
+// X Posting
+let currentXAccount = 'brewhouse';
+const xPlaceholders = {
+  brewhouse: "What's happening at The Brewhouse?",
+  figtree: "What's happening at Fig Tree?"
+};
+
+function switchXTab(account) {
+  currentXAccount = account;
+  document.getElementById('x-tab-brewhouse').classList.toggle('active', account === 'brewhouse');
+  document.getElementById('x-tab-figtree').classList.toggle('active', account === 'figtree');
+  document.getElementById('x-compose').placeholder = xPlaceholders[account];
+}
+
+function updateCharCount() {
+  const len = document.getElementById('x-compose').value.length;
+  const el = document.getElementById('x-chars');
+  el.textContent = len;
+  const counter = el.parentElement;
+  counter.className = 'x-char-count' + (len > 260 ? ' warn' : '') + (len > 280 ? ' over' : '');
+}
+
+function postToX() {
+  const text = document.getElementById('x-compose').value.trim();
+  if (!text) return alert('Write something first!');
+  const url = 'https://x.com/intent/tweet?text=' + encodeURIComponent(text);
+  window.open(url, '_blank');
+}
+
+// Dynamic staff loading from data.json
+function renderStaffPanel(containerId, badgeId, data, label) {
+  if (!data || !data.staff) {
+    document.getElementById(containerId).innerHTML = '<div class="no-data">No ' + label + ' staff data available</div>';
+    return;
+  }
+  const uncov = data.uncovered || 0;
+  const badgeEl = document.getElementById(badgeId);
+  if (uncov > 0) {
+    badgeEl.className = 'badge alert';
+    badgeEl.textContent = uncov + ' Uncovered Shift' + (uncov > 1 ? 's' : '');
+  } else {
+    badgeEl.className = 'badge ok';
+    badgeEl.textContent = 'All Covered ✓';
+  }
+  let html = '<table class="staff-table"><thead><tr><th>Name</th><th>Role</th></tr></thead><tbody>';
+  data.staff.forEach(s => {
+    const roleClass = s.role.toLowerCase().replace(/\s+/g, '-');
+    html += '<tr><td>' + s.name + '</td><td><span class="role-badge ' + roleClass + '">' + s.role + '</span></td></tr>';
+  });
+  html += '</tbody></table>';
+  html += '<div style="margin-top:6px;font-size:0.68rem;color:var(--muted);">';
+  html += data.hours + ' hrs';
+  if (uncov > 0) {
+    html += ' · <strong style="color:var(--red);">' + uncov + ' uncov ⚠️</strong>';
+  } else {
+    html += ' · <span style="color:var(--green);">All covered ✓</span>';
+  }
+  html += '</div>';
+  document.getElementById(containerId).innerHTML = html;
+}
+
+// Render Google Ads Panel
+function renderGoogleAds(data) {
+  if (!data || !data.days) {
+    document.getElementById('gads-body').innerHTML = '<div class="no-data">No Google Ads data available</div>';
+    return;
+  }
+  var days = data.days;
+  var totalSpend = 0, totalClicks = 0, totalConv = 0, totalImpr = 0;
+  days.forEach(function(d) {
+    totalSpend += parseFloat(d.spend.replace('$','').replace(',',''));
+    totalClicks += d.clicks;
+    totalConv += d.conversions;
+    totalImpr += parseInt(String(d.impressions).replace(',',''));
+  });
+  var avgCpc = totalClicks > 0 ? (totalSpend / totalClicks).toFixed(2) : '0';
+  var html = '';
+  // Compact KPI cards — spend, clicks, conversions only
+  html += '<div class="ads-kpi-grid">';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + totalSpend.toFixed(0) + '</div><div class="ads-kpi-label">7-Day Spend</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val">' + totalClicks.toLocaleString() + '</div><div class="ads-kpi-label">Clicks</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + totalConv + '</div><div class="ads-kpi-label">Conversions</div></div>';
+  html += '</div>';
+  // Daily breakdown (no bar chart)
+  days.forEach(function(d) {
+    html += '<div class="ads-day-row">';
+    html += '<span class="ads-day-date">' + d.date + '</span>';
+    html += '<div class="ads-day-metrics">';
+    html += '<div class="ads-day-metric"><span class="val">' + d.spend + '</span><br><span class="label">Spend</span></div>';
+    html += '<div class="ads-day-metric"><span class="val">' + d.clicks + '</span><br><span class="label">Clicks</span></div>';
+    html += '<div class="ads-day-metric"><span class="val" style="color:var(--green)">' + d.conversions + '</span><br><span class="label">Conv</span></div>';
+    html += '</div>';
+    html += '</div>';
+  });
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://ads.google.com" target="_blank" class="ba-link">Open Google Ads →</a></div>';
+  document.getElementById('gads-body').innerHTML = html;
+}
+
+// Render Yelp Ads Panel
+function renderYelpAds(data) {
+  if (!data) {
+    document.getElementById('yelp-body').innerHTML = '<div class="no-data">No Yelp Ads data available</div>';
+    return;
+  }
+  var html = '';
+  // Compact KPI cards — spend, page visits, leads
+  html += '<div class="ads-kpi-grid">';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val amber">$' + data.spend.replace('$','') + '</div><div class="ads-kpi-label">Spend (MTD)</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val">' + data.pageVisits + '</div><div class="ads-kpi-label">Page Visits</div></div>';
+  html += '<div class="ads-kpi"><div class="ads-kpi-val green">' + data.leads + '</div><div class="ads-kpi-label">Leads</div></div>';
+  html += '</div>';
+  // Daily breakdown rows
+  if (data.days && data.days.length > 0) {
+    data.days.forEach(function(d) {
+      html += '<div class="ads-day-row">';
+      html += '<span class="ads-day-date">' + d.date + '</span>';
+      html += '<div class="ads-day-metrics">';
+      html += '<div class="ads-day-metric"><span class="val">' + d.spend + '</span><br><span class="label">Spend</span></div>';
+      html += '<div class="ads-day-metric"><span class="val">' + d.pageVisits + '</span><br><span class="label">Visits</span></div>';
+      html += '<div class="ads-day-metric"><span class="val" style="color:var(--green)">' + d.leads + '</span><br><span class="label">Leads</span></div>';
+      html += '</div>';
+      html += '</div>';
+    });
+  }
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://biz.yelp.com" target="_blank" class="ba-link">Open Yelp Business →</a></div>';
+  document.getElementById('yelp-body').innerHTML = html;
+  document.getElementById('yelp-badge').textContent = data.period;
+}
+
+// Load data.json
+fetch('data.json')
+  .then(function(r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(function(d) {
+    try {
+      renderStaffPanel('staff-today-body', 'staff-today-badge', d.slingToday, "today's");
+      renderStaffPanel('staff-yesterday-body', 'staff-yesterday-badge', d.sling, "yesterday's");
+      // Update the sales strip staff cell with today's data
+      if (d.slingToday) {
+        document.getElementById('bs-staff').textContent = d.slingToday.count || d.slingToday.staff.length;
+        var uncov = d.slingToday.uncovered || 0;
+        document.getElementById('bs-staff-sub').textContent = uncov > 0 ? uncov + ' uncovered shift' + (uncov > 1 ? 's' : '') + ' ⚠️' : 'All shifts covered ✓';
+      }
+      renderGoogleAds(d.googleAds);
+      renderYelpAds(d.yelpAds);
+      console.log('Staff panels loaded successfully');
+    } catch(renderErr) {
+      console.error('Staff render error:', renderErr);
+    }
+  })
+  .catch(function(e) {
+    console.error('data.json fetch failed:', e);
+    document.getElementById('staff-today-body').innerHTML = '<div class="no-data">Today\'s staff data not yet available</div>';
+    document.getElementById('staff-today-badge').textContent = 'Pending';
+    document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
+    document.getElementById('staff-yesterday-badge').textContent = 'No Data';
+  });
+</script>
+
 </body>
 </html>
