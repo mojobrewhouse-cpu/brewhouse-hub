@@ -11,8 +11,8 @@
     "discountPct": "3.6%",
     "cardPayments": 123,
     "refunds": "$0.00",
-    "headline": "Friday \u2705 $6,862 net, 604 guests, labor 13.5%",
-    "headlineSub": "154 orders \u00b7 $11.36/guest \u00b7 3.6% discount \u00b7 123 card payments"
+    "headline": "Friday ✅ $6,862 net, 604 guests, labor 13.5%",
+    "headlineSub": "154 orders · $11.36/guest · 3.6% discount · 123 card payments"
   },
   "sling": {
     "date": "Friday, March 27",
@@ -76,7 +76,7 @@
   "yelpAds": {
     "lastUpdated": "2026-03-28",
     "spend": "$747.09",
-    "period": "Mar 1\u201327, 2026",
+    "period": "Mar 1–27, 2026",
     "impressions": "72.5k",
     "pageVisits": 896,
     "leads": 208,
@@ -96,6 +96,29 @@
       { "date": "Mar 23", "spend": "$25.92", "pageVisits": 29, "leads": 6 },
       { "date": "Mar 22", "spend": "$30.17", "pageVisits": 37, "leads": 9 },
       { "date": "Mar 21", "spend": "$27.68", "pageVisits": 34, "leads": 8 }
+    ]
+  },
+  "reservations": {
+    "lastUpdated": "2026-03-28",
+    "source": "SpotHopper",
+    "today": {
+      "date": "Sat, Mar 28",
+      "totalGuests": 7,
+      "bookings": [
+        { "time": "5:00 PM", "name": "John Tidey", "guests": 2, "status": "confirmed" },
+        { "time": "6:30 PM", "name": "Maria Wegener", "guests": 5, "status": "confirmed" }
+      ]
+    },
+    "tomorrow": {
+      "date": "Sun, Mar 29",
+      "totalGuests": 8,
+      "bookings": [
+        { "time": "6:30 PM", "name": "Brian Pearce", "guests": 4, "status": "confirmed" },
+        { "time": "7:00 PM", "name": "Heather Epstein", "guests": 4, "status": "confirmed" }
+      ]
+    },
+    "upcoming": [
+      { "date": "Tue, Mar 31", "time": "5:30 PM", "name": "Mary Liming", "guests": 2, "status": "confirmed" }
     ]
   }
 }
