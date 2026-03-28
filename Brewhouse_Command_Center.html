@@ -112,17 +112,37 @@
     .yelp-bonus-fill { height: 100%; background: var(--green); border-radius: 4px; }
     .yelp-bonus-detail { font-size: 0.75rem; color: var(--muted); }
 
-    /* Staff Grid — compact */
-    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    /* Staff Grid — extra compact */
+    .staff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .staff-grid .panel { margin-bottom: 0; }
-    .staff-grid .panel-head { padding: 6px 10px; }
-    .staff-grid .panel-title { font-size: 0.68rem; letter-spacing: 1px; }
-    .staff-grid .panel-body { padding: 8px 10px; }
-    .staff-grid .staff-table { font-size: 0.72rem; }
-    .staff-grid .staff-table th { padding: 3px 6px; font-size: 0.6rem; }
-    .staff-grid .staff-table td { padding: 4px 6px; }
-    .staff-grid .role-badge { font-size: 0.62rem; padding: 1px 6px; }
+    .staff-grid .panel-head { padding: 4px 8px; }
+    .staff-grid .panel-title { font-size: 0.6rem; letter-spacing: 1px; }
+    .staff-grid .panel-body { padding: 5px 8px; }
+    .staff-grid .staff-table { font-size: 0.65rem; }
+    .staff-grid .staff-table th { padding: 2px 4px; font-size: 0.55rem; }
+    .staff-grid .staff-table td { padding: 2px 4px; }
+    .staff-grid .role-badge { font-size: 0.56rem; padding: 1px 5px; }
     @media(max-width: 900px) { .staff-grid { grid-template-columns: 1fr; } }
+
+    /* Ads Grid — compact side-by-side */
+    .ads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .ads-grid .panel { margin-bottom: 0; }
+    .ads-grid .panel-head { padding: 4px 8px; }
+    .ads-grid .panel-title { font-size: 0.6rem; letter-spacing: 1px; }
+    .ads-grid .panel-body { padding: 6px 8px; }
+    .ads-grid .ads-kpi-grid { gap: 4px; margin-bottom: 8px; }
+    .ads-grid .ads-kpi { padding: 6px; }
+    .ads-grid .ads-kpi-val { font-size: 0.9rem; }
+    .ads-grid .ads-kpi-label { font-size: 0.55rem; }
+    .ads-grid .ads-day-row { padding: 3px 0; font-size: 0.68rem; }
+    .ads-grid .ads-day-date { font-size: 0.62rem; min-width: 40px; }
+    .ads-grid .ads-day-metric { min-width: 42px; }
+    .ads-grid .ads-day-metric .val { font-size: 0.68rem; }
+    .ads-grid .ads-day-metric .label { font-size: 0.5rem; }
+    .ads-grid .ads-day-metrics { gap: 6px; }
+    .ads-grid .ba-link { font-size: 0.62rem; }
+    .ads-grid .badge { font-size: 0.55rem; padding: 1px 5px; }
+    @media(max-width: 900px) { .ads-grid { grid-template-columns: 1fr; } }
 
     /* X Posting */
     .x-tabs { display: flex; gap: 0; margin-bottom: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
@@ -188,25 +208,25 @@
       </div>
     </div>
 
-    <!-- GOOGLE ADS ANALYTICS -->
-    <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">📊 Google Ads Performance</span>
-        <span class="badge info" id="gads-badge">7-Day View</span>
+    <!-- ADS GRID — GOOGLE + YELP SIDE BY SIDE -->
+    <div class="ads-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">📊 Google Ads</span>
+          <span class="badge info" id="gads-badge">7-Day</span>
+        </div>
+        <div class="panel-body" id="gads-body">
+          <div class="no-data">Loading Google Ads data...</div>
+        </div>
       </div>
-      <div class="panel-body" id="gads-body">
-        <div class="no-data">Loading Google Ads data...</div>
-      </div>
-    </div>
-
-    <!-- YELP ADS ANALYTICS -->
-    <div class="panel">
-      <div class="panel-head">
-        <span class="panel-title">🍽️ Yelp Ads Performance</span>
-        <span class="badge info" id="yelp-badge">Monthly</span>
-      </div>
-      <div class="panel-body" id="yelp-body">
-        <div class="no-data">Loading Yelp Ads data...</div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">🍽️ Yelp Ads</span>
+          <span class="badge info" id="yelp-badge">Monthly</span>
+        </div>
+        <div class="panel-body" id="yelp-body">
+          <div class="no-data">Loading Yelp Ads data...</div>
+        </div>
       </div>
     </div>
 
