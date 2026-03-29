@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brewhouse Morning Report — March 27, 2026</title>
+<title>Brewhouse Morning Report — March 29, 2026</title>
 <style>
   :root {
     --bg: #0d1117; --card: #161b22; --border: #30363d;
@@ -53,12 +53,26 @@
   .tag { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
   .tag.warning { background: #2a1a1a; color: var(--red); }
   .tag.ok { background: #1a2a1a; color: var(--green); }
+
+  /* Reviews and Checklist Styles */
+  .review-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+  .review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+  .review-author { font-weight: 600; color: var(--text); font-size: 0.9rem; }
+  .review-stars { color: var(--accent); font-size: 0.85rem; }
+  .review-date { color: var(--muted); font-size: 0.75rem; }
+  .review-text { color: var(--text); font-size: 0.88rem; line-height: 1.4; margin-top: 6px; font-style: italic; }
+
+  .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; }
+  .checklist-item input { margin-top: 3px; flex-shrink: 0; }
+  .checklist-item label { flex-grow: 1; color: var(--text); font-size: 0.88rem; cursor: pointer; }
+  .checklist-item .tag { margin-left: 0; margin-top: 6px; display: block; width: fit-content; }
+  .checklist-item .urgent { background: #2a1a1a; color: var(--red); }
 </style>
 </head>
 <body>
 <div class="header">
   <h1>🍺 The Brewhouse</h1>
-  <div class="date">FRIDAY &nbsp;·&nbsp; MARCH 27, 2026</div>
+  <div class="date">SATURDAY &nbsp;·&nbsp; MARCH 29, 2026</div>
   <div style="color:var(--muted);font-size:0.78rem;margin-top:8px;">MORNING REPORT</div>
 </div>
 
@@ -103,9 +117,9 @@
 
 <!-- SCHEDULE (SLING) -->
 <div class="section">
-  <div class="section-title">📅 Today's Schedule <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling)</span>
-    
-    
+  <div class="section-title">📅 Today's Schedule <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling — Mar 28)</span>
+
+
     <span class="tag ok">✓ All covered</span>
   </div>
   <table>
@@ -164,6 +178,97 @@
   </div>
 </div>
 
+<!-- REVIEWS -->
+<div class="section">
+  <div class="section-title">⭐ Recent Reviews</div>
+
+  <div class="review-item">
+    <div class="review-header">
+      <span class="review-author">HP2026</span>
+      <span class="review-stars">★ (1/5)</span>
+      <span class="review-date">Mar 26</span>
+    </div>
+    <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+  </div>
+
+  <div class="review-item">
+    <div class="review-header">
+      <span class="review-author">Julie Edwards</span>
+      <span class="review-stars">★★★★★ (5/5)</span>
+      <span class="review-date">Mar 24</span>
+    </div>
+    <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy."</div>
+  </div>
+
+  <div class="review-item">
+    <div class="review-header">
+      <span class="review-author">alli elt</span>
+      <span class="review-stars">★★★★★ (5/5)</span>
+      <span class="review-date">Mar 23</span>
+    </div>
+    <div class="review-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great."</div>
+  </div>
+
+  <div class="review-item">
+    <div class="review-header">
+      <span class="review-author">Heidi Pring</span>
+      <span class="review-stars">★ (1/5)</span>
+      <span class="review-date">Mar 22</span>
+    </div>
+    <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
+  </div>
+
+  <div class="review-item">
+    <div class="review-header">
+      <span class="review-author">James Catlin</span>
+      <span class="review-stars">★★★★★ (5/5)</span>
+      <span class="review-date">Mar 21</span>
+    </div>
+    <div class="review-text">"Great local pub/brewhouse. The Burgers are especially good."</div>
+  </div>
+</div>
+
+<!-- PRIORITY CHECKLIST -->
+<div class="section">
+  <div class="section-title">✓ Priority Checklist</div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="yelp-quote" style="cursor:pointer;">
+    <label for="yelp-quote">Respond to Lynn's Yelp quote (OVERDUE — 3 days)</label>
+    <span class="tag urgent">URGENT</span>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="negative-reviews" style="cursor:pointer;">
+    <label for="negative-reviews">Reply to HP2026 and Heidi negative reviews</label>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="void-investigation" style="cursor:pointer;">
+    <label for="void-investigation">Investigate void spike ($168.75, +43.6%)</label>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="positive-reviews" style="cursor:pointer;">
+    <label for="positive-reviews">Reply to 3 positive Google reviews</label>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="ads-review" style="cursor:pointer;">
+    <label for="ads-review">Review Google Ads campaign report</label>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="yelp-credit" style="cursor:pointer;">
+    <label for="yelp-credit">Check Yelp spring ads credit offer ($1,800)</label>
+  </div>
+
+  <div class="checklist-item">
+    <input type="checkbox" id="service-prep" style="cursor:pointer;">
+    <label for="service-prep">Prep for Saturday evening service</label>
+  </div>
+</div>
+
 <!-- ADS PERFORMANCE -->
 <div class="section">
   <div class="section-title">📣 Ad Performance</div>
@@ -173,7 +278,7 @@
     <div class="ads-platform">
       <div class="ads-platform-title">
         <span>🔵 Google Ads — Yesterday</span>
-        <span class="info-badge">📧 Notification</span> <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932501638&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.72rem;text-decoration:none">📄 View Report →</a>
+        <span class="info-badge">📧 Notification</span> <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.72rem;text-decoration:none">📄 View Report →</a>
       </div>
       <div class="ads-metrics">
         <div class="ads-metric">
@@ -233,7 +338,7 @@
 </div>
 
 <div class="footer">
-  Generated automatically · March 28, 2026 at 03:06 PM UTC · The Brewhouse Morning Report
+  Generated automatically · March 29, 2026 at 07:00 AM UTC · The Brewhouse Morning Report
 </div>
 </body>
 </html>
