@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brewhouse Morning Report — March 30, 2026</title>
+<title>Brewhouse Morning Report — March 29, 2026</title>
 <style>
   :root {
-    --bg: #1c1207; --card: #251a0a; --border: #3d2a10;
-    --text: #f5ead8; --muted: #a08060; --accent: #d4900a;
-    --green: #4caf72; --red: #e05252; --blue: #5a9fd4;
-    --purple: #bc8cff; --orange: #e0883a;
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #f0a500;
+    --green: #3fb950; --red: #f85149; --blue: #58a6ff;
+    --purple: #bc8cff; --orange: #ffa657;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; }
-  .header { text-align: center; padding: 32px 20px 24px; border-bottom: 2px solid var(--accent); margin-bottom: 28px; }
+  .header { text-align: center; padding: 32px 20px 24px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
   .header h1 { font-size: 2rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
   .date { font-size: 0.9rem; color: var(--muted); margin-top: 6px; letter-spacing: 2px; }
   .section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
@@ -28,180 +28,187 @@
   .metric.purple .metric-value { color: var(--purple); }
   table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
   th { color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px; padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
-  td { padding: 10px 12px; border-bottom: 1px solid #3d2a10; }
+  td { padding: 10px 12px; border-bottom: 1px solid #1c2128; }
   tr:last-child td { border-bottom: none; }
   .role-badge { padding: 3px 9px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
-  .role-badge.cook { background: #1a3a2a; color: var(--green); }
+  .role-badge.gm { background: #4a1942; color: var(--purple); }
+  .role-badge.chef { background: #1a3a2a; color: var(--green); }
+  .role-badge.cook { background: #1a3a2a; color: #85e89d; }
   .role-badge.bartender { background: #1a2a3a; color: var(--blue); }
   .role-badge.server { background: #3a2a1a; color: var(--orange); }
-  .role-badge.busser { background: #2a2010; color: var(--muted); }
-  .tag { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
-  .tag.warning { background: rgba(224,82,82,0.15); color: var(--red); }
-  .tag.ok { background: rgba(76,175,114,0.15); color: var(--green); }
-  .checklist { list-style: none; }
-  .checklist li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; display: flex; align-items: flex-start; gap: 10px; }
-  .checklist li:last-child { border-bottom: none; }
-  .priority { display: inline-block; font-size: 0.68rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; flex-shrink: 0; }
-  .priority.urgent { background: rgba(224,82,82,0.15); color: var(--red); }
-  .priority.high { background: rgba(212,144,10,0.15); color: var(--accent); }
-  .priority.info { background: rgba(90,159,212,0.15); color: var(--blue); }
-  .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
-  .review-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
-  .review-name { font-weight: 700; font-size: 0.9rem; }
-  .review-stars { color: var(--accent); letter-spacing: 1px; }
-  .review-date { font-size: 0.72rem; color: var(--muted); }
-  .review-text { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin-bottom: 8px; }
-  .review-reply { font-size: 0.8rem; color: var(--green); background: rgba(76,175,114,0.08); border-radius: 6px; padding: 8px 10px; line-height: 1.5; }
-  .social-post { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 10px; }
-  .social-label { font-size: 0.68rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; font-weight: 700; }
-  .social-text { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
-  .social-chars { font-size: 0.68rem; color: var(--muted); margin-top: 4px; }
+  .role-badge.busser { background: #2a2a2a; color: var(--muted); }
+  .role-badge.host { background: #1a3a3a; color: #79c0ff; }
+  .ads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media(max-width: 640px) { .ads-grid { grid-template-columns: 1fr; } }
+  .ads-platform { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+  .ads-platform-title { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
+  .live-badge { background: #1a3a2a; color: var(--green); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
+  .fallback-badge { background: #2a2010; color: var(--orange); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
+  .info-badge { background: #1a2a3a; color: var(--blue); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
+  .ads-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ads-metric { text-align: center; padding: 10px; background: var(--card); border-radius: 6px; }
+  .ads-metric-value { font-size: 1.2rem; font-weight: 700; color: var(--blue); }
+  .ads-metric-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
   .footer { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+  .tag { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+  .tag.warning { background: #2a1a1a; color: var(--red); }
+  .tag.ok { background: #1a2a1a; color: var(--green); }
 </style>
 </head>
 <body>
 <div class="header">
-  <h1>The Brewhouse</h1>
-  <div class="date">MONDAY &nbsp;&middot;&nbsp; MARCH 30, 2026</div>
+  <h1>🍺 The Brewhouse</h1>
+  <div class="date">SUNDAY &nbsp;·&nbsp; MARCH 29, 2026</div>
   <div style="color:var(--muted);font-size:0.78rem;margin-top:8px;">MORNING REPORT</div>
 </div>
 
 <!-- SALES (TOAST) -->
 <div class="section">
-  <div class="section-title">Sales Summary &mdash; Saturday, March 28 <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Toast)</span> <span class="tag warning">-11.6% vs SDLW</span></div>
+  <div class="section-title">📊 Sales Summary <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Toast)</span></div>
   <div class="metrics">
     <div class="metric">
-      <div class="metric-value">$5,708.30</div>
+      <div class="metric-value">$7,399.19</div>
       <div class="metric-label">Net Sales</div>
     </div>
     <div class="metric amber">
-      <div class="metric-value">$6,030.30</div>
+      <div class="metric-value">$7,610.19</div>
       <div class="metric-label">Gross Sales</div>
     </div>
     <div class="metric blue">
-      <div class="metric-value">240</div>
+      <div class="metric-value">277</div>
       <div class="metric-label">Guests</div>
     </div>
     <div class="metric blue">
-      <div class="metric-value">146</div>
+      <div class="metric-value">152</div>
       <div class="metric-label">Orders</div>
     </div>
     <div class="metric">
-      <div class="metric-value">$39.10</div>
+      <div class="metric-value">$48.68</div>
       <div class="metric-label">Avg / Order</div>
     </div>
     <div class="metric">
-      <div class="metric-value">$23.78</div>
+      <div class="metric-value">$26.71</div>
       <div class="metric-label">Avg / Guest</div>
     </div>
     <div class="metric amber">
-      <div class="metric-value">18.6%</div>
+      <div class="metric-value">11.2%</div>
       <div class="metric-label">Labor %</div>
     </div>
-    <div class="metric red">
-      <div class="metric-value">$133.50</div>
-      <div class="metric-label">Voids (Over $100)</div>
+    <div class="metric purple">
+      <div class="metric-value">$158.50</div>
+      <div class="metric-label">Voids</div>
     </div>
-  </div>
-  <div style="margin-top:16px;font-size:0.82rem;color:var(--muted);line-height:1.6;">
-    <strong style="color:var(--text)">Category Breakdown:</strong> Food $3,079 (53.9%) &middot; Draft Beer $1,245 (21.8%) &middot; Liquor $784 (13.7%) &middot; Wine $368 (6.4%) &middot; Bottled Beer $142 (2.4%)<br>
-    <strong style="color:var(--text)">Discounts:</strong> $322.00 (+9.2% vs SDLW) &middot; <strong style="color:var(--text)">Refunds:</strong> $0.00 &middot; <strong style="color:var(--text)">Checks:</strong> 156 @ $36.59 avg
   </div>
 </div>
 
-<!-- SCHEDULE (SLING) — Most recent: Sunday March 29 -->
+<!-- SCHEDULE (SLING) -->
 <div class="section">
-  <div class="section-title">Staff Schedule &mdash; Sunday, March 29 <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling)</span>
-    <span class="tag ok">All covered</span>
+  <div class="section-title">📅 Today's Schedule <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling)</span>
+    
+    
+    <span class="tag ok">✓ All covered</span>
   </div>
   <table>
-    <thead><tr><th>Role</th><th>Name</th></tr></thead>
+    <thead><tr><th>Role</th><th>Name</th><th>Hours</th></tr></thead>
     <tbody>
-      <tr><td><span class="role-badge cook">Cook</span></td><td>Isael Salvador Narciso</td></tr>
-      <tr><td><span class="role-badge bartender">Bartender</span></td><td>Christine Vargas</td></tr>
-      <tr><td><span class="role-badge server">Server</span></td><td>Daniel Rodriguez</td></tr>
-      <tr><td><span class="role-badge server">Server</span></td><td>Osmar Beltran</td></tr>
-      <tr><td><span class="role-badge bartender">Bartender</span></td><td>Katharine Brown</td></tr>
-      <tr><td><span class="role-badge server">Server</span></td><td>Augustine Arroyo</td></tr>
-      <tr><td><span class="role-badge server">Server</span></td><td>Bri Kelley</td></tr>
-      <tr><td><span class="role-badge busser">Busser</span></td><td>Cal Carter</td></tr>
-    </tbody>
+        <tr>
+          <td><span class="role-badge cook">🍳 Cook</span></td>
+          <td>Isael Salvador Narciso</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Katharine Brown</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge bartender">🍺 Bartender</span></td>
+          <td>Harmony Willson</td>
+          <td>--</td>
+        </tr>
+        <tr>
+          <td><span class="role-badge server">🍽️ Server</span></td>
+          <td>Cal Carter</td>
+          <td>--</td>
+        </tr></tbody>
   </table>
   <div style="margin-top:14px;color:var(--muted);font-size:0.82rem;">
-    8 employees scheduled &middot; Total: <strong style="color:var(--text)">38.57 hrs</strong>
-    &middot; Overtime: <strong style="color:var(--green)">0 hrs</strong>
-    &middot; Uncovered: <strong style="color:var(--green)">0</strong>
+    Total scheduled: <strong style="color:var(--text)">17.33 hrs</strong>
+    &nbsp;·&nbsp; Overtime: <strong style="color:var(--green)">0 hrs</strong>
+    &nbsp;·&nbsp; Uncovered shifts: <strong style="color:var(--green)">0</strong>
   </div>
 </div>
 
-<!-- REVIEWS -->
+<!-- ADS PERFORMANCE -->
 <div class="section">
-  <div class="section-title">Recent Google Reviews <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(6 awaiting reply)</span></div>
-  <div class="review-card">
-    <div class="review-meta">
-      <span class="review-name">Hudson Jay</span>
-      <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733; (5/5)</span>
-      <span class="review-date">Mar 29 &mdash; NEW</span>
-    </div>
-    <div class="review-text">"I love all of the amazing features here. The food is amazing. The atmosphere is also amazing because..."</div>
-    <div class="review-reply">Suggested: "Thank you so much, Hudson! We're thrilled you loved the food and the vibe. Can't wait to welcome you back!"</div>
-  </div>
-  <div class="review-card">
-    <div class="review-meta">
-      <span class="review-name">HP2026</span>
-      <span class="review-stars">&#9733; (1/5)</span>
-      <span class="review-date">Mar 26</span>
-    </div>
-    <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
-    <div class="review-reply">Suggested: "Hi there, thank you for your feedback. We're sorry your visit didn't meet expectations. We take menu accuracy seriously and are working on updates. We'd love the chance to make it right."</div>
-  </div>
-  <div class="review-card">
-    <div class="review-meta">
-      <span class="review-name">Julie Edwards</span>
-      <span class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733; (5/5)</span>
-      <span class="review-date">Mar 24</span>
-    </div>
-    <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
-    <div class="review-reply">Suggested: "Thanks so much, Julie! The peanut butter cream pie is a fan favorite. Hope to see you again soon!"</div>
-  </div>
-</div>
+  <div class="section-title">📣 Ad Performance</div>
+  <div class="ads-grid">
 
-<!-- PRIORITY CHECKLIST -->
-<div class="section">
-  <div class="section-title">Monday Priority Checklist</div>
-  <ul class="checklist">
-    <li><span class="priority urgent">URGENT</span> Respond to Lynn's Yelp quote request (4 days overdue, Mar 26)</li>
-    <li><span class="priority urgent">URGENT</span> Investigate Saturday voids &mdash; $133.50 across 14 items exceeds $100 threshold</li>
-    <li><span class="priority high">HIGH</span> Reply to Hudson's new 5-star Google review (Mar 29)</li>
-    <li><span class="priority high">HIGH</span> Reply to HP2026 and Heidi's 1-star reviews with professional responses</li>
-    <li><span class="priority high">HIGH</span> Reply to 3 positive reviews (Julie, alli, James) with thank-you messages</li>
-    <li><span class="priority info">INFO</span> Review Saturday sales dip &mdash; net down 11.6% vs last Sat, avg spend/guest dropped 12%</li>
-    <li><span class="priority info">INFO</span> Review Google Ads daily campaign reports &mdash; no alerts, monitor performance</li>
-  </ul>
-</div>
+    <!-- Google Ads -->
+    <div class="ads-platform">
+      <div class="ads-platform-title">
+        <span>🔵 Google Ads — Yesterday</span>
+        <span class="info-badge">📧 Notification</span> <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.72rem;text-decoration:none">📄 View Report →</a>
+      </div>
+      <div class="ads-metrics">
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Spend</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Impressions</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Clicks</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">CTR</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Avg CPC</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Conversions</div>
+        </div>
+      </div>
+    </div>
 
-<!-- SOCIAL MEDIA DRAFTS -->
-<div class="section">
-  <div class="section-title">Social Media Drafts <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Ready to Post on X)</span></div>
-  <div class="social-post">
-    <div class="social-label">Post 1 &mdash; Monday Vibes</div>
-    <div class="social-text">Monday mood: cold brews, warm vibes, and the best happy hour on State Street. Swing by The Brewhouse after work &#127866; #SantaBarbara #MondayMotivation #BrewhouseSB</div>
-    <div class="social-chars">198 characters</div>
-  </div>
-  <div class="social-post">
-    <div class="social-label">Post 2 &mdash; Food Feature</div>
-    <div class="social-text">Our peanut butter cream pie is "to die for" (thanks Julie!) Come taste what everyone's raving about &#127856; 229 W Montecito St #SantaBarbaraEats #Brewhouse</div>
-    <div class="social-chars">175 characters</div>
-  </div>
-  <div class="social-post">
-    <div class="social-label">Post 3 &mdash; Community</div>
-    <div class="social-text">Nothing beats a neighborhood brewhouse. Great people, great food, great beer. Open daily in downtown Santa Barbara &#127867;&#127867; #SBLocal #CraftBeer #TheBrewhouse</div>
-    <div class="social-chars">173 characters</div>
+    <!-- Yelp Ads -->
+    <div class="ads-platform">
+      <div class="ads-platform-title">
+        <span>🔴 Yelp Ads — Last 30 days</span>
+        <span class="fallback-badge">⚠️ No Data</span>
+      </div>
+      <div class="ads-metrics">
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Spend</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Impressions</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Page Visits</div>
+        </div>
+        <div class="ads-metric">
+          <div class="ads-metric-value">--</div>
+          <div class="ads-metric-label">Leads</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <div class="footer">
-  Generated automatically &middot; March 30, 2026 at 07:00 AM &middot; <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/" style="color:var(--accent);text-decoration:none;">View Dashboard &rarr;</a>
+  Generated automatically · March 30, 2026 at 05:16 PM UTC · The Brewhouse Morning Report
 </div>
 </body>
 </html>
