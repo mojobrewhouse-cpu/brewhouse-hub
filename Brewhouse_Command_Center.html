@@ -283,6 +283,7 @@
     <div class="panel">
       <div class="panel-head">
         <span class="panel-title">📅 Reservations</span>
+        <span style="font-size:0.65em;color:#999;margin-right:8px" id="rez-refresh-time"></span>
         <span class="badge info" id="rez-badge">All Sources</span>
       </div>
       <div class="panel-body" id="rez-body">
@@ -955,6 +956,39 @@ fetch('data.json?t=' + Date.now())
     document.getElementById('staff-yesterday-body').innerHTML = '<div class="no-data">Yesterday\'s staff data not available</div>';
     document.getElementById('staff-yesterday-badge').textContent = 'No Data';
   });
+
+// ===== AUTO-REFRESH RESERVATIONS (every 60 min) =====
+var REZ_REFRESH_MINUTES = 60;
+var rezLastRefresh = new Date();
+
+function refreshReservations() {
+  fetch('data.json?t=' + Date.now())
+    .then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(d) {
+      if (d && d.reservations) {
+        loadReservations(d.reservations);
+        rezLastRefresh = new Date();
+        updateRefreshBadge();
+        console.log('Reservations auto-refreshed at ' + rezLastRefresh.toLocaleTimeString());
+      }
+    })
+    .catch(function(e) { console.error('Rez auto-refresh failed:', e); });
+}
+
+function updateRefreshBadge() {
+  var el = document.getElementById('rez-refresh-time');
+  if (el) {
+    var h = rezLastRefresh.getHours(), m = rezLastRefresh.getMinutes();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    el.textContent = 'Updated ' + h + ':' + (m < 10 ? '0' : '') + m + ' ' + ampm;
+  }
+}
+
+// Auto-refresh interval
+setInterval(refreshReservations, REZ_REFRESH_MINUTES * 60 * 1000);
+// Show initial refresh time
+setTimeout(updateRefreshBadge, 500);
 </script>
 
 </body>

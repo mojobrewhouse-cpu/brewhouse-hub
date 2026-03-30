@@ -1,0 +1,36 @@
+name: Refresh Reservations
+
+on:
+  schedule:
+    # Every hour from 10 AM to 10 PM PDT (17:00-05:00 UTC)
+    - cron: '0 17-23,0-5 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Refresh reservations from SpotHopper emails
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python scripts/refresh_reservations.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "brewhouse-bot@users.noreply.github.com"
+          git config --local user.name "Brewhouse Bot"
+          git add data.json
+          git diff --staged --quiet || git commit -m "Auto-refresh reservations — $(date -u +'%b %d %H:%M UTC')"
+          git push
