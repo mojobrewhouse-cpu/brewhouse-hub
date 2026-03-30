@@ -780,14 +780,18 @@ function getSourceClass(src) {
 
 function renderReservations() {
   var today = new Date().toISOString().split('T')[0];
-  var tom = new Date(Date.now() + 86400000).toISOString().split('T')[0];
-  var todayRez = allReservations.filter(function(r) { return r.dateISO === today; });
-  var tomRez = allReservations.filter(function(r) { return r.dateISO === tom; });
-  var futureRez = allReservations.filter(function(r) { return r.dateISO > tom; });
+  // Build 5-day window: today + next 4 days
+  var dayDates = [];
+  for (var d = 0; d < 5; d++) {
+    dayDates.push(new Date(Date.now() + d * 86400000).toISOString().split('T')[0]);
+  }
+  var dayLabels = ['Today', 'Tomorrow'];
   var html = '';
+  var totalGuests5Day = 0;
   function renderSection(title, dateLabel, rezList) {
     if (rezList.length === 0) return '';
     var total = rezList.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+    totalGuests5Day += total;
     var s = '<div class="rez-section">';
     s += '<div class="rez-section-title">' + title + ' \u2014 ' + dateLabel + '<span class="rez-count">' + total + ' guests</span></div>';
     rezList.forEach(function(r) {
@@ -802,11 +806,21 @@ function renderReservations() {
     s += '</div>';
     return s;
   }
-  html += renderSection('Today', formatDateDisplay(today), todayRez);
-  html += renderSection('Tomorrow', formatDateDisplay(tom), tomRez);
-  if (futureRez.length > 0) {
-    html += '<div class="rez-section"><div class="rez-section-title">Upcoming</div>';
-    futureRez.forEach(function(r) {
+  // Render each of the 5 days
+  for (var i = 0; i < dayDates.length; i++) {
+    var dateISO = dayDates[i];
+    var dayRez = allReservations.filter(function(r) { return r.dateISO === dateISO; });
+    var label = i < dayLabels.length ? dayLabels[i] : formatDayName(dateISO);
+    html += renderSection(label, formatDateDisplay(dateISO), dayRez);
+  }
+  // Also show anything beyond the 5-day window
+  var lastDay = dayDates[dayDates.length - 1];
+  var beyondRez = allReservations.filter(function(r) { return r.dateISO > lastDay; });
+  if (beyondRez.length > 0) {
+    var beyondTotal = beyondRez.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+    totalGuests5Day += beyondTotal;
+    html += '<div class="rez-section"><div class="rez-section-title">Later<span class="rez-count">' + beyondTotal + ' guests</span></div>';
+    beyondRez.forEach(function(r) {
       var noteIcon = r.notes ? ' <span class="rez-note-icon" title="' + r.notes.replace(/"/g, '&quot;') + '">\ud83d\udcdd</span>' : '';
       var srcBadge = '<span class="rez-source ' + getSourceClass(r.source) + '">' + (r.source || 'SpotHopper') + '</span>';
       html += '<div class="rez-row" onclick="editReservation(\'' + r.id + '\')">';
@@ -817,16 +831,21 @@ function renderReservations() {
     });
     html += '</div>';
   }
-  var totalToday = todayRez.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
-  var totalTom = tomRez.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
-  html += '<div class="rez-total">Today: ' + totalToday + ' guests &nbsp;|\u00a0 Tomorrow: ' + totalTom + ' guests</div>';
+  var todayGuests = allReservations.filter(function(r) { return r.dateISO === today; }).reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+  html += '<div class="rez-total">Today: ' + todayGuests + ' guests &nbsp;|\u00a0 5-Day Total: ' + totalGuests5Day + ' guests</div>';
   html += '<div class="rez-phone">\ud83d\udcde Reservation line: <a href="tel:8058844664">(805) 884-4664</a></div>';
   html += '<button class="rez-add-btn" onclick="openAddRez()">+ Add Reservation</button>';
   html += '<div style="margin-top:8px;text-align:center;"><a href="https://www.spothopperapp.com/login" target="_blank" class="ba-link">Open SpotHopper \u2192</a></div>';
   document.getElementById('rez-body').innerHTML = html;
-  // Update badge with count
   var totalAll = allReservations.length;
   document.getElementById('rez-badge').textContent = totalAll + ' booked';
+}
+
+function formatDayName(isoDate) {
+  if (!isoDate) return '';
+  var d = new Date(isoDate + 'T12:00:00');
+  var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  return days[d.getDay()];
 }
 
 function openAddRez() {
