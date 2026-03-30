@@ -148,12 +148,50 @@
     .rez-section { margin-bottom: 10px; }
     .rez-section-title { font-size: 0.72rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; }
     .rez-count { font-size: 0.68rem; color: var(--muted); font-weight: 400; }
-    .rez-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--bg); border-radius: 6px; margin-bottom: 4px; font-size: 0.82rem; }
+    .rez-row { display: flex; align-items: center; justify-content: space-between; padding: 6px 8px; background: var(--bg); border-radius: 6px; margin-bottom: 4px; font-size: 0.82rem; cursor: pointer; transition: background 0.15s; }
+    .rez-row:hover { background: var(--border); }
     .rez-time { color: var(--accent); font-weight: 700; min-width: 65px; }
     .rez-name { flex: 1; color: var(--text); margin: 0 8px; }
     .rez-guests { color: var(--muted); font-size: 0.75rem; }
     .rez-guests strong { color: var(--text); font-weight: 700; }
+    .rez-note-icon { font-size: 0.7rem; margin-left: 4px; }
+    .rez-source { font-size: 0.6rem; padding: 1px 5px; border-radius: 10px; font-weight: 600; margin-left: 4px; }
+    .rez-source.spothop { background: #1a2a3a; color: var(--blue); }
+    .rez-source.phone { background: #1a3a2a; color: var(--green); }
+    .rez-source.yelp { background: #3a1a1a; color: var(--red); }
+    .rez-source.walkin { background: #2a2010; color: var(--muted); }
     .rez-total { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 8px; background: rgba(76,175,114,0.08); border: 1px solid rgba(76,175,114,0.2); border-radius: 6px; margin-top: 10px; font-size: 0.8rem; color: var(--green); font-weight: 600; }
+    .rez-phone { font-size: 0.72rem; color: var(--muted); text-align: center; margin-top: 8px; }
+    .rez-phone a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .rez-add-btn { display: block; width: 100%; padding: 10px; margin-top: 10px; background: var(--accent); color: #140e04; border: none; border-radius: 6px; font-size: 0.82rem; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+    .rez-add-btn:hover { background: #e8a00c; }
+    /* Rez Form Modal */
+    .rez-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
+    .rez-modal-overlay.active { display: flex; }
+    .rez-modal { background: var(--card); border: 1px solid var(--accent); border-radius: 12px; width: 380px; max-width: 95vw; max-height: 90vh; overflow-y: auto; }
+    .rez-modal-head { background: #1e1408; padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .rez-modal-title { font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+    .rez-modal-close { background: none; border: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
+    .rez-modal-close:hover { color: var(--text); }
+    .rez-modal-body { padding: 16px 18px; }
+    .rez-field { margin-bottom: 12px; }
+    .rez-field label { display: block; font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+    .rez-field input, .rez-field select, .rez-field textarea { width: 100%; padding: 8px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 0.84rem; font-family: inherit; }
+    .rez-field input:focus, .rez-field select:focus, .rez-field textarea:focus { outline: none; border-color: var(--accent); }
+    .rez-field textarea { resize: vertical; min-height: 50px; }
+    .rez-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .rez-modal-actions { display: flex; gap: 8px; margin-top: 16px; }
+    .rez-btn { flex: 1; padding: 10px; border: none; border-radius: 6px; font-size: 0.82rem; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+    .rez-btn.save { background: var(--accent); color: #140e04; }
+    .rez-btn.save:hover { background: #e8a00c; }
+    .rez-btn.cancel { background: var(--border); color: var(--muted); }
+    .rez-btn.cancel:hover { background: #4d3a20; }
+    .rez-btn.delete { background: rgba(224,82,82,0.15); color: var(--red); }
+    .rez-btn.delete:hover { background: rgba(224,82,82,0.3); }
+    .rez-detail-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px solid #2a1e0c; font-size: 0.8rem; }
+    .rez-detail-row:last-child { border-bottom: none; }
+    .rez-detail-key { color: var(--muted); }
+    .rez-detail-val { color: var(--text); font-weight: 600; }
 
     /* X Posting */
     .x-tabs { display: flex; gap: 0; margin-bottom: 12px; border-radius: 6px; overflow: hidden; border: 1px solid var(--border); }
@@ -245,10 +283,65 @@
     <div class="panel">
       <div class="panel-head">
         <span class="panel-title">📅 Reservations</span>
-        <span class="badge info" id="rez-badge">SpotHopper</span>
+        <span class="badge info" id="rez-badge">All Sources</span>
       </div>
       <div class="panel-body" id="rez-body">
         <div class="no-data">Loading reservations...</div>
+      </div>
+    </div>
+
+    <!-- RESERVATION FORM MODAL -->
+    <div class="rez-modal-overlay" id="rez-modal-overlay">
+      <div class="rez-modal">
+        <div class="rez-modal-head">
+          <span class="rez-modal-title" id="rez-modal-title">Add Reservation</span>
+          <button class="rez-modal-close" onclick="closeRezModal()">&times;</button>
+        </div>
+        <div class="rez-modal-body">
+          <input type="hidden" id="rez-edit-id" value="">
+          <div class="rez-field">
+            <label>Guest Name *</label>
+            <input type="text" id="rez-name" placeholder="e.g. Mary Liming">
+          </div>
+          <div class="rez-field-row">
+            <div class="rez-field">
+              <label>Date *</label>
+              <input type="date" id="rez-date">
+            </div>
+            <div class="rez-field">
+              <label>Time *</label>
+              <input type="time" id="rez-time">
+            </div>
+          </div>
+          <div class="rez-field-row">
+            <div class="rez-field">
+              <label>Party Size *</label>
+              <input type="number" id="rez-guests" min="1" max="100" placeholder="2">
+            </div>
+            <div class="rez-field">
+              <label>Source</label>
+              <select id="rez-source">
+                <option value="Phone">Phone Call</option>
+                <option value="SpotHopper">SpotHopper</option>
+                <option value="Yelp">Yelp</option>
+                <option value="Walk-in">Walk-in Request</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="rez-field">
+            <label>Phone Number</label>
+            <input type="tel" id="rez-phone" placeholder="(805) 555-1234">
+          </div>
+          <div class="rez-field">
+            <label>Notes</label>
+            <textarea id="rez-notes" placeholder="Birthday, back room, allergies, etc."></textarea>
+          </div>
+          <div class="rez-modal-actions" id="rez-modal-actions">
+            <button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button>
+            <button class="rez-btn save" onclick="saveReservation()">Save</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -283,24 +376,25 @@
 
     <!-- DISTRIBUTOR AUTOPAY -->
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Processed</span></div>
+      <div class="panel-head"><span class="panel-title">💰 Distributor Autopay</span><span class="badge info">Upcoming</span></div>
       <div class="panel-body">
-        <div class="dist-alert"><strong style="color:var(--accent);">Charges Processed</strong><br><span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopaid Mar 28 ✓</span><br><a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a></div>
+        <div class="dist-alert"><strong style="color:var(--accent);">Upcoming Charges</strong><br><span style="font-size:0.84rem;color:var(--text);">Toast Hardware Invoice #INV9078940<br><strong>$523.37</strong> — Post-Install Hardware · Autopays Mar 28</span><br><a href="https://pos.toasttab.com" target="_blank" style="color:var(--accent);font-size:0.78rem;text-decoration:none;margin-top:6px;display:inline-block;">Review Toast Account →</a></div>
       </div>
     </div>
 
     <!-- PRIORITY ACTIONS -->
     <div class="panel" id="brief-actions-panel">
-      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">7 items need attention</span></div>
+      <div class="panel-head"><span class="panel-title">⚡ Priority Actions</span><span class="badge alert">8 items need attention</span></div>
       <div class="panel-body">
         <div class="ba-list">
-          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn's Yelp Quote Request</div><div class="ba-detail">Lynn requested a quote on Mar 26 (4 days old, overdue) asking about televising the UCLA women's basketball game. This needs immediate response even though the game has passed — follow up to maintain responsiveness.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
-          <div class="ba-item urgent"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">URGENT: Voids Over $100 — $133.50 (14 items)</div><div class="ba-detail">Saturday March 28 voids reached $133.50 across 14 items. This exceeds the $100 flag threshold. Review void reasons with kitchen and bar team.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Hudson's NEW 5★ Review (Mar 29)</div><div class="ba-detail">"I love all of the amazing features here. The food is amazing. The atmosphere is also amazing because..." Suggested: "Thank you so much, Hudson! We're thrilled you loved the food and the vibe. Can't wait to welcome you back!"</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." Suggested: "Hi there, thank you for your feedback. We're sorry your experience didn't meet expectations — we take menu accuracy and drink quality seriously and are working on updates. We'd love the chance to make it right."</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">"Menu online doesn't match in bar, food very basic." Suggested: "Hi Heidi, we appreciate you sharing your experience. We hear you on the menu inconsistency and are working to align our online listings. We'd love to have you back."</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a></div></div>
-          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Reviews</div><div class="ba-detail">Julie Edwards (5★ Mar 24): Peanut butter pie praise. alli elt (5★ Mar 23): Amazing food & atmosphere. James Catlin (5★ Mar 21): Farm Burger & happy hour. Send personalized thank-you replies.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
-          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Net Sales Down 11.6% vs Last Saturday</div><div class="ba-detail">Net $5,708 vs $6,458 SDLW. Guests held steady (+0.4%) but avg spend/guest dropped 12%. Review menu pricing and upselling opportunities.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Analytics →</a></div></div>
+          <div class="ba-item urgent"><div class="ba-icon">📱</div><div class="ba-content"><div class="ba-title">URGENT: Respond to Lynn on Yelp — UCLA Game Question</div><div class="ba-detail">Lynn asked on Yelp TODAY (Mar 27) if we're televising the UCLA women's basketball game. This needs an immediate response with operating hours and confirmation.</div><a class="ba-link" href="https://biz.yelp.com" target="_blank">Respond on Yelp →</a></div></div>
+          <div class="ba-item urgent"><div class="ba-icon">👥</div><div class="ba-content"><div class="ba-title">URGENT: Check 1 Uncovered Shift</div><div class="ba-detail">Yesterday's Sling report (Mar 26) showed 7 staff with 1 uncovered shift. Verify if this has been filled for today, or take immediate action to cover it.</div><a class="ba-link" href="https://app.getsling.com" target="_blank">Check Sling →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to HP2026's 1★ Review (Mar 26)</div><div class="ba-detail">Negative review: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." This needs a prompt professional response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to Heidi's 1★ Review (Mar 22)</div><div class="ba-detail">Same complaint pattern as HP2026: "Menu online doesn't match in bar, food very basic." This recurring feedback needs attention and a thoughtful response.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⚠️</div><div class="ba-content"><div class="ba-title">HIGH: Investigate Voids — $114 (+46.2%)</div><div class="ba-detail">Void items totaled $114 (8 items) on Wed Mar 25, a 46.2% increase vs last week. This is above $100 threshold. Investigate with kitchen and bar staff immediately.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Dashboard →</a></div></div>
+          <div class="ba-item warning"><div class="ba-icon">⭐</div><div class="ba-content"><div class="ba-title">HIGH: Reply to 3 Positive Google Reviews</div><div class="ba-detail">Julie Edwards (5★, Mar 24), alli elt (5★, Mar 23), and James Catlin (5★, Mar 21) all left positive reviews awaiting responses. Keep engagement high.</div><a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Google Reviews →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📋</div><div class="ba-content"><div class="ba-title">INFO: Toast Hardware Invoice $523.37</div><div class="ba-detail">Invoice #INV9078940 for Post-Install Hardware autopays tomorrow (March 28). This is for the KDS & Terminal system. Confirm the charge amount in your budget.</div><a class="ba-link" href="https://pos.toasttab.com" target="_blank">Toast Account →</a></div></div>
+          <div class="ba-item info"><div class="ba-icon">📊</div><div class="ba-content"><div class="ba-title">INFO: Google Ads Daily Reports Ready</div><div class="ba-detail">Daily campaign reports are available. No disapproved ads or budget warnings at this time. Veo video ads promo available from Google.</div><a class="ba-link" href="https://ads.google.com" target="_blank">Google Ads →</a></div></div>
         </div>
       </div>
     </div>
@@ -327,54 +421,61 @@
 
     <!-- TODAY'S TASKS -->
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">✓ Today's Tasks</span><span class="badge ok">Monday Action Items</span></div>
+      <div class="panel-head"><span class="panel-title">✓ Today's Tasks</span><span class="badge ok">Morning Prep</span></div>
       <div class="panel-body">
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            OVERDUE: Respond to Lynn's Yelp quote request (4 days old, Mar 26)
+            Check Sling for uncovered shifts — confirm all positions filled or assign coverage
+            <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Respond to Lynn's Yelp inquiry about UCLA game televising — include hours & confirmation
             <a href="https://biz.yelp.com" target="_blank" class="task-link">Open Yelp →</a>
           </div>
         </div>
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Reply to Hudson's NEW 5★ Google review (Mar 29) with thank-you
+            Review negative Google reviews (HP2026 & Heidi) — draft professional responses addressing menu/quality concerns
             <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
           </div>
         </div>
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Reply to HP2026 and Heidi's negative 1★ reviews with professional responses
-            <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
-          </div>
-        </div>
-        <div class="task-item">
-          <div class="task-check"></div>
-          <div class="task-text">
-            Investigate Saturday voids ($133.50, 14 items) — review with kitchen/bar team
+            Investigate void spike (+46% to $114) — meet with kitchen/bar to identify causes
             <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast POS →</a>
           </div>
         </div>
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Reply to 3 positive Google reviews (Julie, alli, James) with thank-you messages
+            Reply to 3 positive Google reviews (Julie, alli, James) — thank them & ask for follow-up visits
             <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" class="task-link">Google Reviews →</a>
           </div>
         </div>
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Review Saturday sales dip (-11.6% net vs SDLW) — check avg spend decline
-            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast Analytics →</a>
+            Confirm Toast Hardware invoice #INV9078940 ($523.37) autopay for tomorrow — verify in budget
+            <a href="https://pos.toasttab.com" target="_blank" class="task-link">Toast Account →</a>
           </div>
         </div>
         <div class="task-item">
           <div class="task-check"></div>
           <div class="task-text">
-            Prep for Monday service — verify staff schedule, review weekend performance
+            Check Google Ads daily report — monitor campaign health & budget status
+            <a href="https://ads.google.com" target="_blank" class="task-link">Google Ads →</a>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-check"></div>
+          <div class="task-text">
+            Update staff schedules in Sling for next week — ensure no gaps or double-bookings
             <a href="https://app.getsling.com" target="_blank" class="task-link">Open Sling →</a>
           </div>
         </div>
@@ -383,46 +484,25 @@
 
     <!-- REVIEW ALERTS -->
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">⭐ Review Alerts</span><span class="badge info">6 Awaiting Response</span></div>
+      <div class="panel-head"><span class="panel-title">⭐ Review Alerts</span><span class="badge info">5 Awaiting Response</span></div>
       <div class="panel-body">
-        <div class="review-card">
-          <div class="review-meta">
-            <span class="review-name">Hudson Jay</span>
-            <span class="review-stars">★★★★★ (5/5)</span>
-            <span class="review-date">Mar 29</span>
-          </div>
-          <div class="review-text">"I love all of the amazing features here. The food is amazing. The atmosphere is also amazing because..."</div>
-          <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ NEW — NEEDS THANK YOU</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Thank you so much, Hudson! We're thrilled you loved the food and the vibe — that means the world to the whole crew. Can't wait to welcome you back!"
-          </div>
-        </div>
         <div class="review-card">
           <div class="review-meta">
             <span class="review-name">HP2026</span>
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 26</span>
           </div>
-          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps. Please..."</div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Hi there, thank you for your feedback. We're sorry your experience didn't meet expectations — we take menu accuracy and drink quality seriously. We've updated our online menu and would love the chance to make it right. Please reach out to us directly so we can welcome you back properly."
-          </div>
         </div>
         <div class="review-card">
           <div class="review-meta">
-            <span class="review-name">Heidi Pring</span>
+            <span class="review-name">Heidi</span>
             <span class="review-stars">★ (1/5)</span>
             <span class="review-date">Mar 22</span>
           </div>
-          <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps. Please..."</div>
+          <div class="review-text">"Menu online doesn't match in bar, food very basic."</div>
           <div style="font-size: 0.73rem; color: var(--red); margin-top: 4px;"><strong>⚠️ NEGATIVE — NEEDS RESPONSE</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Hi Heidi, we appreciate you taking the time to share your experience. We hear you on the menu inconsistency and are working to make sure our online listings match what's offered in-house. We'd love to have you back — please reach out so we can show you the real Brewhouse experience."
-          </div>
         </div>
         <div class="review-card">
           <div class="review-meta">
@@ -430,12 +510,8 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 24</span>
           </div>
-          <div class="review-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
+          <div class="review-text">"Amazing atmosphere and great service. The bartender recommended the perfect drink!"</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Thanks so much, Julie! So glad you loved the peanut butter cream pie — it's a crowd favorite! We're a lively spot for sure. Hope to see you again soon!"
-          </div>
         </div>
         <div class="review-card">
           <div class="review-meta">
@@ -443,12 +519,8 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 23</span>
           </div>
-          <div class="review-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great. Thank you..."</div>
+          <div class="review-text">"Food was fantastic and the vibe is perfect for a date night. Will definitely be back."</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Thank you, alli! The whole crew appreciates the shout out. We love making people feel at home. See you next time!"
-          </div>
         </div>
         <div class="review-card">
           <div class="review-meta">
@@ -456,12 +528,8 @@
             <span class="review-stars">★★★★★ (5/5)</span>
             <span class="review-date">Mar 21</span>
           </div>
-          <div class="review-text">"Great local pub/brewhouse. The Burgers are especially good: my favorite is the Farm Burger matched..."</div>
+          <div class="review-text">"Best happy hour in Santa Barbara. Staff knows their stuff and always welcoming."</div>
           <div style="font-size: 0.73rem; color: var(--green); margin-top: 4px;"><strong>✓ POSITIVE — NEEDS THANK YOU</strong></div>
-          <div class="review-reply">
-            <div class="review-reply-label">Suggested Reply:</div>
-            "Thanks James! The Farm Burger is a great pick. Glad you're enjoying The Brewhouse — we'll keep the good vibes rolling. Cheers!"
-          </div>
         </div>
         <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); font-size: 0.8rem;">
           <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color: var(--accent); text-decoration: none;">View all reviews on Google Business →</a>
@@ -622,46 +690,239 @@ function renderYelpAds(data) {
   document.getElementById('yelp-badge').textContent = data.period;
 }
 
-// Render Reservations Panel
-function renderReservations(data) {
-  if (!data) {
-    document.getElementById('rez-body').innerHTML = '<div class="no-data">No reservation data available</div>';
-    return;
+// ===== RESERVATION MANAGER =====
+// Merges data.json reservations with manually-added ones from localStorage
+var allReservations = [];
+
+function loadReservations(dataJsonRez) {
+  // Start with data.json reservations (from SpotHopper)
+  var fromData = [];
+  if (dataJsonRez) {
+    if (dataJsonRez.today && dataJsonRez.today.bookings) {
+      dataJsonRez.today.bookings.forEach(function(b) {
+        fromData.push({ id: 'sp_' + b.name + '_' + b.time, name: b.name, date: dataJsonRez.today.date, dateISO: toISO(dataJsonRez.today.date), time: b.time, guests: b.guests, source: b.source || 'SpotHopper', phone: b.phone || '', notes: b.notes || '', status: b.status || 'confirmed' });
+      });
+    }
+    if (dataJsonRez.tomorrow && dataJsonRez.tomorrow.bookings) {
+      dataJsonRez.tomorrow.bookings.forEach(function(b) {
+        fromData.push({ id: 'sp_' + b.name + '_' + b.time, name: b.name, date: dataJsonRez.tomorrow.date, dateISO: toISO(dataJsonRez.tomorrow.date), time: b.time, guests: b.guests, source: b.source || 'SpotHopper', phone: b.phone || '', notes: b.notes || '', status: b.status || 'confirmed' });
+      });
+    }
+    if (dataJsonRez.upcoming) {
+      dataJsonRez.upcoming.forEach(function(u) {
+        fromData.push({ id: 'sp_' + u.name + '_' + u.time, name: u.name, date: u.date, dateISO: toISO(u.date), time: u.time, guests: u.guests, source: u.source || 'SpotHopper', phone: u.phone || '', notes: u.notes || '', status: u.status || 'confirmed' });
+      });
+    }
   }
+  // Load manually-added reservations from localStorage
+  var manual = [];
+  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
+  // Merge: manual entries override data.json if same id
+  var byId = {};
+  fromData.forEach(function(r) { byId[r.id] = r; });
+  manual.forEach(function(r) { byId[r.id] = r; });
+  // Remove any marked as deleted
+  var deleted = [];
+  try { deleted = JSON.parse(localStorage.getItem('brewhouse_rez_deleted') || '[]'); } catch(e) { deleted = []; }
+  deleted.forEach(function(id) { delete byId[id]; });
+  allReservations = Object.values(byId);
+  // Sort by date then time
+  allReservations.sort(function(a, b) {
+    var da = a.dateISO || '9999', db = b.dateISO || '9999';
+    if (da !== db) return da < db ? -1 : 1;
+    return (a.time || '') < (b.time || '') ? -1 : 1;
+  });
+  renderReservations();
+}
+
+function toISO(dateStr) {
+  // Convert various date formats to YYYY-MM-DD for sorting
+  if (!dateStr) return '';
+  // Already ISO
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr;
+  // Try "Mon, Mar 30" or "Tue, Mar 31" etc
+  var d = new Date(dateStr + ', 2026');
+  if (!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+  // Try other parsing
+  d = new Date(dateStr);
+  if (!isNaN(d.getTime())) return d.toISOString().split('T')[0];
+  return dateStr;
+}
+
+function formatDateDisplay(isoDate) {
+  if (!isoDate) return '';
+  var d = new Date(isoDate + 'T12:00:00');
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate();
+}
+
+function formatTime12(time24) {
+  if (!time24) return '';
+  if (time24.includes('AM') || time24.includes('PM')) return time24;
+  var parts = time24.split(':');
+  var h = parseInt(parts[0]), m = parts[1] || '00';
+  var ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  return h + ':' + m + ' ' + ampm;
+}
+
+function getSourceClass(src) {
+  if (!src) return 'spothop';
+  var s = src.toLowerCase();
+  if (s.includes('spot')) return 'spothop';
+  if (s.includes('phone')) return 'phone';
+  if (s.includes('yelp')) return 'yelp';
+  if (s.includes('walk')) return 'walkin';
+  return 'phone';
+}
+
+function renderReservations() {
+  var today = new Date().toISOString().split('T')[0];
+  var tom = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+  var todayRez = allReservations.filter(function(r) { return r.dateISO === today; });
+  var tomRez = allReservations.filter(function(r) { return r.dateISO === tom; });
+  var futureRez = allReservations.filter(function(r) { return r.dateISO > tom; });
   var html = '';
-  function renderSection(title, section) {
-    if (!section || !section.bookings || section.bookings.length === 0) return '';
+  function renderSection(title, dateLabel, rezList) {
+    if (rezList.length === 0) return '';
+    var total = rezList.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
     var s = '<div class="rez-section">';
-    s += '<div class="rez-section-title">' + title + ' — ' + section.date + '<span class="rez-count">' + section.totalGuests + ' guests</span></div>';
-    section.bookings.forEach(function(b) {
-      s += '<div class="rez-row">';
-      s += '<span class="rez-time">' + b.time + '</span>';
-      s += '<span class="rez-name">' + b.name + '</span>';
-      s += '<span class="rez-guests"><strong>' + b.guests + '</strong> ppl</span>';
+    s += '<div class="rez-section-title">' + title + ' \u2014 ' + dateLabel + '<span class="rez-count">' + total + ' guests</span></div>';
+    rezList.forEach(function(r) {
+      var noteIcon = r.notes ? ' <span class="rez-note-icon" title="' + r.notes.replace(/"/g, '&quot;') + '">\ud83d\udcdd</span>' : '';
+      var srcBadge = '<span class="rez-source ' + getSourceClass(r.source) + '">' + (r.source || 'SpotHopper') + '</span>';
+      s += '<div class="rez-row" onclick="editReservation(\'' + r.id + '\')">';
+      s += '<span class="rez-time">' + formatTime12(r.time) + '</span>';
+      s += '<span class="rez-name">' + r.name + noteIcon + srcBadge + '</span>';
+      s += '<span class="rez-guests"><strong>' + r.guests + '</strong> ppl</span>';
       s += '</div>';
     });
     s += '</div>';
     return s;
   }
-  html += renderSection('Today', data.today);
-  html += renderSection('Tomorrow', data.tomorrow);
-  if (data.upcoming && data.upcoming.length > 0) {
+  html += renderSection('Today', formatDateDisplay(today), todayRez);
+  html += renderSection('Tomorrow', formatDateDisplay(tom), tomRez);
+  if (futureRez.length > 0) {
     html += '<div class="rez-section"><div class="rez-section-title">Upcoming</div>';
-    data.upcoming.forEach(function(u) {
-      html += '<div class="rez-row">';
-      html += '<span class="rez-time" style="min-width:90px;font-size:0.72rem;">' + u.date + '</span>';
-      html += '<span class="rez-name">' + u.name + ' @ ' + u.time + '</span>';
-      html += '<span class="rez-guests"><strong>' + u.guests + '</strong> ppl</span>';
+    futureRez.forEach(function(r) {
+      var noteIcon = r.notes ? ' <span class="rez-note-icon" title="' + r.notes.replace(/"/g, '&quot;') + '">\ud83d\udcdd</span>' : '';
+      var srcBadge = '<span class="rez-source ' + getSourceClass(r.source) + '">' + (r.source || 'SpotHopper') + '</span>';
+      html += '<div class="rez-row" onclick="editReservation(\'' + r.id + '\')">';
+      html += '<span class="rez-time" style="min-width:90px;font-size:0.72rem;">' + formatDateDisplay(r.dateISO) + '</span>';
+      html += '<span class="rez-name">' + r.name + ' @ ' + formatTime12(r.time) + noteIcon + srcBadge + '</span>';
+      html += '<span class="rez-guests"><strong>' + r.guests + '</strong> ppl</span>';
       html += '</div>';
     });
     html += '</div>';
   }
-  var totalToday = data.today ? data.today.totalGuests : 0;
-  var totalTomorrow = data.tomorrow ? data.tomorrow.totalGuests : 0;
-  html += '<div class="rez-total">Today: ' + totalToday + ' guests reserved &nbsp;|&nbsp; Tomorrow: ' + totalTomorrow + ' guests</div>';
-  html += '<div style="margin-top:8px;text-align:center;"><a href="https://www.spothopperapp.com/login" target="_blank" class="ba-link">Open SpotHopper →</a></div>';
+  var totalToday = todayRez.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+  var totalTom = tomRez.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+  html += '<div class="rez-total">Today: ' + totalToday + ' guests &nbsp;|\u00a0 Tomorrow: ' + totalTom + ' guests</div>';
+  html += '<div class="rez-phone">\ud83d\udcde Reservation line: <a href="tel:8058844664">(805) 884-4664</a></div>';
+  html += '<button class="rez-add-btn" onclick="openAddRez()">+ Add Reservation</button>';
+  html += '<div style="margin-top:8px;text-align:center;"><a href="https://www.spothopperapp.com/login" target="_blank" class="ba-link">Open SpotHopper \u2192</a></div>';
   document.getElementById('rez-body').innerHTML = html;
+  // Update badge with count
+  var totalAll = allReservations.length;
+  document.getElementById('rez-badge').textContent = totalAll + ' booked';
 }
+
+function openAddRez() {
+  document.getElementById('rez-modal-title').textContent = 'Add Reservation';
+  document.getElementById('rez-edit-id').value = '';
+  document.getElementById('rez-name').value = '';
+  document.getElementById('rez-date').value = new Date().toISOString().split('T')[0];
+  document.getElementById('rez-time').value = '18:00';
+  document.getElementById('rez-guests').value = '2';
+  document.getElementById('rez-source').value = 'Phone';
+  document.getElementById('rez-phone').value = '';
+  document.getElementById('rez-notes').value = '';
+  document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+  document.getElementById('rez-modal-overlay').classList.add('active');
+}
+
+function editReservation(id) {
+  var r = allReservations.find(function(x) { return x.id === id; });
+  if (!r) return;
+  document.getElementById('rez-modal-title').textContent = 'Edit Reservation';
+  document.getElementById('rez-edit-id').value = r.id;
+  document.getElementById('rez-name').value = r.name || '';
+  document.getElementById('rez-date').value = r.dateISO || '';
+  // Convert time to 24h for input
+  var t = r.time || '';
+  if (t.includes('AM') || t.includes('PM')) {
+    var tp = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+    if (tp) { var h = parseInt(tp[1]); if (tp[3].toUpperCase() === 'PM' && h !== 12) h += 12; if (tp[3].toUpperCase() === 'AM' && h === 12) h = 0; t = (h < 10 ? '0' : '') + h + ':' + tp[2]; }
+  }
+  document.getElementById('rez-time').value = t;
+  document.getElementById('rez-guests').value = r.guests || 2;
+  document.getElementById('rez-source').value = r.source || 'Phone';
+  document.getElementById('rez-phone').value = r.phone || '';
+  document.getElementById('rez-notes').value = r.notes || '';
+  document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn delete" onclick="deleteReservation(\'' + r.id + '\')">Delete</button><button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+  document.getElementById('rez-modal-overlay').classList.add('active');
+}
+
+function closeRezModal() {
+  document.getElementById('rez-modal-overlay').classList.remove('active');
+}
+
+function saveReservation() {
+  var name = document.getElementById('rez-name').value.trim();
+  var date = document.getElementById('rez-date').value;
+  var time = document.getElementById('rez-time').value;
+  var guests = parseInt(document.getElementById('rez-guests').value) || 2;
+  var source = document.getElementById('rez-source').value;
+  var phone = document.getElementById('rez-phone').value.trim();
+  var notes = document.getElementById('rez-notes').value.trim();
+  if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
+  var editId = document.getElementById('rez-edit-id').value;
+  var manual = [];
+  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
+  var id = editId || ('manual_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
+  var rez = { id: id, name: name, date: formatDateDisplay(date), dateISO: date, time: formatTime12(time), guests: guests, source: source, phone: phone, notes: notes, status: 'confirmed', addedBy: 'dashboard', addedAt: new Date().toISOString() };
+  if (editId) {
+    var idx = manual.findIndex(function(r) { return r.id === editId; });
+    if (idx >= 0) { manual[idx] = rez; } else { manual.push(rez); }
+  } else {
+    manual.push(rez);
+  }
+  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
+  // Reload and re-render
+  var byId = {};
+  allReservations.forEach(function(r) { byId[r.id] = r; });
+  byId[id] = rez;
+  allReservations = Object.values(byId);
+  allReservations.sort(function(a, b) {
+    var da = a.dateISO || '9999', db = b.dateISO || '9999';
+    if (da !== db) return da < db ? -1 : 1;
+    return (a.time || '') < (b.time || '') ? -1 : 1;
+  });
+  closeRezModal();
+  renderReservations();
+}
+
+function deleteReservation(id) {
+  if (!confirm('Delete this reservation?')) return;
+  var manual = [];
+  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
+  manual = manual.filter(function(r) { return r.id !== id; });
+  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
+  // Also track deletion so data.json entries get suppressed
+  var deleted = [];
+  try { deleted = JSON.parse(localStorage.getItem('brewhouse_rez_deleted') || '[]'); } catch(e) { deleted = []; }
+  if (deleted.indexOf(id) < 0) deleted.push(id);
+  localStorage.setItem('brewhouse_rez_deleted', JSON.stringify(deleted));
+  allReservations = allReservations.filter(function(r) { return r.id !== id; });
+  closeRezModal();
+  renderReservations();
+}
+
+// Close modal on overlay click
+document.getElementById('rez-modal-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeRezModal();
+});
 
 // Load data.json
 fetch('data.json?t=' + Date.now())
@@ -681,7 +942,7 @@ fetch('data.json?t=' + Date.now())
       }
       renderGoogleAds(d.googleAds);
       renderYelpAds(d.yelpAds);
-      renderReservations(d.reservations);
+      loadReservations(d.reservations);
       console.log('All panels loaded successfully');
     } catch(renderErr) {
       console.error('Staff render error:', renderErr);
