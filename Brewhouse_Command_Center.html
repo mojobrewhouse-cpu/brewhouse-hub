@@ -426,6 +426,42 @@
       </div>
     </div>
 
+    <!-- SPECIALS MENU -->
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">🍽️ Today's Specials</span>
+        <span class="badge ok" id="specials-count-badge">0 items</span>
+      </div>
+      <div class="panel-body">
+        <div id="specials-list" style="display:flex;flex-direction:column;gap:8px;margin-bottom:10px;"></div>
+        <div id="specials-empty" style="text-align:center;color:var(--muted);padding:12px 0;font-size:0.8rem;">
+          No specials yet — add today's specials below
+        </div>
+        <div style="border-top:1px solid var(--border);padding-top:10px;margin-top:4px;">
+          <div style="display:flex;gap:6px;margin-bottom:6px;">
+            <input type="text" id="spec-name" placeholder="Item name" style="flex:1;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:4px;font-size:0.78rem;">
+            <input type="text" id="spec-price" placeholder="$0" style="width:55px;background:var(--bg);border:1px solid var(--border);color:var(--green);padding:6px 8px;border-radius:4px;font-size:0.78rem;text-align:center;">
+          </div>
+          <textarea id="spec-desc" placeholder="Description (optional)" style="width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 8px;border-radius:4px;font-size:0.73rem;resize:none;height:36px;box-sizing:border-box;font-family:inherit;"></textarea>
+          <div style="display:flex;gap:6px;margin-top:6px;">
+            <select id="spec-tag" style="flex:1;background:var(--bg);border:1px solid var(--border);color:var(--muted);padding:5px 8px;border-radius:4px;font-size:0.73rem;">
+              <option value="">No tag</option>
+              <option value="Chef">Chef</option>
+              <option value="Local">Local</option>
+              <option value="GF">GF</option>
+              <option value="Seasonal">Seasonal</option>
+              <option value="BBQ">BBQ</option>
+            </select>
+            <button onclick="addSpecial()" style="background:var(--accent);color:#000;border:none;padding:5px 14px;border-radius:4px;font-size:0.73rem;font-weight:700;cursor:pointer;">+ Add</button>
+          </div>
+        </div>
+        <div style="margin-top:10px;display:flex;gap:8px;">
+          <a href="Brewhouse_Menu_Builder.html" target="_blank" style="flex:1;text-align:center;color:var(--accent);border:1px solid var(--accent);padding:5px;border-radius:4px;font-size:0.7rem;text-decoration:none;font-weight:600;">Open Full Menu Builder</a>
+          <button onclick="printSpecials()" id="spec-print-btn" style="flex:1;background:var(--border);color:var(--text);border:none;padding:5px;border-radius:4px;font-size:0.7rem;font-weight:600;cursor:pointer;display:none;">Print Card</button>
+        </div>
+      </div>
+    </div>
+
     <!-- TODAY'S TASKS -->
     <div class="panel">
       <div class="panel-head"><span class="panel-title">✓ Today's Tasks</span><span class="badge warn">Tue Mar 31</span></div>
@@ -1035,6 +1071,94 @@ if ('serviceWorker' in navigator) {
     console.log('Service worker registered');
   }).catch(function(e) { console.log('SW registration failed:', e); });
 }
+
+// ===== SPECIALS MENU =====
+var specials = JSON.parse(localStorage.getItem('brewhouse_specials') || '[]');
+
+function renderSpecials() {
+  var list = document.getElementById('specials-list');
+  var empty = document.getElementById('specials-empty');
+  var badge = document.getElementById('specials-count-badge');
+  var printBtn = document.getElementById('spec-print-btn');
+  if (!list) return;
+  
+  if (!specials.length) {
+    list.innerHTML = '';
+    empty.style.display = 'block';
+    badge.textContent = '0 items';
+    if (printBtn) printBtn.style.display = 'none';
+    return;
+  }
+  
+  empty.style.display = 'none';
+  badge.textContent = specials.length + ' item' + (specials.length > 1 ? 's' : '');
+  if (printBtn) printBtn.style.display = 'block';
+  
+  var html = '';
+  specials.forEach(function(s, i) {
+    html += '<div style="background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:8px 10px;position:relative;">';
+    html += '<div style="display:flex;justify-content:space-between;align-items:center;">';
+    html += '<span style="font-weight:700;color:var(--text);font-size:0.82rem;">' + escHtml(s.name) + '</span>';
+    html += '<span style="color:var(--green);font-weight:700;font-size:0.82rem;">' + escHtml(s.price) + '</span>';
+    html += '</div>';
+    if (s.desc) html += '<div style="color:var(--muted);font-size:0.72rem;margin-top:3px;">' + escHtml(s.desc) + '</div>';
+    if (s.tag) html += '<span style="display:inline-block;margin-top:4px;font-size:0.62rem;padding:1px 6px;border-radius:8px;background:var(--border);color:var(--accent);font-weight:600;">' + escHtml(s.tag) + '</span>';
+    html += '<button onclick="removeSpecial(' + i + ')" style="position:absolute;top:4px;right:6px;background:none;border:none;color:var(--muted);cursor:pointer;font-size:0.7rem;padding:2px 4px;" title="Remove">x</button>';
+    html += '</div>';
+  });
+  list.innerHTML = html;
+}
+
+function escHtml(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+function addSpecial() {
+  var name = document.getElementById('spec-name').value.trim();
+  var price = document.getElementById('spec-price').value.trim();
+  var desc = document.getElementById('spec-desc').value.trim();
+  var tag = document.getElementById('spec-tag').value;
+  if (!name) { document.getElementById('spec-name').focus(); return; }
+  if (price && !price.startsWith('$')) price = '$' + price;
+  specials.push({name: name, price: price || '', desc: desc, tag: tag, added: new Date().toISOString()});
+  localStorage.setItem('brewhouse_specials', JSON.stringify(specials));
+  document.getElementById('spec-name').value = '';
+  document.getElementById('spec-price').value = '';
+  document.getElementById('spec-desc').value = '';
+  document.getElementById('spec-tag').value = '';
+  document.getElementById('spec-name').focus();
+  renderSpecials();
+}
+
+function removeSpecial(i) {
+  specials.splice(i, 1);
+  localStorage.setItem('brewhouse_specials', JSON.stringify(specials));
+  renderSpecials();
+}
+
+function printSpecials() {
+  var win = window.open('', '_blank', 'width=400,height=600');
+  var html = '<html><head><title>Specials</title><style>';
+  html += 'body{font-family:Georgia,serif;padding:20px;max-width:350px;margin:0 auto;}';
+  html += 'h1{text-align:center;font-size:1.3rem;border-bottom:2px solid #333;padding-bottom:8px;}';
+  html += '.item{margin:14px 0;} .item-name{font-weight:700;font-size:1rem;} .item-price{float:right;font-weight:700;}';
+  html += '.item-desc{font-size:0.85rem;color:#555;margin-top:2px;} .item-tag{font-size:0.75rem;color:#888;font-style:italic;}';
+  html += '<\/style><\/head><body>';
+  html += '<h1>The Brewhouse<br><small style="font-weight:normal;font-size:0.7em;">Today\'s Specials<\/small><\/h1>';
+  specials.forEach(function(s) {
+    html += '<div class="item"><span class="item-name">' + escHtml(s.name) + '<\/span>';
+    if (s.price) html += '<span class="item-price">' + escHtml(s.price) + '<\/span>';
+    html += '<br>';
+    if (s.desc) html += '<div class="item-desc">' + escHtml(s.desc) + '<\/div>';
+    if (s.tag) html += '<div class="item-tag">' + escHtml(s.tag) + '<\/div>';
+    html += '<\/div>';
+  });
+  html += '<\/body><\/html>';
+  win.document.write(html);
+  win.document.close();
+  win.print();
+}
+
+renderSpecials();
+
 </script>
 
 </body>
