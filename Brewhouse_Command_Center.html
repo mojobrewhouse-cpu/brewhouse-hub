@@ -354,7 +354,7 @@
 
     <!-- TOAST SALES DATA -->
     <div class="panel">
-      <div class="panel-head"><span class="panel-title">📊 Toast Sales — Sun March 29</span><span class="badge ok">Yesterday's Performance</span></div>
+      <div class="panel-head"><span class="panel-title" id="toast-sales-title">📊 Toast Sales — Loading...</span><span class="badge ok">Yesterday's Performance</span></div>
       <div class="panel-body">
         <div class="data-row"><span class="data-key">Gross Sales</span><span class="data-val amber">$7,610.19</span></div>
         <div class="data-row"><span class="data-key">Net Sales</span><span class="data-val green">$7,399.19</span></div>
@@ -1019,6 +1019,49 @@ fetch('data.json?t=' + Date.now())
       renderGoogleAds(d.googleAds);
       renderYelpAds(d.yelpAds);
       loadReservations(d.reservations);
+      // Dynamic Toast sales updates from data.json
+      if (d.toast) {
+        var t = d.toast;
+        // Update headline banner
+        var hl = document.getElementById('brief-headline-text');
+        if (hl && t.headline) hl.textContent = t.headline;
+        var hls = document.getElementById('brief-headline-sub');
+        if (hls && t.headlineSub) hls.textContent = t.date + ' · ' + t.headlineSub;
+        // Update sales panel title
+        var spt = document.getElementById('toast-sales-title');
+        if (spt && t.date) spt.textContent = '📊 Toast Sales — ' + t.date;
+        // Update sales strip
+        var bsNet = document.getElementById('bs-net');
+        if (bsNet && t.net) bsNet.textContent = t.net;
+        var bsNetSub = document.getElementById('bs-net-sub');
+        if (bsNetSub && t.date) bsNetSub.textContent = t.date;
+        var bsCovers = document.getElementById('bs-covers');
+        if (bsCovers && t.guests) bsCovers.textContent = t.guests;
+        var bsCoversSub = document.getElementById('bs-covers-sub');
+        if (bsCoversSub && t.avgPerGuest) bsCoversSub.textContent = t.avgPerGuest + ' avg/guest';
+        var bsLabor = document.getElementById('bs-labor');
+        if (bsLabor && t.laborPct) {
+          var lp = parseFloat(t.laborPct);
+          bsLabor.textContent = t.laborPct;
+          bsLabor.className = 'ss-val ' + (lp <= 25 ? 'green' : lp <= 35 ? 'amber' : 'red');
+          var bsLaborSub = document.getElementById('bs-labor-sub');
+          if (bsLaborSub) bsLaborSub.textContent = lp <= 25 ? '✓ Under 25% target' : lp <= 35 ? '⚠ Above 25% target' : '⚠ High labor';
+        }
+        // Update detailed sales rows
+        var salesBody = document.getElementById('toast-sales-title');
+        if (salesBody) {
+          var panel = salesBody.closest('.panel');
+          if (panel) {
+            var rows = panel.querySelectorAll('.data-row');
+            var map = {'Gross Sales': t.gross, 'Net Sales': t.net, 'Guests': String(t.guests), 'Total Orders': String(t.orders), 'Avg Sales / Guest': t.avgPerGuest, 'Labor % (of Net)': t.laborPct, 'Discount % (of Gross)': t.discountPct, 'Refund Total': t.refunds};
+            rows.forEach(function(row) {
+              var key = row.querySelector('.data-key');
+              var val = row.querySelector('.data-val');
+              if (key && val && map[key.textContent.trim()]) val.textContent = map[key.textContent.trim()];
+            });
+          }
+        }
+      }
       console.log('All panels loaded successfully');
     } catch(renderErr) {
       console.error('Staff render error:', renderErr);
