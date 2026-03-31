@@ -246,6 +246,27 @@ body {
   cursor: pointer; padding: 4px 6px;
 }
 
+/* ── RESERVATION MODAL ── */
+.rez-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
+.rez-modal-overlay.active { display: flex; }
+.rez-modal { background: var(--card); border: 1px solid var(--accent); border-radius: 12px; width: 380px; max-width: 95vw; max-height: 90vh; overflow-y: auto; }
+.rez-modal-head { background: #1e1408; padding: 14px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.rez-modal-title { font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+.rez-modal-close { background: none; border: none; color: var(--muted); font-size: 1.2rem; cursor: pointer; padding: 4px 8px; }
+.rez-modal-body { padding: 16px 18px; }
+.rez-field { margin-bottom: 12px; }
+.rez-field label { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.rez-field input, .rez-field select, .rez-field textarea { width: 100%; padding: 8px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; color: var(--text); font-size: 13px; font-family: inherit; }
+.rez-field input:focus, .rez-field select:focus, .rez-field textarea:focus { outline: none; border-color: var(--accent); }
+.rez-field textarea { resize: vertical; min-height: 50px; }
+.rez-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rez-modal-actions { display: flex; gap: 8px; margin-top: 16px; }
+.rez-btn { flex: 1; padding: 10px; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+.rez-btn.save { background: var(--accent); color: #140e04; }
+.rez-btn.cancel { background: var(--border); color: var(--muted); }
+.rez-btn.delete { background: rgba(224,82,82,0.15); color: var(--red); }
+.rez-add-btn { display: block; width: 100%; padding: 10px; margin-top: 10px; background: var(--accent); color: #140e04; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+
 /* ── SAVED SPECIALS LIBRARY ── */
 .saved-toggle {
   display: flex;
@@ -468,6 +489,61 @@ body {
 
 </div>
 
+<!-- RESERVATION MODAL -->
+<div class="rez-modal-overlay" id="rez-modal-overlay">
+  <div class="rez-modal">
+    <div class="rez-modal-head">
+      <span class="rez-modal-title" id="rez-modal-title">Add Reservation</span>
+      <button class="rez-modal-close" onclick="closeRezModal()">&times;</button>
+    </div>
+    <div class="rez-modal-body">
+      <input type="hidden" id="rez-edit-id" value="">
+      <div class="rez-field">
+        <label>Guest Name *</label>
+        <input type="text" id="rez-name" placeholder="e.g. Mary Liming">
+      </div>
+      <div class="rez-field-row">
+        <div class="rez-field">
+          <label>Date *</label>
+          <input type="date" id="rez-date">
+        </div>
+        <div class="rez-field">
+          <label>Time *</label>
+          <input type="time" id="rez-time">
+        </div>
+      </div>
+      <div class="rez-field-row">
+        <div class="rez-field">
+          <label>Party Size *</label>
+          <input type="number" id="rez-guests" min="1" max="100" placeholder="2">
+        </div>
+        <div class="rez-field">
+          <label>Source</label>
+          <select id="rez-source">
+            <option value="Phone">Phone Call</option>
+            <option value="SpotHopper">SpotHopper</option>
+            <option value="Yelp">Yelp</option>
+            <option value="Walk-in">Walk-in Request</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="rez-field">
+        <label>Phone Number</label>
+        <input type="tel" id="rez-phone" placeholder="(805) 555-1234">
+      </div>
+      <div class="rez-field">
+        <label>Notes</label>
+        <textarea id="rez-notes" placeholder="Birthday, back room, allergies, dog, etc."></textarea>
+      </div>
+      <div class="rez-modal-actions" id="rez-modal-actions">
+        <button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button>
+        <button class="rez-btn save" onclick="saveReservation()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <div class="bar-footer">
   Auto-refreshes every 2 min · <a href="Brewhouse_Command_Center.html">Full Dashboard</a> · <a href="Brewhouse_Staff_Hub.html">Staff Hub</a>
@@ -493,69 +569,202 @@ setInterval(updateClock, 15000);
 function esc(t) { var d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
 
 // ===== RESERVATIONS =====
+var allBarReservations = [];
+
+function formatDateDisplay(isoDate) {
+  if (!isoDate) return '';
+  var d = new Date(isoDate + 'T12:00:00');
+  var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate();
+}
+
+function formatTime12(time24) {
+  if (!time24) return '';
+  if (time24.includes('AM') || time24.includes('PM')) return time24;
+  var parts = time24.split(':');
+  var h = parseInt(parts[0]), m = parts[1] || '00';
+  var ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  return h + ':' + m + ' ' + ampm;
+}
+
 function renderReservations(rezData) {
   var body = document.getElementById('rez-body');
   var badge = document.getElementById('rez-badge');
-
-  if (!rezData || !rezData.today) {
-    body.innerHTML = '<div class="no-data">No reservation data available</div>';
-    badge.textContent = '—';
-    badge.className = 'card-badge';
-    return;
-  }
+  var today = new Date().toISOString().split('T')[0];
 
   // Merge data.json reservations with localStorage manual entries
-  var bookings = (rezData.today.bookings || []).slice();
+  var byId = {};
 
-  // Load manual reservations from localStorage
-  try {
-    var manual = JSON.parse(localStorage.getItem('brewhouse_manual_reservations') || '[]');
-    var deleted = JSON.parse(localStorage.getItem('brewhouse_deleted_reservations') || '[]');
-    var today = new Date().toISOString().split('T')[0];
-    manual.forEach(function(m) {
-      if (m.date === today && deleted.indexOf(m.id) === -1) {
-        bookings.push(m);
-      }
+  // Add data.json bookings for today
+  if (rezData && rezData.today && rezData.today.bookings) {
+    rezData.today.bookings.forEach(function(b) {
+      var id = b.id || ('dj_' + b.name + '_' + b.time);
+      b.id = id;
+      b.dateISO = today;
+      byId[id] = b;
     });
-    // Filter out deleted data.json entries
-    bookings = bookings.filter(function(b) {
-      return deleted.indexOf(b.id || b.name + b.time) === -1;
-    });
-  } catch(e) {}
-
-  // Sort by time
-  bookings.sort(function(a, b) {
-    return (a.time || '').localeCompare(b.time || '');
-  });
-
-  var totalGuests = 0;
-  bookings.forEach(function(b) { totalGuests += (b.guests || 0); });
-
-  badge.textContent = bookings.length + ' booked · ' + totalGuests + ' guests';
-  badge.className = 'card-badge' + (bookings.length > 0 ? ' green' : '');
-
-  if (!bookings.length) {
-    body.innerHTML = '<div class="no-data">No reservations for today</div>';
-    return;
   }
 
-  var html = '';
-  bookings.forEach(function(b) {
-    html += '<div class="rez-item">';
-    html += '<div class="rez-time">' + esc(b.time || '—') + '</div>';
-    html += '<div class="rez-details">';
-    html += '<div class="rez-name">' + esc(b.name || 'Guest') + '</div>';
-    var meta = [];
-    if (b.source) meta.push(b.source);
-    if (b.phone) meta.push(b.phone);
-    if (b.notes) meta.push(b.notes);
-    if (b.status && b.status !== 'confirmed') meta.push(b.status);
-    if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' · ')) + '</div>';
-    html += '</div>';
-    html += '<div><div class="rez-guests">' + (b.guests || '?') + '</div><span class="rez-guests-label">guests</span></div>';
-    html += '</div>';
+  // Add upcoming from data.json
+  if (rezData && rezData.upcoming) {
+    rezData.upcoming.forEach(function(b) {
+      var id = b.id || ('dj_' + b.name + '_' + b.time);
+      b.id = id;
+      byId[id] = b;
+    });
+  }
+
+  // Merge localStorage manual reservations (shared with main dashboard)
+  try {
+    var manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]');
+    manual.forEach(function(m) { byId[m.id] = m; });
+  } catch(e) {}
+
+  // Remove deleted entries
+  try {
+    var deleted = JSON.parse(localStorage.getItem('brewhouse_rez_deleted') || '[]');
+    deleted.forEach(function(id) { delete byId[id]; });
+  } catch(e) {}
+
+  allBarReservations = Object.values(byId);
+  allBarReservations.sort(function(a, b) {
+    var da = a.dateISO || today, db = b.dateISO || today;
+    if (da !== db) return da < db ? -1 : 1;
+    return (a.time || '') < (b.time || '') ? -1 : 1;
   });
+
+  // Filter: today's bookings
+  var todayBookings = allBarReservations.filter(function(r) { return r.dateISO === today; });
+  var upcomingBookings = allBarReservations.filter(function(r) { return r.dateISO > today; });
+
+  var totalGuests = 0;
+  todayBookings.forEach(function(b) { totalGuests += (parseInt(b.guests) || 0); });
+
+  badge.textContent = todayBookings.length + ' booked · ' + totalGuests + ' guests';
+  badge.className = 'card-badge' + (todayBookings.length > 0 ? ' green' : '');
+
+  var html = '';
+
+  if (!todayBookings.length) {
+    html += '<div class="no-data">No reservations for today</div>';
+  } else {
+    todayBookings.forEach(function(b) {
+      html += '<div class="rez-item" onclick="editReservation(\'' + b.id + '\')" style="cursor:pointer;">';
+      html += '<div class="rez-time">' + esc(b.time || '—') + '</div>';
+      html += '<div class="rez-details">';
+      html += '<div class="rez-name">' + esc(b.name || 'Guest') + '</div>';
+      var meta = [];
+      if (b.source) meta.push(b.source);
+      if (b.phone) meta.push(b.phone);
+      if (b.notes) meta.push(b.notes);
+      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' · ')) + '</div>';
+      html += '</div>';
+      html += '<div><div class="rez-guests">' + (parseInt(b.guests) || '?') + '</div><span class="rez-guests-label">guests</span></div>';
+      html += '</div>';
+    });
+  }
+
+  // Upcoming reservations (next 3 days)
+  if (upcomingBookings.length) {
+    html += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);font-weight:600;">UPCOMING</div>';
+    upcomingBookings.slice(0, 5).forEach(function(b) {
+      html += '<div class="rez-item" onclick="editReservation(\'' + b.id + '\')" style="cursor:pointer;opacity:0.7;">';
+      html += '<div class="rez-time" style="font-size:11px;min-width:75px;">' + esc(formatDateDisplay(b.dateISO)) + '</div>';
+      html += '<div class="rez-details">';
+      html += '<div class="rez-name">' + esc(b.name || 'Guest') + ' @ ' + esc(b.time || '') + '</div>';
+      var meta = [];
+      if (b.source) meta.push(b.source);
+      if (b.guests) meta.push(b.guests + ' guests');
+      if (b.notes) meta.push(b.notes);
+      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' · ')) + '</div>';
+      html += '</div></div>';
+    });
+  }
+
+  html += '<button class="rez-add-btn" onclick="openAddRez()">+ Add Reservation</button>';
   body.innerHTML = html;
+}
+
+// ===== RESERVATION MODAL =====
+function openAddRez() {
+  document.getElementById('rez-modal-title').textContent = 'Add Reservation';
+  document.getElementById('rez-edit-id').value = '';
+  document.getElementById('rez-name').value = '';
+  document.getElementById('rez-date').value = new Date().toISOString().split('T')[0];
+  document.getElementById('rez-time').value = '18:00';
+  document.getElementById('rez-guests').value = '2';
+  document.getElementById('rez-source').value = 'Phone';
+  document.getElementById('rez-phone').value = '';
+  document.getElementById('rez-notes').value = '';
+  document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+  document.getElementById('rez-modal-overlay').classList.add('active');
+}
+
+function editReservation(id) {
+  var r = allBarReservations.find(function(x) { return x.id === id; });
+  if (!r) return;
+  document.getElementById('rez-modal-title').textContent = 'Edit Reservation';
+  document.getElementById('rez-edit-id').value = r.id;
+  document.getElementById('rez-name').value = r.name || '';
+  document.getElementById('rez-date').value = r.dateISO || '';
+  var t = r.time || '';
+  if (t.includes('AM') || t.includes('PM')) {
+    var tp = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+    if (tp) { var h = parseInt(tp[1]); if (tp[3].toUpperCase() === 'PM' && h !== 12) h += 12; if (tp[3].toUpperCase() === 'AM' && h === 12) h = 0; t = (h < 10 ? '0' : '') + h + ':' + tp[2]; }
+  }
+  document.getElementById('rez-time').value = t;
+  document.getElementById('rez-guests').value = r.guests || 2;
+  document.getElementById('rez-source').value = r.source || 'Phone';
+  document.getElementById('rez-phone').value = r.phone || '';
+  document.getElementById('rez-notes').value = r.notes || '';
+  document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn delete" onclick="deleteReservation(\'' + r.id + '\')">Delete</button><button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+  document.getElementById('rez-modal-overlay').classList.add('active');
+}
+
+function closeRezModal() {
+  document.getElementById('rez-modal-overlay').classList.remove('active');
+}
+
+function saveReservation() {
+  var name = document.getElementById('rez-name').value.trim();
+  var date = document.getElementById('rez-date').value;
+  var time = document.getElementById('rez-time').value;
+  var guests = parseInt(document.getElementById('rez-guests').value) || 2;
+  var source = document.getElementById('rez-source').value;
+  var phone = document.getElementById('rez-phone').value.trim();
+  var notes = document.getElementById('rez-notes').value.trim();
+  if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
+  var editId = document.getElementById('rez-edit-id').value;
+  var manual = [];
+  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
+  var id = editId || ('manual_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
+  var rez = { id: id, name: name, date: formatDateDisplay(date), dateISO: date, time: formatTime12(time), guests: guests, source: source, phone: phone, notes: notes, status: 'confirmed', addedBy: 'bar-dashboard', addedAt: new Date().toISOString() };
+  if (editId) {
+    var idx = -1;
+    for (var i = 0; i < manual.length; i++) { if (manual[i].id === editId) { idx = i; break; } }
+    if (idx >= 0) { manual[idx] = rez; } else { manual.push(rez); }
+  } else {
+    manual.push(rez);
+  }
+  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
+  closeRezModal();
+  loadData();
+}
+
+function deleteReservation(id) {
+  if (!confirm('Delete this reservation?')) return;
+  var manual = [];
+  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
+  manual = manual.filter(function(r) { return r.id !== id; });
+  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
+  var deleted = [];
+  try { deleted = JSON.parse(localStorage.getItem('brewhouse_rez_deleted') || '[]'); } catch(e) { deleted = []; }
+  if (deleted.indexOf(id) < 0) deleted.push(id);
+  localStorage.setItem('brewhouse_rez_deleted', JSON.stringify(deleted));
+  closeRezModal();
+  loadData();
 }
 
 // ===== STAFF =====
