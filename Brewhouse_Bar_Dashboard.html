@@ -188,6 +188,15 @@ body {
 
 .staff-name { font-size: 13px; font-weight: 600; color: var(--text); }
 .staff-role { font-size: 11px; color: var(--muted); }
+.staff-time {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  min-width: 65px;
+  text-align: right;
+}
 
 /* ── SPECIALS ── */
 .special-item {
@@ -350,8 +359,14 @@ body {
             <option value="GF">GF</option>
             <option value="Seasonal">Seasonal</option>
             <option value="BBQ">BBQ</option>
+            <option value="Bartender">Bartender</option>
+            <option value="Happy Hour">Happy Hour</option>
           </select>
           <button class="add-btn" onclick="addSpecial()">+ Add</button>
+        </div>
+        <div class="add-row" style="margin-top:6px;">
+          <button class="add-btn" onclick="printSpecials()" id="spec-print-btn" style="flex:1;background:var(--border);color:var(--text);display:none;">🖨 Print Specials Card</button>
+          <button class="add-btn" onclick="clearAllSpecials()" id="spec-clear-btn" style="width:80px;flex:none;background:var(--border);color:var(--red);display:none;">Clear All</button>
         </div>
       </div>
     </div>
@@ -509,7 +524,8 @@ function renderStaff(staffData) {
 
     html += '<div class="staff-row">';
     html += '<div class="staff-avatar ' + avatarClass + '">' + initials + '</div>';
-    html += '<div><div class="staff-name">' + esc(s.name) + '</div><div class="staff-role">' + esc(s.role || 'Staff') + '</div></div>';
+    html += '<div style="flex:1;"><div class="staff-name">' + esc(s.name) + '</div><div class="staff-role">' + esc(s.role || 'Staff') + '</div></div>';
+    if (s.start) html += '<div class="staff-time">' + esc(s.start) + '</div>';
     html += '</div>';
   });
 
@@ -535,22 +551,33 @@ function renderSpecials() {
 
   badge.textContent = specials.length + ' item' + (specials.length !== 1 ? 's' : '');
 
+  var printBtn = document.getElementById('spec-print-btn');
+  var clearBtn = document.getElementById('spec-clear-btn');
+
   if (!specials.length) {
     body.innerHTML = '';
     empty.style.display = 'block';
+    if (printBtn) printBtn.style.display = 'none';
+    if (clearBtn) clearBtn.style.display = 'none';
     return;
   }
   empty.style.display = 'none';
+  if (printBtn) printBtn.style.display = 'block';
+  if (clearBtn) clearBtn.style.display = 'block';
 
   var html = '';
   specials.forEach(function(s, i) {
-    html += '<div class="special-item">';
+    html += '<div class="special-item" style="position:relative;">';
     html += '<div class="special-head">';
     html += '<span class="special-name">' + esc(s.name) + '</span>';
     html += '<span class="special-price">' + esc(s.price || '') + '</span>';
     html += '</div>';
     if (s.desc) html += '<div class="special-desc">' + esc(s.desc) + '</div>';
-    if (s.tag) html += '<span class="special-tag">' + esc(s.tag) + '</span>';
+    var tagHtml = '';
+    if (s.tag) tagHtml += '<span class="special-tag">' + esc(s.tag) + '</span>';
+    html += '<div style="display:flex;justify-content:space-between;align-items:center;">' + tagHtml;
+    html += '<button onclick="removeSpecial(' + i + ')" style="background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;">remove</button>';
+    html += '</div>';
     html += '</div>';
   });
   body.innerHTML = html;
@@ -571,6 +598,49 @@ function addSpecial() {
   document.getElementById('spec-tag').value = '';
   document.getElementById('spec-name').focus();
   renderSpecials();
+}
+
+function removeSpecial(i) {
+  specials.splice(i, 1);
+  localStorage.setItem('brewhouse_specials', JSON.stringify(specials));
+  renderSpecials();
+}
+
+function clearAllSpecials() {
+  if (confirm('Clear all specials?')) {
+    specials = [];
+    localStorage.setItem('brewhouse_specials', JSON.stringify(specials));
+    renderSpecials();
+  }
+}
+
+function printSpecials() {
+  var win = window.open('', '_blank', 'width=400,height=600');
+  var html = '<!DOCTYPE html><html><head><style>';
+  html += 'body{font-family:Georgia,serif;padding:20px;max-width:350px;margin:0 auto;}';
+  html += 'h1{font-size:18px;text-align:center;border-bottom:2px solid #333;padding-bottom:8px;margin-bottom:12px;}';
+  html += 'h2{font-size:11px;text-align:center;color:#666;margin-bottom:16px;font-weight:normal;}';
+  html += '.item{margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid #ddd;}';
+  html += '.item:last-child{border-bottom:none;}';
+  html += '.name{font-size:15px;font-weight:700;}';
+  html += '.price{float:right;font-size:15px;font-weight:700;}';
+  html += '.desc{font-size:12px;color:#555;margin-top:3px;clear:both;}';
+  html += '.tag{font-size:10px;background:#eee;padding:1px 6px;border-radius:6px;display:inline-block;margin-top:3px;}';
+  html += '</style></head><body>';
+  html += '<h1>The Brewhouse</h1>';
+  html += '<h2>Today\'s Specials — ' + new Date().toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}) + '</h2>';
+  specials.forEach(function(s) {
+    html += '<div class="item">';
+    if (s.price) html += '<span class="price">' + esc(s.price) + '</span>';
+    html += '<span class="name">' + esc(s.name) + '</span>';
+    if (s.desc) html += '<div class="desc">' + esc(s.desc) + '</div>';
+    if (s.tag) html += '<span class="tag">' + esc(s.tag) + '</span>';
+    html += '</div>';
+  });
+  html += '</body></html>';
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 300);
 }
 
 renderSpecials();
