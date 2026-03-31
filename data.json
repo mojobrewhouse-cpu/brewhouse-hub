@@ -173,12 +173,33 @@
   },
   "reservations": {
     "lastUpdated": "2026-03-31",
-    "source": "All Sources",
+    "source": "SpotHopper",
     "today": {
       "date": "Tue, Mar 31",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 4,
+      "bookings": [
+        {
+          "time": "4:30 PM",
+          "name": "Janet Rodriguez",
+          "guests": 4,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(323) 898-1568",
+          "notes": "Birthday dinner for mom. Small dog. Outside seating."
+        }
+      ]
     },
-    "upcoming": []
+    "upcoming": [
+      {
+        "date": "Sat, Apr 4",
+        "time": "5:15 PM",
+        "name": "Robb McDaniels",
+        "guests": 9,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(415) 990-8650",
+        "notes": "Updated to 9 guests (incl toddler/high chair). May arrive ~5:30. CEO Beatport Group."
+      }
+    ]
   }
 }
