@@ -246,6 +246,75 @@ body {
   cursor: pointer; padding: 4px 6px;
 }
 
+/* ── SAVED SPECIALS LIBRARY ── */
+.saved-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  cursor: pointer;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.saved-toggle span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--amber);
+}
+.saved-toggle .arrow {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform 0.2s;
+}
+.saved-toggle .arrow.open { transform: rotate(90deg); }
+.saved-list { display: none; }
+.saved-list.open { display: block; }
+.saved-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  margin-bottom: 4px;
+  background: rgba(200,134,10,0.06);
+  border: 1px solid rgba(200,134,10,0.15);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.saved-item:active { background: rgba(200,134,10,0.15); }
+.saved-item .si-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.saved-item .si-price {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: 600;
+}
+.saved-item .si-tag {
+  font-size: 9px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: var(--border);
+  color: var(--accent);
+}
+.saved-item .si-del {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 10px;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.saved-item .si-del:hover { color: var(--red); }
+.saved-empty {
+  font-size: 11px;
+  color: var(--muted);
+  padding: 6px 0;
+  text-align: center;
+}
+
 /* ── ADD FORMS ── */
 .add-row {
   display: flex;
@@ -367,6 +436,15 @@ body {
         <div class="add-row" style="margin-top:6px;">
           <button class="add-btn" onclick="printSpecials()" id="spec-print-btn" style="flex:1;background:var(--border);color:var(--text);display:none;">🖨 Print Specials Card</button>
           <button class="add-btn" onclick="clearAllSpecials()" id="spec-clear-btn" style="width:80px;flex:none;background:var(--border);color:var(--red);display:none;">Clear All</button>
+        </div>
+        <!-- SAVED SPECIALS LIBRARY -->
+        <div class="saved-toggle" onclick="toggleSavedSpecials()">
+          <span>⭐ Saved Specials</span>
+          <span class="arrow" id="saved-arrow">▶</span>
+        </div>
+        <div class="saved-list" id="saved-list">
+          <div id="saved-body"></div>
+          <div id="saved-empty" class="saved-empty">No saved specials yet. Add a special above and tap ★ to save it.</div>
         </div>
       </div>
     </div>
@@ -576,8 +654,10 @@ function renderSpecials() {
     var tagHtml = '';
     if (s.tag) tagHtml += '<span class="special-tag">' + esc(s.tag) + '</span>';
     html += '<div style="display:flex;justify-content:space-between;align-items:center;">' + tagHtml;
+    html += '<div>';
+    html += '<button onclick="event.stopPropagation();saveToLibrary(' + i + ')" style="background:none;border:none;color:var(--amber);font-size:11px;cursor:pointer;padding:2px 6px;" title="Save to library">★ save</button>';
     html += '<button onclick="removeSpecial(' + i + ')" style="background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;">remove</button>';
-    html += '</div>';
+    html += '</div></div>';
     html += '</div>';
   });
   body.innerHTML = html;
@@ -644,6 +724,86 @@ function printSpecials() {
 }
 
 renderSpecials();
+
+// ===== SAVED SPECIALS LIBRARY =====
+var savedSpecials = JSON.parse(localStorage.getItem('brewhouse_saved_specials') || '[]');
+
+function toggleSavedSpecials() {
+  var list = document.getElementById('saved-list');
+  var arrow = document.getElementById('saved-arrow');
+  var isOpen = list.classList.contains('open');
+  if (isOpen) {
+    list.classList.remove('open');
+    arrow.classList.remove('open');
+  } else {
+    list.classList.add('open');
+    arrow.classList.add('open');
+    renderSavedSpecials();
+  }
+}
+
+function renderSavedSpecials() {
+  var body = document.getElementById('saved-body');
+  var empty = document.getElementById('saved-empty');
+  if (!savedSpecials.length) {
+    body.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  var html = '';
+  savedSpecials.forEach(function(s, i) {
+    html += '<div class="saved-item" onclick="loadFromLibrary(' + i + ')">';
+    html += '<span class="si-name">' + esc(s.name) + '</span>';
+    if (s.tag) html += '<span class="si-tag">' + esc(s.tag) + '</span>';
+    if (s.price) html += '<span class="si-price">' + esc(s.price) + '</span>';
+    html += '<button class="si-del" onclick="event.stopPropagation();removeFromLibrary(' + i + ')" title="Remove from saved">✕</button>';
+    html += '</div>';
+  });
+  body.innerHTML = html;
+}
+
+function saveToLibrary(i) {
+  var s = specials[i];
+  if (!s) return;
+  // Check for duplicates by name
+  var exists = savedSpecials.some(function(sv) { return sv.name.toLowerCase() === s.name.toLowerCase(); });
+  if (exists) {
+    // Flash a quick confirmation anyway
+    alert('\"' + s.name + '\" is already in your saved specials.');
+    return;
+  }
+  savedSpecials.push({name: s.name, price: s.price, desc: s.desc, tag: s.tag});
+  localStorage.setItem('brewhouse_saved_specials', JSON.stringify(savedSpecials));
+  // Open the saved list to show it was added
+  var list = document.getElementById('saved-list');
+  var arrow = document.getElementById('saved-arrow');
+  list.classList.add('open');
+  arrow.classList.add('open');
+  renderSavedSpecials();
+}
+
+function loadFromLibrary(i) {
+  var s = savedSpecials[i];
+  if (!s) return;
+  // Check if already on today's specials
+  var alreadyActive = specials.some(function(sp) { return sp.name.toLowerCase() === s.name.toLowerCase(); });
+  if (alreadyActive) {
+    alert('\"' + s.name + '\" is already on today\'s specials.');
+    return;
+  }
+  specials.push({name: s.name, price: s.price, desc: s.desc, tag: s.tag, added: new Date().toISOString()});
+  localStorage.setItem('brewhouse_specials', JSON.stringify(specials));
+  renderSpecials();
+}
+
+function removeFromLibrary(i) {
+  savedSpecials.splice(i, 1);
+  localStorage.setItem('brewhouse_saved_specials', JSON.stringify(savedSpecials));
+  renderSavedSpecials();
+}
+
+renderSavedSpecials();
 
 // ===== 86 BOARD =====
 var eightysixed = JSON.parse(localStorage.getItem('brewhouse_86') || '[]');
