@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Brewhouse">
+  <meta name="theme-color" content="#c8860a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <title>Brewhouse Command Center</title>
   <style>
     :root {
@@ -1022,6 +1028,13 @@ function updateRefreshBadge() {
 setInterval(refreshReservations, REZ_REFRESH_MINUTES * 60 * 1000);
 // Show initial refresh time
 setTimeout(updateRefreshBadge, 500);
+
+// Register service worker for PWA
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(function() {
+    console.log('Service worker registered');
+  }).catch(function(e) { console.log('SW registration failed:', e); });
+}
 </script>
 
 </body>
