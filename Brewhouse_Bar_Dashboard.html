@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bar Dash">
+<link rel="apple-touch-icon" href="/brewhouse-hub/icon-192.png">
+<link rel="manifest" href="/brewhouse-hub/manifest-bar.json">
+<meta name="theme-color" content="#c8860a">
 <title>Bar Dashboard — The Brewhouse</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -655,6 +659,13 @@ document.getElementById('spec-price').addEventListener('keydown', function(e) {
 document.getElementById('eightysix-input').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') add86();
 });
+
+// ===== PWA SERVICE WORKER =====
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(function() {
+    console.log('SW registered');
+  }).catch(function(e) { console.log('SW error:', e); });
+}
 </script>
 
 </body>
