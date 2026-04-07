@@ -589,7 +589,7 @@ function formatTime12(time24) {
   return h + ':' + m + ' ' + ampm;
 }
 
-var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF72kjfNpcFtD5s1_p9vRq25Llbskgf8YbPXh-0hvWVExIQ/exec';
+var REZ_API = 'https://script.google.com/macros/s/AKfycbwdRDJhFp9hzxf1EUKdmfuBnLrz8MvkdETNaxmTwhjf7JIsz3PDlL4PJyjSfW7yA9iciQ/exec';
 
     function syncFromAPI() {
         fetch(REZ_API)
@@ -597,7 +597,7 @@ var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF7
             .then(function(data) {
                 if (data.success && data.reservations) {
                     var apiRez = data.reservations.map(function(r) {
-                        return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: Number(r.guests)||2, source: r.source||'Manual', phone: r.phone||'', notes: r.notes||'' };
+                        return { id: r.id, name: r.name, dateISO: String(r.date||r.dateISO||'').split('T')[0], time24: r.time||r.time24||'', time: r.time||r.time24||'', guests: Number(r.guests)||2, source: r.source||'Manual', phone: r.phone||'', notes: r.notes||'' };
                     });
                     localStorage.setItem('bh_bartender_rez', JSON.stringify(apiRez));
                     renderReservations();
@@ -633,7 +633,13 @@ var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF7
     });
   }
 
-  // Merge localStorage manual reservations (shared with main dashboard)
+  // Merge API-synced reservations (from Google Sheets backend)
+  try {
+    var apiRez = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]');
+    apiRez.forEach(function(m) { byId[m.id] = m; });
+  } catch(e) {}
+
+  // Merge old localStorage manual reservations (legacy fallback)
   try {
     var manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]');
     manual.forEach(function(m) { byId[m.id] = m; });
@@ -755,12 +761,12 @@ function saveReservation() {
         if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
         var editId = document.getElementById('rez-edit-id').value;
         var id = editId || ('rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
-        var rez = { id: id, name: name, dateISO: date, time24: time, guests: guests, source: source, phone: phone, notes: notes };
+        var rez = { id: id, name: name, dateISO: date, time24: time, time: time, date: date, guests: guests, source: source, phone: phone, notes: notes };
         var action = editId ? 'update' : 'add';
         fetch(REZ_API, {
             method: 'POST',
             headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify({ action: action, reservation: rez })
+            body: JSON.stringify({ action: action, id: id, name: name, date: date, time: time, guests: guests, source: source, phone: phone, notes: notes })
         }).then(function() { syncFromAPI(); })
           .catch(function(e) { console.log('Save sync error:', e); });
         var cached = [];
