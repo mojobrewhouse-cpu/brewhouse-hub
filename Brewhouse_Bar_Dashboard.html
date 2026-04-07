@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="/brewhouse-hub/icon-192.png">
 <link rel="manifest" href="/brewhouse-hub/manifest-bar.json">
 <meta name="theme-color" content="#c8860a">
-<title>Bar Dashboard — The Brewhouse</title>
+<title>Bar Dashboard â The Brewhouse</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
@@ -35,7 +35,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ── HEADER ── */
+/* ââ HEADER ââ */
 .bar-header {
   background: linear-gradient(135deg, #1a1209 0%, #2c1f0e 100%);
   border-bottom: 3px solid var(--accent);
@@ -68,7 +68,7 @@ body {
 .bar-header .clock .time { font-size: 22px; font-weight: 700; color: var(--text); }
 .bar-header .clock .date { font-size: 10px; color: var(--muted); }
 
-/* ── GRID ── */
+/* ââ GRID ââ */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,7 +82,7 @@ body {
   .grid { grid-template-columns: 1fr; }
 }
 
-/* ── CARDS ── */
+/* ââ CARDS ââ */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -119,7 +119,7 @@ body {
 
 .card-body { padding: 10px 14px; }
 
-/* ── RESERVATIONS ── */
+/* ââ RESERVATIONS ââ */
 .rez-item {
   display: flex;
   align-items: center;
@@ -160,7 +160,7 @@ body {
   font-size: 13px;
 }
 
-/* ── STAFF LIST ── */
+/* ââ STAFF LIST ââ */
 .staff-row {
   display: flex;
   align-items: center;
@@ -198,7 +198,7 @@ body {
   text-align: right;
 }
 
-/* ── SPECIALS ── */
+/* ââ SPECIALS ââ */
 .special-item {
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--border);
@@ -227,7 +227,7 @@ body {
   font-weight: 600;
 }
 
-/* ── 86 BOARD ── */
+/* ââ 86 BOARD ââ */
 .eightysix-item {
   display: flex;
   align-items: center;
@@ -246,7 +246,7 @@ body {
   cursor: pointer; padding: 4px 6px;
 }
 
-/* ── RESERVATION MODAL ── */
+/* ââ RESERVATION MODAL ââ */
 .rez-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 1000; align-items: center; justify-content: center; }
 .rez-modal-overlay.active { display: flex; }
 .rez-modal { background: var(--card); border: 1px solid var(--accent); border-radius: 12px; width: 380px; max-width: 95vw; max-height: 90vh; overflow-y: auto; }
@@ -267,7 +267,7 @@ body {
 .rez-btn.delete { background: rgba(224,82,82,0.15); color: var(--red); }
 .rez-add-btn { display: block; width: 100%; padding: 10px; margin-top: 10px; background: var(--accent); color: #140e04; border: none; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
 
-/* ── SAVED SPECIALS LIBRARY ── */
+/* ââ SAVED SPECIALS LIBRARY ââ */
 .saved-toggle {
   display: flex;
   align-items: center;
@@ -336,7 +336,7 @@ body {
   text-align: center;
 }
 
-/* ── ADD FORMS ── */
+/* ââ ADD FORMS ââ */
 .add-row {
   display: flex;
   gap: 6px;
@@ -367,7 +367,7 @@ body {
 .add-btn:active { opacity: 0.8; }
 .add-btn.red-btn { background: var(--red); color: #fff; }
 
-/* ── FOOTER ── */
+/* ââ FOOTER ââ */
 .bar-footer {
   text-align: center;
   padding: 12px;
@@ -378,7 +378,7 @@ body {
 }
 .bar-footer a { color: var(--accent); text-decoration: none; }
 
-/* ── FULL WIDTH CARD ── */
+/* ââ FULL WIDTH CARD ââ */
 .full-width { grid-column: 1 / -1; }
 
 /* Auto-refresh pulse */
@@ -393,7 +393,7 @@ body {
   <div class="logo">BH</div>
   <div class="title">
     <h1>BAR DASHBOARD</h1>
-    <p>The Brewhouse — Santa Barbara</p>
+    <p>The Brewhouse â Santa Barbara</p>
   </div>
   <div class="clock">
     <div class="time" id="clock-time">--:--</div>
@@ -407,7 +407,7 @@ body {
   <!-- RESERVATIONS -->
   <div class="card">
     <div class="card-head">
-      <span class="card-title">📅 Today's Reservations</span>
+      <span class="card-title">ð Today's Reservations</span>
       <span class="card-badge" id="rez-badge">Loading</span>
     </div>
     <div class="card-body" id="rez-body">
@@ -418,7 +418,7 @@ body {
   <!-- STAFF ON SHIFT -->
   <div class="card">
     <div class="card-head">
-      <span class="card-title">👥 Staff Today</span>
+      <span class="card-title">ð¥ Staff Today</span>
       <span class="card-badge" id="staff-badge">Loading</span>
     </div>
     <div class="card-body" id="staff-body">
@@ -429,7 +429,7 @@ body {
   <!-- TODAY'S SPECIALS -->
   <div class="card">
     <div class="card-head">
-      <span class="card-title">🍽️ Today's Specials</span>
+      <span class="card-title">ð½ï¸ Today's Specials</span>
       <span class="card-badge" id="specials-badge">0</span>
     </div>
     <div class="card-body">
@@ -455,17 +455,17 @@ body {
           <button class="add-btn" onclick="addSpecial()">+ Add</button>
         </div>
         <div class="add-row" style="margin-top:6px;">
-          <button class="add-btn" onclick="printSpecials()" id="spec-print-btn" style="flex:1;background:var(--border);color:var(--text);display:none;">🖨 Print Specials Card</button>
+          <button class="add-btn" onclick="printSpecials()" id="spec-print-btn" style="flex:1;background:var(--border);color:var(--text);display:none;">ð¨ Print Specials Card</button>
           <button class="add-btn" onclick="clearAllSpecials()" id="spec-clear-btn" style="width:80px;flex:none;background:var(--border);color:var(--red);display:none;">Clear All</button>
         </div>
         <!-- SAVED SPECIALS LIBRARY -->
         <div class="saved-toggle" onclick="toggleSavedSpecials()">
-          <span>⭐ Saved Specials</span>
-          <span class="arrow" id="saved-arrow">▶</span>
+          <span>â­ Saved Specials</span>
+          <span class="arrow" id="saved-arrow">â¶</span>
         </div>
         <div class="saved-list" id="saved-list">
           <div id="saved-body"></div>
-          <div id="saved-empty" class="saved-empty">No saved specials yet. Add a special above and tap ★ to save it.</div>
+          <div id="saved-empty" class="saved-empty">No saved specials yet. Add a special above and tap â to save it.</div>
         </div>
       </div>
     </div>
@@ -474,12 +474,12 @@ body {
   <!-- 86 BOARD -->
   <div class="card">
     <div class="card-head">
-      <span class="card-title">🚫 86'd Items</span>
+      <span class="card-title">ð« 86'd Items</span>
       <span class="card-badge red" id="eightysix-badge">0</span>
     </div>
     <div class="card-body">
       <div id="eightysix-body"></div>
-      <div id="eightysix-empty" class="no-data">Nothing 86'd — all clear</div>
+      <div id="eightysix-empty" class="no-data">Nothing 86'd â all clear</div>
       <div class="add-row" style="margin-top:8px;">
         <input type="text" class="add-input" id="eightysix-input" placeholder="Item to 86">
         <button class="add-btn red-btn" onclick="add86()">86 It</button>
@@ -546,7 +546,7 @@ body {
 
 <!-- FOOTER -->
 <div class="bar-footer">
-  Auto-refreshes every 2 min · <a href="Brewhouse_Command_Center.html">Full Dashboard</a> · <a href="Brewhouse_Staff_Hub.html">Staff Hub</a>
+  Auto-refreshes every 2 min Â· <a href="Brewhouse_Command_Center.html">Full Dashboard</a> Â· <a href="Brewhouse_Staff_Hub.html">Staff Hub</a>
 </div>
 
 <script>
@@ -589,7 +589,24 @@ function formatTime12(time24) {
   return h + ':' + m + ' ' + ampm;
 }
 
-function renderReservations(rezData) {
+var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF72kjfNpcFtD5s1_p9vRq25Llbskgf8YbPXh-0hvWVExIQ/exec';
+
+    function syncFromAPI() {
+        fetch(REZ_API)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (data.success && data.reservations) {
+                    var apiRez = data.reservations.map(function(r) {
+                        return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: Number(r.guests)||2, source: r.source||'Manual', phone: r.phone||'', notes: r.notes||'' };
+                    });
+                    localStorage.setItem('bh_bartender_rez', JSON.stringify(apiRez));
+                    renderReservations();
+                }
+            })
+            .catch(function(e) { console.log('Rez API sync error:', e); });
+    }
+
+    function renderReservations(rezData) {
   var body = document.getElementById('rez-body');
   var badge = document.getElementById('rez-badge');
   var today = new Date().toISOString().split('T')[0];
@@ -642,7 +659,7 @@ function renderReservations(rezData) {
   var totalGuests = 0;
   todayBookings.forEach(function(b) { totalGuests += (parseInt(b.guests) || 0); });
 
-  badge.textContent = todayBookings.length + ' booked · ' + totalGuests + ' guests';
+  badge.textContent = todayBookings.length + ' booked Â· ' + totalGuests + ' guests';
   badge.className = 'card-badge' + (todayBookings.length > 0 ? ' green' : '');
 
   var html = '';
@@ -652,14 +669,14 @@ function renderReservations(rezData) {
   } else {
     todayBookings.forEach(function(b) {
       html += '<div class="rez-item" onclick="editReservation(\'' + b.id + '\')" style="cursor:pointer;">';
-      html += '<div class="rez-time">' + esc(b.time || '—') + '</div>';
+      html += '<div class="rez-time">' + esc(b.time || 'â') + '</div>';
       html += '<div class="rez-details">';
       html += '<div class="rez-name">' + esc(b.name || 'Guest') + '</div>';
       var meta = [];
       if (b.source) meta.push(b.source);
       if (b.phone) meta.push(b.phone);
       if (b.notes) meta.push(b.notes);
-      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' · ')) + '</div>';
+      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' Â· ')) + '</div>';
       html += '</div>';
       html += '<div><div class="rez-guests">' + (parseInt(b.guests) || '?') + '</div><span class="rez-guests-label">guests</span></div>';
       html += '</div>';
@@ -678,7 +695,7 @@ function renderReservations(rezData) {
       if (b.source) meta.push(b.source);
       if (b.guests) meta.push(b.guests + ' guests');
       if (b.notes) meta.push(b.notes);
-      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' · ')) + '</div>';
+      if (meta.length) html += '<div class="rez-meta">' + esc(meta.join(' Â· ')) + '</div>';
       html += '</div></div>';
     });
   }
@@ -728,44 +745,55 @@ function closeRezModal() {
 }
 
 function saveReservation() {
-  var name = document.getElementById('rez-name').value.trim();
-  var date = document.getElementById('rez-date').value;
-  var time = document.getElementById('rez-time').value;
-  var guests = parseInt(document.getElementById('rez-guests').value) || 2;
-  var source = document.getElementById('rez-source').value;
-  var phone = document.getElementById('rez-phone').value.trim();
-  var notes = document.getElementById('rez-notes').value.trim();
-  if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
-  var editId = document.getElementById('rez-edit-id').value;
-  var manual = [];
-  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
-  var id = editId || ('manual_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
-  var rez = { id: id, name: name, date: formatDateDisplay(date), dateISO: date, time: formatTime12(time), guests: guests, source: source, phone: phone, notes: notes, status: 'confirmed', addedBy: 'bar-dashboard', addedAt: new Date().toISOString() };
-  if (editId) {
-    var idx = -1;
-    for (var i = 0; i < manual.length; i++) { if (manual[i].id === editId) { idx = i; break; } }
-    if (idx >= 0) { manual[idx] = rez; } else { manual.push(rez); }
-  } else {
-    manual.push(rez);
-  }
-  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
-  closeRezModal();
-  loadData();
-}
+        var name = document.getElementById('rez-name').value.trim();
+        var date = document.getElementById('rez-date').value;
+        var time = document.getElementById('rez-time').value;
+        var guests = parseInt(document.getElementById('rez-guests').value) || 2;
+        var source = document.getElementById('rez-source').value;
+        var phone = document.getElementById('rez-phone').value.trim();
+        var notes = document.getElementById('rez-notes').value.trim();
+        if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
+        var editId = document.getElementById('rez-edit-id').value;
+        var id = editId || ('rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
+        var rez = { id: id, name: name, dateISO: date, time24: time, guests: guests, source: source, phone: phone, notes: notes };
+        var action = editId ? 'update' : 'add';
+        // Sync to shared API
+        fetch(REZ_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ action: action, reservation: rez })
+        }).then(function() { syncFromAPI(); })
+          .catch(function(e) { console.log('Save sync error:', e); });
+        // Also save locally for instant feedback
+        var cached = [];
+        try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+        if (editId) {
+            var idx = cached.findIndex(function(r) { return r.id === editId; });
+            if (idx >= 0) { cached[idx] = rez; } else { cached.push(rez); }
+        } else { cached.push(rez); }
+        localStorage.setItem('bh_bartender_rez', JSON.stringify(cached));
+        closeRezModal();
+        renderReservations();
+    }
 
 function deleteReservation(id) {
-  if (!confirm('Delete this reservation?')) return;
-  var manual = [];
-  try { manual = JSON.parse(localStorage.getItem('brewhouse_reservations') || '[]'); } catch(e) { manual = []; }
-  manual = manual.filter(function(r) { return r.id !== id; });
-  localStorage.setItem('brewhouse_reservations', JSON.stringify(manual));
-  var deleted = [];
-  try { deleted = JSON.parse(localStorage.getItem('brewhouse_rez_deleted') || '[]'); } catch(e) { deleted = []; }
-  if (deleted.indexOf(id) < 0) deleted.push(id);
-  localStorage.setItem('brewhouse_rez_deleted', JSON.stringify(deleted));
-  closeRezModal();
-  loadData();
-}
+        if (!confirm('Delete this reservation?')) return;
+        // Sync delete to shared API
+        fetch(REZ_API, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({ action: 'delete', id: id })
+        }).then(function() { syncFromAPI(); })
+          .catch(function(e) { console.log('Delete sync error:', e); });
+        // Remove locally for instant feedback
+        var cached = [];
+        try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+        cached = cached.filter(function(r) { return r.id !== id; });
+        localStorage.setItem('bh_bartender_rez', JSON.stringify(cached));
+        closeRezModal();
+        renderReservations();
+    syncFromAPI(); // Pull shared reservations from API on load
+    }
 
 // ===== STAFF =====
 function renderStaff(staffData) {
@@ -774,7 +802,7 @@ function renderStaff(staffData) {
 
   if (!staffData || !staffData.staff || !staffData.staff.length) {
     body.innerHTML = '<div class="no-data">No staff data available</div>';
-    badge.textContent = '—';
+    badge.textContent = 'â';
     return;
   }
 
@@ -820,8 +848,8 @@ function renderStaff(staffData) {
   if (staffData.hours) {
     html += '<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted);">';
     html += 'Total hours: ' + staffData.hours + 'h';
-    if (staffData.overtime > 0) html += ' · <span style="color:var(--red);">' + staffData.overtime + 'h OT</span>';
-    if (staffData.uncovered > 0) html += ' · <span style="color:var(--red);">' + staffData.uncovered + ' uncovered</span>';
+    if (staffData.overtime > 0) html += ' Â· <span style="color:var(--red);">' + staffData.overtime + 'h OT</span>';
+    if (staffData.uncovered > 0) html += ' Â· <span style="color:var(--red);">' + staffData.uncovered + ' uncovered</span>';
     html += '</div>';
   }
 
@@ -864,7 +892,7 @@ function renderSpecials() {
     if (s.tag) tagHtml += '<span class="special-tag">' + esc(s.tag) + '</span>';
     html += '<div style="display:flex;justify-content:space-between;align-items:center;">' + tagHtml;
     html += '<div>';
-    html += '<button onclick="event.stopPropagation();saveToLibrary(' + i + ')" style="background:none;border:none;color:var(--amber);font-size:11px;cursor:pointer;padding:2px 6px;" title="Save to library">★ save</button>';
+    html += '<button onclick="event.stopPropagation();saveToLibrary(' + i + ')" style="background:none;border:none;color:var(--amber);font-size:11px;cursor:pointer;padding:2px 6px;" title="Save to library">â save</button>';
     html += '<button onclick="removeSpecial(' + i + ')" style="background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;">remove</button>';
     html += '</div></div>';
     html += '</div>';
@@ -917,7 +945,7 @@ function printSpecials() {
   html += '.tag{font-size:10px;background:#eee;padding:1px 6px;border-radius:6px;display:inline-block;margin-top:3px;}';
   html += '</style></head><body>';
   html += '<h1>The Brewhouse</h1>';
-  html += '<h2>Today\'s Specials — ' + new Date().toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}) + '</h2>';
+  html += '<h2>Today\'s Specials â ' + new Date().toLocaleDateString('en-US', {weekday:'long', month:'long', day:'numeric'}) + '</h2>';
   specials.forEach(function(s) {
     html += '<div class="item">';
     if (s.price) html += '<span class="price">' + esc(s.price) + '</span>';
@@ -966,7 +994,7 @@ function renderSavedSpecials() {
     html += '<span class="si-name">' + esc(s.name) + '</span>';
     if (s.tag) html += '<span class="si-tag">' + esc(s.tag) + '</span>';
     if (s.price) html += '<span class="si-price">' + esc(s.price) + '</span>';
-    html += '<button class="si-del" onclick="event.stopPropagation();removeFromLibrary(' + i + ')" title="Remove from saved">✕</button>';
+    html += '<button class="si-del" onclick="event.stopPropagation();removeFromLibrary(' + i + ')" title="Remove from saved">â</button>';
     html += '</div>';
   });
   body.innerHTML = html;
@@ -1035,9 +1063,9 @@ function render86() {
   var html = '';
   eightysixed.forEach(function(item, i) {
     html += '<div class="eightysix-item">';
-    html += '<span class="eightysix-x">✕</span>';
+    html += '<span class="eightysix-x">â</span>';
     html += '<span class="eightysix-name">' + esc(item.name) + '</span>';
-    html += '<button class="eightysix-remove" onclick="remove86(' + i + ')" title="Back in stock">↩ Back</button>';
+    html += '<button class="eightysix-remove" onclick="remove86(' + i + ')" title="Back in stock">â© Back</button>';
     html += '</div>';
   });
   body.innerHTML = html;
