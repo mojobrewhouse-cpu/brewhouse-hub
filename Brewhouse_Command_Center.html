@@ -117,7 +117,7 @@ body {
   gap: 8px;
   align-items: center;
 }
-.bflag {
+      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 Payroll DUE TODAY — 3 action items</span>
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -125,9 +125,9 @@ body {
   white-space: nowrap;
   cursor: pointer;
 }
-.bflag-red    { background: #4a0e0e; color: #ff8a8a; border: 1px solid #c03030; }
-.bflag-yellow { background: #3a2800; color: #ffd060; border: 1px solid #c09020; }
-.bflag-green  { background: #0a3018; color: #60e080; border: 1px solid #20a040; }
+      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 1-star review (HP2026) 12 days unanswered</span>
+      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⭐ 6 Google reviews unanswered</span>
+      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⚠️ Net sales -21.6% vs last Sunday</span>
 
 /* Priority actions panel */
 .brief-actions {
@@ -1420,8 +1420,8 @@ body {
   <!-- Headline -->
   <div class="brief-headline">
     <div class="bh-left">
-      <h2 id="brief-headline-text">Thursday â $5,010 net, 194 guests, labor 16.4%</h2>
-      <p id="brief-headline-sub">Apr 2 Â· Net $5,010.70 Â· Gross $5,236.20 Â· 194 covers Â· Avg $25.83 Â· Labor 16.4% â under target Â· -3.7% vs last Thursday</p>
+      <h2 id="brief-headline-text">Sunday — $5,803 net, 507 guests, labor 21.1%</h2>
+      <p id="brief-headline-sub">Apr 5 · Net $5,802.70 · Gross $5,937.20 · 507 covers · Avg $11.45 · Labor 21.1% — above 20% target · -21.6% vs last Sunday</p>
     </div>
     <div class="brief-flags">
       <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">ð¨ 1-star review (HP2026) 11 days old</span>
@@ -1435,32 +1435,32 @@ body {
   <div class="brief-sales-strip">
     <div class="bss-item">
       <div class="bss-label">Net Sales</div>
-      <div class="bss-value" id="bs-net">$8,259</div>
-      <div class="bss-sub up" id="bs-net-sub">+44.7% vs last Sat</div>
+      <div class="bss-value" id="bs-net">$5,803</div>
+      <div class="bss-sub down" id="bs-net-sub">-21.6% vs last Sun</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Covers</div>
-      <div class="bss-value" id="bs-covers">290</div>
-      <div class="bss-sub up" id="bs-covers-sub">+20.8% vs last Sat</div>
+      <div class="bss-value" id="bs-covers">507</div>
+      <div class="bss-sub up" id="bs-covers-sub">+83.0% vs last Sun</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Avg / Guest</div>
-      <div class="bss-value" id="bs-avg">$28.48</div>
-      <div class="bss-sub up" id="bs-avg-sub">+19.8% vs last Sat</div>
+      <div class="bss-value" id="bs-avg">$11.45</div>
+      <div class="bss-sub down" id="bs-avg-sub">-57.1% vs last Sun</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Labor %</div>
-      <div class="bss-value" id="bs-labor" style="color:#6adf8a; font-size:20px; font-weight:800;">15.1%</div>
+      <div class="bss-value" id="bs-labor" style="color:#f0a040; font-size:20px; font-weight:800;">21.1%</div>
       <div class="bss-sub up" id="bs-labor-sub">â Under 20% target</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Voids</div>
-      <div class="bss-value" id="bs-voids" style="color:#f0a040; font-size:20px; font-weight:800;">$119.50</div>
+      <div class="bss-value" id="bs-voids" style="color:#6adf8a; font-size:20px; font-weight:800;">$68.50</div>
       <div class="bss-sub down" id="bs-voids-sub">â ï¸ 14 items â +780% vs SDLW</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Today's Staff</div>
-      <div class="bss-value" id="bs-staff">10</div>
+      <div class="bss-value" id="bs-staff">2</div>
       <div class="bss-sub up" id="bs-staff-sub">â All shifts covered</div>
     </div>
   </div>
@@ -1559,12 +1559,12 @@ setInterval(updateClock, 30000);
 
 // ââ CHECKLIST ââ
 const DEFAULT_TASKS = [
-  { text: 'ð¨ Reply to HP2026 1-star review â 11 days old! (menu/drinks complaint)',   link: 'https://business.google.com/n/14883478205426286749/reviews',              linkLabel: 'Reply' },
-  { text: 'â ï¸ Voids $119.50 (11 items) above $100 flag â 11 items voided',       link: 'https://www.toasttab.com/restaurants/admin',                             linkLabel: 'Check' },
-  { text: 'â­ Reply to 5 unanswered Google reviews (CCM, Hudson, Julie, alli, James)', link: 'https://business.google.com/n/14883478205426286749/reviews',              linkLabel: 'Reply' },
-  { text: 'ð Review Google Ads daily campaign reports (Apr 4-5)',                        link: 'https://ads.google.com/aw/reporting/reporteditor/list',                  linkLabel: 'Open'  },
-  { text: 'ð§¾ Toast payroll due tomorrow (Apr 7) â review biweekly',          link: 'https://www.toasttab.com/restaurants/admin',                             linkLabel: 'View'  },
-  { text: 'ð± Post to social media â Monday content',                                link: null,                                                                     linkLabel: null    },
+  { text: '🚨 PAYROLL DUE TODAY — Review & submit biweekly (Mar 22–Apr 4)', link: 'https://payroll.toasttab.com/sbbrewhouse/payroll', linkLabel: 'Review' },
+  { text: '🚨 Reply to HP2026 1-star review — 12 days old! (menu/drinks complaint)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
+  { text: '⭐ Reply to 5 unanswered Google reviews (CCM, Hudson, Julie, alli, James)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
+  { text: '📉 Review Sunday sales — net down 21.6% vs SDLW (high traffic, low avg spend)', link: 'https://www.toasttab.com/restaurants/admin', linkLabel: 'Check' },
+  { text: '📊 Review Google Ads daily campaign reports (Apr 5-6)', link: 'https://ads.google.com/aw/reporting/reporteditor/list', linkLabel: 'Open' },
+  { text: '📱 Post to social media — Tuesday content', link: null, linkLabel: null },
 ];
 
 let tasks = [];
@@ -1866,35 +1866,27 @@ function loadReportData() {
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
-    date: 'Saturday, Apr 4',
-    gross: '$8,446.66',
-    net: '$8,259.16',
-    guests: '290',
-    orders: '174',
-    avgPerGuest: '$28.48',
-    laborPct: '15.1%',
-    discountPct: '$187.50 / 2.2%',
-    cardPayments: '174',
-    refunds: '$119.50 / 11 voids'
+    date: 'Sunday, Apr 5',
+    gross: '$5,937.20',
+    net: '$5,802.70',
+    guests: '507',
+    orders: '106',
+    avgPerGuest: '$11.45',
+    laborPct: '21.1%',
+    discountPct: '$134.50 / 2.3%',
+    cardPayments: '77',
+    refunds: '$68.50 / 9 voids'
   };
 
   const sling = slingRaw ? JSON.parse(slingRaw) : {
-    date: 'Sunday, April 5',
-    count: 10,
-    hours: '46.24',
+    date: 'Monday, April 6',
+    count: 2,
+    hours: '5.75',
     overtime: 0,
     uncovered: 0,
     staff: [
       { name: 'Isael Salvador Narciso',  role: 'Cook'      },
-      { name: 'Moe Danely',             role: 'Bartender' },
-      { name: 'Daniel Rodriguez',        role: 'Server'    },
-      { name: 'Cal Carter',             role: 'Busser'    },
-      { name: 'Harmony Willson',         role: 'Bartender' },
-      { name: 'Augustine Arroyo',        role: 'Server'    },
-      { name: 'Katharine Brown',         role: 'Bartender' },
-      { name: 'Gabriel Lopez galindo',   role: 'Server'    },
-      { name: 'James Hernadez',          role: 'Busser'    },
-      { name: 'Bri Kelley',             role: 'Server'    }
+      { name: 'Katharine Brown',         role: 'Bartender' }
     ]
   };
 
