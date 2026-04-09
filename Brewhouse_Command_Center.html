@@ -117,7 +117,7 @@ body {
   gap: 8px;
   align-items: center;
 }
-      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 PAYROLL OVERDUE — submit before Apr 10</span>
+.bflag {
   padding: 5px 12px;
   border-radius: 20px;
   font-size: 12px;
@@ -125,9 +125,6 @@ body {
   white-space: nowrap;
   cursor: pointer;
 }
-      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 2 one-star reviews (HP2026 + Heidi) unanswered</span>
-      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⭐ 6 Google reviews unanswered</span>
-      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⚠️ Net sales -21.6% vs last Sunday</span>
 
 /* Priority actions panel */
 .brief-actions {
@@ -1232,7 +1229,7 @@ body {
         <div class="review-alert" style="border-left:3px solid #c03030;background:#1a0808;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#ff9090;font-weight:700;">Heidi Pring · ★☆☆☆☆ · Mar 22 — URGENT (17 days)</div>
+            <div class="ra-platform" style="color:#ff9090;font-weight:700;">Heidi · ★☆☆☆☆ · Mar 22 — URGENT (18 days)</div>
             <div class="ra-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Hi Heidi, thank you for your feedback. We're sorry your visit didn't meet expectations — we update our online menu regularly but sometimes changes take a day to sync. We take pride in our craft cocktails and wine selection, and we'd love a chance to show you a better experience. Please reach out so we can make it right!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
@@ -1242,7 +1239,7 @@ body {
         <div class="review-alert" style="border-left:3px solid #c03030;background:#1a0808;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#ff9090;font-weight:700;">HP2026 · ★☆☆☆☆ · Mar 26 — URGENT (13 days)</div>
+            <div class="ra-platform" style="color:#ff9090;font-weight:700;">HP2026 · ★☆☆☆☆ · Mar 26 — URGENT (14 days)</div>
             <div class="ra-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Hi there, thank you for your honest feedback. We're sorry your experience didn't match expectations — we regularly update our online menu and take pride in our craft cocktails and wine selection. We'd love a chance to show you a better visit. Please reach out!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
@@ -1252,7 +1249,7 @@ body {
         <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#ffd060;font-weight:700;">CCM · ★★★★★ · Apr 1</div>
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">CCM · ★★★★★ · Apr 1 (8 days)</div>
             <div class="ra-text">"Nice place, service slow, food tasty and there was a live band. Overall a good place to try out."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Thanks for coming in! Glad you enjoyed the food and live music — we're always working on getting service faster, especially on busy nights. Hope to see you again!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
@@ -1262,7 +1259,7 @@ body {
         <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Hudson Jay · ★★★★★ · Mar 29</div>
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Hudson Jay · ★★★★★ · Mar 29 (11 days)</div>
             <div class="ra-text">"I love all of the amazing features here. The food is amazing. The atmosphere is also amazing..."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Hudson, thank you so much! We love hearing this — hope to see you back soon!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
@@ -1272,17 +1269,17 @@ body {
         <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Julie Edwards · ★★★★★ · Mar 24</div>
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">Julie Edwards · ★★★★★ · Mar 24 (16 days)</div>
             <div class="ra-text">"Food lovely, the peanut butter cream pie is to die for, very yummy. It's a busy place, very loud..."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Julie, that PB cream pie is a fan favorite for good reason! Thanks for the kind words — we hope the buzz and energy is part of the charm!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
           </div>
         </div>
 
-        <div class="review-alert" style="border-left:3px solid #205020;background:#0a180a;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
+        <div class="review-alert" style="border-left:3px solid #c09020;background:#1a1400;border-radius:6px;margin-bottom:6px;padding:10px 12px;">
           <span class="ra-icon">⭐</span>
           <div class="ra-body">
-            <div class="ra-platform" style="color:#80e090;font-weight:700;">alli elt · ★★★★★ · Mar 23</div>
+            <div class="ra-platform" style="color:#ffd060;font-weight:700;">alli elt · ★★★★★ · Mar 23 (17 days)</div>
             <div class="ra-text">"Big shout out to everyone at the Brew house. Amazing food, the atmosphere was great."</div>
             <div class="ra-text" style="color:#80c080;margin-top:4px;font-style:normal;">Suggested: "Alli, we'll pass that shout-out to the whole crew — thank you so much!"</div>
             <a class="ra-reply" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
@@ -1420,14 +1417,14 @@ body {
   <!-- Headline -->
   <div class="brief-headline">
     <div class="bh-left">
-      <h2 id="brief-headline-text">Strong Monday — $2,248 net, 90 guests, labor 16.1%</h2>
-      <p id="brief-headline-sub">Apr 6 · Net $2,247.95 · Gross $2,289.95 · 90 covers · Avg $24.98 · Labor 16.1% · +67.7% vs last Monday</p>
+      <h2 id="brief-headline-text">Thursday Check-In — No Toast report yet · 10 staff on deck yesterday</h2>
+      <p id="brief-headline-sub">Apr 9 · Last sales: Apr 6 $2,248 net · Yesterday: 10 staff / 50.24 hrs · 6 Google reviews still unanswered</p>
     </div>
     <div class="brief-flags">
-      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 PAYROLL OVERDUE — check date Apr 10</span>
-      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 2 one-star reviews unanswered (HP2026 + Heidi)</span>
+      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 PAYROLL — check date Apr 10 is TOMORROW</span>
+      <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 1-star reviews still unanswered (HP2026 14d + Heidi 18d)</span>
       <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⭐ 6 Google reviews unanswered</span>
-      <span class="bflag bflag-green">✅ Net sales +67.7% vs last Mon · Labor 16.1%</span>
+      <span class="bflag bflag-yellow" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">⚠️ No Toast daily sales email received</span>
     </div>
   </div>
 
@@ -1436,32 +1433,32 @@ body {
     <div class="bss-item">
       <div class="bss-label">Net Sales</div>
       <div class="bss-value" id="bs-net">$2,248</div>
-      <div class="bss-sub up" id="bs-net-sub">+67.7% vs last Mon</div>
+      <div class="bss-sub" id="bs-net-sub" style="color:var(--muted);">Last report: Apr 6</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Covers</div>
       <div class="bss-value" id="bs-covers">90</div>
-      <div class="bss-sub up" id="bs-covers-sub">+63.6% vs last Mon</div>
+      <div class="bss-sub" id="bs-covers-sub" style="color:var(--muted);">Last report: Apr 6</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Avg / Guest</div>
       <div class="bss-value" id="bs-avg">$24.98</div>
-      <div class="bss-sub up" id="bs-avg-sub">+2.5% vs last Mon</div>
+      <div class="bss-sub" id="bs-avg-sub" style="color:var(--muted);">Last report: Apr 6</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Labor %</div>
       <div class="bss-value" id="bs-labor" style="color:#6adf8a; font-size:20px; font-weight:800;">16.1%</div>
-      <div class="bss-sub up" id="bs-labor-sub">✅ Well under 25% target</div>
+      <div class="bss-sub up" id="bs-labor-sub">✅ Under 25% (Apr 6)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Voids</div>
       <div class="bss-value" id="bs-voids" style="color:#f0a040; font-size:20px; font-weight:800;">$76.50</div>
-      <div class="bss-sub down" id="bs-voids-sub">⚠️ 7 items · +100.7% vs 4wk avg</div>
+      <div class="bss-sub down" id="bs-voids-sub">⚠️ 7 items (Apr 6)</div>
     </div>
     <div class="bss-item">
-      <div class="bss-label">Today's Staff</div>
-      <div class="bss-value" id="bs-staff">4</div>
-      <div class="bss-sub up" id="bs-staff-sub">✅ All shifts covered</div>
+      <div class="bss-label">Yesterday's Staff</div>
+      <div class="bss-value" id="bs-staff">10</div>
+      <div class="bss-sub up" id="bs-staff-sub">✅ 50.24 hrs · No OT · All covered</div>
     </div>
   </div>
 
@@ -1474,8 +1471,8 @@ body {
       <div class="ba-item urgent">
         <span class="ba-icon">🚨</span>
         <div class="ba-content">
-          <div class="ba-title">PAYROLL OVERDUE — Biweekly Not Started, Check Date Apr 10</div>
-          <div class="ba-detail">Toast Payroll sent an overdue alert this morning. The biweekly payroll (check date Friday, April 10) has NOT been started. Employees may not be paid on time. Open the payroll dashboard immediately and submit.</div>
+          <div class="ba-title">PAYROLL — Check Date Apr 10 is TOMORROW</div>
+          <div class="ba-detail">Biweekly payroll check date is Friday, April 10. If not already submitted, open the payroll dashboard immediately. Employees may not be paid on time if this is missed.</div>
           <a class="ba-link" href="https://payroll.toasttab.com/sbbrewhouse/payroll/payrolls/list" target="_blank">Open Payroll →</a>
         </div>
       </div>
@@ -1483,8 +1480,8 @@ body {
       <div class="ba-item urgent">
         <span class="ba-icon">🚨</span>
         <div class="ba-content">
-          <div class="ba-title">Reply to 2 One-Star Reviews — HP2026 (13 days) & Heidi (17 days)</div>
-          <div class="ba-detail">Both reviews mention the same issues: menu mismatch and drink concerns. HP2026 (Mar 26) and Heidi Pring (Mar 22) both wrote: "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." Suggested reply: "Hi, thank you for your feedback. We're sorry your experience didn't match expectations — we update our online menu regularly but sometimes changes take a day to sync. We take pride in our craft cocktails and wine selection, and we'd love a chance to show you a better experience. Please reach out so we can make it right!"</div>
+          <div class="ba-title">Reply to 2 One-Star Reviews — HP2026 (14 days) & Heidi (18 days)</div>
+          <div class="ba-detail">Both reviews are aging fast and mention menu mismatch and drink concerns. HP2026 (Mar 26): "Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps." Heidi (Mar 22): Similar feedback. Suggested reply: "Hi, thank you for your feedback. We're sorry your experience didn't match expectations — we update our online menu regularly but sometimes changes take a day to sync. We take pride in our craft cocktails and wine selection, and we'd love a chance to show you a better experience. Please reach out so we can make it right!"</div>
           <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
         </div>
       </div>
@@ -1492,12 +1489,12 @@ body {
       <div class="ba-item warning">
         <span class="ba-icon">⭐</span>
         <div class="ba-content">
-          <div class="ba-title">Reply to 4 More Unanswered Google Reviews</div>
+          <div class="ba-title">Reply to 4 More Unanswered 5-Star Google Reviews</div>
           <div class="ba-detail">
-            <strong style="color:#f0d090;">CCM</strong> (Apr 1) · 5★ "Nice place, service slow, food tasty and there was a live band." → "Thanks for coming in! Glad you enjoyed the food and live music — we're always working on getting service faster, especially on busy nights. Hope to see you again!"<br>
-            <strong style="color:#f0d090;">Hudson Jay</strong> (Mar 29) · 5★ "I love all of the amazing features here. The food is amazing." → "Hudson, thank you so much! We love hearing this — hope to see you back soon!"<br>
-            <strong style="color:#f0d090;">Julie Edwards</strong> (Mar 24) · 5★ "Food lovely, the peanut butter cream pie is to die for." → "Julie, that PB cream pie is a fan favorite for good reason! Thanks for the kind words!"<br>
-            <strong style="color:#f0d090;">alli elt</strong> (Mar 23) · 5★ "Big shout out to everyone at the Brew house. Amazing food." → "Alli, we'll pass that shout-out to the whole crew — thank you so much!"
+            <strong style="color:#f0d090;">CCM</strong> (Apr 1, 8 days) · 5★ "Nice place, service slow, food tasty and there was a live band." → "Thanks for coming in! Glad you enjoyed the food and live music — we're always working on getting service faster, especially on busy nights. Hope to see you again!"<br>
+            <strong style="color:#f0d090;">Hudson Jay</strong> (Mar 29, 11 days) · 5★ "I love all of the amazing features here. The food is amazing." → "Hudson, thank you so much! We love hearing this — hope to see you back soon!"<br>
+            <strong style="color:#f0d090;">Julie Edwards</strong> (Mar 24, 16 days) · 5★ "Food lovely, the peanut butter cream pie is to die for." → "Julie, that PB cream pie is a fan favorite for good reason! Thanks for the kind words!"<br>
+            <strong style="color:#f0d090;">alli elt</strong> (Mar 23, 17 days) · 5★ "Big shout out to everyone at the Brew house. Amazing food." → "Alli, we'll pass that shout-out to the whole crew — thank you so much!"
           </div>
           <a class="ba-link" href="https://business.google.com/n/14883478205426286749/reviews" target="_blank">Reply on Google →</a>
         </div>
@@ -1506,27 +1503,26 @@ body {
       <div class="ba-item warning">
         <span class="ba-icon">⚠️</span>
         <div class="ba-content">
-          <div class="ba-title">Voids $76.50 — Elevated vs 4-Week Avg ($38.12)</div>
-          <div class="ba-detail">7 void items totaling $76.50, double the 4-week average of $38.12 (though under the $100 flag). 6 order-level voids — check with staff to identify if there were POS errors or training gaps.</div>
-          <a class="ba-link" href="https://www.toasttab.com/restaurants/admin" target="_blank">Check in Toast →</a>
-        </div>
-      </div>
-
-      <div class="ba-item info">
-        <span class="ba-icon">💰</span>
-        <div class="ba-content">
-          <div class="ba-title">Toast Billing Refund — $78.53 Coming</div>
-          <div class="ba-detail">Toast identified a billing issue from January and is issuing a refund of $78.53 to The Brewhouse Santa Barbara. No action needed.</div>
-          <a class="ba-link" href="https://www.toasttab.com/restaurants/admin" target="_blank">View Details →</a>
+          <div class="ba-title">No Toast Daily Sales Email Received</div>
+          <div class="ba-detail">No Toast daily sales email was found for Apr 7 or Apr 8. Last report received was for Monday, Apr 6. Check Toast admin to verify reports are still configured, or check spam folder. Sales data on this dashboard is stale (3 days old).</div>
+          <a class="ba-link" href="https://www.toasttab.com/restaurants/admin" target="_blank">Check Toast →</a>
         </div>
       </div>
 
       <div class="ba-item info">
         <span class="ba-icon">📊</span>
         <div class="ba-content">
-          <div class="ba-title">Google Ads Daily Campaign Reports Ready</div>
-          <div class="ba-detail">Brewhouse Daily Campaign Report and Campaign Performance reports for Apr 6-7 are ready. No disapproved ads or budget warnings — ads running normally.</div>
+          <div class="ba-title">Google Ads Daily Reports Ready (Apr 7-8)</div>
+          <div class="ba-detail">Brewhouse Daily Campaign Report and Campaign Performance reports for Apr 7-8 are ready. No disapproved ads or budget warnings detected — ads running normally.</div>
           <a class="ba-link" href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582" target="_blank">View Report →</a>
+        </div>
+      </div>
+
+      <div class="ba-item info">
+        <span class="ba-icon">📱</span>
+        <div class="ba-content">
+          <div class="ba-title">Post to Social Media — Thursday Content</div>
+          <div class="ba-detail">Use the Social Composer below to draft and post Thursday content. Consider: Thirsty Thursday specials, weekend preview, or behind-the-scenes kitchen content.</div>
         </div>
       </div>
 </div>
@@ -1567,12 +1563,12 @@ setInterval(updateClock, 30000);
 
 // ââ CHECKLIST ââ
 const DEFAULT_TASKS = [
-  { text: '🚨 PAYROLL OVERDUE — Submit biweekly payroll NOW (check date Apr 10)', link: 'https://payroll.toasttab.com/sbbrewhouse/payroll/payrolls/list', linkLabel: 'Submit' },
-  { text: '🚨 Reply to HP2026 & Heidi 1-star reviews — 13 & 17 days old!', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
-  { text: '⭐ Reply to 4 unanswered 5-star Google reviews (CCM, Hudson, Julie, alli)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
-  { text: '📊 Review Google Ads daily campaign reports (Apr 6-7)', link: 'https://ads.google.com/aw/reporting/reporteditor/list', linkLabel: 'Open' },
-  { text: '🔍 Investigate voids ($76.50, 7 items) — double 4-week avg', link: 'https://www.toasttab.com/restaurants/admin', linkLabel: 'Check' },
-  { text: '📱 Post to social media — Wednesday content', link: null, linkLabel: null },
+  { text: '🚨 PAYROLL — Check date Apr 10 is TOMORROW. Verify submitted!', link: 'https://payroll.toasttab.com/sbbrewhouse/payroll/payrolls/list', linkLabel: 'Submit' },
+  { text: '🚨 Reply to HP2026 (14d) & Heidi (18d) 1-star reviews ASAP', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
+  { text: '⭐ Reply to 4 unanswered 5-star reviews (CCM, Hudson, Julie, alli)', link: 'https://business.google.com/n/14883478205426286749/reviews', linkLabel: 'Reply' },
+  { text: '⚠️ Check Toast — no daily sales email received since Apr 6', link: 'https://www.toasttab.com/restaurants/admin', linkLabel: 'Check' },
+  { text: '📊 Review Google Ads daily campaign reports (Apr 7-8)', link: 'https://ads.google.com/aw/reporting/reporteditor/list', linkLabel: 'Open' },
+  { text: '📱 Post to social media — Thirsty Thursday content', link: null, linkLabel: null },
 ];
 
 let tasks = [];
@@ -1874,7 +1870,7 @@ function loadReportData() {
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
-    date: 'Monday, Apr 6',
+    date: 'Monday, Apr 6 (last available)',
     gross: '$2,289.95',
     net: '$2,247.95',
     guests: '90',
@@ -1887,16 +1883,22 @@ function loadReportData() {
   };
 
   const sling = slingRaw ? JSON.parse(slingRaw) : {
-    date: 'Tuesday, April 7',
-    count: 4,
-    hours: '9.58',
+    date: 'Wednesday, April 8',
+    count: 10,
+    hours: '50.24',
     overtime: 0,
     uncovered: 0,
     staff: [
-      { name: 'Isael Salvador Narciso',  role: 'Cook'             },
-      { name: 'Casey Smith',             role: 'General Manager'  },
-      { name: 'Jackson Wright',          role: 'Bartender'        },
-      { name: 'Augustine Arroyo',        role: 'Server'           }
+      { name: 'Tony Rincon',              role: 'Bartender' },
+      { name: 'Jackson Wright',           role: 'Bartender' },
+      { name: 'Katharine Brown',          role: 'Server'    },
+      { name: 'Andrew Turner',            role: 'Bartender' },
+      { name: 'Noel Nunez',               role: 'Chef'      },
+      { name: 'Harmony Willson',          role: 'Bartender' },
+      { name: 'Moe Danely',               role: 'Server'    },
+      { name: 'Gabriel Lopez galindo',    role: 'Server'    },
+      { name: 'Daniel Rodriguez',         role: 'Server'    },
+      { name: 'James Hernadez',           role: 'Busser'    }
     ]
   };
 
