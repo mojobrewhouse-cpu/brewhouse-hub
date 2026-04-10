@@ -177,17 +177,46 @@
     }
   },
   "reservations": {
-    "lastUpdated": "2026-04-09",
+    "lastUpdated": "2026-04-10",
     "source": "All Sources",
     "today": {
-      "date": "Thu, Apr 9",
-      "totalGuests": 0,
-      "bookings": []
+      "date": "Fri, Apr 10",
+      "totalGuests": 19,
+      "bookings": [
+        {
+          "time": "11:00 AM",
+          "name": "Phil Hinkel",
+          "guests": 4,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(916) 919-3148",
+          "notes": ""
+        },
+        {
+          "time": "6:00 PM",
+          "name": "Anais Ryken",
+          "guests": 15,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(650) 278-5369",
+          "notes": "Birthday"
+        }
+      ]
     },
     "tomorrow": {
-      "date": "Fri, Apr 10",
-      "totalGuests": 0,
-      "bookings": []
+      "date": "Sat, Apr 11",
+      "totalGuests": 15,
+      "bookings": [
+        {
+          "time": "7:30 PM",
+          "name": "Amber Belletti",
+          "guests": 15,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 570-6353",
+          "notes": "Amber’s Birthday Celebration"
+        }
+      ]
     },
     "upcoming": [
       {
@@ -219,16 +248,6 @@
         "phone": "(331) 551-1139",
         "notes": "I am highly allergic to all forms of shellfish. All other fish are ok so long as they are cooked 'away' from anything used to cook the shellfish. Thanks for your consideration.",
         "date": "Wed, May 6"
-      },
-      {
-        "time": "7:30 PM",
-        "name": "Amber Belletti",
-        "guests": 15,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(805) 570-6353",
-        "notes": "Amber’s Birthday Celebration",
-        "date": "Sat, Apr 11"
       }
     ]
   }
