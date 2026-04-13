@@ -21,17 +21,50 @@
     "overtime": 0,
     "uncovered": 0,
     "staff": [
-      {"name": "Isael Salvador Narciso", "role": "Cook"},
-      {"name": "Harmony Willson", "role": "Bartender"},
-      {"name": "Daniel Rodriguez", "role": "Server"},
-      {"name": "Grant Oakeson", "role": "Busser"},
-      {"name": "Katharine Brown", "role": "Bartender"},
-      {"name": "Augustine Arroyo", "role": "Server"},
-      {"name": "Moe Danely", "role": "General Manager"},
-      {"name": "Gabriel Lopez Galindo", "role": "Server"},
-      {"name": "Cal Carter", "role": "Barback"},
-      {"name": "James Hernadez", "role": "Busser"},
-      {"name": "Emily Lanzel", "role": "Server"}
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Harmony Willson",
+        "role": "Bartender"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Grant Oakeson",
+        "role": "Busser"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "General Manager"
+      },
+      {
+        "name": "Gabriel Lopez Galindo",
+        "role": "Server"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Barback"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Server"
+      }
     ]
   },
   "slingToday": {
@@ -41,8 +74,14 @@
     "overtime": 0,
     "uncovered": 0,
     "staff": [
-      {"name": "Isael Salvador Narciso", "role": "Cook"},
-      {"name": "Katharine Brown", "role": "Bartender"}
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      }
     ]
   },
   "googleAds": {
@@ -58,13 +97,62 @@
     },
     "weekTotal": "$245.74",
     "days": [
-      {"date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 0},
-      {"date": "Apr 11", "spend": "$43.42", "clicks": 84, "impressions": 7618, "cpc": "$0.52", "conversions": 7},
-      {"date": "Apr 10", "spend": "$39.31", "clicks": 94, "impressions": 7689, "cpc": "$0.42", "conversions": 35},
-      {"date": "Apr 9", "spend": "$42.11", "clicks": 94, "impressions": 8934, "cpc": "$0.45", "conversions": 39},
-      {"date": "Apr 8", "spend": "$34.93", "clicks": 97, "impressions": 9276, "cpc": "$0.36", "conversions": 35},
-      {"date": "Apr 7", "spend": "$20.31", "clicks": 53, "impressions": 8776, "cpc": "$0.38", "conversions": 39},
-      {"date": "Apr 6", "spend": "$38.88", "clicks": 87, "impressions": 8411, "cpc": "$0.45", "conversions": 35}
+      {
+        "date": "Apr 12",
+        "spend": "$26.78",
+        "clicks": 88,
+        "impressions": 6676,
+        "cpc": "$0.30",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 11",
+        "spend": "$43.42",
+        "clicks": 84,
+        "impressions": 7618,
+        "cpc": "$0.52",
+        "conversions": 7
+      },
+      {
+        "date": "Apr 10",
+        "spend": "$39.31",
+        "clicks": 94,
+        "impressions": 7689,
+        "cpc": "$0.42",
+        "conversions": 35
+      },
+      {
+        "date": "Apr 9",
+        "spend": "$42.11",
+        "clicks": 94,
+        "impressions": 8934,
+        "cpc": "$0.45",
+        "conversions": 39
+      },
+      {
+        "date": "Apr 8",
+        "spend": "$34.93",
+        "clicks": 97,
+        "impressions": 9276,
+        "cpc": "$0.36",
+        "conversions": 35
+      },
+      {
+        "date": "Apr 7",
+        "spend": "$20.31",
+        "clicks": 53,
+        "impressions": 8776,
+        "cpc": "$0.38",
+        "conversions": 39
+      },
+      {
+        "date": "Apr 6",
+        "spend": "$38.88",
+        "clicks": 87,
+        "impressions": 8411,
+        "cpc": "$0.45",
+        "conversions": 35
+      }
     ]
   },
   "yelpAds": {
@@ -82,5 +170,61 @@
       "unused": "$178.85",
       "expires": "Apr 30, 2026"
     }
+  },
+  "reservations": {
+    "lastUpdated": "2026-04-13",
+    "source": "All Sources",
+    "today": {
+      "date": "Mon, Apr 13",
+      "totalGuests": 0,
+      "bookings": []
+    },
+    "tomorrow": {
+      "date": "Tue, Apr 14",
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "1:00 PM",
+          "name": "Richard McGough",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(831) 747-4332",
+          "notes": ""
+        }
+      ]
+    },
+    "upcoming": [
+      {
+        "time": "6:30 PM",
+        "name": "Caroline Baker",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(805) 886-1534",
+        "notes": "Want to be near the band - thanks!",
+        "date": "Sat, Apr 18"
+      },
+      {
+        "time": "7:15 PM",
+        "name": "R Kevin Barrett",
+        "guests": 4,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(331) 551-1139",
+        "notes": "I am highly allergic to all forms of shellfish. All other fish are ok so long as they are cooked 'away' from anything used to cook the shellfish. Thanks for your consideration.",
+        "date": "Wed, May 6"
+      },
+      {
+        "time": "8:30 PM",
+        "name": "Kathy Lai",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(559) 776-8895",
+        "notes": "",
+        "date": "Fri, Apr 17"
+      }
+    ]
   }
 }
