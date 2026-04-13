@@ -1,18 +1,18 @@
 {
   "date": "Monday, April 13",
   "toast": {
-    "date": "Saturday, April 11",
-    "gross": "$7,821.35",
-    "net": "$7,523.15",
-    "guests": 289,
+    "date": "Sunday, April 12",
+    "gross": "$6,870.40",
+    "net": "$6,482.40",
+    "guests": 265,
     "orders": 165,
-    "avgPerGuest": "$26.03",
-    "laborPct": "21.3%",
-    "discountPct": "3.8%",
-    "cardPayments": 165,
+    "avgPerGuest": "$24.46",
+    "laborPct": "29.5%",
+    "discountPct": "5.6%",
+    "cardPayments": 132,
     "refunds": "$0.00",
-    "headline": "Saturday ✅ $7,523 net · 289 guests · labor 21.3%",
-    "headlineSub": "165 orders · $45.59 avg/order · $26.03 avg/guest · discounts $298"
+    "headline": "Sunday ✅ $6,482 net, 265 guests, labor 29.5%",
+    "headlineSub": "165 orders · $24.46/guest · 5.6% disc · 132 cards · $0 refunds"
   },
   "sling": {
     "date": "Sunday, April 12",
@@ -36,16 +36,19 @@
   },
   "slingToday": {
     "date": "Monday, April 13",
-    "count": 0,
-    "hours": 0,
+    "count": 2,
+    "hours": 5.75,
     "overtime": 0,
     "uncovered": 0,
-    "staff": []
+    "staff": [
+      {"name": "Isael Salvador Narciso", "role": "Cook"},
+      {"name": "Katharine Brown", "role": "Bartender"}
+    ]
   },
   "googleAds": {
     "lastUpdated": "2026-04-13",
     "yesterday": {
-      "date": "Apr 12",
+      "date": "Apr 12, 2026",
       "spend": "$26.78",
       "clicks": 88,
       "impressions": 6676,
@@ -66,64 +69,18 @@
   },
   "yelpAds": {
     "lastUpdated": "2026-04-13",
-    "spend": "$213.96",
-    "period": "Last 30 days",
+    "spend": "$374.85",
+    "period": "Apr 1 - Apr 12, 2026",
     "impressions": 93300,
     "pageVisits": 1100,
     "leads": 270,
-    "cpc": "$0.90",
-    "cpl": "$3.57",
+    "cpc": "$0.91",
+    "cpl": "$3.41",
     "bonus": {
-      "total": "$900.00",
-      "used": "$658.58",
-      "unused": "$241.42",
+      "total": "$900",
+      "used": "$721.15",
+      "unused": "$178.85",
       "expires": "Apr 30, 2026"
     }
-  },
-  "reservations": {
-    "lastUpdated": "2026-04-13",
-    "source": "All Sources",
-    "today": {
-      "date": "Mon, Apr 13",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
-      "date": "Tue, Apr 14",
-      "totalGuests": 2,
-      "bookings": [
-        {
-          "time": "1:00 PM",
-          "name": "Richard McGough",
-          "guests": 2,
-          "status": "confirmed",
-          "source": "SpotHopper",
-          "phone": "(831) 747-4332",
-          "notes": ""
-        }
-      ]
-    },
-    "upcoming": [
-      {
-        "time": "6:30 PM",
-        "name": "Caroline Baker",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(805) 886-1534",
-        "notes": "Want to be near the band - thanks!",
-        "date": "Sat, Apr 18"
-      },
-      {
-        "time": "7:15 PM",
-        "name": "R Kevin Barrett",
-        "guests": 4,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(331) 551-1139",
-        "notes": "Shellfish allergy",
-        "date": "Sat, Apr 18"
-      }
-    ]
   }
 }
