@@ -177,29 +177,29 @@
     }
   },
   "reservations": {
-    "lastUpdated": "2026-04-12",
+    "lastUpdated": "2026-04-13",
     "source": "All Sources",
     "today": {
-      "date": "Sun, Apr 12",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Mon, Apr 13",
       "totalGuests": 0,
       "bookings": []
     },
+    "tomorrow": {
+      "date": "Tue, Apr 14",
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "1:00 PM",
+          "name": "Richard McGough",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(831) 747-4332",
+          "notes": ""
+        }
+      ]
+    },
     "upcoming": [
-      {
-        "time": "1:00 PM",
-        "name": "Richard McGough",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(831) 747-4332",
-        "notes": "",
-        "date": "Tue, Apr 14"
-      },
       {
         "time": "6:30 PM",
         "name": "Caroline Baker",
