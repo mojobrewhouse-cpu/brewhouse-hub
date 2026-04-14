@@ -1436,8 +1436,8 @@ body {
   <!-- Headline -->
   <div class="brief-headline">
     <div class="bh-left">
-      <h2 id="brief-headline-text">Strong Sunday — $6,482 net sales, 265 guests, +11.7% vs last week</h2>
-      <p id="brief-headline-sub">Apr 14 · Sun Apr 12: $6,482 net / 265 covers / 29.5% labor / +11.7% vs SDLW · Yesterday: 2 staff / 5.75 hrs · 8+ Google reviews unanswered</p>
+      <h2 id="brief-headline-text">Slow Monday — $1,900 net sales, 76 guests</h2>
+      <p id="brief-headline-sub">Apr 14 · Mon Apr 13: $1,900 net / 76 covers / 23.6% labor · Yesterday: 2 staff / 5.75 hrs · 8+ Google reviews unanswered</p>
     </div>
     <div class="brief-flags">
       <span class="bflag bflag-red" onclick="document.getElementById('brief-actions-panel').scrollIntoView({behavior:'smooth'})">🚨 Labor 29.5% — OVER 25% threshold! ($1,912 on $6,482 net)</span>
@@ -1452,27 +1452,27 @@ body {
     <div class="bss-item">
       <div class="bss-label">Net Sales</div>
       <div class="bss-value" id="bs-net">$6,482</div>
-      <div class="bss-sub" id="bs-net-sub" style="color:#6adf8a;">⬆ +11.7% vs SDLW (Apr 12)</div>
+      <div class="bss-sub" id="bs-net-sub" style="color:#6adf8a;">(Apr 13)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Covers</div>
       <div class="bss-value" id="bs-covers">265</div>
-      <div class="bss-sub" id="bs-covers-sub" style="color:var(--muted);">165 orders · $39.29 avg (Apr 12)</div>
+      <div class="bss-sub" id="bs-covers-sub" style="color:var(--muted);">52 orders · $36.55 avg (Apr 13)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Avg / Guest</div>
       <div class="bss-value" id="bs-avg">$24.46</div>
-      <div class="bss-sub" id="bs-avg-sub" style="color:#6adf8a;">⬆ +113.6% vs SDLW (Apr 12)</div>
+      <div class="bss-sub" id="bs-avg-sub" style="color:#6adf8a;">(Apr 13)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Labor %</div>
       <div class="bss-value" id="bs-labor" style="color:#ff6060; font-size:20px; font-weight:800;">29.5%</div>
-      <div class="bss-sub down" id="bs-labor-sub">🚨 OVER 25% · $1,912 labor (Apr 12)</div>
+      <div class="bss-sub down" id="bs-labor-sub">✅ Under 25% · 23.6% labor (Apr 13)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Voids</div>
       <div class="bss-value" id="bs-voids" style="color:#f0a040; font-size:20px; font-weight:800;">$153.00</div>
-      <div class="bss-sub down" id="bs-voids-sub">⚠️ 18 items / 14 orders — over $100 threshold (Apr 12)</div>
+      <div class="bss-sub down" id="bs-voids-sub">⚠️ 18 items / 6 voids (Apr 13)</div>
     </div>
     <div class="bss-item">
       <div class="bss-label">Yesterday's Staff</div>
@@ -1894,16 +1894,16 @@ function loadReportData() {
 
   // If no saved data, use the most recent email data we pulled
   const toast = toastRaw ? JSON.parse(toastRaw) : {
-    date: 'Sunday, Apr 12',
-    gross: '$6,870.40',
-    net: '$6,482.40',
-    guests: '265',
-    orders: '165',
-    avgPerGuest: '$24.46',
-    laborPct: '29.5%',
-    discountPct: '$388.00 / 5.6%',
-    cardPayments: '132',
-    refunds: '$153.00 / 18 voids'
+    date: 'Monday, Apr 13',
+    gross: '$1,953.45',
+    net: '$1,900.45',
+    guests: '76',
+    orders: '52',
+    avgPerGuest: '$25.01',
+    laborPct: '23.6%',
+    discountPct: '$53.00 / 2.7%',
+    cardPayments: '38',
+    refunds: '$0.00 / 6 voids'
   };
 
   const sling = slingRaw ? JSON.parse(slingRaw) : {
