@@ -11,8 +11,8 @@
     "discountPct": "2.7%",
     "cardPayments": 38,
     "refunds": "$0.00",
-    "headline": "Monday \u2705 $1,900 net, 76 guests, labor 23.6%",
-    "headlineSub": "52 orders \u00b7 $25.01/guest \u00b7 2.7% discount \u00b7 38 card pmts"
+    "headline": "Monday ✅ $1,900 net, 76 guests, labor 23.6%",
+    "headlineSub": "52 orders · $25.01/guest · 2.7% discount · 38 card pmts"
   },
   "sling": {
     "date": "Monday, April 13",
@@ -21,8 +21,14 @@
     "overtime": 0,
     "uncovered": 0,
     "staff": [
-      {"name": "Isael Salvador Narciso", "role": "Cook"},
-      {"name": "Katharine Brown", "role": "Bartender"}
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      }
     ]
   },
   "slingToday": {
@@ -32,16 +38,46 @@
     "overtime": 0,
     "uncovered": 0,
     "staff": [
-      {"name": "Isael Salvador Narciso", "role": "Cook"},
-      {"name": "Christine Vargas", "role": "Bartender"},
-      {"name": "Tony Rincon", "role": "Bartender"},
-      {"name": "Grant Oakeson", "role": "Busser"},
-      {"name": "Moe Danely", "role": "General Manager"},
-      {"name": "Andrew Turner", "role": "Bartender"},
-      {"name": "Augustine Arroyo", "role": "Server"},
-      {"name": "Noel Nunez", "role": "Chef"},
-      {"name": "Bri Kelley", "role": "Server"},
-      {"name": "Cal Carter", "role": "Busser"}
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Grant Oakeson",
+        "role": "Busser"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "General Manager"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Busser"
+      }
     ]
   },
   "googleAds": {
@@ -57,13 +93,62 @@
     },
     "weekTotal": "$253.30",
     "days": [
-      {"date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 0},
-      {"date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 5},
-      {"date": "Apr 11", "spend": "$43.42", "clicks": 84, "impressions": 7618, "cpc": "$0.52", "conversions": 21},
-      {"date": "Apr 10", "spend": "$39.31", "clicks": 94, "impressions": 7689, "cpc": "$0.42", "conversions": 56},
-      {"date": "Apr 9", "spend": "$42.11", "clicks": 94, "impressions": 8934, "cpc": "$0.45", "conversions": 42},
-      {"date": "Apr 8", "spend": "$34.93", "clicks": 97, "impressions": 9276, "cpc": "$0.36", "conversions": 32},
-      {"date": "Apr 7", "spend": "$20.31", "clicks": 53, "impressions": 8776, "cpc": "$0.38", "conversions": 39}
+      {
+        "date": "Apr 13",
+        "spend": "$46.44",
+        "clicks": 58,
+        "impressions": 5839,
+        "cpc": "$0.80",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 12",
+        "spend": "$26.78",
+        "clicks": 88,
+        "impressions": 6676,
+        "cpc": "$0.30",
+        "conversions": 5
+      },
+      {
+        "date": "Apr 11",
+        "spend": "$43.42",
+        "clicks": 84,
+        "impressions": 7618,
+        "cpc": "$0.52",
+        "conversions": 21
+      },
+      {
+        "date": "Apr 10",
+        "spend": "$39.31",
+        "clicks": 94,
+        "impressions": 7689,
+        "cpc": "$0.42",
+        "conversions": 56
+      },
+      {
+        "date": "Apr 9",
+        "spend": "$42.11",
+        "clicks": 94,
+        "impressions": 8934,
+        "cpc": "$0.45",
+        "conversions": 42
+      },
+      {
+        "date": "Apr 8",
+        "spend": "$34.93",
+        "clicks": 97,
+        "impressions": 9276,
+        "cpc": "$0.36",
+        "conversions": 32
+      },
+      {
+        "date": "Apr 7",
+        "spend": "$20.31",
+        "clicks": 53,
+        "impressions": 8776,
+        "cpc": "$0.38",
+        "conversions": 39
+      }
     ]
   },
   "yelpAds": {
@@ -81,5 +166,41 @@
       "unused": "$166.95",
       "expires": "Apr 30, 2026"
     }
+  },
+  "reservations": {
+    "lastUpdated": "2026-04-14",
+    "source": "All Sources",
+    "today": {
+      "date": "Tue, Apr 14",
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "1:00 PM",
+          "name": "Richard McGough",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(831) 747-4332",
+          "notes": ""
+        }
+      ]
+    },
+    "tomorrow": {
+      "date": "Wed, Apr 15",
+      "totalGuests": 0,
+      "bookings": []
+    },
+    "upcoming": [
+      {
+        "time": "8:30 PM",
+        "name": "Kathy Lai",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(559) 776-8895",
+        "notes": "",
+        "date": "Fri, Apr 17"
+      }
+    ]
   }
 }
