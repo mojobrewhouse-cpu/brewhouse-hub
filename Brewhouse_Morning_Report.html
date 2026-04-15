@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brewhouse Morning Report — April 13, 2026</title>
+<title>Brewhouse Morning Report — April 15, 2026</title>
 <style>
   :root {
-    --bg: #0d1117; --card: #161b22; --border: #30363d;
-    --text: #e6edf3; --muted: #8b949e; --accent: #f0a500;
-    --green: #3fb950; --red: #f85149; --blue: #58a6ff;
+    --bg: #1c1207; --card: #2a1c0e; --border: #3d2a10;
+    --text: #f5ead8; --muted: #a89070; --accent: #d4900a;
+    --green: #6adf8a; --red: #f85149; --blue: #58a6ff;
     --purple: #bc8cff; --orange: #ffa657;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
   .header { text-align: center; padding: 32px 20px 24px; border-bottom: 1px solid var(--border); margin-bottom: 28px; }
   .header h1 { font-size: 2rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; }
   .date { font-size: 0.9rem; color: var(--muted); margin-top: 6px; letter-spacing: 2px; }
@@ -28,7 +28,7 @@
   .metric.purple .metric-value { color: var(--purple); }
   table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
   th { color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.72rem; letter-spacing: 1px; padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
-  td { padding: 10px 12px; border-bottom: 1px solid #1c2128; }
+  td { padding: 10px 12px; border-bottom: 1px solid #2a1c0e; }
   tr:last-child td { border-bottom: none; }
   .role-badge { padding: 3px 9px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
   .role-badge.gm { background: #4a1942; color: var(--purple); }
@@ -37,135 +37,215 @@
   .role-badge.bartender { background: #1a2a3a; color: var(--blue); }
   .role-badge.server { background: #3a2a1a; color: var(--orange); }
   .role-badge.busser { background: #2a2a2a; color: var(--muted); }
-  .role-badge.host { background: #1a3a3a; color: #79c0ff; }
+  .tag { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+  .tag.warning { background: #2a1a1a; color: var(--red); }
+  .tag.ok { background: #1a2a1a; color: var(--green); }
+  .priority-item { padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
+  .priority-item.urgent { background: #2a0808; border-left: 3px solid var(--red); }
+  .priority-item.high { background: #2a1a08; border-left: 3px solid var(--orange); }
+  .priority-item.info { background: #1a1a2a; border-left: 3px solid var(--blue); }
+  .priority-icon { font-size: 1.1rem; flex-shrink: 0; }
+  .priority-text { font-size: 0.88rem; line-height: 1.4; }
+  .review-card { padding: 12px 16px; border-radius: 8px; margin-bottom: 8px; border-left: 3px solid var(--green); background: #1a2a0a; }
+  .review-card.negative { border-left-color: var(--red); background: #2a0808; }
+  .review-stars { color: var(--accent); }
+  .review-name { font-weight: 700; color: var(--accent); }
+  .review-text { font-style: italic; color: var(--muted); margin: 4px 0; font-size: 0.85rem; }
+  .review-reply { color: var(--green); font-size: 0.82rem; margin-top: 4px; }
+  .social-draft { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; }
+  .social-label { font-size: 0.72rem; color: var(--blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .social-text { font-size: 0.88rem; line-height: 1.4; }
+  .social-chars { font-size: 0.7rem; color: var(--muted); margin-top: 4px; }
   .ads-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media(max-width: 640px) { .ads-grid { grid-template-columns: 1fr; } }
   .ads-platform { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
   .ads-platform-title { font-size: 0.85rem; font-weight: 700; color: var(--text); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; justify-content: space-between; flex-wrap: wrap; }
-  .live-badge { background: #1a3a2a; color: var(--green); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
-  .fallback-badge { background: #2a2010; color: var(--orange); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
   .info-badge { background: #1a2a3a; color: var(--blue); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
+  .fallback-badge { background: #2a2010; color: var(--orange); font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; }
   .ads-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
   .ads-metric { text-align: center; padding: 10px; background: var(--card); border-radius: 6px; }
   .ads-metric-value { font-size: 1.2rem; font-weight: 700; color: var(--blue); }
   .ads-metric-label { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
   .footer { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
-  .tag { display: inline-block; font-size: 0.72rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
-  .tag.warning { background: #2a1a1a; color: var(--red); }
-  .tag.ok { background: #1a2a1a; color: var(--green); }
+  .sdlw { font-size: 0.72rem; color: var(--red); display: block; margin-top: 2px; }
+  .sdlw.up { color: var(--green); }
 </style>
 </head>
 <body>
 <div class="header">
   <h1>🍺 The Brewhouse</h1>
-  <div class="date">MONDAY &nbsp;·&nbsp; APRIL 13, 2026</div>
+  <div class="date">WEDNESDAY &nbsp;·&nbsp; APRIL 15, 2026</div>
   <div style="color:var(--muted);font-size:0.78rem;margin-top:8px;">MORNING REPORT</div>
 </div>
 
-<!-- SALES (TOAST) -->
+<!-- SALES (TOAST) — Monday Apr 13 -->
 <div class="section">
-  <div class="section-title">📊 Sales Summary <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Toast)</span></div>
+  <div class="section-title">📊 Sales Summary — Monday Apr 13 <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Toast)</span></div>
   <div class="metrics">
     <div class="metric">
-      <div class="metric-value">$1,900.45</div>
+      <div class="metric-value">$1,900<span style="font-size:0.9rem">.45</span></div>
       <div class="metric-label">Net Sales</div>
+      <span class="sdlw">-15.5% vs SDLW</span>
     </div>
     <div class="metric amber">
-      <div class="metric-value">$1,953.45</div>
+      <div class="metric-value">$1,953<span style="font-size:0.9rem">.45</span></div>
       <div class="metric-label">Gross Sales</div>
+      <span class="sdlw">-14.7% vs SDLW</span>
     </div>
     <div class="metric blue">
       <div class="metric-value">76</div>
       <div class="metric-label">Guests</div>
+      <span class="sdlw">-15.6% vs SDLW</span>
     </div>
     <div class="metric blue">
       <div class="metric-value">52</div>
       <div class="metric-label">Orders</div>
+      <span class="sdlw">-16.1% vs SDLW</span>
     </div>
     <div class="metric">
       <div class="metric-value">$36.55</div>
       <div class="metric-label">Avg / Order</div>
+      <span class="sdlw up">+0.8% vs SDLW</span>
     </div>
     <div class="metric">
       <div class="metric-value">$25.01</div>
       <div class="metric-label">Avg / Guest</div>
+      <span class="sdlw up">+0.1% vs SDLW</span>
     </div>
-    <div class="metric amber">
+    <div class="metric">
       <div class="metric-value">23.6%</div>
       <div class="metric-label">Labor %</div>
+      <span class="sdlw" style="color:var(--green);">✅ Under 25%</span>
     </div>
     <div class="metric purple">
       <div class="metric-value">$59.00</div>
-      <div class="metric-label">Voids</div>
+      <div class="metric-label">Voids (6 items)</div>
+      <span class="sdlw" style="color:var(--green);">✅ Under $100</span>
     </div>
+  </div>
+  <div style="margin-top:16px;font-size:0.82rem;color:var(--muted);">
+    <strong style="color:var(--text);">Top Categories:</strong> Food $845 (44%) · Liquor $484 (25%) · Draft Beer $385 (20%) · Wine $127 (7%) · Bottled Beer $44 (2%)
   </div>
 </div>
 
-<!-- SCHEDULE (SLING) -->
+<!-- SCHEDULE (SLING) — Tue Apr 14 (most recent) -->
 <div class="section">
-  <div class="section-title">📅 Today's Schedule <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling)</span>
-    
-    
+  <div class="section-title">📅 Staff Schedule — Tue Apr 14 <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Sling — most recent report)</span>
     <span class="tag ok">✓ All covered</span>
   </div>
   <table>
-    <thead><tr><th>Role</th><th>Name</th><th>Hours</th></tr></thead>
+    <thead><tr><th>Role</th><th>Name</th></tr></thead>
     <tbody>
-        <tr>
-          <td><span class="role-badge cook">🍳 Cook</span></td>
-          <td>Isael Salvador Narciso</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge bartender">🍺 Bartender</span></td>
-          <td>Christine Vargas</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge bartender">🍺 Bartender</span></td>
-          <td>Tony Rincon</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge busser">🧹 Busser</span></td>
-          <td>Grant Oakeson</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge gm">👑 GM</span></td>
-          <td>Moe Danely</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge bartender">🍺 Bartender</span></td>
-          <td>Andrew Turner</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge server">🍽️ Server</span></td>
-          <td>Augustine Arroyo</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge chef">👨‍🍳 Chef</span></td>
-          <td>Noel Nunez</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge server">🍽️ Server</span></td>
-          <td>Bri Kelley</td>
-          <td>--</td>
-        </tr>
-        <tr>
-          <td><span class="role-badge busser">🧹 Busser</span></td>
-          <td>Cal Carter</td>
-          <td>--</td>
-        </tr></tbody>
+        <tr><td><span class="role-badge gm">👑 GM</span></td><td>Moe Danely</td></tr>
+        <tr><td><span class="role-badge chef">👨‍🍳 Chef</span></td><td>Noel Nunez</td></tr>
+        <tr><td><span class="role-badge cook">🍳 Cook</span></td><td>Isael Salvador Narciso</td></tr>
+        <tr><td><span class="role-badge bartender">🍺 Bartender</span></td><td>Christine Vargas</td></tr>
+        <tr><td><span class="role-badge bartender">🍺 Bartender</span></td><td>Tony Rincon</td></tr>
+        <tr><td><span class="role-badge bartender">🍺 Bartender</span></td><td>Andrew Turner</td></tr>
+        <tr><td><span class="role-badge server">🍽️ Server</span></td><td>Augustine Arroyo</td></tr>
+        <tr><td><span class="role-badge server">🍽️ Server</span></td><td>Bri Kelley</td></tr>
+        <tr><td><span class="role-badge busser">🧹 Busser</span></td><td>Grant Oakeson</td></tr>
+        <tr><td><span class="role-badge busser">🧹 Busser</span></td><td>Cal Carter</td></tr>
+    </tbody>
   </table>
   <div style="margin-top:14px;color:var(--muted);font-size:0.82rem;">
-    Total scheduled: <strong style="color:var(--text)">49.66 hrs</strong>
+    Total scheduled: <strong style="color:var(--text)">10 employees · 49.66 hrs</strong>
     &nbsp;·&nbsp; Overtime: <strong style="color:var(--green)">0 hrs</strong>
     &nbsp;·&nbsp; Uncovered shifts: <strong style="color:var(--green)">0</strong>
+  </div>
+</div>
+
+<!-- GOOGLE REVIEWS -->
+<div class="section">
+  <div class="section-title">⭐ Google Reviews <span style="font-size:0.7rem;color:var(--red);font-weight:600">10 unanswered</span></div>
+
+  <div class="review-card">
+    <div><span class="review-name">l g</span> · <span class="review-stars">★★★★★</span> · Apr 14 (1 day) <span class="tag ok">NEW</span></div>
+    <div class="review-text">"Great food and amazing beer nice atmosphere"</div>
+    <div class="review-reply">💬 Suggested: "Thank you so much! We're glad you enjoyed the food, beer, and atmosphere — hope to see you again soon!"</div>
+  </div>
+
+  <div class="review-card">
+    <div><span class="review-name">Lisa O'Brien</span> · <span class="review-stars">★★★★★</span> · Apr 12 (3 days)</div>
+    <div class="review-text">Rating only — no text</div>
+    <div class="review-reply">💬 Suggested: "Thank you so much for the 5 stars, Lisa! We hope to see you again soon!"</div>
+  </div>
+
+  <div class="review-card">
+    <div><span class="review-name">GR5</span> · <span class="review-stars">★★★★★</span> · Apr 9 (6 days)</div>
+    <div class="review-text">"Jackson was great. Food was great. Pretzels and defiance were our favorites"</div>
+    <div class="review-reply">💬 Suggested: "Thank you! We'll let Jackson know — glad you loved the pretzels and Defiance. See you next time!"</div>
+  </div>
+
+  <div class="review-card negative">
+    <div><span class="review-name">HP2026</span> · <span class="review-stars" style="color:var(--red);">★☆☆☆☆</span> · Mar 26 (20 days) <span class="tag warning">URGENT</span></div>
+    <div class="review-text">"Menu online doesn't match in bar, food very basic, drinks are pre mixed and wine out of taps."</div>
+    <div class="review-reply">💬 Suggested: "Hi, thank you for your honest feedback. We're sorry your visit didn't meet expectations — we take pride in our craft cocktails and house-brewed beers. We'd love a chance to show you a better experience. Please reach out so we can make it right!"</div>
+  </div>
+
+  <div style="font-size:0.82rem;color:var(--muted);margin-top:8px;">+ 6 more unanswered reviews (CCM, Hudson, Julie, alli, Heidi, James) · <a href="https://business.google.com/n/14883478205426286749/reviews" target="_blank" style="color:var(--accent);">Reply on Google →</a></div>
+</div>
+
+<!-- PRIORITY CHECKLIST -->
+<div class="section">
+  <div class="section-title">🎯 Priority Checklist</div>
+
+  <div class="priority-item urgent">
+    <span class="priority-icon">🚨</span>
+    <div class="priority-text"><strong>Reply to HP2026 1-star review</strong> — 20 days unanswered! Menu/drinks complaint. Use suggested reply above.</div>
+  </div>
+
+  <div class="priority-item urgent">
+    <span class="priority-icon">🆕</span>
+    <div class="priority-text"><strong>Reply to new l g 5★ review</strong> — posted yesterday. Quick thank-you keeps engagement high.</div>
+  </div>
+
+  <div class="priority-item high">
+    <span class="priority-icon">⭐</span>
+    <div class="priority-text"><strong>Reply to 8+ more unanswered Google reviews</strong> — Lisa (3 days), GR5 (6 days), CCM (14 days), Hudson (17 days), Julie (22 days), alli (23 days), Heidi (24 days), James (25 days).</div>
+  </div>
+
+  <div class="priority-item high">
+    <span class="priority-icon">📉</span>
+    <div class="priority-text"><strong>Review Monday sales trend</strong> — net $1,900 was -15.5% vs SDLW. Covers dropped to 76 (was 90). Avg spend held steady. Consider mid-week promotions.</div>
+  </div>
+
+  <div class="priority-item info">
+    <span class="priority-icon">📊</span>
+    <div class="priority-text"><strong>Review Google Ads reports</strong> — Brewhouse Daily Campaign Report and Campaign Performance reports ready (Apr 13-14). No disapproved ads or budget warnings.</div>
+  </div>
+
+  <div class="priority-item info">
+    <span class="priority-icon">📱</span>
+    <div class="priority-text"><strong>Post Wednesday social content</strong> — Hump day! Highlight craft beers, happy hour specials, and tease weekend events. See drafts below.</div>
+  </div>
+
+  <div class="priority-item info">
+    <span class="priority-icon">📧</span>
+    <div class="priority-text"><strong>Check Yelp inbox</strong> — no new customer messages or quote requests detected. Marketing emails only.</div>
+  </div>
+</div>
+
+<!-- SOCIAL MEDIA DRAFTS -->
+<div class="section">
+  <div class="section-title">📱 Social Media Drafts <span style="font-size:0.7rem;color:var(--muted);font-weight:400">(Ready to Post on X)</span></div>
+
+  <div class="social-draft">
+    <div class="social-label">Post 1 — Hump Day Vibes</div>
+    <div class="social-text">Hump day calls for craft beer 🍺 Swing by The Brewhouse tonight — fresh Defiance IPA on tap, killer pretzels, and that SB patio life. You earned it. #SantaBarbara #CraftBeer #HumpDay</div>
+    <div class="social-chars">247 / 280 chars</div>
+  </div>
+
+  <div class="social-draft">
+    <div class="social-label">Post 2 — Review Shoutout</div>
+    <div class="social-text">Shoutout to our awesome guests leaving 5-star reviews! 🙌 "Great food and amazing beer nice atmosphere" — couldn't say it better ourselves. Come see what the buzz is about 🍻 #TheBrewhouse #SB</div>
+    <div class="social-chars">218 / 280 chars</div>
+  </div>
+
+  <div class="social-draft">
+    <div class="social-label">Post 3 — Mid-Week Special</div>
+    <div class="social-text">Wednesday night done right: house-brewed beers, scratch kitchen, live music weekends coming up 🎵 Beat the crowd and grab a seat on the patio tonight. 229 W Montecito St 📍 #SantaBarbaraEats</div>
+    <div class="social-chars">222 / 280 chars</div>
   </div>
 </div>
 
@@ -173,72 +253,25 @@
 <div class="section">
   <div class="section-title">📣 Ad Performance</div>
   <div class="ads-grid">
-
-    <!-- Google Ads -->
     <div class="ads-platform">
       <div class="ads-platform-title">
-        <span>🔵 Google Ads — Yesterday</span>
-        <span class="info-badge">📧 Notification</span> <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.72rem;text-decoration:none">📄 View Report →</a>
+        <span>🔵 Google Ads</span>
+        <span class="info-badge">📧 Reports Ready</span>
       </div>
-      <div class="ads-metrics">
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Spend</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Impressions</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Clicks</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">CTR</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Avg CPC</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Conversions</div>
-        </div>
-      </div>
+      <div style="font-size:0.82rem;color:var(--muted);">Daily Campaign Report and Campaign Performance reports available. No disapproved ads or budget alerts. <a href="https://ads.google.com/aw/reporting/reporteditor/view?download=true&reportId=932529582&ocid=7881882883" target="_blank" style="color:var(--blue);font-size:0.78rem;">View Report →</a></div>
     </div>
-
-    <!-- Yelp Ads -->
     <div class="ads-platform">
       <div class="ads-platform-title">
-        <span>🔴 Yelp Ads — Last 30 days</span>
-        <span class="fallback-badge">⚠️ No Data</span>
+        <span>🔴 Yelp</span>
+        <span class="fallback-badge">Marketing Only</span>
       </div>
-      <div class="ads-metrics">
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Spend</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Impressions</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Page Visits</div>
-        </div>
-        <div class="ads-metric">
-          <div class="ads-metric-value">--</div>
-          <div class="ads-metric-label">Leads</div>
-        </div>
-      </div>
+      <div style="font-size:0.82rem;color:var(--muted);">No customer messages or quote requests. Recent emails are Yelp marketing/promotions only.</div>
     </div>
-
   </div>
 </div>
 
 <div class="footer">
-  Generated automatically · April 14, 2026 at 06:08 PM UTC · The Brewhouse Morning Report
+  Generated automatically · April 15, 2026 · <a href="https://mojobrewhouse-cpu.github.io/brewhouse-hub/" style="color:var(--accent);text-decoration:none;">View Command Center →</a> · The Brewhouse Morning Report
 </div>
 </body>
 </html>
