@@ -188,14 +188,9 @@
     }
   },
   "reservations": {
-    "lastUpdated": "2026-04-16",
+    "lastUpdated": "2026-04-17",
     "source": "All Sources",
     "today": {
-      "date": "Thu, Apr 16",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Fri, Apr 17",
       "totalGuests": 2,
       "bookings": [
@@ -210,17 +205,21 @@
         }
       ]
     },
-    "upcoming": [
-      {
-        "time": "7:00 PM",
-        "name": "Karen Stephens",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(925) 787-9736",
-        "notes": "",
-        "date": "Sat, Apr 18"
-      }
-    ]
+    "tomorrow": {
+      "date": "Sat, Apr 18",
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "7:00 PM",
+          "name": "Karen Stephens",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(925) 787-9736",
+          "notes": ""
+        }
+      ]
+    },
+    "upcoming": []
   }
 }
