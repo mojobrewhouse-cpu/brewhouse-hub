@@ -1,7 +1,9 @@
 {
-  "date": "Wednesday, April 22",
+  "date": "Thursday, April 23",
   "toast": {
-    "date": "Monday, April 20",
+    "date": "Tuesday, April 21",
+    "pending": true,
+    "note": "Wed Apr 22 DPS not yet delivered at 4 AM. Tue Apr 21 email arrived but numbers are HTML-only and not extractable by the current tool path. Values below are still Mon Apr 20 (last parseable day).",
     "gross": "$1,951.25",
     "net": "$1,895.75",
     "guests": 78,
@@ -11,166 +13,69 @@
     "discountPct": "2.8%",
     "cardPayments": 36,
     "refunds": "$0.00",
-    "headline": "Monday ✅ $1,896 net, 78 guests, labor 21.3%",
-    "headlineSub": "53 orders | $24.30/guest | 2.8% discount | 9 voids",
-    "note": "Tuesday Apr 21 Daily Performance Summary not yet delivered at 7 AM run; showing Monday Apr 20 (most recent full DPS available)."
+    "headline": "Awaiting Toast — last parseable: Mon Apr 20 $1,896 net, 78 guests",
+    "headlineSub": "53 orders | $24.30/guest | 2.8% discount | 9 voids (Apr 20)"
   },
   "sling": {
-    "date": "Wednesday, April 22",
+    "date": "Thursday, April 23",
+    "pending": true,
     "count": 8,
     "hours": 37.07,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Jackson Wright",
-        "role": "Bartender"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      }
+      { "name": "Casey Smith", "role": "General Manager" },
+      { "name": "Tony Rincon", "role": "Bartender" },
+      { "name": "Jackson Wright", "role": "Bartender" },
+      { "name": "Andrew Turner", "role": "Bartender" },
+      { "name": "Katharine Brown", "role": "Server" },
+      { "name": "Noel Nunez", "role": "Chef" },
+      { "name": "Gabriel Lopez Galindo", "role": "Server" },
+      { "name": "James Hernandez", "role": "Busser" }
     ],
-    "note": "Counts/hours from Apr 22 Sling daily report; staff roster carried from prior day (email body not parseable)."
+    "note": "Apr 23 Sling daily report not yet delivered at 4 AM run. Showing Wed Apr 22 roster (8 staff, 37.07 hrs, 0 OT, 0 uncovered)."
   },
   "slingToday": {
-    "date": "Wednesday, April 22",
+    "date": "Thursday, April 23",
     "count": 8,
     "hours": 37.07,
     "overtime": 0,
     "uncovered": 0,
-    "pending": false,
+    "pending": true,
     "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Jackson Wright",
-        "role": "Bartender"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      }
+      { "name": "Casey Smith", "role": "General Manager" },
+      { "name": "Tony Rincon", "role": "Bartender" },
+      { "name": "Jackson Wright", "role": "Bartender" },
+      { "name": "Andrew Turner", "role": "Bartender" },
+      { "name": "Katharine Brown", "role": "Server" },
+      { "name": "Noel Nunez", "role": "Chef" },
+      { "name": "Gabriel Lopez Galindo", "role": "Server" },
+      { "name": "James Hernandez", "role": "Busser" }
     ]
   },
   "googleAds": {
-    "lastUpdated": "Wednesday, April 22",
+    "lastUpdated": "Thursday, April 23",
     "yesterday": {
-      "date": "Apr 21, 2026",
-      "spend": "$29.22",
-      "clicks": 74,
-      "impressions": 5968,
-      "cpc": "$0.39",
-      "ctr": "1.24%",
-      "conversions": 0
+      "date": "Apr 22, 2026",
+      "spend": "pending",
+      "clicks": null,
+      "impressions": null,
+      "cpc": null,
+      "ctr": null,
+      "conversions": null
     },
     "weekTotal": "$251.95",
     "days": [
-      {
-        "date": "Apr 21",
-        "spend": "$29.22",
-        "clicks": 74,
-        "impressions": 5968,
-        "cpc": "$0.39",
-        "conversions": 0
-      },
-      {
-        "date": "Apr 16",
-        "spend": "$44.18",
-        "clicks": 81,
-        "impressions": 6947,
-        "cpc": "$0.55",
-        "conversions": 0
-      },
-      {
-        "date": "Apr 15",
-        "spend": "$29.45",
-        "clicks": 111,
-        "impressions": 6044,
-        "cpc": "$0.27",
-        "conversions": 7
-      },
-      {
-        "date": "Apr 14",
-        "spend": "$32.46",
-        "clicks": 83,
-        "impressions": 6042,
-        "cpc": "$0.39",
-        "conversions": 13
-      },
-      {
-        "date": "Apr 13",
-        "spend": "$46.44",
-        "clicks": 58,
-        "impressions": 5839,
-        "cpc": "$0.80",
-        "conversions": 13
-      },
-      {
-        "date": "Apr 12",
-        "spend": "$26.78",
-        "clicks": 88,
-        "impressions": 6676,
-        "cpc": "$0.30",
-        "conversions": 23
-      },
-      {
-        "date": "Apr 11",
-        "spend": "$43.42",
-        "clicks": 84,
-        "impressions": 7618,
-        "cpc": "$0.52",
-        "conversions": 50
-      }
+      { "date": "Apr 21", "spend": "$29.22", "clicks": 74, "impressions": 5968, "cpc": "$0.39", "conversions": 0 },
+      { "date": "Apr 16", "spend": "$44.18", "clicks": 81, "impressions": 6947, "cpc": "$0.55", "conversions": 0 },
+      { "date": "Apr 15", "spend": "$29.45", "clicks": 111, "impressions": 6044, "cpc": "$0.27", "conversions": 7 },
+      { "date": "Apr 14", "spend": "$32.46", "clicks": 83, "impressions": 6042, "cpc": "$0.39", "conversions": 13 },
+      { "date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 13 },
+      { "date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 23 },
+      { "date": "Apr 11", "spend": "$43.42", "clicks": 84, "impressions": 7618, "cpc": "$0.52", "conversions": 50 }
     ],
-    "note": "Yesterday metrics live from ads.google.com (Yesterday filter). Historical days array is a mix of Apr 21 + Apr 11-16 (consecutive daily history not fetched this run)."
+    "note": "Apr 22 + Apr 23 report emails arrived but numbers are not in the message body (ads.google.com login required). No disapprovals or budget-alert subjects seen in last 24h."
   },
   "yelpAds": {
     "lastUpdated": "Wednesday, April 22",
@@ -204,47 +109,30 @@
       "bookings": []
     },
     "upcoming": [
+      { "time": "8:00 PM", "name": "Christopher Galluzzo", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(949) 421-7219", "notes": "", "date": "Sat, Apr 25" },
+      { "time": "3:30 PM", "name": "Mark Glowacky", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(602) 882-2141", "notes": "", "date": "Wed, May 6" },
+      { "time": "5:00 PM", "name": "Morgan Neumann", "guests": 4, "status": "confirmed", "source": "SpotHopper", "phone": "(262) 349-6024", "notes": "", "date": "Sun, Jun 21" },
+      { "time": "5:15 PM", "name": "Gina Curasi", "guests": 3, "status": "confirmed", "source": "SpotHopper", "phone": "(909) 533-1052", "notes": "Accessible table", "date": "Sun, Aug 9" }
+    ]
+  },
+  "reviews": {
+    "lastUpdated": "2026-04-23",
+    "unanswered": [
       {
-        "time": "3:30 PM",
-        "name": "Mark Glowacky",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(602) 882-2141",
-        "notes": "",
-        "date": "Wed, May 6"
+        "platform": "Google",
+        "author": "Crystal Aguilar",
+        "date": "2026-04-19",
+        "stars": 5,
+        "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and..."
       },
       {
-        "time": "5:00 PM",
-        "name": "Morgan Neumann",
-        "guests": 4,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(262) 349-6024",
-        "notes": "",
-        "date": "Sun, Jun 21"
-      },
-      {
-        "time": "5:15 PM",
-        "name": "Gina Curasi",
-        "guests": 3,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(909) 533-1052",
-        "notes": "Accessible table",
-        "date": "Sun, Aug 9"
-      },
-      {
-        "time": "8:00 PM",
-        "name": "Christopher Galluzzo",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(949) 421-7219",
-        "notes": "",
-        "date": "Sat, Apr 25"
+        "platform": "Google",
+        "author": "l g",
+        "date": "2026-04-15",
+        "stars": 5,
+        "snippet": "Great food and amazing beer nice atmosphere"
       }
     ]
   },
-  "lastUpdated": "2026-04-22T14:12:20Z"
+  "lastUpdated": "2026-04-23T04:00:00Z"
 }
