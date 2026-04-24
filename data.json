@@ -1,20 +1,18 @@
 {
   "date": "Friday, April 24",
   "systemStatus": {
-    "level": "urgent",
-    "headline": "GMAIL MCP DEAUTHENTICATED - Morning Brief automation could not run Apr 24",
-    "detail": "All 7 Gmail searches (Toast DPS, Toast IQ, Sling, Google Reviews, Yelp, Google Ads, TripAdvisor) failed with 'This connector requires authentication'. No Morning Brief email was sent. Reconnect Gmail in Cowork settings, then manually re-run brewhouse-morning-brief.",
+    "level": "warning",
+    "headline": "GMAIL MCP STILL DEAUTHENTICATED - Toast/Sling/TripAdvisor/Reviews stale; Chrome sources refreshed",
+    "detail": "Google Ads and Yelp Ads refreshed from live Chrome scrape. Toast (daily summary), Sling (today's schedule), Reviews, and TripAdvisor email sources still cannot be pulled until Gmail MCP is reconnected in Cowork settings.",
     "affected": [
       "Toast DPS",
       "Toast IQ",
-      "Sling schedule",
+      "Sling schedule (today)",
       "Google reviews",
-      "Yelp",
-      "Google Ads",
-      "TripAdvisor"
+      "TripAdvisor email alerts"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-04-24T04:00:00-07:00"
+    "as_of": "2026-04-24T07:00:00-07:00"
   },
   "toast": {
     "date": "Tuesday, April 21",
@@ -87,18 +85,27 @@
     "staff": []
   },
   "googleAds": {
-    "lastUpdated": "Thursday, April 23",
+    "lastUpdated": "Friday, April 24",
     "yesterday": {
       "date": "Apr 23, 2026",
-      "spend": "pending",
-      "clicks": null,
-      "impressions": null,
-      "cpc": null,
-      "ctr": null,
-      "conversions": null
+      "spend": "$20.09",
+      "clicks": 98,
+      "impressions": 7000,
+      "cpc": "$0.20",
+      "ctr": "1.40%",
+      "conversions": null,
+      "note": "Overview pane did not surface conversions count; active campaign = Local store visits and promotions-Performance Max-2. Oldest SB Brewery on Tap is paused."
     },
-    "weekTotal": "$251.95",
+    "weekTotal": "$228.62",
     "days": [
+      {
+        "date": "Apr 23",
+        "spend": "$20.09",
+        "clicks": 98,
+        "impressions": 7000,
+        "cpc": "$0.20",
+        "conversions": null
+      },
       {
         "date": "Apr 21",
         "spend": "$29.22",
@@ -156,25 +163,30 @@
         "conversions": 50
       }
     ],
-    "note": "Gmail MCP deauthenticated 2026-04-24 - could not scan for Google Ads notifications.",
-    "stale": true,
-    "staleNote": "Reconnect Gmail AND re-login to ads.google.com in Chrome to fully restore."
+    "note": "Refreshed via Chrome live scrape of ads.google.com/aw/overview. Balance as of Apr 24: $185.89. Next auto payment May 1.",
+    "stale": false
   },
   "yelpAds": {
-    "lastUpdated": "Thursday, April 23",
-    "spend": "$671.23",
-    "period": "Apr 1 - Apr 22, 2026",
-    "impressions": "91.8k",
+    "lastUpdated": "Friday, April 24",
+    "spend": "$686.51",
+    "period": "Apr 1 - Apr 23, 2026",
+    "impressions": "92.4k",
     "pageVisits": "1.1k",
-    "leads": 264,
+    "leads": 261,
     "cpc": "$0.98",
     "cpl": "$3.67",
-    "adClicks30d": 980,
+    "adClicks30d": 979,
     "bonus": {
       "total": "$900",
-      "used": "$852.20",
-      "unused": "$47.80",
+      "used": "$868.20",
+      "unused": "$31.80",
       "expires": "Apr 30, 2026"
+    },
+    "adContribution12mo": {
+      "pageVisits": "7.4k",
+      "leads": "1.5k",
+      "adsPct": "44%",
+      "organicPct": "56%"
     }
   },
   "reservations": {
@@ -235,7 +247,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-04-23",
-    "note": "Gmail MCP deauthenticated 2026-04-24 - could not scan for new reviews. Check business.google.com/n/14883478205426286749/reviews directly.",
+    "note": "Gmail MCP still deauthenticated 2026-04-24 - could not scan for new reviews this morning. Check business.google.com/n/14883478205426286749/reviews directly.",
     "unanswered": [
       {
         "platform": "Google",
@@ -253,5 +265,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-04-24T04:00:00-07:00"
+  "lastUpdated": "2026-04-24T07:00:00-07:00"
 }
