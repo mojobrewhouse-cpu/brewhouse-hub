@@ -2,20 +2,20 @@
   "date": "Saturday, April 25",
   "systemStatus": {
     "level": "warning",
-    "headline": "GMAIL RECONNECTED - But Toast emails still not body-extractable; today's Toast/Sling emails not yet delivered",
-    "detail": "Gmail MCP is responsive again (Sling, Reviews, Yelp, Google Ads emails parsing correctly). However: (1) Toast daily summary HTML body still doesn't surface via Gmail MCP - subject visible but Net/Gross/Guests numbers unparseable; (2) Friday Apr 24 Toast summary and Saturday Apr 25 Sling schedule had not arrived as of 4 AM run (typically deliver ~7 AM PDT).",
+    "headline": "Sling refreshed for today (Apr 25). Toast Apr 24 DPS still pending; ad scrapes skipped on unattended run.",
+    "detail": "(1) Sling daily report for Sat Apr 25 delivered at 7:01 AM PDT - parsed cleanly (9 staff, 45 hrs, 0 OT). (2) Toast: Apr 24 group-level Toast IQ email arrived, but body is still un-extractable via Gmail MCP and the per-restaurant Daily Performance Summary for Apr 24 has not yet been delivered (typical lag ~24h). Latest parseable DPS remains stale. (3) Google Ads & Yelp Ads: report emails only contain dashboard links - live Chrome scrape skipped on unattended morning run. Numbers below are last manual refresh from Apr 24.",
     "affected": [
-      "Toast DPS (HTML body not extractable)",
-      "Friday Apr 24 Toast summary (not yet delivered)",
-      "Saturday Apr 25 Sling schedule (not yet delivered)"
+      "Toast Apr 24 DPS (not yet delivered)",
+      "Google Ads (last refreshed Apr 24 - live scrape skipped on unattended run)",
+      "Yelp Ads (last refreshed Apr 24 - live scrape skipped on unattended run)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-04-25T04:00:00-07:00"
+    "as_of": "2026-04-25T07:00:00-07:00"
   },
   "toast": {
     "date": "Thursday, April 23",
     "pending": true,
-    "note": "Latest Toast email in inbox is for Thursday Apr 23 (delivered Fri Apr 24 7:38 AM). Body not extractable via Gmail MCP. Friday Apr 24 summary not yet in inbox.",
+    "note": "Toast Apr 24 daily summary not yet delivered. Group-level Toast IQ email for Apr 24 arrived this morning but contains no parseable body. Latest DPS remains Apr 23 with body still unparseable via Gmail MCP.",
     "gross": "$1,951.25",
     "net": "$1,895.75",
     "guests": 78,
@@ -26,7 +26,7 @@
     "cardPayments": 36,
     "refunds": "$0.00",
     "headline": "Toast body unparseable - last clean parse Mon Apr 20 ($1,896 net, 78 guests)",
-    "headlineSub": "Open Toast email or app for Apr 23 numbers; Apr 24 summary pending",
+    "headlineSub": "Open Toast email or app for Apr 23/24 numbers; Apr 24 DPS still pending",
     "stale": true,
     "staleNote": "Gmail MCP returns Toast email metadata but no body. Manual check required for daily numbers."
   },
@@ -37,29 +37,100 @@
     "overtime": 0,
     "uncovered": 0,
     "staff": [
-      { "name": "Casey Smith", "role": "General Manager" },
-      { "name": "Christine Vargas", "role": "Bartender" },
-      { "name": "Katharine Brown", "role": "Bartender" },
-      { "name": "Fred De Leon", "role": "Bartender" },
-      { "name": "Daniel Rodriguez", "role": "Server" },
-      { "name": "Augustine Arroyo", "role": "Server" },
-      { "name": "Bri Kelley", "role": "Server" },
-      { "name": "James Hernadez", "role": "Server" },
-      { "name": "Cal Carter", "role": "Busser" },
-      { "name": "Isael Salvador Narciso", "role": "Cook" },
-      { "name": "Noel Nunez", "role": "Chef" }
+      {
+        "name": "Casey Smith",
+        "role": "General Manager"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      },
+      {
+        "name": "Fred De Leon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Busser"
+      },
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      }
     ]
   },
   "slingToday": {
     "date": "Saturday, April 25",
-    "pending": true,
-    "stale": true,
-    "staleNote": "Today's Sling daily report not yet delivered as of 4 AM. Showing Friday Apr 24 as last received.",
-    "count": null,
-    "hours": null,
-    "overtime": null,
-    "uncovered": null,
-    "staff": []
+    "pending": false,
+    "stale": false,
+    "count": 9,
+    "hours": 45,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 3,
+    "shifts": 9,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Server"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "General Manager"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Server"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Busser"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      }
+    ]
   },
   "googleAds": {
     "lastUpdated": "Friday, April 24",
@@ -75,17 +146,73 @@
     },
     "weekTotal": "$228.62",
     "days": [
-      { "date": "Apr 23", "spend": "$20.09", "clicks": 98, "impressions": 7000, "cpc": "$0.20", "conversions": null },
-      { "date": "Apr 21", "spend": "$29.22", "clicks": 74, "impressions": 5968, "cpc": "$0.39", "conversions": 0 },
-      { "date": "Apr 16", "spend": "$44.18", "clicks": 81, "impressions": 6947, "cpc": "$0.55", "conversions": 0 },
-      { "date": "Apr 15", "spend": "$29.45", "clicks": 111, "impressions": 6044, "cpc": "$0.27", "conversions": 7 },
-      { "date": "Apr 14", "spend": "$32.46", "clicks": 83, "impressions": 6042, "cpc": "$0.39", "conversions": 13 },
-      { "date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 13 },
-      { "date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 23 },
-      { "date": "Apr 11", "spend": "$43.42", "clicks": 84, "impressions": 7618, "cpc": "$0.52", "conversions": 50 }
+      {
+        "date": "Apr 23",
+        "spend": "$20.09",
+        "clicks": 98,
+        "impressions": 7000,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 21",
+        "spend": "$29.22",
+        "clicks": 74,
+        "impressions": 5968,
+        "cpc": "$0.39",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 16",
+        "spend": "$44.18",
+        "clicks": 81,
+        "impressions": 6947,
+        "cpc": "$0.55",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 15",
+        "spend": "$29.45",
+        "clicks": 111,
+        "impressions": 6044,
+        "cpc": "$0.27",
+        "conversions": 7
+      },
+      {
+        "date": "Apr 14",
+        "spend": "$32.46",
+        "clicks": 83,
+        "impressions": 6042,
+        "cpc": "$0.39",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 13",
+        "spend": "$46.44",
+        "clicks": 58,
+        "impressions": 5839,
+        "cpc": "$0.80",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 12",
+        "spend": "$26.78",
+        "clicks": 88,
+        "impressions": 6676,
+        "cpc": "$0.30",
+        "conversions": 23
+      },
+      {
+        "date": "Apr 11",
+        "spend": "$43.42",
+        "clicks": 84,
+        "impressions": 7618,
+        "cpc": "$0.52",
+        "conversions": 50
+      }
     ],
-    "note": "Refreshed via Chrome live scrape of ads.google.com/aw/overview. Balance as of Apr 24: $185.89. Next auto payment May 1.",
-    "stale": false
+    "note": "2 fresh report emails arrived Apr 25 (Campaign performance, advanced report) but emails contain only dashboard links. Live Chrome scrape skipped on unattended 7AM run. Last manual refresh Apr 24: Balance $185.89, next auto payment May 1.",
+    "stale": true
   },
   "yelpAds": {
     "lastUpdated": "Friday, April 24",
@@ -108,7 +235,13 @@
       "leads": "1.5k",
       "adsPct": "44%",
       "organicPct": "56%"
-    }
+    },
+    "stale": true,
+    "staleNote": "Live Chrome scrape skipped on unattended run. Last refresh Apr 24."
+  },
+  "tripAdvisor": {
+    "lastUpdated": "2026-04-25",
+    "note": "No new TripAdvisor analytics email in last 24h (no email from analytics@hm2.tripadvisor.com)."
   },
   "reservations": {
     "lastUpdated": "2026-04-25",
@@ -117,9 +250,33 @@
       "date": "Sat, Apr 25",
       "totalGuests": 19,
       "bookings": [
-        { "time": "12:30 PM", "name": "Melissa DeFreese", "guests": 15, "status": "confirmed", "source": "SpotHopper", "phone": "(760) 221-4249", "notes": "" },
-        { "time": "2:30 PM", "name": "srinivas harshal", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(669) 298-7595", "notes": "" },
-        { "time": "8:00 PM", "name": "Christopher Galluzzo", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(949) 421-7219", "notes": "" }
+        {
+          "time": "12:30 PM",
+          "name": "Melissa DeFreese",
+          "guests": 15,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(760) 221-4249",
+          "notes": ""
+        },
+        {
+          "time": "2:30 PM",
+          "name": "srinivas harshal",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(669) 298-7595",
+          "notes": ""
+        },
+        {
+          "time": "8:00 PM",
+          "name": "Christopher Galluzzo",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(949) 421-7219",
+          "notes": ""
+        }
       ]
     },
     "tomorrow": {
@@ -128,16 +285,61 @@
       "bookings": []
     },
     "upcoming": [
-      { "time": "12:45 PM", "name": "Tammy Wright", "guests": 9, "status": "confirmed", "source": "SpotHopper", "phone": "(626) 705-4917", "notes": "Mother's Day", "date": "Sun, May 10" },
-      { "time": "3:30 PM", "name": "Mark Glowacky", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(602) 882-2141", "notes": "", "date": "Wed, May 6" },
-      { "time": "5:00 PM", "name": "Morgan Neumann", "guests": 4, "status": "confirmed", "source": "SpotHopper", "phone": "(262) 349-6024", "notes": "", "date": "Sun, Jun 21" },
-      { "time": "5:15 PM", "name": "Gina Curasi", "guests": 3, "status": "confirmed", "source": "SpotHopper", "phone": "(909) 533-1052", "notes": "Accessible table", "date": "Sun, Aug 9" },
-      { "time": "6:30 PM", "name": "toni marie milito", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(516) 458-4585", "notes": "this is for our two year anniversary!", "date": "Tue, May 12" }
+      {
+        "time": "12:45 PM",
+        "name": "Tammy Wright",
+        "guests": 9,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(626) 705-4917",
+        "notes": "Mother's Day",
+        "date": "Sun, May 10"
+      },
+      {
+        "time": "3:30 PM",
+        "name": "Mark Glowacky",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(602) 882-2141",
+        "notes": "",
+        "date": "Wed, May 6"
+      },
+      {
+        "time": "5:00 PM",
+        "name": "Morgan Neumann",
+        "guests": 4,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(262) 349-6024",
+        "notes": "",
+        "date": "Sun, Jun 21"
+      },
+      {
+        "time": "5:15 PM",
+        "name": "Gina Curasi",
+        "guests": 3,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(909) 533-1052",
+        "notes": "Accessible table",
+        "date": "Sun, Aug 9"
+      },
+      {
+        "time": "6:30 PM",
+        "name": "toni marie milito",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(516) 458-4585",
+        "notes": "this is for our two year anniversary!",
+        "date": "Tue, May 12"
+      }
     ]
   },
   "reviews": {
     "lastUpdated": "2026-04-25",
-    "note": "Gmail MCP responsive again - successfully scanned for new reviews this morning. 1 new since last brief: K Vos (4★, Apr 24).",
+    "note": "Gmail MCP responsive. No new reviews since Apr 24 brief.",
     "unanswered": [
       {
         "platform": "Google",
@@ -169,5 +371,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-04-25T04:00:00-07:00"
+  "lastUpdated": "2026-04-25T07:00:00-07:00"
 }
