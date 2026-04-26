@@ -1,22 +1,20 @@
 {
   "date": "Sunday, April 26",
   "systemStatus": {
-    "level": "warning",
-    "headline": "Sunday 4 AM run — yesterday's Toast (Apr 25) and today's Sling (Apr 26) not yet delivered.",
-    "detail": "(1) Toast: No new Daily Performance Summary for Apr 25 yet — typically arrives ~7:40 AM PT. Latest available Toast email is Apr 24 (Friday) but body still un-extractable via Gmail MCP. (2) Sling: No daily report for Apr 26 yet — typically arrives ~7 AM PT. Most recent Sling = Sat Apr 25 (9 staff, 45 hrs, 0 OT, 0 uncovered). (3) Google Ads: 2 fresh Apr 25 reports arrived (Brewhouse Daily Campaign + Campaign performance) — emails contain dashboard links only, no parseable body. No disapprovals or budget alerts flagged. (4) Yelp: only marketing newsletter + a calendar update from imiller@yelp.com (Mon Apr 27 9 AM meeting). No customer inquiries. (5) TripAdvisor: no analytics email in last 24h. (6) Reviews: no new reviews since Apr 24 (K Vos 4★ still unanswered). (7) GitHub PAT: 200 OK.",
+    "level": "info",
+    "headline": "Sunday 7 AM run \u2014 Sling Apr 26 + Google Ads Apr 25 + Yelp live all refreshed.",
+    "detail": "(1) Toast: No Daily Performance Summary for Apr 25 yet (typically arrives ~7:40 AM PT). Apr 24 DPS body remains un-extractable via Gmail MCP. (2) Sling Apr 26: 8 staff, 36 hrs, 0 OT, 0 uncovered. (3) Google Ads Apr 25 LIVE: 111 clicks, 6.78K impressions, $24.60 spend, $0.22 CPC. Conversion tag (Reservation Form Submission) still unverified. (4) Yelp LIVE: $778.73 ad spend Apr 1-25, 94k impressions 30d, 1.1k page visits, 258 leads, $0.93 CPC, $3.02 CPL. Bonus $898.57 used / $1.43 remaining (expires Apr 30). (5) TripAdvisor: no analytics email last 24h. (6) Reviews: K Vos 4\u2605 still unanswered. (7) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast Apr 25 DPS (not yet delivered — expected ~7:40 AM PT)",
-      "Sling Apr 26 daily report (not yet delivered — expected ~7 AM PT)",
-      "Google Ads (2 reports arrived but body has links only — live scrape skipped on unattended run)",
-      "Yelp Ads (last refreshed Apr 24 — live scrape skipped on unattended run)"
+      "Toast Apr 25 DPS (not yet delivered \u2014 expected ~7:40 AM PT)",
+      "Toast Apr 24 DPS body un-extractable via Gmail MCP \u2014 last clean parse Apr 20"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-04-26T04:00:00-07:00"
+    "as_of": "2026-04-26T07:05:00-07:00"
   },
   "toast": {
     "date": "Friday, April 24",
     "pending": true,
-    "note": "Toast Apr 25 daily summary not yet delivered (expected ~7:40 AM PT). Apr 24 Daily Performance Summary received but Gmail MCP returns no parseable body. Latest clean parse remains Apr 20.",
+    "note": "Toast Apr 25 daily summary not yet delivered (expected ~7:40 AM PT). Apr 24 DPS received but Gmail MCP returns no parseable body. Last clean parse remains Apr 20.",
     "gross": "$1,951.25",
     "net": "$1,895.75",
     "guests": 78,
@@ -26,7 +24,7 @@
     "discountPct": "2.8%",
     "cardPayments": 36,
     "refunds": "$0.00",
-    "headline": "Toast body still unparseable via Gmail MCP — Apr 25 DPS pending; last clean parse Mon Apr 20 ($1,896 net, 78 guests)",
+    "headline": "Toast body unparseable via Gmail MCP \u2014 Apr 25 DPS pending; last clean parse Mon Apr 20 ($1,896 net, 78 guests)",
     "headlineSub": "Open Toast email or app for Apr 24/25 numbers",
     "stale": true,
     "staleNote": "Manual check required for daily numbers."
@@ -40,80 +38,199 @@
     "employeesOff": 3,
     "shifts": 9,
     "staff": [
-      {"name": "Isael Salvador Narciso", "role": "Cook"},
-      {"name": "Andrew Turner", "role": "Bartender"},
-      {"name": "Emily Lanzel", "role": "Server"},
-      {"name": "Moe Danely", "role": "General Manager"},
-      {"name": "Cal Carter", "role": "Server"},
-      {"name": "Daniel Rodriguez", "role": "Server"},
-      {"name": "Noel Nunez", "role": "Busser"},
-      {"name": "Katharine Brown", "role": "Bartender"},
-      {"name": "Bri Kelley", "role": "Server"}
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Server"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "General Manager"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Server"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Busser"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      }
     ]
   },
   "slingToday": {
     "date": "Sunday, April 26",
-    "pending": true,
+    "pending": false,
     "stale": false,
-    "note": "Sling daily report for Sun Apr 26 not yet delivered (expected ~7 AM PT). Showing previous day (Sat Apr 25) as last known snapshot.",
-    "count": null,
-    "hours": null,
-    "overtime": null,
-    "uncovered": null,
-    "employeesOff": null,
-    "shifts": null,
-    "staff": []
+    "note": "Sling daily report for Sun Apr 26 delivered at 7:01 AM PT.",
+    "count": 8,
+    "hours": 36,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 1,
+    "shifts": 8,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender"
+      },
+      {
+        "name": "Harmony Willson",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      }
+    ]
   },
   "googleAds": {
-    "lastUpdated": "Saturday, April 25",
+    "lastUpdated": "Sunday, April 26",
     "yesterday": {
-      "date": "Apr 23, 2026",
-      "spend": "$20.09",
-      "clicks": 98,
-      "impressions": 7000,
-      "cpc": "$0.20",
-      "ctr": "1.40%",
+      "date": "Apr 25, 2026",
+      "spend": "$24.60",
+      "clicks": 111,
+      "impressions": 6780,
+      "cpc": "$0.22",
+      "ctr": "1.64%",
       "conversions": null,
-      "note": "2 fresh report emails arrived Apr 25 (Brewhouse Daily Campaign + Campaign performance). No disapprovals or budget alerts. Active campaign = Local store visits and promotions-Performance Max-2."
+      "note": "Live Chrome scrape of Overview page on Apr 26 7:05 AM PT. Conversion tracking tag (Reservation Form Submission) still unverified \u2014 no conversion count available."
     },
-    "weekTotal": "$228.62",
+    "weekTotal": "$253.22",
     "days": [
-      {"date": "Apr 23", "spend": "$20.09", "clicks": 98, "impressions": 7000, "cpc": "$0.20", "conversions": null},
-      {"date": "Apr 21", "spend": "$29.22", "clicks": 74, "impressions": 5968, "cpc": "$0.39", "conversions": 0},
-      {"date": "Apr 16", "spend": "$44.18", "clicks": 81, "impressions": 6947, "cpc": "$0.55", "conversions": 0},
-      {"date": "Apr 15", "spend": "$29.45", "clicks": 111, "impressions": 6044, "cpc": "$0.27", "conversions": 7},
-      {"date": "Apr 14", "spend": "$32.46", "clicks": 83, "impressions": 6042, "cpc": "$0.39", "conversions": 13},
-      {"date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 13},
-      {"date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 23},
-      {"date": "Apr 11", "spend": "$43.42", "clicks": 84, "impressions": 7618, "cpc": "$0.52", "conversions": 50}
+      {
+        "date": "Apr 25",
+        "spend": "$24.60",
+        "clicks": 111,
+        "impressions": 6780,
+        "cpc": "$0.22",
+        "conversions": null
+      },
+      {
+        "date": "Apr 23",
+        "spend": "$20.09",
+        "clicks": 98,
+        "impressions": 7000,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 21",
+        "spend": "$29.22",
+        "clicks": 74,
+        "impressions": 5968,
+        "cpc": "$0.39",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 16",
+        "spend": "$44.18",
+        "clicks": 81,
+        "impressions": 6947,
+        "cpc": "$0.55",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 15",
+        "spend": "$29.45",
+        "clicks": 111,
+        "impressions": 6044,
+        "cpc": "$0.27",
+        "conversions": 7
+      },
+      {
+        "date": "Apr 14",
+        "spend": "$32.46",
+        "clicks": 83,
+        "impressions": 6042,
+        "cpc": "$0.39",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 13",
+        "spend": "$46.44",
+        "clicks": 58,
+        "impressions": 5839,
+        "cpc": "$0.80",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 12",
+        "spend": "$26.78",
+        "clicks": 88,
+        "impressions": 6676,
+        "cpc": "$0.30",
+        "conversions": 23
+      }
     ],
-    "note": "2 fresh report emails arrived Apr 25 (Brewhouse Daily Campaign + Campaign performance). Emails contain dashboard links only. Live Chrome scrape skipped on unattended 4AM run. Last manual refresh Apr 24: Balance $185.89, next auto payment May 1.",
-    "stale": true
+    "note": "Apr 25 numbers pulled live from Google Ads Overview page on Apr 26 7:05 AM PT. Active campaign = Local store visits and promotions-Performance Max-2. Last manual refresh Apr 24: Balance $185.89, next auto payment May 1.",
+    "stale": false
   },
   "yelpAds": {
-    "lastUpdated": "Friday, April 24",
-    "spend": "$686.51",
-    "period": "Apr 1 - Apr 23, 2026",
-    "impressions": "92.4k",
+    "lastUpdated": "Sunday, April 26",
+    "spend": "$778.73",
+    "period": "Apr 1 - Apr 25, 2026",
+    "impressions": "94k",
     "pageVisits": "1.1k",
-    "leads": 261,
-    "cpc": "$0.98",
-    "cpl": "$3.67",
-    "adClicks30d": 979,
+    "leads": 258,
+    "cpc": "$0.93",
+    "cpl": "$3.02",
+    "adClicks30d": 1000,
     "bonus": {
       "total": "$900",
-      "used": "$868.20",
-      "unused": "$31.80",
+      "used": "$898.57",
+      "unused": "$1.43",
       "expires": "Apr 30, 2026"
     },
     "adContribution12mo": {
-      "pageVisits": "7.4k",
+      "pageVisits": "7.5k",
       "leads": "1.5k",
-      "adsPct": "44%",
-      "organicPct": "56%"
+      "adsPct": "45%",
+      "organicPct": "55%",
+      "totalLeads": 1506,
+      "adsLeads": 673,
+      "organicLeads": 833
     },
-    "stale": true,
-    "staleNote": "Live Chrome scrape skipped on unattended run. Last refresh Apr 24."
+    "stale": false,
+    "staleNote": "Live Chrome scrape on Apr 26 7:05 AM PT. Bonus $1.43 unused \u2014 expires Apr 30."
   },
   "tripAdvisor": {
     "lastUpdated": "2026-04-26",
@@ -143,21 +260,81 @@
       "bookings": []
     },
     "upcoming": [
-      {"time": "12:45 PM", "name": "Tammy Wright", "guests": 9, "status": "confirmed", "source": "SpotHopper", "phone": "(626) 705-4917", "notes": "Mother's Day", "date": "Sun, May 10"},
-      {"time": "3:30 PM", "name": "Mark Glowacky", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(602) 882-2141", "notes": "", "date": "Wed, May 6"},
-      {"time": "5:15 PM", "name": "Gina Curasi", "guests": 3, "status": "confirmed", "source": "SpotHopper", "phone": "(909) 533-1052", "notes": "Accessible table", "date": "Sun, Aug 9"},
-      {"time": "6:30 PM", "name": "toni marie milito", "guests": 2, "status": "confirmed", "source": "SpotHopper", "phone": "(516) 458-4585", "notes": "this is for our two year anniversary!", "date": "Tue, May 12"}
+      {
+        "time": "12:45 PM",
+        "name": "Tammy Wright",
+        "guests": 9,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(626) 705-4917",
+        "notes": "Mother's Day",
+        "date": "Sun, May 10"
+      },
+      {
+        "time": "3:30 PM",
+        "name": "Mark Glowacky",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(602) 882-2141",
+        "notes": "",
+        "date": "Wed, May 6"
+      },
+      {
+        "time": "5:15 PM",
+        "name": "Gina Curasi",
+        "guests": 3,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(909) 533-1052",
+        "notes": "Accessible table",
+        "date": "Sun, Aug 9"
+      },
+      {
+        "time": "6:30 PM",
+        "name": "toni marie milito",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(516) 458-4585",
+        "notes": "this is for our two year anniversary!",
+        "date": "Tue, May 12"
+      }
     ]
   },
   "reviews": {
     "lastUpdated": "2026-04-26",
-    "note": "No new reviews since Apr 24. K Vos 4★ still unanswered. Yelp Apr 27 9 AM meeting (imiller@yelp.com) confirmed.",
+    "note": "No new reviews since Apr 24. K Vos 4\u2605 still unanswered. Yelp Apr 27 9 AM meeting (imiller@yelp.com) confirmed.",
     "unanswered": [
-      {"platform": "Google", "author": "K Vos", "date": "2026-04-24", "stars": 4, "snippet": "Great help with the glutenfree meal"},
-      {"platform": "Google", "author": "Crystal Aguilar", "date": "2026-04-19", "stars": 5, "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and..."},
-      {"platform": "Google", "author": "l g", "date": "2026-04-15", "stars": 5, "snippet": "Great food and amazing beer nice atmosphere"},
-      {"platform": "Google", "author": "Lisa O'Brien", "date": "2026-04-11", "stars": 5, "snippet": "(rating only, no text)"}
+      {
+        "platform": "Google",
+        "author": "K Vos",
+        "date": "2026-04-24",
+        "stars": 4,
+        "snippet": "Great help with the glutenfree meal"
+      },
+      {
+        "platform": "Google",
+        "author": "Crystal Aguilar",
+        "date": "2026-04-19",
+        "stars": 5,
+        "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and..."
+      },
+      {
+        "platform": "Google",
+        "author": "l g",
+        "date": "2026-04-15",
+        "stars": 5,
+        "snippet": "Great food and amazing beer nice atmosphere"
+      },
+      {
+        "platform": "Google",
+        "author": "Lisa O'Brien",
+        "date": "2026-04-11",
+        "stars": 5,
+        "snippet": "(rating only, no text)"
+      }
     ]
   },
-  "lastUpdated": "2026-04-26T04:00:00-07:00"
+  "lastUpdated": "2026-04-26T07:05:00-07:00"
 }
