@@ -2,11 +2,11 @@
   "date": "Sunday, April 26",
   "systemStatus": {
     "level": "info",
-    "headline": "Sunday 7 AM run \u2014 Sling Apr 26 + Google Ads Apr 25 + Yelp live all refreshed.",
-    "detail": "(1) Toast: No Daily Performance Summary for Apr 25 yet (typically arrives ~7:40 AM PT). Apr 24 DPS body remains un-extractable via Gmail MCP. (2) Sling Apr 26: 8 staff, 36 hrs, 0 OT, 0 uncovered. (3) Google Ads Apr 25 LIVE: 111 clicks, 6.78K impressions, $24.60 spend, $0.22 CPC. Conversion tag (Reservation Form Submission) still unverified. (4) Yelp LIVE: $778.73 ad spend Apr 1-25, 94k impressions 30d, 1.1k page visits, 258 leads, $0.93 CPC, $3.02 CPL. Bonus $898.57 used / $1.43 remaining (expires Apr 30). (5) TripAdvisor: no analytics email last 24h. (6) Reviews: K Vos 4\u2605 still unanswered. (7) GitHub PAT: 200 OK.",
+    "headline": "Sunday 7 AM run — Sling Apr 26 + Google Ads Apr 25 + Yelp live all refreshed.",
+    "detail": "(1) Toast: No Daily Performance Summary for Apr 25 yet (typically arrives ~7:40 AM PT). Apr 24 DPS body remains un-extractable via Gmail MCP. (2) Sling Apr 26: 8 staff, 36 hrs, 0 OT, 0 uncovered. (3) Google Ads Apr 25 LIVE: 111 clicks, 6.78K impressions, $24.60 spend, $0.22 CPC. Conversion tag (Reservation Form Submission) still unverified. (4) Yelp LIVE: $778.73 ad spend Apr 1-25, 94k impressions 30d, 1.1k page visits, 258 leads, $0.93 CPC, $3.02 CPL. Bonus $898.57 used / $1.43 remaining (expires Apr 30). (5) TripAdvisor: no analytics email last 24h. (6) Reviews: K Vos 4★ still unanswered. (7) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast Apr 25 DPS (not yet delivered \u2014 expected ~7:40 AM PT)",
-      "Toast Apr 24 DPS body un-extractable via Gmail MCP \u2014 last clean parse Apr 20"
+      "Toast Apr 25 DPS (not yet delivered — expected ~7:40 AM PT)",
+      "Toast Apr 24 DPS body un-extractable via Gmail MCP — last clean parse Apr 20"
     ],
     "githubPat": "OK (200)",
     "as_of": "2026-04-26T07:05:00-07:00"
@@ -24,7 +24,7 @@
     "discountPct": "2.8%",
     "cardPayments": 36,
     "refunds": "$0.00",
-    "headline": "Toast body unparseable via Gmail MCP \u2014 Apr 25 DPS pending; last clean parse Mon Apr 20 ($1,896 net, 78 guests)",
+    "headline": "Toast body unparseable via Gmail MCP — Apr 25 DPS pending; last clean parse Mon Apr 20 ($1,896 net, 78 guests)",
     "headlineSub": "Open Toast email or app for Apr 24/25 numbers",
     "stale": true,
     "staleNote": "Manual check required for daily numbers."
@@ -132,7 +132,7 @@
       "cpc": "$0.22",
       "ctr": "1.64%",
       "conversions": null,
-      "note": "Live Chrome scrape of Overview page on Apr 26 7:05 AM PT. Conversion tracking tag (Reservation Form Submission) still unverified \u2014 no conversion count available."
+      "note": "Live Chrome scrape of Overview page on Apr 26 7:05 AM PT. Conversion tracking tag (Reservation Form Submission) still unverified — no conversion count available."
     },
     "weekTotal": "$253.22",
     "days": [
@@ -230,7 +230,7 @@
       "organicLeads": 833
     },
     "stale": false,
-    "staleNote": "Live Chrome scrape on Apr 26 7:05 AM PT. Bonus $1.43 unused \u2014 expires Apr 30."
+    "staleNote": "Live Chrome scrape on Apr 26 7:05 AM PT. Bonus $1.43 unused — expires Apr 30."
   },
   "tripAdvisor": {
     "lastUpdated": "2026-04-26",
@@ -241,7 +241,7 @@
     "source": "All Sources",
     "today": {
       "date": "Sun, Apr 26",
-      "totalGuests": 5,
+      "totalGuests": 10,
       "bookings": [
         {
           "time": "4:30 PM",
@@ -251,6 +251,15 @@
           "source": "SpotHopper",
           "phone": "(215) 756-2223",
           "notes": "Height chair avail plz?"
+        },
+        {
+          "time": "5:30 PM",
+          "name": "Joshua Arriola",
+          "guests": 5,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(650) 278-7711",
+          "notes": "One dog"
         }
       ]
     },
@@ -304,7 +313,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-04-26",
-    "note": "No new reviews since Apr 24. K Vos 4\u2605 still unanswered. Yelp Apr 27 9 AM meeting (imiller@yelp.com) confirmed.",
+    "note": "No new reviews since Apr 24. K Vos 4★ still unanswered. Yelp Apr 27 9 AM meeting (imiller@yelp.com) confirmed.",
     "unanswered": [
       {
         "platform": "Google",
