@@ -2,33 +2,33 @@
   "date": "Tuesday, April 28",
   "systemStatus": {
     "level": "warn",
-    "headline": "Tue Apr 28 4 AM run — Toast Mon Apr 27 DPS not yet delivered (expected ~7:40 AM PT). Sling Apr 28 not yet delivered (expected ~7 AM PT).",
-    "detail": "(1) Toast Mon Apr 27 DPS NOT yet in Gmail at 4 AM run — Toast typically delivers at 7:38–7:40 AM PT. Will be available on later runs. (2) Toast Sun Apr 26 DPS arrived 4/27 7:39 AM PT but body remains unparseable by Gmail MCP (HTML-only, no plaintext). Last fully parsed Toast = Sat Apr 25: $5,479.75 net / 192 guests / 20.8% labor. (3) Sling Tue Apr 28 daily report NOT yet delivered at 4 AM run (expected ~7 AM PT). Most recent Sling = Mon Apr 27: 4 staff, 22.42 hrs, 0 OT, 0 uncovered. (4) Google Ads: 4 reports across Apr 26–27. No disapprovals, no budget alerts. Latest report email: Apr 27 8:48 AM PT 'Brewhouse Daily Campaign Report'. (5) Yelp: NO new emails in last 24h. Bonus $900 fully exhausted, expires Apr 30 (2 days). (6) TripAdvisor: NO analytics email from analytics@hm2.tripadvisor.com in last 24h. (7) Reviews: K Vos 4★ Google now 5 DAYS unanswered. Crystal Aguilar 5★ Google 9 days unanswered. UK 5-bubble TripAdvisor 6 days unanswered. (8) GitHub PAT: 200 OK.",
+    "headline": "Tue Apr 28 7 AM run — Google Ads auth expired (re-login needed). Sling Apr 28 + Yelp Ads (live) refreshed. Toast Mon Apr 27 DPS not yet delivered (~7:40 AM PT).",
+    "detail": "(1) Google Ads: Chrome session redirected to account chooser at ads.google.com — cookie expired. Email sent to Joal flagging which service needs re-login. Live scrape skipped, last email-sourced data preserved (Apr 23). (2) Yelp Ads: LIVE scrape OK — Apr 1–27 spend $810, 90.1k impressions, 1.1k page visits, 244 leads, $900 bonus fully used (expires Apr 30). (3) Sling Apr 28: parsed OK — 9 staff, 2 off, 9 shifts, 0 uncovered, 41.91 hrs, 0 OT. (4) Toast Mon Apr 27 DPS: NOT yet delivered at 7 AM run (expected ~7:38–7:40 AM PT). Toast Sun Apr 26 DPS arrived 4/27 7:39 AM PT but body remains HTML-only / unparseable via Gmail MCP. Last fully parsed Toast = Sat Apr 25: $5,479.75 net / 192 guests / 20.8% labor (carried from prior run). (5) TripAdvisor: no analytics email from analytics@hm2.tripadvisor.com in last 24h. (6) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast Mon Apr 27 DPS not yet delivered (run too early at 4 AM — Toast sends ~7:40 AM PT)",
-      "Toast Sun Apr 26 DPS body unparseable by Gmail MCP (HTML-only)",
-      "Sling Apr 28 daily not yet delivered at 4 AM",
-      "K Vos 4★ Google review unanswered 5 days",
-      "Yelp $900 bonus expires Apr 30 (2 days remaining, fully used)"
+      "Google Ads (Chrome auth expired — email sent to Joal, live scrape skipped)",
+      "Toast Mon Apr 27 DPS (not yet delivered — expected ~7:40 AM PT, will be available on later runs)",
+      "Toast Sun Apr 26 DPS (delivered but body HTML-only, Gmail MCP cannot parse)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-04-28T04:00:00-07:00"
+    "as_of": "2026-04-28T07:00:00-07:00"
   },
   "toast": {
     "date": "Saturday, April 25",
     "pending": true,
-    "note": "Mon Apr 27 DPS not delivered at 4 AM run — Toast typically sends ~7:40 AM PT. Sun Apr 26 DPS arrived but HTML body unparseable. Last fully parsed = Sat Apr 25.",
-    "gross": "$5,691.85",
+    "note": "Toast Mon Apr 27 DPS not yet delivered at 7 AM run (expected ~7:40 AM PT). Sun Apr 26 DPS arrived 4/27 7:39 AM PT but body remains HTML-only / unparseable via Gmail MCP. Last fully-parsed Toast = Sat Apr 25.",
+    "gross": "$5,633.45",
     "net": "$5,479.75",
     "guests": 192,
-    "orders": 107,
+    "orders": 138,
     "avgPerGuest": "$28.54",
-    "avgPerOrder": "$51.21",
     "laborPct": "20.8%",
-    "voids": "$186.00",
-    "headline": "Last parsed: Sat Apr 25 — $5,479.75 net, 192 guests, 20.8% labor.",
-    "headlineSub": "Mon Apr 27 DPS pending delivery (~7:40 AM PT). Sun Apr 26 body unparseable.",
-    "stale": true
+    "discountPct": null,
+    "cardPayments": null,
+    "refunds": null,
+    "headline": "Toast Mon Apr 27 DPS pending; Apr 26 DPS body HTML-only — last clean parse Sat Apr 25 ($5,479.75 net, 192 guests, 20.8% labor)",
+    "headlineSub": "Open Toast email or app for Apr 26/27 numbers",
+    "stale": true,
+    "staleNote": "Manual check required for daily numbers."
   },
   "sling": {
     "date": "Monday, April 27",
@@ -38,25 +38,57 @@
     "uncovered": 0,
     "employeesOff": 3,
     "shifts": 4,
-    "staff": [
-      { "name": "Noel Nunez", "role": "Chef" },
-      { "name": "Tony Rincon", "role": "Bartender" },
-      { "name": "James Hernadez", "role": "Server" },
-      { "name": "Christine Vargas", "role": "Server" }
-    ]
+    "staff": []
   },
   "slingToday": {
     "date": "Tuesday, April 28",
-    "pending": true,
-    "stale": true,
-    "note": "Sling Tue Apr 28 daily report NOT yet delivered at 4 AM run (expected ~7 AM PT). Will populate later this morning.",
-    "count": null,
-    "hours": null,
-    "overtime": null,
-    "uncovered": null,
-    "employeesOff": null,
-    "shifts": null,
-    "staff": []
+    "pending": false,
+    "stale": false,
+    "note": "Sling Tue Apr 28 daily report received and parsed.",
+    "count": 9,
+    "hours": 41.91,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 2,
+    "shifts": 9,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Jackson Wright",
+        "role": "Bartender"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Busser"
+      }
+    ]
   },
   "googleAds": {
     "lastUpdated": "Monday, April 27",
@@ -72,57 +104,121 @@
     },
     "weekTotal": "$275.21",
     "days": [
-      { "date": "Apr 26", "spend": "$21.99", "clicks": 112, "impressions": 6980, "cpc": "$0.20", "conversions": null },
-      { "date": "Apr 25", "spend": "$24.60", "clicks": 111, "impressions": 6780, "cpc": "$0.22", "conversions": null },
-      { "date": "Apr 23", "spend": "$20.09", "clicks": 98, "impressions": 7000, "cpc": "$0.20", "conversions": null },
-      { "date": "Apr 21", "spend": "$29.22", "clicks": 74, "impressions": 5968, "cpc": "$0.39", "conversions": 0 },
-      { "date": "Apr 16", "spend": "$44.18", "clicks": 81, "impressions": 6947, "cpc": "$0.55", "conversions": 0 },
-      { "date": "Apr 15", "spend": "$29.45", "clicks": 111, "impressions": 6044, "cpc": "$0.27", "conversions": 7 },
-      { "date": "Apr 14", "spend": "$32.46", "clicks": 83, "impressions": 6042, "cpc": "$0.39", "conversions": 13 },
-      { "date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 13 },
-      { "date": "Apr 12", "spend": "$26.78", "clicks": 88, "impressions": 6676, "cpc": "$0.30", "conversions": 23 }
+      {
+        "date": "Apr 26",
+        "spend": "$21.99",
+        "clicks": 112,
+        "impressions": 6980,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 25",
+        "spend": "$24.60",
+        "clicks": 111,
+        "impressions": 6780,
+        "cpc": "$0.22",
+        "conversions": null
+      },
+      {
+        "date": "Apr 23",
+        "spend": "$20.09",
+        "clicks": 98,
+        "impressions": 7000,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 21",
+        "spend": "$29.22",
+        "clicks": 74,
+        "impressions": 5968,
+        "cpc": "$0.39",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 16",
+        "spend": "$44.18",
+        "clicks": 81,
+        "impressions": 6947,
+        "cpc": "$0.55",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 15",
+        "spend": "$29.45",
+        "clicks": 111,
+        "impressions": 6044,
+        "cpc": "$0.27",
+        "conversions": 7
+      },
+      {
+        "date": "Apr 14",
+        "spend": "$32.46",
+        "clicks": 83,
+        "impressions": 6042,
+        "cpc": "$0.39",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 13",
+        "spend": "$46.44",
+        "clicks": 58,
+        "impressions": 5839,
+        "cpc": "$0.80",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 12",
+        "spend": "$26.78",
+        "clicks": 88,
+        "impressions": 6676,
+        "cpc": "$0.30",
+        "conversions": 23
+      }
     ],
-    "note": "4 report emails Apr 26–27. No disapprovals, no budget alerts. Apr 27 spend not yet scraped — refresh on next live run.",
-    "stale": false
+    "note": "Google Ads Chrome session auth expired at 7 AM Apr 28 run — redirected to account chooser. Live scrape skipped. Email sent to Joal flagging re-login needed at https://ads.google.com/aw/campaigns. No new daily report emails since Apr 27. Showing last-known Apr 23 daily data.",
+    "stale": true,
+    "authError": true
   },
   "yelpAds": {
-    "lastUpdated": "Monday, April 27",
-    "spend": "$809.25",
-    "period": "Apr 1 - Apr 26, 2026",
-    "impressions": "93.4k",
+    "lastUpdated": "Tuesday, April 28",
+    "spend": "$810.00",
+    "period": "Apr 1 - Apr 27, 2026",
+    "impressions": "90.1k",
     "pageVisits": "1.1k",
-    "leads": 251,
+    "leads": 244,
     "cpc": "$1.00",
-    "cpl": "$3.89",
-    "adClicks30d": 1000,
+    "cpl": "$3.77",
+    "adClicks30d": 944,
+    "totalImpressions30d": "99.5k",
+    "totalPageVisits30d": "1.4k",
+    "totalLeads30d": 291,
+    "adsImpressionsPct": "90%",
+    "adsPageVisitsPct": "81%",
+    "adsLeadsPct": "84%",
     "bonus": {
       "total": "$900",
       "used": "$900",
       "unused": "$0",
-      "expires": "Apr 30, 2026"
+      "expires": "Apr 30, 2026",
+      "note": "Bonus fully exhausted; expires in 2 days."
     },
     "adContribution12mo": {
       "pageVisits": "7.6k",
       "leads": "1.5k",
+      "adsLeads": 690,
+      "organicLeads": 834,
+      "totalLeads": 1524,
       "adsPct": "45%",
-      "organicPct": "55%",
-      "totalLeads": 1516,
-      "adsLeads": 683,
-      "organicLeads": 833
+      "organicPct": "55%"
     },
-    "stale": true,
-    "staleNote": "No new Yelp email in last 24h. Bonus $900 fully used, expires Apr 30 (2 days)."
+    "stale": false,
+    "staleNote": "Live Chrome scrape OK on Tue Apr 28 7 AM run."
   },
   "tripAdvisor": {
     "lastUpdated": "2026-04-28",
-    "newReview": {
-      "date": "2026-04-22",
-      "title": "What a find!",
-      "stars": 5,
-      "snippet": "One day we were looking at the The Brewhouse website from our home in the UK and then we are enjoying lunch at the premises during our holiday. This place was a real find and we loved the craft beer / food. We toured a lot of California and Las Vegas, but this was definitely our favourite find...",
-      "source": "Tripadvisor email 4/26 8:01 PM UTC"
-    },
-    "note": "Same UK 5-bubble review from 4/22 — now 6 days unanswered. No analytics email from analytics@hm2.tripadvisor.com in last 24h."
+    "note": "No new TripAdvisor analytics email from analytics@hm2.tripadvisor.com in last 24h."
   },
   "reservations": {
     "lastUpdated": "2026-04-28",
@@ -216,5 +312,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-04-28T04:00:00-07:00"
+  "lastUpdated": "2026-04-28T07:00:00-07:00"
 }
