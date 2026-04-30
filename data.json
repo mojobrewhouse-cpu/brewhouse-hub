@@ -38,14 +38,38 @@
     "employeesOff": 2,
     "shifts": 8,
     "staff": [
-      { "name": "Isael Salvador Narciso", "role": "Cook" },
-      { "name": "Tony Rincon", "role": "Bartender" },
-      { "name": "Cal Carter", "role": "Barback" },
-      { "name": "Andrew Turner", "role": "Bartender" },
-      { "name": "Noel Nunez", "role": "Chef" },
-      { "name": "Gabriel Lopez galindo", "role": "Server" },
-      { "name": "Daniel Rodriguez", "role": "Server" },
-      { "name": "James Hernadez", "role": "Busser" }
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Barback"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
+      }
     ]
   },
   "slingToday": {
@@ -60,12 +84,30 @@
     "employeesOff": 2,
     "shifts": 6,
     "staff": [
-      { "name": "Tony Rincon", "role": "Bartender" },
-      { "name": "Christine Vargas", "role": "Bartender" },
-      { "name": "Harmony Willson", "role": "Bartender" },
-      { "name": "Cal Carter", "role": "Server" },
-      { "name": "Noel Nunez", "role": "Chef" },
-      { "name": "Bri Kelley", "role": "Server" }
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Harmony Willson",
+        "role": "Bartender"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      }
     ]
   },
   "googleAds": {
@@ -82,16 +124,86 @@
     },
     "weekTotal": "$325.16",
     "days": [
-      { "date": "Apr 29", "spend": "$22.03", "clicks": 91, "impressions": 6986, "cpc": "$0.24", "conversions": null },
-      { "date": "Apr 28", "spend": "$27.92", "clicks": 69, "impressions": 5623, "cpc": "$0.40", "conversions": 0 },
-      { "date": "Apr 26", "spend": "$21.99", "clicks": 112, "impressions": 6980, "cpc": "$0.20", "conversions": null },
-      { "date": "Apr 25", "spend": "$24.60", "clicks": 111, "impressions": 6780, "cpc": "$0.22", "conversions": null },
-      { "date": "Apr 23", "spend": "$20.09", "clicks": 98, "impressions": 7000, "cpc": "$0.20", "conversions": null },
-      { "date": "Apr 21", "spend": "$29.22", "clicks": 74, "impressions": 5968, "cpc": "$0.39", "conversions": 0 },
-      { "date": "Apr 16", "spend": "$44.18", "clicks": 81, "impressions": 6947, "cpc": "$0.55", "conversions": 0 },
-      { "date": "Apr 15", "spend": "$29.45", "clicks": 111, "impressions": 6044, "cpc": "$0.27", "conversions": 7 },
-      { "date": "Apr 14", "spend": "$32.46", "clicks": 83, "impressions": 6042, "cpc": "$0.39", "conversions": 13 },
-      { "date": "Apr 13", "spend": "$46.44", "clicks": 58, "impressions": 5839, "cpc": "$0.80", "conversions": 13 }
+      {
+        "date": "Apr 29",
+        "spend": "$22.03",
+        "clicks": 91,
+        "impressions": 6986,
+        "cpc": "$0.24",
+        "conversions": null
+      },
+      {
+        "date": "Apr 28",
+        "spend": "$27.92",
+        "clicks": 69,
+        "impressions": 5623,
+        "cpc": "$0.40",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 26",
+        "spend": "$21.99",
+        "clicks": 112,
+        "impressions": 6980,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 25",
+        "spend": "$24.60",
+        "clicks": 111,
+        "impressions": 6780,
+        "cpc": "$0.22",
+        "conversions": null
+      },
+      {
+        "date": "Apr 23",
+        "spend": "$20.09",
+        "clicks": 98,
+        "impressions": 7000,
+        "cpc": "$0.20",
+        "conversions": null
+      },
+      {
+        "date": "Apr 21",
+        "spend": "$29.22",
+        "clicks": 74,
+        "impressions": 5968,
+        "cpc": "$0.39",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 16",
+        "spend": "$44.18",
+        "clicks": 81,
+        "impressions": 6947,
+        "cpc": "$0.55",
+        "conversions": 0
+      },
+      {
+        "date": "Apr 15",
+        "spend": "$29.45",
+        "clicks": 111,
+        "impressions": 6044,
+        "cpc": "$0.27",
+        "conversions": 7
+      },
+      {
+        "date": "Apr 14",
+        "spend": "$32.46",
+        "clicks": 83,
+        "impressions": 6042,
+        "cpc": "$0.39",
+        "conversions": 13
+      },
+      {
+        "date": "Apr 13",
+        "spend": "$46.44",
+        "clicks": 58,
+        "impressions": 5839,
+        "cpc": "$0.80",
+        "conversions": 13
+      }
     ],
     "note": "Apr 29 LIVE scrape complete: 91 clicks / 6,986 imp / $22.03 / 1.30% CTR. No disapprovals or budget alerts. Account flagged: 'Local store visits and promotions-Performance Max-2' campaign limited by budget.",
     "stale": false,
