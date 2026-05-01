@@ -1,20 +1,21 @@
 {
-  "date": "Thursday, April 30",
+  "date": "Friday, May 1",
   "systemStatus": {
     "level": "warn",
-    "headline": "Thu Apr 30 7 AM run — Sling Apr 30 delivered (6 staff, 32.99 hrs). Toast Apr 29 group summary arrived but HTML-only. Yelp bonus $900 EXPIRES TODAY (fully used).",
-    "detail": "(1) Sling Apr 30 delivered ~7:01 AM PT: 6 staff, 32.99 hrs, 0 OT, 0 uncovered, 2 off. (2) Toast Apr 29 'Group' summary arrived ~6:12 AM PT — HTML-only / unparseable via Gmail MCP (same pattern as Apr 27/28). The 229 W Montecito DPS for Apr 29 not yet delivered (typically ~7:38 AM PT). Last fully-parsed Toast = Sat Apr 25 ($5,479.75 net / 192 guests / 20.8% labor). (3) Google Ads LIVE Apr 29: 91 clicks, 6,986 impressions, $0.24 CPC, $22.03 cost — strongest CTR week-to-date (1.30%). No disapprovals. (4) Yelp Ads LIVE 30d: $810 spend, 75.5k impressions, 995 page visits, 228 leads, 860 ad clicks. Bonus $900 fully exhausted, EXPIRES TODAY (Apr 30). (5) TripAdvisor: no analytics email from analytics@hm2.tripadvisor.com in last 24h (only marketing/awards emails). (6) GitHub PAT: 200 OK. (7) Reviews: no new in last 24h; K Vos 4★ now 7 days unanswered.",
+    "headline": "Fri May 1 4 AM run \u2014 Toast Apr 30 DPS not yet delivered (arrives ~7:38 AM PT). Toast Apr 29 DPS arrived overnight but HTML-only (5th day of this pattern). Sling May 1 not yet delivered. Reviews backlog at 5 (K Vos 4\u2605 now 7 days).",
+    "detail": "(1) Toast Apr 29 DPS + Group summary arrived ~7:38 AM PT yesterday \u2014 both HTML-only, unparseable via Gmail MCP. Apr 30 DPS not yet delivered (4 AM run too early). Last fully-parsed Toast = Sat Apr 25 ($5,479.75 net / 192 guests / 20.8% labor) \u2014 now 6 days stale. (2) Sling Apr 30 delivered: 6 staff, 32.99 hrs, 0 OT, 0 uncovered. Sling May 1 not yet delivered. (3) Google Ads: 4 emails in 24h \u2014 2 routine daily reports + 1 'Action Required' (call recording will default to Yes on July 1, 2026 \u2014 informational only, no urgent action). No disapprovals. (4) Yelp $900 bonus EXPIRED yesterday (Apr 30) \u2014 fully exhausted, no further action needed. (5) TripAdvisor: no analytics report. (6) GitHub PAT: 200 OK. (7) Reviews: no new in 24h, backlog of 5 unanswered (K Vos 4\u2605 7 days, UK 5\u2605 TripAdvisor 9 days).",
     "affected": [
-      "Toast Apr 29 DPS (group summary HTML-only — unparseable; 229 W Montecito DPS not yet delivered)",
-      "Toast Apr 28 + Apr 27 DPS (HTML-only — Gmail MCP cannot parse)"
+      "Toast Apr 30 DPS (not yet delivered)",
+      "Toast Apr 29/28/27 DPS (HTML-only \u2014 Gmail MCP cannot parse body)",
+      "Sling May 1 (not yet delivered)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-04-30T07:00:00-07:00"
+    "as_of": "2026-05-01T04:00:00-07:00"
   },
   "toast": {
     "date": "Saturday, April 25",
     "pending": true,
-    "note": "Toast Apr 29 group summary arrived but HTML-only / unparseable. Apr 28 + Apr 27 DPS bodies also HTML-only. 229 W Montecito DPS for Apr 29 not yet delivered as of 7 AM run. Last fully-parsed Toast = Sat Apr 25.",
+    "note": "Toast Apr 29 DPS + Group summary HTML-only (same as Apr 27/28). Apr 30 DPS not yet delivered (arrives ~7:38 AM PT). Last fully-parsed = Sat Apr 25 \u2014 now 6 days stale.",
     "gross": "$5,633.45",
     "net": "$5,479.75",
     "guests": 192,
@@ -24,10 +25,10 @@
     "discountPct": null,
     "cardPayments": null,
     "refunds": null,
-    "headline": "Toast Apr 27/28/29 all HTML-only — last clean parse Sat Apr 25 ($5,479.75 net, 192 guests, 20.8% labor)",
-    "headlineSub": "Open Toast email/app for Apr 27, 28, 29 numbers",
+    "headline": "Toast Apr 27/28/29 all HTML-only; Apr 30 not yet delivered \u2014 last clean parse Sat Apr 25 ($5,479.75 net, 192 guests, 20.8% labor)",
+    "headlineSub": "Open Toast email/app for Apr 27, 28, 29, 30 numbers",
     "stale": true,
-    "staleNote": "Manual check required for daily numbers — 6 days behind."
+    "staleNote": "Manual check required for daily numbers \u2014 6 days behind."
   },
   "sling": {
     "date": "Wednesday, April 29",
@@ -73,10 +74,11 @@
     ]
   },
   "slingToday": {
-    "date": "Thursday, April 30",
-    "pending": false,
+    "date": "Friday, May 1",
+    "pending": true,
     "stale": false,
-    "note": "Sling daily report delivered ~7:01 AM PT.",
+    "note": "Sling May 1 daily report not yet delivered (arrives ~7:01 AM PT). Most recent = Apr 30 schedule shown below.",
+    "asOfDate": "Thursday, April 30",
     "count": 6,
     "hours": 32.99,
     "overtime": 0,
@@ -111,7 +113,7 @@
     ]
   },
   "googleAds": {
-    "lastUpdated": "Thursday, April 30",
+    "lastUpdated": "Friday, May 1",
     "yesterday": {
       "date": "Apr 29, 2026",
       "spend": "$22.03",
@@ -205,13 +207,13 @@
         "conversions": 13
       }
     ],
-    "note": "Apr 29 LIVE scrape complete: 91 clicks / 6,986 imp / $22.03 / 1.30% CTR. No disapprovals or budget alerts. Account flagged: 'Local store visits and promotions-Performance Max-2' campaign limited by budget.",
+    "note": "4 emails in 24h: 2 routine daily reports, 1 Campaign performance, 1 'Action Required' on call recording (defaults to Yes July 1, 2026 \u2014 informational). No disapprovals or budget alerts.",
     "stale": false,
     "authError": false,
-    "reportsLast24h": 2
+    "reportsLast24h": 4
   },
   "yelpAds": {
-    "lastUpdated": "Thursday, April 30",
+    "lastUpdated": "Friday, May 1",
     "spend": "$810.00",
     "period": "Apr 1 - Apr 29, 2026",
     "impressions": "75.5k",
@@ -230,8 +232,8 @@
       "total": "$900",
       "used": "$900",
       "unused": "$0",
-      "expires": "Apr 30, 2026",
-      "note": "🚨 Bonus EXPIRES TODAY (Apr 30). Fully exhausted — no action required."
+      "expires": "Apr 30, 2026 (EXPIRED)",
+      "note": "Bonus expired Apr 30 \u2014 fully exhausted, no action."
     },
     "adContribution12mo": {
       "pageVisits": "7.6k",
@@ -246,8 +248,8 @@
     "staleNote": "LIVE scrape Apr 30 7 AM."
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-04-30",
-    "note": "No analytics report from analytics@hm2.tripadvisor.com in last 24h. 1 marketing email (Travelers' Choice Best of the Best) from awards@mp1.tripadvisor.com Apr 30."
+    "lastUpdated": "2026-05-01",
+    "note": "No analytics report from analytics@hm2.tripadvisor.com in last 24h."
   },
   "reservations": {
     "lastUpdated": "2026-05-01",
@@ -296,8 +298,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-04-30",
-    "note": "No new reviews in last 24h. K Vos 4★ Google now 7 days unanswered. UK 5★ TripAdvisor 4/22 = 9 days unanswered. Crystal Aguilar 5★ Google 4/19 = 12 days unanswered. l g 5★ 4/15 = 16 days. Lisa O'Brien 5★ 4/11 = 20 days. Backlog growing — please respond.",
+    "lastUpdated": "2026-05-01",
+    "note": "No new reviews in last 24h. Backlog growing: K Vos 4\u2605 Google 7 days, UK 5\u2605 TripAdvisor 9 days, Crystal Aguilar 5\u2605 12 days, l g 5\u2605 16 days, Lisa O'Brien 5\u2605 20 days.",
     "unanswered": [
       {
         "platform": "Google",
@@ -305,7 +307,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 7
+        "ageDays": 8
       },
       {
         "platform": "TripAdvisor",
@@ -313,7 +315,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 9
+        "ageDays": 10
       },
       {
         "platform": "Google",
@@ -321,7 +323,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 12
+        "ageDays": 13
       },
       {
         "platform": "Google",
@@ -329,7 +331,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 16
+        "ageDays": 17
       },
       {
         "platform": "Google",
@@ -337,9 +339,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 20
+        "ageDays": 21
       }
     ]
   },
-  "lastUpdated": "2026-04-30T07:00:00-07:00"
+  "lastUpdated": "2026-05-01T04:00:00-07:00"
 }
