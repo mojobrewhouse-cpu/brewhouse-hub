@@ -2,20 +2,19 @@
   "date": "Friday, May 1",
   "systemStatus": {
     "level": "warn",
-    "headline": "Fri May 1 4 AM run \u2014 Toast Apr 30 DPS not yet delivered (arrives ~7:38 AM PT). Toast Apr 29 DPS arrived overnight but HTML-only (5th day of this pattern). Sling May 1 not yet delivered. Reviews backlog at 5 (K Vos 4\u2605 now 7 days).",
-    "detail": "(1) Toast Apr 29 DPS + Group summary arrived ~7:38 AM PT yesterday \u2014 both HTML-only, unparseable via Gmail MCP. Apr 30 DPS not yet delivered (4 AM run too early). Last fully-parsed Toast = Sat Apr 25 ($5,479.75 net / 192 guests / 20.8% labor) \u2014 now 6 days stale. (2) Sling Apr 30 delivered: 6 staff, 32.99 hrs, 0 OT, 0 uncovered. Sling May 1 not yet delivered. (3) Google Ads: 4 emails in 24h \u2014 2 routine daily reports + 1 'Action Required' (call recording will default to Yes on July 1, 2026 \u2014 informational only, no urgent action). No disapprovals. (4) Yelp $900 bonus EXPIRED yesterday (Apr 30) \u2014 fully exhausted, no further action needed. (5) TripAdvisor: no analytics report. (6) GitHub PAT: 200 OK. (7) Reviews: no new in 24h, backlog of 5 unanswered (K Vos 4\u2605 7 days, UK 5\u2605 TripAdvisor 9 days).",
+    "headline": "Fri May 1 7 AM run — Sling May 1 ✓ delivered (10 staff, 49.58 hrs). Google Ads Apr 30 ✓ LIVE scraped (57 clicks, 4,802 impr, $21.72). Yelp 30d ✓ LIVE (62.4k impr, 216 leads). Toast Apr 30 DPS still pending (arrives ~7:38 AM PT). Reviews backlog at 5.",
+    "detail": "(1) Toast Apr 30 DPS not yet delivered — 7 AM run still slightly early (~7:38 AM PT typical arrival). Apr 30 Group summary arrived 6:12 AM PT but HTML-only, 6th consecutive day. Last fully-parsed Toast = Sat Apr 25 ($5,479.75 net / 192 guests / 20.8% labor) — now 7 days stale. (2) Sling May 1 ✓ delivered 7:02 AM PT: 10 staff, 49.58 hrs, 0 OT, 0 uncovered, 2 off. Big jump vs Apr 30 (6/32.99) — likely Friday weekend ramp. (3) Google Ads Apr 30 ✓ LIVE: 57 clicks, 4,802 impr, 1.19% CTR, $0.38 CPC, $21.72 spend, 0 conv. Performance Max limited by $23.37/day budget. CTR steady. Conv tracking continues to register 0 (consistent with prior days). (4) Yelp 30d ✓ LIVE: 62.4k impr, 927 page visits, 216 leads, 808 ad clicks. New billing period started May 1 — spend resets to $0; CPC/CPL not yet displayed. $900 bonus FULLY EXPIRED Apr 30 — no carryover. (5) TripAdvisor: no analytics email in last 24h. (6) GitHub PAT: 200 OK. (7) Reviews: no new in 24h, backlog of 5 unanswered (K Vos 4★ Google 8 days, UK 5★ TripAdvisor 10 days, oldest Lisa O'Brien 21 days).",
     "affected": [
-      "Toast Apr 30 DPS (not yet delivered)",
-      "Toast Apr 29/28/27 DPS (HTML-only \u2014 Gmail MCP cannot parse body)",
-      "Sling May 1 (not yet delivered)"
+      "Toast Apr 30 DPS (not yet delivered — arrives ~7:38 AM PT)",
+      "Toast Apr 26-29 DPS (HTML-only — Gmail MCP cannot parse body)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-01T04:00:00-07:00"
+    "as_of": "2026-05-01T07:00:00-07:00"
   },
   "toast": {
     "date": "Saturday, April 25",
     "pending": true,
-    "note": "Toast Apr 29 DPS + Group summary HTML-only (same as Apr 27/28). Apr 30 DPS not yet delivered (arrives ~7:38 AM PT). Last fully-parsed = Sat Apr 25 \u2014 now 6 days stale.",
+    "note": "Apr 30 DPS not yet delivered (arrives ~7:38 AM PT, after this 7 AM run). Apr 30 Group summary arrived 6:12 AM PT but HTML-only (6th day of pattern). Last fully-parsed = Sat Apr 25 — now 7 days stale.",
     "gross": "$5,633.45",
     "net": "$5,479.75",
     "guests": 192,
@@ -25,60 +24,13 @@
     "discountPct": null,
     "cardPayments": null,
     "refunds": null,
-    "headline": "Toast Apr 27/28/29 all HTML-only; Apr 30 not yet delivered \u2014 last clean parse Sat Apr 25 ($5,479.75 net, 192 guests, 20.8% labor)",
-    "headlineSub": "Open Toast email/app for Apr 27, 28, 29, 30 numbers",
+    "headline": "Toast Apr 26-29 all HTML-only; Apr 30 DPS not yet delivered — last clean parse Sat Apr 25 ($5,479.75 net, 192 guests, 20.8% labor)",
+    "headlineSub": "Open Toast email/app for Apr 26, 27, 28, 29, 30 numbers",
     "stale": true,
-    "staleNote": "Manual check required for daily numbers \u2014 6 days behind."
+    "staleNote": "Manual check required for daily numbers — 7 days behind."
   },
   "sling": {
-    "date": "Wednesday, April 29",
-    "count": 8,
-    "hours": 37.16,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 2,
-    "shifts": 8,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Barback"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server"
-      },
-      {
-        "name": "Daniel Rodriguez",
-        "role": "Server"
-      },
-      {
-        "name": "James Hernadez",
-        "role": "Busser"
-      }
-    ]
-  },
-  "slingToday": {
-    "date": "Friday, May 1",
-    "pending": true,
-    "stale": false,
-    "note": "Sling May 1 daily report not yet delivered (arrives ~7:01 AM PT). Most recent = Apr 30 schedule shown below.",
-    "asOfDate": "Thursday, April 30",
+    "date": "Thursday, April 30",
     "count": 6,
     "hours": 32.99,
     "overtime": 0,
@@ -112,20 +64,83 @@
       }
     ]
   },
+  "slingToday": {
+    "date": "Friday, May 1",
+    "pending": false,
+    "stale": false,
+    "asOfDate": "Friday, May 1",
+    "count": 10,
+    "hours": 49.58,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 2,
+    "shifts": 10,
+    "note": "Sling May 1 daily report delivered at 7:02 AM PT.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Harmony Willson",
+        "role": "Bartender"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Server"
+      },
+      {
+        "name": "Fred De Leon",
+        "role": "Bartender"
+      }
+    ]
+  },
   "googleAds": {
     "lastUpdated": "Friday, May 1",
     "yesterday": {
-      "date": "Apr 29, 2026",
-      "spend": "$22.03",
-      "clicks": 91,
-      "impressions": 6986,
-      "cpc": "$0.24",
-      "ctr": "1.30%",
-      "conversions": null,
-      "note": "LIVE scrape Apr 30 7 AM run. Strongest CTR of the week."
+      "date": "Apr 30, 2026",
+      "spend": "$21.72",
+      "clicks": 57,
+      "impressions": 4802,
+      "cpc": "$0.38",
+      "ctr": "1.19%",
+      "conversions": 0,
+      "note": "LIVE scrape May 1 7 AM run."
     },
-    "weekTotal": "$325.16",
+    "weekTotal": "$167.57",
     "days": [
+      {
+        "date": "Apr 30",
+        "spend": "$21.72",
+        "clicks": 57,
+        "impressions": 4802,
+        "cpc": "$0.38",
+        "conversions": 0
+      },
       {
         "date": "Apr 29",
         "spend": "$22.03",
@@ -207,45 +222,45 @@
         "conversions": 13
       }
     ],
-    "note": "4 emails in 24h: 2 routine daily reports, 1 Campaign performance, 1 'Action Required' on call recording (defaults to Yes July 1, 2026 \u2014 informational). No disapprovals or budget alerts.",
+    "note": "May 1 7 AM run: LIVE scrape captured Apr 30 (57 clicks, 4,802 impr, 1.19% CTR, $21.72 spend, 0 conv). Performance Max campaign limited by $23.37/day budget.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 4
   },
   "yelpAds": {
     "lastUpdated": "Friday, May 1",
-    "spend": "$810.00",
-    "period": "Apr 1 - Apr 29, 2026",
-    "impressions": "75.5k",
-    "pageVisits": "995",
-    "leads": 228,
-    "cpc": "$0.94",
-    "cpl": "$3.77",
-    "adClicks30d": 860,
-    "totalImpressions30d": "84.7k",
-    "totalPageVisits30d": "1.3k",
-    "totalLeads30d": 278,
-    "adsImpressionsPct": "89%",
-    "adsPageVisitsPct": "78%",
-    "adsLeadsPct": "82%",
+    "spend": "$0.00",
+    "period": "May 1 billing period (just started)",
+    "impressions": "62.4k",
+    "pageVisits": "927",
+    "leads": 216,
+    "cpc": null,
+    "cpl": null,
+    "adClicks30d": 808,
+    "totalImpressions30d": "71.5k",
+    "totalPageVisits30d": "1.2k",
+    "totalLeads30d": 268,
+    "adsImpressionsPct": "87%",
+    "adsPageVisitsPct": "77%",
+    "adsLeadsPct": "81%",
     "bonus": {
       "total": "$900",
       "used": "$900",
       "unused": "$0",
       "expires": "Apr 30, 2026 (EXPIRED)",
-      "note": "Bonus expired Apr 30 \u2014 fully exhausted, no action."
+      "note": "Bonus expired Apr 30 — fully exhausted, no further action."
     },
     "adContribution12mo": {
-      "pageVisits": "7.6k",
-      "leads": "1.5k",
-      "adsLeads": 690,
-      "organicLeads": 838,
-      "totalLeads": 1528,
-      "adsPct": "45%",
-      "organicPct": "55%"
+      "pageVisits": "7.1k",
+      "leads": "1.4k",
+      "adsLeads": 691,
+      "organicLeads": 739,
+      "totalLeads": 1430,
+      "adsPct": "48%",
+      "organicPct": "52%"
     },
     "stale": false,
-    "staleNote": "LIVE scrape Apr 30 7 AM."
+    "staleNote": "LIVE scrape May 1 7 AM. New billing period began today; CPC/CPL not yet displayed (no clicks/leads attributed yet)."
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-01",
@@ -299,7 +314,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-01",
-    "note": "No new reviews in last 24h. Backlog growing: K Vos 4\u2605 Google 7 days, UK 5\u2605 TripAdvisor 9 days, Crystal Aguilar 5\u2605 12 days, l g 5\u2605 16 days, Lisa O'Brien 5\u2605 20 days.",
+    "note": "No new reviews in last 24h. Backlog growing: K Vos 4★ Google 8 days, UK 5★ TripAdvisor 10 days, Crystal Aguilar 5★ 14 days, l g 5★ 18 days, Lisa O'Brien 5★ 22 days.",
     "unanswered": [
       {
         "platform": "Google",
@@ -307,7 +322,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 8
+        "ageDays": 9
       },
       {
         "platform": "TripAdvisor",
@@ -315,7 +330,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 10
+        "ageDays": 11
       },
       {
         "platform": "Google",
@@ -323,7 +338,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 13
+        "ageDays": 14
       },
       {
         "platform": "Google",
@@ -331,7 +346,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 17
+        "ageDays": 18
       },
       {
         "platform": "Google",
@@ -339,9 +354,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 21
+        "ageDays": 22
       }
     ]
   },
-  "lastUpdated": "2026-05-01T04:00:00-07:00"
+  "lastUpdated": "2026-05-01T07:00:00-07:00"
 }
