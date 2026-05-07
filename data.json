@@ -286,8 +286,18 @@
     },
     "tomorrow": {
       "date": "Fri, May 8",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 4,
+      "bookings": [
+        {
+          "time": "6:30 PM",
+          "name": "John Majewski",
+          "guests": 4,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 896-7505",
+          "notes": ""
+        }
+      ]
     },
     "upcoming": [
       {
@@ -339,6 +349,16 @@
         "phone": "(312) 909-1361",
         "notes": "",
         "date": "Sat, May 16"
+      },
+      {
+        "time": "6:15 PM",
+        "name": "Diane Johnson",
+        "guests": 15,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(805) 886-9057",
+        "notes": "Might have a few more people as well as the 15; we can make it work if you can. Should we come earlier???",
+        "date": "Fri, May 29"
       },
       {
         "time": "8:00 PM",
