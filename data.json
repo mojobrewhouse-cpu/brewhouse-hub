@@ -2,18 +2,18 @@
   "date": "Monday, May 11",
   "systemStatus": {
     "level": "warn",
-    "headline": "Mon May 11 4 AM run — Sling May 11 ✓ delivered (2 staff, 5.75 hrs, 0 OT). Toast May 10 DPS arrived but HTML-only — body not parseable via Gmail MCP. New 5★ from Deimos Somied (Google) overnight — top of reply queue. Google Ads: 2 reports in last 24h, no disapprovals. No Yelp / no TripAdvisor in 24h.",
-    "detail": "(1) Toast Sun May 10 DPS arrived 7:39 AM PT — HTML-only again, snippet readable but body content not returned by Gmail MCP get_thread. Pattern now consistent: numbers not extractable. Manual check required for Net/Gross/Guests/Orders/Labor%. (2) Sling May 11 ✓ delivered: 2 staff, 5.75 hrs total, 0 OT, 0 uncovered, 0 off (light Monday). Rafael Patricio (Cook), Katharine Brown (Bartender). (3) New review: Deimos Somied left 5★ on Google May 10 — 'The margaritas were the best! Food was great too. But the margaritas!' Suggested reply ready. (4) Google Ads: 2 reports in last 24h (Daily Campaign + Campaign performance) — no disapproval or budget alerts visible in subjects. (5) Yelp: nothing in 24h. (6) TripAdvisor: no analytics email in 24h. (7) GitHub PAT: 200 OK. (8) Review backlog grown to 6 unanswered — Lisa O'Brien now 30 days old, oldest in queue.",
+    "headline": "Mon May 11 7 AM run \u2014 Sling May 11 \u2713 delivered (2 staff, 5.75 hrs, 0 OT). Google Ads May 10 \u2713 live-scraped: $24.45 spend, 112 clicks, 6,373 impr, 0 conv. Yelp Ads dashboard \u2713 live-scraped (last 30d). Toast May 10 DPS arrived but HTML body not returned by Gmail MCP \u2014 manual check still needed for figures.",
+    "detail": "(1) Toast Sun May 10 DPS arrived 7:39 AM PT \u2014 still HTML-only via Gmail MCP get_thread (FULL_CONTENT returns no plaintextBody/htmlBody). Net/Gross/Guests/Orders/Labor% require manual check in Toast app or by opening the email. (2) Sling May 11 delivered: 2 staff, 5.75 hrs, 0 OT, 0 uncovered, 0 off. Rafael Patricio (Cook), Katharine Brown (Bartender). (3) Google Ads May 10 LIVE: $24.45 cost, 112 clicks, 6,373 impr, CTR 1.76%, CPC $0.22, 0 conversions, target CPA $25.06. Active campaign 'Local store visits and promotions-Performance Max - 2' Eligible (Limited) \u2014 Limited by budget at $23.37/day. 'Oldest SB Brewery on Tap' paused. (4) Yelp Ads LIVE (last 30d): 57.3k impr from Ads (88% of 65.4k total), 843 page visits (77% of 1.1k), 202 leads (79% of 256). 12-mo: 7.5k page visits, 1.5k leads. Setup banner: 1 thing remaining. (5) TripAdvisor: no analytics email in 24h. (6) Reviews backlog unchanged: 6 unanswered, Lisa O'Brien now 30 days old, Deimos Somied 5\u2605 at top. (7) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast May 10 DPS (HTML-only, body not parseable — manual check)"
+      "Toast May 10 DPS (HTML-only, body not parseable \u2014 manual check)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-11T04:00:00-07:00"
+    "as_of": "2026-05-11T07:00:00-07:00"
   },
   "toast": {
     "date": "Sunday, May 10",
     "pending": true,
-    "note": "Sun May 10 DPS arrived 7:39 AM PT but HTML-only — body content not returned by Gmail MCP. Manual check required in Toast app/email for Net/Gross/Guests/Orders/Labor%. Last fully-parsed = Sat Apr 25.",
+    "note": "Sun May 10 DPS arrived 7:39 AM PT. Gmail MCP get_thread returns no plaintextBody or htmlBody (HTML-only pattern). Manual check required in Toast app/email for Net/Gross/Guests/Orders/Labor%. Last fully-parsed = Sat Apr 25.",
     "gross": null,
     "net": null,
     "guests": null,
@@ -23,7 +23,7 @@
     "discountPct": null,
     "cardPayments": null,
     "refunds": null,
-    "headline": "Toast Sun May 10 numbers not extractable — open the Toast email for the figures",
+    "headline": "Toast Sun May 10 numbers not extractable \u2014 open the Toast email for the figures",
     "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Sunday, May 10'",
     "stale": true,
     "staleNote": "Manual check required."
@@ -49,7 +49,7 @@
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 2,
-    "note": "Sling May 11 delivered 7:01 AM PT. Light Monday.",
+    "note": "Sling May 11 reconfirmed 7 AM run. Light Monday.",
     "staff": [
       {
         "name": "Rafael Patricio",
@@ -65,23 +65,62 @@
     "lastUpdated": "Monday, May 11",
     "yesterday": {
       "date": "May 10, 2026",
-      "spend": null,
-      "clicks": null,
-      "impressions": null,
-      "cpc": null,
-      "ctr": null,
-      "conversions": null,
-      "note": "Report notifications received; numbers not pulled this run."
+      "spend": 24.45,
+      "clicks": 112,
+      "impressions": 6373,
+      "cpc": 0.22,
+      "ctr": 1.76,
+      "conversions": 0.0,
+      "targetCpa": 25.06,
+      "note": "Live-scraped from ads.google.com/aw/campaigns. Account 343-687-4835."
     },
-    "note": "2 Google Ads report emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance). No disapproval / budget alert in subjects.",
+    "campaigns": [
+      {
+        "name": "Local store visits and promotions-Performance Max - 2",
+        "status": "Eligible (Limited)",
+        "statusNote": "Limited by budget",
+        "budgetDaily": 23.37,
+        "type": "Performance Max",
+        "clicks": 112,
+        "impressions": 6373,
+        "ctr": 1.76,
+        "cpc": 0.22,
+        "cost": 24.45
+      },
+      {
+        "name": "Oldest SB Brewery on Tap",
+        "status": "Paused",
+        "budgetDaily": 10.8,
+        "type": "Performance Max",
+        "clicks": 0,
+        "impressions": 0,
+        "cost": 0.0
+      }
+    ],
+    "note": "May 10 figures live from dashboard. Active campaign limited by budget \u2014 $23.37/day cap hit ($24.45 spend includes overdelivery).",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2
   },
   "yelpAds": {
     "lastUpdated": "Monday, May 11",
-    "note": "No Yelp emails in last 24h.",
-    "stale": true
+    "last30d": {
+      "impressionsFromAds": 57300,
+      "impressionsTotal": 65400,
+      "impressionsAdShare": 88,
+      "pageVisitsFromAds": 843,
+      "pageVisitsTotal": 1100,
+      "pageVisitsAdShare": 77,
+      "leadsFromAds": 202,
+      "leadsTotal": 256,
+      "leadsAdShare": 79
+    },
+    "last12mo": {
+      "pageVisits": 7500,
+      "leads": 1500
+    },
+    "note": "Live-scraped from biz.yelp.com Ads dashboard. Setup banner shows 1 thing remaining. Ad spend and bonus budget not visible on Ad performance tab \u2014 would need Ad settings tab.",
+    "stale": false
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-11",
@@ -165,7 +204,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-11",
-    "note": "1 new 5★ overnight (Deimos Somied, Google). Backlog now 6 unanswered — Lisa O'Brien now 30 days old.",
+    "note": "1 new 5\u2605 overnight (Deimos Somied, Google). Backlog now 6 unanswered \u2014 Lisa O'Brien now 30 days old.",
     "unanswered": [
       {
         "platform": "Google",
@@ -217,5 +256,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-11T04:00:00-07:00"
+  "lastUpdated": "2026-05-11T07:00:00-07:00"
 }
