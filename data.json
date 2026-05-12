@@ -1,260 +1,123 @@
 {
-  "date": "Monday, May 11",
+  "date": "Tuesday, May 12",
   "systemStatus": {
     "level": "warn",
-    "headline": "Mon May 11 7 AM run — Sling May 11 ✓ delivered (2 staff, 5.75 hrs, 0 OT). Google Ads May 10 ✓ live-scraped: $24.45 spend, 112 clicks, 6,373 impr, 0 conv. Yelp Ads dashboard ✓ live-scraped (last 30d). Toast May 10 DPS arrived but HTML body not returned by Gmail MCP — manual check still needed for figures.",
-    "detail": "(1) Toast Sun May 10 DPS arrived 7:39 AM PT — still HTML-only via Gmail MCP get_thread (FULL_CONTENT returns no plaintextBody/htmlBody). Net/Gross/Guests/Orders/Labor% require manual check in Toast app or by opening the email. (2) Sling May 11 delivered: 2 staff, 5.75 hrs, 0 OT, 0 uncovered, 0 off. Rafael Patricio (Cook), Katharine Brown (Bartender). (3) Google Ads May 10 LIVE: $24.45 cost, 112 clicks, 6,373 impr, CTR 1.76%, CPC $0.22, 0 conversions, target CPA $25.06. Active campaign 'Local store visits and promotions-Performance Max - 2' Eligible (Limited) — Limited by budget at $23.37/day. 'Oldest SB Brewery on Tap' paused. (4) Yelp Ads LIVE (last 30d): 57.3k impr from Ads (88% of 65.4k total), 843 page visits (77% of 1.1k), 202 leads (79% of 256). 12-mo: 7.5k page visits, 1.5k leads. Setup banner: 1 thing remaining. (5) TripAdvisor: no analytics email in 24h. (6) Reviews backlog unchanged: 6 unanswered, Lisa O'Brien now 30 days old, Deimos Somied 5★ at top. (7) GitHub PAT: 200 OK.",
+    "headline": "Tue May 12 4 AM run — Sling May 12 pending. Toast Sun May 10 DPS still HTML-only; Mon May 11 DPS not yet sent. Deimos Somied 5★ still unanswered (2d). Google Ads: 2 reports in 24h, no flags. TripAdvisor: only a marketing email.",
+    "detail": "(1) Toast Mon May 11 DPS not yet sent (arrives ~7:39 AM PT). Sun May 10 DPS still in mailbox but get_thread returns no parseable body — numbers require manual check in Toast app. (2) Sling May 12 daily report not yet sent (arrives ~7 AM PT). Most recent on file = Mon May 11: 2 staff (Rafael Patricio Cook, Katharine Brown Bartender), 5.75 hrs, 0 OT, 0 uncovered. (3) Reviews backlog: 6 unanswered. Deimos Somied 5★ (Google, May 10, 2 days old) top priority. Lisa O'Brien now 31 days old. (4) Google Ads: 2 reports received in 24h. No disapprovals, no budget alerts. (5) Yelp: only a marketing newsletter — no customer inquiry. (6) TripAdvisor: marketing email 'Connect with your diners—for free' — not an ad performance report. (7) Reservations: 0 today, 0 Wed. Next big party: Stephen McCandlish Fri May 15. (8) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast May 10 DPS (HTML-only, body not parseable — manual check)"
+      "Toast May 11 DPS (not yet arrived)",
+      "Sling May 12 (not yet arrived)",
+      "Toast May 10 DPS (HTML-only, body not parseable)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-11T07:00:00-07:00"
+    "as_of": "2026-05-12T04:00:00-07:00"
   },
   "toast": {
     "date": "Sunday, May 10",
     "pending": true,
-    "note": "Sun May 10 DPS arrived 7:39 AM PT. Gmail MCP get_thread returns no plaintextBody or htmlBody (HTML-only pattern). Manual check required in Toast app/email for Net/Gross/Guests/Orders/Labor%. Last fully-parsed = Sat Apr 25.",
-    "gross": null,
-    "net": null,
-    "guests": null,
-    "orders": null,
-    "avgPerGuest": null,
-    "laborPct": null,
-    "discountPct": null,
-    "cardPayments": null,
-    "refunds": null,
-    "headline": "Toast Sun May 10 numbers not extractable — open the Toast email for the figures",
+    "note": "Sun May 10 DPS last on file. Gmail MCP get_thread returns no parseable body. Mon May 11 DPS not yet sent at 4 AM. Manual check required for Net/Gross/Guests/Orders/Labor%. Last fully-parsed = Sat Apr 25.",
+    "gross": null, "net": null, "guests": null, "orders": null,
+    "avgPerGuest": null, "laborPct": null, "discountPct": null,
+    "cardPayments": null, "refunds": null,
+    "headline": "Toast numbers not extractable — open the Toast email for the figures",
     "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Sunday, May 10'",
     "stale": true,
     "staleNote": "Manual check required."
   },
   "sling": {
-    "date": "Sunday, May 10",
-    "count": 9,
-    "hours": 51.91,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 1,
-    "shifts": 9,
-    "note": "From Sling daily report May 10."
+    "date": "Monday, May 11",
+    "count": 2, "hours": 5.75, "overtime": 0, "uncovered": 0,
+    "employeesOff": 0, "shifts": 2,
+    "note": "From Sling daily report May 11."
   },
   "slingToday": {
-    "date": "Monday, May 11",
-    "pending": false,
-    "stale": false,
+    "date": "Tuesday, May 12",
+    "pending": true, "stale": true,
     "asOfDate": "Monday, May 11",
-    "count": 2,
-    "hours": 5.75,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 0,
-    "shifts": 2,
-    "note": "Sling May 11 reconfirmed 7 AM run. Light Monday.",
+    "count": null, "hours": null, "overtime": null, "uncovered": null,
+    "employeesOff": null, "shifts": null,
+    "note": "Sling May 12 daily report not yet sent at 4 AM. Showing last delivered (Mon May 11) as reference: 2 staff, 5.75 hrs, 0 OT.",
     "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender"
-      }
+      {"name": "Rafael Patricio", "role": "Cook", "asOf": "Mon May 11"},
+      {"name": "Katharine Brown", "role": "Bartender", "asOf": "Mon May 11"}
     ]
   },
   "googleAds": {
-    "lastUpdated": "Monday, May 11",
+    "lastUpdated": "Tuesday, May 12",
     "yesterday": {
       "date": "May 10, 2026",
-      "spend": 24.45,
-      "clicks": 112,
-      "impressions": 6373,
-      "cpc": 0.22,
-      "ctr": 1.76,
-      "conversions": 0.0,
-      "targetCpa": 25.06,
-      "note": "Live-scraped from ads.google.com/aw/campaigns. Account 343-687-4835."
+      "spend": 24.45, "clicks": 112, "impressions": 6373,
+      "cpc": 0.22, "ctr": 1.76, "conversions": 0.0, "targetCpa": 25.06,
+      "note": "Live-scraped May 11. No fresh scrape on May 12 4 AM run."
     },
     "campaigns": [
-      {
-        "name": "Local store visits and promotions-Performance Max - 2",
-        "status": "Eligible (Limited)",
-        "statusNote": "Limited by budget",
-        "budgetDaily": 23.37,
-        "type": "Performance Max",
-        "clicks": 112,
-        "impressions": 6373,
-        "ctr": 1.76,
-        "cpc": 0.22,
-        "cost": 24.45
-      },
-      {
-        "name": "Oldest SB Brewery on Tap",
-        "status": "Paused",
-        "budgetDaily": 10.8,
-        "type": "Performance Max",
-        "clicks": 0,
-        "impressions": 0,
-        "cost": 0.0
-      }
+      {"name": "Local store visits and promotions-Performance Max - 2",
+       "status": "Eligible (Limited)", "statusNote": "Limited by budget",
+       "budgetDaily": 23.37, "type": "Performance Max",
+       "clicks": 112, "impressions": 6373, "ctr": 1.76, "cpc": 0.22, "cost": 24.45},
+      {"name": "Oldest SB Brewery on Tap", "status": "Paused",
+       "budgetDaily": 10.8, "type": "Performance Max",
+       "clicks": 0, "impressions": 0, "cost": 0.0}
     ],
-    "note": "May 10 figures live from dashboard. Active campaign limited by budget — $23.37/day cap hit ($24.45 spend includes overdelivery).",
-    "stale": false,
-    "authError": false,
-    "reportsLast24h": 2
+    "note": "2 reports arrived in last 24h. No disapprovals, no auth errors, no budget alerts.",
+    "stale": false, "authError": false, "reportsLast24h": 2
   },
   "yelpAds": {
     "lastUpdated": "Monday, May 11",
     "last30d": {
-      "impressionsFromAds": 57300,
-      "impressionsTotal": 65400,
-      "impressionsAdShare": 88,
-      "pageVisitsFromAds": 843,
-      "pageVisitsTotal": 1100,
-      "pageVisitsAdShare": 77,
-      "leadsFromAds": 202,
-      "leadsTotal": 256,
-      "leadsAdShare": 79
+      "impressionsFromAds": 57300, "impressionsTotal": 65400, "impressionsAdShare": 88,
+      "pageVisitsFromAds": 843, "pageVisitsTotal": 1100, "pageVisitsAdShare": 77,
+      "leadsFromAds": 202, "leadsTotal": 256, "leadsAdShare": 79
     },
-    "last12mo": {
-      "pageVisits": 7500,
-      "leads": 1500
-    },
-    "note": "Live-scraped from biz.yelp.com Ads dashboard. Setup banner shows 1 thing remaining. Ad spend and bonus budget not visible on Ad performance tab — would need Ad settings tab.",
-    "stale": false
+    "last12mo": {"pageVisits": 7500, "leads": 1500},
+    "note": "Last live scrape May 11. No customer inquiry in 24h — only marketing newsletter.",
+    "stale": true
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-11",
-    "note": "No analytics report from analytics@hm2.tripadvisor.com in last 24h."
+    "lastUpdated": "2026-05-12",
+    "note": "Marketing email 'Connect with your diners—for free' received May 12 — not an analytics report. No ad performance report in 24h."
   },
   "reservations": {
     "lastUpdated": "2026-05-12",
     "source": "All Sources",
-    "today": {
-      "date": "Tue, May 12",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
-      "date": "Wed, May 13",
-      "totalGuests": 0,
-      "bookings": []
-    },
+    "today": {"date": "Tue, May 12", "totalGuests": 0, "bookings": []},
+    "tomorrow": {"date": "Wed, May 13", "totalGuests": 0, "bookings": []},
     "upcoming": [
-      {
-        "time": "12:15 PM",
-        "name": "Kayla Escobar",
-        "guests": 11,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(619) 274-1679",
-        "notes": "",
-        "date": "Sat, May 16"
-      },
-      {
-        "time": "3:00 PM",
-        "name": "Cheryl Smith",
-        "guests": 15,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(714) 801-6903",
-        "notes": "Family get together after our daughter's graduation from UCSB.",
-        "date": "Fri, Jun 12"
-      },
-      {
-        "time": "6:15 PM",
-        "name": "Diane Johnson",
-        "guests": 15,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(805) 886-9057",
-        "notes": "Might have a few more people as well as the 15; we can make it work if you can. Should we come earlier???",
-        "date": "Fri, May 29"
-      },
-      {
-        "time": "7:00 PM",
-        "name": "Stephen McCandlish",
-        "guests": 3,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(208) 866-2711",
-        "notes": "",
-        "date": "Fri, May 15"
-      },
-      {
-        "time": "7:15 PM",
-        "name": "Maria Plucinsky",
-        "guests": 6,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(201) 913-4567",
-        "notes": "",
-        "date": "Fri, May 29"
-      },
-      {
-        "time": "8:00 PM",
-        "name": "Dave Cloninger",
-        "guests": 4,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(916) 798-1933",
-        "notes": "",
-        "date": "Fri, May 22"
-      }
+      {"time": "7:00 PM", "name": "Stephen McCandlish", "guests": 3, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(208) 866-2711", "notes": "", "date": "Fri, May 15"},
+      {"time": "12:15 PM", "name": "Kayla Escobar", "guests": 11, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(619) 274-1679", "notes": "", "date": "Sat, May 16"},
+      {"time": "8:00 PM", "name": "Dave Cloninger", "guests": 4, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(916) 798-1933", "notes": "", "date": "Fri, May 22"},
+      {"time": "6:15 PM", "name": "Diane Johnson", "guests": 15, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(805) 886-9057",
+       "notes": "Might have a few more people as well as the 15; we can make it work if you can. Should we come earlier???",
+       "date": "Fri, May 29"},
+      {"time": "7:15 PM", "name": "Maria Plucinsky", "guests": 6, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(201) 913-4567", "notes": "", "date": "Fri, May 29"},
+      {"time": "3:00 PM", "name": "Cheryl Smith", "guests": 15, "status": "confirmed",
+       "source": "SpotHopper", "phone": "(714) 801-6903",
+       "notes": "Family get together after our daughter's graduation from UCSB.",
+       "date": "Fri, Jun 12"}
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-11",
-    "note": "1 new 5★ overnight (Deimos Somied, Google). Backlog now 6 unanswered — Lisa O'Brien now 30 days old.",
+    "lastUpdated": "2026-05-12",
+    "note": "Backlog 6 unanswered. Deimos Somied 5★ (May 10) still unanswered after 2 days. Lisa O'Brien now 31 days old.",
     "unanswered": [
-      {
-        "platform": "Google",
-        "author": "Deimos Somied",
-        "date": "2026-05-10",
-        "stars": 5,
-        "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 1
-      },
-      {
-        "platform": "Google",
-        "author": "K Vos",
-        "date": "2026-04-24",
-        "stars": 4,
-        "snippet": "Great help with the glutenfree meal",
-        "ageDays": 17
-      },
-      {
-        "platform": "TripAdvisor",
-        "author": "UK visitor",
-        "date": "2026-04-22",
-        "stars": 5,
-        "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 19
-      },
-      {
-        "platform": "Google",
-        "author": "Crystal Aguilar",
-        "date": "2026-04-19",
-        "stars": 5,
-        "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 22
-      },
-      {
-        "platform": "Google",
-        "author": "l g",
-        "date": "2026-04-15",
-        "stars": 5,
-        "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 26
-      },
-      {
-        "platform": "Google",
-        "author": "Lisa O'Brien",
-        "date": "2026-04-11",
-        "stars": 5,
-        "snippet": "(rating only, no text)",
-        "ageDays": 30
-      }
+      {"platform": "Google", "author": "Deimos Somied", "date": "2026-05-10", "stars": 5,
+       "snippet": "The margaritas were the best! Food was great too. But the margaritas!", "ageDays": 2},
+      {"platform": "Google", "author": "K Vos", "date": "2026-04-24", "stars": 4,
+       "snippet": "Great help with the glutenfree meal", "ageDays": 18},
+      {"platform": "TripAdvisor", "author": "UK visitor", "date": "2026-04-22", "stars": 5,
+       "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.", "ageDays": 20},
+      {"platform": "Google", "author": "Crystal Aguilar", "date": "2026-04-19", "stars": 5,
+       "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...", "ageDays": 23},
+      {"platform": "Google", "author": "l g", "date": "2026-04-15", "stars": 5,
+       "snippet": "Great food and amazing beer nice atmosphere", "ageDays": 27},
+      {"platform": "Google", "author": "Lisa O'Brien", "date": "2026-04-11", "stars": 5,
+       "snippet": "(rating only, no text)", "ageDays": 31}
     ]
   },
-  "lastUpdated": "2026-05-11T07:00:00-07:00"
+  "lastUpdated": "2026-05-12T04:00:00-07:00"
 }
