@@ -2,20 +2,20 @@
   "date": "Saturday, May 16",
   "systemStatus": {
     "level": "warn",
-    "headline": "Sat May 16 4 AM run \u2014 Toast May 15 DPS not yet arrived (typically ~7:38 AM PT). Sling May 16 daily report not yet arrived (typically ~7:01 AM PT). NEW 5\u2605 La Connolly (May 15) needs reply; Dympna Pettit (May 14) still unanswered.",
-    "detail": "(1) Toast May 15 DPS not yet sent at 4 AM run time. Most recent: Thu May 14 DPS arrived May 15 at 7:38 AM PT but Gmail MCP get_thread returns no parseable body \u2014 Net/Gross/Guests/Orders/Labor% require manual check in Toast app or browser. (2) Sling May 16 daily report not yet arrived at 4 AM run time (sends ~7:01 AM PT). Most recent: Sling May 15 received: 10 scheduled employees, 10 shifts, 56.66 hours, 0 OT, 0 uncovered. Staff (May 15): Isael Salvador Narciso (Cook), Noel Nunez (Chef), Christine Vargas/Moe Danely/Fred De Leon (Bartenders), Daniel Rodriguez/Augustine Arroyo/James Hernadez/Bri Kelley (Servers), Cal Carter (Busser). (3) Reviews backlog: 7 unanswered. NEW La Connolly 5\u2605 Google May 15 (1 day, top priority). Dympna Pettit 5\u2605 Google May 14 now 2 days old. Deimos Somied 5\u2605 now 6 days old. Lisa O'Brien now 35 days old. (4) Google Ads: 4 report emails received in last 48h (2 daily, 2 campaign performance). No disapprovals or auth errors flagged. Live scrape not refreshed at 4 AM run \u2014 dashboard shows last good snapshot from May 13 (May 12 data). (5) Yelp last 24h: only marketing newsletters, no customer inquiries or actionable items. Last good scrape May 13. (6) TripAdvisor: no new email in 24h \u2014 no ad performance report. (7) Reservations: today (Sat May 16): 17 guests across 3 bookings \u2014 Kayla Escobar 12:15 PM (11), Naseem Hyder 6:30 PM (4, Cherry Bomz fans, wants table near band), Joseph Estrada 7:00 PM (2). Tomorrow (Sun May 17): no bookings. (8) GitHub PAT: 200 OK.",
+    "headline": "Sat May 16 7 AM run — Sling May 16 schedule in (10 emp, 57.92 hrs, 0 OT). Yelp Ads refreshed live ($433.51 MTD spend May 1-15). Toast May 15 DPS not yet arrived (expected ~7:38 AM PT). Google Ads scrape FAILED — re-auth required (Joal emailed). NEW 5★ La Connolly (May 15) needs reply; 7 reviews backlog.",
+    "detail": "(1) Sling May 16 daily arrived 7:02 AM PT: 10 employees, 10 shifts, 57.92 hours, 0 OT, 0 uncovered. Saturday roster: Isael Salvador Narciso (Cook), Andrew Turner/Katharine Brown/Fred De Leon/Moe Danely (Bartenders), Cal Carter/Daniel Rodriguez/Gabriel Lopez galindo/Bri Kelley (Servers), Noel Nunez (Busser). (2) Yelp Ads live scrape May 16 7 AM PT: 30d 56.2k impressions / 765 page visits / 189 leads (80% from ads), 691 ad clicks. Billing May 1-15: $433.51 spend, $1.17 CPC, $3.98 CPL. 12mo: 800 ad leads / 760 organic / 51% ad share. (3) Google Ads live scrape FAILED — sign-in chooser shown; account session expired. Stale snapshot from May 13 retained. 5 Ads report emails last 48h (no disapprovals/auth-errors flagged in mail). Joal emailed to re-login at ads.google.com. (4) Toast May 15 DPS not yet arrived at 7 AM run time (expected ~7:38 AM PT). Group summary for Fri May 15 arrived 6:16 AM PT, no figures. Most recent DPS (Thu May 14) Gmail body still not parseable — manual check required. (5) TripAdvisor: no new email last 24h, no ad performance report. (6) Reviews backlog: 7 unanswered. NEW La Connolly 5★ Google May 15 (1 day, top priority). Dympna Pettit 5★ May 14 now 2 days. Deimos Somied 5★ now 6 days. Lisa O'Brien now 35 days. (7) Reservations today (Sat May 16): 17 guests across 3 bookings — Kayla Escobar 12:15 PM (11), Naseem Hyder 6:30 PM (4, Cherry Bomz fans, wants table near band), Joseph Estrada 7:00 PM (2). Tomorrow: no bookings. (8) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast May 15 DPS (not yet arrived at 4 AM run)",
-      "Toast May 14 DPS (HTML-only, body not parseable)",
-      "Sling May 16 schedule (not yet arrived at 4 AM run)"
+      "Google Ads live scrape (auth expired — re-login required)",
+      "Toast May 15 DPS (not yet arrived at 7 AM run)",
+      "Toast May 14 DPS (HTML-only, body not parseable)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-16T04:05:00-07:00"
+    "as_of": "2026-05-16T07:05:00-07:00"
   },
   "toast": {
     "date": "Thursday, May 14",
     "pending": true,
-    "note": "May 15 DPS not yet sent at 4 AM May 16 (typically arrives ~7:38 AM PT). Most recent (May 14) DPS arrived May 15 7:38 AM PT but Gmail MCP get_thread returns no parseable body. Manual check required for Net/Gross/Guests/Orders/Labor%.",
+    "note": "May 15 DPS not yet arrived at 7 AM run (typically ~7:38 AM PT). Group summary for Fri May 15 arrived 6:16 AM PT but contains no figures. Most recent DPS (Thu May 14) arrived May 15 7:38 AM PT but Gmail MCP get_thread returns no parseable body. Manual check required for Net/Gross/Guests/Orders/Labor%.",
     "gross": null,
     "net": null,
     "guests": null,
@@ -25,64 +25,56 @@
     "discountPct": null,
     "cardPayments": null,
     "refunds": null,
-    "headline": "Toast numbers not extractable \u2014 open the Toast email for the figures",
+    "headline": "Toast numbers not extractable — open the Toast email for the figures",
     "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Thursday, May 14'",
     "stale": true,
     "staleNote": "Manual check required."
   },
   "sling": {
-    "date": "Friday, May 15",
+    "date": "Saturday, May 16",
     "count": 10,
-    "hours": 56.66,
+    "hours": 57.92,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 10,
-    "note": "From Sling daily report May 15."
+    "note": "From Sling daily report May 16."
   },
   "slingToday": {
     "date": "Saturday, May 16",
-    "pending": true,
+    "pending": false,
     "stale": false,
-    "asOfDate": "Friday, May 15",
+    "asOfDate": "Saturday, May 16",
     "count": 10,
-    "hours": 56.66,
+    "hours": 57.92,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 10,
-    "note": "Sling May 16 daily report not yet arrived at 4 AM run (sends ~7:01 AM PT). Showing most recent (May 15): 10 scheduled, 56.66 hrs, 0 OT, 0 uncovered. Saturday roster will refresh after 7 AM.",
+    "note": "From Sling daily report May 16 (arrived 7:02 AM PT).",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
-        "name": "Noel Nunez",
-        "role": "Chef"
-      },
-      {
-        "name": "Christine Vargas",
+        "name": "Andrew Turner",
         "role": "Bartender"
       },
       {
-        "name": "Moe Danely",
-        "role": "Bartender"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Bartender"
+        "name": "Cal Carter",
+        "role": "Server"
       },
       {
         "name": "Daniel Rodriguez",
         "role": "Server"
       },
       {
-        "name": "Augustine Arroyo",
-        "role": "Server"
+        "name": "Katharine Brown",
+        "role": "Bartender"
       },
       {
-        "name": "James Hernadez",
+        "name": "Gabriel Lopez galindo",
         "role": "Server"
       },
       {
@@ -90,8 +82,16 @@
         "role": "Server"
       },
       {
-        "name": "Cal Carter",
+        "name": "Noel Nunez",
         "role": "Busser"
+      },
+      {
+        "name": "Fred De Leon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender"
       }
     ]
   },
@@ -106,7 +106,7 @@
       "ctr": 1.69,
       "conversions": 0.0,
       "targetCpa": 25.06,
-      "note": "Last live scrape May 13 7 AM PT \u2014 not refreshed at 4 AM May 15. 4 report emails received in last 48h, no disapprovals or auth errors."
+      "note": "Last live scrape May 13 7 AM PT — not refreshed at 4 AM May 15. 4 report emails received in last 48h, no disapprovals or auth errors."
     },
     "campaigns": [
       {
@@ -133,46 +133,46 @@
         "cost": 0.0
       }
     ],
-    "note": "Stale snapshot from May 13. 4 Ads report emails received in last 48h (2 daily, 2 campaign performance) \u2014 no disapprovals, no auth errors. Live scrape not refreshed at 4 AM May 16.",
+    "note": "Live scrape FAILED at 7 AM May 16 — Google Ads requires re-authentication (account chooser appeared). Stale snapshot from May 13 (May 12 data). 5 Ads report emails received in last 48h (3 daily, 2 campaign performance), no disapprovals/auth-error alerts in email. Joal notified by email to re-login.",
     "stale": true,
-    "authError": false,
-    "reportsLast24h": 2,
-    "reportsLast48h": 4
+    "authError": true,
+    "reportsLast24h": 3,
+    "reportsLast48h": 5
   },
   "yelpAds": {
-    "lastUpdated": "Wednesday, May 13",
+    "lastUpdated": "Saturday, May 16",
     "last30d": {
-      "impressionsFromAds": 56100,
+      "impressionsFromAds": 56200,
       "impressionsTotal": 63800,
       "impressionsAdShare": 88,
-      "pageVisitsFromAds": 786,
+      "pageVisitsFromAds": 765,
       "pageVisitsTotal": 1000,
-      "pageVisitsAdShare": 75,
-      "leadsFromAds": 185,
-      "leadsTotal": 233,
-      "leadsAdShare": 79,
-      "adClicks": 701
+      "pageVisitsAdShare": 73,
+      "leadsFromAds": 189,
+      "leadsTotal": 235,
+      "leadsAdShare": 80,
+      "adClicks": 691
     },
     "last12mo": {
-      "pageVisits": 7600,
-      "leads": 1500,
-      "leadsAds": 779,
-      "leadsOrganic": 759,
-      "leadsTotal": 1538,
+      "pageVisits": 7700,
+      "leads": 1600,
+      "leadsAds": 800,
+      "leadsOrganic": 760,
+      "leadsTotal": 1560,
       "adShare": 51
     },
     "billingPeriod": {
-      "label": "May 1 - May 12, 2026",
-      "adSpend": 345.9,
-      "avgCpc": 1.13,
-      "avgCpl": 3.93
+      "label": "May 1 - May 15, 2026",
+      "adSpend": 433.51,
+      "avgCpc": 1.17,
+      "avgCpl": 3.98
     },
-    "note": "Stale snapshot from May 13. Last 24h: only Yelp marketing newsletters (Menu Vision promo), no customer inquiries or actionable items.",
-    "stale": true
+    "note": "Live scrape May 16 7 AM PT. Last 24h Yelp emails: marketing newsletters only, no customer inquiries.",
+    "stale": false
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-16",
-    "note": "No TripAdvisor email in last 24h \u2014 no ad performance report."
+    "note": "No TripAdvisor email in last 24h — no ad performance report."
   },
   "reservations": {
     "lastUpdated": "2026-05-16",
@@ -260,7 +260,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-16",
-    "note": "Backlog 7 unanswered. NEW La Connolly 5\u2605 Google May 15 (1 day) \u2014 top priority. Dympna Pettit 5\u2605 now 2 days old. Deimos Somied 5\u2605 now 6 days old. Lisa O'Brien now 35 days old.",
+    "note": "Backlog 7 unanswered. NEW La Connolly 5★ Google May 15 (1 day) — top priority. Dympna Pettit 5★ now 2 days old. Deimos Somied 5★ now 6 days old. Lisa O'Brien now 35 days old.",
     "unanswered": [
       {
         "platform": "Google",
@@ -328,5 +328,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-16T04:05:00-07:00"
+  "lastUpdated": "2026-05-16T07:05:00-07:00"
 }
