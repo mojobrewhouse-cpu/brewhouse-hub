@@ -1,21 +1,21 @@
 {
-  "date": "Friday, May 15",
+  "date": "Saturday, May 16",
   "systemStatus": {
     "level": "warn",
-    "headline": "Fri May 15 4 AM run — Toast May 14 DPS not yet arrived (typically ~7:38 AM PT). Sling May 15 daily report not yet arrived (typically ~7:01 AM PT). New 5★ Google review from Dympna Pettit (May 14) needs reply.",
-    "detail": "(1) Toast May 14 DPS not yet sent at 4 AM run time. Latest available: Wed May 13 DPS arrived May 14 at 7:38 AM PT but Gmail MCP get_thread returns no parseable body — Net/Gross/Guests/Orders/Labor% require manual check in Toast app or browser. (2) Sling May 15 daily report not yet arrived at 4 AM run time (sends ~7:01 AM PT). Most recent: Sling May 14 received: 8 scheduled employees, 8 shifts, 38.74 hours, 0 OT, 0 uncovered. Staff (May 14): Rafael Patricio (Cook), Tony Rincon, Christine Vargas, Harmony Willson (Bartenders), Noel Nunez (Chef), Bri Kelley, James Hernadez (Servers), Cal Carter (Busser). (3) Reviews backlog: 7 unanswered. NEW Dympna Pettit 5★ Google May 14 (1 day, top priority). Deimos Somied 5★ now 5 days old. Lisa O'Brien now 34 days old. (4) Google Ads: 4 report emails received in last 48h (2 daily, 2 campaign performance). No disapprovals or auth errors flagged. Live scrape not refreshed at 4 AM run — dashboard shows last good snapshot from May 13 (May 12 data). (5) Yelp last 24h: only marketing newsletters, no customer inquiries or actionable items. Last good scrape May 13. (6) TripAdvisor: no new email in 24h — no ad performance report. (7) Reservations: today (Fri May 15) Stephen McCandlish 7:00 PM (3 guests). Tomorrow (Sat May 16): Kayla Escobar 12:15 PM (11 guests). (8) GitHub PAT: 200 OK.",
+    "headline": "Sat May 16 4 AM run \u2014 Toast May 15 DPS not yet arrived (typically ~7:38 AM PT). Sling May 16 daily report not yet arrived (typically ~7:01 AM PT). NEW 5\u2605 La Connolly (May 15) needs reply; Dympna Pettit (May 14) still unanswered.",
+    "detail": "(1) Toast May 15 DPS not yet sent at 4 AM run time. Most recent: Thu May 14 DPS arrived May 15 at 7:38 AM PT but Gmail MCP get_thread returns no parseable body \u2014 Net/Gross/Guests/Orders/Labor% require manual check in Toast app or browser. (2) Sling May 16 daily report not yet arrived at 4 AM run time (sends ~7:01 AM PT). Most recent: Sling May 15 received: 10 scheduled employees, 10 shifts, 56.66 hours, 0 OT, 0 uncovered. Staff (May 15): Isael Salvador Narciso (Cook), Noel Nunez (Chef), Christine Vargas/Moe Danely/Fred De Leon (Bartenders), Daniel Rodriguez/Augustine Arroyo/James Hernadez/Bri Kelley (Servers), Cal Carter (Busser). (3) Reviews backlog: 7 unanswered. NEW La Connolly 5\u2605 Google May 15 (1 day, top priority). Dympna Pettit 5\u2605 Google May 14 now 2 days old. Deimos Somied 5\u2605 now 6 days old. Lisa O'Brien now 35 days old. (4) Google Ads: 4 report emails received in last 48h (2 daily, 2 campaign performance). No disapprovals or auth errors flagged. Live scrape not refreshed at 4 AM run \u2014 dashboard shows last good snapshot from May 13 (May 12 data). (5) Yelp last 24h: only marketing newsletters, no customer inquiries or actionable items. Last good scrape May 13. (6) TripAdvisor: no new email in 24h \u2014 no ad performance report. (7) Reservations: today (Sat May 16): 17 guests across 3 bookings \u2014 Kayla Escobar 12:15 PM (11), Naseem Hyder 6:30 PM (4, Cherry Bomz fans, wants table near band), Joseph Estrada 7:00 PM (2). Tomorrow (Sun May 17): no bookings. (8) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast May 14 DPS (not yet arrived at 4 AM run)",
-      "Toast May 13 DPS (HTML-only, body not parseable)",
-      "Sling May 15 schedule (not yet arrived at 4 AM run)"
+      "Toast May 15 DPS (not yet arrived at 4 AM run)",
+      "Toast May 14 DPS (HTML-only, body not parseable)",
+      "Sling May 16 schedule (not yet arrived at 4 AM run)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-15T04:05:00-07:00"
+    "as_of": "2026-05-16T04:05:00-07:00"
   },
   "toast": {
-    "date": "Wednesday, May 13",
+    "date": "Thursday, May 14",
     "pending": true,
-    "note": "May 14 DPS not yet sent at 4 AM May 15 (typically arrives ~7:38 AM PT). Most recent (May 13) DPS arrived May 14 7:38 AM PT but Gmail MCP get_thread returns no parseable body. Manual check required for Net/Gross/Guests/Orders/Labor%.",
+    "note": "May 15 DPS not yet sent at 4 AM May 16 (typically arrives ~7:38 AM PT). Most recent (May 14) DPS arrived May 15 7:38 AM PT but Gmail MCP get_thread returns no parseable body. Manual check required for Net/Gross/Guests/Orders/Labor%.",
     "gross": null,
     "net": null,
     "guests": null,
@@ -25,36 +25,36 @@
     "discountPct": null,
     "cardPayments": null,
     "refunds": null,
-    "headline": "Toast numbers not extractable — open the Toast email for the figures",
-    "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Wednesday, May 13'",
+    "headline": "Toast numbers not extractable \u2014 open the Toast email for the figures",
+    "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Thursday, May 14'",
     "stale": true,
     "staleNote": "Manual check required."
   },
   "sling": {
-    "date": "Thursday, May 14",
-    "count": 8,
-    "hours": 38.74,
+    "date": "Friday, May 15",
+    "count": 10,
+    "hours": 56.66,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
-    "shifts": 8,
-    "note": "From Sling daily report May 14."
+    "shifts": 10,
+    "note": "From Sling daily report May 15."
   },
   "slingToday": {
-    "date": "Friday, May 15",
+    "date": "Saturday, May 16",
     "pending": true,
     "stale": false,
-    "asOfDate": "Thursday, May 14",
-    "count": 8,
-    "hours": 38.74,
+    "asOfDate": "Friday, May 15",
+    "count": 10,
+    "hours": 56.66,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
-    "shifts": 8,
-    "note": "Sling May 15 daily report not yet arrived at 4 AM run (sends ~7:01 AM PT). Showing most recent (May 14): 8 scheduled, 38.74 hrs, 0 OT, 0 uncovered.",
+    "shifts": 10,
+    "note": "Sling May 16 daily report not yet arrived at 4 AM run (sends ~7:01 AM PT). Showing most recent (May 15): 10 scheduled, 56.66 hrs, 0 OT, 0 uncovered. Saturday roster will refresh after 7 AM.",
     "staff": [
       {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
@@ -62,23 +62,31 @@
         "role": "Chef"
       },
       {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
         "name": "Christine Vargas",
         "role": "Bartender"
       },
       {
-        "name": "Harmony Willson",
+        "name": "Moe Danely",
         "role": "Bartender"
       },
       {
-        "name": "Bri Kelley",
+        "name": "Fred De Leon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server"
+      },
+      {
+        "name": "Augustine Arroyo",
         "role": "Server"
       },
       {
         "name": "James Hernadez",
+        "role": "Server"
+      },
+      {
+        "name": "Bri Kelley",
         "role": "Server"
       },
       {
@@ -98,7 +106,7 @@
       "ctr": 1.69,
       "conversions": 0.0,
       "targetCpa": 25.06,
-      "note": "Last live scrape May 13 7 AM PT — not refreshed at 4 AM May 15. 4 report emails received in last 48h, no disapprovals or auth errors."
+      "note": "Last live scrape May 13 7 AM PT \u2014 not refreshed at 4 AM May 15. 4 report emails received in last 48h, no disapprovals or auth errors."
     },
     "campaigns": [
       {
@@ -125,7 +133,7 @@
         "cost": 0.0
       }
     ],
-    "note": "Stale snapshot from May 13. 4 Ads report emails received in last 48h — no flags. No disapprovals, no auth errors.",
+    "note": "Stale snapshot from May 13. 4 Ads report emails received in last 48h (2 daily, 2 campaign performance) \u2014 no disapprovals, no auth errors. Live scrape not refreshed at 4 AM May 16.",
     "stale": true,
     "authError": false,
     "reportsLast24h": 2,
@@ -159,12 +167,12 @@
       "avgCpc": 1.13,
       "avgCpl": 3.93
     },
-    "note": "Stale snapshot from May 13. Last 24h: only Yelp marketing newsletters, no customer inquiries or actionable items.",
+    "note": "Stale snapshot from May 13. Last 24h: only Yelp marketing newsletters (Menu Vision promo), no customer inquiries or actionable items.",
     "stale": true
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-15",
-    "note": "No TripAdvisor email in last 24h — no ad performance report."
+    "lastUpdated": "2026-05-16",
+    "note": "No TripAdvisor email in last 24h \u2014 no ad performance report."
   },
   "reservations": {
     "lastUpdated": "2026-05-16",
@@ -251,16 +259,24 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-15",
-    "note": "Backlog 7 unanswered. NEW Dympna Pettit 5★ Google May 14 (1 day) — top priority. Deimos Somied 5★ now 5 days old. Lisa O'Brien now 34 days old.",
+    "lastUpdated": "2026-05-16",
+    "note": "Backlog 7 unanswered. NEW La Connolly 5\u2605 Google May 15 (1 day) \u2014 top priority. Dympna Pettit 5\u2605 now 2 days old. Deimos Somied 5\u2605 now 6 days old. Lisa O'Brien now 35 days old.",
     "unanswered": [
+      {
+        "platform": "Google",
+        "author": "La Connolly",
+        "date": "2026-05-15",
+        "stars": 5,
+        "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
+        "ageDays": 1
+      },
       {
         "platform": "Google",
         "author": "Dympna Pettit",
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 1
+        "ageDays": 2
       },
       {
         "platform": "Google",
@@ -268,7 +284,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 5
+        "ageDays": 6
       },
       {
         "platform": "Google",
@@ -276,7 +292,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 21
+        "ageDays": 22
       },
       {
         "platform": "TripAdvisor",
@@ -284,7 +300,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 23
+        "ageDays": 24
       },
       {
         "platform": "Google",
@@ -292,7 +308,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 26
+        "ageDays": 27
       },
       {
         "platform": "Google",
@@ -300,7 +316,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 30
+        "ageDays": 31
       },
       {
         "platform": "Google",
@@ -308,9 +324,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 34
+        "ageDays": 35
       }
     ]
   },
-  "lastUpdated": "2026-05-15T04:05:00-07:00"
+  "lastUpdated": "2026-05-16T04:05:00-07:00"
 }
