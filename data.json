@@ -2,20 +2,21 @@
   "date": "Sunday, May 17",
   "systemStatus": {
     "level": "warn",
-    "headline": "Sun May 17 7 AM run — Sling Sun May 17 schedule arrived (10 emp, 53.91 hrs); Yelp Ads refreshed live (May 1-16: $465.87 spend, $3.95 CPL, 776 page visits, 189 leads). Sat May 16 Toast DPS still pending (expected ~7:38 AM PT). Google Ads scrape blocked by 'Turn off ad blockers' overlay. 8 reviews backlog; NEW Shailvi Wakhlu 5★ (1 day) top priority. 1 reservation today (Marisa Tyler 5:30 PM, 9 guests).",
-    "detail": "(1) Sling Sun May 17 daily report ARRIVED 7:01 AM PT — 10 employees, 53.91 hours, 0 OT, 0 uncovered. Roster: Isael (Cook), Harmony Willson, Katharine Brown, Moe Danely, Fred De Leon not on today (Bartenders); Daniel Rodriguez, Gabriel Lopez galindo, Augustine Arroyo, Bri Kelley (Servers); Cal Carter (Barback); James Hernadez (Busser). (2) Sat May 16 Toast DPS NOT YET ARRIVED at 7:05 AM (expected ~7:38 AM). Latest Toast DPS = Fri May 15 (arrived May 16 7:39 AM PT) but Gmail MCP get_thread still returns no plaintext body — manual check required for Net/Gross/Guests/Orders/Labor%. (3) Yelp Ads: LIVE SCRAPE FRESH 7:05 AM PT. 30d: 56.7k impressions from ads (88%) / 776 page visits from ads (73%) / 189 leads from ads (80%). Billing May 1-16: $465.87 spend, $1.17 CPC, $3.95 CPL. (4) Google Ads scrape STILL BLOCKED — dashboard shows 'Turn off ad blockers' overlay; the ad blocker on ads.google.com hides the campaign table. Joal needs to disable ad blocker for ads.google.com. Stale snapshot from May 13 retained. 3 Ads report emails in last 24h, no disapprovals. (5) TripAdvisor: no new email in last 24h. (6) Reviews backlog: 8 unanswered. NEW Shailvi Wakhlu 5★ Google May 16 (1 day, top priority — 'Excellent salmon burger. Wonderful selection of beer tasters'). La Connolly 5★ May 15 (2 days). Dympna Pettit 5★ May 14 (3 days). Deimos Somied 5★ (7 days). Lisa O'Brien (36 days). (7) Reservations today (Sun May 17): 9 guests — Marisa Tyler 5:30 PM SpotHopper family gathering. Tomorrow Mon May 18: 0 bookings. (8) GitHub PAT: 200 OK.",
+    "headline": "Sun May 17 4 AM run — Sunday Sling schedule + Sat May 16 Toast DPS both pending (typically arrive ~7 AM PT). NEW 5★ Shailvi Wakhlu (May 16) needs reply; 8 reviews backlog. Google Ads still in stale snapshot (re-auth pending). 1 Sunday reservation (Marisa Tyler 5:30 PM, 9 guests).",
+    "detail": "(1) Sunday May 17 Sling daily report NOT YET ARRIVED at 4 AM PT (typically lands ~7 AM PT). Most recent Sling = Sat May 16 (10 emp, 57.92 hrs). (2) Sat May 16 Toast DPS NOT YET ARRIVED at 4 AM (expected ~7:38 AM PT). Latest received Toast DPS (Fri May 15) arrived May 16 7:39 AM PT but Gmail MCP get_thread returns no parseable body — manual check still required for Net/Gross/Guests/Orders/Labor%. (3) Yelp Ads: last live scrape May 16 7 AM PT (now 21 hours old). 30d: 56.2k impressions / 765 page visits / 189 leads (80% ads). Billing May 1-15: $433.51 spend, $1.17 CPC, $3.98 CPL. No customer inquiries in last 24h (marketing newsletters only). (4) Google Ads live scrape still STALE — last successful pull May 13 (May 12 data). Joal previously emailed to re-login at ads.google.com. 2 new Ads report emails in last 24h (1 daily campaign, 1 campaign performance), no disapprovals/auth-error alerts in mail. (5) TripAdvisor: no new email last 24h, no ad performance report. (6) Reviews backlog: 8 unanswered. NEW Shailvi Wakhlu 5★ Google May 16 (1 day, top priority — 'Excellent salmon burger. Wonderful selection of beer tasters'). La Connolly 5★ May 15 now 2 days. Dympna Pettit 5★ May 14 now 3 days. Deimos Somied 5★ now 7 days. Lisa O'Brien now 36 days. (7) Reservations today (Sun May 17): 9 guests across 1 booking — Marisa Tyler 5:30 PM (9, SpotHopper, family gathering). Tomorrow (Mon May 18): 0 bookings. (8) GitHub PAT: 200 OK.",
     "affected": [
-      "Sat May 16 Toast DPS (pending — expected ~7:38 AM PT)",
-      "Toast HTML body parsing (Fri May 15 DPS body not extractable via Gmail MCP)",
-      "Google Ads live scrape (ad blocker overlay blocks dashboard — disable ad blocker for ads.google.com)"
+      "Sunday May 17 Sling schedule (pending — typically ~7 AM PT)",
+      "Sat May 16 Toast DPS (pending — typically ~7:38 AM PT)",
+      "Toast HTML body parsing (Fri May 15 DPS arrived but body not extractable)",
+      "Google Ads live scrape (auth still expired — re-login required)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-17T07:05:00-07:00"
+    "as_of": "2026-05-17T04:05:00-07:00"
   },
   "toast": {
     "date": "Friday, May 15",
     "pending": true,
-    "note": "Sat May 16 DPS NOT YET ARRIVED at 7:05 AM PT run (typically lands ~7:38 AM PT). Latest is Fri May 15 (arrived May 16 7:39 AM PT) but Gmail MCP returns no plaintext body — manual extraction required for Net/Gross/Guests/Orders/Labor%.",
+    "note": "Sat May 16 DPS not yet arrived at 4 AM run (typically ~7:38 AM PT). Fri May 15 DPS arrived May 16 7:39 AM PT but Gmail MCP get_thread returns no parseable body. Manual check required for Net/Gross/Guests/Orders/Labor%.",
     "gross": null,
     "net": null,
     "guests": null,
@@ -31,43 +32,46 @@
     "staleNote": "Manual check required."
   },
   "sling": {
-    "date": "Sunday, May 17",
+    "date": "Saturday, May 16",
     "count": 10,
-    "hours": 53.91,
+    "hours": 57.92,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 10,
-    "note": "From Sling daily report May 17 (arrived 7:01 AM PT)."
+    "note": "From Sling daily report May 16."
   },
   "slingToday": {
     "date": "Sunday, May 17",
+    "pending": true,
+    "stale": true,
+    "asOfDate": "Saturday, May 16",
     "count": 10,
-    "hours": 53.91,
+    "hours": 57.92,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 10,
-    "note": "Fresh from Sling daily report Sun May 17 (arrived 7:01 AM PT).",
+    "note": "Sunday May 17 Sling daily report NOT YET ARRIVED at 4 AM PT (expected ~7 AM PT). Showing most recent received roster from Sat May 16 as reference only — Sunday's actual schedule may differ.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
-        "name": "Harmony Willson",
+        "name": "Andrew Turner",
         "role": "Bartender"
       },
       {
-        "name": "Katharine Brown",
-        "role": "Bartender"
+        "name": "Cal Carter",
+        "role": "Server"
       },
       {
         "name": "Daniel Rodriguez",
         "role": "Server"
       },
       {
-        "name": "Moe Danely",
+        "name": "Katharine Brown",
         "role": "Bartender"
       },
       {
@@ -75,20 +79,20 @@
         "role": "Server"
       },
       {
-        "name": "James Hernadez",
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
         "role": "Busser"
       },
       {
-        "name": "Augustine Arroyo",
-        "role": "Server"
+        "name": "Fred De Leon",
+        "role": "Bartender"
       },
       {
-        "name": "Cal Carter",
-        "role": "Barback"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
+        "name": "Moe Danely",
+        "role": "Bartender"
       }
     ]
   },
@@ -130,26 +134,25 @@
         "cost": 0.0
       }
     ],
-    "note": "Live scrape STILL FAILING — dashboard renders 'Turn off ad blockers' overlay (Chrome has an ad blocker active blocking Google Ads UI). Stale snapshot from May 13 (May 12 data) retained. 3 Ads report emails in last 24h (Brewhouse Daily Campaign Report May 16 8:48 AM, Campaign performance May 16 5:31 AM, Campaign performance May 17 5:31 AM), no disapprovals/auth-error alerts. Joal needs to disable the ad blocker on ads.google.com to enable live scrape.",
+    "note": "Live scrape STILL FAILING — Google Ads requires re-authentication (account chooser appeared in browser). Stale snapshot from May 13 (May 12 data) retained. 2 new Ads report emails in last 24h (Brewhouse Daily Campaign Report May 16 8:48 AM, Campaign performance May 16 5:31 AM), no disapprovals/auth-error alerts. Joal previously notified to re-login at ads.google.com.",
     "stale": true,
-    "authError": false,
-    "reportsLast24h": 3,
-    "reportsLast48h": 4,
-    "adBlockerError": true
+    "authError": true,
+    "reportsLast24h": 2,
+    "reportsLast48h": 4
   },
   "yelpAds": {
-    "lastUpdated": "Sunday, May 17",
+    "lastUpdated": "Saturday, May 16",
     "last30d": {
-      "impressionsFromAds": 56700,
-      "impressionsTotal": 64400,
+      "impressionsFromAds": 56200,
+      "impressionsTotal": 63800,
       "impressionsAdShare": 88,
-      "pageVisitsFromAds": 776,
-      "pageVisitsTotal": 1100,
+      "pageVisitsFromAds": 765,
+      "pageVisitsTotal": 1000,
       "pageVisitsAdShare": 73,
       "leadsFromAds": 189,
-      "leadsTotal": 236,
+      "leadsTotal": 235,
       "leadsAdShare": 80,
-      "adClicks": null
+      "adClicks": 691
     },
     "last12mo": {
       "pageVisits": 7700,
@@ -160,12 +163,12 @@
       "adShare": 51
     },
     "billingPeriod": {
-      "label": "May 1 - May 16, 2026",
-      "adSpend": 465.87,
+      "label": "May 1 - May 15, 2026",
+      "adSpend": 433.51,
       "avgCpc": 1.17,
-      "avgCpl": 3.95
+      "avgCpl": 3.98
     },
-    "note": "Live scrape May 17 7:05 AM PT. 12mo figures preserved from prior snapshot (not on overview).",
+    "note": "Live scrape May 16 7 AM PT (now ~21h old). Last 24h Yelp emails: marketing newsletters only, no customer inquiries.",
     "stale": false
   },
   "tripAdvisor": {
@@ -173,15 +176,25 @@
     "note": "No TripAdvisor email in last 24h — no ad performance report."
   },
   "reservations": {
-    "lastUpdated": "2026-05-18",
+    "lastUpdated": "2026-05-17",
     "source": "All Sources",
     "today": {
-      "date": "Mon, May 18",
-      "totalGuests": 0,
-      "bookings": []
+      "date": "Sun, May 17",
+      "totalGuests": 9,
+      "bookings": [
+        {
+          "time": "5:30 PM",
+          "name": "Marisa Tyler",
+          "guests": 9,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 451-2191",
+          "notes": "family gathering"
+        }
+      ]
     },
     "tomorrow": {
-      "date": "Tue, May 19",
+      "date": "Mon, May 18",
       "totalGuests": 0,
       "bookings": []
     },
@@ -225,16 +238,6 @@
         "phone": "(201) 913-4567",
         "notes": "",
         "date": "Fri, May 29"
-      },
-      {
-        "time": "7:30 PM",
-        "name": "Ryan Sweigart",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(310) 880-1631",
-        "notes": "",
-        "date": "Tue, May 26"
       }
     ]
   },
@@ -316,5 +319,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-17T07:05:00-07:00"
+  "lastUpdated": "2026-05-17T04:05:00-07:00"
 }
