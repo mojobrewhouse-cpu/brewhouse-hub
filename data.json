@@ -1,66 +1,151 @@
 {
-  "date": "Monday, May 18",
+  "date": "Tuesday, May 19",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Mon May 18 7 AM run — Sun May 17 Toast DPS received with full breakdown. Mon May 18 Sling schedule received (2 employees, 7.25 hrs). Google Ads LIVE refreshed (May 17: 112 clicks, $18.61 spend, 6.51K impressions). Yelp Ads LIVE refreshed (last 30d: 56.2k imp / 766 visits / 180 leads / $492.03 spend May 1-17). No TripAdvisor email. 8 reviews still pending reply — Shailvi Wakhlu (now 2 days) top priority.",
-    "detail": "(1) Mon May 18 Sling daily report received at 7:02 AM PT: 2 employees, 2 shifts, 7.25 hrs, 0 OT, 0 uncovered. Staff: Rafael Patricio (Cook 5:50A), Harmony Willson (Bartender 3-10:30P). (2) Sun May 17 Toast DPS received 6:18 AM PT — full breakdown parsed: Gross $7,079.95, Net $6,785.97, Guests 244, Orders 138, Labor 17.3%, Discount 4.2%, Refunds $0, Card Payments 123, Avg/Guest $27.81. (3) Yelp Ads live scrape Mon May 18 7 AM PT — 30d: 56.2k imp (88% ad share), 766 page visits (73% ad share), 180 leads (80% ad share). Billing May 1-17: $492.03 spend, $1.16 CPC, $4.10 CPL. No customer inquiries last 24h. (4) Google Ads LIVE scrape RESTORED — May 17 data fetched directly from ads.google.com overview: 112 clicks, 6.51K impressions, $18.61 cost, $0.17 CPC. Cost down -23.88% vs last Sunday. Account balance $397.21, next payment Jun 1. Optimization score 85%. 'Local store visits and promotions-Performance Max-2' Eligible (Limited by budget). 'Oldest SB Brewery on Tap' Paused. (5) TripAdvisor: no new email last 24h, no ad performance report. (6) Reviews backlog: 8 unanswered. Shailvi Wakhlu 5★ Google May 16 (2 days, top priority — 'Excellent salmon burger. Wonderful selection of beer tasters'). La Connolly 5★ May 15 (3 days). Dympna Pettit 5★ May 14 (4 days). Deimos Somied 5★ May 10 (8 days). Lisa O'Brien now 37 days. (7) Reservations today (Mon May 18): 0 bookings. Tomorrow (Tue May 19): 0 bookings. (8) GitHub PAT: 200 OK.",
-    "affected": [],
+    "level": "warn",
+    "headline": "Tue May 19 4 AM run — Mon May 18 Toast DPS has NOT yet arrived (Toast normally sends ~6-7 AM PT). Tue May 19 Sling daily report has NOT yet arrived (sends ~7 AM PT). Most recent Toast on file is Sun May 17. Most recent Sling on file is Mon May 18 (2 employees, 7.25 hrs). 8 reviews still unanswered — Shailvi Wakhlu now 3 days, top priority.",
+    "detail": "(1) Toast: Mon May 18 Daily Performance Summary has not yet been delivered by no-reply@toasttab.com at time of 4 AM run. Last received Toast email is Sun May 17 (delivered May 18 6:18 AM PT). Numbers below are Sun May 17. Re-run after 7 AM to capture Monday. (2) Sling: Tue May 19 daily report has not yet arrived (sender sling@getsling.com normally delivers around 7 AM PT). Last Sling on file is Mon May 18 daily report (2 employees, 7.25 hrs). Staff today is unknown until Tue Sling email arrives. (3) Google Ads: 2 daily report emails arrived May 18 (Campaign performance + Brewhouse Daily Campaign Report) — both routine, no disapprovals/auth errors. Live ads.google.com scrape NOT refreshed at 4 AM — last live scrape was Mon May 18 7 AM PT. (4) Yelp Ads: no fresh scrape this run. No customer inquiries from yelp.com in last 24h. (5) TripAdvisor: no analytics@hm2.tripadvisor.com email in last 24h. (6) Reviews backlog: 8 unanswered (no new since Shailvi Wakhlu May 16). Shailvi now 3 days, La Connolly now 4 days, Dympna Pettit now 5 days. (7) Reservations: Tue May 19 0 bookings. Wed May 20 0 bookings. Thu May 21 — 14-top from Andrea Victoria (allergies in notes). (8) GitHub PAT: 200 OK.",
+    "affected": [
+      "toast.monday-pending",
+      "slingToday.tuesday-pending"
+    ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-18T07:05:00-07:00"
+    "as_of": "2026-05-19T04:00:00-07:00"
   },
   "toast": {
     "date": "Sunday, May 17",
     "pending": false,
+    "mondayPending": true,
+    "mondayPendingNote": "Mon May 18 Toast DPS not yet received at 4 AM. Expected ~6-7 AM PT.",
     "gross": 7079.95,
     "net": 6785.97,
     "guests": 244,
     "orders": 138,
+    "checks": 177,
     "avgPerGuest": 27.81,
     "avgPerOrder": 49.17,
-    "laborPct": 17.3,
+    "avgPerCheck": 38.34,
+    "laborCost": 1094.94,
+    "laborPct": 16.1,
+    "laborPctVsSDLW": 2.5,
+    "discounts": 293.98,
     "discountPct": 4.2,
-    "cardPayments": 123,
-    "refunds": 0.0,
+    "voidAmount": 102.0,
     "voidItems": 11,
-    "openOrders": 2,
-    "headline": "Sun May 17: Net $6,785.97 / Gross $7,079.95 across 244 guests, 138 orders. Labor 17.3% of net.",
-    "headlineSub": "Sub: 'The Brewhouse Santa Barbara Group - Sunday, May 17' received May 18 6:18 AM PT",
-    "stale": false
+    "refunds": 0.0,
+    "sdlw": {
+      "netSales": 6688.5,
+      "netSalesPct": 1.5,
+      "gross": 7221.95,
+      "grossPct": -2.0,
+      "guests": 285,
+      "guestsPct": -14.4,
+      "orders": 141,
+      "ordersPct": -2.1
+    },
+    "fourWeekAvg": {
+      "netSales": 5615.02,
+      "netSalesPct": 20.9
+    },
+    "byRevenueCenter": [
+      {
+        "name": "Dining Room",
+        "net": 3669.37,
+        "pct": 54.0
+      },
+      {
+        "name": "Patio",
+        "net": 1789.1,
+        "pct": 26.3
+      },
+      {
+        "name": "Front Patio",
+        "net": 1193.5,
+        "pct": 17.5
+      },
+      {
+        "name": "Back Room",
+        "net": 134.0,
+        "pct": 1.9
+      }
+    ],
+    "byCategory": [
+      {
+        "name": "Food",
+        "net": 3510.97,
+        "pct": 51.7,
+        "items": 252
+      },
+      {
+        "name": "Liquor",
+        "net": 1178.0,
+        "pct": 17.3,
+        "items": 99
+      },
+      {
+        "name": "Draft Beer",
+        "net": 1135.5,
+        "pct": 16.7,
+        "items": 139
+      },
+      {
+        "name": "Wine",
+        "net": 528.0,
+        "pct": 7.7,
+        "items": 51
+      },
+      {
+        "name": "NA Beverage",
+        "net": 183.0,
+        "pct": 2.6,
+        "items": 35
+      },
+      {
+        "name": "Bottled Beer",
+        "net": 176.0,
+        "pct": 2.5,
+        "items": 29
+      }
+    ],
+    "byService": [
+      {
+        "name": "Lunch",
+        "net": 3480.0,
+        "pct": 51.2
+      },
+      {
+        "name": "Dinner",
+        "net": 3305.97,
+        "pct": 48.7
+      }
+    ],
+    "headline": "Sun May 17 (most recent): Net $6,785.97 / Gross $7,079.95 across 244 guests, 138 orders. Labor 16.1% of net (+2.5% vs SDLW).",
+    "headlineSub": "Sub: 'The Brewhouse Santa Barbara - 229 West Montecito Street - Sunday, May 17' received May 18 6:18 AM PT. Mon May 18 DPS pending — re-run after 7 AM.",
+    "stale": true
   },
   "sling": {
-    "date": "Sunday, May 17",
-    "count": 10,
-    "hours": 53.91,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 0,
-    "shifts": 10,
-    "note": "From Sling daily report May 17 (yesterday's actual schedule)."
-  },
-  "slingToday": {
     "date": "Monday, May 18",
-    "pending": false,
-    "stale": false,
-    "asOfDate": "Monday, May 18",
     "count": 2,
     "hours": 7.25,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
     "shifts": 2,
-    "note": "Mon May 18 Sling daily report received 7:02 AM PT. Light Monday schedule.",
-    "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook",
-        "shift": "5:50A - 5:50A"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "shift": "3:00P - 10:30P"
-      }
-    ]
+    "note": "From Sling daily report May 18 (yesterday's actual schedule). Light Monday: Rafael Patricio (Cook), Harmony Willson (Bartender)."
+  },
+  "slingToday": {
+    "date": "Tuesday, May 19",
+    "pending": true,
+    "stale": true,
+    "asOfDate": "Monday, May 18",
+    "pendingNote": "Tue May 19 Sling daily report not yet received at 4 AM. Expected ~7 AM PT. Numbers shown are Mon May 18 placeholder.",
+    "count": 2,
+    "hours": 7.25,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 0,
+    "shifts": 2,
+    "note": "Tue Sling email pending. Mon May 18 schedule shown as placeholder.",
+    "staff": []
   },
   "googleAds": {
     "lastUpdated": "Monday, May 18",
@@ -104,8 +189,8 @@
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex •••• 1004",
     "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Live scrape RESTORED May 18 7 AM PT. Auth working, account 343-687-4835. 2 Ads report emails in last 24h (Campaign performance May 18 5:31 AM, Daily Campaign Report May 17 8:48 AM). No disapprovals/auth-error alerts.",
-    "stale": false,
+    "note": "Live scrape NOT refreshed at 4 AM run (last refresh Mon May 18 7 AM PT). 2 Ads report emails arrived May 18 (routine — Campaign performance + Daily Campaign Report). No disapprovals/auth-error alerts.",
+    "stale": true,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4
@@ -137,12 +222,12 @@
       "avgCpc": 1.16,
       "avgCpl": 4.1
     },
-    "note": "Live scrape Mon May 18 7 AM PT. No customer inquiries in last 24h (marketing newsletters only).",
-    "stale": false
+    "note": "No fresh scrape at 4 AM run. No customer inquiries from yelp.com last 24h (marketing newsletters only).",
+    "stale": true
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-18",
-    "note": "No TripAdvisor email in last 24h — no ad performance report."
+    "lastUpdated": "2026-05-19",
+    "note": "No TripAdvisor email last 24h — no ad performance report."
   },
   "reservations": {
     "lastUpdated": "2026-05-19",
@@ -191,8 +276,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-18",
-    "note": "Backlog 8 unanswered. Shailvi Wakhlu 5★ Google May 16 (2 days) — top priority. La Connolly 5★ now 3 days. Dympna Pettit 5★ now 4 days. Deimos Somied 5★ now 8 days. Lisa O'Brien now 37 days.",
+    "lastUpdated": "2026-05-19",
+    "note": "Backlog 8 unanswered. Shailvi Wakhlu 5★ Google May 16 (now 3 days) — top priority. La Connolly 5★ now 4 days. Dympna Pettit 5★ now 5 days. Deimos Somied 5★ now 9 days. Lisa O'Brien now 38 days.",
     "unanswered": [
       {
         "platform": "Google",
@@ -200,7 +285,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 2
+        "ageDays": 3
       },
       {
         "platform": "Google",
@@ -208,7 +293,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 3
+        "ageDays": 4
       },
       {
         "platform": "Google",
@@ -216,7 +301,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 4
+        "ageDays": 5
       },
       {
         "platform": "Google",
@@ -224,7 +309,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 8
+        "ageDays": 9
       },
       {
         "platform": "Google",
@@ -232,7 +317,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 24
+        "ageDays": 25
       },
       {
         "platform": "TripAdvisor",
@@ -240,7 +325,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 26
+        "ageDays": 27
       },
       {
         "platform": "Google",
@@ -248,7 +333,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 29
+        "ageDays": 30
       },
       {
         "platform": "Google",
@@ -256,7 +341,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 33
+        "ageDays": 34
       },
       {
         "platform": "Google",
@@ -264,9 +349,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 37
+        "ageDays": 38
       }
     ]
   },
-  "lastUpdated": "2026-05-18T07:05:00-07:00"
+  "lastUpdated": "2026-05-19T04:00:00-07:00"
 }
