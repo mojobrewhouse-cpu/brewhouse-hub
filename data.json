@@ -1,46 +1,43 @@
 {
   "date": "Wednesday, May 20",
   "systemStatus": {
-    "level": "partial",
-    "headline": "Wed May 20 4 AM run — Toast Tue May 19 DPS has not arrived yet (typical drop ~6:15 AM PT). Sling Tue May 19 daily report captured. Sling Wed May 20 schedule has not arrived yet. Live Ads scrapes deferred until 7 AM run.",
-    "detail": "(1) Toast: Tue May 19 DPS pending — usually arrives ~6:15 AM PT. Latest available is Mon May 18 (shown as 'previous' below). (2) Sling yesterday: Tue May 19 captured — 8 employees, 37.66 hrs, 0 OT, 0 uncovered, 1 off. (3) Sling today: Wed May 20 schedule not yet emailed (typical ~7 AM PT). (4) Google Ads / Yelp Ads: no live scrape at 4 AM; reusing prior day's data, marked stale. (5) No TripAdvisor analytics email in last 24h. (6) GitHub PAT: 200 OK.",
+    "level": "ok",
+    "headline": "Wed May 20 7 AM run \u2014 All sources refreshed. Toast Tue May 19 DPS captured (Net $5,015.65, 105 orders, 166 guests, 20.6% labor). Google Ads & Yelp Ads scraped live. Sling Wed May 20 schedule still pending (typical ~7 AM PT drop).",
+    "detail": "(1) Toast: Tue May 19 DPS extracted from Group email arriving 6:15 AM PT \u2014 Net $5,015.65, Gross $5,181, 105 orders, 166 guests, labor 20.6%, discount 3.2%, voids 8. (2) Sling yesterday: Tue May 19 captured \u2014 8 employees, 37.66 hrs. (3) Sling today: Wed May 20 schedule not yet emailed (typical ~7 AM PT). (4) Google Ads live scrape: $21.29 cost, 103 clicks, 5,866 impressions, CTR 1.76%, balance $444.43. Cost -12.88% vs last Tue. (5) Yelp Ads live scrape: $528.22 spend May 1-19, CPC $1.15, CPL $4.03, 177 leads from ads last 30d. (6) No TripAdvisor analytics email in last 24h. (7) GitHub PAT: 200 OK.",
     "affected": [
-      "toast.tuesday",
-      "slingToday",
-      "googleAds.stale",
-      "yelpAds.stale"
+      "slingToday"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-20T04:00:00-07:00"
+    "as_of": "2026-05-20T07:00:00-07:00"
   },
   "toast": {
     "date": "Tuesday, May 19",
-    "pending": true,
+    "pending": false,
     "mondayPending": false,
-    "source": "Tue May 19 Daily Performance Summary not yet received at 4 AM PT (typical drop ~6:15 AM PT). Link to inbox: https://mail.google.com/mail/u/0/#search/from%3Ano-reply%40toasttab.com+newer_than%3A1d",
-    "gross": null,
-    "net": null,
-    "guests": null,
-    "orders": null,
-    "checks": null,
-    "avgPerGuest": null,
-    "avgPerOrder": null,
-    "avgPerCheck": null,
-    "laborPct": null,
-    "discountPct": null,
-    "discounts": null,
-    "voidItems": null,
+    "source": "Tue May 19 Daily Performance Summary extracted from Toast group email (msg 19e4586bfcdc38ad, received 2026-05-20 06:15 AM PT).",
+    "gross": 5181.0,
+    "net": 5015.65,
+    "guests": 166,
+    "orders": 105,
+    "checks": 105,
+    "avgPerGuest": 30.21,
+    "avgPerOrder": 47.77,
+    "avgPerCheck": 47.77,
+    "laborPct": 20.6,
+    "discountPct": 3.2,
+    "discounts": 165.79,
+    "voidItems": 8,
     "voidAmount": null,
-    "refunds": null,
-    "cardPayments": null,
-    "giftCardsDeferred": null,
-    "takeoutOrders": null,
-    "takeoutSales": null,
-    "deliveryOrders": null,
-    "deliverySales": null,
-    "dineInOrders": null,
-    "dineInSales": null,
-    "note": "Tuesday data pending; will populate when Toast email arrives. Most recent fully-extracted day was Mon May 18 (Net $2,034.50, Gross $2,107.50, 81 guests, 62 orders, labor 19.3%).",
+    "refunds": 0.0,
+    "cardPayments": 95,
+    "giftCardsDeferred": 0.0,
+    "takeoutOrders": 1,
+    "takeoutSales": 16.0,
+    "deliveryOrders": 0,
+    "deliverySales": 0.0,
+    "dineInOrders": 0,
+    "dineInSales": 0.0,
+    "note": "Tuesday data fully extracted from Toast Group email (Group emails embed the Daily Performance Summary at ~6:15 AM PT). Open orders: 0; auto-clocked out users: none.",
     "previousDay": {
       "date": "Monday, May 18",
       "net": 2034.5,
@@ -123,18 +120,18 @@
     "staff": []
   },
   "googleAds": {
-    "lastUpdated": "Tuesday, May 19",
+    "lastUpdated": "Wednesday, May 20",
     "yesterday": {
-      "date": "May 18, 2026",
-      "spend": 25.99,
-      "clicks": 119,
-      "impressions": 5470,
-      "cpc": 0.22,
-      "ctr": 2.18,
+      "date": "May 19, 2026",
+      "spend": 21.29,
+      "clicks": 103,
+      "impressions": 5866,
+      "cpc": 0.21,
+      "ctr": 1.76,
       "conversions": 0.0,
-      "costChangeVsLastMon": 42.11,
-      "costChangeAbs": 7.7,
-      "note": "Live scrape May 19 7 AM PT from ads.google.com/aw/overview. Cost up +42.11% (+$7.70) vs last Monday May 11."
+      "costChangeVsLastTue": -12.88,
+      "costChangeAbs": -3.15,
+      "note": "Live scrape May 20 7 AM PT from ads.google.com/aw/overview. Cost down -12.88% (-$3.15) vs last Tuesday May 12."
     },
     "campaigns": [
       {
@@ -143,11 +140,11 @@
         "statusNote": "Limited by budget; 1 of 1 asset group limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 119,
-        "impressions": 5470,
-        "ctr": 2.18,
-        "cpc": 0.22,
-        "cost": 25.99
+        "clicks": 103,
+        "impressions": 5866,
+        "ctr": 1.76,
+        "cpc": 0.21,
+        "cost": 21.29
       },
       {
         "name": "Oldest SB Brewery on Tap",
@@ -159,29 +156,29 @@
         "cost": 0.0
       }
     ],
-    "balance": 423.15,
+    "balance": 444.43,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "⚠️ Stale — last live scrape Tue May 19 7 AM PT. Next scrape at 7 AM Wed May 20.",
-    "stale": true,
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "note": "Fresh live scrape Wed May 20 7 AM PT.",
+    "stale": false,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4
   },
   "yelpAds": {
-    "lastUpdated": "Tuesday, May 19",
+    "lastUpdated": "Wednesday, May 20",
     "last30d": {
-      "impressionsFromAds": 55400,
-      "impressionsTotal": 63200,
+      "impressionsFromAds": 53900,
+      "impressionsTotal": 61600,
       "impressionsAdShare": 88,
-      "pageVisitsFromAds": 766,
+      "pageVisitsFromAds": 757,
       "pageVisitsTotal": 1000,
       "pageVisitsAdShare": 74,
       "leadsFromAds": 177,
-      "leadsTotal": 222,
-      "leadsAdShare": 80,
-      "adImpressions": 55400,
+      "leadsTotal": 224,
+      "leadsAdShare": 79,
+      "adImpressions": 53900,
       "adClicks": 684
     },
     "last12mo": {
@@ -193,17 +190,17 @@
       "adShare": 52
     },
     "billingPeriod": {
-      "label": "May 1 - May 18, 2026",
-      "adSpend": 517.07,
-      "avgCpc": 1.16,
-      "avgCpl": 4.1
+      "label": "May 1 - May 19, 2026",
+      "adSpend": 528.22,
+      "avgCpc": 1.15,
+      "avgCpl": 4.03
     },
-    "note": "⚠️ Stale — last live scrape Tue May 19 7 AM PT. Next scrape at 7 AM Wed May 20.",
-    "stale": true
+    "note": "Fresh live scrape Wed May 20 7 AM PT from biz.yelp.com ads dashboard.",
+    "stale": false
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-20",
-    "note": "No TripAdvisor email last 24h — no ad performance report."
+    "note": "No TripAdvisor analytics email in last 24h \u2014 no ad performance report."
   },
   "reservations": {
     "lastUpdated": "2026-05-20",
@@ -263,7 +260,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-20",
-    "note": "Backlog 9 unanswered. Shailvi Wakhlu 5★ Google now 4 days — top priority. La Connolly 5★ now 5 days. Dympna Pettit 5★ now 6 days. Deimos Somied 5★ now 10 days. Lisa O'Brien now 39 days.",
+    "note": "Backlog 9 unanswered. Shailvi Wakhlu 5\u2605 Google now 4 days \u2014 top priority. La Connolly 5\u2605 now 5 days. Dympna Pettit 5\u2605 now 6 days. Deimos Somied 5\u2605 now 10 days. Lisa O'Brien now 39 days.",
     "unanswered": [
       {
         "platform": "Google",
@@ -339,5 +336,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-20T04:00:00-07:00"
+  "lastUpdated": "2026-05-20T07:00:00-07:00"
 }
