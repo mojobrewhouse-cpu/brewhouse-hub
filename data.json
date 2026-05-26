@@ -1,95 +1,103 @@
 {
   "date": "Monday, May 25",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Mon May 25 7 AM run (LIVE). PAT 200 OK. Toast advanced to Sun May 24 (Net $11,306.30 / Gross $12,272.80, +66.6% net vs Sun May 17; Labor 14.4%) - All-Locations summary; detailed per-location DPS (~7:38 AM) not yet in, so daypart/category breakdowns empty this run. Sling advanced to Mon May 25 (1 emp, 5.75 hrs - light Memorial Day schedule, evening bartender only); Isael malformed shift no longer present. Google Ads LIVE (May 24: $24.77, 8,504 impr, 165 clicks, 0 conv). Yelp LIVE (30d: $672.17 spend, 54.6k impr, 751 visits, 190 leads). No TripAdvisor ad email.",
-    "detail": "(1) Toast: advanced to Sun May 24 via All-Locations Daily Performance Summary (arrived 6:18 AM PT): Net $11,306.30 / Gross $12,272.80; +66.6% net vs same-day-last-week (Sun May 17 $6,785.97), gross +73.3%; Labor 14.4% (~$1,628 derived); discounts 7.9% (~$970 derived); refunds $0; void items 16; guests 475 / orders 288. Detailed per-location DPS (daypart/category/revenue-center) not yet in at 7 AM (arrives ~7:38 AM) - those arrays empty this run. (2) Sling: slingToday advanced to Mon May 25 (arrived 7:01 AM): 1 emp, 5.75 hrs, 0 OT, 0 uncovered, 2 off - Katharine Brown (Bartender) 3:30P-9:30P only; unusually light (Memorial Day). Prior-schedule block now Sun May 24 (10 emp, 68.93 hrs). Isael Salvador Narciso malformed 5:14A-5:14A shift is NOT in Monday's schedule. (3) Google Ads LIVE scrape, date range Yesterday May 24: cost $24.77, impr 8,504, clicks 165, CTR 1.94%, CPC $0.15, 0 conv, target CPA $25.06; PMax 'Limited by budget'; 'Oldest SB Brewery on Tap' paused. (4) Yelp LIVE scrape: 30d 54.6k impr (87% share), 751 visits, 190 leads, ad spend $672.17 (May 1-24), CPC $1.10, CPL $3.91. (5) TripAdvisor: no analytics@hm2.tripadvisor.com ad email in 24h. (6) GitHub PAT: 200 OK.",
-    "affected": [],
+    "level": "warn",
+    "headline": "Tue May 26 4 AM run. Mon May 25 Toast DPS NOT yet delivered (normal ~7:38 AM). Today's (Tue 5/26) Sling daily report NOT yet delivered (normal ~7 AM). Latest Toast = Sun May 24 (Net $11,306.30, Gross $12,272.80, Labor 14.4%). Latest Sling = Mon May 25 (1 emp, 5.75 hrs). GitHub PAT 200 OK.",
+    "detail": "(1) Toast: latest DPS = Sun May 24 (arrived Mon 5/25 7:38 AM PT). Mon May 25 DPS not yet emailed at Tue 4:00 AM run - mondayPending=true; will land ~7:38 AM. Sun May 24 was a BIG day: Net $11,306.30 (+67% vs Sun 5/17 $6,754.97), Gross $12,272.80 (+72%), Labor 14.4%, Voids $161, Discounts $966.50. (2) Sling: latest Sling daily = Mon May 25 (arrived Mon 7:02 AM PT) - only 1 employee scheduled, Katharine Brown Bartender 3:30P-9:30P, 5.75 hrs (light Monday). Tue May 26 schedule not yet emailed at 4 AM run - slingToday.pending=true. (3) Google Ads: no live scrape this run; 3 report emails in 48h ('Brewhouse Daily Campaign Report' x2, 'Campaign performance' x1) plus quarterly Terms reminder. No disapprovals/budget alerts. (4) Yelp: no new actionable customer email (skip marketing blasts). Stats carried from May 23 run. (5) TripAdvisor: no new analytics@hm2.tripadvisor.com email in 24h. (6) Reviews: Scott A 5-star from 5/22 still unanswered (now 4 days old); 5 priority Google 5-stars <2 weeks old. (7) GitHub PAT: 200 OK.",
+    "affected": [
+      "toast.mondayPending",
+      "slingToday.pending"
+    ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-25T07:09:01-07:00"
+    "as_of": "2026-05-26T04:05:00-07:00"
   },
   "toast": {
     "date": "Sunday, May 24",
     "pending": false,
-    "mondayPending": false,
+    "mondayPending": true,
     "wedPending": false,
     "thuPending": false,
     "friPending": false,
-    "satPending": false,
-    "sunPending": false,
-    "source": "Toast All-Locations Daily Performance Summary for Sun May 24 (arrived 6:18 AM PT). Detailed per-location DPS (~7:38 AM) not yet in at 7 AM run.",
+    "source": "Toast 229 W Montecito DPS for Sun May 24 (arrived Mon May 25 7:38 AM PT) is the latest. Mon May 25 DPS not yet delivered at Tue 4 AM run (expected ~7:38 AM).",
     "gross": 12272.8,
     "net": 11306.3,
-    "guests": 475,
-    "orders": 288,
-    "checks": 288,
+    "guests": null,
+    "orders": null,
+    "checks": null,
     "guestsDerived": false,
-    "avgPerGuest": 23.8,
-    "avgPerOrder": 39.26,
-    "avgPerCheck": 39.26,
-    "netSDLW": 6785.97,
-    "grossSDLW": 7079.95,
-    "netChangeVsSDLWPct": 66.6,
-    "grossChangeVsSDLWPct": 73.3,
+    "avgPerGuest": null,
+    "avgPerOrder": null,
+    "avgPerCheck": null,
+    "netSDLW": 6754.97,
+    "grossSDLW": 7131.9,
+    "netChangeVsSDLWPct": 67.4,
+    "grossChangeVsSDLWPct": 72.1,
     "laborPct": 14.4,
-    "laborCost": 1628.11,
+    "laborCost": null,
     "discountPct": 7.9,
-    "discounts": 969.55,
-    "voidItems": 16,
-    "voidAmount": null,
+    "discounts": 966.5,
+    "voidItems": null,
+    "voidAmount": 161.0,
     "refunds": 0.0,
-    "dayparts": [],
+    "dayparts": [
+      {
+        "name": "Dinner",
+        "net": 6257.25
+      },
+      {
+        "name": "Lunch",
+        "net": 5990.75
+      }
+    ],
     "categories": [],
-    "revenueCenters": [],
-    "note": "Sun May 24 (latest Toast data, from All-Locations Daily Performance Summary email arrived 6:18 AM PT): Net $11,306.30 / Gross $12,272.80, +66.6% net vs same-day-last-week (Sun May 17 $6,785.97); gross +73.3% vs $7,079.95. Very strong Memorial Day weekend Sunday (475 guests / 288 orders, $23.80/guest, $39.26/order). Labor 14.4% (~$1,628 derived). Discounts 7.9% (~$970 derived). Refunds $0. Void items 16 (amount not given in summary email). NOTE: the detailed per-location DPS (daypart / category / revenue-center breakdowns) had NOT arrived at the 7 AM run (arrives ~7:38 AM), so those arrays are empty this run; headline KPIs are from the All-Locations summary."
+    "revenueCenters": [
+      {
+        "name": "Dining Room",
+        "net": 8157.45,
+        "pct": 66.5
+      }
+    ],
+    "note": "Sun May 24 (latest Toast DPS): Net $11,306.30 / Gross $12,272.80 - HUGE day, +67.4% net vs same Sun last week ($6,754.97). Labor 14.4%, Discounts $966.50 (7.9%), Voids $161.00. Dining Room $8,157.45 (66.5% of net). Guests/orders not cleanly extracted this run - link Toast email for detail. Mon May 25 DPS NOT YET DELIVERED at Tue 4 AM run."
   },
   "sling": {
-    "date": "Sunday, May 24",
-    "count": 10,
-    "hours": 68.93,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 2,
-    "shifts": 10,
-    "note": "Prior schedule (Sun May 24): 10 emp, 68.93 hrs, 0 OT, 0 uncovered, 2 off. Most recent Sling daily report is Mon May 25 in slingToday."
-  },
-  "slingToday": {
     "date": "Monday, May 25",
-    "pending": false,
-    "stale": false,
-    "nextDayPending": true,
     "count": 1,
     "hours": 5.75,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 2,
     "shifts": 1,
-    "note": "Most recent Sling daily report is Mon May 25 (arrived 7:01 AM PT): 1 emp, 5.75 hrs, 0 OT, 0 uncovered, 2 off. Unusually light schedule - Memorial Day Monday holiday (evening bartender only). The malformed Isael Salvador Narciso (Cook) 5:14A-5:14A open shift seen in Sunday's schedule is NOT present in Monday's schedule. Tue May 26 report not yet emailed at the 7 AM run.",
-    "staff": [
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender",
-        "shift": "3:30P - 9:30P"
-      }
-    ]
+    "note": "Mon May 25 Sling daily report (arrived Mon 7:02 AM PT) - light Monday with only 1 scheduled employee: Katharine Brown (Bartender) 3:30P-9:30P. Verify this matches plan - looks unusually thin for a Monday."
+  },
+  "slingToday": {
+    "date": "Tuesday, May 26",
+    "pending": true,
+    "stale": false,
+    "nextDayPending": true,
+    "count": null,
+    "hours": null,
+    "overtime": null,
+    "uncovered": null,
+    "employeesOff": null,
+    "shifts": null,
+    "note": "Tue May 26 daily Sling report NOT YET DELIVERED at 4 AM run (expected ~7:02 AM PT). Will refresh on next run.",
+    "staff": []
   },
   "googleAds": {
-    "lastUpdated": "Monday, May 25",
+    "lastUpdated": "Saturday, May 23",
     "yesterday": {
-      "date": "May 24, 2026",
-      "spend": 24.77,
-      "clicks": 165,
+      "date": "May 22, 2026",
+      "spend": 24.39,
+      "clicks": 117,
       "clicksDerived": false,
-      "impressions": 8504,
-      "cpc": 0.15,
-      "ctr": 1.94,
+      "impressions": 7056,
+      "cpc": 0.21,
+      "ctr": 1.66,
       "conversions": 0.0,
       "avgTargetCpa": 25.06,
       "costChangeVsLastMon": null,
-      "costChangeAbs": 1.47,
-      "imprChangeAbs": 206,
-      "convChangeAbs": -7.0,
-      "note": "LIVE scrape Mon May 25 ~7:03 AM PT (ads.google.com/aw/campaigns, customer 343-687-4835), date range = Yesterday May 24, 2026. Cost $24.77, Impr 8,504, Clicks 165, CTR 1.94%, Avg CPC $0.15, 0 conversions, Avg target CPA $25.06. Yesterday-card deltas vs comparison period: impr +206, conv -7.00, cost +$1.47. PMax 'Limited by budget'."
+      "costChangeAbs": 1.84,
+      "note": "LIVE scrape Sat May 23 7:04 AM PT (ads.google.com/aw/campaigns), data date May 22. Cost $24.39, Impr 7,056, Clicks 117 (read directly from table), CTR 1.66%, Avg CPC $0.21, 0 conversions, Avg target CPA $25.06. Yesterday-card deltas vs comparison period: impr +1,630, conv -11.00, cost +$1.84."
     },
     "campaigns": [
       {
@@ -98,11 +106,11 @@
         "statusNote": "Limited by budget ($23.37/day); all asset groups limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 165,
-        "impressions": 8504,
-        "ctr": 1.94,
-        "cpc": 0.15,
-        "cost": 24.77
+        "clicks": 117,
+        "impressions": 7056,
+        "ctr": 1.66,
+        "cpc": 0.21,
+        "cost": 24.39
       },
       {
         "name": "Oldest SB Brewery on Tap",
@@ -116,75 +124,65 @@
     ],
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Mon May 25 7 AM run is a LIVE dashboard scrape (date range Yesterday = May 24, 2026); metrics above are live. 'Local store visits' campaign Eligible but Limited by budget ($23.37/day); 'Oldest SB Brewery on Tap' Paused. Balance / next payment / payment method carried forward (not re-scraped). Conversions still 0 with 'Reservation Form Submission' tag not yet verified on website.",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "note": "Tue May 26 4 AM run: no live scrape this run (carried from May 23). 3 report emails in 48h (Brewhouse Daily Campaign Report x2, Campaign performance x1) + quarterly Terms reminder - no disapprovals or budget alerts flagged.",
     "stale": false,
     "authError": false,
-    "reportsLast24h": null,
-    "reportsLast48h": null
+    "reportsLast24h": 2,
+    "reportsLast48h": 3
   },
   "yelpAds": {
-    "lastUpdated": "Monday, May 25",
+    "lastUpdated": "Saturday, May 23",
     "last30d": {
-      "impressionsFromAds": 54600,
-      "impressionsTotal": 62700,
+      "impressionsFromAds": 53600,
+      "impressionsTotal": 61400,
       "impressionsAdShare": 87,
-      "pageVisitsFromAds": 751,
-      "pageVisitsTotal": 1100,
-      "pageVisitsAdShare": 70,
-      "leadsFromAds": 190,
-      "leadsTotal": 239,
+      "pageVisitsFromAds": 736,
+      "pageVisitsTotal": 1000,
+      "pageVisitsAdShare": 73,
+      "leadsFromAds": 178,
+      "leadsTotal": 224,
       "leadsAdShare": 79,
-      "adImpressions": 54600,
-      "adClicks": 680
+      "adImpressions": 53600,
+      "adClicks": 646
     },
     "last12mo": {
-      "pageVisits": 8000,
+      "pageVisits": 7900,
       "leads": 1600,
-      "leadsAds": 848,
-      "leadsOrganic": 777,
-      "leadsTotal": 1625,
+      "leadsAds": 840,
+      "leadsOrganic": 773,
+      "leadsTotal": 1613,
       "adShare": 52
     },
     "billingPeriod": {
-      "label": "May 1 - May 24, 2026",
-      "adSpend": 672.17,
-      "avgCpc": 1.1,
-      "avgCpl": 3.91
+      "label": "May 1 - May 22, 2026",
+      "adSpend": 594.95,
+      "avgCpc": 1.14,
+      "avgCpl": 3.99
     },
-    "note": "LIVE scrape Mon May 25 ~7:05 AM PT (biz.yelp.com ads dashboard). Last 30d: 54.6k impr from ads (87% of 62.7k total), 751 page visits (70% of 1.1k total), 190 leads (79% of 239 total); ad clicks 680. Billing period May 1-24, 2026: ad spend $672.17, avg CPC $1.10, avg CPL $3.91. No 'bonus budget remaining' figure is surfaced on the Ad performance dashboard view. Last-12-month block carried forward from prior run (not re-captured).",
+    "note": "Sat May 23 7 AM LIVE scrape (biz.yelp.com). Last 30d: 53.6k ad impr (87% share), 736 page visits from ads (73%), 178 leads from ads (79%), 646 ad clicks. Billing May 1-22: $594.95 spend, $1.14 avg CPC, $3.99 avg CPL. 12mo leads 840 ads / 773 organic (52% ad share). Bonus budget remaining not surfaced on this dashboard.",
     "stale": false
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-25",
+    "lastUpdated": "2026-05-26",
     "adEmailPresent": false,
-    "note": "No new TripAdvisor ad-analytics email in last 24h (checked hm2.tripadvisor.com / analytics@hm2.tripadvisor.com). Re-checked Mon May 25 7 AM run."
+    "note": "No analytics@hm2.tripadvisor.com email in last 24h."
   },
   "reservations": {
-    "lastUpdated": "2026-05-26",
+    "lastUpdated": "2026-05-24",
     "source": "All Sources",
     "today": {
-      "date": "Tue, May 26",
+      "date": "Sun, May 24",
       "totalGuests": 0,
       "bookings": []
     },
     "tomorrow": {
-      "date": "Wed, May 27",
+      "date": "Mon, May 25",
       "totalGuests": 0,
       "bookings": []
     },
     "upcoming": [
-      {
-        "time": "11:30 AM",
-        "name": "Erin Simpson",
-        "guests": 4,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(619) 994-6932",
-        "notes": "We want to watch the U.S. World Cup game that starts at noon. If that is not possible outside, then we would prefer an inside table. Thank you!",
-        "date": "Fri, Jun 12"
-      },
       {
         "time": "4:00 PM",
         "name": "Scott Whelan",
@@ -234,12 +232,22 @@
         "phone": "(303) 589-3195",
         "notes": "",
         "date": "Fri, Jun 5"
+      },
+      {
+        "time": "7:30 PM",
+        "name": "Ryan Sweigart",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(310) 880-1631",
+        "notes": "",
+        "date": "Tue, May 26"
       }
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-25",
-    "note": "Priority <1 week 5-star (Google): Scott A (3d) and Shailvi Wakhlu (9d) - reply on Google Business Profile. Older still-open 5-star: La Connolly (10d), Dympna Pettit (11d), Deimos Somied (15d). Scott A is the only review notification that arrived by email in the last 24h; rest carried from prior runs.",
+    "lastUpdated": "2026-05-26",
+    "note": "Priority <1 week 5-star (Google): Scott A (4d, still unanswered) - top reply target. Older 5-star still open: Shailvi Wakhlu (10d), La Connolly (11d), Dympna Pettit (12d), Deimos Somied (16d). Reply on Google Business Profile.",
     "unanswered": [
       {
         "platform": "Google",
@@ -247,7 +255,7 @@
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 3
+        "ageDays": 4
       },
       {
         "platform": "Google",
@@ -255,7 +263,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 9
+        "ageDays": 10
       },
       {
         "platform": "Google",
@@ -263,7 +271,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 10
+        "ageDays": 11
       },
       {
         "platform": "Google",
@@ -271,7 +279,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 11
+        "ageDays": 12
       },
       {
         "platform": "Google",
@@ -279,7 +287,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 15
+        "ageDays": 16
       },
       {
         "platform": "Google",
@@ -287,7 +295,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 31
+        "ageDays": 32
       },
       {
         "platform": "TripAdvisor",
@@ -295,7 +303,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 33
+        "ageDays": 34
       },
       {
         "platform": "Google",
@@ -303,7 +311,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 36
+        "ageDays": 37
       },
       {
         "platform": "Google",
@@ -311,7 +319,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 40
+        "ageDays": 41
       },
       {
         "platform": "Google",
@@ -319,9 +327,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 44
+        "ageDays": 45
       }
     ]
   },
-  "lastUpdated": "2026-05-25T07:09:01-07:00"
+  "lastUpdated": "2026-05-26T04:05:00-07:00"
 }
