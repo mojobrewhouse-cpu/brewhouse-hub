@@ -161,8 +161,8 @@
     ],
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
     "note": "Tue May 26 7 AM LIVE scrape complete. Spend down $8 vs comparison; conversions still 0 (-14). Top action item: verify the Reservation Form Submission conversion tag is firing on the live site, otherwise daily spend is unmeasured.",
     "stale": false,
     "authError": false,
@@ -207,19 +207,29 @@
     "note": "No analytics@hm2.tripadvisor.com email in last 2 days."
   },
   "reservations": {
-    "lastUpdated": "2026-05-24",
+    "lastUpdated": "2026-05-26",
     "source": "All Sources",
     "today": {
-      "date": "Sun, May 24",
+      "date": "Tue, May 26",
       "totalGuests": 0,
       "bookings": []
     },
     "tomorrow": {
-      "date": "Mon, May 25",
+      "date": "Wed, May 27",
       "totalGuests": 0,
       "bookings": []
     },
     "upcoming": [
+      {
+        "time": "11:30 AM",
+        "name": "Erin Simpson",
+        "guests": 4,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(619) 994-6932",
+        "notes": "We want to watch the U.S. World Cup game that starts at noon. If that is not possible outside, then we would prefer an inside table. Thank you!",
+        "date": "Fri, Jun 12"
+      },
       {
         "time": "4:00 PM",
         "name": "Scott Whelan",
@@ -269,16 +279,6 @@
         "phone": "(303) 589-3195",
         "notes": "",
         "date": "Fri, Jun 5"
-      },
-      {
-        "time": "7:30 PM",
-        "name": "Ryan Sweigart",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(310) 880-1631",
-        "notes": "",
-        "date": "Tue, May 26"
       }
     ]
   },
