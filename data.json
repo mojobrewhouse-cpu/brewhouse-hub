@@ -1,63 +1,64 @@
 {
-  "date": "Monday, May 25",
+  "date": "Tuesday, May 26",
   "systemStatus": {
-    "level": "warn",
-    "headline": "Tue May 26 4 AM run. Mon May 25 Toast DPS NOT yet delivered (normal ~7:38 AM). Today's (Tue 5/26) Sling daily report NOT yet delivered (normal ~7 AM). Latest Toast = Sun May 24 (Net $11,306.30, Gross $12,272.80, Labor 14.4%). Latest Sling = Mon May 25 (1 emp, 5.75 hrs). GitHub PAT 200 OK.",
-    "detail": "(1) Toast: latest DPS = Sun May 24 (arrived Mon 5/25 7:38 AM PT). Mon May 25 DPS not yet emailed at Tue 4:00 AM run - mondayPending=true; will land ~7:38 AM. Sun May 24 was a BIG day: Net $11,306.30 (+67% vs Sun 5/17 $6,754.97), Gross $12,272.80 (+72%), Labor 14.4%, Voids $161, Discounts $966.50. (2) Sling: latest Sling daily = Mon May 25 (arrived Mon 7:02 AM PT) - only 1 employee scheduled, Katharine Brown Bartender 3:30P-9:30P, 5.75 hrs (light Monday). Tue May 26 schedule not yet emailed at 4 AM run - slingToday.pending=true. (3) Google Ads: no live scrape this run; 3 report emails in 48h ('Brewhouse Daily Campaign Report' x2, 'Campaign performance' x1) plus quarterly Terms reminder. No disapprovals/budget alerts. (4) Yelp: no new actionable customer email (skip marketing blasts). Stats carried from May 23 run. (5) TripAdvisor: no new analytics@hm2.tripadvisor.com email in 24h. (6) Reviews: Scott A 5-star from 5/22 still unanswered (now 4 days old); 5 priority Google 5-stars <2 weeks old. (7) GitHub PAT: 200 OK.",
-    "affected": [
-      "toast.mondayPending",
-      "slingToday.pending"
-    ],
+    "level": "ok",
+    "headline": "Tue May 26 7 AM run COMPLETE. Mon May 25 Toast = Net $2,074 / Gross $2,226 (sharp Mon drop from Sun's $11,306). Sling Tue 5/26 = 7 emp / 32.91 hrs (healthy). Google Ads + Yelp LIVE scrapes OK. GitHub PAT 200 OK.",
+    "detail": "(1) Toast: Mon May 25 DPS captured via group-rollup email (arrived 6:15 AM PT; dedicated 229 W Montecito DPS expected ~7:38 AM). Net $2,074.00 / Gross $2,226.00 - SHARP Mon drop from Sun May 24 ($11,306). 53 orders / 95 guests / $21.83 per guest / $39.13 per order, Labor 18.6% (healthy), Discounts 6.8%, 1 void, $0 refunds, 43 card payments. (2) Sling: Tue May 26 daily report arrived 7:01 AM PT - 7 employees / 32.91 hrs / 7 shifts / 0 uncovered / 0 OT / 2 off. Staff: Isael (Cook, 4:59A-4:59A malformed open shift - verify), Tony Rincon (Bar AM), Christine Vargas (Server lunch), Andrew Turner (Bar PM), Augustine Arroyo (Server PM), Noel Nunez (Chef PM), Bri Kelley (Server PM). (3) Google Ads: LIVE scrape OK - May 25 spend $16.74 (-$8.02 vs comparison), 6,939 impr (-1,565), 149 clicks, CTR 2.15%, $0.11 CPC, 0 conversions (-14.00). Conv tag remains UNVERIFIED - top action item. (4) Yelp Ads: LIVE scrape OK - last 30d 52.8k ad impr / 765 page visits / 186 leads. Billing May 1-25 $684.14 spend, $1.09 CPC, $3.84 CPL. (5) TripAdvisor: no email in last 2d. (6) Reviews: Scott A 5-star (4d old, still unanswered) - top reply target. (7) GitHub PAT: 200 OK on read.",
+    "affected": [],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-26T04:05:00-07:00"
+    "as_of": "2026-05-26T07:10:00-07:00"
   },
   "toast": {
-    "date": "Sunday, May 24",
+    "date": "Monday, May 25",
     "pending": false,
-    "mondayPending": true,
+    "mondayPending": false,
     "wedPending": false,
     "thuPending": false,
     "friPending": false,
-    "source": "Toast 229 W Montecito DPS for Sun May 24 (arrived Mon May 25 7:38 AM PT) is the latest. Mon May 25 DPS not yet delivered at Tue 4 AM run (expected ~7:38 AM).",
-    "gross": 12272.8,
-    "net": 11306.3,
-    "guests": null,
-    "orders": null,
+    "source": "Toast 'The Brewhouse Santa Barbara Group' DPS for Mon May 25 (arrived Tue May 26 6:15 AM PT, group-rollup email). Dedicated 229 W Montecito DPS not yet emailed at 7 AM run (expected ~7:38 AM); group email contains identical numbers since only one location.",
+    "gross": 2226.0,
+    "net": 2074.0,
+    "guests": 95,
+    "orders": 53,
     "checks": null,
     "guestsDerived": false,
-    "avgPerGuest": null,
-    "avgPerOrder": null,
+    "avgPerGuest": 21.83,
+    "avgPerOrder": 39.13,
     "avgPerCheck": null,
-    "netSDLW": 6754.97,
-    "grossSDLW": 7131.9,
-    "netChangeVsSDLWPct": 67.4,
-    "grossChangeVsSDLWPct": 72.1,
-    "laborPct": 14.4,
+    "netSDLW": null,
+    "grossSDLW": null,
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null,
+    "laborPct": 18.6,
     "laborCost": null,
-    "discountPct": 7.9,
-    "discounts": 966.5,
-    "voidItems": null,
-    "voidAmount": 161.0,
+    "discountPct": 6.8,
+    "discounts": null,
+    "voidItems": 1,
+    "voidAmount": null,
     "refunds": 0.0,
-    "dayparts": [
-      {
-        "name": "Dinner",
-        "net": 6257.25
-      },
-      {
-        "name": "Lunch",
-        "net": 5990.75
-      }
-    ],
+    "dayparts": [],
     "categories": [],
     "revenueCenters": [
       {
-        "name": "Dining Room",
-        "net": 8157.45,
-        "pct": 66.5
+        "name": "Takeout",
+        "orders": 1,
+        "sales": 20.0
+      },
+      {
+        "name": "Delivery",
+        "orders": 0,
+        "sales": 0.0
+      },
+      {
+        "name": "Dine-In (Order Type table)",
+        "orders": 0,
+        "sales": 0.0
       }
     ],
-    "note": "Sun May 24 (latest Toast DPS): Net $11,306.30 / Gross $12,272.80 - HUGE day, +67.4% net vs same Sun last week ($6,754.97). Labor 14.4%, Discounts $966.50 (7.9%), Voids $161.00. Dining Room $8,157.45 (66.5% of net). Guests/orders not cleanly extracted this run - link Toast email for detail. Mon May 25 DPS NOT YET DELIVERED at Tue 4 AM run."
+    "cardPayments": 43,
+    "openOrders": 0,
+    "autoClockedOut": 0,
+    "note": "Mon May 25 DPS (from group-rollup email arrived Tue 6:15 AM PT): Net $2,074.00 / Gross $2,226.00 - SHARP drop from Sun May 24's huge $11,306 day, also light for a Monday. 53 orders / 95 guests / $39.13 per order / $21.83 per guest. Labor 18.6% (healthy), Discounts 6.8%, 1 void item, $0 refunds. Order Type breakdown: 1 Takeout ($20), 0 Delivery, 0 Dine-In counted in Order Type table (dine-in revenue rolled into overall Breakdown). 43 card payments, 0 open orders, 0 auto-clocked-out. Dedicated 229 W Montecito DPS expected ~7:38 AM PT will refresh in next run."
   },
   "sling": {
     "date": "Monday, May 25",
@@ -71,33 +72,69 @@
   },
   "slingToday": {
     "date": "Tuesday, May 26",
-    "pending": true,
+    "pending": false,
     "stale": false,
-    "nextDayPending": true,
-    "count": null,
-    "hours": null,
-    "overtime": null,
-    "uncovered": null,
-    "employeesOff": null,
-    "shifts": null,
-    "note": "Tue May 26 daily Sling report NOT YET DELIVERED at 4 AM run (expected ~7:02 AM PT). Will refresh on next run.",
-    "staff": []
+    "nextDayPending": false,
+    "count": 7,
+    "hours": 32.91,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 2,
+    "shifts": 7,
+    "note": "Tue May 26 Sling daily report (arrived Tue 7:01 AM PT): 7 employees scheduled, 32.91 hours, 7 shifts, 0 uncovered, 0 OT, 2 employees off. Healthy Tuesday staffing. Note: Isael Salvador Narciso shows 4:59A-4:59A open shift again - verify in Sling.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:59A-4:59A"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Server",
+        "time": "12:00P-2:30P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P-10:00P"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:00P-10:15P"
+      }
+    ]
   },
   "googleAds": {
-    "lastUpdated": "Saturday, May 23",
+    "lastUpdated": "Tuesday, May 26",
     "yesterday": {
-      "date": "May 22, 2026",
-      "spend": 24.39,
-      "clicks": 117,
+      "date": "May 25, 2026",
+      "spend": 16.74,
+      "clicks": 149,
       "clicksDerived": false,
-      "impressions": 7056,
-      "cpc": 0.21,
-      "ctr": 1.66,
+      "impressions": 6939,
+      "cpc": 0.11,
+      "ctr": 2.15,
       "conversions": 0.0,
       "avgTargetCpa": 25.06,
       "costChangeVsLastMon": null,
-      "costChangeAbs": 1.84,
-      "note": "LIVE scrape Sat May 23 7:04 AM PT (ads.google.com/aw/campaigns), data date May 22. Cost $24.39, Impr 7,056, Clicks 117 (read directly from table), CTR 1.66%, Avg CPC $0.21, 0 conversions, Avg target CPA $25.06. Yesterday-card deltas vs comparison period: impr +1,630, conv -11.00, cost +$1.84."
+      "costChangeAbs": -8.02,
+      "note": "LIVE scrape Tue May 26 7:05 AM PT (ads.google.com/aw/campaigns), data date May 25. Cost $16.74 (-$8.02 vs comparison), Impr 6,939 (-1,565), Clicks 149, CTR 2.15%, Avg CPC $0.11, 0 conversions (-14.00), Avg target CPA $25.06. ZERO conversions again - conversion tag still shows 'Reservation Form Submission - not yet verified on website'. Verify tag is firing on site."
     },
     "campaigns": [
       {
@@ -106,11 +143,11 @@
         "statusNote": "Limited by budget ($23.37/day); all asset groups limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 117,
-        "impressions": 7056,
-        "ctr": 1.66,
-        "cpc": 0.21,
-        "cost": 24.39
+        "clicks": 149,
+        "impressions": 6939,
+        "ctr": 2.15,
+        "cpc": 0.11,
+        "cost": 16.74
       },
       {
         "name": "Oldest SB Brewery on Tap",
@@ -126,48 +163,48 @@
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Tue May 26 4 AM run: no live scrape this run (carried from May 23). 3 report emails in 48h (Brewhouse Daily Campaign Report x2, Campaign performance x1) + quarterly Terms reminder - no disapprovals or budget alerts flagged.",
+    "note": "Tue May 26 7 AM LIVE scrape complete. Spend down $8 vs comparison; conversions still 0 (-14). Top action item: verify the Reservation Form Submission conversion tag is firing on the live site, otherwise daily spend is unmeasured.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 3
   },
   "yelpAds": {
-    "lastUpdated": "Saturday, May 23",
+    "lastUpdated": "Tuesday, May 26",
     "last30d": {
-      "impressionsFromAds": 53600,
-      "impressionsTotal": 61400,
-      "impressionsAdShare": 87,
-      "pageVisitsFromAds": 736,
+      "impressionsFromAds": 52800,
+      "impressionsTotal": 61200,
+      "impressionsAdShare": 86,
+      "pageVisitsFromAds": 765,
       "pageVisitsTotal": 1000,
       "pageVisitsAdShare": 73,
-      "leadsFromAds": 178,
-      "leadsTotal": 224,
-      "leadsAdShare": 79,
-      "adImpressions": 53600,
-      "adClicks": 646
+      "leadsFromAds": 186,
+      "leadsTotal": 241,
+      "leadsAdShare": 77,
+      "adImpressions": 52800,
+      "adClicks": 662
     },
     "last12mo": {
-      "pageVisits": 7900,
-      "leads": 1600,
-      "leadsAds": 840,
-      "leadsOrganic": 773,
-      "leadsTotal": 1613,
-      "adShare": 52
+      "pageVisits": 8100,
+      "leads": 1700,
+      "leadsAds": 869,
+      "leadsOrganic": 785,
+      "leadsTotal": 1654,
+      "adShare": 53
     },
     "billingPeriod": {
-      "label": "May 1 - May 22, 2026",
-      "adSpend": 594.95,
-      "avgCpc": 1.14,
-      "avgCpl": 3.99
+      "label": "May 1 - May 25, 2026",
+      "adSpend": 684.14,
+      "avgCpc": 1.09,
+      "avgCpl": 3.84
     },
-    "note": "Sat May 23 7 AM LIVE scrape (biz.yelp.com). Last 30d: 53.6k ad impr (87% share), 736 page visits from ads (73%), 178 leads from ads (79%), 646 ad clicks. Billing May 1-22: $594.95 spend, $1.14 avg CPC, $3.99 avg CPL. 12mo leads 840 ads / 773 organic (52% ad share). Bonus budget remaining not surfaced on this dashboard.",
+    "note": "Tue May 26 7:07 AM LIVE scrape (biz.yelp.com). Last 30d: 52.8k ad impr (86% share), 765 page visits from ads (73%), 186 leads from ads (77%), 662 ad clicks. Billing May 1-25: $684.14 spend (+$89 vs May 1-22 last scrape), $1.09 avg CPC, $3.84 avg CPL. 12mo ad-vs-organic: 869 ads / 785 organic = 1,654 leads (53% ad share, up from 52%). Bonus budget remaining not surfaced on this dashboard.",
     "stale": false
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-26",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com email in last 24h."
+    "note": "No analytics@hm2.tripadvisor.com email in last 2 days."
   },
   "reservations": {
     "lastUpdated": "2026-05-24",
@@ -247,7 +284,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-26",
-    "note": "Priority <1 week 5-star (Google): Scott A (4d, still unanswered) - top reply target. Older 5-star still open: Shailvi Wakhlu (10d), La Connolly (11d), Dympna Pettit (12d), Deimos Somied (16d). Reply on Google Business Profile.",
+    "note": "Priority <2 week 5-star (Google): Scott A (4d, still unanswered) - top reply target. Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied. Reply on Google Business Profile.",
     "unanswered": [
       {
         "platform": "Google",
@@ -331,5 +368,5 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-26T04:05:00-07:00"
+  "lastUpdated": "2026-05-26T07:10:00-07:00"
 }
