@@ -1,123 +1,111 @@
 {
-  "date": "Tuesday, May 26",
+  "date": "Wednesday, May 27",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Tue May 26 7 AM run COMPLETE. Mon May 25 Toast = Net $2,074 / Gross $2,226 (sharp Mon drop from Sun's $11,306). Sling Tue 5/26 = 7 emp / 32.91 hrs (healthy). Google Ads + Yelp LIVE scrapes OK. GitHub PAT 200 OK.",
-    "detail": "(1) Toast: Mon May 25 DPS captured via group-rollup email (arrived 6:15 AM PT; dedicated 229 W Montecito DPS expected ~7:38 AM). Net $2,074.00 / Gross $2,226.00 - SHARP Mon drop from Sun May 24 ($11,306). 53 orders / 95 guests / $21.83 per guest / $39.13 per order, Labor 18.6% (healthy), Discounts 6.8%, 1 void, $0 refunds, 43 card payments. (2) Sling: Tue May 26 daily report arrived 7:01 AM PT - 7 employees / 32.91 hrs / 7 shifts / 0 uncovered / 0 OT / 2 off. Staff: Isael (Cook, 4:59A-4:59A malformed open shift - verify), Tony Rincon (Bar AM), Christine Vargas (Server lunch), Andrew Turner (Bar PM), Augustine Arroyo (Server PM), Noel Nunez (Chef PM), Bri Kelley (Server PM). (3) Google Ads: LIVE scrape OK - May 25 spend $16.74 (-$8.02 vs comparison), 6,939 impr (-1,565), 149 clicks, CTR 2.15%, $0.11 CPC, 0 conversions (-14.00). Conv tag remains UNVERIFIED - top action item. (4) Yelp Ads: LIVE scrape OK - last 30d 52.8k ad impr / 765 page visits / 186 leads. Billing May 1-25 $684.14 spend, $1.09 CPC, $3.84 CPL. (5) TripAdvisor: no email in last 2d. (6) Reviews: Scott A 5-star (4d old, still unanswered) - top reply target. (7) GitHub PAT: 200 OK on read.",
-    "affected": [],
+    "level": "warn",
+    "headline": "Wed May 27 4 AM run COMPLETE. Tue May 26 Toast NOT YET EMAILED (expected ~6-7 AM PT). Wed May 27 Sling NOT YET EMAILED (expected ~7 AM PT). Most recent: Mon May 25 Toast (Net $2,074 / Gross $2,226) + Tue May 26 Sling (7 emp / 32.91 hrs). NEW 5-star review overnight from Graham Fischer-Corners.",
+    "detail": "(1) Toast: NO new Toast DPS in inbox for Tue May 26 yet at 4 AM PT — usual arrival is 6–7 AM. Last available is Mon May 25 (Net $2,074 / Gross $2,226, 53 orders, 95 guests, 18.6% labor). Next run will refresh. (2) Sling: NO Wed May 27 daily report yet at 4 AM (usual arrival ~7 AM). Last available is Tue May 26 (7 emp / 32.91 hrs / 0 uncovered / 0 OT). Isael 4:59A-4:59A open shift still flagged for verification. (3) Reviews: NEW Graham Fischer-Corners 5-star arrived Tue May 26 11:06 PM PT — content praises smash burgers, wings, and steak bite appetizer. Scott A 5-star (5d) still unanswered. (4) Google Ads: no new emails in last 24h (only the standard ads-account daily reports; no disapprovals or budget alerts surfaced). (5) Yelp: no new actionable emails in last 24h. (6) TripAdvisor: no analytics email in last 2d. (7) GitHub PAT: 200 OK on read.",
+    "affected": ["toast.may26.pending", "sling.may27.pending"],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-26T07:10:00-07:00"
+    "as_of": "2026-05-27T04:00:00-07:00"
   },
   "toast": {
-    "date": "Monday, May 25",
-    "pending": false,
+    "date": "Tuesday, May 26",
+    "pending": true,
     "mondayPending": false,
-    "wedPending": false,
+    "wedPending": true,
     "thuPending": false,
     "friPending": false,
-    "source": "Toast 'The Brewhouse Santa Barbara Group' DPS for Mon May 25 (arrived Tue May 26 6:15 AM PT, group-rollup email). Dedicated 229 W Montecito DPS not yet emailed at 7 AM run (expected ~7:38 AM); group email contains identical numbers since only one location.",
-    "gross": 2226.0,
-    "net": 2074.0,
-    "guests": 95,
-    "orders": 53,
+    "source": "Tue May 26 Toast DPS not yet emailed at 4 AM PT run (expected ~6-7 AM PT). Showing most recent known day (Mon May 25) below.",
+    "gross": null,
+    "net": null,
+    "guests": null,
+    "orders": null,
     "checks": null,
     "guestsDerived": false,
-    "avgPerGuest": 21.83,
-    "avgPerOrder": 39.13,
+    "avgPerGuest": null,
+    "avgPerOrder": null,
     "avgPerCheck": null,
     "netSDLW": null,
     "grossSDLW": null,
     "netChangeVsSDLWPct": null,
     "grossChangeVsSDLWPct": null,
-    "laborPct": 18.6,
+    "laborPct": null,
     "laborCost": null,
-    "discountPct": 6.8,
+    "discountPct": null,
     "discounts": null,
-    "voidItems": 1,
+    "voidItems": null,
     "voidAmount": null,
-    "refunds": 0.0,
+    "refunds": null,
     "dayparts": [],
     "categories": [],
-    "revenueCenters": [
-      {
-        "name": "Takeout",
-        "orders": 1,
-        "sales": 20.0
-      },
-      {
-        "name": "Delivery",
-        "orders": 0,
-        "sales": 0.0
-      },
-      {
-        "name": "Dine-In (Order Type table)",
-        "orders": 0,
-        "sales": 0.0
-      }
-    ],
+    "revenueCenters": [],
+    "cardPayments": null,
+    "openOrders": null,
+    "autoClockedOut": null,
+    "note": "Tue May 26 Toast DPS not yet in inbox at 4 AM PT — will refresh in next run (Toast normally lands 6–7 AM PT). Most recent confirmed day is Mon May 25: Net $2,074 / Gross $2,226 / 95 guests / 53 orders / Labor 18.6%."
+  },
+  "toastLastKnown": {
+    "date": "Monday, May 25",
+    "gross": 2226.0,
+    "net": 2074.0,
+    "tax": 152.0,
+    "guests": 95,
+    "orders": 53,
+    "avgPerGuest": 21.83,
+    "avgPerOrder": 39.13,
+    "laborPct": 18.6,
+    "laborCost": 384.99,
+    "discountPct": 6.8,
+    "voidItems": 1,
+    "voidAmount": 10.0,
+    "refunds": 0.0,
     "cardPayments": 43,
-    "openOrders": 0,
-    "autoClockedOut": 0,
-    "note": "Mon May 25 DPS (from group-rollup email arrived Tue 6:15 AM PT): Net $2,074.00 / Gross $2,226.00 - SHARP drop from Sun May 24's huge $11,306 day, also light for a Monday. 53 orders / 95 guests / $39.13 per order / $21.83 per guest. Labor 18.6% (healthy), Discounts 6.8%, 1 void item, $0 refunds. Order Type breakdown: 1 Takeout ($20), 0 Delivery, 0 Dine-In counted in Order Type table (dine-in revenue rolled into overall Breakdown). 43 card payments, 0 open orders, 0 auto-clocked-out. Dedicated 229 W Montecito DPS expected ~7:38 AM PT will refresh in next run."
+    "sdlwDate": "Monday, May 18",
+    "sdlwNet": 2226.0,
+    "sdlwGross": 2294.12,
+    "netChangeVsSDLWPct": -6.8,
+    "grossChangeVsSDLWPct": -3.0
   },
   "sling": {
-    "date": "Monday, May 25",
-    "count": 1,
-    "hours": 5.75,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 2,
-    "shifts": 1,
-    "note": "Mon May 25 Sling daily report (arrived Mon 7:02 AM PT) - light Monday with only 1 scheduled employee: Katharine Brown (Bartender) 3:30P-9:30P. Verify this matches plan - looks unusually thin for a Monday."
-  },
-  "slingToday": {
     "date": "Tuesday, May 26",
-    "pending": false,
-    "stale": false,
-    "nextDayPending": false,
     "count": 7,
     "hours": 32.91,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 2,
     "shifts": 7,
-    "note": "Tue May 26 Sling daily report (arrived Tue 7:01 AM PT): 7 employees scheduled, 32.91 hours, 7 shifts, 0 uncovered, 0 OT, 2 employees off. Healthy Tuesday staffing. Note: Isael Salvador Narciso shows 4:59A-4:59A open shift again - verify in Sling.",
+    "note": "Tue May 26 Sling daily report (arrived Tue 7:01 AM PT): 7 employees / 32.91 hrs / 7 shifts / 0 uncovered / 0 OT / 2 off. Most recent confirmed day before today's Sling lands."
+  },
+  "slingToday": {
+    "date": "Wednesday, May 27",
+    "pending": true,
+    "stale": false,
+    "nextDayPending": false,
+    "count": null,
+    "hours": null,
+    "overtime": null,
+    "uncovered": null,
+    "employeesOff": null,
+    "shifts": null,
+    "note": "Wed May 27 Sling daily report not yet emailed at 4 AM PT (usual arrival ~7 AM PT). Most recent prior day (Tue May 26) shown in 'sling' block above. Next run will refresh.",
+    "staff": []
+  },
+  "slingLastKnown": {
+    "date": "Tuesday, May 26",
+    "count": 7,
+    "hours": 32.91,
+    "shifts": 7,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 2,
     "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:59A-4:59A"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:30P"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Server",
-        "time": "12:00P-2:30P"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "3:30P-10:30P"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server",
-        "time": "3:30P-10:00P"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "5:00P-10:15P"
-      }
+      {"name": "Isael Salvador Narciso", "role": "Cook", "time": "4:59A-4:59A"},
+      {"name": "Tony Rincon", "role": "Bartender", "time": "10:15A-4:30P"},
+      {"name": "Christine Vargas", "role": "Server", "time": "12:00P-2:30P"},
+      {"name": "Andrew Turner", "role": "Bartender", "time": "3:30P-10:30P"},
+      {"name": "Augustine Arroyo", "role": "Server", "time": "3:30P-10:00P"},
+      {"name": "Noel Nunez", "role": "Chef", "time": "4:00P-10:30P"},
+      {"name": "Bri Kelley", "role": "Server", "time": "5:00P-10:15P"}
     ]
   },
   "googleAds": {
@@ -134,7 +122,7 @@
       "avgTargetCpa": 25.06,
       "costChangeVsLastMon": null,
       "costChangeAbs": -8.02,
-      "note": "LIVE scrape Tue May 26 7:05 AM PT (ads.google.com/aw/campaigns), data date May 25. Cost $16.74 (-$8.02 vs comparison), Impr 6,939 (-1,565), Clicks 149, CTR 2.15%, Avg CPC $0.11, 0 conversions (-14.00), Avg target CPA $25.06. ZERO conversions again - conversion tag still shows 'Reservation Form Submission - not yet verified on website'. Verify tag is firing on site."
+      "note": "No fresh live scrape on 4 AM run — keeping Tue May 26 7:05 AM PT scrape for May 25 data. Cost $16.74, 6,939 impr, 149 clicks, 2.15% CTR, $0.11 CPC, 0 conversions. Conv tag still UNVERIFIED — top action."
     },
     "campaigns": [
       {
@@ -163,11 +151,11 @@
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex •••• 1004",
     "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Tue May 26 7 AM LIVE scrape complete. Spend down $8 vs comparison; conversions still 0 (-14). Top action item: verify the Reservation Form Submission conversion tag is firing on the live site, otherwise daily spend is unmeasured.",
+    "note": "Wed May 27 4 AM run: 0 new Google Ads notifications since last refresh — no disapprovals, no budget alerts. Conversion tag still unverified — same top action.",
     "stale": false,
     "authError": false,
-    "reportsLast24h": 2,
-    "reportsLast48h": 3
+    "reportsLast24h": 0,
+    "reportsLast48h": 2
   },
   "yelpAds": {
     "lastUpdated": "Tuesday, May 26",
@@ -198,11 +186,11 @@
       "avgCpc": 1.09,
       "avgCpl": 3.84
     },
-    "note": "Tue May 26 7:07 AM LIVE scrape (biz.yelp.com). Last 30d: 52.8k ad impr (86% share), 765 page visits from ads (73%), 186 leads from ads (77%), 662 ad clicks. Billing May 1-25: $684.14 spend (+$89 vs May 1-22 last scrape), $1.09 avg CPC, $3.84 avg CPL. 12mo ad-vs-organic: 869 ads / 785 organic = 1,654 leads (53% ad share, up from 52%). Bonus budget remaining not surfaced on this dashboard.",
+    "note": "No new Yelp emails in last 24h. Carrying forward Tue May 26 7:07 AM scrape.",
     "stale": false
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-26",
+    "lastUpdated": "2026-05-27",
     "adEmailPresent": false,
     "note": "No analytics@hm2.tripadvisor.com email in last 2 days."
   },
@@ -221,24 +209,14 @@
     },
     "upcoming": [
       {
-        "time": "11:30 AM",
-        "name": "Erin Simpson",
+        "time": "6:30 PM",
+        "name": "Alex KING",
         "guests": 4,
         "status": "confirmed",
         "source": "SpotHopper",
-        "phone": "(619) 994-6932",
-        "notes": "We want to watch the U.S. World Cup game that starts at noon. If that is not possible outside, then we would prefer an inside table. Thank you!",
-        "date": "Fri, Jun 12"
-      },
-      {
-        "time": "4:00 PM",
-        "name": "Scott Whelan",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(206) 931-8974",
+        "phone": "(626) 233-3531",
         "notes": "",
-        "date": "Wed, Jun 10"
+        "date": "Sat, May 30"
       },
       {
         "time": "6:00 PM",
@@ -251,14 +229,34 @@
         "date": "Thu, Jun 4"
       },
       {
-        "time": "6:30 PM",
-        "name": "Alex KING",
+        "time": "7:15 PM",
+        "name": "Whitney Hodack",
+        "guests": 15,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(303) 589-3195",
+        "notes": "",
+        "date": "Fri, Jun 5"
+      },
+      {
+        "time": "4:00 PM",
+        "name": "Scott Whelan",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(206) 931-8974",
+        "notes": "",
+        "date": "Wed, Jun 10"
+      },
+      {
+        "time": "11:30 AM",
+        "name": "Erin Simpson",
         "guests": 4,
         "status": "confirmed",
         "source": "SpotHopper",
-        "phone": "(626) 233-3531",
-        "notes": "",
-        "date": "Sat, May 30"
+        "phone": "(619) 994-6932",
+        "notes": "We want to watch the U.S. World Cup game that starts at noon. If that is not possible outside, then we would prefer an inside table. Thank you!",
+        "date": "Fri, Jun 12"
       },
       {
         "time": "7:00 PM",
@@ -269,30 +267,28 @@
         "phone": "(310) 254-4167",
         "notes": "",
         "date": "Fri, Jul 3"
-      },
-      {
-        "time": "7:15 PM",
-        "name": "Whitney Hodack",
-        "guests": 15,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(303) 589-3195",
-        "notes": "",
-        "date": "Fri, Jun 5"
       }
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-26",
-    "note": "Priority <2 week 5-star (Google): Scott A (4d, still unanswered) - top reply target. Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied. Reply on Google Business Profile.",
+    "lastUpdated": "2026-05-27",
+    "note": "NEW: Graham Fischer-Corners 5-star (overnight, May 26) — top reply target. Scott A 5-star now 5d unanswered. Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied. Reply on Google Business Profile.",
     "unanswered": [
+      {
+        "platform": "Google",
+        "author": "Graham Fischer-Corners",
+        "date": "2026-05-26",
+        "stars": 5,
+        "snippet": "Smash burgers and wings were great but the steak bite appetizer was amazing. Go on Tuesday through...",
+        "ageDays": 1
+      },
       {
         "platform": "Google",
         "author": "Scott A",
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 4
+        "ageDays": 5
       },
       {
         "platform": "Google",
@@ -300,7 +296,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 10
+        "ageDays": 11
       },
       {
         "platform": "Google",
@@ -308,7 +304,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 11
+        "ageDays": 12
       },
       {
         "platform": "Google",
@@ -316,7 +312,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 12
+        "ageDays": 13
       },
       {
         "platform": "Google",
@@ -324,7 +320,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 16
+        "ageDays": 17
       },
       {
         "platform": "Google",
@@ -332,7 +328,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 32
+        "ageDays": 33
       },
       {
         "platform": "TripAdvisor",
@@ -340,7 +336,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 34
+        "ageDays": 35
       },
       {
         "platform": "Google",
@@ -348,7 +344,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 37
+        "ageDays": 38
       },
       {
         "platform": "Google",
@@ -356,7 +352,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 41
+        "ageDays": 42
       },
       {
         "platform": "Google",
@@ -364,9 +360,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 45
+        "ageDays": 46
       }
     ]
   },
-  "lastUpdated": "2026-05-26T07:10:00-07:00"
+  "lastUpdated": "2026-05-27T04:00:00-07:00"
 }
