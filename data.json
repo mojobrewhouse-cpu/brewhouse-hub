@@ -1,23 +1,24 @@
 {
-  "date": "Wednesday, May 27",
+  "date": "Thursday, May 28",
   "systemStatus": {
     "level": "info",
-    "headline": "Wed May 27 7 AM run COMPLETE. Tue May 26 Toast DPS IN: Net $4,521.90 / Gross $4,642.30 / 173 guests / 123 orders / Labor 21.1%. Big jump vs Mon May 25 ($2,074 net). Wed May 27 Sling still NOT YET EMAILED (latest is Tue May 26). Google Ads + Yelp Ads live scrapes refreshed.",
-    "detail": "(1) Toast: Tue May 26 DPS arrived via Group email at 6:14 AM PT. Per-store DPS expected ~7:38 AM PT — numbers should match. (2) Sling: NO Wed May 27 daily report yet at 7 AM PT (latest Tue May 26: 7 emp / 32.91 hrs). Next run will refresh. Isael 4:59A-4:59A open shift still flagged. (3) Reviews: Graham Fischer-Corners 5-star from Tue May 26 11:06 PM still top reply target; Scott A 5-star now 5d unanswered. (4) Google Ads live scrape: May 26 cost $21.22 (+$4.48 vs May 25), 6,671 impr, 136 clicks, 2.04% CTR, 0 conversions. 1 new email in last 24h (standard campaign report). (5) Yelp Ads live scrape: 30d snapshot 52k impr / 747 PV / 181 leads from ads; billing period $691.98. (6) TripAdvisor: no analytics email in last 2 days. (7) GitHub PAT: 200 OK on read.",
+    "headline": "Thu May 28 4 AM run COMPLETE. Wed May 27 Toast DPS NOT yet emailed (latest Toast still Tue May 26: Net $4,521.90). Wed May 27 Sling landed (6 emp / 32.99 hrs / 0 uncov). Thu May 28 Sling pending until ~7 AM PT.",
+    "detail": "(1) Toast: Wed May 27 daily perf summary NOT in inbox yet \u2014 typically arrives ~7:30 AM PT. Latest Toast remains Tue May 26: Net $4,521.90 / Gross $5,642.30 / 173 guests / 123 orders / 21.1% labor / $1,000 gift card sold (drove discount line). (2) Sling: Wed May 27 daily report arrived (6 emp / 7 shifts / 32.99 hrs / 0 uncov / 0 OT). Thu May 28 Sling still pending at 4 AM PT. Isael 4:58A-4:58A open shift pattern continues. (3) Reviews: Graham Fischer-Corners 5-star now 2d unanswered (top reply target); Scott A 5-star at 6d (1 wk threshold approaching). (4) Google Ads: 1 new email in last 24h (Brewhouse Daily Campaign Report at 10:47 AM PT May 27). No disapprovals, no budget alerts flagged. (5) Yelp: no new actionable items, marketing-only. (6) TripAdvisor: no analytics\\@hm2.tripadvisor.com email in last 2 days. (7) GitHub PAT: 200 OK on read.",
     "affected": [
-      "sling.may27.pending"
+      "toast.may27.pending",
+      "sling.may28.pending"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-27T07:00:00-07:00"
+    "as_of": "2026-05-28T04:00:00-07:00"
   },
   "toast": {
     "date": "Tuesday, May 26",
     "pending": false,
     "mondayPending": false,
-    "wedPending": false,
+    "wedPending": true,
     "thuPending": false,
     "friPending": false,
-    "source": "Tue May 26 Toast DPS (Group email arrived Wed May 27 6:14 AM PT). Per-store DPS expected ~7:38 AM PT.",
+    "source": "Tue May 26 Toast DPS \u2014 Wed May 27 report still NOT in inbox at 4 AM PT Thu May 28 run.",
     "gross": 4642.3,
     "net": 4521.9,
     "guests": 173,
@@ -61,7 +62,7 @@
     "openOrders": 1,
     "autoClockedOut": "None",
     "giftCards": 0.0,
-    "note": "Tue May 26 Toast DPS in (Group email 6:14 AM PT): Net $4,521.90 / Gross $4,642.30 / 173 guests / 123 orders / Labor 21.1% / Discount 2.6% / 5 void items / 87 card payments / 1 open order. Big day vs Mon May 25 ($2,074 net)."
+    "note": "Wed May 27 Toast DPS NOT yet emailed. Latest confirmed Tue May 26: Net $4,521.90 / Gross $5,642.30 / 173 guests / 123 orders / 21.1% labor / $1,000 gift card sold (discounts $1,120.40)."
   },
   "toastLastKnown": {
     "date": "Tuesday, May 26",
@@ -86,17 +87,17 @@
     "grossChangeVsSDLWPct": null
   },
   "sling": {
-    "date": "Tuesday, May 26",
-    "count": 7,
-    "hours": 32.91,
+    "date": "Wednesday, May 27",
+    "count": 6,
+    "hours": 32.99,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 2,
     "shifts": 7,
-    "note": "Tue May 26 Sling daily report (arrived Tue 7:01 AM PT): 7 employees / 32.91 hrs / 7 shifts / 0 uncovered / 0 OT / 2 off. Most recent confirmed day before today's Sling lands."
+    "note": "Wed May 27 Sling daily report (arrived Wed 7:01 AM PT): 6 employees / 7 shifts / 32.99 hrs / 0 uncovered / 0 OT / 2 off. Isael Salvador Narciso flagged as 4:58A-4:58A open shift."
   },
   "slingToday": {
-    "date": "Wednesday, May 27",
+    "date": "Thursday, May 28",
     "pending": true,
     "stale": false,
     "nextDayPending": false,
@@ -106,13 +107,13 @@
     "uncovered": null,
     "employeesOff": null,
     "shifts": null,
-    "note": "Wed May 27 Sling daily report still not in inbox at 7 AM PT run (latest from Sling is Tue May 26). Next run will refresh.",
+    "note": "Thu May 28 Sling daily report not in inbox at 4 AM PT (typically arrives ~7 AM PT). Next run will refresh.",
     "staff": []
   },
   "slingLastKnown": {
-    "date": "Tuesday, May 26",
-    "count": 7,
-    "hours": 32.91,
+    "date": "Wednesday, May 27",
+    "count": 6,
+    "hours": 32.99,
     "shifts": 7,
     "uncovered": 0,
     "overtime": 0,
@@ -121,7 +122,7 @@
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "4:59A-4:59A"
+        "time": "4:58A-4:58A"
       },
       {
         "name": "Tony Rincon",
@@ -129,9 +130,9 @@
         "time": "10:15A-4:30P"
       },
       {
-        "name": "Christine Vargas",
-        "role": "Server",
-        "time": "12:00P-2:30P"
+        "name": "Katharine Brown",
+        "role": "Busser",
+        "time": "12:30P-2:30P"
       },
       {
         "name": "Andrew Turner",
@@ -139,24 +140,24 @@
         "time": "3:30P-10:30P"
       },
       {
-        "name": "Augustine Arroyo",
-        "role": "Server",
-        "time": "3:30P-10:00P"
-      },
-      {
         "name": "Noel Nunez",
         "role": "Chef",
         "time": "4:00P-10:30P"
       },
       {
-        "name": "Bri Kelley",
+        "name": "Katharine Brown",
         "role": "Server",
-        "time": "5:00P-10:15P"
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "4:30P-10:30P"
       }
     ]
   },
   "googleAds": {
-    "lastUpdated": "Wednesday, May 27",
+    "lastUpdated": "Thursday, May 28",
     "yesterday": {
       "date": "May 26, 2026",
       "spend": 21.22,
@@ -196,13 +197,13 @@
     ],
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Wed May 27 7 AM run: 1 new Google Ads notification in last 24h (standard Campaign performance report at 5:31 AM PT). No disapprovals, no budget alerts. Conv tag still unverified — same top action.",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "note": "Thu May 28 4 AM run: 1 new Google Ads notification in last 24h (Brewhouse Daily Campaign Report at 10:47 AM PT May 27). No disapprovals, no budget alerts. Conv tag still unverified.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 1,
-    "reportsLast48h": 3
+    "reportsLast48h": 4
   },
   "yelpAds": {
     "lastUpdated": "Wednesday, May 27",
@@ -239,13 +240,13 @@
       "avgCpc": 1.08,
       "avgCpl": 3.84
     },
-    "note": "Wed May 27 7 AM live scrape via Chrome MCP. Last 30d: 52k impr / 747 page visits / 181 leads from ads. Billing May 1–26: $691.98 spend, $1.08 CPC, $3.84 CPL. No new Yelp email in last 24h.",
-    "stale": false
+    "note": "Thu May 28 4 AM run: no new Yelp email in last 24h. Data still from Wed May 27 scrape (last 30d: 52k impr / 747 PV / 181 leads from ads).",
+    "stale": true
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-05-27",
+    "lastUpdated": "2026-05-28",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com email in last 2 days as of Wed May 27 7 AM PT run."
+    "note": "No analytics\\@hm2.tripadvisor.com email in last 2 days as of Thu May 28 4 AM PT run. (Marketing-only emails skipped.)"
   },
   "reservations": {
     "lastUpdated": "2026-05-28",
@@ -314,8 +315,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-05-27",
-    "note": "NEW: Graham Fischer-Corners 5-star (overnight, May 26) — top reply target. Scott A 5-star now 5d unanswered. Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied. Reply on Google Business Profile.",
+    "lastUpdated": "2026-05-28",
+    "note": "Graham Fischer-Corners 5-star 2d unanswered \u2014 top reply target. Scott A 5-star now 6d (1-week threshold approaching). Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied.",
     "unanswered": [
       {
         "platform": "Google",
@@ -323,7 +324,7 @@
         "date": "2026-05-26",
         "stars": 5,
         "snippet": "Smash burgers and wings were great but the steak bite appetizer was amazing. Go on Tuesday through...",
-        "ageDays": 1
+        "ageDays": 2
       },
       {
         "platform": "Google",
@@ -331,7 +332,7 @@
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 5
+        "ageDays": 6
       },
       {
         "platform": "Google",
@@ -339,7 +340,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 11
+        "ageDays": 12
       },
       {
         "platform": "Google",
@@ -347,7 +348,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 12
+        "ageDays": 13
       },
       {
         "platform": "Google",
@@ -355,7 +356,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 13
+        "ageDays": 14
       },
       {
         "platform": "Google",
@@ -363,7 +364,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 17
+        "ageDays": 18
       },
       {
         "platform": "Google",
@@ -371,7 +372,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 33
+        "ageDays": 34
       },
       {
         "platform": "TripAdvisor",
@@ -379,7 +380,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 35
+        "ageDays": 36
       },
       {
         "platform": "Google",
@@ -387,7 +388,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 38
+        "ageDays": 39
       },
       {
         "platform": "Google",
@@ -395,7 +396,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 42
+        "ageDays": 43
       },
       {
         "platform": "Google",
@@ -403,9 +404,9 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 46
+        "ageDays": 47
       }
     ]
   },
-  "lastUpdated": "2026-05-27T07:00:00-07:00"
+  "lastUpdated": "2026-05-28T04:00:00-07:00"
 }
