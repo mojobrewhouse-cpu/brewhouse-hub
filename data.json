@@ -3,7 +3,7 @@
   "systemStatus": {
     "level": "ok",
     "headline": "Thu May 28 7 AM run COMPLETE. Wed May 27 Toast Group summary IN (Net $3,777.90 / Gross $3,964.90 / 274 guests / 100 orders / 22.7% labor). Thu May 28 Sling IN (8 emp / 34.41 hrs / 0 uncov / 0 OT). Google Ads + Yelp scraped LIVE.",
-    "detail": "(1) Toast: Wed May 27 Group summary received 6:14 AM PT \u2014 Net $3,777.90 / Gross $3,964.90 / 274 guests / 100 orders / $13.79 per guest / $37.78 per order / 22.7% labor / 4.7% discount / 6 voids / 73 card pmts / 2 open orders. Per-location 229 W Montecito DPS still pending (~7:30 AM PT typical). (2) Sling: Thu May 28 daily report received 7:02 AM PT \u2014 8 employees / 8 shifts / 34.41 hrs / 0 uncov / 0 OT / 2 off. Rafael Patricio 6:03A and Casey Smith 6:54A both flagged with open-shift (HH:MM-HH:MM) pattern. (3) Google Ads: live scrape May 27 \u2014 Cost $23.46 (+$2.24 vs May 26), 6,446 impr (-225), 132 clicks, 2.05% CTR, $0.18 CPC, 0 conversions (conv tag still unverified). Performance Max-2 limited by budget + policy; Oldest SB Brewery paused. (4) Yelp Ads: live scrape \u2014 30d: 54k impr (87% ad share) / 759 PV / 183 leads (77% ad share). Billing May 1-27: $719.70 spend / $1.09 CPC / $3.95 CPL. (5) TripAdvisor: no analytics@hm2.tripadvisor.com email in last 2 days. (6) Reviews: Graham Fischer-Corners 5-star now 2d unanswered (top reply target); Scott A 5-star at 6d. (7) GitHub PAT: 200 OK on read.",
+    "detail": "(1) Toast: Wed May 27 Group summary received 6:14 AM PT — Net $3,777.90 / Gross $3,964.90 / 274 guests / 100 orders / $13.79 per guest / $37.78 per order / 22.7% labor / 4.7% discount / 6 voids / 73 card pmts / 2 open orders. Per-location 229 W Montecito DPS still pending (~7:30 AM PT typical). (2) Sling: Thu May 28 daily report received 7:02 AM PT — 8 employees / 8 shifts / 34.41 hrs / 0 uncov / 0 OT / 2 off. Rafael Patricio 6:03A and Casey Smith 6:54A both flagged with open-shift (HH:MM-HH:MM) pattern. (3) Google Ads: live scrape May 27 — Cost $23.46 (+$2.24 vs May 26), 6,446 impr (-225), 132 clicks, 2.05% CTR, $0.18 CPC, 0 conversions (conv tag still unverified). Performance Max-2 limited by budget + policy; Oldest SB Brewery paused. (4) Yelp Ads: live scrape — 30d: 54k impr (87% ad share) / 759 PV / 183 leads (77% ad share). Billing May 1-27: $719.70 spend / $1.09 CPC / $3.95 CPL. (5) TripAdvisor: no analytics@hm2.tripadvisor.com email in last 2 days. (6) Reviews: Graham Fischer-Corners 5-star now 2d unanswered (top reply target); Scott A 5-star at 6d. (7) GitHub PAT: 200 OK on read.",
     "affected": [
       "toast.may27.group-only",
       "toast.may27.full-dps-pending"
@@ -62,7 +62,7 @@
     "openOrders": 2,
     "autoClockedOut": "None",
     "giftCards": 0.0,
-    "note": "Wed May 27 Group summary: Net $3,777.90 / Gross $3,964.90 / 274 guests / 100 orders / 22.7% labor / 4.7% discount / 6 void items / 73 card payments / 2 open orders. Per-location 229 W Montecito DPS pending \u2014 using Group figures."
+    "note": "Wed May 27 Group summary: Net $3,777.90 / Gross $3,964.90 / 274 guests / 100 orders / 22.7% labor / 4.7% discount / 6 void items / 73 card payments / 2 open orders. Per-location 229 W Montecito DPS pending — using Group figures."
   },
   "toastLastKnown": {
     "date": "Wednesday, May 27",
@@ -243,8 +243,8 @@
     ],
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
     "note": "Thu May 28 7 AM run: 1 new Google Ads notification in last 24h (Campaign performance report at 5:31 AM PT May 28). Brewhouse Daily Campaign Report also arrived 9:47 AM PT May 27. No disapprovals, no budget alerts. Conv tag still unverified.",
     "stale": false,
     "authError": false,
@@ -362,7 +362,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-28",
-    "note": "Graham Fischer-Corners 5-star 2d unanswered \u2014 top reply target. Scott A 5-star now 6d (1-week threshold approaching). Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied.",
+    "note": "Graham Fischer-Corners 5-star 2d unanswered — top reply target. Scott A 5-star now 6d (1-week threshold approaching). Older 5-star still open: Shailvi Wakhlu, La Connolly, Dympna Pettit, Deimos Somied.",
     "unanswered": [
       {
         "platform": "Google",
