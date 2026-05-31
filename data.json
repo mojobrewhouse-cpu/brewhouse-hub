@@ -2,158 +2,185 @@
   "date": "Sunday, May 31",
   "systemStatus": {
     "level": "warn",
-    "headline": "Sun May 31 4 AM run COMPLETE. Toast Fri May 29 + Sling Sat May 30 now parsed (arrived since yesterday's run). Sat May 30 Toast + Sun May 31 Sling not yet delivered (before normal arrival windows).",
-    "detail": "(1) Toast: Fri May 29 Group summary PARSED from HTML \u2014 Net $7,626.85 / Gross $7,999.43, +2.5% net vs SDLW. Sat May 30 summary NOT yet in inbox at 4 AM (expected ~6:23 AM PT). (2) Sling: Sat May 30 roster PARSED (8 emp / 51.42 hrs / 0 uncov / 0 OT). Sun May 31 roster not yet delivered (~7 AM PT). (3) Reviews: BuildQueen 3-star now 3 days \u2014 TOP reply target. Graham 5-star 5 days unanswered. (4) Google Ads: 2 report emails last 24h, no disapprovals. ANOMALY: new BILLING user added + new user invited to Ads acct 343-687-4835 on May 30 19:49 \u2014 verify authorized. (5) Yelp: 1 actionable community question (State St atmosphere) May 30. (6) TripAdvisor: no email last 24h. (7) GitHub PAT: 200 OK read+write.",
+    "headline": "Sun May 31 7 AM run COMPLETE. Toast Sat May 30 + Sling Sun May 31 parsed; Google Ads live-scraped (May 30). Yelp Ads scrape FAILED — login expired.",
+    "detail": "(1) Toast: Sat May 30 Group summary PARSED — Net $8,761.35 / Gross $9,257.80, 300 guests, 225 orders, labor 18.5%, discount 5.4%. Detailed daypart/category email not yet delivered (~7:40 AM PT). (2) Sling: Sun May 31 roster PARSED (8 emp / 42.24 hrs / 0 uncov / 0 OT). (3) Google Ads: live scrape OK — May 30 = 7,866 impr, 151 clicks, $22.52 cost, conversions still calculating. SECURITY: new billing user added/invited May 30 — verify authorized. (4) Yelp Ads: scrape FAILED, biz.yelp.com session expired, values carried over stale — RE-LOGIN NEEDED. (5) TripAdvisor: no email last 24h. (6) GitHub PAT: 200 OK read+write.",
     "affected": [
-      "Toast Sat May 30 (pending)",
-      "Sling Sun May 31 (pending)"
+      "Yelp Ads (login expired — re-auth needed)",
+      "Toast Sat May 30 daypart/category detail (pending detailed email)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-05-31T04:00:00-07:00"
+    "as_of": "2026-05-31T07:05:00-07:00"
   },
   "toast": {
-    "date": "Friday, May 29",
+    "date": "Saturday, May 30",
     "pending": false,
-    "source": "Parsed from Toast Group daily summary HTML (no-reply@toasttab.com), subject 'The Brewhouse Santa Barbara - 229 West Montecito Street - Friday, May 29'.",
+    "source": "Parsed from Toast Group daily summary HTML (no-reply@toasttab.com), subject 'The Brewhouse Santa Barbara Group - Saturday, May 30'. Detailed per-location email (dayparts/categories/revenue centers) not yet delivered at run time.",
+    "gross": 9257.8,
+    "net": 8761.35,
+    "guests": 300,
+    "guestsDerived": false,
+    "orders": 225,
+    "checks": null,
+    "avgPerGuest": 29.2,
+    "avgPerOrder": 38.94,
+    "avgPerCheck": null,
+    "netSDLW": null,
+    "grossSDLW": null,
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null,
+    "laborPct": 18.5,
+    "laborCost": null,
+    "discountPct": 5.4,
+    "discounts": null,
+    "voidItems": 12,
+    "voidAmount": null,
+    "refunds": 0.0,
+    "giftCards": 0.0,
+    "cardPayments": 98,
+    "dayparts": [],
+    "categories": [],
+    "revenueCenters": [],
+    "note": "Headline figures from Toast Group summary (gross, net, guests=300 reported directly, orders=225, labor 18.5%, discount 5.4%, voids 12, card payments 98). Dayparts/categories/revenue-center breakdowns and SDLW comparison will populate when the detailed per-location Daily Performance Summary email arrives (~7:40 AM PT)."
+  },
+  "toastLastKnown": {
+    "date": "Friday, May 29",
     "gross": 7999.43,
     "net": 7626.85,
+    "tax": null,
     "guests": 260,
-    "guestsDerived": true,
     "orders": 157,
-    "checks": null,
     "avgPerGuest": 29.33,
     "avgPerOrder": 48.58,
-    "avgPerCheck": null,
-    "netSDLW": 7441.0,
-    "grossSDLW": 7608.5,
-    "netChangeVsSDLWPct": 2.5,
-    "grossChangeVsSDLWPct": 5.1,
     "laborPct": null,
     "laborCost": null,
     "discountPct": 4.7,
-    "discounts": 372.58,
     "voidItems": 6,
     "voidAmount": 67.0,
     "refunds": 0.0,
-    "giftCards": 50.08,
-    "dayparts": [
-      {
-        "name": "Dinner",
-        "net": 5390.2,
-        "pct": 70.6
-      },
-      {
-        "name": "Lunch",
-        "net": 2162.65,
-        "pct": 28.3
-      },
-      {
-        "name": "Espresso Service",
-        "net": 74.0,
-        "pct": 0.9
-      }
-    ],
-    "categories": [
-      {
-        "name": "Food",
-        "net": 3847.35,
-        "pct": 50.4,
-        "items": 256
-      },
-      {
-        "name": "Liquor",
-        "net": 1624.5,
-        "pct": 21.2,
-        "items": 133
-      },
-      {
-        "name": "Draft Beer",
-        "net": 1384.0,
-        "pct": 18.1,
-        "items": 168
-      },
-      {
-        "name": "Wine",
-        "net": 431.0,
-        "pct": 5.6,
-        "items": 46
-      },
-      {
-        "name": "NA Beverage",
-        "net": 162.0,
-        "pct": 2.1,
-        "items": 31
-      },
-      {
-        "name": "No sales category",
-        "net": 104.0,
-        "pct": 1.3,
-        "items": 9
-      },
-      {
-        "name": "Bottled Beer",
-        "net": 74.0,
-        "pct": 0.9,
-        "items": 12
-      }
-    ],
-    "revenueCenters": [
-      {
-        "name": "Dining Room",
-        "net": 4661.8,
-        "pct": 61.1
-      },
-      {
-        "name": "Patio",
-        "net": 1995.3,
-        "pct": 26.1
-      },
-      {
-        "name": "Front Patio",
-        "net": 756.75,
-        "pct": 9.9
-      },
-      {
-        "name": "Back Room",
-        "net": 213.0,
-        "pct": 2.7
-      }
-    ],
-    "note": "Guests derived from Toast net-sales-per-guest KPI ($29.33); not separately confirmed. Labor % / labor cost not present in a parseable field in this email."
-  },
-  "toastLastKnown": {
-    "date": "Thursday, May 28",
-    "gross": 3568.1,
-    "net": 3435.85,
-    "tax": null,
-    "guests": 124,
-    "orders": 86,
-    "avgPerGuest": 27.71,
-    "avgPerOrder": 39.95,
-    "laborPct": 18.4,
-    "laborCost": null,
-    "discountPct": 3.7,
-    "voidItems": 4,
-    "voidAmount": null,
-    "refunds": 0.0,
-    "cardPayments": 60,
+    "cardPayments": null,
     "sdlwDate": null,
-    "sdlwNet": null,
-    "sdlwGross": null,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null
+    "sdlwNet": 7441.0,
+    "sdlwGross": 7608.5,
+    "netChangeVsSDLWPct": 2.5,
+    "grossChangeVsSDLWPct": 5.1
   },
   "sling": {
-    "date": "Saturday, May 30",
+    "date": "Sunday, May 31",
     "pending": false,
     "nextDayPending": true,
+    "count": 8,
+    "hours": 42.24,
+    "shifts": 8,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "note": "Parsed from Sling daily report (sling@getsling.com), '31st of May'. 8 employees / 42.24 hrs / 0 uncovered / 0 OT.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "5:24A-5:24A"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "10:15A-6:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "11:00A-3:30P"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "2:30P-9:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:00P-9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P-9:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser",
+        "time": "4:30P-9:30P"
+      }
+    ]
+  },
+  "slingToday": {
+    "date": "Sunday, May 31",
+    "pending": false,
+    "stale": false,
+    "nextDayPending": true,
+    "count": 8,
+    "hours": 42.24,
+    "overtime": 0,
+    "uncovered": 0,
+    "employeesOff": 0,
+    "shifts": 8,
+    "note": "Today's roster delivered. 8 employees scheduled for 42.24 hrs.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "5:24A-5:24A"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "10:15A-6:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "11:00A-3:30P"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "2:30P-9:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:00P-9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P-9:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser",
+        "time": "4:30P-9:30P"
+      }
+    ]
+  },
+  "slingLastKnown": {
+    "date": "Saturday, May 30",
     "count": 8,
     "hours": 51.42,
     "shifts": 8,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 2,
-    "note": "Most recent roster = Sat May 30. Sun May 31 roster not yet delivered at 4 AM (expected ~7 AM PT).",
     "staff": [
       {
         "name": "Andrew Turner",
@@ -197,91 +224,21 @@
       }
     ]
   },
-  "slingToday": {
-    "date": "Saturday, May 30",
-    "pending": true,
-    "stale": false,
-    "nextDayPending": true,
-    "count": null,
-    "hours": null,
-    "overtime": null,
-    "uncovered": null,
-    "employeesOff": null,
-    "shifts": null,
-    "note": "Today's roster not yet available. Most recent on file = Fri May 29 (see slingLastKnown).",
-    "staff": []
-  },
-  "slingLastKnown": {
-    "date": "Friday, May 29",
-    "count": 9,
-    "hours": 47.41,
-    "shifts": 9,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 2,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:53A-4:53A"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "10:15A-5:00P"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Bartender",
-        "time": "4:00P-11:30P"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server",
-        "time": "4:00P-10:00P"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server",
-        "time": "4:30P-10:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "5:00P-11:00P"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser",
-        "time": "5:30P-10:30P"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Bartender",
-        "time": "6:00P-11:30P"
-      }
-    ]
-  },
   "googleAds": {
     "lastUpdated": "Sunday, May 31",
     "yesterday": {
-      "date": "May 28, 2026",
-      "spend": 20.37,
-      "clicks": 127,
+      "date": "May 30, 2026",
+      "spend": 22.52,
+      "clicks": 151,
       "clicksDerived": false,
-      "impressions": 6549,
-      "cpc": 0.16,
-      "ctr": 1.94,
+      "impressions": 7866,
+      "cpc": 0.15,
+      "ctr": 1.92,
       "conversions": 0.0,
       "avgTargetCpa": 25.06,
       "costChangeVsLastMon": null,
-      "costChangeAbs": -3.09,
-      "note": "Live scrape via Chrome on Fri May 29 ~7 AM PT. Yesterday date range applied. Conversions still 'calculating projections' per Google Ads. Cost down $3.09 vs prior comparison period."
+      "costChangeAbs": 0.2,
+      "note": "Live scrape via Chrome on Sun May 31 ~7 AM PT, Yesterday (May 30) date range, account 343-687-4835. Cost up $0.20 vs comparison period. Conversions still 'pending' (Google calculating). 7,866 impressions, 151 clicks, CTR 1.92%, CPC $0.15."
     },
     "campaigns": [
       {
@@ -290,11 +247,11 @@
         "statusNote": "Limited by budget; all asset groups limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 127,
-        "impressions": 6549,
-        "ctr": 1.94,
-        "cpc": 0.16,
-        "cost": 20.37,
+        "clicks": 151,
+        "impressions": 7866,
+        "ctr": 1.92,
+        "cpc": 0.15,
+        "cost": 22.52,
         "budgetPerDay": 23.37,
         "bidStrategy": "Maximize conversions (Target CPA)"
       },
@@ -311,15 +268,15 @@
       }
     ],
     "totals7d": {
-      "conversions": 256.0,
+      "conversions": 224.0,
       "cost": 154.25,
-      "note": "Performance Max 7-day rollup per dashboard banner"
+      "note": "Performance Max generated 224 conversions this week, down 36.54% vs previous period (per dashboard banner Sun May 31)."
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Sun May 31 4 AM run: 2 daily report emails last 24h, no disapprovals/budget alerts in subjects. SECURITY: new billing user added/invited to account May 30 \u2014 verify authorized.",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "Sun May 31 ~7 AM run: live Chrome scrape of account 343-687-4835. SECURITY: 'Protect your account from unauthorized activity' banner still present; new billing user added/invited May 30 — verify authorized.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -366,13 +323,14 @@
       "avgCpc": 1.09,
       "avgCpl": 3.97
     },
-    "note": "Fri May 29 7 AM run: live scrape successful via Chrome at biz.yelp.com/ads/FTFaEinJgzqY0ZHQMUSpQQ/dashboard. Bonus budget remaining not surfaced on main dashboard view.",
-    "stale": false
+    "note": "Sun May 31 ~7 AM run: Yelp live scrape FAILED — biz.yelp.com redirected to login (session expired). Ad figures below are carried over from the last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
+    "stale": true,
+    "authError": true
   },
   "tripAdvisor": {
     "lastUpdated": "2026-05-31",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Sun May 31 4 AM run."
+    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Sun May 31 7 AM run."
   },
   "reservations": {
     "lastUpdated": "2026-05-31",
@@ -412,7 +370,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-05-31",
-    "note": "BuildQueen 3-star now 3 days \u2014 TOP reply target. Graham Fischer-Corners 5-star now 5 days unanswered. Scott A 5-star now 9 days (past 1-week threshold).",
+    "note": "BuildQueen 3-star now 3 days — TOP reply target. Graham Fischer-Corners 5-star now 5 days unanswered. Scott A 5-star now 9 days (past 1-week threshold).",
     "unanswered": [
       {
         "platform": "Google",
@@ -512,7 +470,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-05-31T04:00:00-07:00",
+  "lastUpdated": "2026-05-31T07:05:00-07:00",
   "yelpInquiries": {
     "lastUpdated": "2026-05-31",
     "actionable": [
