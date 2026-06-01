@@ -3,11 +3,11 @@
   "systemStatus": {
     "level": "warn",
     "headline": "Mon Jun 1 7 AM run COMPLETE. Toast Sun May 31 (Group summary) parsed. Sling Mon Jun 1 roster delivered. Google Ads live scrape OK (May 31). Yelp still needs re-login. TripAdvisor: no ad email last 24h.",
-    "detail": "(1) Toast: Sun May 31 Group Daily Summary parsed \u2014 Net $5,800.60, Gross $5,977.10, 223 guests, 144 orders, labor 17.8%, discount 3.0%, gift cards $225, 14 voids, $0 refunds. Detailed per-location daily (dayparts/SDLW) not yet delivered. (2) Sling: Mon Jun 1 roster delivered \u2014 3 emp / 16.50 hrs / 3 shifts / 0 uncov / 0 OT. (3) Google Ads: LIVE scrape OK for May 31 \u2014 $16.64 spend, 6,684 impr, 143 clicks, CTR 2.14%, CPC $0.12, 0 conversions. 2 report emails last 24h, no disapprovals. SECURITY: new billing user added/invited May 30 still UNVERIFIED. (4) Yelp Ads: biz.yelp.com session expired \u2014 RE-LOGIN NEEDED; figures stale from Fri May 29. (5) TripAdvisor: no ad email last 24h. (6) GitHub PAT: 200 OK read+write.",
+    "detail": "(1) Toast: Sun May 31 Group Daily Summary parsed — Net $5,800.60, Gross $5,977.10, 223 guests, 144 orders, labor 17.8%, discount 3.0%, gift cards $225, 14 voids, $0 refunds. Detailed per-location daily (dayparts/SDLW) not yet delivered. (2) Sling: Mon Jun 1 roster delivered — 3 emp / 16.50 hrs / 3 shifts / 0 uncov / 0 OT. (3) Google Ads: LIVE scrape OK for May 31 — $16.64 spend, 6,684 impr, 143 clicks, CTR 2.14%, CPC $0.12, 0 conversions. 2 report emails last 24h, no disapprovals. SECURITY: new billing user added/invited May 30 still UNVERIFIED. (4) Yelp Ads: biz.yelp.com session expired — RE-LOGIN NEEDED; figures stale from Fri May 29. (5) TripAdvisor: no ad email last 24h. (6) GitHub PAT: 200 OK read+write.",
     "affected": [
-      "Yelp Ads (login expired \u2014 re-auth needed)",
+      "Yelp Ads (login expired — re-auth needed)",
       "Toast Sun May 31 detailed daily / SDLW (Group summary only at run time)",
-      "Google Ads new billing user (unverified \u2014 confirm authorized)"
+      "Google Ads new billing user (unverified — confirm authorized)"
     ],
     "githubPat": "OK (200)",
     "as_of": "2026-06-01T07:07:57-0700"
@@ -259,9 +259,9 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Mon Jun 1 ~7 AM run: LIVE Chrome scrape SUCCESSFUL (Yesterday May 31). 2 report emails last 24h ('Campaign performance' + 'Brewhouse Daily Campaign Report'), no disapprovals. SECURITY: new BILLING user added/invited May 30 still UNVERIFIED \u2014 confirm authorized. Google Ads 'Protect your account from unauthorized activity' banner still showing. Balance / 7-day totals carried from prior run (not re-scraped this run).",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "Mon Jun 1 ~7 AM run: LIVE Chrome scrape SUCCESSFUL (Yesterday May 31). 2 report emails last 24h ('Campaign performance' + 'Brewhouse Daily Campaign Report'), no disapprovals. SECURITY: new BILLING user added/invited May 30 still UNVERIFIED — confirm authorized. Google Ads 'Protect your account from unauthorized activity' banner still showing. Balance / 7-day totals carried from prior run (not re-scraped this run).",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -308,7 +308,7 @@
       "avgCpc": 1.09,
       "avgCpl": 3.97
     },
-    "note": "Mon Jun 1 ~7 AM run: Yelp LIVE scrape FAILED again \u2014 biz.yelp.com redirected to login (session expired). Ad figures below are carried over from the last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
+    "note": "Mon Jun 1 ~7 AM run: Yelp LIVE scrape FAILED again — biz.yelp.com redirected to login (session expired). Ad figures below are carried over from the last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
     "stale": true,
     "authError": true
   },
@@ -365,7 +365,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-06-01",
-    "note": "BuildQueen 3-star now 4 days \u2014 TOP reply target. Graham Fischer-Corners 5-star now 6 days unanswered. Scott A 5-star now 10 days (past 1-week threshold).",
+    "note": "BuildQueen 3-star now 4 days — TOP reply target. Graham Fischer-Corners 5-star now 6 days unanswered. Scott A 5-star now 10 days (past 1-week threshold).",
     "unanswered": [
       {
         "platform": "Google",
