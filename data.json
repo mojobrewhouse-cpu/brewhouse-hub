@@ -2,80 +2,81 @@
   "date": "Tuesday, June 2",
   "systemStatus": {
     "level": "warn",
-    "headline": "Tue Jun 2 4 AM run COMPLETE. Toast detailed daily for Sun May 31 now parsed WITH same-day-last-week comparisons. Mon Jun 1 Toast daily + Tue Jun 2 Sling roster NOT yet delivered (arrive midday). SECURITY: unverified new Google Ads billing user still open. Yelp re-login still needed.",
-    "detail": "(1) Toast: Detailed per-location daily for Sun May 31 parsed with SDLW + 4-wk avg. Net $5,800.60 (-48.7% vs SDLW $11,306.30 = Memorial Day Sun May 24; -19.1% vs 4-wk avg $7,173.79). Gross $5,977.10. 223 guests, 144 orders, $26.01/guest (+9.3% vs SDLW). Labor 17.8%. Voids $150.00 (14 items). Mon Jun 1 daily NOT yet delivered at 4 AM. (2) Sling: latest roster Mon Jun 1 (3 emp/16.50 hrs). Tue Jun 2 roster not yet delivered. (3) Google Ads: 2 report emails last 24h, no disapprovals. SECURITY: new BILLING user May 30 STILL UNVERIFIED. (4) Yelp: session expired, RE-LOGIN NEEDED. (5) TripAdvisor: no ad email. (6) GitHub PAT: 200 OK.",
+    "headline": "Tue Jun 2 ~7 AM run COMPLETE. Toast Mon Jun 1 parsed (group daily summary; detailed per-location daily with comparisons arrives midday). Sling Tue Jun 2 roster live (7 emp / 34.16 hrs). Google Ads Jun 1 LIVE scrape OK. Yelp re-login STILL needed. Unverified Google Ads billing user still open.",
+    "detail": "(1) Toast: Mon Jun 1 group daily parsed — Net $1,902.50, Gross $2,008.00, 89 guests, 63 orders, labor 21.6%, discount 5.3%, 1 void, $0 refunds. Detailed per-location daily (SDLW/4-wk comparisons) not yet delivered at 7 AM. (2) Sling: Tue Jun 2 roster delivered — 7 employees / 34.16 hrs / 7 shifts / 0 uncovered / 0 OT. (3) Google Ads: LIVE scrape OK — $18.00 cost, 118 clicks, 5,788 impr, 0 conversions. SECURITY: new BILLING user May 30 STILL UNVERIFIED. (4) Yelp: session expired, RE-LOGIN NEEDED — figures stale since Fri May 29. (5) TripAdvisor: no ad email. (6) GitHub PAT: 200 OK.",
     "affected": [
-      "Toast Mon Jun 1 daily (not delivered at 4 AM \u2014 arrives midday)",
-      "Sling Tue Jun 2 roster (not delivered at 4 AM \u2014 arrives ~7 AM)",
-      "Yelp Ads (login expired \u2014 re-auth needed)",
-      "Google Ads new billing user (unverified \u2014 confirm authorized)"
+      "Toast detailed Mon Jun 1 daily (group summary parsed; detailed per-location arrives midday)",
+      "Yelp Ads (login expired — re-auth needed at biz.yelp.com)",
+      "Google Ads new billing user (unverified — confirm authorized)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-02T04:02:00-0700"
+    "as_of": "2026-06-02T07:06:00-0700"
   },
   "toast": {
-    "date": "Sunday, May 31",
+    "date": "Monday, June 1",
     "pending": false,
-    "source": "Parsed from Toast DETAILED daily summary ('229 West Montecito Street - Sunday, May 31'). Now includes SDLW and 4-week average comparisons.",
-    "gross": 5977.1,
-    "net": 5800.6,
-    "guests": 223,
+    "source": "Parsed from Toast group Daily Performance Summary email ('The Brewhouse Santa Barbara Group - Monday, June 1', no-reply@toasttab.com). Detailed per-location daily (with SDLW + 4-wk comparisons) not yet delivered at the 7 AM run; arrives midday.",
+    "gross": 2008.0,
+    "net": 1902.5,
+    "guests": 89,
     "guestsDerived": false,
-    "orders": 144,
+    "orders": 63,
     "checks": null,
-    "avgPerGuest": 26.01,
-    "avgPerOrder": 40.28,
+    "avgPerGuest": 21.38,
+    "avgPerOrder": 30.2,
     "avgPerCheck": null,
-    "netSDLW": 11306.3,
-    "grossSDLW": 12272.8,
-    "netChangeVsSDLWPct": -48.7,
-    "grossChangeVsSDLWPct": -51.3,
-    "laborPct": 17.8,
-    "laborCost": 1032.51,
-    "discountPct": 3.0,
-    "discounts": 176.5,
-    "voidItems": 14,
-    "voidAmount": 150.0,
+    "netSDLW": null,
+    "grossSDLW": null,
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null,
+    "laborPct": 21.6,
+    "laborCost": 410.94,
+    "discountPct": 5.3,
+    "discounts": 106.42,
+    "voidItems": 1,
+    "voidAmount": null,
     "refunds": 0.0,
-    "giftCards": 225.0,
-    "cardPayments": 102,
+    "giftCards": 0.0,
+    "cardPayments": 36,
     "dayparts": [],
     "categories": [],
     "revenueCenters": [],
-    "note": "Sun May 31 detailed daily parsed w/ comparisons: Net $5,800.60 (-48.7% vs SDLW $11,306.30 = Memorial Day Sun May 24 peak; -19.1% vs 4-wk avg $7,173.79). Gross $5,977.10 (-51.3% vs SDLW). 223 guests, 144 orders. Avg/guest $26.01 (+9.3% vs SDLW $23.80). Labor 17.8%. Discounts $176.50. Voids $150.00/14 items. Gift cards $225. $0 refunds. Drop vs last week expected (holiday peak). Mon Jun 1 Toast daily not yet delivered at 4 AM run.",
-    "net4wkAvg": 7173.79,
-    "gross4wkAvg": 7664.64,
-    "discountSDLW": 966.5,
-    "discountChangeVsSDLWPct": -81.7,
+    "note": "Mon Jun 1 group daily summary parsed: Gross $2,008.00, Net $1,902.50, 89 guests, 63 orders. Avg/order $30.20, avg/guest $21.38. Labor 21.6% of net (~$410.94 derived). Discounts 5.3% of gross (~$106.42 derived). 1 void item, $0 refunds, $0 gift cards. 36 card payments. NOTE: figures from the all-locations group email; the detailed per-location daily with SDLW/4-wk comparisons had not arrived at the 7 AM run.",
+    "net4wkAvg": null,
+    "gross4wkAvg": null,
+    "discountSDLW": null,
+    "discountChangeVsSDLWPct": null,
     "guestsSDLW": null,
     "guestsChangeVsSDLWPct": null,
     "ordersSDLW": null,
     "ordersChangeVsSDLWPct": null,
     "nextDayPending": true,
-    "avgPerGuestChangeVsSDLWPct": 9.3,
-    "avgPerOrderChangeVsSDLWPct": 2.6
+    "avgPerGuestChangeVsSDLWPct": null,
+    "avgPerOrderChangeVsSDLWPct": null,
+    "laborCostDerived": true,
+    "discountsDerived": true
   },
   "toastLastKnown": {
-    "date": "Saturday, May 30",
-    "gross": 9257.8,
-    "net": 8761.35,
+    "date": "Sunday, May 31",
+    "gross": 5977.1,
+    "net": 5800.6,
     "tax": null,
-    "guests": 300,
-    "orders": 225,
-    "avgPerGuest": 29.2,
-    "avgPerOrder": 38.94,
-    "laborPct": 18.5,
-    "laborCost": 1619.82,
-    "discountPct": 5.4,
-    "voidItems": 12,
-    "voidAmount": 151.5,
+    "guests": 223,
+    "orders": 144,
+    "avgPerGuest": 26.01,
+    "avgPerOrder": 40.28,
+    "laborPct": 17.8,
+    "laborCost": 1032.51,
+    "discountPct": 3.0,
+    "voidItems": 14,
+    "voidAmount": 150.0,
     "refunds": 0.0,
-    "cardPayments": 98,
+    "cardPayments": 102,
     "sdlwDate": null,
-    "sdlwNet": 8855.82,
-    "sdlwGross": 9069.55,
-    "netChangeVsSDLWPct": -1.1,
-    "grossChangeVsSDLWPct": 2.1
+    "sdlwNet": 11306.3,
+    "sdlwGross": 12272.8,
+    "netChangeVsSDLWPct": -48.7,
+    "grossChangeVsSDLWPct": -51.3
   },
   "sling": {
     "date": "Sunday, May 31",
@@ -132,32 +133,52 @@
     ]
   },
   "slingToday": {
-    "date": "Monday, June 1",
+    "date": "Tuesday, June 2",
     "pending": false,
     "stale": false,
     "nextDayPending": false,
-    "count": 3,
-    "hours": 16.5,
+    "count": 7,
+    "hours": 34.16,
     "overtime": 0,
     "uncovered": 0,
     "employeesOff": 0,
-    "shifts": 3,
-    "note": "Parsed from Sling daily report '1st of June' (sling@getsling.com), delivered Mon Jun 1 ~7:01 AM PT. 3 employees / 16.50 hrs / 3 shifts / 0 uncovered / 0 OT.",
+    "shifts": 7,
+    "note": "Parsed from Sling daily report '2nd of June' (sling@getsling.com), delivered Tue Jun 2 ~7:01 AM PT. 7 employees / 34.16 hrs / 7 shifts / 0 uncovered / 0 OT.",
     "staff": [
       {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "time": "3:00P-9:30P"
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:55A-4:55A"
       },
       {
-        "name": "Cal Carter",
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Christine Vargas",
         "role": "Server",
-        "time": "3:15P-9:30P"
+        "time": "12:00P-4:15P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "4:00P-10:00P"
       },
       {
         "name": "Gabriel Lopez galindo",
         "role": "Server",
-        "time": "5:00P-9:30P"
+        "time": "5:00P-10:15P"
       }
     ]
   },
@@ -215,18 +236,18 @@
   "googleAds": {
     "lastUpdated": "Tuesday, June 2",
     "yesterday": {
-      "date": "May 31, 2026",
-      "spend": 16.64,
-      "clicks": 143,
+      "date": "June 1, 2026",
+      "spend": 18.0,
+      "clicks": 118,
       "clicksDerived": false,
-      "impressions": 6684,
-      "cpc": 0.12,
-      "ctr": 2.14,
+      "impressions": 5788,
+      "cpc": 0.15,
+      "ctr": 2.04,
       "conversions": 0.0,
       "avgTargetCpa": 25.06,
       "costChangeVsLastMon": null,
-      "costChangeAbs": -5.88,
-      "note": "Live scrape via Chrome on Mon Jun 1 ~7 AM PT, Yesterday (May 31) date range, account 343-687-4835. Net cost $16.64 (down $5.88 vs comparison). 6,684 impressions (down 1,182), 143 clicks, CTR 2.14%, CPC $0.12. Conversions 0 (down 14 vs comparison). Avg target CPA $25.06."
+      "costChangeAbs": 1.36,
+      "note": "Live scrape via Chrome on Tue Jun 2 ~7 AM PT, 'Yesterday' (Mon Jun 1) date range, account 343-687-4835. Cost $18.00 (up $1.36 vs comparison). 5,788 impressions (down 896), 118 clicks, CTR 2.04%, CPC $0.15. 0 conversions. Avg target CPA $25.06."
     },
     "campaigns": [
       {
@@ -235,11 +256,11 @@
         "statusNote": "Limited by budget; all asset groups limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 143,
-        "impressions": 6684,
-        "ctr": 2.14,
-        "cpc": 0.12,
-        "cost": 16.64,
+        "clicks": 118,
+        "impressions": 5788,
+        "ctr": 2.04,
+        "cpc": 0.15,
+        "cost": 18.0,
         "budgetPerDay": 23.37,
         "bidStrategy": "Maximize conversions (Target CPA)"
       },
@@ -262,10 +283,10 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Tue Jun 2 4 AM run: 2 report emails last 24h (Campaign performance + Brewhouse Daily Campaign Report, Jun 1), no disapprovals. SECURITY: new BILLING user added/invited May 30 STILL UNVERIFIED \u2014 confirm authorized. Spend figures carried from prior run.",
-    "stale": true,
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "Tue Jun 2 ~7 AM run: Google Ads LIVE scrape OK (account 343-687-4835, Yesterday=Mon Jun 1). Cost $18.00, 118 clicks, 5,788 impr, CTR 2.04%, CPC $0.15, 0 conversions, avg target CPA $25.06. SECURITY: new BILLING user added/invited May 30 STILL UNVERIFIED — confirm authorized.",
+    "stale": false,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4,
@@ -311,14 +332,14 @@
       "avgCpc": 1.09,
       "avgCpl": 3.97
     },
-    "note": "Mon Jun 1 ~7 AM run: Yelp LIVE scrape FAILED again \u2014 biz.yelp.com redirected to login (session expired). Ad figures below are carried over from the last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
+    "note": "Tue Jun 2 ~7 AM run: Yelp LIVE scrape FAILED again — biz.yelp.com redirected to login (session expired). Ad figures below are carried over from the last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
     "stale": true,
     "authError": true
   },
   "tripAdvisor": {
     "lastUpdated": "2026-06-02",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Tue Jun 2 4 AM run."
+    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Tue Jun 2 7 AM run."
   },
   "reservations": {
     "lastUpdated": "2026-06-02",
@@ -397,7 +418,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-06-02",
-    "note": "Graham Fischer-Corners 5-star now 7 days unanswered \u2014 TOP reply target. BuildQueen 3-star now 5 days \u2014 respond to recover. Scott A 5-star now 11 days (past 1-week threshold).",
+    "note": "Graham Fischer-Corners 5-star now 7 days unanswered — TOP reply target. BuildQueen 3-star now 5 days — respond to recover. Scott A 5-star now 11 days (past 1-week threshold).",
     "unanswered": [
       {
         "platform": "Google",
@@ -497,7 +518,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-02T04:02:00-0700",
+  "lastUpdated": "2026-06-02T07:06:00-0700",
   "yelpInquiries": {
     "lastUpdated": "2026-06-02",
     "actionable": [
