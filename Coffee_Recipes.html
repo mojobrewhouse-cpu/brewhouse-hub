@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Coffee Recipes">
+<title>Brewhouse Coffee Recipes</title>
+<style>
+  :root{
+    --bg:#1c140d; --panel:#2a1e13; --line:#4a3520;
+    --text:#f3e9dc; --muted:#b89b7e; --accent:#c98a3b; --accent2:#7a9b5e;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%;}
+  header{position:sticky;top:0;z-index:20;background:var(--panel);padding:env(safe-area-inset-top) 0 0;border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.4);}
+  .htop{display:flex;align-items:center;gap:12px;padding:12px 16px 10px;}
+  .htop h1{font-size:19px;margin:0;font-weight:700;letter-spacing:.3px;}
+  .htop .sub{color:var(--muted);font-size:12px;margin-left:auto;}
+  .search{padding:0 16px 12px;}
+  .search input{width:100%;padding:12px 14px;font-size:16px;border-radius:12px;border:1px solid var(--line);background:#15100a;color:var(--text);outline:none;}
+  .tabs{display:flex;gap:8px;overflow-x:auto;padding:0 16px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab{white-space:nowrap;padding:8px 14px;border-radius:999px;background:#15100a;border:1px solid var(--line);color:var(--muted);font-size:14px;font-weight:600;}
+  .tab.active{background:var(--accent);color:#1c140d;border-color:var(--accent);}
+  main{padding:16px 16px 60px;max-width:760px;margin:0 auto;}
+  .sec-title{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin:22px 4px 10px;font-weight:700;}
+  .sec-title:first-child{margin-top:4px;}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;}
+  .card summary{list-style:none;cursor:pointer;padding:15px 16px;display:flex;align-items:baseline;gap:10px;}
+  .card summary::-webkit-details-marker{display:none;}
+  .card .name{font-size:17px;font-weight:700;flex:1;}
+  .card .price{color:var(--accent2);font-weight:700;font-size:15px;white-space:nowrap;}
+  .card .body{padding:0 16px 16px;border-top:1px solid var(--line);}
+  .card .body p{margin:12px 0 0;}
+  .card ul{margin:10px 0 0;padding-left:20px;}
+  .card li{margin:4px 0;line-height:1.45;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;font-size:12px;}
+  .pill{background:#15100a;border:1px solid var(--line);border-radius:8px;padding:4px 9px;color:var(--muted);}
+  .note{margin-top:12px;font-size:13px;color:var(--muted);background:#15100a;border-left:3px solid var(--accent);padding:9px 12px;border-radius:0 8px 8px 0;line-height:1.45;}
+  .badge{font-size:10px;background:var(--accent);color:#1c140d;padding:2px 7px;border-radius:6px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;}
+  table{width:100%;border-collapse:collapse;margin-top:6px;}
+  td{padding:9px 8px;border-bottom:1px solid var(--line);font-size:14px;}
+  td:last-child{text-align:right;color:var(--accent2);font-weight:700;white-space:nowrap;}
+  .empty{text-align:center;color:var(--muted);padding:50px 20px;display:none;}
+</style>
+</head>
+<body>
+<header>
+  <div class="htop">
+    <h1>☕ Coffee Recipes</h1>
+    <span class="sub">The Brewhouse</span>
+  </div>
+  <div class="search"><input id="q" type="search" placeholder="Search drinks, ingredients…" autocomplete="off"></div>
+  <div class="tabs" id="tabs"></div>
+</header>
+<main id="main"></main>
+<div class="empty" id="empty">No drinks match that search.</div>
+
+<script>
+const DATA = [
+ {cat:"Espresso", items:[
+  {name:"Espresso", price:"$3.50–4.00", steps:["Double shot — 18g in, 36g out (1:2 ratio via ABR)","Serve in ceramic demitasse"], note:"Cost ~$0.30."},
+  {name:"Americano", price:"$4.00–4.50", steps:["Double shot (18g basket)","Add 8–10oz hot water from Curtis WB5NB","Serve in 12 or 16oz cup"], note:"Cost ~$0.35."},
+  {name:"Latte", price:"$5.50–6.00", steps:["Double shot (22.5g basket, 45g out)","Steam 10–12oz whole milk","Pour over espresso, light foam on top"], note:"Cost ~$0.80."},
+  {name:"Cappuccino", price:"$5.00–5.50", steps:["Double shot (22.5g basket)","Steam 6–8oz whole milk — more foam than a latte, thick velvety microfoam","Pour with a thick foam cap","Dust with cocoa or cinnamon"], note:"Cost ~$0.65."},
+  {name:"Flat White", price:"$5.50–6.00", steps:["Double shot (22.5g basket)","Steam 6–8oz whole milk — less foam than capp, silky","Pour through the crema for a dot pattern"], note:"Cost ~$0.65."},
+  {name:"Cortado", price:"$4.50–5.00", steps:["Double shot (18g basket)","2–3oz steamed milk, very little foam","Serve in a small glass (4–5oz)"], note:"Cost ~$0.50."},
+  {name:"Macchiato (Traditional)", price:"$4.00–4.50", steps:["Double shot (18g basket)","Just a dollop of steamed milk foam on top — 'stained' with milk","Serve in demitasse or small glass"], note:"Cost ~$0.35."},
+  {name:"Mocha", price:"$6.00–6.50", steps:["Double shot (22.5g basket)","1oz chocolate sauce in cup","Steam 10–12oz whole milk","Pour over espresso + chocolate, stir","Top with whipped cream, cocoa dust"], note:"Cost ~$1.10."},
+  {name:"Drip Coffee", price:"$3.00–3.50", steps:["Curtis GEMX batch brew — ready by 6am","Pour from airpot, ~15 sec per serve","Offer regular and decaf"], note:"Cost ~$0.25."},
+ ]},
+ {cat:"Signature", items:[
+  {name:"Pistachio Latte", badge:"Signature", price:"$7.00–7.50", steps:["Double shot (22.5g basket)","1oz pistachio orgeat in cup","Steam 10–12oz whole milk","Pour over espresso + orgeat","Optional: crushed pistachio garnish"], note:"Nobody else in SB has this. Ties to Brewhouse pistachio identity. Cost ~$1.00."},
+  {name:"Hop Matcha Latte", badge:"Signature", price:"$6.50–7.00", steps:["1.5–2oz hop tea in cup","1 tsp ceremonial matcha","1 tsp simple syrup","8–10oz whole milk","Steam everything together on GB5"], note:"Green on green. Start with less hop tea, adjust up. Only works because of the brewery. Cost ~$1.20."},
+  {name:"Craft Hot Chocolate", price:"$6.00–6.50", steps:["2oz chocolate ganache in pitcher","10–12oz whole milk","Steam together on GB5 — ganache emulsifies in","Top with torched jumbo marshmallow (Iwatani torch)","Dust with cocoa"], note:"Torched marshmallow is the wow factor. Cost ~$1.00."},
+  {name:"Bone Broth Latte", price:"$7.00–7.50", steps:["8oz house bone broth (from kitchen)","Steam with 4oz whole milk on GB5","Season with pinch of salt + black pepper","Optional: 'dirty' with single espresso shot (+$1.50)"], note:"Wellness/protein angle. Kitchen already makes broth. Unique in SB. Cost ~$0.50."},
+  {name:"Lavender Honey Latte", price:"$6.50–7.00", steps:["Double shot (22.5g basket)","0.75oz lavender syrup","0.5oz local honey","Steam 10–12oz whole milk","Pour, drizzle honey on top"], note:"Screams Santa Barbara. Photographs beautifully (purple tint). Cost ~$1.00."},
+  {name:"Espresso Tonic", price:"$5.50–6.00", steps:["Double shot (18g basket) — let cool slightly","Fill glass with ice","Pour 6–8oz tonic water over ice","Slowly pour espresso over back of a spoon so it floats & cascades"], note:"Dramatic cascading visual. Near-zero food cost. Cost ~$0.60."},
+  {name:"Golden Latte (Turmeric)", price:"$6.00–6.50", steps:["1 tsp turmeric powder","1/2 tsp cinnamon","Pinch of ginger","1 tsp honey","10–12oz whole milk","Steam together on GB5","Optional: espresso shot (+$1.50)"], note:"Bright yellow = Instagram gold. Non-coffee wellness option. Cost ~$0.70."},
+  {name:"Horchata Latte", price:"$6.50–7.00", steps:["1oz horchata syrup (or cinnamon syrup + splash vanilla)","Double shot (22.5g basket)","Steam 10–12oz whole milk with a dash of cinnamon","Pour, dust cinnamon on top"], note:"Ties into the Mexican food menu. Cost ~$0.85."},
+  {name:"Matcha Latte", price:"$6.00–6.50", steps:["1.5 tsp ceremonial grade matcha","1 tsp simple syrup (or honey)","10–12oz whole milk","Steam together on GB5"], note:"Use ceremonial grade — brighter green, better taste. Cost ~$1.00."},
+  {name:"Affogato", price:"$5.50–6.00", steps:["1 scoop vanilla ice cream in small bowl/glass","Pull double shot (18g) directly over ice cream","Serve immediately with a spoon"], note:"15 seconds to make. Great upsell after meals. Cost ~$0.80."},
+ ]},
+ {cat:"Iced", items:[
+  {name:"Iced Latte", price:"$6.00–6.50", steps:["Double shot (22.5g basket) into cup","Fill cup with ice","Pour 10–12oz cold whole milk over","Optional: syrup (vanilla, caramel, pistachio orgeat)"], note:"Add $0.75 for flavor."},
+  {name:"Iced Americano", price:"$4.50–5.00", steps:["Double shot (18g basket)","Fill cup with ice","Add 10–12oz cold water"]},
+  {name:"Nitro Cold Brew (on tap)", price:"$5.50–6.00", steps:["Pour from stout faucet on Micro Matic tower","Cascading pour — dramatic","Serve in a clear cup so customer sees the cascade","NO ice — served cold from the keg"], note:"3-sec pour. 85–90% gross margin. Cost ~$0.50."},
+  {name:"Cold Brew (still)", price:"$4.50–5.00", steps:["Pour from standard faucet on tower","Serve over ice","Optional: splash of cream, vanilla, simple syrup"], note:"Cost ~$0.40."},
+  {name:"Blended / Frappe", price:"$6.50–7.00", steps:["Use Vitamix (container labeled COFFEE ONLY)","Cold brew concentrate + milk + ice + syrup","Blend speed 7–8 for 15–20 sec","Top with whipped cream"]},
+ ]},
+ {cat:"Kids", items:[
+  {name:"Steamer", price:"$3.50–4.00", steps:["8–10oz whole milk","1oz flavored syrup (kid picks)","Steam on Wally","Whipped cream on top"], note:"Cost ~$0.50."},
+  {name:"Kids Hot Chocolate", price:"$4.00–4.50", steps:["1.5oz chocolate ganache","8oz whole milk","Steam together","Whipped cream + marshmallow"], note:"Cost ~$0.70."},
+  {name:"Kids Italian Soda", price:"$3.50–4.00", steps:["1oz flavored syrup (kid picks color)","Sparkling water","Splash of cream on top","Serve over ice"], note:"Cost ~$0.40."},
+  {name:"Babyccino", price:"FREE or $1.00", steps:["Tiny cup of steamed milk foam","Sprinkle cinnamon or cocoa on top"], note:"Loyalty play — parents remember the place that gave their toddler a 'coffee.'"},
+  {name:"Vanilla Bean Frappuccino (No Coffee)", price:"$4.50–5.00", steps:["Milk + ice + vanilla syrup + whipped cream","Blend in Vitamix"], note:"Cost ~$0.60."},
+ ]},
+ {cat:"Tea", items:[
+  {name:"Hot Tea", price:"$3.00–3.50", steps:["Tea bag (English Breakfast, Earl Grey, Green, Chamomile, Peppermint)","12–16oz hot water from Curtis WB5NB","Serve with honey on the side"], note:"Cost ~$0.20."},
+  {name:"Chai Latte", price:"$5.50–6.00", steps:["Chai concentrate or chai bag steeped strong","Steam 8–10oz whole milk","Honey or simple syrup to taste","Dust with cinnamon"], note:"Cost ~$0.60."},
+ ]},
+ {cat:"Prep / Bases", items:[
+  {name:"Pistachio Orgeat", badge:"Prep", price:"~24oz · 20 min", steps:["1 cup sugar + 1 cup water — heat over medium until sugar dissolves (don't hard boil)","Remove from heat","Whisk in 3 Tbsp pistachio butter aggressively until smooth","Add 1/2 tsp orange blossom water + pinch salt, stir","Cool 10 min","Strain through fine mesh into squeeze bottle","Label + date, store in CoolSki"], note:"Shelf life 2–3 weeks refrigerated. Orange blossom water is the secret — don't skip, don't overdo. Batch once a week. Crosses over to cocktails."},
+  {name:"Hop Tea Base", badge:"Prep", price:"16oz · 5 min", steps:["4g hop pellets (Citra, Mosaic, or Galaxy — ask Casey)","Pour 16oz water at 170–175°F over hops","Steep EXACTLY 3 min — set a timer, don't go longer","Strain through fine mesh / cheesecloth","Press gently — don't squeeze hard (grassy)","Cool, store sealed in CoolSki"], note:"Shelf life 2–3 days. Citra=tropical/citrus, Mosaic=berry/floral, Galaxy=passionfruit/peach. If bitter: less hops, shorter steep, keep water under 180°F."},
+  {name:"Chocolate Ganache", badge:"Prep", price:"~24oz · 10 min", steps:["Heat 12oz heavy cream until it just barely simmers (NOT a full boil)","Pour over 12oz fine-chopped dark chocolate (60–70%)","Let sit 2 min — don't touch","Whisk slowly center-out until smooth + glossy","Stir in 2 Tbsp raw cane sugar, pinch salt, 1 tsp vanilla","Cool slightly, pour into squeeze bottle","Label + date, store in CoolSki"], note:"Shelf life 2 weeks. 2oz per drink. Steam directly with milk on GB5 — emulsifies perfectly. Mexican variant: tiny pinch cayenne."},
+ ]},
+];
+
+const MODIFIERS = [
+  ["Extra shot","+$1.50"],["Flavor syrup (1883)","+$0.75"],["Pistachio orgeat","+$1.00"],
+  ["Oat milk (Califia Barista)","+$0.75"],["Whipped cream","Free"],["Torched marshmallow","+$0.50"],["Make it dirty (add espresso)","+$1.50"]
+];
+const PREP = [
+  ["Pistachio orgeat batch","Once a week"],["Chocolate ganache batch","Weekly / as needed"],
+  ["Hop tea batch","Every 2–3 days"],["Cold brew batch (ALTO)","2–3× per week"],
+  ["Keg cold brew for nitro","When keg runs out"],["Restock syrups/supplies","As needed"]
+];
+
+const tabsEl=document.getElementById('tabs'), mainEl=document.getElementById('main'), emptyEl=document.getElementById('empty'), qEl=document.getElementById('q');
+const cats=["All",...DATA.map(d=>d.cat),"Info"];
+let active="All", query="";
+
+cats.forEach(c=>{const b=document.createElement('button');b.className='tab'+(c==="All"?' active':'');b.textContent=c;b.onclick=()=>{active=c;[...tabsEl.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');render();};tabsEl.appendChild(b);});
+qEl.addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();render();});
+
+function matches(it){if(!query)return true;const hay=(it.name+' '+(it.steps||[]).join(' ')+' '+(it.note||'')).toLowerCase();return hay.includes(query);}
+
+function card(it){
+  const badge=it.badge?`<span class="badge">${it.badge}</span> `:'';
+  const steps=(it.steps||[]).map(s=>`<li>${s}</li>`).join('');
+  const note=it.note?`<div class="note">${it.note}</div>`:'';
+  return `<details class="card"><summary><span class="name">${badge}${it.name}</span><span class="price">${it.price||''}</span></summary><div class="body"><ul>${steps}</ul>${note}</div></details>`;
+}
+
+function render(){
+  let html='', any=false;
+  DATA.forEach(group=>{
+    if(active!=="All" && active!==group.cat) return;
+    const items=group.items.filter(matches);
+    if(!items.length) return;
+    any=true;
+    html+=`<div class="sec-title">${group.cat}</div>`+items.map(card).join('');
+  });
+  if((active==="All"||active==="Info") && !query){
+    any=true;
+    html+=`<div class="sec-title">Modifiers & Upcharges</div><div class="card"><div class="body"><table>${MODIFIERS.map(m=>`<tr><td>${m[0]}</td><td>${m[1]}</td></tr>`).join('')}</table></div></div>`;
+    html+=`<div class="sec-title">Weekly Prep Schedule</div><div class="card"><div class="body"><table>${PREP.map(p=>`<tr><td>${p[0]}</td><td>${p[1]}</td></tr>`).join('')}</table></div></div>`;
+  }
+  mainEl.innerHTML=html;
+  emptyEl.style.display=any?'none':'block';
+}
+render();
+</script>
+</body>
+</html>
