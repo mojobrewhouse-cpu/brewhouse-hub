@@ -1,23 +1,23 @@
 {
-  "date": "Thursday, June 4",
+  "date": "Friday, June 5",
   "systemStatus": {
     "level": "warn",
-    "headline": "Thu Jun 4 ~7 AM run COMPLETE. Toast Wed Jun 3 parsed (Net $4,883.99, +20.8% vs Tue; LABOR back to 25.0% from Tue's 39.4%). Sling Jun 4 roster IN (9 emp / 39.99 hrs / 0 OT). Google Ads live: $25.17 / 113 clicks / 0 conv. Yelp re-login STILL needed. Google Ads billing user (added May 30) STILL unverified.",
-    "detail": "(1) Toast: Wed Jun 3 group daily parsed -- Net $4,883.99, Gross $5,110.95, 225 guests, 144 orders, LABOR 25.0% of net (~$1,221, down from Tue's 39.4%), discount 4.4%, 8 voids, $0 refunds. Detailed per-location daily (with SDLW comparisons) arrives midday. (2) Sling: Jun 4 roster delivered -- 9 employees / 39.99 hrs / 9 shifts / 0 uncovered / 0 OT. (3) Google Ads: live scrape OK -- Jun 3 cost $25.17 (-$3.03), 6,622 impr (+62), 113 clicks, CTR 1.71%, CPC $0.22, 0 conversions (-3.00); SECURITY new BILLING user May 30 STILL UNVERIFIED. (4) Yelp: session expired AGAIN, RE-LOGIN NEEDED (stale since May 29) -- alert drafted to Joal. (5) TripAdvisor: no ad email. (6) GitHub PAT: 200 OK.",
+    "headline": "Fri Jun 5 ~4 AM run COMPLETE. Toast DETAILED Wed Jun 3 daily now parsed WITH same-day-last-week: Net $4,883.99 (+30.2% vs Wed May 27 $3,749.90), Gross $5,435.95 (+36.1%), LABOR 25.0%. NEW 5-star from Elizabeth Heilman (Jun 4). Thursday Toast + Friday Sling roster NOT yet posted (arrive midday). Yelp re-login STILL needed. Google Ads billing user (added May 30) STILL unverified.",
+    "detail": "(1) Toast: detailed per-location Wed Jun 3 daily (229 W Montecito) NOW delivered with SDLW comparisons -- Net $4,883.99 (+30.2% vs $3,749.90), Gross $5,435.95 (+36.1% vs $3,995.40), 225 guests, 144 orders, avg/guest $21.71, avg/order $33.92, LABOR 25.0% (~$1,221), voids $95.90, $0 refunds. Thursday Jun 4 daily not yet sent (arrives midday). (2) Sling: latest roster is Thu Jun 4 (9 emp / 39.99 hrs / 0 OT / 0 uncovered). Friday Jun 5 roster not yet delivered. (3) Google Ads: 4 report emails in 48h, Wed Jun 3 spend $25.17 / 113 clicks / 0 conversions; SECURITY new BILLING user May 30 STILL UNVERIFIED. (4) Yelp: session expired, RE-LOGIN NEEDED (stale since May 29). (5) TripAdvisor: no ad email. (6) GitHub PAT: 200 OK.",
     "affected": [
-      "Yelp Ads (login expired -- re-auth at biz.yelp.com; data stale since May 29)",
-      "Google Ads new billing user (unverified -- confirm authorized)",
-      "Toast Jun 3 detailed per-location daily (SDLW comparisons) -- arrives midday",
-      "Sling Jun 5 roster (arrives ~7 AM tomorrow)"
+      "Thursday Jun 4 Toast daily -- not yet posted (arrives midday)",
+      "Friday Jun 5 Sling roster -- not yet posted (arrives ~7 AM)",
+      "Yelp Ads (login expired -- re-auth at biz.yelp.com; stale since May 29)",
+      "Google Ads new billing user (unverified -- confirm authorized)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-04T07:06:00-0700"
+    "as_of": "2026-06-05T04:00:00-0700"
   },
   "toast": {
     "date": "Wednesday, June 3",
     "pending": false,
-    "source": "Parsed from Toast Daily Performance Summary group email ('The Brewhouse Santa Barbara Group - Wednesday, June 3', no-reply@toasttab.com). Detailed per-location daily with SDLW comparisons not yet delivered at 7 AM run (arrives midday).",
-    "gross": 5110.95,
+    "source": "Parsed from BOTH the Toast group summary AND the detailed per-location Daily Performance Summary ('The Brewhouse Santa Barbara - 229 West Montecito Street - Wednesday, June 3', no-reply@toasttab.com). Detailed daily now delivered with SDLW comparisons.",
+    "gross": 5435.95,
     "net": 4883.99,
     "guests": 225,
     "guestsDerived": false,
@@ -26,10 +26,10 @@
     "avgPerGuest": 21.71,
     "avgPerOrder": 33.92,
     "avgPerCheck": null,
-    "netSDLW": null,
-    "grossSDLW": null,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
+    "netSDLW": 3749.9,
+    "grossSDLW": 3995.4,
+    "netChangeVsSDLWPct": 30.2,
+    "grossChangeVsSDLWPct": 36.1,
     "net4wkAvg": null,
     "gross4wkAvg": null,
     "laborPct": 25.0,
@@ -41,7 +41,7 @@
     "discountSDLW": null,
     "discountChangeVsSDLWPct": null,
     "voidItems": 8,
-    "voidAmount": null,
+    "voidAmount": 95.9,
     "refunds": 0.0,
     "giftCards": 0.0,
     "guestsSDLW": null,
@@ -51,7 +51,8 @@
     "avgPerGuestChangeVsSDLWPct": null,
     "avgPerOrderChangeVsSDLWPct": null,
     "nextDayPending": true,
-    "note": "Wed Jun 3 daily (group summary, 229 W Montecito) parsed: Net $4,883.99, Gross $5,110.95. 225 guests, 144 orders. Avg/guest $21.71, avg/order $33.92. LABOR 25.0% of net (~$1,221) -- back down from Tue's 39.4%. Discount 4.4% of gross (~$224.88), 8 void items, $0 refunds, $0 gift cards. SDLW/4-wk comparison fields pending the detailed per-location daily (arrives midday). 80 card payments, 14 remaining open orders; Tony Rincon auto-clocked out."
+    "note": "Wed Jun 3 detailed per-location daily parsed: Net $4,883.99 (+30.2% vs same Wed last week $3,749.90), Gross $5,435.95 (+36.1% vs $3,995.40). 225 guests, 144 orders. Avg/guest $21.71, avg/order $33.92. LABOR 25.0% of net (~$1,221.45) -- healthy, back down from Tue's 39.4%. Voids $95.90 (8 items). Discount 4.4%. $0 refunds, $0 gift cards. NOTE group-summary gross was $5,110.95; detailed per-location gross $5,435.95 (authoritative). Thursday Jun 4 daily not yet delivered.",
+    "grossGroupSummary": 5110.95
   },
   "toastLastKnown": {
     "date": "Tuesday, June 2",
@@ -226,7 +227,7 @@
     ]
   },
   "googleAds": {
-    "lastUpdated": "Thursday, June 4",
+    "lastUpdated": "Friday, June 5",
     "yesterday": {
       "date": "June 3, 2026",
       "spend": 25.17,
@@ -275,8 +276,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "Thu Jun 4 ~7 AM run: live Chrome scrape OK, account 343-687-4835. SECURITY: new BILLING user added May 30 STILL UNVERIFIED (cannot self-verify) -- confirm authorized. Notifications bell shows 1 alert.",
     "stale": false,
     "authError": false,
@@ -419,16 +420,24 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-04",
-    "note": "Victor Bonhomme 5-star (Jun 2) STILL unanswered — top reply target, now 2 days old. BuildQueen 3-star now 7 days. Graham Fischer-Corners 5-star now 9 days. Scott A 5-star now 13 days (well past 1-week threshold).",
+    "lastUpdated": "2026-06-05",
+    "note": "NEW: Elizabeth G Heilman 5-star (Jun 4) -- top reply target (1 day). Victor Bonhomme 5-star (Jun 2) STILL unanswered (3 days). BuildQueen 3-star now 8 days. Graham Fischer-Corners 5-star 10 days. Scott A 5-star 14 days (well past 1-week threshold).",
     "unanswered": [
+      {
+        "platform": "Google",
+        "author": "Elizabeth G Heilman",
+        "date": "2026-06-04",
+        "stars": 5,
+        "snippet": "Can't rave enough! We have a small RV and 2 doodles and trying to park in Santa Barbara is no easy...",
+        "ageDays": 1
+      },
       {
         "platform": "Google",
         "author": "Victor Bonhomme",
         "date": "2026-06-02",
         "stars": 5,
         "snippet": "Really nice people. Awesome service",
-        "ageDays": 2
+        "ageDays": 3
       },
       {
         "platform": "Google",
@@ -436,7 +445,7 @@
         "date": "2026-05-28",
         "stars": 3,
         "snippet": "Had their macadamia nut crusted halibut. Best part of the meal was the crunchy sugar snap peas. The...",
-        "ageDays": 7
+        "ageDays": 8
       },
       {
         "platform": "Google",
@@ -444,7 +453,7 @@
         "date": "2026-05-26",
         "stars": 5,
         "snippet": "Smash burgers and wings were great but the steak bite appetizer was amazing. Go on Tuesday through...",
-        "ageDays": 9
+        "ageDays": 10
       },
       {
         "platform": "Google",
@@ -452,7 +461,7 @@
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 13
+        "ageDays": 14
       },
       {
         "platform": "Google",
@@ -460,7 +469,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 18
+        "ageDays": 19
       },
       {
         "platform": "Google",
@@ -468,7 +477,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 19
+        "ageDays": 20
       },
       {
         "platform": "Google",
@@ -476,7 +485,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 20
+        "ageDays": 21
       },
       {
         "platform": "Google",
@@ -484,7 +493,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 24
+        "ageDays": 25
       },
       {
         "platform": "Google",
@@ -492,7 +501,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 40
+        "ageDays": 41
       },
       {
         "platform": "TripAdvisor",
@@ -500,7 +509,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 42
+        "ageDays": 43
       },
       {
         "platform": "Google",
@@ -508,7 +517,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 45
+        "ageDays": 46
       },
       {
         "platform": "Google",
@@ -516,7 +525,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 49
+        "ageDays": 50
       },
       {
         "platform": "Google",
@@ -524,11 +533,11 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 53
+        "ageDays": 54
       }
     ]
   },
-  "lastUpdated": "2026-06-04T07:06:00-0700",
+  "lastUpdated": "2026-06-05T04:00:00-0700",
   "yelpInquiries": {
     "lastUpdated": "2026-06-02",
     "actionable": [
