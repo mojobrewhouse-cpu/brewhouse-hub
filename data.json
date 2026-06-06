@@ -2,30 +2,31 @@
   "date": "Saturday, June 6",
   "systemStatus": {
     "level": "warn",
-    "headline": "Sat Jun 6 ~4 AM run COMPLETE. Toast DETAILED single-location (229 W Montecito) Thu Jun 4 now parsed WITH same-day-last-week comparison: Net $4,438.76 (+29.2% vs Thu May 28 $3,435.85), Gross $4,729.31, 169 guests, 114 orders, LABOR 32.2%. Friday Jun 5 Toast daily NOT in yet (arrives ~7:40 AM). Sling roster advanced to Jun 5 (10 emp / 55.91 hrs / 0 OT / 0 uncovered); Jun 6 roster arrives ~7 AM. Yelp re-login STILL needed (stale since May 29). Google Ads new BILLING user (May 30) + 'unauthorized activity' banner STILL unverified -- URGENT.",
-    "detail": "(1) Toast: single-location 229 W Montecito Thu Jun 4 daily parsed WITH comparison columns -- Net $4,438.76 vs same-day-last-week $3,435.85 (+29.2%), Gross $4,729.31 vs $3,618.10 (+30.7%), 169 guests vs 124 (+36%), 114 orders vs 86 (+33%), avg/guest $26.26, avg/order $38.94, LABOR 32.2% of net (~$1,428.87), discounts $290.55, voids $66.50. 4-wk-avg net $4,572.50 (Jun 4 ran -2.9% under avg). Friday Jun 5 daily not yet delivered. (2) Sling: roster advanced to Jun 5 (10 emp / 55.91 hrs / 10 shifts / 0 uncovered / 0 OT / 1 off). Jun 6 roster not yet delivered -- Jun 5 roster is one day stale relative to today. (3) Google Ads: NOT re-scraped this run; carrying Fri Jun 5 live data. 2 report emails in last 24h, no disapprovals. SECURITY: new BILLING user May 30 STILL UNVERIFIED; 'unauthorized activity' banner present. (4) Yelp: session still expired, RE-LOGIN NEEDED (stale since May 29). (5) TripAdvisor: no ad email in last 24h. (6) GitHub PAT: 200 OK.",
+    "headline": "Sat Jun 6 ~7 AM run COMPLETE. Toast Thu Jun 4 DETAILED daily parsed (Net $4,438.76, +29.2% SDLW; LABOR 32.2% of net -- still high but down from Tue's 39.4%). Sling Jun 6 roster in (7 emp / 35.83 hrs). Google Ads live: Fri Jun 5 cost $37.28, 0 conversions, new BHC Coffee Search campaign live. Yelp re-login STILL needed. Unverified Google Ads billing user STILL open (unauthorized-activity banner showing).",
+    "detail": "(1) Toast: Thu Jun 4 detailed daily parsed -- Net $4,438.76 (+29.2% vs SDLW $3,435.85, -2.9% vs 4-wk avg), Gross $4,729.31 (+30.7%), 169 guests (+36.3%), 114 orders (+32.6%). LABOR 32.2% of net ($1,428.87), up from 18.4% SDLW (+75.0%) -- elevated but improved from Tue Jun 2 (39.4%). Discounts $290.55, voids $66.50, $0 refunds. Fri Jun 5 detailed not yet delivered at 7 AM (arrives midday). (2) Sling: today Jun 6 roster = 7 emp / 35.83 hrs / 0 uncovered / 0 OT / 1 off; Jun 5 actual roster = 10 emp / 55.91 hrs. (3) Google Ads: live scrape OK -- Fri Jun 5 $37.28 cost, 7,405 impr, 138 clicks, CTR 1.86%, 0 conversions. New 'BHC Coffee | Search | P1 Launch' campaign live. 95 conversions this week (-71.56%). SECURITY: new BILLING user May 30 STILL UNVERIFIED; 'unauthorized activity' banner still showing. (4) Yelp: session expired, RE-LOGIN NEEDED (stale since May 29) -- Joal emailed. (5) TripAdvisor: no ad email. (6) GitHub PAT: 200 OK.",
     "affected": [
-      "Friday Jun 5 Toast daily -- not yet posted (arrives ~7:40 AM)",
-      "Saturday Jun 6 Sling roster -- not yet posted (arrives ~7 AM); showing Jun 5",
-      "Yelp Ads (login expired -- re-auth at biz.yelp.com; stale since May 29)",
-      "Google Ads new billing user (unverified -- confirm authorized) + 'unauthorized activity' banner"
+      "LABOR % elevated Thu Jun 4 (32.2% vs 18.4% SDLW) -- improved from Tue Jun 2's 39.4% but still high; review scheduling",
+      "Toast Fri Jun 5 daily (not yet delivered at 7 AM; arrives midday)",
+      "Yelp Ads (login expired since May 29 -- re-auth at biz.yelp.com; Joal emailed)",
+      "Google Ads new billing user (unverified -- 'unauthorized activity' banner still showing; confirm authorized)",
+      "New Google Ads campaign 'BHC Coffee | Search | P1 Launch' now spending ($10.77 Fri)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-06T04:00:00-0700"
+    "as_of": "2026-06-06T07:12:24-0700"
   },
   "toast": {
     "date": "Thursday, June 4",
     "pending": false,
-    "source": "Parsed from the Toast single-location 'Daily Performance Summary' email ('The Brewhouse Santa Barbara - 229 West Montecito Street - Thursday, June 4', no-reply@toasttab.com). This single-location email DOES include same-day-last-week and 4-week-average comparison columns.",
+    "source": "Parsed from Toast per-location Daily Performance Summary ('The Brewhouse Santa Barbara - 229 West Montecito Street - Thursday, June 4', no-reply@toasttab.com).",
     "gross": 4729.31,
     "net": 4438.76,
     "guests": 169,
-    "guestsDerived": true,
+    "guestsDerived": false,
     "orders": 114,
-    "checks": 114,
+    "checks": 116,
     "avgPerGuest": 26.26,
     "avgPerOrder": 38.94,
-    "avgPerCheck": 38.94,
+    "avgPerCheck": 38.27,
     "netSDLW": 3435.85,
     "grossSDLW": 3618.1,
     "netChangeVsSDLWPct": 29.2,
@@ -35,13 +36,14 @@
     "laborPct": 32.2,
     "laborCost": 1428.87,
     "laborSDLWPct": 18.4,
-    "laborChangeVsSDLWPct": null,
-    "discountPct": 6.5,
+    "laborChangeVsSDLWPct": 75.0,
+    "discountPct": 6.1,
     "discounts": 290.55,
     "discountSDLW": 182.25,
     "discountChangeVsSDLWPct": 59.4,
-    "voidItems": 4,
+    "voidItems": null,
     "voidAmount": 66.5,
+    "voidSDLW": 33.5,
     "refunds": 0.0,
     "giftCards": 0.0,
     "guestsSDLW": 124,
@@ -51,8 +53,7 @@
     "avgPerGuestChangeVsSDLWPct": -5.2,
     "avgPerOrderChangeVsSDLWPct": -2.5,
     "nextDayPending": true,
-    "note": "Thu Jun 4 single-location (229 W Montecito) daily parsed WITH comparison columns: Net $4,438.76 vs same-day-last-week (Thu May 28) $3,435.85 = +29.2%. Gross $4,729.31 vs $3,618.10 = +30.7%. 169 guests vs 124 (+36%), 114 orders vs 86 (+33%). Avg/guest $26.26, avg/order $38.94. LABOR 32.2% of net (~$1,428.87). Discounts $290.55, voids $66.50, $0 refunds, $0 gift cards. 4-wk-avg net $4,572.50 (Jun 4 ran -2.9% under avg). Friday Jun 5 daily not yet delivered (arrives ~7:40 AM).",
-    "grossGroupSummary": 4629.31
+    "note": "Thu Jun 4 DETAILED per-location daily (229 W Montecito) parsed: Net $4,438.76 (+29.2% vs SDLW $3,435.85, -2.9% vs 4-wk avg $4,572.50), Gross $4,729.31 (+30.7% vs SDLW $3,618.10). 169 guests (+36.3% vs 124), 114 orders (+32.6% vs 86), 116 checks. Avg/guest $26.26, avg/order $38.94, avg/check $38.27. LABOR 32.2% of net ($1,428.87) -- still elevated, up from 18.4% SDLW (+75.0%) but improved from Tue Jun 2's 39.4%. Discounts $290.55 (+59.4% vs SDLW), voids $66.50, $0 refunds. Fri Jun 5 detailed daily not yet delivered at 7 AM run (only the Toast IQ Group teaser arrived); arrives midday."
   },
   "toastLastKnown": {
     "date": "Wednesday, June 3",
@@ -63,75 +64,25 @@
     "avgPerGuest": 21.71,
     "avgPerOrder": 33.92,
     "laborPct": 25.0,
-    "laborCost": 1221.0,
-    "discountPct": 4.4,
-    "voidItems": 8,
+    "laborCost": 1221.45,
+    "discountPct": 10.2,
+    "voidItems": null,
     "voidAmount": 95.9,
     "refunds": 0.0,
     "netChangeVsSDLWPct": 30.2,
     "grossChangeVsSDLWPct": 36.1
   },
   "sling": {
-    "date": "Wednesday, June 3",
+    "date": "Thursday, June 5",
     "pending": false,
     "nextDayPending": false,
-    "count": 7,
-    "hours": 35.24,
-    "shifts": 7,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "note": "Parsed from Sling daily report '3rd of June'. 7 employees / 35.24 hrs / 0 uncovered / 0 OT.",
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:54A-4:54A"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:30P"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Server",
-        "time": "12:30P-5:15P"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "3:30P-10:30P"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Server",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "5:00P-10:30P"
-      }
-    ]
-  },
-  "slingToday": {
-    "date": "Friday, June 5",
-    "pending": false,
-    "stale": true,
-    "nextDayPending": true,
     "count": 10,
     "hours": 55.91,
-    "overtime": 0,
-    "uncovered": 0,
-    "employeesOff": 1,
     "shifts": 10,
-    "note": "Latest available Sling roster is Fri Jun 5 (10 employees / 55.91 hrs / 10 shifts / 0 uncovered / 0 OT / 1 off). Saturday Jun 6 roster NOT yet delivered as of ~4 AM run -- this roster is one day stale relative to today.",
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "note": "Parsed from Sling daily report '5th of June' (sling@getsling.com). 10 employees / 55.91 hrs / 10 shifts / 0 uncovered / 0 OT / 1 off.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -185,34 +136,89 @@
       }
     ]
   },
-  "slingLastKnown": {
-    "date": "Wednesday, June 3",
+  "slingToday": {
+    "date": "Saturday, June 6",
+    "pending": false,
+    "stale": false,
+    "nextDayPending": false,
     "count": 7,
-    "hours": 35.24,
-    "shifts": 7,
-    "uncovered": 0,
+    "hours": 35.83,
     "overtime": 0,
-    "employeesOff": 0,
+    "uncovered": 0,
+    "employeesOff": 1,
+    "shifts": 7,
+    "note": "Parsed from Sling daily report '6th of June' (sling@getsling.com): 7 employees / 35.83 hrs / 7 shifts / 0 uncovered / 0 OT / 1 off.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "4:54A-4:54A"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:30P"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Server",
-        "time": "12:30P-5:15P"
+        "time": "4:39A-4:39A"
       },
       {
         "name": "Andrew Turner",
         "role": "Bartender",
-        "time": "3:30P-10:30P"
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "10:45A-5:00P"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "4:00P-10:00P"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Busser",
+        "time": "5:00P-11:00P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
+        "time": "5:00P-11:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:30P-11:30P"
+      }
+    ]
+  },
+  "slingLastKnown": {
+    "date": "Thursday, June 5",
+    "count": 10,
+    "hours": 55.91,
+    "shifts": 10,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:56A-4:56A"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "10:45A-4:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "4:00P-10:00P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "4:00P-11:30P"
       },
       {
         "name": "Noel Nunez",
@@ -220,32 +226,42 @@
         "time": "4:00P-10:30P"
       },
       {
-        "name": "Cal Carter",
+        "name": "James Hernadez",
         "role": "Server",
-        "time": "4:00P-10:30P"
+        "time": "4:30P-11:30P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "5:00P-11:30P"
       },
       {
         "name": "Bri Kelley",
         "role": "Server",
-        "time": "5:00P-10:30P"
+        "time": "5:00P-11:00P"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Busser",
+        "time": "5:00P-11:30P"
       }
     ]
   },
   "googleAds": {
     "lastUpdated": "Saturday, June 6",
     "yesterday": {
-      "date": "June 4, 2026",
-      "spend": 33.49,
-      "clicks": 117,
+      "date": "June 5, 2026",
+      "spend": 37.28,
+      "clicks": 138,
       "clicksDerived": false,
-      "impressions": 6160,
-      "cpc": 0.29,
-      "ctr": 1.9,
+      "impressions": 7405,
+      "cpc": 0.27,
+      "ctr": 1.86,
       "conversions": 0.0,
       "avgTargetCpa": null,
       "costChangeVsLastMon": null,
-      "costChangeAbs": 8.31,
-      "note": "Live Chrome scrape on Fri Jun 5 ~7 AM PT, 'Yesterday' (Thu Jun 4) date range, account 343-687-4835. Cost $33.49 (up $8.31 vs comparison). 6,160 impressions (down 462), 117 clicks (up 4), CTR 1.90%, CPC $0.29. 0 conversions (down 5.00). Avg target CPA not shown (--)."
+      "costChangeAbs": 3.79,
+      "note": "Live scrape via Chrome on Sat Jun 6 ~7 AM PT, 'Yesterday' (Fri Jun 5) date range, account 343-687-4835. Cost $37.28 (up $3.79 vs comparison). 7,405 impressions (up 1,247), 138 clicks (up 21), CTR 1.86%, CPC $0.27. 0 conversions."
     },
     "campaigns": [
       {
@@ -254,11 +270,11 @@
         "statusNote": "Limited by budget; all asset groups limited by policy",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 110,
-        "impressions": 6054,
-        "ctr": 1.82,
+        "clicks": 123,
+        "impressions": 7216,
+        "ctr": 1.7,
         "cpc": 0.22,
-        "cost": 24.36,
+        "cost": 26.5,
         "budgetPerDay": 23.37,
         "bidStrategy": "Maximize conversions (Target CPA)"
       },
@@ -267,15 +283,14 @@
         "status": "Eligible (Limited)",
         "statusNote": "Limited by bid strategy",
         "type": "Search",
-        "optimizationScore": 84.3,
-        "clicks": 7,
-        "impressions": 106,
-        "ctr": 6.6,
-        "cpc": 1.3,
-        "cost": 9.13,
+        "optimizationScore": 80.9,
+        "clicks": 15,
+        "impressions": 189,
+        "ctr": 7.94,
+        "cpc": 0.72,
+        "cost": 10.77,
         "budgetPerDay": 10.0,
-        "bidStrategy": "Limited by bid strategy",
-        "isNew": true
+        "bidStrategy": "Maximize clicks"
       },
       {
         "name": "Oldest SB Brewery on Tap",
@@ -290,23 +305,23 @@
       }
     ],
     "totals7d": {
-      "conversions": 224.0,
+      "conversions": 95.0,
       "cost": 154.25,
-      "note": "7-day totals not re-pulled this run (date range was 'Yesterday'); carried from prior run -- Performance Max generated 224 conversions, down 36.54% vs previous period (per dashboard banner Sun May 31)."
+      "note": "Performance Max (Local store visits-2) generated 95 conversions this week, a decrease of 71.56% vs previous period (per dashboard banner Sat Jun 6)."
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Sat Jun 6 ~4 AM run: Google Ads NOT re-scraped this run (no live browser session); carrying Fri Jun 5 live scrape. 2 report emails in last 24h ('Brewhouse Daily Campaign Report' + 'Campaign performance'), no disapprovals. SECURITY: new BILLING user added May 30 STILL UNVERIFIED -- confirm authorized. 'Unauthorized activity' banner still present.",
-    "stale": true,
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "Sat Jun 6 7 AM run: live Chrome scrape OK for Yesterday (Fri Jun 5). New campaign 'BHC Coffee | Search | P1 Launch' now live (189 impr / 15 clicks / $10.77, limited by bid strategy). Account-level 'Protect your account from unauthorized activity' banner STILL showing -- ties to the unverified new BILLING user added May 30. Verify authorized.",
+    "stale": false,
     "authError": false,
     "reportsLast24h": 2,
-    "reportsLast48h": 2,
+    "reportsLast48h": 4,
     "accountChangeAlert": {
       "present": true,
       "date": "2026-05-30",
-      "detail": "New BILLING user added + new user invited to Google Ads account 343-687-4835 (invited by mojobrewhouse@gmail.com). Verify this was authorized. 'Unauthorized activity' banner still displayed Fri Jun 5.",
+      "detail": "New BILLING user added + new user invited to Google Ads account 343-687-4835 around May 30 (invited by mojobrewhouse@gmail.com). Account-level 'unauthorized activity' warning banner STILL displayed as of Sat Jun 6. Verify this was authorized.",
       "severity": "verify"
     }
   },
@@ -345,68 +360,48 @@
       "avgCpc": 1.09,
       "avgCpl": 3.97
     },
-    "note": "Fri Jun 5 ~7 AM run: Yelp LIVE scrape FAILED again -- biz.yelp.com redirected to login (session expired). Figures below carried over from last successful scrape (Fri May 29) and are STALE. Re-login required at biz.yelp.com to resume.",
+    "note": "Sat Jun 6 ~7 AM run: Yelp LIVE scrape FAILED again -- biz.yelp.com redirected to login (session expired, stale since Fri May 29). Figures below are carried over from the last successful scrape (Fri May 29). Re-login required at biz.yelp.com to resume. Joal notified by email.",
     "stale": true,
     "authError": true
   },
   "tripAdvisor": {
     "lastUpdated": "2026-06-06",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Sat Jun 6 ~4 AM run."
+    "note": "No analytics@hm2.tripadvisor.com email in last 24h at Sat Jun 6 7 AM run."
   },
   "reservations": {
-    "lastUpdated": "2026-06-06",
+    "lastUpdated": "2026-06-04",
     "source": "All Sources",
     "today": {
-      "date": "Sat, Jun 6",
-      "totalGuests": 4,
+      "date": "Thu, Jun 4",
+      "totalGuests": 8,
       "bookings": [
         {
-          "time": "6:15 PM",
-          "name": "Shari Filas",
-          "guests": 2,
+          "time": "5:45 PM",
+          "name": "Susan Montanaro",
+          "guests": 6,
           "status": "confirmed",
           "source": "SpotHopper",
-          "phone": "(612) 382-7151",
-          "notes": ""
+          "phone": "(310) 922-4174",
+          "notes": "4 adults with 2 high chairs please"
         },
         {
-          "time": "7:00 PM",
-          "name": "Jim Patterson",
+          "time": "7:30 PM",
+          "name": "Jill Haldeman",
           "guests": 2,
           "status": "confirmed",
           "source": "SpotHopper",
-          "phone": "(310) 994-9415",
-          "notes": ""
+          "phone": "(949) 632-1914",
+          "notes": "Birthday"
         }
       ]
     },
     "tomorrow": {
-      "date": "Sun, Jun 7",
-      "totalGuests": 2,
-      "bookings": [
-        {
-          "time": "6:00 PM",
-          "name": "Briney Alltucker",
-          "guests": 2,
-          "status": "confirmed",
-          "source": "SpotHopper",
-          "phone": "(303) 501-0695",
-          "notes": ""
-        }
-      ]
+      "date": "Fri, Jun 5",
+      "totalGuests": 0,
+      "bookings": []
     },
     "upcoming": [
-      {
-        "time": "1:30 PM",
-        "name": "Allison Espejo",
-        "guests": 12,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(408) 921-4308",
-        "notes": "UCSB Graduation lunch",
-        "date": "Sat, Jun 13"
-      },
       {
         "time": "3:30 PM",
         "name": "Jason DeVera",
@@ -428,6 +423,26 @@
         "date": "Thu, Jun 11"
       },
       {
+        "time": "6:00 PM",
+        "name": "Briney Alltucker",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(303) 501-0695",
+        "notes": "",
+        "date": "Sun, Jun 7"
+      },
+      {
+        "time": "6:15 PM",
+        "name": "Shari Filas",
+        "guests": 2,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(612) 382-7151",
+        "notes": "",
+        "date": "Sat, Jun 6"
+      },
+      {
         "time": "7:00 PM",
         "name": "David Milliken",
         "guests": 2,
@@ -438,36 +453,28 @@
         "date": "Mon, Jun 8"
       },
       {
-        "time": "7:30 PM",
-        "name": "Peyton Rhodes",
-        "guests": 7,
+        "time": "7:00 PM",
+        "name": "Jim Patterson",
+        "guests": 2,
         "status": "confirmed",
         "source": "SpotHopper",
-        "phone": "(925) 852-9146",
+        "phone": "(310) 994-9415",
         "notes": "",
-        "date": "Sat, Jun 13"
+        "date": "Sat, Jun 6"
       }
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-06",
-    "note": "Elizabeth G Heilman 5-star (Jun 4) -- top reply target (2 days). Victor Bonhomme 5-star (Jun 2) STILL unanswered (4 days). Both inside 1-week window. BuildQueen 3-star now 9 days. Graham Fischer-Corners 5-star 11 days.",
+    "lastUpdated": "2026-06-04",
+    "note": "Victor Bonhomme 5-star (Jun 2) STILL unanswered — top reply target, now 2 days old. BuildQueen 3-star now 7 days. Graham Fischer-Corners 5-star now 9 days. Scott A 5-star now 13 days (well past 1-week threshold).",
     "unanswered": [
-      {
-        "platform": "Google",
-        "author": "Elizabeth G Heilman",
-        "date": "2026-06-04",
-        "stars": 5,
-        "snippet": "Can't rave enough! We have a small RV and 2 doodles and trying to park in Santa Barbara is no easy...",
-        "ageDays": 2
-      },
       {
         "platform": "Google",
         "author": "Victor Bonhomme",
         "date": "2026-06-02",
         "stars": 5,
         "snippet": "Really nice people. Awesome service",
-        "ageDays": 4
+        "ageDays": 2
       },
       {
         "platform": "Google",
@@ -475,7 +482,7 @@
         "date": "2026-05-28",
         "stars": 3,
         "snippet": "Had their macadamia nut crusted halibut. Best part of the meal was the crunchy sugar snap peas. The...",
-        "ageDays": 9
+        "ageDays": 7
       },
       {
         "platform": "Google",
@@ -483,7 +490,7 @@
         "date": "2026-05-26",
         "stars": 5,
         "snippet": "Smash burgers and wings were great but the steak bite appetizer was amazing. Go on Tuesday through...",
-        "ageDays": 11
+        "ageDays": 9
       },
       {
         "platform": "Google",
@@ -491,7 +498,7 @@
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 15
+        "ageDays": 13
       },
       {
         "platform": "Google",
@@ -499,7 +506,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 20
+        "ageDays": 18
       },
       {
         "platform": "Google",
@@ -507,7 +514,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 21
+        "ageDays": 19
       },
       {
         "platform": "Google",
@@ -515,7 +522,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 22
+        "ageDays": 20
       },
       {
         "platform": "Google",
@@ -523,7 +530,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 26
+        "ageDays": 24
       },
       {
         "platform": "Google",
@@ -531,7 +538,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 42
+        "ageDays": 40
       },
       {
         "platform": "TripAdvisor",
@@ -539,7 +546,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 44
+        "ageDays": 42
       },
       {
         "platform": "Google",
@@ -547,7 +554,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 47
+        "ageDays": 45
       },
       {
         "platform": "Google",
@@ -555,7 +562,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 51
+        "ageDays": 49
       },
       {
         "platform": "Google",
@@ -563,11 +570,11 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 55
+        "ageDays": 53
       }
     ]
   },
-  "lastUpdated": "2026-06-06T04:00:00-0700",
+  "lastUpdated": "2026-06-06T07:12:24-0700",
   "yelpInquiries": {
     "lastUpdated": "2026-06-02",
     "actionable": [
