@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup HQ — The Brewhouse Santa Barbara | Every Match, Every Day</title>
+<meta name="description" content="Watch every 2026 FIFA World Cup match at The Brewhouse — Santa Barbara's oldest craft brewery. 20 beers on tap, big screens, $5 match day pints, every country's flag flying.">
+<meta name="theme-color" content="#0d4f1f">
+
+<!-- Open Graph for social shares -->
+<meta property="og:title" content="World Cup HQ — The Brewhouse Santa Barbara">
+<meta property="og:description" content="Every Match. Every Day. Every Country. 20 craft beers, big screens, $5 match day pints. 229 W Montecito St.">
+<meta property="og:type" content="website">
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --pitch: #0d4f1f;
+    --pitch-dark: #082f12;
+    --foam: #f4ecd6;
+    --cream: #faf6ea;
+    --red: #c8102e;
+    --gold: #f4b400;
+    --charcoal: #1a1a1a;
+    --muted: #6b6b6b;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background:
+      linear-gradient(135deg, rgba(8,47,18,0.92) 0%, rgba(13,79,31,0.88) 100%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 60px, transparent 60px, transparent 120px);
+    color: var(--foam);
+    padding: 48px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(244,180,0,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 9vw, 80px);
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 0.95;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 0 rgba(0,0,0,0.2);
+  }
+  .hero h1 .hq { color: var(--gold); }
+  .hero-sub {
+    font-size: clamp(18px, 3vw, 22px);
+    opacity: 0.92;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .hero-dates {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 28px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 28px;
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.2); }
+  .btn-primary { background: var(--gold); color: var(--charcoal); }
+  .btn-secondary { background: transparent; color: var(--foam); border: 2px solid var(--foam); }
+
+  /* ===== UPCOMING MATCHES BANNER ===== */
+  .upcoming {
+    background: linear-gradient(90deg, var(--red) 0%, #8b0a20 100%);
+    color: white;
+    padding: 24px 20px 28px;
+    border-top: 4px solid var(--gold);
+    border-bottom: 4px solid var(--gold);
+  }
+  .upcoming-header {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--charcoal);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+    padding: 4px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .upcoming-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .match-days {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .match-day {
+    background: rgba(0,0,0,0.18);
+    border-radius: 8px;
+    padding: 16px 20px 20px;
+    text-align: left;
+    width: 100%;
+  }
+  .match-day-title {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid rgba(244,180,0,0.35);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .match-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .match-row:last-child { border-bottom: none; }
+  .match-teams {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .match-time {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--foam);
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .match-row.featured {
+    background: rgba(244,180,0,0.18);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 4px -6px;
+    border: 1px solid rgba(244,180,0,0.4);
+  }
+  .match-row.featured .match-teams::before {
+    content: "⭐ ";
+  }
+  .match-row.featured .match-time {
+    background: var(--gold);
+    color: var(--charcoal);
+  }
+
+  /* === PRIMARY DAY (today / featured day — supersized) === */
+  .match-day.primary {
+    background: rgba(0,0,0,0.32);
+    padding: 22px 28px 26px;
+    border: 2px solid rgba(244,180,0,0.5);
+  }
+  .match-day.primary .match-day-title {
+    font-size: clamp(18px, 2.6vw, 22px);
+    letter-spacing: 3px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .match-day.primary .match-row {
+    padding: 14px 0;
+  }
+  .match-day.primary .match-teams {
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 800;
+  }
+  .match-day.primary .match-time {
+    font-size: clamp(15px, 2.2vw, 19px);
+    padding: 8px 14px;
+  }
+  .match-day.primary .match-row.featured {
+    padding: 18px 18px;
+    margin: 6px -8px;
+  }
+
+  /* ===== STATS STRIP ===== */
+  .stats {
+    background: var(--charcoal);
+    color: var(--foam);
+    padding: 24px 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 900;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+  .stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 6px;
+    opacity: 0.8;
+  }
+  @media (max-width: 600px) {
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 56px 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    display: block;
+    text-align: center;
+    color: var(--pitch);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 900;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 40px;
+    font-size: 17px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ===== SPECIALS ===== */
+  .specials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .special-card {
+    background: white;
+    border: 2px solid var(--charcoal);
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  .special-card:hover { transform: translateY(-4px); }
+  .special-icon {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  .special-name {
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .special-price {
+    color: var(--red);
+    font-size: 32px;
+    font-weight: 900;
+    margin: 8px 0;
+  }
+  .special-desc {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  /* ===== SCHEDULE ===== */
+  .schedule-section { background: white; }
+  .schedule-phase {
+    margin-bottom: 32px;
+    border-left: 4px solid var(--gold);
+    padding-left: 20px;
+  }
+  .phase-title {
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--pitch);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .phase-dates {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .phase-detail {
+    color: var(--charcoal);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .live-badge {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .note {
+    background: var(--foam);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--charcoal);
+  }
+
+  /* ===== WHY ===== */
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .why-card {
+    text-align: left;
+    padding: 8px;
+  }
+  .why-num {
+    color: var(--gold);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .why-title {
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+  .why-text {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  /* ===== LOCATION ===== */
+  .location-section {
+    background: var(--pitch-dark);
+    color: var(--foam);
+  }
+  .location-section .section-eyebrow { color: var(--gold); }
+  .location-section .section-title { color: var(--foam); }
+  .location-section .section-sub { color: rgba(244,236,214,0.7); }
+  .location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (max-width: 700px) {
+    .location-grid { grid-template-columns: 1fr; }
+  }
+  .address-block {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .address-block strong {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--gold);
+  }
+  .hours-block {
+    background: rgba(255,255,255,0.06);
+    padding: 24px;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-size: 15px;
+  }
+  .hours-block .h-title {
+    font-weight: 800;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+  .map-embed {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 8px;
+    filter: grayscale(20%);
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final-cta {
+    background: var(--red);
+    color: white;
+    text-align: center;
+    padding: 56px 24px;
+  }
+  .final-cta h2 {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 900;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .final-cta p {
+    font-size: 18px;
+    margin-bottom: 24px;
+    opacity: 0.95;
+  }
+  .final-cta .btn-primary {
+    background: var(--foam);
+    color: var(--red);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--charcoal);
+    color: rgba(244,236,214,0.6);
+    text-align: center;
+    padding: 24px;
+    font-size: 13px;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ===== STICKY MOBILE CTA ===== */
+  .sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--red);
+    padding: 12px 16px;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.2);
+  }
+  .sticky-cta a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 700px) {
+    .sticky-cta { display: block; }
+    body { padding-bottom: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-eyebrow">🏆 World Cup 2026</span>
+  <h1>WORLD CUP <span class="hq">HQ</span></h1>
+  <p class="hero-sub">Every Match. Every Day. Every Country.</p>
+  <p class="hero-dates">June 11 — July 19 · Santa Barbara</p>
+  <div class="cta-row">
+    <a href="#location" class="btn btn-primary">📍 Get Directions</a>
+    <a href="#schedule" class="btn btn-secondary">📺 See the Schedule</a>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- UPCOMING MATCHES · UPDATE EVERY 1-2 DAYS                     -->
+<!-- To update: swap matchups, times, dates. Add ⭐ to featured    -->
+<!-- match by changing class="match-row" → class="match-row featured" -->
+<!-- ============================================================ -->
+<div class="upcoming">
+  <div class="upcoming-container">
+    <div class="upcoming-header">⚽ Upcoming Matches</div>
+
+    <div class="match-days">
+
+      <!-- THURSDAY JUNE 11 · PRIMARY (today / spotlight day) -->
+      <!-- To make a day primary: add class="match-day primary"   -->
+      <!-- To make secondary: just class="match-day"               -->
+      <div class="match-day primary">
+        <div class="match-day-title">⚡ Thursday, June 11 · Opening Day</div>
+        <div class="match-row featured">
+          <div class="match-teams">🇲🇽 Mexico vs. South Africa 🇿🇦</div>
+          <div class="match-time">12:00 PM PT</div>
+        </div>
+        <div class="match-row">
+          <div class="match-teams">🇰🇷 South Korea vs. Czechia 🇨🇿</div>
+          <div class="match-time">7:00 PM PT</div>
+        </div>
+      </div>
+
+      <!-- FRIDAY JUNE 12 · SECONDARY -->
+      <div class="match-day">
+        <div class="match-day-title">Friday, June 12</div>
+        <div class="match-row">
+          <div class="match-teams">🇨🇦 Canada vs. Bosnia &amp; Herzegovina 🇧🇦</div>
+          <div class="match-time">12:00 PM PT</div>
+        </div>
+        <div class="match-row featured">
+          <div class="match-teams">🇺🇸 USA vs. Paraguay 🇵🇾</div>
+          <div class="match-time">6:00 PM PT</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- STATS STRIP -->
+<div class="stats">
+  <div><span class="stat-num">104</span><div class="stat-label">Matches</div></div>
+  <div><span class="stat-num">48</span><div class="stat-label">Countries</div></div>
+  <div><span class="stat-num">20</span><div class="stat-label">Beers on Tap</div></div>
+  <div><span class="stat-num">1</span><div class="stat-label">Best Spot in SB</div></div>
+</div>
+
+<!-- THE VIBE -->
+<section>
+  <div class="container">
+    <span class="section-eyebrow">The Vibe</span>
+    <h2 class="section-title">Where Santa Barbara Watches the World Cup</h2>
+    <p class="section-sub" style="max-width:720px;">
+      Doors open early. Big screens fired up inside. Cold craft beer in your hand,
+      smell of burgers and fish tacos off the grill, and a bar full of strangers yelling
+      at the same screen when somebody finally scores. That's match day at The Brewhouse.
+      No cover. No reservations needed. Just show up.
+    </p>
+    <p class="section-sub" style="max-width:680px; margin-top:18px; font-size:16px;">
+      ☕ <strong>Not drinking?</strong> Grab an espresso, cold brew, or pastry from
+      <strong>Brewhouse Coffee</strong> right on property — open daily from 7 AM.
+      Same building, same matches, no pint required.
+    </p>
+    <p class="section-sub" style="max-width:680px; margin-top:14px; font-size:16px;">
+      🌿 <strong>Not into soccer?</strong> Our patios stay open all day — perfect spot
+      to watch the watchers, eat lunch in the sun, and dip in for a goal if the crowd
+      roars loud enough.
+    </p>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule" class="schedule-section">
+  <div class="container">
+    <span class="section-eyebrow">Tournament Schedule</span>
+    <h2 class="section-title">When We're Showing What</h2>
+    <p class="section-sub">All times Pacific. Every match shown on our big screens inside — dining room and bar.</p>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Group Stage <span class="live-badge">UP NEXT</span></div>
+      <div class="phase-dates">Thursday, June 11 — Saturday, June 27 · 2026</div>
+      <div class="phase-detail">
+        Three matches a day, every day. Opening match kicks off Thursday June 11. Mexico, USA, Brazil, Argentina, England, France — every favorite plays at least three group games. Come early to grab a seat for the marquee matchups.
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Round of 32</div>
+      <div class="phase-dates">Sunday, June 28 — Friday, July 3 · 2026</div>
+      <div class="phase-detail">
+        Knockout rounds start. Win or go home. Higher stakes, smaller windows, bigger crowds — reservations recommended for the night matches.
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Round of 16</div>
+      <div class="phase-dates">Saturday, July 4 — Tuesday, July 7 · 2026</div>
+      <div class="phase-detail">
+        Knockout play continues right through 4th of July weekend. Independence Day match + a cold pint at the Brewhouse — that's a day.
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Quarterfinals</div>
+      <div class="phase-dates">Thursday, July 9 — Saturday, July 11 · 2026</div>
+      <div class="phase-detail">
+        Eight teams left. Two matches a day. This is when it gets serious.
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Semifinals</div>
+      <div class="phase-dates">Tuesday, July 14 — Wednesday, July 15 · 2026</div>
+      <div class="phase-detail">
+        Final four. Big-screen energy turned all the way up.
+      </div>
+    </div>
+
+    <div class="schedule-phase">
+      <div class="phase-title">Third-Place &amp; Final</div>
+      <div class="phase-dates">Saturday, July 18 — Sunday, July 19 · 2026</div>
+      <div class="phase-detail">
+        <strong>FINAL: Sunday, July 19 at MetLife Stadium.</strong> Reserve early — this one will fill up. Doors open early Sunday, food and beer running all day.
+      </div>
+    </div>
+
+    <div class="note">
+      ⚽ <strong>Want a specific match on a specific screen?</strong> Call ahead or DM us on Instagram <a href="https://instagram.com/brewhousesb" style="color:var(--pitch);font-weight:700;">@brewhousesb</a> and we'll have it queued up when you walk in.
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section>
+  <div class="container">
+    <span class="section-eyebrow">Why Watch Here</span>
+    <h2 class="section-title">More Than a Sports Bar</h2>
+    <p class="section-sub">Santa Barbara's oldest craft brewery, doubling as the city's World Cup headquarters for the next six weeks.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">20 Beers Brewed On-Site</div>
+        <div class="why-text">Casey brews every drop himself in our 7-barrel brewhouse. No Bud Light here — real craft, every match.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">Big Screens Inside</div>
+        <div class="why-text">Multiple screens across the dining room and bar — every match, all day. Grab a seat with a view.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">Country Flags Out Front</div>
+        <div class="why-text">Flying the colors of the day's matchups out on Montecito Street. You'll spot us from a block away.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-title">Food That Holds Up</div>
+        <div class="why-text">House burgers, fresh fish off our own boat, smoked BBQ on Sundays. This is a restaurant, not a wings shack.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <div class="why-title">Coffee for Non-Drinkers</div>
+        <div class="why-text">Brewhouse Coffee on-site, open 7 AM daily. Espresso, cold brew, pastries — full match experience, no pint required.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <div class="why-title">Walking Distance Downtown</div>
+        <div class="why-text">Three blocks from State Street, two blocks from the harbor, easy walk from most downtown hotels.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="location-section">
+  <div class="container">
+    <span class="section-eyebrow">Find Us</span>
+    <h2 class="section-title">229 W Montecito St</h2>
+    <p class="section-sub">Santa Barbara's oldest craft brewery, three blocks off State Street.</p>
+
+    <div class="location-grid">
+      <div>
+        <div class="address-block">
+          <strong>The Brewhouse</strong>
+          229 W Montecito Street<br>
+          Santa Barbara, CA 93101
+        </div>
+
+        <div class="hours-block">
+          <div class="h-title">⏰ Match Day Hours</div>
+          Doors open <strong>11 AM daily</strong> through the tournament<br>
+          Kitchen open all day · Bar open late<br>
+          <em style="opacity:0.7;">Extended hours for late knockout matches</em>
+        </div>
+
+        <div class="cta-row" style="margin-top:24px; justify-content:flex-start;">
+          <a href="https://maps.google.com/?q=The+Brewhouse+229+W+Montecito+St+Santa+Barbara" class="btn btn-primary">Open in Maps</a>
+          <a href="#" class="btn btn-secondary">Reserve a Table</a>
+        </div>
+      </div>
+
+      <div>
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps?q=229+W+Montecito+St,+Santa+Barbara,+CA+93101&output=embed"
+          loading="lazy"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <h2>Every Match. Big Screens. Cold Beer.</h2>
+  <p>No cover. No reservation. Just walk in.</p>
+  <a href="https://maps.google.com/?q=The+Brewhouse+229+W+Montecito+St+Santa+Barbara" class="btn btn-primary">📍 Get Directions</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 The Brewhouse · Santa Barbara's Oldest Craft Brewery · <a href="https://sbbrewhouse.com">sbbrewhouse.com</a>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://maps.google.com/?q=The+Brewhouse+229+W+Montecito+St+Santa+Barbara">📍 Open in Maps · Walk Right In</a>
+</div>
+
+</body>
+</html>
