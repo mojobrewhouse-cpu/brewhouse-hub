@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Brewhouse Bar">
+    <meta name="description" content="The Brewhouse Bartenders Dashboard">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%231B3A4B' width='180' height='180'/><text x='50%' y='50%' font-size='80' font-weight='bold' fill='%23C8943E' text-anchor='middle' dy='.3em'>B</text></svg>">
+    <title>Brewhouse Bartenders Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --navy: #1B3A4B;
+            --gold: #C8943E;
+            --cream: #F5F0E8;
+            --dark-text: #2C2C2C;
+            --light-text: #666;
+            --border: #E8E4DD;
+            --success: #4CAF50;
+            --warning: #FF9800;
+            --info: #2196F3;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background: var(--cream);
+            color: var(--dark-text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--navy) 0%, #0F2738 100%);
+            color: var(--cream);
+            padding: 12px 16px 8px;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title .gold {
+            color: var(--gold);
+        }
+
+        .header-time {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+
+        .header-status {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+
+        /* Main Content Area */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.2s ease-in;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Bottom Tab Bar */
+        .tab-bar {
+            display: flex;
+            background: var(--navy);
+            border-top: 2px solid var(--gold);
+            flex-shrink: 0;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 8px;
+            border: none;
+            background: transparent;
+            color: rgba(245, 240, 232, 0.6);
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .tab-btn.active {
+            color: var(--gold);
+            background: rgba(200, 148, 62, 0.1);
+        }
+
+        .tab-icon {
+            font-size: 16px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .card-subtitle {
+            font-size: 13px;
+            color: var(--light-text);
+            margin-bottom: 8px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+            box-shadow: 0 2px 8px rgba(200, 148, 62, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+            box-shadow: 0 1px 4px rgba(200, 148, 62, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .btn-secondary:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .btn-small {
+            padding: 8px 12px;
+            font-size: 13px;
+            min-height: 36px;
+        }
+
+        .btn-block {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .info-item {
+            background: #F9F8F5;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+            background: white;
+            color: var(--dark-text);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(200, 148, 62, 0.1);
+        }
+
+        /* Accordion */
+        .accordion-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            margin-bottom: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 12px;
+            background: #F9F8F5;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--navy);
+            user-select: none;
+            -webkit-user-select: none;
+            min-height: 44px;
+        }
+
+        .accordion-header:active {
+            background: #F0EEEB;
+        }
+
+        .accordion-toggle {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(90deg);
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 12px;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+
+        /* Recipe Cards */
+        .recipe {
+            margin-bottom: 8px;
+        }
+
+        .recipe-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .recipe-name {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .recipe-price {
+            background: var(--gold);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .recipe-meta {
+            font-size: 12px;
+            color: var(--light-text);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .recipe-instructions {
+            background: #F9F8F5;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            display: none;
+        }
+
+        .recipe.expanded .recipe-instructions {
+            display: block;
+        }
+
+        .recipe-expand-btn {
+            font-size: 12px;
+            color: var(--gold);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Beer List */
+        .beer-item {
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .beer-item:last-child {
+            border-bottom: none;
+        }
+
+        .beer-name {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+        .beer-desc {
+            font-size: 12px;
+            color: var(--light-text);
+        }
+
+        /* Tip Outs */
+        .tipout-entry {
+            background: #F9F8F5;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid var(--gold);
+        }
+
+        .tipout-info {
+            flex: 1;
+        }
+
+        .tipout-name {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 14px;
+        }
+
+        .tipout-amount {
+            font-size: 12px;
+            color: var(--light-text);
+            margin-top: 2px;
+        }
+
+        .tipout-percent {
+            background: var(--gold);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .tipout-total {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            margin-top: 12px;
+        }
+
+        .tipout-total-label {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+
+        .tipout-total-value {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        /* Search */
+        .search-box {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 12px 10px 36px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: inherit;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* Wine List */
+        .wine-category {
+            margin-bottom: 16px;
+        }
+
+        .wine-category-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            background: var(--navy);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .wine-item {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .wine-item:last-child {
+            border-bottom: none;
+        }
+
+        .wine-name {
+            font-weight: 600;
+            color: var(--navy);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .wine-price {
+            font-size: 11px;
+            color: var(--light-text);
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-right: 4px;
+        }
+
+        .badge-on-tap {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+
+        .badge-specialty {
+            background: #FCE4EC;
+            color: #C2185B;
+        }
+
+        .note {
+            background: #FFF9E6;
+            border-left: 3px solid var(--gold);
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--dark-text);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 12px 0;
+        }
+
+        /* Floor Plan */
+        .floor-plan {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .floor-section {
+            background: #F9F8F5;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            border-left: 3px solid var(--gold);
+        }
+
+        .floor-label {
+            font-size: 12px;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin-bottom: 6px;
+        }
+
+        .floor-count {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        /* Instructions */
+        .instructions {
+            background: #E3F2FD;
+            border-left: 3px solid var(--info);
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--dark-text);
+            margin: 12px 0;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .instructions li {
+            margin-bottom: 6px;
+        }
+
+        /* Capacity */
+        .capacity-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .capacity-card {
+            background: #F9F8F5;
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .capacity-label {
+            font-size: 11px;
+            color: var(--light-text);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .capacity-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .floor-plan {
+                grid-template-columns: 1fr;
+            }
+
+            .capacity-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Safe Area Insets */
+        @supports (padding: max(0px)) {
+            .content {
+                padding-left: max(16px, env(safe-area-inset-left));
+                padding-right: max(16px, env(safe-area-inset-right));
+                padding-bottom: max(16px, env(safe-area-inset-bottom));
+            }
+
+            .tab-bar {
+                padding-bottom: max(0px, env(safe-area-inset-bottom));
+            }
+        }
+
+        /* Print */
+        @media print {
+            .tab-bar {
+                display: none;
+            }
+        }
+
+        /* ===== RESERVATION MANAGER ===== */
+        .rez-section { margin-bottom: 14px; }
+        .rez-section-title {
+            font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 6px; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 4px;
+        }
+        .rez-count { font-size: 12px; color: var(--light-text); font-weight: 400; }
+        .rez-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 12px; background: white; border-radius: 8px; margin-bottom: 4px;
+            font-size: 14px; cursor: pointer; transition: background 0.15s;
+            border: 1px solid var(--border);
+        }
+        .rez-row:active { background: #F0EEEB; }
+        .rez-time { color: var(--gold); font-weight: 700; min-width: 70px; font-size: 13px; }
+        .rez-name { flex: 1; color: var(--dark-text); margin: 0 8px; font-size: 14px; }
+        .rez-guests { color: var(--light-text); font-size: 13px; }
+        .rez-guests strong { color: var(--navy); font-weight: 700; }
+        .rez-note-icon { font-size: 11px; margin-left: 4px; }
+        .rez-source {
+            font-size: 10px; padding: 2px 6px; border-radius: 10px;
+            font-weight: 600; margin-left: 6px; display: inline-block;
+        }
+        .rez-source.spothop { background: #E3F2FD; color: #1565C0; }
+        .rez-source.phone { background: #E8F5E9; color: #2E7D32; }
+        .rez-source.yelp { background: #FCE4EC; color: #C62828; }
+        .rez-source.walkin { background: #FFF8E1; color: #F57F17; }
+        .rez-total {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 10px; background: #E8F5E9; border: 1px solid #C8E6C9;
+            border-radius: 8px; margin-top: 12px; font-size: 14px;
+            color: #2E7D32; font-weight: 600;
+        }
+        .rez-phone { font-size: 13px; color: var(--light-text); text-align: center; margin-top: 8px; }
+        .rez-phone a { color: var(--gold); text-decoration: none; font-weight: 700; }
+        .rez-add-btn {
+            display: block; width: 100%; padding: 14px; margin-top: 12px;
+            background: var(--gold); color: white; border: none; border-radius: 8px;
+            font-size: 16px; font-weight: 700; cursor: pointer; text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .rez-add-btn:active { opacity: 0.9; transform: scale(0.98); }
+        .rez-empty {
+            text-align: center; padding: 24px; color: var(--light-text); font-size: 14px;
+        }
+        /* Rez Modal */
+        .rez-modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;
+        }
+        .rez-modal-overlay.active { display: flex; }
+        .rez-modal {
+            background: white; border: 2px solid var(--gold); border-radius: 12px;
+            width: 380px; max-width: 95vw; max-height: 90vh; overflow-y: auto;
+        }
+        .rez-modal-head {
+            background: var(--navy); padding: 14px 18px;
+            border-bottom: 2px solid var(--gold); display: flex;
+            align-items: center; justify-content: space-between;
+            border-radius: 10px 10px 0 0;
+        }
+        .rez-modal-title {
+            font-size: 15px; font-weight: 700; color: var(--gold);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .rez-modal-close {
+            background: none; border: none; color: rgba(255,255,255,0.6);
+            font-size: 24px; cursor: pointer; padding: 4px 8px; line-height: 1;
+        }
+        .rez-modal-close:active { color: white; }
+        .rez-modal-body { padding: 16px 18px; }
+        .rez-field { margin-bottom: 12px; }
+        .rez-field label {
+            display: block; font-size: 11px; color: var(--light-text);
+            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; font-weight: 600;
+        }
+        .rez-field input, .rez-field select, .rez-field textarea {
+            width: 100%; padding: 10px 12px; background: #F9F8F5;
+            border: 1px solid var(--border); border-radius: 6px;
+            color: var(--dark-text); font-size: 15px; font-family: inherit;
+        }
+        .rez-field input:focus, .rez-field select:focus, .rez-field textarea:focus {
+            outline: none; border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(200, 148, 62, 0.1);
+        }
+        .rez-field textarea { resize: vertical; min-height: 50px; }
+        .rez-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .rez-modal-actions { display: flex; gap: 8px; margin-top: 16px; }
+        .rez-btn {
+            flex: 1; padding: 12px; border: none; border-radius: 8px;
+            font-size: 14px; font-weight: 700; cursor: pointer;
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+        .rez-btn.save { background: var(--gold); color: white; }
+        .rez-btn.save:active { opacity: 0.9; }
+        .rez-btn.cancel { background: #E8E4DD; color: var(--light-text); }
+        .rez-btn.cancel:active { background: #D5D0C8; }
+        .rez-btn.delete { background: #FFEBEE; color: #C62828; }
+        .rez-btn.delete:active { background: #FFCDD2; }
+
+        /* ===== WHO'S WORKING ===== */
+        .staff-section { margin-top: 16px; }
+        .staff-section-title {
+            font-size: 13px; font-weight: 700; color: var(--navy); text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+        }
+        .staff-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 12px; background: white; border-radius: 8px; margin-bottom: 4px;
+            border: 1px solid var(--border);
+        }
+        .staff-name { font-weight: 600; color: var(--dark-text); font-size: 14px; }
+        .staff-role {
+            font-size: 11px; padding: 3px 8px; border-radius: 10px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .staff-role.bartender { background: #E3F2FD; color: #1565C0; }
+        .staff-role.server { background: #E8F5E9; color: #2E7D32; }
+        .staff-role.host { background: #FFF8E1; color: #F57F17; }
+        .staff-role.kitchen { background: #FCE4EC; color: #C62828; }
+        .staff-role.barback { background: #F3E5F5; color: #7B1FA2; }
+        .staff-role.manager { background: #FFF3E0; color: #E65100; }
+        .staff-role.busser { background: #E0F2F1; color: #00695C; }
+        .staff-add-btn {
+            display: block; width: 100%; padding: 10px; margin-top: 8px;
+            background: var(--navy); color: var(--cream); border: none; border-radius: 8px;
+            font-size: 14px; font-weight: 600; cursor: pointer;
+        }
+        .staff-add-btn:active { opacity: 0.9; }
+        /* Staff Modal */
+        .staff-modal-overlay {
+            display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;
+        }
+        .staff-modal-overlay.active { display: flex; }
+        .staff-edit-actions { display: flex; gap: 6px; }
+        .staff-edit-btn {
+            background: none; border: 1px solid var(--border); border-radius: 6px;
+            padding: 4px 8px; font-size: 11px; cursor: pointer; color: var(--light-text);
+        }
+        .staff-edit-btn:active { background: #F0EEEB; }
+        .staff-edit-btn.remove { color: #C62828; border-color: #FFCDD2; }
+
+        /* Collapsible info panels */
+        .rez-info-toggle {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 10px 12px; background: #F9F8F5; border-radius: 8px;
+            margin-bottom: 4px; cursor: pointer; border: 1px solid var(--border);
+            font-size: 13px; font-weight: 600; color: var(--navy);
+        }
+        .rez-info-toggle:active { background: #F0EEEB; }
+        .rez-info-body { display: none; padding: 8px 12px; }
+        .rez-info-body.open { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="header-title"><span class="gold">The</span> Brewhouse</div>
+            <div class="header-time" id="current-time">--:-- AM</div>
+        </div>
+        <div class="header-status">Bartenders Dashboard • Santa Barbara</div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="content">
+            <!-- TAB 1: RESERVATIONS -->
+            <div id="reservations" class="tab-content active">
+                <!-- Quick Actions -->
+                <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+                    <button class="btn btn-primary" style="flex: 1; font-size: 14px; padding: 12px;" onclick="window.open('https://spothopperapp.com','_blank');">
+                        📱 SpotHopper
+                    </button>
+                    <a href="tel:8058844664" class="btn btn-secondary" style="flex: 1; font-size: 14px; padding: 12px;">
+                        📞 (805) 884-4664
+                    </a>
+                </div>
+
+                <!-- Reservation List -->
+                <div id="rez-body">
+                    <div class="rez-empty">No reservations yet. Tap + Add Reservation below.</div>
+                </div>
+
+                <button class="rez-add-btn" onclick="openAddRez()">+ Add Reservation</button>
+
+                <!-- Who's Working -->
+                <div class="staff-section">
+                    <div class="staff-section-title">👥 Who's Working</div>
+                    <div id="staff-body">
+                        <div class="rez-empty">No staff added yet.</div>
+                    </div>
+                    <button class="staff-add-btn" onclick="openAddStaff()">+ Add Staff</button>
+                </div>
+
+                <!-- Collapsible Info Panels -->
+                <div style="margin-top: 16px;">
+                    <div class="rez-info-toggle" onclick="toggleInfoPanel(this)">
+                        <span>📋 Reservation Settings</span>
+                        <span style="font-size: 11px; color: var(--light-text);">▶</span>
+                    </div>
+                    <div class="rez-info-body">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Auto-Confirm</div>
+                                <div class="info-value" style="color: var(--success);">✓ ON</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Min Lead Time</div>
+                                <div class="info-value">5 hours</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Max Length</div>
+                                <div class="info-value">1h 30m</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Cancellation</div>
+                                <div class="info-value">6 hours</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rez-info-toggle" onclick="toggleInfoPanel(this)">
+                        <span>🪑 Capacity & Floor Plan</span>
+                        <span style="font-size: 11px; color: var(--light-text);">▶</span>
+                    </div>
+                    <div class="rez-info-body">
+                        <div class="capacity-grid" style="margin-bottom: 12px;">
+                            <div class="capacity-card">
+                                <div class="capacity-label">Inside</div>
+                                <div class="capacity-number">149</div>
+                            </div>
+                            <div class="capacity-card">
+                                <div class="capacity-label">Patio</div>
+                                <div class="capacity-number">50</div>
+                            </div>
+                        </div>
+                        <div class="floor-plan">
+                            <div class="floor-section">
+                                <div class="floor-label">Main Dining</div>
+                                <div class="floor-count">20</div>
+                            </div>
+                            <div class="floor-section">
+                                <div class="floor-label">Back Patio</div>
+                                <div class="floor-count">12</div>
+                            </div>
+                            <div class="floor-section">
+                                <div class="floor-label">Front Patio</div>
+                                <div class="floor-count">7</div>
+                            </div>
+                            <div class="floor-section">
+                                <div class="floor-label">Espresso Room</div>
+                                <div class="floor-count">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESERVATION FORM MODAL -->
+            <div class="rez-modal-overlay" id="rez-modal-overlay">
+                <div class="rez-modal">
+                    <div class="rez-modal-head">
+                        <span class="rez-modal-title" id="rez-modal-title">Add Reservation</span>
+                        <button class="rez-modal-close" onclick="closeRezModal()">&times;</button>
+                    </div>
+                    <div class="rez-modal-body">
+                        <input type="hidden" id="rez-edit-id" value="">
+                        <div class="rez-field">
+                            <label>Guest Name *</label>
+                            <input type="text" id="rez-name" placeholder="e.g. Mary Liming">
+                        </div>
+                        <div class="rez-field-row">
+                            <div class="rez-field">
+                                <label>Date *</label>
+                                <input type="date" id="rez-date">
+                            </div>
+                            <div class="rez-field">
+                                <label>Time *</label>
+                                <input type="time" id="rez-time">
+                            </div>
+                        </div>
+                        <div class="rez-field-row">
+                            <div class="rez-field">
+                                <label>Party Size *</label>
+                                <input type="number" id="rez-guests" min="1" max="100" placeholder="2">
+                            </div>
+                            <div class="rez-field">
+                                <label>Source</label>
+                                <select id="rez-source">
+                                    <option value="Phone">Phone Call</option>
+                                    <option value="SpotHopper">SpotHopper</option>
+                                    <option value="Yelp">Yelp</option>
+                                    <option value="Walk-in">Walk-in</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rez-field">
+                            <label>Phone Number</label>
+                            <input type="tel" id="rez-phone" placeholder="(805) 555-1234">
+                        </div>
+                        <div class="rez-field">
+                            <label>Notes</label>
+                            <textarea id="rez-notes" placeholder="Birthday, back room, allergies, dog, etc."></textarea>
+                        </div>
+                        <div class="rez-modal-actions" id="rez-modal-actions">
+                            <button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button>
+                            <button class="rez-btn save" onclick="saveReservation()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STAFF FORM MODAL -->
+            <div class="staff-modal-overlay" id="staff-modal-overlay">
+                <div class="rez-modal">
+                    <div class="rez-modal-head">
+                        <span class="rez-modal-title" id="staff-modal-title">Add Staff</span>
+                        <button class="rez-modal-close" onclick="closeStaffModal()">&times;</button>
+                    </div>
+                    <div class="rez-modal-body">
+                        <div class="rez-field">
+                            <label>Name *</label>
+                            <input type="text" id="staff-name" placeholder="e.g. Sarah">
+                        </div>
+                        <div class="rez-field">
+                            <label>Role *</label>
+                            <select id="staff-role">
+                                <option value="Bartender">Bartender</option>
+                                <option value="Server">Server</option>
+                                <option value="Barback">Barback</option>
+                                <option value="Host">Host</option>
+                                <option value="Busser">Busser</option>
+                                <option value="Kitchen">Kitchen</option>
+                                <option value="Manager">Manager</option>
+                            </select>
+                        </div>
+                        <div class="rez-modal-actions">
+                            <button class="rez-btn cancel" onclick="closeStaffModal()">Cancel</button>
+                            <button class="rez-btn save" onclick="saveStaff()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: TV CONTROL -->
+            <div id="tv-control" class="tab-content">
+                <div class="card">
+                    <button class="btn btn-primary btn-block" style="font-size: 20px; padding: 20px; cursor: pointer;" onclick="window.open('https://apps.apple.com/us/app/directv-for-business-remote/id1313561825','_blank');">
+                        <span style="font-size: 24px;">📺</span> Open DirecTV for Business
+                    </button>
+                    <div style="text-align: center; margin-top: 8px;">
+                        <a href="https://apps.apple.com/us/app/directv-for-business-remote/id1313561825" target="_blank" rel="noopener" style="color: var(--gold); font-size: 13px; text-decoration: underline;">Download from App Store</a>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <div class="res-collapse-header" onclick="toggleResSection(this)" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; cursor: pointer;">
+                        <span style="font-weight: 600; font-size: 15px;">Setup Instructions</span>
+                        <span class="res-chevron" style="transition: transform 0.2s; font-size: 12px; color: var(--light-text);">▶</span>
+                    </div>
+                    <div class="res-collapse-body" style="display: none; padding: 0 16px 14px;">
+                        <div class="instructions">
+                            <ol>
+                                <li>Download <strong>"DIRECTV FOR BUSINESS Remote"</strong> from App Store</li>
+                                <li>Make sure iPad is on the <strong>same WiFi</strong> as the receivers</li>
+                                <li>Log in with your DirecTV business account</li>
+                                <li>App should <strong>auto-detect receivers</strong> on the network</li>
+                                <li>Name each TV (e.g. "Bar TV 1", "Patio TV")</li>
+                                <li>Group TVs to change multiple channels at once</li>
+                            </ol>
+                        </div>
+                        <div class="note" style="margin-top: 12px;">
+                            ℹ️ <strong>If app doesn't find receivers:</strong> They may need to be network-connected. Call DirecTV Business at <strong>888-388-4249</strong> and ask about DECA adapters for iPad control.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden;">
+                    <div class="res-collapse-header" onclick="toggleResSection(this)" style="display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; cursor: pointer;">
+                        <span style="font-weight: 600; font-size: 15px;">What You Can Control</span>
+                        <span class="res-chevron" style="transition: transform 0.2s; font-size: 12px; color: var(--light-text);">▶</span>
+                    </div>
+                    <div class="res-collapse-body" style="display: none; padding: 0 16px 14px;">
+                        <div style="font-size: 13px; line-height: 1.8;">
+                            <p><strong>Channels:</strong> Change any TV from anywhere in the restaurant</p>
+                            <p><strong>Grouping:</strong> Switch all bar TVs to the same game at once</p>
+                            <p><strong>Sports Schedule:</strong> See all upcoming games in the app</p>
+                            <p><strong>Name TVs:</strong> Label each receiver so you know which is which</p>
+                            <p><strong>Volume:</strong> Use Samsung TV remotes or SmartThings for volume</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SONOS -->
+            <div id="sonos" class="tab-content">
+                <div class="card">
+                    <a href="sonos://" class="btn btn-primary btn-block">
+                        <span style="font-size: 18px;">🔊</span> Open Sonos
+                    </a>
+                    <p style="font-size: 12px; color: var(--light-text); margin-top: 8px; text-align: center;">
+                        If app not installed, download from App Store
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Sonos Tips</div>
+                    <div style="font-size: 13px; line-height: 1.8;">
+                        <p><strong>🎵 Group Rooms:</strong> Play the same music in multiple zones</p>
+                        <p><strong>🔇 Volume Limits:</strong> Set max volume per zone to protect speakers</p>
+                        <p><strong>📻 Create Playlists:</strong> Make themed playlists for different times of day</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Suggested Playlists</div>
+                    <div style="font-size: 13px;">
+                        <p style="margin-bottom: 8px;"><strong>☀️ Lunch Chill</strong> – Light jazz, acoustic, indie</p>
+                        <p style="margin-bottom: 8px;"><strong>🌅 Dinner Vibes</strong> – Upbeat funk, soul, feel-good</p>
+                        <p><strong>🌙 Late Night Energy</strong> – Electronic, deep house, downtempo beats</p>
+                    </div>
+                </div>
+
+                <div class="note">
+                    💡 Tip: Always check volume levels before changing playlists, especially during service.
+                </div>
+            </div>
+
+            <!-- TAB 4: TIP OUTS -->
+            <div id="tipouts" class="tab-content">
+                <div class="note">
+                    💰 Tip outs are at bartender's discretion. This form is for tracking only.
+                </div>
+
+                <div class="card">
+                    <div class="card-title">Log Tip Out</div>
+                    <form id="tipout-form">
+                        <div class="form-group">
+                            <label class="form-label">Bartender Name</label>
+                            <input type="text" class="form-input" id="tipout-name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Total Tips Earned</label>
+                            <input type="number" class="form-input" id="tipout-total-earned" placeholder="$0.00" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tip Out to BOH</label>
+                            <input type="number" class="form-input" id="tipout-amount" placeholder="$0.00" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Percentage (auto)</label>
+                            <input type="text" class="form-input" id="tipout-percentage" placeholder="0%" readonly style="background: #F9F8F5;">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Save Entry</button>
+                    </form>
+                </div>
+
+                <div id="tipout-entries-container"></div>
+
+                <div id="tipout-totals-container" style="display: none;">
+                    <div class="tipout-total">
+                        <div class="tipout-total-label">Shift Total Tip Outs</div>
+                        <div class="tipout-total-value" id="shift-total">$0.00</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: DRINK RECIPES -->
+            <div id="recipes" class="tab-content">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="recipe-search" placeholder="Search recipes...">
+                </div>
+
+                <!-- A. Non-Alcoholic / House Made -->
+                <div class="accordion-item" data-category="non-alcoholic">
+                    <div class="accordion-header">
+                        <span>☕ Non-Alcoholic & House Made</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Classic House Lemonade</div>
+                                    <div class="recipe-meta">Cost $0.35 • 93% margin</div>
+                                </div>
+                                <div class="recipe-price">$5</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 1 cup fresh lemon juice, 3/4 cup sugar, 4 cups cold water, lemon wheel</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Make simple syrup, juice lemons, mix, serve over ice</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Strawberry Basil Lemonade</div>
+                                    <div class="recipe-meta">Cost $0.65 • 91% margin</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> House lemonade base, 4 strawberries, 3-4 basil leaves, splash soda</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Muddle strawberries, tear basil, add 8oz lemonade + ice, shake 5 sec, strain, top soda</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Watermelon Agua Fresca</div>
+                                    <div class="recipe-meta">Cost $0.40 • 93% margin</div>
+                                </div>
+                                <div class="recipe-price">$6</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 4 cups watermelon, 2 cups water, 2 tbsp sugar, 1 lime, pinch salt, Tajin rim optional</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Blend, strain, add lime/sugar/salt, serve over ice</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Hibiscus Cooler</div>
+                                    <div class="recipe-meta">Cost $0.30 • 95% margin</div>
+                                </div>
+                                <div class="recipe-price">$6</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 1/2 cup dried hibiscus, 4 cups water, 1/3 cup honey, 1 lime, ginger & mint optional</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Cold brew overnight, strain, add honey + lime, serve over ice</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Ginger-Peach Shrub</div>
+                                    <div class="recipe-meta">Cost $0.45 • 94% margin</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 2 cups peaches, 1 cup sugar, 1 cup ACV, 1 tbsp ginger, soda water</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Day 1: peaches + sugar in jar 24-48hrs. Day 2: strain, add vinegar + ginger. Serve 2oz shrub + 6oz soda</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Cucumber Mint Refresher</div>
+                                    <div class="recipe-meta">Cost $0.30 • 95% margin</div>
+                                </div>
+                                <div class="recipe-price">$6</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 1 English cucumber, 8-10 mint leaves, 2 limes, 2 tbsp agave, 4 cups water, soda top</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Muddle cucumber + mint, add lime/agave/water, strain, top soda, cucumber ribbon garnish</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">House Horchata</div>
+                                    <div class="recipe-meta">Cost $0.40 • 93% margin</div>
+                                </div>
+                                <div class="recipe-price">$6</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> 1 cup rice, 4 cups water, cinnamon, 1 can evap milk, 1/2 cup sugar, 1 tsp vanilla</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Soak rice + cinnamon overnight, blend 2 min, strain cheesecloth, add milk/sugar/vanilla</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Lavender Honey Lemonade</div>
+                                    <div class="recipe-meta">Cost $0.55 • 92% margin</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Ingredients:</strong> House lemonade, 2 tbsp culinary lavender, 1/4 cup local honey, 1 cup hot water</div>
+                            <div class="recipe-instructions"><strong>Method:</strong> Steep lavender 10 min, strain, dissolve honey, cool, mix 2oz syrup into 8oz lemonade</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B. Pistachio Program -->
+                <div class="accordion-item" data-category="pistachio">
+                    <div class="accordion-header">
+                        <span>🥜 Pistachio Program (Signature)</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="note" style="margin-bottom: 12px;">
+                            🌟 <strong>Base Recipe:</strong> Pistachio Orgeat ~ $0.38 per drink
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Cream Soda</div>
+                                    <div class="recipe-meta">91% margin</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> 0.75oz orgeat, 1oz half & half, 6oz soda, crushed pistachios garnish</div>
+                            <div class="recipe-expand-btn" onclick="toggleRecipe(this)">View Recipe ▼</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Sour</div>
+                                </div>
+                                <div class="recipe-price">$14</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Orgeat + bourbon + lemon + egg white</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Mai Tai</div>
+                                </div>
+                                <div class="recipe-price">$15</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Orgeat + rum + lime + curaçao</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Espresso Martini</div>
+                                </div>
+                                <div class="recipe-price">$16</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Orgeat + vodka + espresso</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Old Fashioned</div>
+                                </div>
+                                <div class="recipe-price">$15</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Orgeat + rye + bitters</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Latte</div>
+                                    <div class="recipe-meta">Espresso bar</div>
+                                </div>
+                                <div class="recipe-price">$6.50</div>
+                            </div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Iced Latte</div>
+                                    <div class="recipe-meta">Espresso bar</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Pistachio Mocha</div>
+                                    <div class="recipe-meta">Espresso bar</div>
+                                </div>
+                                <div class="recipe-price">$7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C. Specialty Cocktails -->
+                <div class="accordion-item" data-category="specialty">
+                    <div class="accordion-header">
+                        <span>🍹 Specialty Cocktails</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Blood Orange Spicy Margarita</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Blood OJ, fresh lime, soda water, splash agave, habanero-infused Sauza Blanco, tajin rim</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Chocolate Martini</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Chocolate Baileys, Absolut Vanilla Vodka, Half & Half</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Aperol Spritzer</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Champagne, Aperol, Soda Water, Orange Slice</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Strawberry Fields</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> St. George Gin, Strawberry Puree, Lemonade, Soda Water, Lemon Wedge</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Blueberry Lemonade</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Skyy Vodka, Muddled Blueberries, Lemonade, Soda Water, Lemon Wedge</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">Orange 50/50</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Absolut Vanilla Vodka, Orange Juice & Cream</div>
+                        </div>
+
+                        <div class="recipe">
+                            <div class="recipe-header">
+                                <div>
+                                    <div class="recipe-name">The Brewhouse Mai Tai</div>
+                                </div>
+                                <div class="recipe-price">$13</div>
+                            </div>
+                            <div class="recipe-meta"><strong>Build:</strong> Light Rum, Pineapple Juice, OJ, Grenadine, Whaler's Dark Rum Float</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D. House Beers -->
+                <div class="accordion-item" data-category="beers">
+                    <div class="accordion-header">
+                        <span>🍺 House Beers (On Tap)</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="note" style="margin-bottom: 12px;">
+                            <strong>Pricing:</strong><br>Standard: 4oz $3 | 16oz $8.50 | 22oz $10.50 | 64oz $22.50<br>
+                            Hazy/Specialty: 4oz $3 | 16oz $9 | 22oz $11 | 64oz $24.50
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">ALES</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Nirvana Pale Ale</div>
+                                <div class="beer-desc">West Coast pale ale, Simcoe & Cascade hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Defiance</div>
+                                <div class="beer-desc">Dry Hopped pale ale, Mosaic & Zappa hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">El Citra</div>
+                                <div class="beer-desc">English session ale, El Dorado & Citra hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Phog Monster <span class="badge badge-specialty">East Beach IPA</span></div>
+                                <div class="beer-desc">Hazy IPA, NZ Wakatu, South African hops, tropical & citrus</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">West Beach IPA</div>
+                                <div class="beer-desc">American IPA, Simcoe, Mosaic & Cascade hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Motivation Destroyer IPA</div>
+                                <div class="beer-desc">Mosaic & Galaxy hops, tropical & citrus</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Light Work For Many Hands <span class="badge badge-specialty">Harvest Red Rye IPA</span></div>
+                                <div class="beer-desc">Wet hop red rye IPA, locally grown hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Rocket Science Red <span class="badge badge-specialty">Stuck In Orbit</span></div>
+                                <div class="beer-desc">Red ale, Comet & Galaxy hops</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Milkman's Hanshake <span class="badge badge-specialty">Milk Stout</span></div>
+                                <div class="beer-desc">Sweet milk stout, lactose, roast barley, chocolate malts</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">WHEATS</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Man-Gose to the Ocean</div>
+                                <div class="beer-desc">German wheat, sea salt & coriander, mango puree, tart & fruity</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Apricot Wheat</div>
+                                <div class="beer-desc">Wheat beer infused with apricots</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">LAGERS</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Condor Pilsner</div>
+                                <div class="beer-desc">Dortmund style German lager</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Habanero Pilsner</div>
+                                <div class="beer-desc">Condor Pilsner infused with habanero peppers</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">El Condor de Jamaica</div>
+                                <div class="beer-desc">Condor Pilsner cold steeped on hibiscus flowers</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Packing Plant Pilsner <span class="badge badge-specialty">Tangerine</span></div>
+                                <div class="beer-desc">Pilsner with tangerine</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Liquid Fiestas</div>
+                                <div class="beer-desc">Mexican style lager, agave, corn, lime peel</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Oktoberfest</div>
+                                <div class="beer-desc">German style lager</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Kirschenator <span class="badge badge-specialty">Doppelbock</span></div>
+                                <div class="beer-desc">12oz $8, aged on sweet cherries</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">BELGIAN STYLE</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Belgian Lace</div>
+                                <div class="beer-desc">Belgian blonde ale</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Baseball Saison</div>
+                                <div class="beer-desc">Unfiltered golden ale, citrus & yeast</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Saint Dubbel de Agave <span class="badge badge-specialty">Draughtsman Collab</span></div>
+                                <div class="beer-desc">Belgian yeast, agave, 7.2% ABV</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">Saint Barb's Tripel</div>
+                                <div class="beer-desc">Citrus, honey, cinnamon, 8-9% ABV</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">BARREL AGED</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Salsipuedes Saison <span class="badge badge-on-tap">12+ Months</span></div>
+                                <div class="beer-desc">Rye whiskey barrel aged — 4oz $3.50 | 12oz $8.50</div>
+                            </div>
+                            <div class="beer-item">
+                                <div class="beer-name">By Hooks or By Crooks</div>
+                                <div class="beer-desc">Rum & Rye barrel aged Imperial Stout — 4oz $3.50 | 12oz $8.50</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 16px;">
+                            <div style="background: var(--navy); color: var(--cream); padding: 8px 12px; border-radius: 4px; margin-bottom: 8px; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px;">HARD SELTZER</div>
+                            <div class="beer-item">
+                                <div class="beer-name">Hipster Bubbles: Mo Made Me Do It</div>
+                                <div class="beer-desc">Hibiscus & Orange Peel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E. Guest Beers & Cans -->
+                <div class="accordion-item" data-category="guest">
+                    <div class="accordion-header">
+                        <span>📦 Guest Beers & Cans</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="beer-item">
+                            <div class="beer-name">Coors Light <span class="badge badge-on-tap">Draft</span></div>
+                            <div class="beer-desc">Pint $6 | Schooner $9 | Pitcher $18</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Budweiser / Bud Light</div>
+                            <div class="beer-desc">12oz $5</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Corona / Pacifico / Modelo Especial</div>
+                            <div class="beer-desc">12oz $6</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Rotating Non-Alcoholic</div>
+                            <div class="beer-desc">12oz $6</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Flying Embers Hard Kombucha</div>
+                            <div class="beer-desc">Pineapple Sunset, Orange Peach Passion — 12oz $8</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Mommenpop Blood Orange Spritz <span class="badge badge-on-tap">On Tap</span></div>
+                            <div class="beer-desc">12oz $14 | Carafe $42</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">Golden State Cider</div>
+                            <div class="beer-desc">16oz $9</div>
+                        </div>
+                        <div class="beer-item">
+                            <div class="beer-name">High Noon</div>
+                            <div class="beer-desc">Peach / Passion Fruit / Black Cherry — 12oz $7</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- F. Wine List -->
+                <div class="accordion-item" data-category="wine">
+                    <div class="accordion-header">
+                        <span>🍷 Wine List</span>
+                        <span class="accordion-toggle">›</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="wine-category">
+                            <div class="wine-category-title">SPARKLING</div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Sparkling</span>
+                                    <span class="wine-price">$30 | $9</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>La Lief Rosé of Grenache</span>
+                                    <span class="wine-price">$42 | $14</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Contadi Castaldi Brut</span>
+                                    <span class="wine-price">$60</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wine-category">
+                            <div class="wine-category-title">WHITE</div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Chardonnay</span>
+                                    <span class="wine-price">$30 | $13</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Bonanza Chardonnay</span>
+                                    <span class="wine-price">$40 | $13</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>J Dusi Pinot Grigio <span class="badge badge-on-tap">On Tap</span></span>
+                                    <span class="wine-price">$13 | $40</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Sauvignon Blanc <span class="badge badge-on-tap">On Tap</span></span>
+                                    <span class="wine-price">$9 | $30</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Margerum Sybarite Sauv Blanc <span class="badge badge-on-tap">On Tap</span></span>
+                                    <span class="wine-price">$14 | $42</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Adler Kerner</span>
+                                    <span class="wine-price">$50</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wine-category">
+                            <div class="wine-category-title">ROSÉ</div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Rosé</span>
+                                    <span class="wine-price">$30 | $9</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>La Lief Rosé</span>
+                                    <span class="wine-price">$42 | $14</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wine-category">
+                            <div class="wine-category-title">RED</div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Pinot Noir</span>
+                                    <span class="wine-price">$30 | $9</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Sea Sun Pinot Noir</span>
+                                    <span class="wine-price">$42 | $14</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>House Cabernet Sauvignon</span>
+                                    <span class="wine-price">$30 | $9</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Bonanza Cabernet Sauvignon</span>
+                                    <span class="wine-price">$42 | $14</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>J Dusi Red Blend <span class="badge badge-on-tap">On Tap</span></span>
+                                    <span class="wine-price">$13 | $40</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Il Padrino Red Blend</span>
+                                    <span class="wine-price">$15 | $45</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Petra Hebo Rosso</span>
+                                    <span class="wine-price">$57</span>
+                                </div>
+                            </div>
+                            <div class="wine-item">
+                                <div class="wine-name">
+                                    <span>Sordo Barbera</span>
+                                    <span class="wine-price">$54</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Bar Navigation -->
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="reservations" onclick="switchTab('reservations')">
+                <span class="tab-icon">📅</span>
+                Reservations
+            </button>
+            <button class="tab-btn" data-tab="tv-control" onclick="switchTab('tv-control')">
+                <span class="tab-icon">📺</span>
+                TV Control
+            </button>
+            <button class="tab-btn" data-tab="sonos" onclick="switchTab('sonos')">
+                <span class="tab-icon">🔊</span>
+                Sonos
+            </button>
+            <button class="tab-btn" data-tab="tipouts" onclick="switchTab('tipouts')">
+                <span class="tab-icon">💰</span>
+                Tip Outs
+            </button>
+            <button class="tab-btn" data-tab="recipes" onclick="switchTab('recipes')">
+                <span class="tab-icon">🍹</span>
+                Recipes
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Update current time
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const period = now.getHours() >= 12 ? 'PM' : 'AM';
+            const displayHours = now.getHours() % 12 || 12;
+            document.getElementById('current-time').textContent =
+                String(displayHours).padStart(2, '0') + ':' + minutes + ' ' + period;
+        }
+        updateTime();
+        setInterval(updateTime, 30000); // Update every 30 seconds
+
+        // ===== RESERVATION MANAGER (SHARED SYNC) =====
+        var allReservations = [];
+        var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF72kjfNpcFtD5s1_p9vRq25Llbskgf8YbPXh-0hvWVExIQ/exec';
+
+        function loadReservations() {
+            // First show cached local data instantly
+            var cached = [];
+            try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+            var today = new Date().toISOString().split('T')[0];
+            cached = cached.filter(function(r) { return r.dateISO >= today; });
+            allReservations = cached;
+            allReservations.sort(function(a, b) {
+                if (a.dateISO !== b.dateISO) return a.dateISO < b.dateISO ? -1 : 1;
+                return (a.time24 || '') < (b.time24 || '') ? -1 : 1;
+            });
+            renderReservations();
+            // Then fetch from shared API for latest data
+            fetch(REZ_API)
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (data.success && data.reservations) {
+                        allReservations = data.reservations.map(function(r) {
+                            return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: r.guests, source: r.source, phone: r.phone, notes: r.notes };
+                        });
+                        allReservations.sort(function(a, b) {
+                            if (a.dateISO !== b.dateISO) return a.dateISO < b.dateISO ? -1 : 1;
+                            return (a.time24 || '') < (b.time24 || '') ? -1 : 1;
+                        });
+                        // Cache locally for instant load next time
+                        localStorage.setItem('bh_bartender_rez', JSON.stringify(allReservations));
+                        renderReservations();
+                    }
+                })
+                .catch(function(e) { console.log('Rez sync fetch error:', e); });
+        }
+
+        function formatTime12(t) {
+            if (!t) return '';
+            if (t.includes('AM') || t.includes('PM')) return t;
+            var p = t.split(':');
+            var h = parseInt(p[0]), m = p[1] || '00';
+            var ampm = h >= 12 ? 'PM' : 'AM';
+            h = h % 12 || 12;
+            return h + ':' + m + ' ' + ampm;
+        }
+
+        function formatDateLabel(iso) {
+            if (!iso) return '';
+            var d = new Date(iso + 'T12:00:00');
+            var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            return days[d.getDay()] + ', ' + months[d.getMonth()] + ' ' + d.getDate();
+        }
+
+        function getDayTitle(iso, today) {
+            if (iso === today) return 'Today';
+            var tom = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+            if (iso === tom) return 'Tomorrow';
+            var d = new Date(iso + 'T12:00:00');
+            var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+            return days[d.getDay()];
+        }
+
+        function getSourceClass(src) {
+            if (!src) return 'spothop';
+            var s = src.toLowerCase();
+            if (s.includes('spot')) return 'spothop';
+            if (s.includes('phone')) return 'phone';
+            if (s.includes('yelp')) return 'yelp';
+            if (s.includes('walk')) return 'walkin';
+            return 'phone';
+        }
+
+        function renderReservations() {
+            var today = new Date().toISOString().split('T')[0];
+            if (allReservations.length === 0) {
+                document.getElementById('rez-body').innerHTML = '<div class="rez-empty">No reservations yet. Tap + Add Reservation below.</div>';
+                return;
+            }
+            // Group by date
+            var dates = {};
+            allReservations.forEach(function(r) {
+                var d = r.dateISO || 'unknown';
+                if (!dates[d]) dates[d] = [];
+                dates[d].push(r);
+            });
+            var html = '';
+            var totalGuests = 0;
+            var sortedDates = Object.keys(dates).sort();
+            sortedDates.forEach(function(dateISO) {
+                var rezList = dates[dateISO];
+                var dayGuests = rezList.reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+                totalGuests += dayGuests;
+                var title = getDayTitle(dateISO, today);
+                html += '<div class="rez-section">';
+                html += '<div class="rez-section-title">' + title + ' — ' + formatDateLabel(dateISO) + '<span class="rez-count">' + dayGuests + ' guests</span></div>';
+                rezList.forEach(function(r) {
+                    var noteIcon = r.notes ? ' <span class="rez-note-icon" title="' + (r.notes || '').replace(/"/g, '&quot;') + '">📝</span>' : '';
+                    var srcBadge = '<span class="rez-source ' + getSourceClass(r.source) + '">' + (r.source || 'Phone') + '</span>';
+                    html += '<div class="rez-row" onclick="editReservation(\'' + r.id + '\')">';
+                    html += '<span class="rez-time">' + formatTime12(r.time24) + '</span>';
+                    html += '<span class="rez-name">' + r.name + noteIcon + srcBadge + '</span>';
+                    html += '<span class="rez-guests"><strong>' + r.guests + '</strong> ppl</span>';
+                    html += '</div>';
+                });
+                html += '</div>';
+            });
+            var todayGuests = (dates[today] || []).reduce(function(s, r) { return s + (parseInt(r.guests) || 0); }, 0);
+            html += '<div class="rez-total">Today: ' + todayGuests + ' guests  |  Total Booked: ' + totalGuests + ' guests</div>';
+            document.getElementById('rez-body').innerHTML = html;
+        }
+
+        function openAddRez() {
+            document.getElementById('rez-modal-title').textContent = 'Add Reservation';
+            document.getElementById('rez-edit-id').value = '';
+            document.getElementById('rez-name').value = '';
+            document.getElementById('rez-date').value = new Date().toISOString().split('T')[0];
+            document.getElementById('rez-time').value = '18:00';
+            document.getElementById('rez-guests').value = '2';
+            document.getElementById('rez-source').value = 'Phone';
+            document.getElementById('rez-phone').value = '';
+            document.getElementById('rez-notes').value = '';
+            document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+            document.getElementById('rez-modal-overlay').classList.add('active');
+        }
+
+        function editReservation(id) {
+            var r = allReservations.find(function(x) { return x.id === id; });
+            if (!r) return;
+            document.getElementById('rez-modal-title').textContent = 'Edit Reservation';
+            document.getElementById('rez-edit-id').value = r.id;
+            document.getElementById('rez-name').value = r.name || '';
+            document.getElementById('rez-date').value = r.dateISO || '';
+            document.getElementById('rez-time').value = r.time24 || '18:00';
+            document.getElementById('rez-guests').value = r.guests || 2;
+            document.getElementById('rez-source').value = r.source || 'Phone';
+            document.getElementById('rez-phone').value = r.phone || '';
+            document.getElementById('rez-notes').value = r.notes || '';
+            document.getElementById('rez-modal-actions').innerHTML = '<button class="rez-btn delete" onclick="deleteReservation(\'' + r.id + '\')">Delete</button><button class="rez-btn cancel" onclick="closeRezModal()">Cancel</button><button class="rez-btn save" onclick="saveReservation()">Save</button>';
+            document.getElementById('rez-modal-overlay').classList.add('active');
+        }
+
+        function closeRezModal() {
+            document.getElementById('rez-modal-overlay').classList.remove('active');
+        }
+
+        function saveReservation() {
+            var name = document.getElementById('rez-name').value.trim();
+            var date = document.getElementById('rez-date').value;
+            var time = document.getElementById('rez-time').value;
+            var guests = parseInt(document.getElementById('rez-guests').value) || 2;
+            var source = document.getElementById('rez-source').value;
+            var phone = document.getElementById('rez-phone').value.trim();
+            var notes = document.getElementById('rez-notes').value.trim();
+            if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
+            var editId = document.getElementById('rez-edit-id').value;
+            var id = editId || ('rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
+            var rez = { id: id, name: name, dateISO: date, time24: time, guests: guests, source: source, phone: phone, notes: notes };
+            // Save to shared API
+            var action = editId ? 'update' : 'add';
+            fetch(REZ_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({ action: action, reservation: rez })
+            }).then(function() { loadReservations(); })
+              .catch(function(e) { console.log('Save error:', e); loadReservations(); });
+            // Also update local cache instantly for responsiveness
+            var cached = [];
+            try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+            if (editId) {
+                var idx = cached.findIndex(function(r) { return r.id === editId; });
+                if (idx >= 0) { cached[idx] = rez; } else { cached.push(rez); }
+            } else { cached.push(rez); }
+            localStorage.setItem('bh_bartender_rez', JSON.stringify(cached));
+            allReservations = cached;
+            closeRezModal();
+            renderReservations();
+        }
+
+        function deleteReservation(id) {
+            if (!confirm('Delete this reservation?')) return;
+            // Delete from shared API
+            fetch(REZ_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain' },
+                body: JSON.stringify({ action: 'delete', id: id })
+            }).then(function() { loadReservations(); })
+              .catch(function(e) { console.log('Delete error:', e); });
+            // Also remove from local cache instantly
+            var cached = [];
+            try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+            cached = cached.filter(function(r) { return r.id !== id; });
+            localStorage.setItem('bh_bartender_rez', JSON.stringify(cached));
+            allReservations = cached;
+            closeRezModal();
+            renderReservations();
+        }
+
+        // ===== WHO'S WORKING =====
+        var staffList = [];
+
+        function loadStaff() {
+            try { staffList = JSON.parse(localStorage.getItem('bh_bartender_staff') || '[]'); } catch(e) { staffList = []; }
+            renderStaff();
+        }
+
+        function renderStaff() {
+            if (staffList.length === 0) {
+                document.getElementById('staff-body').innerHTML = '<div class="rez-empty">No staff added yet.</div>';
+                return;
+            }
+            // Sort: Manager first, then alphabetical
+            var roleOrder = {'Manager':0,'Bartender':1,'Barback':2,'Server':3,'Host':4,'Busser':5,'Kitchen':6};
+            var sorted = staffList.slice().sort(function(a,b) {
+                var ra = roleOrder[a.role] !== undefined ? roleOrder[a.role] : 9;
+                var rb = roleOrder[b.role] !== undefined ? roleOrder[b.role] : 9;
+                if (ra !== rb) return ra - rb;
+                return a.name.localeCompare(b.name);
+            });
+            var html = '';
+            sorted.forEach(function(s) {
+                var roleClass = s.role.toLowerCase().replace(/\s+/g,'-');
+                html += '<div class="staff-row">';
+                html += '<span class="staff-name">' + s.name + '</span>';
+                html += '<div class="staff-edit-actions">';
+                html += '<span class="staff-role ' + roleClass + '">' + s.role + '</span>';
+                html += '<button class="staff-edit-btn remove" onclick="removeStaff(\'' + s.id + '\')" title="Remove">✕</button>';
+                html += '</div>';
+                html += '</div>';
+            });
+            html += '<div style="text-align:center;margin-top:8px;font-size:12px;color:var(--light-text);">' + staffList.length + ' on shift</div>';
+            document.getElementById('staff-body').innerHTML = html;
+        }
+
+        function openAddStaff() {
+            document.getElementById('staff-modal-title').textContent = 'Add Staff';
+            document.getElementById('staff-name').value = '';
+            document.getElementById('staff-role').value = 'Bartender';
+            document.getElementById('staff-modal-overlay').classList.add('active');
+        }
+
+        function closeStaffModal() {
+            document.getElementById('staff-modal-overlay').classList.remove('active');
+        }
+
+        function saveStaff() {
+            var name = document.getElementById('staff-name').value.trim();
+            var role = document.getElementById('staff-role').value;
+            if (!name) { alert('Please enter a name.'); return; }
+            staffList.push({ id: 'staff_' + Date.now(), name: name, role: role });
+            localStorage.setItem('bh_bartender_staff', JSON.stringify(staffList));
+            closeStaffModal();
+            renderStaff();
+        }
+
+        function removeStaff(id) {
+            staffList = staffList.filter(function(s) { return s.id !== id; });
+            localStorage.setItem('bh_bartender_staff', JSON.stringify(staffList));
+            renderStaff();
+        }
+
+        // ===== COLLAPSIBLE INFO PANELS =====
+        function toggleInfoPanel(el) {
+            var body = el.nextElementSibling;
+            var chevron = el.querySelector('span:last-child');
+            if (body.classList.contains('open')) {
+                body.classList.remove('open');
+                chevron.textContent = '▶';
+            } else {
+                body.classList.add('open');
+                chevron.textContent = '▼';
+            }
+        }
+
+        // Load data on startup
+        loadReservations();
+        loadStaff();
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Hide all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            // Activate button
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        }
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        // Recipe expand/collapse
+        function toggleRecipe(btn) {
+            const recipe = btn.closest('.recipe');
+            recipe.classList.toggle('expanded');
+            btn.textContent = recipe.classList.contains('expanded') ? 'Hide Recipe ▲' : 'View Recipe ▼';
+        }
+
+        // Recipe search
+        document.getElementById('recipe-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const recipes = document.querySelectorAll('.recipe');
+            const categories = document.querySelectorAll('[data-category]');
+
+            recipes.forEach(recipe => {
+                const text = recipe.textContent.toLowerCase();
+                const matches = text.includes(searchTerm);
+                recipe.style.display = matches ? 'block' : 'none';
+            });
+
+            // Show/hide categories based on visibility of recipes
+            categories.forEach(category => {
+                const visibleRecipes = category.querySelectorAll('.recipe:not([style*="display: none"])');
+                category.style.display = visibleRecipes.length > 0 ? 'block' : 'none';
+            });
+        });
+
+        // Tip outs calculator
+        let tipOutEntries = [];
+
+        document.getElementById('tipout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('tipout-name').value;
+            const totalEarned = parseFloat(document.getElementById('tipout-total-earned').value);
+            const tipOutAmount = parseFloat(document.getElementById('tipout-amount').value);
+
+            if (!name || !totalEarned || !tipOutAmount) return;
+
+            const percentage = totalEarned > 0 ? ((tipOutAmount / totalEarned) * 100).toFixed(1) : 0;
+
+            tipOutEntries.push({
+                name,
+                totalEarned,
+                tipOutAmount,
+                percentage
+            });
+
+            // Add entry to DOM
+            const container = document.getElementById('tipout-entries-container');
+            const entry = document.createElement('div');
+            entry.className = 'card';
+            entry.innerHTML = `
+                <div class="tipout-entry">
+                    <div class="tipout-info">
+                        <div class="tipout-name">${name}</div>
+                        <div class="tipout-amount">Earned: $${totalEarned.toFixed(2)}</div>
+                        <div class="tipout-amount">Tipped Out: $${tipOutAmount.toFixed(2)}</div>
+                    </div>
+                    <div class="tipout-percent">${percentage}%</div>
+                </div>
+            `;
+            container.appendChild(entry);
+
+            // Update shift total
+            updateShiftTotal();
+
+            // Reset form
+            this.reset();
+        });
+
+        function updateShiftTotal() {
+            const total = tipOutEntries.reduce((sum, entry) => sum + entry.tipOutAmount, 0);
+            const totalsContainer = document.getElementById('tipout-totals-container');
+            const shiftTotal = document.getElementById('shift-total');
+
+            if (total > 0) {
+                totalsContainer.style.display = 'block';
+                shiftTotal.textContent = '$' + total.toFixed(2);
+            }
+        }
+
+        // Percentage auto-calculation
+        document.getElementById('tipout-total-earned').addEventListener('input', function() {
+            const earned = parseFloat(this.value) || 0;
+            const tipOut = parseFloat(document.getElementById('tipout-amount').value) || 0;
+            const percentage = earned > 0 ? ((tipOut / earned) * 100).toFixed(1) : 0;
+            document.getElementById('tipout-percentage').value = percentage + '%';
+        });
+
+        document.getElementById('tipout-amount').addEventListener('input', function() {
+            const earned = parseFloat(document.getElementById('tipout-total-earned').value) || 0;
+            const tipOut = parseFloat(this.value) || 0;
+            const percentage = earned > 0 ? ((tipOut / earned) * 100).toFixed(1) : 0;
+            document.getElementById('tipout-percentage').value = percentage + '%';
+        });
+    </script>
+</body>
+</html>
