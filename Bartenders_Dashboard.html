@@ -1814,39 +1814,160 @@
         setInterval(updateTime, 30000); // Update every 30 seconds
 
         // ===== RESERVATION MANAGER (SHARED SYNC) =====
+        // Two sources merged on read:
+        //   1. data.json (SpotHopper auto-sync, READ-ONLY here)
+        //   2. Apps Script REZ_API (manual entries, READ + WRITE)
+        // Manual entries can OVERRIDE SpotHopper entries via id collision (id = "override_" + spothopper_id)
         var allReservations = [];
         var REZ_API = 'https://script.google.com/macros/s/AKfycbxOsQiZ6aLjR7uPWp6VLy4CF72kjfNpcFtD5s1_p9vRq25Llbskgf8YbPXh-0hvWVExIQ/exec';
+        var DATA_JSON_URL = 'https://mojobrewhouse-cpu.github.io/brewhouse-hub/data.json';
 
-        function loadReservations() {
-            // First show cached local data instantly
-            var cached = [];
-            try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
-            var today = new Date().toISOString().split('T')[0];
-            cached = cached.filter(function(r) { return r.dateISO >= today; });
-            allReservations = cached;
-            allReservations.sort(function(a, b) {
+        // Convert "Thu, Jun 11" to "2026-06-11" (assumes current year, rolls year forward if month already passed)
+        function parseLoosyDate(label) {
+            if (!label) return '';
+            var months = {Jan:0,Feb:1,Mar:2,Apr:3,May:4,Jun:5,Jul:6,Aug:7,Sep:8,Oct:9,Nov:10,Dec:11};
+            var m = String(label).match(/([A-Za-z]{3})\s+(\d{1,2})/);
+            if (!m) return '';
+            var monIdx = months[m[1]]; if (monIdx === undefined) return '';
+            var day = parseInt(m[2]);
+            var now = new Date();
+            var year = now.getFullYear();
+            var candidate = new Date(year, monIdx, day);
+            // If candidate is more than 30 days in the past, assume next year (covers Dec->Jan rollover)
+            if (candidate < new Date(now.getTime() - 30 * 86400000)) year++;
+            var mm = String(monIdx + 1).padStart(2, '0');
+            var dd = String(day).padStart(2, '0');
+            return year + '-' + mm + '-' + dd;
+        }
+
+        // Convert "11:00 AM" -> "11:00", "7:30 PM" -> "19:30"
+        function to24h(t) {
+            if (!t) return '';
+            var m = String(t).match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+            if (!m) return t;
+            var h = parseInt(m[1]); var mm = m[2]; var ap = (m[3] || '').toUpperCase();
+            if (ap === 'PM' && h < 12) h += 12;
+            if (ap === 'AM' && h === 12) h = 0;
+            return String(h).padStart(2, '0') + ':' + mm;
+        }
+
+        // Stable id for a SpotHopper booking so the override mechanism works across page loads
+        function shId(b, dateISO) {
+            var phone = (b.phone || '').replace(/\D/g, '');
+            return 'sh_' + dateISO + '_' + to24h(b.time) + '_' + (phone || (b.name || '').replace(/\W/g, '').toLowerCase());
+        }
+
+        // Normalize SpotHopper bookings from data.json into the iPad's internal shape
+        function normalizeSpotHopper(data) {
+            if (!data || !data.reservations) return [];
+            var rez = data.reservations;
+            var out = [];
+            function addGroup(group, fallbackDateISO) {
+                if (!group || !group.bookings) return;
+                var dateISO = fallbackDateISO || parseLoosyDate(group.date);
+                group.bookings.forEach(function(b) {
+                    if (!b) return;
+                    var d = dateISO || parseLoosyDate(b.date);
+                    if (!d) return;
+                    out.push({
+                        id: shId(b, d),
+                        name: b.name || '',
+                        dateISO: d,
+                        time24: to24h(b.time),
+                        guests: b.guests || 1,
+                        source: b.source || 'SpotHopper',
+                        phone: b.phone || '',
+                        notes: b.notes || '',
+                        _readonly: true
+                    });
+                });
+            }
+            // Today & tomorrow groups
+            if (rez.today) {
+                var todayISO = new Date().toISOString().split('T')[0];
+                addGroup(rez.today, todayISO);
+            }
+            if (rez.tomorrow) {
+                var tomISO = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+                addGroup(rez.tomorrow, tomISO);
+            }
+            // Upcoming array — each booking has its own date field
+            if (Array.isArray(rez.upcoming)) {
+                rez.upcoming.forEach(function(b) {
+                    var d = parseLoosyDate(b.date);
+                    if (!d) return;
+                    out.push({
+                        id: shId(b, d),
+                        name: b.name || '',
+                        dateISO: d,
+                        time24: to24h(b.time),
+                        guests: b.guests || 1,
+                        source: b.source || 'SpotHopper',
+                        phone: b.phone || '',
+                        notes: b.notes || '',
+                        _readonly: true
+                    });
+                });
+            }
+            return out;
+        }
+
+        function sortRez(list) {
+            list.sort(function(a, b) {
                 if (a.dateISO !== b.dateISO) return a.dateISO < b.dateISO ? -1 : 1;
                 return (a.time24 || '') < (b.time24 || '') ? -1 : 1;
             });
+            return list;
+        }
+
+        // Merge SpotHopper + manual: manual overrides SpotHopper if id matches "override_<sh_id>"
+        function mergeRez(spothopperList, manualList) {
+            var byId = {};
+            spothopperList.forEach(function(r) { byId[r.id] = r; });
+            // Manual entries: override SpotHopper if id starts with "override_"
+            manualList.forEach(function(r) {
+                if (r.id && r.id.indexOf('override_') === 0) {
+                    var targetId = r.id.substring('override_'.length);
+                    var overridden = Object.assign({}, r, { _overridesId: targetId });
+                    byId[targetId] = overridden;
+                } else {
+                    byId[r.id] = r;
+                }
+            });
+            var today = new Date().toISOString().split('T')[0];
+            return sortRez(Object.values(byId).filter(function(r) { return r.dateISO >= today; }));
+        }
+
+        function loadReservations() {
+            // 1. Instant render from cached merged list
+            var cached = [];
+            try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
+            var today = new Date().toISOString().split('T')[0];
+            allReservations = sortRez(cached.filter(function(r) { return r.dateISO >= today; }));
             renderReservations();
-            // Then fetch from shared API for latest data
-            fetch(REZ_API)
+
+            // 2. Fetch both sources in parallel, then merge
+            var dataPromise = fetch(DATA_JSON_URL + '?t=' + Date.now())
+                .then(function(r) { return r.ok ? r.json() : null; })
+                .catch(function(e) { console.log('data.json fetch error:', e); return null; });
+            var apiPromise = fetch(REZ_API)
                 .then(function(r) { return r.json(); })
-                .then(function(data) {
-                    if (data.success && data.reservations) {
-                        allReservations = data.reservations.map(function(r) {
-                            return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: r.guests, source: r.source, phone: r.phone, notes: r.notes };
-                        });
-                        allReservations.sort(function(a, b) {
-                            if (a.dateISO !== b.dateISO) return a.dateISO < b.dateISO ? -1 : 1;
-                            return (a.time24 || '') < (b.time24 || '') ? -1 : 1;
-                        });
-                        // Cache locally for instant load next time
-                        localStorage.setItem('bh_bartender_rez', JSON.stringify(allReservations));
-                        renderReservations();
-                    }
-                })
-                .catch(function(e) { console.log('Rez sync fetch error:', e); });
+                .catch(function(e) { console.log('Apps Script fetch error:', e); return null; });
+
+            Promise.all([dataPromise, apiPromise]).then(function(results) {
+                var spothopperData = results[0];
+                var apiData = results[1];
+                var spothopperList = normalizeSpotHopper(spothopperData);
+                var manualList = [];
+                if (apiData && apiData.success && Array.isArray(apiData.reservations)) {
+                    manualList = apiData.reservations.map(function(r) {
+                        return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: r.guests, source: r.source, phone: r.phone, notes: r.notes };
+                    });
+                }
+                allReservations = mergeRez(spothopperList, manualList);
+                localStorage.setItem('bh_bartender_rez', JSON.stringify(allReservations));
+                renderReservations();
+            });
         }
 
         function formatTime12(t) {
@@ -1969,10 +2090,25 @@
             var notes = document.getElementById('rez-notes').value.trim();
             if (!name || !date || !time) { alert('Please fill in name, date, and time.'); return; }
             var editId = document.getElementById('rez-edit-id').value;
-            var id = editId || ('rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4));
+            var id;
+            var isOverride = false;
+            if (editId) {
+                // If editing a SpotHopper entry, create an override so the change wins on next merge
+                if (editId.indexOf('sh_') === 0) {
+                    id = 'override_' + editId;
+                    isOverride = true;
+                } else if (editId.indexOf('override_') === 0) {
+                    id = editId;
+                    isOverride = true;
+                } else {
+                    id = editId;
+                }
+            } else {
+                id = 'rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4);
+            }
             var rez = { id: id, name: name, dateISO: date, time24: time, guests: guests, source: source, phone: phone, notes: notes };
-            // Save to shared API
-            var action = editId ? 'update' : 'add';
+            // Save to shared API. Use "add" for new + override (so Apps Script creates the row); "update" for existing manual entries
+            var action = (editId && editId.indexOf('rez_') === 0) ? 'update' : 'add';
             fetch(REZ_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'text/plain' },
@@ -1982,12 +2118,12 @@
             // Also update local cache instantly for responsiveness
             var cached = [];
             try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
-            if (editId) {
-                var idx = cached.findIndex(function(r) { return r.id === editId; });
-                if (idx >= 0) { cached[idx] = rez; } else { cached.push(rez); }
-            } else { cached.push(rez); }
+            // Remove old version of same id (or the spothopper id being overridden)
+            var removeId = isOverride && editId.indexOf('sh_') === 0 ? editId : id;
+            cached = cached.filter(function(r) { return r.id !== removeId && r.id !== id; });
+            cached.push(rez);
             localStorage.setItem('bh_bartender_rez', JSON.stringify(cached));
-            allReservations = cached;
+            allReservations = sortRez(cached);
             closeRezModal();
             renderReservations();
         }
