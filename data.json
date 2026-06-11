@@ -1,18 +1,19 @@
 {
-  "date": "Wednesday, June 10",
+  "date": "Thursday, June 11",
   "systemStatus": {
     "level": "warn",
-    "headline": "Wed Jun 10 ~7 AM run COMPLETE. Toast Tue Jun 9 detailed parsed (Net $4,259.37, Gross $4,373.45, Labor 27.3%). Sling Jun 10 roster in (8 emp / 34.24 hrs / 0 uncovered / 0 OT). Google Ads + Yelp LIVE scrapes BOTH succeeded. World Cup HQ 2026 ad recovered to Eligible (Limited) but still policy-limited. Account 'unauthorized activity' banner STILL present (verify May 30 billing user). 2 unanswered 5-star Google reviews. GitHub PAT 200 OK.",
-    "detail": "(1) TOAST: Tue Jun 9 detailed daily parsed -- Net $4,259.37, Gross $4,373.45, 158 guests, 114 orders, avg/guest $26.96, avg/order $37.36, Labor 27.3% of net, Discount 2.6%, 7 voids, $0 refunds. Mon Jun 8 now also parsed (last known: Net $2,151.50 / Labor 26.3%). Wed Jun 10 detailed not yet delivered at run time (arrives midday). (2) SLING: today Jun 10 = 8 emp / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT. Isael (Cook) 4:42A-4:42A & Sarah (Server) 6:26A-6:26A show placeholder/open-style times -- verify. Last known Jun 9 = 9 emp / 38.66 hrs. (3) GOOGLE ADS: LIVE Chrome scrape OK. Yesterday Jun 9 = $8.09 spend / 4,154 impr / 77 clicks / 0 conv / CPC $0.11 / CTR 1.85%. 'World Cup HQ 2026' recovered from disapproval -> now Eligible (Limited), all ads limited by policy + bid strategy (43 impr / 1 click). SECURITY: 'unauthorized activity' banner STILL shown (May 30 new billing user) -- verify authorized. (4) YELP: LIVE scrape OK -- session restored (was expired since May 29). 30d: 56.5k ad impr / 720 ad visits / 162 ad leads; billing Jun 1-9 ad spend $238.20, CPC $1.35, CPL $5.54. (5) TRIPADVISOR: no ad email in 24h. (6) REVIEWS: 2 unanswered 5-star Google reviews still open (Elizabeth Jun 4, Victor Jun 2). (7) GitHub PAT: 200 OK.",
+    "headline": "Thu Jun 11 4 AM run COMPLETE (Gmail-only). No NEW Toast/Sling data yet -- freshest still Toast Tue Jun 9 & Sling Jun 10 (both daily emails arrive midday). Action items: 2 Google Business Profile management-access requests pending (Jun 9 & Jun 4) + Google Ads 'unauthorized activity' banner (May 30 billing user) = VERIFY ACCOUNT SECURITY. 'World Cup HQ 2026' ad still limited by policy. 2 unanswered 5-star Google reviews. Today is World Cup opening day -- guests requesting TVs. GitHub PAT 200 OK.",
+    "detail": "(1) TOAST: no new email since Tue Jun 9 (Net $4,259.37 / Gross $4,373.45 / 158 guests / 114 orders / Labor 27.3% / avg/guest $26.96 / avg/order $37.36 / discounts $113.71 (2.6%) / 7 voids / $0 refunds). Wed Jun 10 detailed daily still not delivered at 4 AM run (Toast sends midday). (2) SLING: no new email since '10th of June' roster (8 emp / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT). Jun 11 schedule not yet emailed at run time. Isael (Cook) 4:42A-4:42A & Sarah (Server) 6:26A-6:26A still show placeholder/open-style times. (3) GOOGLE ADS: this run is Gmail-only (no live scrape) -- figures below carried from Wed Jun 10 live scrape. 2 report-ready emails in last 24h. 'World Cup HQ 2026' recovered from disapproval to Eligible (Limited) but still 'all ads limited by policy' -- confirm destination fix held. SECURITY: 'unauthorized activity' banner / new May 30 billing user still to be verified. (4) GOOGLE BUSINESS PROFILE: 2 'management request' emails (Jun 9 & Jun 4, businessprofile-noreply@google.com) -- someone requesting management access; verify/deny if not recognized. (5) YELP: no actionable customer inquiries -- only marketing blasts (donuts, Father's Day). (6) TRIPADVISOR: no ad-performance report; only a 'Connect with your diners-for free' marketing email (Jun 11). (7) REVIEWS: 2 unanswered 5-star Google reviews still open (Elizabeth Jun 4, Victor Jun 2). (8) RESERVATIONS: Today (World Cup opening day) marines Romo 11 AM wants a TV; Sat Jun 13 UCSB Graduation lunch (Allison, 12 guests). (9) GitHub PAT: 200 OK.",
     "affected": [
-      "Google Ads account 'unauthorized activity' banner STILL present (verify May 30 new billing user authorized) -- SECURITY",
-      "Google Ads 'World Cup HQ 2026' recovered to Eligible (Limited) but still 'all ads limited by policy' -- confirm destination fix held",
-      "Sling Jun 10: Isael 4:42A-4:42A & Sarah 6:26A-6:26A placeholder/open-style shift times -- verify",
+      "ACCOUNT SECURITY: 2 Google Business Profile management-access requests pending (Jun 9 & Jun 4) -- verify/deny",
+      "ACCOUNT SECURITY: Google Ads 'unauthorized activity' banner / new May 30 billing user -- still verify authorized",
+      "Google Ads 'World Cup HQ 2026' still 'all ads limited by policy' -- confirm destination URL fix held",
       "2 unanswered 5-star Google reviews (Elizabeth Jun 4, Victor Jun 2) -- reply targets",
-      "Toast Wed Jun 10 detailed daily not yet delivered at run time (arrives midday)"
+      "Toast Wed Jun 10 daily + Sling Jun 11 roster not delivered at 4 AM run (arrive midday)",
+      "World Cup opening day -- guests requesting TV seating (marines Romo 11 AM)"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-10T07:11:21-0700"
+    "as_of": "2026-06-11T04:02:00-0700"
   },
   "toast": {
     "date": "Tuesday, June 9",
@@ -51,7 +52,7 @@
       "guests": 1763,
       "orders": 952
     },
-    "note": "Tue Jun 9 detailed daily parsed: Net $4,259.37, Gross $4,373.45, 158 guests, 114 orders, avg/guest $26.96, avg/order $37.36, Labor 27.3% of net, Discounts 2.6% of gross, 7 void items, $0 refunds, $0 gift cards. Same-day-last-week (Tue Jun 2) comparison not pulled this run. Wed Jun 10 detailed daily not yet delivered (arrives midday)."
+    "note": "Freshest Toast summary is STILL Tue Jun 9 (no new email at Thu Jun 11 4 AM run; Wed Jun 10 daily arrives midday). Tue Jun 9: Net $4,259.37, Gross $4,373.45, 158 guests, 114 orders, avg/guest $26.96, avg/order $37.36, Labor 27.3% of net, Discounts $113.71 (2.6% of gross), 7 void items, $0 refunds, $0 gift cards. Same-day-last-week comparison not cleanly parsed."
   },
   "toastLastKnown": {
     "date": "Monday, June 8",
@@ -82,61 +83,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Parsed from Sling daily report '10th of June' (sling@getsling.com): 8 employees / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT. NOTE: Isael (Cook) 4:42A-4:42A and Sarah (Server) 6:26A-6:26A show placeholder/open-style times -- verify.",
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:42A-4:42A"
-      },
-      {
-        "name": "Sarah Palmer",
-        "role": "Server",
-        "time": "6:26A-6:26A"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:30P"
-      },
-      {
-        "name": "Nathan Smith",
-        "role": "Server",
-        "time": "12:00P-4:00P"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "3:30P-10:30P"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Server",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Noel Nunez",
-        "role": "Chef",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "5:00P-10:15P"
-      }
-    ]
-  },
-  "slingToday": {
-    "date": "Wednesday, June 10",
-    "pending": false,
-    "nextDayPending": true,
-    "count": 8,
-    "hours": 34.24,
-    "shifts": 8,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "note": "Parsed from Sling daily report '10th of June' (sling@getsling.com): 8 employees / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT. NOTE: Isael (Cook) 4:42A-4:42A and Sarah (Server) 6:26A-6:26A show placeholder/open-style times -- verify.",
+    "note": "Freshest Sling roster is the '10th of June' report (no Jun 11 email at 4 AM run; Sling sends midday). 8 employees / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT. NOTE: Isael (Cook) 4:42A-4:42A & Sarah (Server) 6:26A-6:26A show placeholder/open-style times -- verify.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -179,7 +126,62 @@
         "time": "5:00P-10:15P"
       }
     ],
-    "stale": false
+    "stale": true
+  },
+  "slingToday": {
+    "date": "Wednesday, June 10",
+    "pending": false,
+    "nextDayPending": true,
+    "count": 8,
+    "hours": 34.24,
+    "shifts": 8,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "note": "Freshest Sling roster is the '10th of June' report (no Jun 11 email at 4 AM run; Sling sends midday). 8 employees / 34.24 hrs / 8 shifts / 0 uncovered / 0 OT. NOTE: Isael (Cook) 4:42A-4:42A & Sarah (Server) 6:26A-6:26A show placeholder/open-style times -- verify.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:42A-4:42A"
+      },
+      {
+        "name": "Sarah Palmer",
+        "role": "Server",
+        "time": "6:26A-6:26A"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server",
+        "time": "12:00P-4:00P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Server",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Chef",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:00P-10:15P"
+      }
+    ],
+    "stale": true
   },
   "slingLastKnown": {
     "date": "Tuesday, June 9",
@@ -242,7 +244,7 @@
     ]
   },
   "googleAds": {
-    "lastUpdated": "Wednesday, June 10",
+    "lastUpdated": "Thursday, June 11 (figures carried from Wed Jun 10 live scrape; this run Gmail-only)",
     "yesterday": {
       "date": "June 9, 2026",
       "spend": 8.09,
@@ -332,7 +334,7 @@
       "detail": "New BILLING user added + new user invited to Google Ads account 343-687-4835 around May 30 (invited by mojobrewhouse@gmail.com). Account-level 'unauthorized activity' warning banner STILL displayed as of Wed Jun 10 live scrape. Verify this was authorized.",
       "severity": "verify"
     },
-    "reportsNote": "Google Ads report-ready emails present (Campaign performance + Brewhouse Daily Campaign Report). Figures sourced from live Chrome scrape, not email.",
+    "reportsNote": "2 Google Ads report-ready emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance). This run is Gmail-only; performance figures shown are from the Wed Jun 10 live Chrome scrape and are ~1 day old.",
     "disapprovals": [
       {
         "present": true,
@@ -388,9 +390,9 @@
     "authError": false
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-10",
+    "lastUpdated": "2026-06-11",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at Wed Jun 10 run."
+    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h. Only a 'Connect with your diners-for free' marketing email (Jun 11) -- not actionable."
   },
   "reservations": {
     "lastUpdated": "2026-06-11",
@@ -606,7 +608,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-10T07:11:21-0700",
+  "lastUpdated": "2026-06-11T04:02:00-0700",
   "yelpInquiries": {
     "lastUpdated": "2026-06-09",
     "actionable": [],
