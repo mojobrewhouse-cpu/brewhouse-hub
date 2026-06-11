@@ -1938,6 +1938,24 @@
             return sortRez(Object.values(byId).filter(function(r) { return r.dateISO >= today; }));
         }
 
+        // Pull local-only manual entries (added while offline or before Apps Script POST succeeded).
+        // These are kept in a separate storage key so they survive merge writes to bh_bartender_rez.
+        function getLocalManualEntries() {
+            try { return JSON.parse(localStorage.getItem('bh_local_manual_rez') || '[]'); } catch(e) { return []; }
+        }
+        function setLocalManualEntries(list) {
+            localStorage.setItem('bh_local_manual_rez', JSON.stringify(list));
+        }
+        function upsertLocalManualEntry(rez) {
+            var list = getLocalManualEntries();
+            var i = list.findIndex(function(r) { return r.id === rez.id; });
+            if (i >= 0) list[i] = rez; else list.push(rez);
+            setLocalManualEntries(list);
+        }
+        function removeLocalManualEntry(id) {
+            setLocalManualEntries(getLocalManualEntries().filter(function(r) { return r.id !== id; }));
+        }
+
         function loadReservations() {
             // 1. Instant render from cached merged list
             var cached = [];
@@ -1964,6 +1982,11 @@
                         return { id: r.id, name: r.name, dateISO: String(r.dateISO).split('T')[0], time24: r.time24, guests: r.guests, source: r.source, phone: r.phone, notes: r.notes };
                     });
                 }
+                // Include local-only manual entries (those not yet synced to Apps Script)
+                var localManual = getLocalManualEntries();
+                localManual.forEach(function(lr) {
+                    if (!manualList.find(function(mr) { return mr.id === lr.id; })) manualList.push(lr);
+                });
                 allReservations = mergeRez(spothopperList, manualList);
                 localStorage.setItem('bh_bartender_rez', JSON.stringify(allReservations));
                 renderReservations();
@@ -2107,7 +2130,9 @@
                 id = 'rez_' + Date.now() + '_' + Math.random().toString(36).substr(2,4);
             }
             var rez = { id: id, name: name, dateISO: date, time24: time, guests: guests, source: source, phone: phone, notes: notes };
-            // Save to shared API. Use "add" for new + override (so Apps Script creates the row); "update" for existing manual entries
+            // Always upsert to local-manual store first (survives Apps Script failures)
+            upsertLocalManualEntry(rez);
+            // Save to shared API (best-effort). Use "add" for new + override (so Apps Script creates the row); "update" for existing manual entries
             var action = (editId && editId.indexOf('rez_') === 0) ? 'update' : 'add';
             fetch(REZ_API, {
                 method: 'POST',
@@ -2115,7 +2140,7 @@
                 body: JSON.stringify({ action: action, reservation: rez })
             }).then(function() { loadReservations(); })
               .catch(function(e) { console.log('Save error:', e); loadReservations(); });
-            // Also update local cache instantly for responsiveness
+            // Also update display cache instantly for responsiveness
             var cached = [];
             try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
             // Remove old version of same id (or the spothopper id being overridden)
@@ -2130,14 +2155,16 @@
 
         function deleteReservation(id) {
             if (!confirm('Delete this reservation?')) return;
-            // Delete from shared API
+            // Remove from local-manual store first
+            removeLocalManualEntry(id);
+            // Delete from shared API (best-effort)
             fetch(REZ_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify({ action: 'delete', id: id })
             }).then(function() { loadReservations(); })
               .catch(function(e) { console.log('Delete error:', e); });
-            // Also remove from local cache instantly
+            // Also remove from display cache instantly
             var cached = [];
             try { cached = JSON.parse(localStorage.getItem('bh_bartender_rez') || '[]'); } catch(e) { cached = []; }
             cached = cached.filter(function(r) { return r.id !== id; });
