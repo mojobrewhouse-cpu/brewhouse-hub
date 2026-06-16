@@ -336,8 +336,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
     "note": "Tue Jun 16 ~7 AM LIVE Chrome scrape (acct 343-687-4835), 'Yesterday'=Mon Jun 15. Totals: $54.97 / 7,101 impr / 163 clicks / CTR 2.30% / Avg CPC $0.34 / 0 conv. SECURITY: account-level 'Protect your account from unauthorized activity' banner STILL displayed -- verify May 30 new billing user authorized. Balance/payment not re-checked this run (carried forward; Billing tab not opened).",
     "stale": false,
     "authError": false,
@@ -415,8 +415,18 @@
     "source": "All Sources",
     "today": {
       "date": "Tue, Jun 16",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 3,
+      "bookings": [
+        {
+          "time": "5:45 PM",
+          "name": "Robin ablin",
+          "guests": 3,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(661) 080-9191",
+          "notes": "Birthday!"
+        }
+      ]
     },
     "tomorrow": {
       "date": "Wed, Jun 17",
