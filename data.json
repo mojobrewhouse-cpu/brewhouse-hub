@@ -1,9 +1,9 @@
 {
-  "date": "Tuesday, June 16",
+  "date": "Wednesday, June 17",
   "systemStatus": {
     "level": "warn",
-    "headline": "Tue Jun 16 ~7 AM run COMPLETE. Fresh data in: Toast Mon Jun 15 (Net $2,046.00 / Gross $2,074.00 / 87 guests / 65 orders / Labor 29.3%); Sling Tue Jun 16 (10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT). Google Ads LIVE scrape (Jun 15: $54.97 / 7,101 impr / 163 clicks / 0 conv). Yelp Ads LIVE scrape (30d: 51.1k ad impr / 678 visits / 156 leads). SECURITY still open: Google Ads 'unauthorized activity' banner + May 30 new billing user; Business Profile mgmt request pending (Jun 9). Reviews: Matt Powers 5* (Jun 13) + 2 older 5* (Elizabeth G Heilman Jun 4, Victor Bonhomme Jun 2) still need replies. GitHub PAT 200 OK.",
-    "detail": "(1) FRESHNESS: 7 AM run -- Mon Jun 15 Toast daily summary and Tue Jun 16 Sling roster both arrived (~6:20 & 7:01 AM PT). (2) TOAST Mon Jun 15 (All-Locations group): Net $2,046.00, Gross $2,074.00, 87 guests, 65 orders, avg/guest $23.52, avg/order $31.48, Labor 29.3% of net (~$599.48), 6 void items, 1.4% discounts, $0 refunds. SDLW/4-wk comparison not available (detailed location email not delivered). (3) SLING Tue Jun 16: 10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT / 0 off. Isael Salvador Narciso (Cook) 4:40A-4:40A & Sarah Palmer (Server) 6:27A-6:27A placeholder times -- verify. (4) GOOGLE ADS (LIVE Jun 16 scrape, Jun 15 data): $54.97 / 7,101 impr / 163 clicks / CTR 2.30% / Avg CPC $0.34 / 0 conv. World Cup HQ 2026 now Eligible (Limited), appears recovered from Jun 9 disapproval. (5) YELP (LIVE scrape): 30d 51.1k ad impr / 581 ad clicks / 678 visits / 156 leads; billing fields carried forward (password gate). (6) TRIPADVISOR: no ad-performance email. (7) SECURITY (open, verify): Google Ads 'unauthorized activity' banner + May 30 new billing user; Business Profile mgmt request pending (Jun 9). (8) RESERVATIONS: none today (Tue Jun 16) or Wed Jun 17; upcoming Fri Jun 19 (Erin Simpson 4 @ 11:30 AM - dog/outside/World Cup; Steve Chavez 4 @ 7 PM - severe peanut allergy). GitHub PAT 200 OK.",
+    "headline": "Wed Jun 17 4 AM run COMPLETE (Gmail-only). Freshest emails not in yet: Tue Jun 16 Toast daily summary lands ~6:20 AM; Wed Jun 17 Sling roster lands ~6 AM. Showing latest available: Toast Mon Jun 15 (Net $2,046 / Gross $2,074 / 87 guests / 65 orders / Labor 29.3%); Sling Tue Jun 16 (10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT). Reviews: Matt Powers 5* (Jun 13) + 2 older 5* (Elizabeth G Heilman Jun 4, Victor Bonhomme Jun 2) still need replies. Google Ads: 2 report emails in last 24h, NO disapproval/budget alerts. TripAdvisor: nothing. SECURITY still OPEN from prior runs (not re-verified this Gmail-only run): Google Ads 'unauthorized activity' banner + May 30 new billing user; Business Profile mgmt request pending (Jun 9). GitHub PAT 200 OK.",
+    "detail": "(1) FRESHNESS: 4 AM run pulls Gmail only. Tue Jun 16 Toast summary (~6:20 AM) and Wed Jun 17 Sling roster (~6 AM) had not arrived yet, so newest Toast day = Mon Jun 15 and newest roster = Tue Jun 16. (2) TOAST Mon Jun 15: Net $2,046.00, Gross $2,074.00, 87 guests, 65 orders, avg/guest $23.52, avg/order $31.48, Labor 29.3% (~$599). (3) SLING Tue Jun 16: 10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT. Placeholder times on Isael Salvador Narciso (Cook) 4:40A-4:40A & Sarah Palmer (Server) 6:27A-6:27A -- verify. (4) REVIEWS: Matt Powers 5* (Jun 13) still unanswered, plus Elizabeth G Heilman (Jun 4) and Victor Bonhomme (Jun 2). (5) GOOGLE ADS: 2 report emails last 24h (Brewhouse Daily Campaign Report + Campaign performance); no disapproval or budget-alert emails. Live spend figures carried forward (no Chrome scrape this run). (6) YELP: marketing blast only -- nothing actionable. (7) TRIPADVISOR: no ad-performance email. (8) SECURITY (OPEN, carried forward, NOT re-verified this run): Google Ads 'unauthorized activity' banner + May 30 new billing user; Business Profile mgmt request pending (Jun 9). (9) RESERVATIONS: none today (Wed Jun 17) or Thu Jun 18; Fri Jun 19 -- Erin Simpson 4 @ 11:30 AM (dog/outside/World Cup) and Steve Chavez 4 @ 7 PM (SEVERE PEANUT ALLERGY). GitHub PAT 200 OK.",
     "affected": [
       "SECURITY: Google Ads 'unauthorized activity' banner / May 30 new billing user -- verify authorized",
       "SECURITY: Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown",
@@ -13,12 +13,12 @@
       "Toast SDLW/4-wk comparison for Mon Jun 15 unavailable -- detailed location email not yet delivered"
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-16T07:10:00-07:00"
+    "as_of": "2026-06-17T04:00:00-07:00"
   },
   "toast": {
     "date": "Monday, June 15",
     "pending": false,
-    "source": "Toast Group/All-Locations Daily Performance Summary for Mon Jun 15 (received Tue Jun 16 6:20 AM PT). Detailed 229 W Montecito SDLW/4-wk email not parsed this run; SDLW comparison fields null.",
+    "source": "Latest Toast day still Mon Jun 15 as of Wed Jun 17 4 AM run. Tue Jun 16 daily summary not yet delivered (arrives ~6:20 AM PT). Figures carried forward from Jun 16 run.",
     "gross": 2074.0,
     "net": 2046.0,
     "guests": 87,
@@ -79,7 +79,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Tue Jun 16 roster (Sling daily report '16th of June', received 7:01 AM PT): 10 employees / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT / 0 off. Isael Salvador Narciso (Cook) 4:40A-4:40A and Sarah Palmer (Server) 6:27A-6:27A show placeholder/open-style times -- verify. Wed Jun 17 roster lands ~6 AM PT.",
+    "note": "Latest roster = Tue Jun 16 (Sling '16th of June'). Wed Jun 17 roster had NOT arrived at 4 AM (lands ~6 AM PT) -- showing Tue Jun 16 as most recent. 10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT / 0 off. Placeholder times: Isael Salvador Narciso (Cook) 4:40A-4:40A & Sarah Palmer (Server) 6:27A-6:27A -- verify.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -149,7 +149,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Tue Jun 16 roster (Sling daily report '16th of June', received 7:01 AM PT): 10 employees / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT / 0 off. Isael Salvador Narciso (Cook) 4:40A-4:40A and Sarah Palmer (Server) 6:27A-6:27A show placeholder/open-style times -- verify. Wed Jun 17 roster lands ~6 AM PT.",
+    "note": "Latest roster = Tue Jun 16 (Sling '16th of June'). Wed Jun 17 roster had NOT arrived at 4 AM (lands ~6 AM PT) -- showing Tue Jun 16 as most recent. 10 emp / 56.16 hrs / 11 shifts / 0 uncovered / 0 OT / 0 off. Placeholder times: Isael Salvador Narciso (Cook) 4:40A-4:40A & Sarah Palmer (Server) 6:27A-6:27A -- verify.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -255,7 +255,7 @@
     "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Tue Jun 16 ~7 AM run (LIVE Chrome scrape)",
+    "lastUpdated": "Wed Jun 17 4 AM run -- email check only (figures carried forward from Jun 16 live scrape)",
     "yesterday": {
       "date": "June 15, 2026",
       "spend": 54.97,
@@ -336,10 +336,10 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Tue Jun 16 ~7 AM LIVE Chrome scrape (acct 343-687-4835), 'Yesterday'=Mon Jun 15. Totals: $54.97 / 7,101 impr / 163 clicks / CTR 2.30% / Avg CPC $0.34 / 0 conv. SECURITY: account-level 'Protect your account from unauthorized activity' banner STILL displayed -- verify May 30 new billing user authorized. Balance/payment not re-checked this run (carried forward; Billing tab not opened).",
-    "stale": false,
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "note": "Wed Jun 17 4 AM Gmail-only run: 2 Google Ads report emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance), NO disapproval or budget-alert emails. Performance figures carried forward from Jun 16 live scrape (no Chrome scrape this run). SECURITY: 'unauthorized activity' banner + May 30 new billing user still flagged from prior runs -- verify authorized.",
+    "stale": true,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4,
@@ -367,7 +367,7 @@
     "accountBudgetPerDay": 53.37
   },
   "yelpAds": {
-    "lastUpdated": "Tuesday, June 16 (LIVE Chrome scrape)",
+    "lastUpdated": "Wed Jun 17 (carried forward -- no live scrape this 4 AM run)",
     "last30d": {
       "impressionsFromAds": 51100,
       "impressionsTotal": 60500,
@@ -401,12 +401,12 @@
       "avgCpl": 4.85
     },
     "note": "Tue Jun 16 LIVE Chrome scrape of Yelp Ads dashboard OK. 30d: 51.1k ad impr (84% of 60.5k), 581 ad clicks, 678 ad page visits (67% of ~1k), 156 ad leads (74% of 210). 12mo leads: Ads 967 (57%)/Organic 729 (43%)/Total 1,696; 12mo page visits 8.2k. Billing page (ad spend, Avg CPC/CPL, bonus budget remaining) NOT re-verified -- password re-auth gate; billingPeriod fields carried forward from Jun 14.",
-    "stale": false,
+    "stale": true,
     "authError": false,
     "budgetPerDayAvg": 22.0
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-16",
+    "lastUpdated": "2026-06-17",
     "adEmailPresent": false,
     "note": "No analytics@hm2.tripadvisor.com ad-performance email in the last 24h. Nothing actionable this run."
   },
@@ -447,7 +447,7 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-14 (1 new 5-star Google review: Matt Powers, Jun 13)",
+    "lastUpdated": "2026-06-17 (Matt Powers 5* Jun 13 still unanswered; 2 older 5* also pending)",
     "note": "NEW 5-star Google review from Matt Powers (Jun 13): 'The new coffee bar is great!' -- reply to thank him and reinforce the coffee bar. Two older 5-star reviews are now well over a week old and still need replies: Elizabeth G Heilman (Jun 4) and Victor Bonhomme (Jun 2). Clear these three first.",
     "unanswered": [
       {
@@ -572,7 +572,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-16T07:10:00-07:00",
+  "lastUpdated": "2026-06-17T04:00:00-07:00",
   "yelpInquiries": {
     "lastUpdated": "2026-06-14",
     "actionable": [],
