@@ -1,17 +1,19 @@
 {
-  "date": "Thursday, June 18",
+  "date": "Friday, June 19",
   "systemStatus": {
     "level": "warn",
-    "headline": "Thu Jun 18 7 AM run COMPLETE (full run with LIVE scrapes). Toast Wed Jun 17: Net $4,930.30 / Gross $5,121.10 / 196 guests / 132 orders / Labor 22.8%. Sling Thu Jun 18 roster = 9 emp / 46.16 hrs / 0 uncovered / 0 OT. Google Ads LIVE (Jun 17): $46.14 / 7,406 impr / 134 clicks / 0 conv. Yelp LIVE 30d: $342.20 spend (Jun 1-17) / 48.8k ad impr / 560 ad clicks / 149 ad leads. TripAdvisor: nothing. Reviews: Matt Powers 5* (Jun 13) + Elizabeth (Jun 4) + Victor (Jun 2) still need replies. SECURITY (still open): Google Ads 'unauthorized activity' banner present during live scrape / May 30 billing user; Business Profile mgmt request pending (Jun 9). GitHub PAT 200 OK.",
-    "detail": "(1) TOAST: Wed Jun 17 daily summary (229 W Montecito) pulled live from email: Net $4,930.30, Gross $5,121.10, 196 guests, 132 orders, avg/guest $25.15, avg/order $37.35, Labor 22.8% of net (~$1,124.11 derived), discounts 3.7% of gross (~$189.48 derived), $0 refunds, 9 voids. SDLW/4-wk comparisons not in the email -> left null. (2) SLING: Thu Jun 18 roster -- 9 emp / 46.16 hrs / 10 shifts / 0 uncovered / 0 OT / 0 off. Placeholder times: Rafael Patricio (Cook) 5:32A-5:32A & Sarah Palmer (Server) 6:34A-6:34A. (3) GOOGLE ADS: LIVE Chrome scrape, Yesterday (Jun 17), acct 343-687-4835: $46.14 (down $3.94), 7,406 impr (down 145), 134 clicks (down 32), CTR 1.81%, Avg CPC $0.34, 0 conversions (down 18). (4) YELP: LIVE scrape -- 30d 48.8k ad impr (84%), 560 ad clicks, 658 ad page visits (66%), 149 ad leads (76%); billing Jun 1-17 ad spend $342.20, CPC $1.21, CPL $4.50. Bonus budget remaining not surfaced on dashboard. (5) TRIPADVISOR: none. (6) SECURITY: Google Ads 'unauthorized activity' banner STILL displayed during live scrape + May 30 new billing user; Business Profile management request pending (Jun 9). (7) GitHub PAT 200 OK.",
+    "headline": "Fri Jun 19 4 AM run COMPLETE (Gmail-only). No NEW Toast/Sling since the Jun 18 run -- Thu Jun 18 Toast summary & Fri Jun 19 Sling roster both land ~7 AM PT, after this run. Freshest: Toast Wed Jun 17 (Net $4,930.30, down 22.9% vs same Wed last week), Sling Thu Jun 18 (9 emp / 46.16 hrs / 0 uncovered / 0 OT). NEW THIS RUN: parsed Toast's same-day-last-week + 4-wk columns the Jun 18 run left null, and the $95.75 void amount. Reservations Fri Jun 19: 3 bookings / 10 guests -- incl. 7 PM SEVERE PEANUT ALLERGY (Steve Chavez) + 11:30 AM dog/outside World Cup table (Erin Simpson). Reviews: 3 unanswered 5* (Matt Powers Jun 13, Elizabeth Jun 4, Victor Jun 2). SECURITY STILL OPEN: Google Ads 'unauthorized activity' banner / May 30 new billing user; Business Profile mgmt request pending (Jun 9). 2 Google Ads reports, no disapprovals. Yelp/TripAdvisor: nothing actionable. GitHub PAT 200 OK.",
+    "detail": "(1) TOAST Wed Jun 17: Net $4,930.30 / Gross $5,121.10 / 196 guests / 132 orders / Labor 22.8% / 9 voids $95.75 / discounts ~$190.80. Same-day-last-week (Wed Jun 10) now parsed: Net $6,398.87 (down 22.9%), Gross $6,763.10 (down 24.3%), Labor 18.1%; 4-wk weekday avg Net $5,089.93 (down 3.1%). (2) SLING Thu Jun 18 roster (freshest): 9 emp / 46.16 hrs / 10 shifts / 0 uncovered / 0 OT. Fri Jun 19 report not yet in. (3) GOOGLE ADS: 2 report emails last 24h, no disapprovals/budget alerts. Live metrics carried from Jun 18 (Jun 17: $46.14 / 7,406 impr / 134 clicks / 0 conv). (4) YELP: no actionable inquiries (newsletter blast only). (5) TRIPADVISOR: nothing. (6) SECURITY (unchanged, verify): Google Ads unauthorized-activity banner + May 30 billing user; Business Profile mgmt request pending Jun 9. (7) GitHub PAT 200 OK.",
     "affected": [
-      "SECURITY (verify): Google Ads 'unauthorized activity' banner present during Jun 18 live scrape / May 30 new billing user -- confirm authorized",
-      "SECURITY (verify): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown",
-      "Reviews needing replies: Matt Powers (Jun 13, 5*), Elizabeth G Heilman (Jun 4, 5*), Victor Bonhomme (Jun 2, 5*)",
-      "Toast Wed Jun 17 has no same-day-last-week comparison (not provided in email)"
+      "KITCHEN URGENT: 7:00 PM reservation Steve Chavez (4) -- SEVERE PEANUT ALLERGY. Brief line + expo.",
+      "FOH: 11:30 AM Erin Simpson (4) -- dog, needs outside/patio + wants World Cup noon game. 12:00 PM Patricia Wilson (2) -- TV view.",
+      "SECURITY (verify): Google Ads 'unauthorized activity' banner / May 30 new billing user -- confirm authorized.",
+      "SECURITY (verify): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
+      "Reviews needing replies: Matt Powers (Jun 13, 5*), Elizabeth G Heilman (Jun 4, 5*), Victor Bonhomme (Jun 2, 5*).",
+      "Data latency: Thu Jun 18 Toast & Fri Jun 19 Sling land ~7 AM PT (after the 4 AM run)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-18T07:07:00-07:00"
+    "as_of": "2026-06-19T04:00:00-07:00"
   },
   "toast": {
     "date": "Wednesday, June 17",
@@ -24,29 +26,29 @@
     "orders": 132,
     "avgPerGuest": 25.15,
     "avgPerOrder": 37.35,
-    "netSDLW": null,
-    "grossSDLW": null,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
-    "net4wkAvg": null,
-    "gross4wkAvg": null,
+    "netSDLW": 6398.87,
+    "grossSDLW": 6763.1,
+    "netChangeVsSDLWPct": -23.0,
+    "grossChangeVsSDLWPct": -24.3,
+    "net4wkAvg": 5089.93,
+    "gross4wkAvg": 5431.65,
     "laborPct": 22.8,
     "laborCost": 1124.11,
-    "laborSDLWPct": null,
-    "laborChangeVsSDLWPct": null,
+    "laborSDLWPct": 18.1,
+    "laborChangeVsSDLWPct": 4.7,
     "discountPct": 3.7,
     "discounts": 189.48,
     "voidItems": 9,
-    "voidAmount": null,
+    "voidAmount": 95.75,
     "refunds": 0.0,
     "giftCards": 0.0,
-    "guestsSDLW": null,
+    "guestsSDLW": 249,
     "ordersSDLW": null,
     "nextDayPending": true,
     "weekToDate": null,
-    "note": "Toast Wed Jun 17 (229 W Montecito daily summary): Net $4,930.30 / Gross $5,121.10 / 196 guests / 132 orders / avg/guest $25.15 / avg/order $37.35 / Labor 22.8% of net (~$1,124.11, derived) / discounts 3.7% of gross (~$189.48, derived) / $0 refunds / 9 void items / 104 card payments / 1 open order. Down from the very strong Tue Jun 16 ($6,137 net). Same-day-last-week (Wed Jun 10) comparison not provided in this email, so SDLW/4-wk fields left null. Thu Jun 18 summary lands ~2:40 PM PT.",
-    "net4wkChangePct": null,
-    "gross4wkChangePct": null
+    "note": "Toast Wed Jun 17 (229 W Montecito daily summary): Net $4,930.30 / Gross $5,121.10 / 196 guests / 132 orders / Labor 22.8% / 9 voids ($95.75) / discounts ~$190.80. Same-day-last-week (Wed Jun 10) NOW parsed from the email's 3-column table: Net $6,398.87 (Jun 17 down 22.9%), Gross $6,763.10 (down 24.3%), Labor 18.1%; 4-wk weekday avg Net $5,089.93 (down 3.1%). Thu Jun 18 summary not yet in inbox at 4 AM (lands ~7 AM PT) -- Wed Jun 17 remains freshest.",
+    "net4wkChangePct": -3.1,
+    "gross4wkChangePct": -5.7
   },
   "toastLastKnown": {
     "date": "Tuesday, June 16",
@@ -77,7 +79,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Latest roster = Thu Jun 18 (Sling daily report '18th of June', received ~7:01 AM PT). 9 employees / 46.16 hrs / 10 shifts / 0 uncovered / 0 OT / 0 off. Placeholder times to verify: Rafael Patricio (Cook) 5:32A-5:32A & Sarah Palmer (Server) 6:34A-6:34A.",
+    "note": "Latest roster = Thu Jun 18 (Sling daily report '18th of June', received ~7:01 AM PT). 9 employees / 46.16 hrs / 10 shifts / 0 uncovered / 0 OT / 0 off. Placeholder times to verify: Rafael Patricio (Cook) 5:32A-5:32A & Sarah Palmer (Server) 6:34A-6:34A. [Jun 19 4AM run: Fri Jun 19 Sling report not yet received -- this Thu Jun 18 roster is the freshest available.]",
     "staff": [
       {
         "name": "Rafael Patricio",
@@ -263,7 +265,7 @@
     "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Thu Jun 18 7 AM run -- LIVE Chrome scrape of Google Ads campaigns, account 343-687-4835 (Yesterday = Jun 17)",
+    "lastUpdated": "Fri Jun 19 4 AM run -- Gmail-only (no live scrape). Campaign metrics carried from Jun 18 live scrape.",
     "yesterday": {
       "date": "June 17, 2026",
       "spend": 46.14,
@@ -344,8 +346,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "Thu Jun 18 7 AM full run: LIVE Chrome scrape of Google Ads campaigns for Yesterday (Jun 17). Account summary captured; per-campaign table not re-scraped this run (campaign array carried from Jun 17). SECURITY: 'Protect your account from unauthorized activity' banner STILL displayed during the live scrape + May 30 new billing user -- verify authorized.",
     "stale": false,
     "authError": false,
@@ -357,7 +359,7 @@
       "severity": "verify",
       "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Thu Jun 18 live scrape. VERIFY authorized."
     },
-    "reportsNote": "2 Google Ads report emails in the last 24h (daily campaign + campaign performance, Jun 17). No disapproval or budget-alert emails this run. Live campaign metrics not refreshed (Gmail-only run).",
+    "reportsNote": "2 Google Ads report emails in last 24h (Brewhouse Daily Campaign + Campaign performance, Jun 18). No disapproval or budget-alert emails this run. World Cup HQ 2026 previously disapproved -> now Eligible (Limited), monitor.",
     "disapprovals": [
       {
         "present": true,
@@ -462,7 +464,7 @@
     "upcoming": []
   },
   "reviews": {
-    "lastUpdated": "2026-06-18 (no new reviews since Jun 17). Still unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2) -- clear these.",
+    "lastUpdated": "2026-06-19 (no new reviews since Jun 13). Unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
     "note": "NEW 5-star Google review from Matt Powers (Jun 13): 'The new coffee bar is great!' -- reply to thank him and reinforce the coffee bar. Two older 5-star reviews are now well over a week old and still need replies: Elizabeth G Heilman (Jun 4) and Victor Bonhomme (Jun 2). Clear these three first.",
     "unanswered": [
       {
@@ -471,7 +473,7 @@
         "date": "2026-06-13",
         "stars": 5,
         "snippet": "The new coffee bar is great!",
-        "ageDays": 5
+        "ageDays": 6
       },
       {
         "platform": "Google",
@@ -587,7 +589,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-18T07:07:00-07:00",
+  "lastUpdated": "2026-06-19T04:00:00-07:00",
   "yelpInquiries": {
     "lastUpdated": "2026-06-18",
     "actionable": [],
