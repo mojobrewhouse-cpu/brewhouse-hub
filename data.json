@@ -1,9 +1,9 @@
 {
-  "date": "Monday, June 22",
+  "date": "Tuesday, June 23",
   "systemStatus": {
     "level": "ok",
-    "headline": "Mon Jun 22 7 AM run COMPLETE. Browser CONNECTED -> Google Ads & Yelp Ads scraped LIVE. FRESH: Toast Sun Jun 21 (Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 voids) and Sling Mon Jun 22 roster (7 emp / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT / 0 off). Google Ads Jun 21: $39.02 cost / 8,379 impr / 167 clicks / 0 conv (all down vs prior). 2 report-ready emails, NO disapprovals/budget alerts. Yelp 30d: $402.12 spend (Jun 1-21), 45.7k ad impr, 132 ad leads. TripAdvisor: nothing actionable. SECURITY STILL OPEN: Google Ads 'unauthorized activity' banner / May 30 billing user; Business Profile mgmt request pending (Jun 9). GitHub PAT 200 OK.",
-    "detail": "(1) TOAST Sun Jun 21 (group daily summary, freshest): Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 void items / discount 3.1% / Avg/guest $25.20 / Avg/order $49.72. Card payments 119, 1 open order, auto-clocked-out Jorge Aldana Aquirre. SDLW & 4-wk comparison columns arrive with the detailed 229 W Montecito summary ~tomorrow. Sat Jun 20 moved to toastLastKnown. (2) SLING Mon Jun 22 roster (freshest): 7 emp / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT / 0 off. Placeholder to verify: Rafael Patricio (Cook) 5:22A-5:22A. Sun Jun 21 moved to slingLastKnown. (3) GOOGLE ADS: LIVE scrape (browser connected). Yesterday Jun 21 = $39.02 cost (down $20.81) / 8,379 impr (down 2,699) / 167 clicks (down 34) / 0 conv (down 11) / CTR 1.99% / Avg CPC $0.23. Campaigns: World Cup HQ 2026 (Eligible-Limited, 1,124 impr/27 clk), Oldest SB Brewery on Tap (Paused), Local store PMax-2 (Eligible-Limited+budget-limited, 6,946 impr/133 clk), BHC Coffee Search (Eligible-Limited, 309 impr/7 clk). Budget recommendation banner on Local PMax-2 (raise to $76 for +279.57 conv/wk). 2 report-ready emails (Jun 21 & Jun 22), no disapprovals/budget alerts. (4) YELP ADS: LIVE scrape. 30d: 45.7k ad impr (82% of 55.7k), 550 ad clicks, 643 ad page visits (64%), 132 ad leads (72% of 183). Billing Jun 1-21: spend $402.12, Avg CPC $1.16, Avg CPL $4.73. 12mo: Ads 980 (57%)/Organic 741/Total 1,721. Bonus budget remaining not shown on dashboard. (5) TRIPADVISOR: no ad-performance email with metrics in 24h. (6) SECURITY (unchanged, verify): Google Ads unauthorized-activity banner + May 30 billing user STILL present during live scrape; Business Profile management request pending (Jun 9). GitHub PAT OK (200).",
+    "headline": "Tue Jun 23 4 AM run COMPLETE (email-based: Gmail + GitHub; no browser this cycle). FRESHEST available unchanged since yesterday: Toast Sun Jun 21 (Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 voids) -- Mon Jun 22 daily summary NOT yet delivered (lands ~late morning). Sling roster = Mon Jun 22 (7 emp / 30.58 hrs / 0 uncovered / 0 OT); Tue Jun 23 roster not yet delivered. 2 new Google Ads report-ready emails Jun 22, NO disapprovals/budget alerts. Yelp: nothing actionable. TripAdvisor: no metrics email (Jun 20 teaser only). 1 NEW-ish 5* Google review still UNANSWERED (Eric Groos, Jun 21) plus 3 older unanswered 5*. Reservations: today Jun 23 = 0 booked, tomorrow Jun 24 = 5 guests. GitHub PAT 200 OK.",
+    "detail": "(1) TOAST: freshest is Sun Jun 21 group daily summary -- Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 void items / discount 3.1% / Avg/guest $25.20 / Avg/order $49.72. The Mon Jun 22 daily summary had not arrived by the 4 AM run (Toast sends it ~7-8 AM PT), so yesterday's actuals are still pending. (2) SLING: freshest roster = Mon Jun 22 (7 emp / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT / 0 off). Tue Jun 23 report not yet delivered. (3) GOOGLE ADS: 2 report-ready emails Jun 22 (Brewhouse Daily Campaign Report + Campaign performance), no disapprovals or budget alerts in inbox. No live scrape this run; last live figures = Jun 21 ($39.02 cost / 8,379 impr / 167 clicks / 0 conv). (4) YELP: no actionable customer inquiries. (5) TRIPADVISOR: no analytics@hm2.tripadvisor.com metrics email in 24h; Jun 20 teaser carries no figures. (6) REVIEWS: Eric Groos 5* (Jun 21) still unanswered; older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2). (7) RESERVATIONS: today Jun 23 = 0; tomorrow Jun 24 = 5 guests (2 bookings).",
     "affected": [
       "SECURITY (verify): Google Ads 'unauthorized activity' banner + May 30 new billing user STILL showing during the live scrape -- confirm authorized.",
       "SECURITY (verify): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
@@ -13,7 +13,7 @@
       "Reviews: NEW 5* from Eric Groos (Jun 21, carried from the 4 AM pass) plus older unanswered 5* (Matt Powers Jun 13, Elizabeth Jun 4, Victor Jun 2)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-22T07:12:00-07:00"
+    "as_of": "2026-06-23T04:00:00-07:00"
   },
   "toast": {
     "date": "Sunday, June 21",
@@ -46,7 +46,7 @@
     "ordersSDLW": null,
     "nextDayPending": true,
     "weekToDate": null,
-    "note": "Toast Sun Jun 21 (group daily summary): Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 void items / discount 3.1%. Avg/guest $25.20, Avg/order $49.72. Card payments 119, 1 remaining open order, auto-clocked-out: Jorge Aldana Aquirre. Order type: 1 takeout ($32.00), 0 delivery, 1 dine-in ($0.00). laborCost ($1,381.27) and discounts ($233.82) are DERIVED from the percentages; void $, same-day-last-week & 4-wk comparison columns are not in the same-morning group email -- they land with the detailed 229 W Montecito summary ~tomorrow. Prior freshest (Toast Sat Jun 20) moved to toastLastKnown.",
+    "note": "Freshest Toast = Sun Jun 21 group daily summary (Net $7,308.29 / Gross $7,542.65 / 290 guests / 147 orders / Labor 18.9% / 8 voids). Mon Jun 22 daily summary had NOT arrived by the 4 AM Jun 23 run; yesterday's actuals still pending.",
     "net4wkChangePct": null,
     "gross4wkChangePct": null
   },
@@ -79,7 +79,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Latest roster = Mon Jun 22 (Sling daily report '22nd of June', received ~7:01 AM PT). 7 employees / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT / 0 off. Placeholder time to verify: Rafael Patricio (Cook) 5:22A-5:22A.",
+    "note": "Freshest roster = Mon Jun 22 (Sling daily report '22nd of June'). Tue Jun 23 report not yet delivered at 4 AM run.",
     "staff": [
       {
         "name": "Rafael Patricio",
@@ -129,7 +129,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Latest roster = Mon Jun 22 (Sling daily report '22nd of June', received ~7:01 AM PT). 7 employees / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT / 0 off. Placeholder time to verify: Rafael Patricio (Cook) 5:22A-5:22A.",
+    "note": "Freshest roster = Mon Jun 22 (Sling daily report '22nd of June'). Tue Jun 23 report not yet delivered at 4 AM run.",
     "staff": [
       {
         "name": "Rafael Patricio",
@@ -245,7 +245,7 @@
     "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Mon Jun 22 7 AM run -- LIVE Chrome scrape (browser connected). Account summary + per-campaign table scraped for Yesterday (Jun 21), acct 343-687-4835.",
+    "lastUpdated": "Tue Jun 23 4 AM run -- EMAIL ONLY (no browser). 2 report-ready emails Jun 22 (Daily Campaign Report + Campaign performance), no disapprovals/budget alerts. Figures below are last LIVE scrape from Jun 22 run (data = Jun 21).",
     "yesterday": {
       "date": "June 21, 2026",
       "spend": 39.02,
@@ -397,9 +397,9 @@
     "budgetPerDayAvg": 22.0
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-22",
+    "lastUpdated": "2026-06-23",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email with metrics in the last 24h. (A Jun 20 'Your Ads are getting some MAJOR attention!' teaser exists but is >24h old and carries no figures.) Nothing actionable this run."
+    "note": "No analytics@hm2.tripadvisor.com ad-performance email with metrics in the last 24h (Jun 20 'MAJOR attention' teaser is >24h old and carries no figures). Nothing actionable this run."
   },
   "reservations": {
     "lastUpdated": "2026-06-23",
@@ -457,7 +457,7 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-21 (NEW 5* from Eric Groos overnight). Older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
+    "lastUpdated": "2026-06-23 -- no new reviews overnight. Still UNANSWERED: Eric Groos 5* (Jun 21), Matt Powers 5* (Jun 13), Elizabeth G Heilman 5* (Jun 4), Victor Bonhomme 5* (Jun 2).",
     "note": "NEW 5-star Google review from Eric Groos (Jun 21): 'sodas and music what isn't to like' -- reply first. Then clear older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
     "unanswered": [
       {
@@ -590,9 +590,9 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-22T07:15:00-07:00",
+  "lastUpdated": "2026-06-23T04:00:00-07:00",
   "yelpInquiries": {
-    "lastUpdated": "2026-06-21",
+    "lastUpdated": "2026-06-23",
     "actionable": [],
     "note": "No actionable Yelp customer inquiries in last 24h (no matching Yelp emails). Newsletters/blasts skipped."
   },
