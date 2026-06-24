@@ -1,52 +1,51 @@
 {
-  "date": "Tuesday, June 23",
+  "date": "Wednesday, June 24",
   "systemStatus": {
     "level": "ok",
-    "headline": "Tue Jun 23 7 AM run COMPLETE (browser connected: live Google Ads + Yelp scrapes + Gmail + GitHub). FRESH Toast Mon Jun 22 (Net $3,145.60 / Gross $3,248.00 / 140 guests / 103 orders / Labor 22.8% / 9 voids). Sling roster Tue Jun 23 = 8 emp / 40.08 hrs / 0 uncovered / 0 OT. Google Ads Jun 22 LIVE: $47.92 cost / 9,189 impr / 146 clicks / 0 conversions (tracking still not firing). Yelp 30d: $416.69 spend (Jun 1-22) / 123 ad leads / 520 ad clicks. TripAdvisor: no metrics email. GitHub PAT 200 OK. SECURITY (verify): Google Ads 'unauthorized activity' banner still showing during scrape.",
-    "detail": "(1) TOAST: freshest = Mon Jun 22 group daily summary -- Net $3,145.60 / Gross $3,248.00 / 140 guests / 103 orders / Labor 22.8% / 9 voids / discount 3.2% / gift cards $40 / Avg/guest $22.47 / Avg/order $30.54. Detailed 229 W Montecito Jun 22 summary (with SDLW/4-wk columns) not yet delivered. (2) SLING: freshest roster = Tue Jun 23 (8 emp / 40.08 hrs / 8 shifts / 0 uncovered / 0 OT / 0 off). (3) GOOGLE ADS: LIVE scrape Jun 22 -- $47.92 cost (up $8.89), 9,189 impr (up 810), 146 clicks (down 21), CTR 1.59%, Avg CPC $0.33, 0 conversions. 7d (Jun 16-22): 59,241 impr / 1,195 clicks / $376.67 / 308.27 conv. (4) YELP: LIVE scrape -- billing Jun 1-22 ad spend $416.69, CPC $1.15, CPL $4.58; 30d 43.4k ad impr / 520 clicks / 613 page visits / 123 leads. (5) TRIPADVISOR: no analytics email with metrics in 24h.",
+    "headline": "Wed Jun 24 4 AM run COMPLETE (Gmail + GitHub). FRESH Toast detailed Mon Jun 22: Net $3,145.60 (+53.7% SDLW) / Gross $3,348.00 (+61.4%) / 140 guests / 103 orders / Labor $717.18 (22.8%) / Voids $81.00. Sling roster Tue Jun 23 = 8 emp / 40.08 hrs / 0 uncovered / 0 OT (today Jun 24 roster not yet sent). Reviews: Eric Groos 5* (Jun 21) still UNANSWERED + 3 older unanswered 5*. Yelp: nothing actionable. Google Ads: 2 report emails / 24h, no disapprovals/budget alerts. TripAdvisor: no metrics email. GitHub PAT 200 OK.",
+    "detail": "This 4 AM pass used Gmail + GitHub only (no live Google Ads/Yelp browser scrape). (1) TOAST: detailed Mon Jun 22 229 W Montecito summary now in hand -- Net $3,145.60 / Gross $3,348.00 / 140 guests / 103 orders / Labor $717.18 (22.8%) / Voids $81.00 (9) / Discounts $202.40 / Gift cards $40 / SDLW Net $2,046.00 (+53.7%), Gross $2,074.00 (+61.4%); 4-wk Net $2,043.50, Gross $2,127.62. Tue Jun 23 summary pending. (2) SLING: freshest roster = Tue Jun 23 (8 emp / 40.08 hrs / 0 uncovered / 0 OT); today Jun 24 roster not yet delivered. (3) GOOGLE ADS: 2 report-ready emails in 24h (Daily Campaign Report Jun 23 15:48; Campaign performance Jun 23 12:31). No disapproval or budget-alert emails. Live spend figures carried from Jun 23 scrape. (4) YELP: no actionable customer inquiries. (5) TRIPADVISOR: no analytics email.",
     "affected": [
-      "SECURITY (verify): Google Ads 'unauthorized activity' banner + May 30 new billing user STILL showing during the live scrape -- confirm authorized.",
-      "SECURITY (verify): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
-      "Google Ads: 0 conversions Jun 21 (down 11) and cost down $20.81 -- check conversion tracking ('Reservation Form Submission' tag not yet verified on site) and bid-strategy limits.",
-      "Google Ads: Local store PMax-2 limited by budget (recommendation to raise to $76/day for +279.57 conv/wk) -- decide whether to increase.",
-      "Reviews needing replies (carried from Jun 19, not re-checked this run): Matt Powers (Jun 13, 5*), Elizabeth G Heilman (Jun 4, 5*), Victor Bonhomme (Jun 2, 5*).",
-      "Reviews: NEW 5* from Eric Groos (Jun 21, carried from the 4 AM pass) plus older unanswered 5* (Matt Powers Jun 13, Elizabeth Jun 4, Victor Jun 2)."
+      "Reviews: NEW-ish 5* Eric Groos (Jun 21) STILL unanswered, plus older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
+      "SLING: Isael Salvador Narciso (Cook) shows placeholder shift 4:33A-4:33A on the Jun 23 roster -- verify/fix.",
+      "SECURITY (verify, carried): Google Ads 'unauthorized activity' banner + May 30 new billing user -- confirm authorized.",
+      "SECURITY (verify, carried): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
+      "Google Ads: conversion tracking still firing 0 ('Reservation Form Submission' tag unverified on site)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-23T07:30:00-07:00"
+    "as_of": "2026-06-24T04:00:00-07:00"
   },
   "toast": {
     "date": "Monday, June 22",
     "pending": false,
-    "source": "Toast group Daily Performance Summary email ('The Brewhouse Santa Barbara Group - Monday, June 22'), arrived Tue Jun 23 ~6:24 AM PT. Figures from email body (All Locations = single location 229 W Montecito). Group same-morning email does NOT carry SDLW/4-wk comparisons, labor $, void $, or discount $ -- those arrive with the detailed '229 West Montecito Street' summary ~1 day later.",
-    "gross": 3248.0,
+    "source": "Detailed 'The Brewhouse Santa Barbara - 229 West Montecito Street - Monday, June 22' Daily Performance Summary (arrived Tue Jun 23 7:39 AM PT). Gross corrected to $3,348.00 (group same-morning email mis-stated $3,248.00); gross - discounts $202.40 = net $3,145.60. SDLW + 4-wk comparison columns, labor $, and void $ now included.",
+    "gross": 3348.0,
     "net": 3145.6,
     "guests": 140,
     "guestsDerived": false,
     "orders": 103,
     "avgPerGuest": 22.47,
     "avgPerOrder": 30.54,
-    "netSDLW": null,
-    "grossSDLW": null,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
-    "net4wkAvg": null,
-    "gross4wkAvg": null,
+    "netSDLW": 2046.0,
+    "grossSDLW": 2074.0,
+    "netChangeVsSDLWPct": 53.7,
+    "grossChangeVsSDLWPct": 61.4,
+    "net4wkAvg": 2043.5,
+    "gross4wkAvg": 2127.62,
     "laborPct": 22.8,
-    "laborCost": null,
+    "laborCost": 717.18,
     "laborSDLWPct": null,
     "laborChangeVsSDLWPct": null,
-    "discountPct": 3.2,
-    "discounts": null,
+    "discountPct": 6.0,
+    "discounts": 202.4,
     "voidItems": 9,
-    "voidAmount": null,
+    "voidAmount": 81.0,
     "refunds": 0.0,
     "giftCards": 40.0,
     "guestsSDLW": null,
     "ordersSDLW": null,
     "nextDayPending": true,
     "weekToDate": null,
-    "note": "Freshest Toast = Mon Jun 22 group daily summary (Net $3,145.60 / Gross $3,248.00 / 140 guests / 103 orders / Labor 22.8% / 9 voids / 3.2% discount / $40 gift cards). Detailed 229 W Montecito Jun 22 summary (with comparison columns) not yet delivered at this run.",
+    "note": "Mon Jun 22 (detailed 229 W Montecito summary): Net $3,145.60 (+53.7% vs same day last week $2,046.00), Gross $3,348.00 (+61.4% vs $2,074.00), 140 guests, 103 orders, avg/guest $22.47, avg/order $30.54, Labor $717.18 (22.8% of net), Voids $81.00 (9 items), Discounts $202.40, Gift cards $40. Tue Jun 23 Toast summary not yet delivered at this 4 AM run.",
     "net4wkChangePct": null,
     "gross4wkChangePct": null
   },
@@ -311,8 +310,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "Tue Jun 23 7 AM full run: LIVE Chrome scrape of Google Ads campaigns for Yesterday (Jun 22). Account total: 9,189 impr / 146 clicks / CTR 1.59% / Avg cost $0.33 / cost $47.92; budget $58.37/day. Per-campaign: World Cup $11.50, Oldest SB $0 (paused), Local PMax-2 $27.46, BHC $8.96. SECURITY: 'Protect your account from unauthorized activity' banner STILL displayed during this scrape -- verify authorized.",
     "stale": false,
     "authError": false,
@@ -382,7 +381,7 @@
     "budgetPerDayAvg": 22.0
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-23",
+    "lastUpdated": "2026-06-24",
     "adEmailPresent": false,
     "note": "No analytics@hm2.tripadvisor.com ad-performance email with metrics in the last 24h. Nothing actionable this run."
   },
@@ -462,7 +461,7 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-23 -- no new reviews overnight. Still UNANSWERED: Eric Groos 5* (Jun 21), Matt Powers 5* (Jun 13), Elizabeth G Heilman 5* (Jun 4), Victor Bonhomme 5* (Jun 2).",
+    "lastUpdated": "2026-06-24 -- no new reviews overnight. UNANSWERED 5*: Eric Groos (Jun 21), Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
     "note": "NEW 5-star Google review from Eric Groos (Jun 21): 'sodas and music what isn't to like' -- reply first. Then clear older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
     "unanswered": [
       {
@@ -595,9 +594,9 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-23T07:30:00-07:00",
+  "lastUpdated": "2026-06-24T04:00:00-07:00",
   "yelpInquiries": {
-    "lastUpdated": "2026-06-23",
+    "lastUpdated": "2026-06-24",
     "actionable": [],
     "note": "No actionable Yelp customer inquiries in last 24h (no matching Yelp emails). Newsletters/blasts skipped."
   },
