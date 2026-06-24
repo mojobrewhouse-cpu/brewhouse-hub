@@ -2,88 +2,88 @@
   "date": "Wednesday, June 24",
   "systemStatus": {
     "level": "ok",
-    "headline": "Wed Jun 24 4 AM run COMPLETE (Gmail + GitHub). FRESH Toast detailed Mon Jun 22: Net $3,145.60 (+53.7% SDLW) / Gross $3,348.00 (+61.4%) / 140 guests / 103 orders / Labor $717.18 (22.8%) / Voids $81.00. Sling roster Tue Jun 23 = 8 emp / 40.08 hrs / 0 uncovered / 0 OT (today Jun 24 roster not yet sent). Reviews: Eric Groos 5* (Jun 21) still UNANSWERED + 3 older unanswered 5*. Yelp: nothing actionable. Google Ads: 2 report emails / 24h, no disapprovals/budget alerts. TripAdvisor: no metrics email. GitHub PAT 200 OK.",
-    "detail": "This 4 AM pass used Gmail + GitHub only (no live Google Ads/Yelp browser scrape). (1) TOAST: detailed Mon Jun 22 229 W Montecito summary now in hand -- Net $3,145.60 / Gross $3,348.00 / 140 guests / 103 orders / Labor $717.18 (22.8%) / Voids $81.00 (9) / Discounts $202.40 / Gift cards $40 / SDLW Net $2,046.00 (+53.7%), Gross $2,074.00 (+61.4%); 4-wk Net $2,043.50, Gross $2,127.62. Tue Jun 23 summary pending. (2) SLING: freshest roster = Tue Jun 23 (8 emp / 40.08 hrs / 0 uncovered / 0 OT); today Jun 24 roster not yet delivered. (3) GOOGLE ADS: 2 report-ready emails in 24h (Daily Campaign Report Jun 23 15:48; Campaign performance Jun 23 12:31). No disapproval or budget-alert emails. Live spend figures carried from Jun 23 scrape. (4) YELP: no actionable customer inquiries. (5) TRIPADVISOR: no analytics email.",
+    "headline": "Wed Jun 24 7 AM run COMPLETE (Gmail + GitHub + LIVE Google Ads & Yelp Chrome scrapes). FRESH Toast Tue Jun 23 (Group summary): Net $5,124.30 / Gross $5,231.20 / 199 guests / 133 orders / Labor 23.1%. Sling today Wed Jun 24 = 10 emp / 52.25 hrs / 0 uncovered / 0 OT. Google Ads Jun 23: $53.78 / 7,114 impr / 143 clicks / 0 conv. Yelp 30d: 122 ad leads / 489 ad clicks. Reviews: Eric Groos 5* (Jun 21) still UNANSWERED + 3 older unanswered 5*. GitHub PAT 200 OK.",
+    "detail": "This 7 AM pass used Gmail + GitHub + live Chrome scrapes of Google Ads and Yelp. (1) TOAST: Tue Jun 23 Group/All-Locations summary now in hand -- Net $5,124.30 / Gross $5,231.20 / 199 guests / 133 orders / avg/guest $25.75 / avg/order $38.53 / Labor 23.1% / Discounts 2.0% ($106.90) / Voids 14 / Gift cards $100. Detailed 229 W Montecito summary for Jun 23 (with SDLW/4-wk columns) not yet delivered at this run. (2) SLING: today's roster = Wed Jun 24 (10 emp / 52.25 hrs / 10 shifts / 0 uncovered / 0 OT). (3) GOOGLE ADS: LIVE scrape, Yesterday (Jun 23) = 7,114 impr / 143 clicks / CTR 2.01% / Avg CPC $0.38 / cost $53.78; budget $58.37/day; 0 conversions (tracking still not firing). Per-campaign: World Cup $19.93, Oldest SB $0 (paused), Local PMax-2 $13.17, BHC $20.68. (4) YELP: LIVE scrape, 30d 41.2k ad impr / 489 ad clicks / 574 ad page visits / 122 ad leads; billing/ad-spend page required password re-login (skipped), ad spend carried. (5) TRIPADVISOR: no analytics email.",
     "affected": [
-      "Reviews: NEW-ish 5* Eric Groos (Jun 21) STILL unanswered, plus older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
-      "SLING: Isael Salvador Narciso (Cook) shows placeholder shift 4:33A-4:33A on the Jun 23 roster -- verify/fix.",
-      "SECURITY (verify, carried): Google Ads 'unauthorized activity' banner + May 30 new billing user -- confirm authorized.",
+      "Reviews: 5* Eric Groos (Jun 21) STILL unanswered, plus older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
+      "SLING: Isael Salvador Narciso (Cook) shows placeholder shift 4:35A-4:35A on the Jun 24 roster -- verify/fix.",
+      "SECURITY (verify): Google Ads 'unauthorized activity' protection banner STILL displayed during the Jun 24 live scrape + May 30 new billing user -- confirm authorized.",
       "SECURITY (verify, carried): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
       "Google Ads: conversion tracking still firing 0 ('Reservation Form Submission' tag unverified on site)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-24T04:00:00-07:00"
+    "as_of": "2026-06-24T07:15:00-07:00"
   },
   "toast": {
-    "date": "Monday, June 22",
+    "date": "Tuesday, June 23",
     "pending": false,
-    "source": "Detailed 'The Brewhouse Santa Barbara - 229 West Montecito Street - Monday, June 22' Daily Performance Summary (arrived Tue Jun 23 7:39 AM PT). Gross corrected to $3,348.00 (group same-morning email mis-stated $3,248.00); gross - discounts $202.40 = net $3,145.60. SDLW + 4-wk comparison columns, labor $, and void $ now included.",
+    "source": "'The Brewhouse Santa Barbara Group - Tuesday, June 23' Daily Performance Summary (All Locations; arrived Tue->Wed Jun 24 ~6:20 AM PT). NOTE: this is the GROUP summary, which is less detailed than the '229 West Montecito Street' report (no SDLW/4-wk comparison columns). The detailed 229 W Montecito summary for Jun 23 had not yet been delivered at this 7 AM run; SDLW comparisons will populate when it arrives.",
+    "gross": 5231.2,
+    "net": 5124.3,
+    "guests": 199,
+    "guestsDerived": false,
+    "orders": 133,
+    "avgPerGuest": 25.75,
+    "avgPerOrder": 38.53,
+    "netSDLW": null,
+    "grossSDLW": null,
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null,
+    "net4wkAvg": null,
+    "gross4wkAvg": null,
+    "laborPct": 23.1,
+    "laborCost": 1183.71,
+    "laborSDLWPct": null,
+    "laborChangeVsSDLWPct": null,
+    "discountPct": 2.0,
+    "discounts": 106.9,
+    "voidItems": 14,
+    "voidAmount": null,
+    "refunds": 0.0,
+    "giftCards": 100.0,
+    "guestsSDLW": null,
+    "ordersSDLW": null,
+    "nextDayPending": true,
+    "weekToDate": null,
+    "note": "Tue Jun 23 (Group/All-Locations summary): Net $5,124.30, Gross $5,231.20, 199 guests, 133 orders, avg/guest $25.75, avg/order $38.53, Labor 23.1% of net (~$1,183.71), Discounts 2.0% ($106.90), Void items 14, Refunds $0.00, Gift cards $100.00, Card payments 112. SDLW/4-wk comparison not in the Group email; detailed 229 W Montecito Jun 23 summary not yet delivered at this 7 AM run.",
+    "net4wkChangePct": null,
+    "gross4wkChangePct": null
+  },
+  "toastLastKnown": {
+    "date": "Monday, June 22",
     "gross": 3348.0,
     "net": 3145.6,
     "guests": 140,
-    "guestsDerived": false,
     "orders": 103,
     "avgPerGuest": 22.47,
     "avgPerOrder": 30.54,
-    "netSDLW": 2046.0,
-    "grossSDLW": 2074.0,
-    "netChangeVsSDLWPct": 53.7,
-    "grossChangeVsSDLWPct": 61.4,
-    "net4wkAvg": 2043.5,
-    "gross4wkAvg": 2127.62,
     "laborPct": 22.8,
     "laborCost": 717.18,
-    "laborSDLWPct": null,
-    "laborChangeVsSDLWPct": null,
     "discountPct": 6.0,
     "discounts": 202.4,
     "voidItems": 9,
     "voidAmount": 81.0,
     "refunds": 0.0,
     "giftCards": 40.0,
-    "guestsSDLW": null,
-    "ordersSDLW": null,
-    "nextDayPending": true,
-    "weekToDate": null,
-    "note": "Mon Jun 22 (detailed 229 W Montecito summary): Net $3,145.60 (+53.7% vs same day last week $2,046.00), Gross $3,348.00 (+61.4% vs $2,074.00), 140 guests, 103 orders, avg/guest $22.47, avg/order $30.54, Labor $717.18 (22.8% of net), Voids $81.00 (9 items), Discounts $202.40, Gift cards $40. Tue Jun 23 Toast summary not yet delivered at this 4 AM run.",
-    "net4wkChangePct": null,
-    "gross4wkChangePct": null
-  },
-  "toastLastKnown": {
-    "date": "Sunday, June 21",
-    "gross": 7542.65,
-    "net": 7308.29,
-    "guests": 290,
-    "orders": 147,
-    "avgPerGuest": 25.2,
-    "avgPerOrder": 49.72,
-    "laborPct": 18.9,
-    "laborCost": 1381.27,
-    "discountPct": 3.1,
-    "discounts": 233.82,
-    "voidItems": 8,
-    "voidAmount": null,
-    "refunds": 0.0,
-    "giftCards": 0.0,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null
+    "netChangeVsSDLWPct": 53.7,
+    "grossChangeVsSDLWPct": 61.4
   },
   "sling": {
-    "date": "Tuesday, June 23",
+    "date": "Wednesday, June 24",
     "pending": false,
     "nextDayPending": true,
-    "count": 8,
-    "hours": 40.08,
-    "shifts": 8,
+    "count": 10,
+    "hours": 52.25,
+    "shifts": 10,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Freshest roster = Tue Jun 23 (Sling daily report '23rd of June', received ~7:01 AM PT). 8 emp / 40.08 hrs / 8 shifts / 0 uncovered / 0 OT. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:33A-4:33A.",
+    "note": "Today's roster = Wed Jun 24 (Sling daily report '24th of June', received ~7:02 AM PT). 10 emp / 52.25 hrs / 10 shifts / 0 uncovered / 0 OT. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:35A-4:35A.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "4:33A-4:33A"
+        "time": "4:35A-4:35A"
       },
       {
         "name": "Julianna Ornelas",
@@ -93,17 +93,12 @@
       {
         "name": "Tony Rincon",
         "role": "Bartender",
-        "time": "10:15A-4:30P"
+        "time": "10:15A-3:30P"
       },
       {
-        "name": "Christine Vargas",
+        "name": "Nathan Smith",
         "role": "Server",
-        "time": "11:00A-4:00P"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server",
-        "time": "3:30P-10:00P"
+        "time": "11:00A-3:30P"
       },
       {
         "name": "Andrew Turner",
@@ -111,19 +106,99 @@
         "time": "3:30P-11:00P"
       },
       {
-        "name": "Nathan Smith",
+        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "4:00P-10:00P"
+        "time": "3:30P-10:00P"
       },
       {
-        "name": "Mateo Torres",
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "4:30P-11:00P"
+      },
+      {
+        "name": "Bea Southern",
         "role": "Busser",
-        "time": "5:30P-9:30P"
+        "time": "4:30P-10:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:00P-11:00P"
       }
     ],
     "stale": false
   },
   "slingToday": {
+    "date": "Wednesday, June 24",
+    "pending": false,
+    "nextDayPending": true,
+    "count": 10,
+    "hours": 52.25,
+    "shifts": 10,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "note": "Today's roster = Wed Jun 24 (Sling daily report '24th of June', received ~7:02 AM PT). 10 emp / 52.25 hrs / 10 shifts / 0 uncovered / 0 OT. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:35A-4:35A.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:35A-4:35A"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista",
+        "time": "6:30A-2:30P"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A-3:30P"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server",
+        "time": "11:00A-3:30P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P-11:00P"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server",
+        "time": "3:30P-10:00P"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server",
+        "time": "4:00P-10:30P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "4:30P-11:00P"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser",
+        "time": "4:30P-10:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:00P-11:00P"
+      }
+    ],
+    "stale": false
+  },
+  "slingLastKnown": {
     "date": "Tuesday, June 23",
     "pending": false,
     "nextDayPending": true,
@@ -133,7 +208,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Freshest roster = Tue Jun 23 (Sling daily report '23rd of June', received ~7:01 AM PT). 8 emp / 40.08 hrs / 8 shifts / 0 uncovered / 0 OT. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:33A-4:33A.",
+    "note": "Roster = Tue Jun 23 (Sling daily report '23rd of June'). 8 emp / 40.08 hrs / 8 shifts / 0 uncovered / 0 OT.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -176,73 +251,23 @@
         "time": "5:30P-9:30P"
       }
     ],
-    "stale": false
-  },
-  "slingLastKnown": {
-    "date": "Monday, June 22",
-    "pending": false,
-    "nextDayPending": true,
-    "count": 7,
-    "hours": 30.58,
-    "shifts": 7,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "note": "Roster = Mon Jun 22 (Sling daily report '22nd of June'). 7 emp / 30.58 hrs / 7 shifts / 0 uncovered / 0 OT.",
-    "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook",
-        "time": "5:22A-5:22A"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista",
-        "time": "6:30A-2:30P"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:00P"
-      },
-      {
-        "name": "Osmar Beltran",
-        "role": "Server",
-        "time": "3:00P-8:00P"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "time": "3:30P-9:00P"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server",
-        "time": "4:00P-8:30P"
-      },
-      {
-        "name": "Mateo Torres",
-        "role": "Busser",
-        "time": "5:30P-9:00P"
-      }
-    ],
     "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Tue Jun 23 7 AM run -- LIVE Chrome scrape of Google Ads (browser connected). 'Yesterday' = Jun 22, acct 343-687-4835.",
+    "lastUpdated": "Wed Jun 24 7 AM run -- LIVE Chrome scrape of Google Ads (browser connected). 'Yesterday' = Jun 23, acct 343-687-4835.",
     "yesterday": {
-      "date": "June 22, 2026",
-      "spend": 47.92,
-      "clicks": 146,
+      "date": "June 23, 2026",
+      "spend": 53.78,
+      "clicks": 143,
       "clicksDerived": false,
-      "impressions": 9189,
-      "cpc": 0.33,
-      "ctr": 1.59,
+      "impressions": 7114,
+      "cpc": 0.38,
+      "ctr": 2.01,
       "conversions": 0.0,
       "avgTargetCpa": null,
       "costChangeVsLastMon": null,
-      "costChangeAbs": 8.89,
-      "note": "LIVE Chrome scrape Tue Jun 23 ~7 AM PT, 'Yesterday' = Jun 22, acct 343-687-4835. Cost $47.92 (up $8.89), 9,189 impr (up 810), 146 clicks (down 21), CTR 1.59%, Avg CPC $0.33, 0 conversions (conversion tracking still not firing). Account budget $58.37/day."
+      "costChangeAbs": 5.86,
+      "note": "LIVE Chrome scrape Wed Jun 24 ~7 AM PT, 'Yesterday' = Jun 23, acct 343-687-4835. Cost $53.78 (up $5.86), 7,114 impr (down 2,075), 143 clicks (down 3), CTR 2.01%, Avg CPC $0.38, 0 conversions (still calculating projections; conversion tracking not firing). Account budget $58.37/day."
     },
     "campaigns": [
       {
@@ -251,11 +276,11 @@
         "statusNote": "Limited by bid strategy",
         "type": "Search",
         "optimizationScore": 78.6,
-        "clicks": 19,
-        "impressions": 1006,
-        "ctr": 1.89,
-        "cpc": 0.61,
-        "cost": 11.5,
+        "clicks": 29,
+        "impressions": 835,
+        "ctr": 3.47,
+        "cpc": 0.69,
+        "cost": 19.93,
         "budgetPerDay": 20.0,
         "bidStrategy": "Maximize clicks"
       },
@@ -273,14 +298,14 @@
       {
         "name": "Local store visits and promotions-Performance Max-2",
         "status": "Eligible (Limited)",
-        "statusNote": "All asset groups limited by policy; limited by budget",
+        "statusNote": "All asset groups limited by policy; Limited by budget",
         "type": "Performance Max",
         "optimizationScore": 85,
-        "clicks": 120,
-        "impressions": 7951,
-        "ctr": 1.51,
-        "cpc": 0.23,
-        "cost": 27.46,
+        "clicks": 103,
+        "impressions": 6039,
+        "ctr": 1.71,
+        "cpc": 0.13,
+        "cost": 13.17,
         "budgetPerDay": 23.37,
         "bidStrategy": "Maximize conversions (Target CPA)"
       },
@@ -289,12 +314,12 @@
         "status": "Eligible (Limited)",
         "statusNote": "Limited by bid strategy",
         "type": "Search",
-        "optimizationScore": 70.9,
-        "clicks": 7,
-        "impressions": 232,
-        "ctr": 3.02,
-        "cpc": 1.28,
-        "cost": 8.96,
+        "optimizationScore": 71.2,
+        "clicks": 11,
+        "impressions": 240,
+        "ctr": 4.58,
+        "cpc": 1.88,
+        "cost": 20.68,
         "budgetPerDay": 15.0,
         "bidStrategy": "Maximize clicks"
       }
@@ -302,17 +327,17 @@
     "totals7d": {
       "searchConversions": null,
       "searchChangeWoWPct": null,
-      "pmaxConversions": 292.27,
+      "pmaxConversions": null,
       "pmaxChangeWoWPct": null,
-      "conversions": 308.27,
-      "cost": 376.67,
-      "note": "Last 7 days (Jun 16-22) account totals from live scrape: 59,241 impr / 1,195 clicks / cost $376.67 / 308.27 conversions. Dashboard banner: Local store PMax-2 generated 292.27 conversions last week at $0.59/conv."
+      "conversions": 275.77,
+      "cost": 370.37,
+      "note": "Last 7 days (Jun 17-23) account totals from live scrape: 58,804 impr / 1,172 clicks / cost $370.37 / 275.77 conversions. Dashboard banner: campaigns generated 258.77 conversions last week at $0.59 cost/conversion."
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Tue Jun 23 7 AM full run: LIVE Chrome scrape of Google Ads campaigns for Yesterday (Jun 22). Account total: 9,189 impr / 146 clicks / CTR 1.59% / Avg cost $0.33 / cost $47.92; budget $58.37/day. Per-campaign: World Cup $11.50, Oldest SB $0 (paused), Local PMax-2 $27.46, BHC $8.96. SECURITY: 'Protect your account from unauthorized activity' banner STILL displayed during this scrape -- verify authorized.",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "Wed Jun 24 7 AM full run: LIVE Chrome scrape of Google Ads campaigns for Yesterday (Jun 23). Account total: 7,114 impr / 143 clicks / CTR 2.01% / Avg cost $0.38 / cost $53.78; budget $58.37/day. Per-campaign: World Cup $19.93 (29 clk), Oldest SB $0 (paused), Local PMax-2 $13.17 (103 clk), BHC $20.68 (11 clk). SECURITY: 'Protect your account from unauthorized activity' banner STILL displayed during this scrape -- verify authorized.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -321,9 +346,9 @@
       "present": true,
       "date": "2026-05-30",
       "severity": "verify",
-      "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Mon Jun 22 live scrape. VERIFY authorized."
+      "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Wed Jun 24 live scrape. VERIFY authorized."
     },
-    "reportsNote": "2 Google Ads report-ready emails in last 24h (Brewhouse Daily Campaign Report Jun 21 15:48; Campaign performance Jun 22 12:31). No disapproval or budget-alert emails this run.",
+    "reportsNote": "Wed Jun 24 7 AM run focused on LIVE Chrome scrape for campaign metrics. No new Google Ads disapproval or budget-alert emails surfaced this run.",
     "disapprovals": [
       {
         "present": true,
@@ -335,33 +360,33 @@
         ],
         "emailDate": "2026-06-09T00:20:23Z",
         "severity": "monitor",
-        "detail": "Previously Disapproved (Destination not working HTTP 404 iOS + Copyrighted content, Jun 9). As of Mon Jun 22 live scrape: Eligible (Limited), served Jun 21 (1,124 impr, 27 clicks, ~$16.6). Appears recovered; confirm destination URL fix."
+        "detail": "Previously Disapproved (Destination not working HTTP 404 iOS + Copyrighted content, Jun 9). As of Tue Jun 23 live scrape: Eligible (Limited), served Jun 23 (835 impr, 29 clicks, $19.93). Appears recovered; confirm destination URL fix."
       }
     ],
     "accountBudgetPerDay": 58.37
   },
   "yelpAds": {
-    "lastUpdated": "Tue Jun 23 7 AM run -- LIVE Chrome scrape of Yelp Ads dashboard (browser connected). 30d metrics + billing period read live.",
+    "lastUpdated": "Wed Jun 24 7 AM run -- LIVE Chrome scrape of Yelp Ads dashboard (browser connected). 30d metrics + 12mo contribution read live. Billing/ad-spend page required a password re-login and was SKIPPED (no credential entry); billing-period figures carried from prior run.",
     "last30d": {
-      "impressionsFromAds": 43400,
-      "impressionsTotal": 53200,
-      "impressionsAdShare": 82,
-      "pageVisitsFromAds": 613,
-      "pageVisitsTotal": 969,
-      "pageVisitsAdShare": 63,
-      "leadsFromAds": 123,
-      "leadsTotal": 173,
-      "leadsAdShare": 71,
-      "adImpressions": 43400,
-      "adClicks": 520
+      "impressionsFromAds": 41200,
+      "impressionsTotal": 50700,
+      "impressionsAdShare": 81,
+      "pageVisitsFromAds": 574,
+      "pageVisitsTotal": 931,
+      "pageVisitsAdShare": 62,
+      "leadsFromAds": 122,
+      "leadsTotal": 166,
+      "leadsAdShare": 73,
+      "adImpressions": 41200,
+      "adClicks": 489
     },
     "last12mo": {
-      "leadsAds": 986,
+      "leadsAds": 991,
       "leadsOrganic": 742,
-      "leadsTotal": 1728,
+      "leadsTotal": 1733,
       "adShare": 57,
-      "pageVisits12mo": 8400,
-      "forecastLeads": 51,
+      "pageVisits12mo": 8500,
+      "forecastLeads": 45,
       "leadsBreakdown": {
         "directionsAndMapViews": 734,
         "calls": 113,
@@ -373,9 +398,10 @@
       "label": "Jun 1 - Jun 22, 2026",
       "adSpend": 416.69,
       "avgCpc": 1.15,
-      "avgCpl": 4.58
+      "avgCpl": 4.58,
+      "note": "Carried from prior scrape (not refreshed Jun 24 -- Billing page required password re-login, skipped)."
     },
-    "note": "Tue Jun 23 LIVE Chrome scrape of Yelp Ads dashboard. 30d: 43.4k ad impr (82% of 53.2k), 520 ad clicks, 613 ad page visits (63% of 969), 123 ad leads (71% of 173). Billing period Jun 1-22: ad spend $416.69, Avg CPC $1.15, Avg CPL $4.58. 12mo leads: Ads 986 (57%)/Organic 742 (43%)/Total 1,728 (forecast 51); 12mo page visits 8.4k. Bonus budget remaining NOT shown on dashboard page this run.",
+    "note": "Wed Jun 24 LIVE Chrome scrape of Yelp Ads dashboard. 30d: 41.2k ad impr (81% of 50.7k), 489 ad clicks, 574 ad page visits (62% of 931), 122 ad leads (73% of 166). 12mo leads: Ads 991 (57%)/Organic 742 (43%)/Total 1,733 (forecast 45); 12mo page visits 8.5k. Ad spend / billing period NOT refreshed this run -- Billing page required a password re-login (skipped, no credential entry); billing-period figures carried from prior scrape (Jun 1-22: $416.69). Bonus budget remaining not shown on dashboard.",
     "stale": false,
     "authError": false,
     "budgetPerDayAvg": 22.0
@@ -594,7 +620,7 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-24T04:00:00-07:00",
+  "lastUpdated": "2026-06-24T07:15:00-07:00",
   "yelpInquiries": {
     "lastUpdated": "2026-06-24",
     "actionable": [],
