@@ -1,75 +1,145 @@
 {
-  "date": "Friday, June 26",
+  "date": "Saturday, June 27",
   "systemStatus": {
     "level": "ok",
-    "headline": "Fri Jun 26 4 AM run COMPLETE (Gmail-only). TOAST: freshest now Wed Jun 24 (Net $6,518.85 / Gross $6,661.85 / 228 covers / Labor 19.4%) -- up ~33% vs same Wed last week; Thu Jun 25 summary not delivered yet. SLING: freshest roster still Thu Jun 25 (10 emp / 48.58 hrs / 0 uncovered / 0 OT); Fri Jun 26 report not arrived at 4 AM. GOOGLE ADS: 2 report emails/24h, no disapprovals (metrics carried from Jun 24 scrape). YELP/TRIPADVISOR: nothing actionable. REVIEWS: 2 unanswered 5* (Patrick Williams Jun 25, Eric Groos Jun 21). GitHub PAT 200 OK. SECURITY (carried): verify Google Ads 'unauthorized activity' banner + new billing user; GBP management request pending.",
-    "detail": "Fri Jun 26 4 AM pass: Gmail-only. (1) TOAST: Wed Jun 24 detailed 229 W Montecito summary now in hand and is freshest -- Net $6,518.85 (+32.5% vs SDLW $4,920.35; +31.4% vs 4-wk avg), Gross $6,661.85 (+30.3% SDLW), Voids $84.50, Labor 19.4% ($1,262.72), 228 covers (guests = orders per email). Thu Jun 25 summary NOT yet delivered. (2) SLING: no Jun 26 daily report at 4 AM; freshest roster is Thu Jun 25 '25th of June' (10 emp / 48.58 hrs / 0 uncovered / 0 OT; placeholder Rafael Patricio Cook 5:18A-5:18A to verify). (3) GOOGLE ADS: 2 report emails in last 24h (both Jun 25), no disapproval/budget-alert; metrics not re-scraped this Gmail-only run. (4) YELP: no actionable inquiries. (5) TRIPADVISOR: no analytics ad email. (6) REVIEWS: Patrick Williams (Jun 25) + Eric Groos (Jun 21) 5* still unanswered.",
+    "headline": "Sat Jun 27 4 AM run COMPLETE (Gmail-only). TOAST: freshest now Thu Jun 25 DETAILED summary (Net $5,993.65 / Gross $6,279.10 / 220 covers / 144 orders / Voids $86.50 / Labor 17.6%) -- down ~9.9% net vs same Thu last week ($6,650.05) but +22% vs 4-wk avg; Fri Jun 26 summary not delivered yet. SLING: freshest roster now Fri Jun 26 (10 emp / 52.08 hrs / 0 uncovered / 0 OT / 1 off); Sat Jun 27 report not arrived at 4 AM. GOOGLE ADS: 2 report emails/24h (Jun 26), no disapprovals. YELP/TRIPADVISOR: nothing actionable. REVIEWS: 2 unanswered 5* under 1 week (Patrick Williams Jun 25, Eric Groos Jun 21). GitHub PAT 200 OK. SECURITY (carried): verify Google Ads 'unauthorized activity' banner + new billing user; GBP management request pending.",
+    "detail": "Sat Jun 27 4 AM pass: Gmail-only. (1) TOAST: Thu Jun 25 detailed 229 W Montecito summary now in hand and is freshest -- Net $5,993.65 (-9.9% vs SDLW $6,650.05; +22.0% vs 4-wk avg $4,911.69), Gross $6,279.10 (-8.0% vs SDLW $6,822.15; +22.6% vs 4-wk avg), Voids $86.50, Discounts $285.45, Labor 17.6% ($1,053.29), 220 covers (vs 231 SDLW), 144 orders (vs 128 SDLW, +12.5%), avg/guest $27.24, avg/order $41.62. Fri Jun 26 summary NOT yet delivered. (2) SLING: no Sat Jun 27 daily report at 4 AM; freshest roster is Fri Jun 26 '26th of June' (10 emp / 52.08 hrs / 0 uncovered / 0 OT / 1 off; placeholder Isael Salvador Narciso Cook 4:37A-4:37A to verify). (3) GOOGLE ADS: 2 report emails in last 24h (both Jun 26), no disapproval/budget-alert; metrics not re-scraped this Gmail-only run. (4) YELP: no actionable inquiries (appliance-repair marketing blast only). (5) TRIPADVISOR: no analytics ad email. (6) REVIEWS: Patrick Williams (Jun 25) + Eric Groos (Jun 21) 5* still unanswered.",
     "affected": [
-      "TOAST: Thu Jun 25 daily summary not yet delivered at the 4 AM run -- Thursday's sales will populate once Toast sends it (~2:38 PM); freshest = Wed Jun 24.",
-      "SLING: Fri Jun 26 roster not delivered at 4 AM; showing freshest = Thu Jun 25. Verify placeholder Rafael Patricio (Cook) 5:18A-5:18A.",
+      "TOAST: Fri Jun 26 daily summary not yet delivered at the 4 AM run -- Friday's sales will populate once Toast sends it (~2:38 PM); freshest = Thu Jun 25.",
+      "SLING: Sat Jun 27 roster not delivered at 4 AM; showing freshest = Fri Jun 26. Verify placeholder Isael Salvador Narciso (Cook) 4:37A-4:37A.",
       "GOOGLE ADS: metrics carried from Jun 24 live scrape (Gmail-only run); conversion tracking still unverified.",
       "SECURITY (verify, carried): Google Ads 'unauthorized activity' banner + new billing user (~May 30) on acct 343-687-4835 -- confirm authorized.",
       "SECURITY (verify, carried): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown.",
       "REVIEWS (carried): unanswered 5* Patrick Williams (Jun 25), Eric Groos (Jun 21), Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-26T04:00:00-07:00"
+    "as_of": "2026-06-27T04:00:00-07:00"
   },
   "toast": {
-    "date": "Wednesday, June 24",
+    "date": "Thursday, June 25",
     "pending": false,
-    "source": "'The Brewhouse Santa Barbara - 229 West Montecito Street - Wednesday, June 24' DETAILED Daily Performance Summary (freshest Toast at the Fri Jun 26 4 AM Gmail run). Thu Jun 25 summary not delivered yet.",
+    "source": "'The Brewhouse Santa Barbara - 229 West Montecito Street - Thursday, June 25' DETAILED Daily Performance Summary (freshest Toast at the Sat Jun 27 4 AM Gmail run). Fri Jun 26 summary not delivered yet.",
+    "gross": 6279.1,
+    "net": 5993.65,
+    "guests": 220,
+    "guestsDerived": false,
+    "orders": 144,
+    "avgPerGuest": 27.24,
+    "avgPerOrder": 41.62,
+    "netSDLW": 6650.05,
+    "grossSDLW": 6822.15,
+    "netChangeVsSDLWPct": -9.9,
+    "grossChangeVsSDLWPct": -8.0,
+    "net4wkAvg": 4911.69,
+    "gross4wkAvg": 5121.44,
+    "net4wkChangePct": 22.0,
+    "gross4wkChangePct": 22.6,
+    "laborPct": 17.6,
+    "laborCost": 1053.29,
+    "laborSDLWPct": null,
+    "laborChangeVsSDLWPct": null,
+    "discountPct": null,
+    "discounts": 285.45,
+    "discountsSDLW": 172.1,
+    "voidItems": null,
+    "voidAmount": 86.5,
+    "voidAmountSDLW": 130.0,
+    "refunds": 0.0,
+    "deferredSales": 0.0,
+    "giftCards": null,
+    "guestsSDLW": 231,
+    "ordersSDLW": 128,
+    "ordersChangeVsSDLWPct": 12.5,
+    "guestsChangeVsSDLWPct": -4.8,
+    "nextDayPending": true,
+    "weekToDate": null,
+    "note": "Thu Jun 25 (detailed 229 W Montecito summary): Net $5,993.65 (-9.9% vs same day last week $6,650.05; +22.0% vs 4-wk avg $4,911.69), Gross $6,279.10 (-8.0% vs SDLW $6,822.15; +22.6% vs 4-wk avg). Voids $86.50, Discounts $285.45, Labor 17.6% ($1,053.29). 220 covers (vs 231 SDLW), 144 orders (vs 128 SDLW, +12.5%). Softer than last Thursday but well above the 4-week average; more orders, lower labor %."
+  },
+  "toastLastKnown": {
+    "date": "Wednesday, June 24",
     "gross": 6661.85,
     "net": 6518.85,
     "guests": 228,
-    "guestsDerived": true,
     "orders": 228,
     "avgPerGuest": 28.59,
     "avgPerOrder": 28.59,
-    "netSDLW": 4920.35,
-    "grossSDLW": 5111.15,
-    "netChangeVsSDLWPct": 32.5,
-    "grossChangeVsSDLWPct": 30.3,
-    "net4wkAvg": 4959.4,
-    "gross4wkAvg": 5323.7,
     "laborPct": 19.4,
     "laborCost": 1262.72,
-    "laborSDLWPct": null,
-    "laborChangeVsSDLWPct": null,
     "discountPct": null,
     "discounts": null,
     "voidItems": null,
     "voidAmount": 84.5,
     "refunds": 0.0,
     "giftCards": null,
-    "guestsSDLW": null,
-    "ordersSDLW": null,
-    "nextDayPending": true,
-    "weekToDate": null,
-    "note": "Wed Jun 24 (detailed 229 W Montecito summary): Net $6,518.85 (+32.5% vs same day last week $4,920.35; +31.4% vs 4-wk avg $4,959.40), Gross $6,661.85 (+30.3% vs SDLW $5,111.15), Voids $84.50, Labor 19.4% ($1,262.72). 228 covers (email notes guests = number of orders). Strong day, ~1/3 up vs last Wed.",
-    "net4wkChangePct": 31.4,
-    "gross4wkChangePct": 25.1
-  },
-  "toastLastKnown": {
-    "date": "Tuesday, June 23",
-    "gross": 5231.2,
-    "net": 5124.3,
-    "guests": 199,
-    "orders": 133,
-    "avgPerGuest": 25.75,
-    "avgPerOrder": 38.53,
-    "laborPct": 23.1,
-    "laborCost": 1183.65,
-    "discountPct": 2.0,
-    "discounts": 106.9,
-    "voidItems": 14,
-    "voidAmount": 0.0,
-    "refunds": 0.0,
-    "giftCards": 100.0,
-    "netChangeVsSDLWPct": 8.1,
-    "grossChangeVsSDLWPct": 0.5
+    "netChangeVsSDLWPct": 32.5,
+    "grossChangeVsSDLWPct": 30.3
   },
   "sling": {
+    "date": "Friday, June 26",
+    "pending": false,
+    "nextDayPending": true,
+    "count": 10,
+    "hours": 52.08,
+    "shifts": 10,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "note": "Freshest Sling roster at the Sat Jun 27 4 AM run is '26th of June' (Fri Jun 26): 10 emp / 52.08 hrs / 10 shifts / 0 uncovered / 0 OT / 1 off. Saturday Jun 27 daily report had NOT arrived at 4 AM. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:37A-4:37A.",
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:37A-4:37A"
+      },
+      {
+        "name": "Sarah Palmer",
+        "role": "Barista",
+        "time": "6:30A-2:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A-4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "11:00A-3:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P-10:30P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P-11:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
+        "time": "4:30P-11:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "5:00P-11:30P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "5:00P-10:00P"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser",
+        "time": "5:30P-10:30P"
+      }
+    ],
+    "stale": true
+  },
+  "slingLastKnown": {
     "date": "Thursday, June 25",
     "pending": false,
     "nextDayPending": true,
@@ -79,7 +149,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Freshest Sling roster at the Fri Jun 26 4 AM run is still '25th of June' (Thu Jun 25): 10 emp / 48.58 hrs / 0 uncovered / 0 OT. Friday Jun 26 daily report had NOT arrived at 4 AM.",
+    "note": "Prior roster = Thu Jun 25 (Sling daily report '25th of June'). 10 emp / 48.58 hrs / 10 shifts / 0 uncovered / 0 OT.",
     "staff": [
       {
         "name": "Rafael Patricio",
@@ -135,21 +205,21 @@
     "stale": true
   },
   "slingToday": {
-    "date": "Thursday, June 25",
+    "date": "Friday, June 26",
     "pending": false,
     "nextDayPending": true,
     "count": 10,
-    "hours": 48.58,
+    "hours": 52.08,
     "shifts": 10,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 0,
-    "note": "Freshest Sling roster at the Fri Jun 26 4 AM run is still '25th of June' (Thu Jun 25): 10 emp / 48.58 hrs / 0 uncovered / 0 OT. Friday Jun 26 daily report had NOT arrived at 4 AM.",
+    "employeesOff": 1,
+    "note": "Freshest Sling roster at the Sat Jun 27 4 AM run is '26th of June' (Fri Jun 26): 10 emp / 52.08 hrs / 10 shifts / 0 uncovered / 0 OT / 1 off. Saturday Jun 27 daily report had NOT arrived at 4 AM. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:37A-4:37A.",
     "staff": [
       {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "5:18A-5:18A"
+        "time": "4:37A-4:37A"
       },
       {
         "name": "Sarah Palmer",
@@ -157,115 +227,50 @@
         "time": "6:30A-2:30P"
       },
       {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-4:00P"
-      },
-      {
         "name": "Christine Vargas",
-        "role": "Server",
-        "time": "11:00A-4:00P"
-      },
-      {
-        "name": "James Hernadez",
-        "role": "Server",
-        "time": "3:30P-8:30P"
-      },
-      {
-        "name": "Harmony Willson",
         "role": "Bartender",
-        "time": "3:30P-11:00P"
+        "time": "10:15A-4:30P"
       },
       {
-        "name": "Osmar Beltran",
-        "role": "Server",
-        "time": "4:00P-10:00P"
-      },
-      {
-        "name": "Bea Southern",
-        "role": "Busser",
-        "time": "4:30P-10:00P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "5:00P-10:00P"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender",
-        "time": "5:00P-10:00P"
-      }
-    ],
-    "stale": true
-  },
-  "slingLastKnown": {
-    "date": "Wednesday, June 24",
-    "pending": false,
-    "nextDayPending": true,
-    "count": 10,
-    "hours": 52.25,
-    "shifts": 10,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "note": "Most recent roster = Wed Jun 24 (Sling daily report '24th of June'). 10 emp / 52.25 hrs / 10 shifts / 0 uncovered / 0 OT. The Thu Jun 25 '25th of June' report had NOT arrived at the 4 AM run. Placeholder time to verify: Isael Salvador Narciso (Cook) 4:35A-4:35A.",
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:35A-4:35A"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista",
-        "time": "6:30A-2:30P"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender",
-        "time": "10:15A-3:30P"
-      },
-      {
-        "name": "Nathan Smith",
+        "name": "Daniel Rodriguez",
         "role": "Server",
         "time": "11:00A-3:30P"
       },
       {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "3:30P-11:00P"
-      },
-      {
-        "name": "Osmar Beltran",
+        "name": "Augustine Arroyo",
         "role": "Server",
-        "time": "3:30P-10:00P"
+        "time": "3:30P-10:30P"
       },
       {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server",
-        "time": "4:00P-10:30P"
-      },
-      {
-        "name": "Katharine Brown",
+        "name": "Moe Danely",
         "role": "Bartender",
+        "time": "4:00P-11:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
         "time": "4:30P-11:00P"
-      },
-      {
-        "name": "Bea Southern",
-        "role": "Busser",
-        "time": "4:30P-10:00P"
       },
       {
         "name": "Bri Kelley",
         "role": "Server",
-        "time": "5:00P-11:00P"
+        "time": "5:00P-11:30P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "5:00P-10:00P"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser",
+        "time": "5:30P-10:30P"
       }
     ],
     "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Fri Jun 26 4 AM run -- Gmail-only pass (no live scrape). Metrics below carried from Jun 24 live scrape.",
+    "lastUpdated": "Sat Jun 27 4 AM run -- Gmail-only pass (no live scrape). Metrics below carried from Jun 24 live scrape.",
     "yesterday": {
       "date": "June 24, 2026",
       "spend": 71.71,
@@ -346,8 +351,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "Thu Jun 25 7 AM full run: LIVE Chrome scrape of Google Ads campaigns for Yesterday (Jun 24). Account total: 8,436 impr / 161 clicks / CTR 1.91% / Avg CPC $0.45 / cost $71.71; budget $58.37/day. Per-campaign: World Cup $25.60 (27 clk, now 'Bid strategy learning'), Oldest SB $0 (paused), Local PMax-2 $34.88 (123 clk), BHC $11.22 (11 clk). SECURITY: 'Protect your account from unauthorized activity' banner STILL displayed during this scrape -- verify authorized.",
     "stale": true,
     "authError": false,
@@ -359,7 +364,7 @@
       "severity": "verify",
       "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Thu Jun 25 live scrape. VERIFY authorized."
     },
-    "reportsNote": "Fri Jun 26 4 AM Gmail run: 2 Google Ads report emails in last 24h (Daily Campaign Report + Campaign performance, both Jun 25). No new disapprovals or budget-alert emails. Metrics not re-scraped this run.",
+    "reportsNote": "Sat Jun 27 4 AM Gmail run: 2 Google Ads report emails in last 24h (Daily Campaign Report + Campaign performance, both Jun 26). No new disapprovals or budget-alert emails. Metrics not re-scraped this run.",
     "disapprovals": [
       {
         "present": true,
@@ -418,9 +423,9 @@
     "budgetPerDayAvg": 22.0
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-26",
+    "lastUpdated": "2026-06-27",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email in the last 24h at the Fri Jun 26 run. Nothing actionable."
+    "note": "No analytics@hm2.tripadvisor.com ad-performance email in the last 24h at the Sat Jun 27 run. Nothing actionable."
   },
   "reservations": {
     "lastUpdated": "2026-06-27",
@@ -436,7 +441,7 @@
           "status": "confirmed",
           "source": "SpotHopper",
           "phone": "(818) 321-1977",
-          "notes": "If it’s in the sun outside, please seat us inside."
+          "notes": "If it\u2019s in the sun outside, please seat us inside."
         },
         {
           "time": "8:00 PM",
@@ -488,8 +493,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-26 -- carried: UNANSWERED 5* Patrick Williams (Jun 25) + Eric Groos (Jun 21) still open. No new reviews overnight.",
-    "note": "NEW 5-star Google review from Patrick Williams (Jun 25, rating only -- no text). Reply first, then Eric Groos (Jun 21), then older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
+    "lastUpdated": "2026-06-27 -- carried: UNANSWERED 5* Patrick Williams (Jun 25) + Eric Groos (Jun 21) still open. No new reviews overnight.",
+    "note": "Still open: 5-star Google reviews from Patrick Williams (Jun 25, rating only) and Eric Groos (Jun 21, 'sodas and music what isn't to like'). Reply to both, newest first, then older unanswered 5*: Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2).",
     "unanswered": [
       {
         "platform": "Google",
@@ -629,16 +634,16 @@
       }
     ]
   },
-  "lastUpdated": "2026-06-26T04:00:00-07:00",
   "yelpInquiries": {
-    "lastUpdated": "2026-06-26",
+    "lastUpdated": "2026-06-27",
     "actionable": [],
-    "note": "No actionable Yelp customer inquiries in last 24h at the Fri Jun 26 run. Newsletters/marketing skipped."
+    "note": "No actionable Yelp customer inquiries in last 24h at the Sat Jun 27 run. Newsletters/marketing skipped (appliance-repair blast)."
   },
   "businessProfile": {
     "lastUpdated": "2026-06-13",
     "managementRequestsPending": 1,
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
-  }
+  },
+  "lastUpdated": "2026-06-27T04:00:00-07:00"
 }
