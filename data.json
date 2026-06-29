@@ -343,8 +343,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
     "note": "Mon Jun 29 ~7 AM LIVE scrape. Jun 28 account totals: 7,924 impr / 186 clicks / $50.39 / 0.00 conversions / CTR 2.35%. World Cup HQ 2026 now PAUSED; Oldest SB Brewery on Tap still Paused (policy); Local store PMax Eligible-Limited (Limited by budget, $43.37/day); BHC Coffee now fully Eligible. SECURITY: account 'unauthorized activity' protection banner STILL displayed during this live scrape -- verify.",
     "stale": false,
     "authError": false,
@@ -418,16 +418,11 @@
     "note": "No analytics@hm2.tripadvisor.com ad-performance email in the last 24h at the Mon Jun 29 7 AM run. Nothing actionable."
   },
   "reservations": {
-    "lastUpdated": "2026-06-28 (NOT refreshed at the Mon Jun 29 4 AM Gmail-only run -- carried)",
+    "lastUpdated": "2026-06-29",
     "source": "All Sources",
     "today": {
-      "date": "Sun, Jun 28",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Mon, Jun 29",
-      "totalGuests": 8,
+      "totalGuests": 13,
       "bookings": [
         {
           "time": "4:00 PM",
@@ -437,8 +432,22 @@
           "source": "SpotHopper",
           "phone": "(734) 664-8180",
           "notes": "dinner after graduation ceremony"
+        },
+        {
+          "time": "7:15 PM",
+          "name": "Joel Maring",
+          "guests": 5,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(209) 535-2596",
+          "notes": ""
         }
       ]
+    },
+    "tomorrow": {
+      "date": "Tue, Jun 30",
+      "totalGuests": 0,
+      "bookings": []
     },
     "upcoming": [
       {
@@ -450,6 +459,16 @@
         "phone": "(919) 880-1909",
         "notes": "",
         "date": "Thu, Jul 2"
+      },
+      {
+        "time": "7:15 PM",
+        "name": "Joel Maring",
+        "guests": 5,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(209) 535-2596",
+        "notes": "",
+        "date": "Thu, Jul 30"
       }
     ]
   },
