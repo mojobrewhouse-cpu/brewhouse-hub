@@ -1,20 +1,20 @@
 {
-  "date": "Tuesday, June 30",
+  "date": "Wednesday, July 1",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Tue Jun 30 7 AM run COMPLETE (Gmail + LIVE Chrome scrapes). TOAST: Mon Jun 29 daily now in -- Net $2,980.75 / Gross $3,044.75 / 133 guests / 97 orders / Labor 17.1% / 7 voids (soft Monday). SLING: Tue Jun 30 roster delivered -- 10 emp / 46.74 hrs / 10 shifts / 0 uncovered / 0 OT. GOOGLE ADS (live): Jun 29 = $33.11 / 8,143 impr / 144 clicks / 0 conv; per-campaign table errored (carried). YELP (live): billing Jun 1-29 $502.35 / CPC $1.13 / CPL $3.89; 30d 130 ad leads. TRIPADVISOR: no ad email. REVIEWS: Patrick Williams 5* (Jun 25) still unanswered. GitHub PAT 200 OK. SECURITY (carried): Google Ads 'unauthorized activity' banner + new billing user (~May 30) STILL displayed -- verify; GBP management request pending.",
-    "detail": "Tue Jun 30 ~7 AM run (Gmail + LIVE Chrome scrapes of Google Ads & Yelp). (1) TOAST: Mon Jun 29 daily delivered (Group summary, single site 229 W Montecito) -- Net $2,980.75, Gross $3,044.75, 133 guests, 97 orders, avg/guest $22.41, avg/order $30.73, Labor 17.1% of net (~$509.71 derived), Discount 2.1% of gross (~$63.94 derived), 7 void items, $0 refunds/gift cards, 78 card payments, 1 open order. SDLW comparisons not in the Group email (site-specific daily not yet delivered). (2) SLING: Tue Jun 30 roster delivered -- 10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT / 0 off. Verify placeholder Isael Salvador Narciso (Cook) 4:34A-4:34A. (3) GOOGLE ADS (live, acct 343-687-4835): Jun 29 = $33.11 (down $17.27) / 8,143 impr (up 219) / 144 clicks / CTR ~1.77% / Avg CPC ~$0.23 / 0.00 conversions. 7d (Jun 23-29): 58,804 impr / $394.34 / 248.00 conv. Per-campaign table failed to load this run (carried). (4) YELP (live): 30d 35.3k ad impr (78%), 443 ad clicks, 560 ad page visits (61%), 130 ad leads (71%); billing Jun 1-29 $502.35 spend, CPC $1.13, CPL $3.89; 12mo Ads 1,024 leads (57%) / Organic 760 (43%). (5) TRIPADVISOR: no ad-performance email. (6) SECURITY (verify, carried): Google Ads 'unauthorized activity' banner + new billing user (~May 30) STILL displayed during the live scrape; GBP management-access request still pending (Jun 9).",
+    "level": "warn",
+    "headline": "Wed Jul 1 4 AM run COMPLETE (Gmail-only; no live Chrome scrapes this run). TOAST: Mon Jun 29 remains freshest delivered -- Net $2,980.75 / Gross $3,044.75 / 133 guests / 97 orders / Labor 17.1% / 7 voids. Tue Jun 30 daily NOT yet delivered at 4 AM (arrives ~7:30 AM) -- carried/pending. SLING: Tue Jun 30 roster is freshest (10 emp / 46.74 hrs / 0 uncovered / 0 OT); Wed Jul 1 roster not yet emailed -- pending. GOOGLE ADS: 2 report-ready emails Jun 30, NO disapprovals/budget alerts (figures carried from Jun 29 live scrape, not re-scraped). YELP: marketing blasts only, no actionable inquiries. TRIPADVISOR: no ad email. REVIEWS: Patrick Williams 5* (Jun 25) STILL unanswered -- now 6 days. RESERVATIONS: Wed Jul 1 = 0 booked; Thu Jul 2 = 14 guests (Gretchen Stokes party of 12 @ 5:30 PM). GitHub PAT 200 OK. SECURITY (carried, unresolved): Google Ads 'unauthorized activity' banner + new billing user (~May 30) still flagged -- verify; 1 GBP management request pending.",
+    "detail": "Wed Jul 1 ~4 AM run (Gmail-only). (1) TOAST: no new daily since Mon Jun 29; Tue Jun 30 Daily Performance Summary not yet in inbox at 4 AM. Carrying Jun 29: Net $2,980.75, Gross $3,044.75, 133 guests, 97 orders, avg/guest $22.41, avg/order $30.73, Labor 17.1% of net (~$509.71 derived), 7 void items. (2) SLING: Wed Jul 1 roster not yet emailed; freshest = Tue Jun 30 (10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT). (3) GOOGLE ADS: 2 'report is ready' emails Jun 30 (Brewhouse Daily Campaign Report + Campaign performance) -- no disapprovals, no budget alerts. No live scrape this run, so acct figures carried from Jun 29 ($33.11 / 8,143 impr / 144 clicks / 0 conv). (4) YELP: only marketing emails ('Grab a table outside', 'see what's trending') -- no customer inquiries. (5) TRIPADVISOR: no analytics@hm2.tripadvisor.com email. (6) REVIEWS: Patrick Williams 5* rating-only (Jun 25) unanswered, now 6 days old. (7) SECURITY (carried): Google Ads account-level 'unauthorized activity' banner and new billing user added ~May 30 remain flagged for verification; 1 Google Business Profile management request pending.",
     "affected": [
-      "TOAST: Mon Jun 29 was a soft Monday -- Net $2,980.75 / 133 guests / 97 orders (vs Sun Jun 28 $6,648.55 / 274 guests).",
-      "TOAST: SDLW/4-Sunday comparisons not available -- Group daily email lacks them; site-specific daily (with SDLW) not yet delivered.",
-      "SLING: Tue Jun 30 roster -- 10 emp / 46.74 hrs. Verify placeholder/all-day shift Isael Salvador Narciso (Cook) 4:34A-4:34A.",
-      "GOOGLE ADS: per-campaign table failed to load during the live scrape -- per-campaign rows carried from prior scrape; refresh next run.",
-      "REVIEWS: Patrick Williams 5* (Jun 25, rating only) still unanswered -- reply first.",
-      "SECURITY (verify, carried): Google Ads 'unauthorized activity' banner + new billing user (~May 30) on acct 343-687-4835 -- confirm authorized.",
-      "SECURITY (verify, carried): Google Business Profile management-access request pending (Jun 9) -- review/deny if requester unknown."
+      "TOAST: Tue Jun 30 Daily Performance Summary not yet delivered at 4 AM run -- carrying Mon Jun 29 (Net $2,980.75 / 133 guests / 97 orders).",
+      "SLING: Wed Jul 1 roster not yet emailed -- freshest is Tue Jun 30 (10 emp / 46.74 hrs).",
+      "GOOGLE ADS (carried): account-level 'unauthorized activity' banner + new billing user (~May 30) STILL flagged -- verify login/billing access.",
+      "GOOGLE ADS: 2 report-ready emails Jun 30, no disapprovals; live per-campaign figures not re-scraped this run.",
+      "REVIEWS: Patrick Williams 5* (Jun 25) unanswered -- now 6 days old, reply recommended today.",
+      "BUSINESS PROFILE: 1 Google Business Profile management request still pending -- verify/approve.",
+      "RESERVATIONS: Thu Jul 2 has a 12-top (Gretchen Stokes, 5:30 PM) -- staff/prep accordingly."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-06-30T07:00:00-07:00"
+    "as_of": "2026-07-01T04:00:00-07:00"
   },
   "toast": {
     "date": "Monday, June 29",
@@ -58,7 +58,7 @@
     "cardPayments": 78,
     "nextDayPending": true,
     "weekToDate": null,
-    "note": "Mon Jun 29 daily NOW delivered (Group summary, single location 229 W Montecito). Net $2,980.75, Gross $3,044.75, 133 guests, 97 orders, avg/guest $22.41, avg/order $30.73, Labor 17.1% of net (~$509.71 derived), Discount 2.1% of gross (~$63.94 derived), 7 void items, $0 refunds/gift cards, 78 card payments, 1 remaining open order. SDLW/4-Sunday comparisons not in the Group email; site-specific daily (with SDLW) not yet delivered at 7 AM. Tue Jun 30 daily not yet available."
+    "note": "Mon Jun 29 remains freshest delivered daily as of Wed Jul 1 4 AM run. Tue Jun 30 Daily Performance Summary not yet in inbox (arrives ~7:30 AM PT). Net $2,980.75 / Gross $3,044.75 / 133 guests / 97 orders / Labor 17.1% / 7 voids. Carried."
   },
   "toastLastKnown": {
     "date": "Sunday, June 28",
@@ -89,7 +89,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Freshest Sling roster = Tue Jun 30 (10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT / 0 off). LIVE from the Sling daily report '30th of June' at the 7 AM run. Verify placeholder/all-day shift: Isael Salvador Narciso (Cook) 4:34A-4:34A.",
+    "note": "Wed Jul 1 roster not yet emailed at 4 AM run. Freshest delivered = Tue Jun 30 (10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT / 0 off). Verify placeholder Isael Salvador Narciso (Cook) 4:34A-4:34A.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -209,7 +209,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Freshest Sling roster = Tue Jun 30 (10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT / 0 off). LIVE from the Sling daily report '30th of June' at the 7 AM run. Verify placeholder/all-day shift: Isael Salvador Narciso (Cook) 4:34A-4:34A.",
+    "note": "Wed Jul 1 roster not yet emailed at 4 AM run. Freshest delivered = Tue Jun 30 (10 emp / 10 shifts / 46.74 hrs / 0 uncovered / 0 OT / 0 off). Verify placeholder Isael Salvador Narciso (Cook) 4:34A-4:34A.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -265,7 +265,7 @@
     "stale": false
   },
   "googleAds": {
-    "lastUpdated": "Tue Jun 30 ~7 AM run -- LIVE Chrome scrape of Google Ads (acct 343-687-4835). Account-level metrics fresh; per-campaign table failed to load this run (carried).",
+    "lastUpdated": "Wed Jul 1 ~4 AM run -- Gmail-only (no live Chrome scrape). Figures carried from Jun 30 scrape (Jun 29 data).",
     "yesterday": {
       "date": "June 29, 2026",
       "spend": 33.11,
@@ -351,8 +351,8 @@
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex •••• 1004",
     "conversionTag": "Reservation Form Submission — not yet verified on website",
-    "note": "Tue Jun 30 ~7 AM LIVE scrape. Jun 29 account totals: 8,143 impr / 144 clicks / $33.11 / 0.00 conversions / CTR ~1.77%. Per-campaign table failed to load this run (carried from prior scrape). SECURITY: account 'unauthorized activity' protection banner STILL displayed -- verify.",
-    "stale": false,
+    "note": "Wed Jul 1 4 AM Gmail-only run: no new performance scrape. Carried Jun 29 account totals: 8,143 impr / 144 clicks / $33.11 / 0 conv. Account-level 'unauthorized activity' alert + new billing user (~May 30) STILL open -- verify.",
+    "stale": true,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4,
@@ -362,7 +362,7 @@
       "severity": "verify",
       "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Tue Jun 30 ~7 AM live scrape. VERIFY authorized."
     },
-    "reportsNote": "Tue Jun 30 ~7 AM LIVE scrape: account-level 'Yesterday' (Jun 29) metrics read directly from dashboard. Per-campaign table errored ('something went wrong') this run -- per-campaign rows carried from the Jun 27/28 scrape.",
+    "reportsNote": "Wed Jul 1 4 AM: 2 Google Ads 'report is ready' emails received Jun 30 (Brewhouse Daily Campaign Report + Campaign performance). No disapprovals, no budget alerts. Account figures not re-scraped this Gmail-only run.",
     "disapprovals": [
       {
         "present": true,
@@ -378,7 +378,7 @@
     "accountBudgetPerDay": 58.37
   },
   "yelpAds": {
-    "lastUpdated": "Tue Jun 30 ~7 AM run -- LIVE Chrome scrape of Yelp Ads dashboard.",
+    "lastUpdated": "Wed Jul 1 ~4 AM run -- Gmail-only (no live Yelp scrape). Carried from Jun 30.",
     "last30d": {
       "impressionsFromAds": 35300,
       "impressionsTotal": 45100,
@@ -414,14 +414,14 @@
       "note": "LIVE from Yelp Ads dashboard this run (no re-login needed)."
     },
     "note": "Tue Jun 30 ~7 AM LIVE Chrome scrape. Last 30d: 35.3k ad impr (78% of 45.1k), 443 ad clicks, 560 ad page visits (61% of 921), 130 ad leads (71% of 184). Billing period Jun 1-29: $502.35 spend, CPC $1.13, CPL $3.89. 12mo: Ads 1,024 leads (57%) / Organic 760 (43%) / Total 1,784 (forecast 6); 12mo ad page visits 8.6k; leads breakdown Directions/Map 761, Calls 117, Website 882, CTA 24. Bonus budget remaining not shown on dashboard. Setup reminder: '1 thing remaining'.",
-    "stale": false,
+    "stale": true,
     "authError": false,
     "budgetPerDayAvg": 22.0
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-06-30",
+    "lastUpdated": "2026-07-01",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at the Tue Jun 30 7 AM run. Nothing actionable."
+    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at the Wed Jul 1 4 AM run."
   },
   "reservations": {
     "lastUpdated": "2026-07-01",
@@ -479,8 +479,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-06-30 -- Tue Jun 30 4 AM run. Newest unanswered 5*: Patrick Williams (Jun 25, 5 days, rating only). No new reviews overnight.",
-    "note": "Newest unanswered 5* still open: Patrick Williams (Jun 25, rating only) -- 5 days old, reply first. Then older unanswered 5*: Eric Groos (Jun 21), Matt Powers (Jun 13), Elizabeth G Heilman (Jun 4), Victor Bonhomme (Jun 2). Reply newest first.",
+    "lastUpdated": "2026-07-01 -- Wed Jul 1 4 AM run. Newest unanswered 5*: Patrick Williams (Jun 25, now 6 days), reply recommended.",
+    "note": "Newest unanswered 5* still open: Patrick Williams (Jun 25, rating only) -- 6 days old, reply recommended today.",
     "unanswered": [
       {
         "platform": "Google",
@@ -488,7 +488,7 @@
         "date": "2026-06-25",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 5
+        "ageDays": 6
       },
       {
         "platform": "Google",
@@ -621,9 +621,9 @@
     ]
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-06-30",
+    "lastUpdated": "2026-07-01",
     "actionable": [],
-    "note": "No actionable Yelp customer inquiries in last 24h at the Tue Jun 30 4 AM run. Only marketing blasts (trending businesses, matchday/sports-bar list), skipped."
+    "note": "No actionable Yelp customer inquiries in last 24h at the Wed Jul 1 4 AM run. Only marketing blasts."
   },
   "businessProfile": {
     "lastUpdated": "2026-06-13",
@@ -631,5 +631,5 @@
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-06-30T07:00:00-07:00"
+  "lastUpdated": "2026-07-01T04:00:00-07:00"
 }
