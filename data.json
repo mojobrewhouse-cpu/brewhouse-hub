@@ -2,17 +2,17 @@
   "date": "Thursday, July 2",
   "systemStatus": {
     "level": "warn",
-    "headline": "Thu Jul 2 4 AM run COMPLETE (Gmail + GitHub). TOAST: Tue Jun 30 Daily Summary now delivered & parsed -- Net $7,395.45 / Gross $7,670.65 / Discounts $275.20 / Refunds $0 / Voids 0; vs SDLW Net +44.3%, Gross +46.6%. Guest count & Labor% not extractable from this email (link Toast). Wed Jul 1 summary arrives ~2:40 PM today. SLING: Jul 1 roster is freshest (12 emp / 13 shifts / 50.99 hrs / 0 uncovered / 0 OT); Jul 2 roster posts ~2 PM. GOOGLE ADS: 2 report emails in 24h, NO disapprovals; scrape figures carried from Jul 1. YELP: only marketing blasts, nothing actionable. TRIPADVISOR: no ad email. REVIEWS: Patrick Williams 5* (Jun 25) STILL unanswered -- now 7 days, reply overdue. RESERVATIONS: Thu Jul 2 = 6 guests (2 parties); Fri Jul 3 = 5 guests. GitHub PAT 200 OK, dashboard pushed. SECURITY (still open): Google Ads 'unauthorized activity' banner + new billing user (~May 30) -- verify; 1 GBP management request pending.",
-    "detail": "Thu Jul 2 4 AM run COMPLETE (Gmail + GitHub). TOAST: Tue Jun 30 Daily Summary now delivered & parsed -- Net $7,395.45 / Gross $7,670.65 / Discounts $275.20 / Refunds $0 / Voids 0; vs SDLW Net +44.3%, Gross +46.6%. Guest count & Labor% not extractable from this email (link Toast). Wed Jul 1 summary arrives ~2:40 PM today. SLING: Jul 1 roster is freshest (12 emp / 13 shifts / 50.99 hrs / 0 uncovered / 0 OT); Jul 2 roster posts ~2 PM. GOOGLE ADS: 2 report emails in 24h, NO disapprovals; scrape figures carried from Jul 1. YELP: only marketing blasts, nothing actionable. TRIPADVISOR: no ad email. REVIEWS: Patrick Williams 5* (Jun 25) STILL unanswered -- now 7 days, reply overdue. RESERVATIONS: Thu Jul 2 = 6 guests (2 parties); Fri Jul 3 = 5 guests. GitHub PAT 200 OK, dashboard pushed. SECURITY (still open): Google Ads 'unauthorized activity' banner + new billing user (~May 30) -- verify; 1 GBP management request pending.",
+    "headline": "Thu Jul 2 ~7 AM run: Google Ads + Yelp Ads refreshed LIVE via Chrome. GMAIL SEARCH ENDPOINT DOWN -- Toast/Sling/TripAdvisor/reviews email checks skipped, those values carried from the 4 AM run. GOOGLE ADS (Jul 1): cost $43.40, 8,550 impr, 173 clicks, CTR 2.02%, Avg CPC $0.25, 0 conversions (calculating). 7d (Jun 25-Jul 1): 60,986 impr / $379.97 / 254.30 conv (-28.93%) / 1,295 clicks. YELP (30d): 34.4k ad impr (77%), 428 ad clicks, 535 ad page visits (59%), 122 ad leads (68%); new billing period Jul 1 = $10.58 spend / $0.96 CPC. SECURITY (still open): Google Ads 'unauthorized activity' banner + new billing user (~May 30) -- verify; 1 GBP management request pending. REVIEWS: Patrick Williams 5* (Jun 25) still unanswered (carried).",
+    "detail": "Thu Jul 2 ~7 AM run: Google Ads + Yelp Ads refreshed LIVE via Chrome. GMAIL SEARCH ENDPOINT DOWN -- Toast/Sling/TripAdvisor/reviews email checks skipped, those values carried from the 4 AM run. GOOGLE ADS (Jul 1): cost $43.40, 8,550 impr, 173 clicks, CTR 2.02%, Avg CPC $0.25, 0 conversions (calculating). 7d (Jun 25-Jul 1): 60,986 impr / $379.97 / 254.30 conv (-28.93%) / 1,295 clicks. YELP (30d): 34.4k ad impr (77%), 428 ad clicks, 535 ad page visits (59%), 122 ad leads (68%); new billing period Jul 1 = $10.58 spend / $0.96 CPC. SECURITY (still open): Google Ads 'unauthorized activity' banner + new billing user (~May 30) -- verify; 1 GBP management request pending. REVIEWS: Patrick Williams 5* (Jun 25) still unanswered (carried). Gmail SEARCH endpoint was unavailable during the Thu Jul 2 ~7 AM run (every search query failed; other Gmail endpoints worked). Toast, Sling, TripAdvisor, reviews, reservations and business-profile email checks could NOT run -- values below are CARRIED FORWARD from the Jul 2 4 AM run.",
     "affected": [
-      "TOAST: Guest count & Labor% not cleanly parseable from Jun 30 email -- open Toast for exact figures. Wed Jul 1 summary arrives ~2:40 PM.",
-      "REVIEWS: Patrick Williams 5* (Jun 25) unanswered -- now 7 days old, reply overdue.",
+      "GMAIL: search endpoint down at 7 AM run -- Toast (Jul 1 summary), Sling (Jul 2 roster), TripAdvisor, reviews, reservations NOT refreshed; prior values carried.",
       "GOOGLE ADS: account 'unauthorized activity' banner + new billing user (~May 30) -- verify login/billing access.",
       "BUSINESS PROFILE: 1 Google Business Profile management request still pending -- verify/approve.",
-      "SLING: Jul 2 roster not yet delivered at 4 AM (posts ~2 PM) -- Jul 1 roster carried."
+      "REVIEWS: Patrick Williams 5* (Jun 25) unanswered (carried from prior run) -- reply overdue.",
+      "YELP: new billing period started Jul 1 ($10.58 spend so far)."
     ],
     "githubPat": "OK (200)",
-    "as_of": "2026-07-02T04:00:00-07:00"
+    "as_of": "2026-07-02T07:05:00-07:00"
   },
   "toast": {
     "date": "Tuesday, June 30",
@@ -50,8 +50,8 @@
     "ordersSDLW": null,
     "nextDayPending": true,
     "weekToDate": null,
-    "note": "Tue Jun 30 Daily Performance Summary now delivered & parsed. Net $7,395.45 / Gross $7,670.65 / Discounts $275.20 (3.6%) / Refunds $0 / Voids 0. vs SDLW (Tue Jun 23): Net +44.3% ($5,124.30), Gross +46.6% ($5,231.20). vs 4-wk avg: Net +51.2%, Gross +50.3%. Net/order $28.34 -> ~261 orders (derived). Guest count and Labor% not cleanly extractable from this email's HTML. Wed Jul 1 summary arrives ~2:40 PM today.",
-    "stale": false
+    "note": "[CARRIED -- Gmail search down at 7 AM run] Tue Jun 30 Daily Performance Summary now delivered & parsed. Net $7,395.45 / Gross $7,670.65 / Discounts $275.20 (3.6%) / Refunds $0 / Voids 0. vs SDLW (Tue Jun 23): Net +44.3% ($5,124.30), Gross +46.6% ($5,231.20). vs 4-wk avg: Net +51.2%, Gross +50.3%. Net/order $28.34 -> ~261 orders (derived). Guest count and Labor% not cleanly extractable from this email's HTML. Wed Jul 1 summary arrives ~2:40 PM today.",
+    "stale": true
   },
   "toastLastKnown": {
     "date": "Monday, June 29",
@@ -82,7 +82,7 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "note": "Latest Sling roster available = Wed Jul 1 (12 emp / 13 shifts / 50.99 hrs / 0 uncovered / 0 OT). Thu Jul 2 daily report posts ~2 PM PT (not available at 4 AM run). Placeholder/all-day shifts to verify: Isael Narciso (Cook) 4:33A-4:33A, Sarah Palmer (Server) 6:34A-6:34A, Casey Smith (GM) 6:52A-6:52A.",
+    "note": "[CARRIED -- Gmail search down at 7 AM run] Latest Sling roster available = Wed Jul 1 (12 emp / 13 shifts / 50.99 hrs / 0 uncovered / 0 OT). Thu Jul 2 daily report posts ~2 PM PT (not available at 4 AM run). Placeholder/all-day shifts to verify: Isael Narciso (Cook) 4:33A-4:33A, Sarah Palmer (Server) 6:34A-6:34A, Casey Smith (GM) 6:52A-6:52A.",
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -150,7 +150,7 @@
         "time": "5:00P-10:00P"
       }
     ],
-    "stale": false
+    "stale": true
   },
   "slingLastKnown": {
     "date": "Tuesday, June 30",
@@ -295,23 +295,23 @@
         "time": "5:00P-10:00P"
       }
     ],
-    "stale": false
+    "stale": true
   },
   "googleAds": {
-    "lastUpdated": "Wed Jul 1 ~7 AM run -- LIVE Chrome scrape, acct 343-687-4835. 'Yesterday' = Jun 30.",
+    "lastUpdated": "Thu Jul 2 ~7 AM run -- LIVE Chrome scrape, acct 343-687-4835. 'Yesterday' = Jul 1.",
     "yesterday": {
-      "date": "June 30, 2026",
-      "spend": 67.71,
-      "clicks": 202,
+      "date": "July 1, 2026",
+      "spend": 43.4,
+      "clicks": 173,
       "clicksDerived": false,
-      "impressions": 9180,
-      "cpc": 0.34,
-      "ctr": 2.2,
+      "impressions": 8550,
+      "cpc": 0.25,
+      "ctr": 2.02,
       "conversions": 0.0,
       "avgTargetCpa": null,
       "costChangeVsLastMon": null,
-      "costChangeAbs": 34.6,
-      "note": "LIVE Chrome scrape Wed Jul 1 ~7 AM PT, 'Yesterday' = Jun 30, acct 343-687-4835. Cost 7.71 (up 4.60 vs Jun 29), 9,180 impr (up 1,038), 202 clicks (up 58), CTR 2.20%, Avg CPC bash.34, 0.00 conversions (still calculating projections). Account-level 'unauthorized activity' protection banner STILL displayed during this scrape -- verify."
+      "costChangeAbs": -24.31,
+      "note": "LIVE Chrome scrape Thu Jul 2 ~7 AM PT, 'Yesterday' = Jul 1, acct 343-687-4835. Cost $43.40 (down $24.31 vs Jun 30), 8,550 impr (down 630), 173 clicks (down 29), CTR 2.02%, Avg CPC $0.25, 0.00 conversions (still calculating projections). Account-level 'unauthorized activity' protection banner STILL displayed during this scrape -- verify."
     },
     "campaigns": [
       {
@@ -346,11 +346,11 @@
         "statusNote": "All asset groups limited by policy; Limited by budget",
         "type": "Performance Max",
         "optimizationScore": 84.8,
-        "clicks": 195,
-        "impressions": 8991,
-        "ctr": 2.17,
-        "cpc": 0.3,
-        "cost": 59.18,
+        "clicks": 164,
+        "impressions": 8346,
+        "ctr": 1.97,
+        "cpc": 0.19,
+        "cost": 31.97,
         "budgetPerDay": 43.37,
         "bidStrategy": "Maximize conversions (Target CPA)"
       },
@@ -359,12 +359,12 @@
         "status": "Eligible",
         "statusNote": "Fully Eligible",
         "type": "Search",
-        "optimizationScore": 54.5,
-        "clicks": 7,
-        "impressions": 189,
-        "ctr": 3.7,
-        "cpc": 1.22,
-        "cost": 8.54,
+        "optimizationScore": 53.9,
+        "clicks": 9,
+        "impressions": 204,
+        "ctr": 4.41,
+        "cpc": 1.27,
+        "cost": 11.43,
         "budgetPerDay": 15.0,
         "bidStrategy": "Maximize conversions"
       }
@@ -374,17 +374,17 @@
       "searchChangeWoWPct": null,
       "pmaxConversions": null,
       "pmaxChangeWoWPct": null,
-      "conversions": 256.5,
-      "cost": 408.27,
-      "impressions": 60870,
-      "clicks": 1283,
-      "note": "Last 7 days (Jun 24-30) account totals from LIVE scrape: 60,870 impr (up 2,067) / cost 08.27 (up 7.90) / 256.50 conversions (down 190.44) / 1,283 clicks (up 111)."
+      "conversions": 254.3,
+      "cost": 379.97,
+      "impressions": 60986,
+      "clicks": 1295,
+      "note": "Last 7 days (Jun 25-Jul 1) account totals from LIVE scrape: 60,986 impr (up 1,154) / cost $379.97 (down $15.96) / 254.30 conversions (down 232.68, -28.93% vs prior period) / 1,295 clicks (up 96)."
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "Email-only run Jul 2. Carried Jun 30 scrape figures. Account 'unauthorized activity' alert + new billing user (~May 30) STILL flagged open -- verify. No disapprovals in inbox.",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "note": "LIVE Chrome scrape Thu Jul 2 ~7 AM. Jul 1 daily + per-campaign figures refreshed. Account 'unauthorized activity' alert + new billing user (~May 30) STILL flagged open -- verify.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -393,9 +393,9 @@
       "present": true,
       "date": "2026-05-30",
       "severity": "verify",
-      "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Wed Jul 1 ~7 AM live scrape. VERIFY authorized."
+      "detail": "New BILLING user added to acct 343-687-4835 ~May 30. Account-level 'unauthorized activity' protection banner STILL displayed during the Thu Jul 2 ~7 AM live scrape. VERIFY authorized."
     },
-    "reportsNote": "Thu Jul 2 4 AM run (email-only): 2 Google Ads report-ready emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance). No disapproval or budget-alert emails. Per-campaign figures carried from Jul 1 live scrape (Jun 30 data).",
+    "reportsNote": "Thu Jul 2 ~7 AM run: figures are from LIVE Chrome scrape (Jul 1 data), not email. Gmail SEARCH endpoint was down this run so report/disapproval emails could not be checked.",
     "disapprovals": [
       {
         "present": true,
@@ -411,42 +411,42 @@
     "accountBudgetPerDay": 58.37
   },
   "yelpAds": {
-    "lastUpdated": "Wed Jul 1 ~7 AM run -- LIVE Yelp Ads dashboard scrape.",
+    "lastUpdated": "Thu Jul 2 ~7 AM run -- LIVE Yelp Ads dashboard scrape.",
     "last30d": {
-      "impressionsFromAds": 35200,
-      "impressionsTotal": 45100,
-      "impressionsAdShare": 78,
-      "pageVisitsFromAds": 561,
-      "pageVisitsTotal": 910,
-      "pageVisitsAdShare": 62,
-      "leadsFromAds": 129,
-      "leadsTotal": 183,
-      "leadsAdShare": 70,
-      "adImpressions": 35200,
-      "adClicks": 443
+      "impressionsFromAds": 34400,
+      "impressionsTotal": 44500,
+      "impressionsAdShare": 77,
+      "pageVisitsFromAds": 535,
+      "pageVisitsTotal": 912,
+      "pageVisitsAdShare": 59,
+      "leadsFromAds": 122,
+      "leadsTotal": 180,
+      "leadsAdShare": 68,
+      "adImpressions": 34400,
+      "adClicks": 428
     },
     "last12mo": {
       "leadsAds": 1024,
-      "leadsOrganic": 659,
-      "leadsTotal": 1683,
+      "leadsOrganic": 663,
+      "leadsTotal": 1687,
       "adShare": 61,
-      "pageVisits12mo": 8100,
-      "forecastLeads": 6,
+      "pageVisits12mo": 8200,
+      "forecastLeads": 181,
       "leadsBreakdown": {
-        "directionsAndMapViews": 761,
-        "calls": 117,
-        "websiteVisits": 882,
+        "directionsAndMapViews": 727,
+        "calls": 112,
+        "websiteVisits": 824,
         "ctaClicks": 24
       }
     },
     "billingPeriod": {
       "label": "Jul 1, 2026 (new period)",
-      "adSpend": 0.0,
-      "avgCpc": null,
+      "adSpend": 10.58,
+      "avgCpc": 0.96,
       "avgCpl": null,
-      "note": "New billing period started Jul 1, 2026 -- bash ad spend so far, CPC/CPL not yet available. Prior period Jun 1-29 was 02.35 spend / CPC .13 / CPL .89. LIVE from Yelp Ads dashboard."
+      "note": "New billing period (started Jul 1, 2026). Ad spend so far $10.58, Avg CPC $0.96, CPL not yet available. LIVE from Yelp Ads dashboard Thu Jul 2 ~7 AM."
     },
-    "note": "Wed Jul 1 ~7 AM LIVE Chrome scrape. Last 30d: 35.2k ad impr (78% of 45.1k), 443 ad clicks, 561 ad page visits (62% of 910), 129 ad leads (70% of 183). New billing period Jul 1 = bash spend so far. 12mo: Ads 1,024 leads (61%) / Organic 659 (39%) / Total 1,683; 12mo ad page visits 8.1k. Bonus budget remaining not shown on dashboard. leadsBreakdown/forecast carried from prior run.",
+    "note": "Thu Jul 2 ~7 AM LIVE Chrome scrape. Last 30d: 34.4k ad impr (77% of 44.5k), 428 ad clicks, 535 ad page visits (59% of 912), 122 ad leads (68% of 180). New billing period Jul 1 = $10.58 spend / $0.96 CPC so far. 12mo: Ads 1,024 leads (61%) / Organic 663 (39%) / Total 1,687; forecast 181; 12mo ad page visits 8.2k. Leads breakdown: Directions/Map 727, Calls 112, Website 824, CTA 24. Bonus budget remaining not shown on dashboard.",
     "stale": false,
     "authError": false,
     "budgetPerDayAvg": 22.0
@@ -454,7 +454,7 @@
   "tripAdvisor": {
     "lastUpdated": "2026-07-02",
     "adEmailPresent": false,
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at the Thu Jul 2 4 AM run."
+    "note": "[CARRIED -- Gmail search down at 7 AM run] No new check possible. No analytics@hm2.tripadvisor.com ad-performance email in last 24h at the Thu Jul 2 4 AM run."
   },
   "reservations": {
     "lastUpdated": "2026-07-02",
@@ -522,7 +522,7 @@
   },
   "reviews": {
     "lastUpdated": "2026-07-02 -- Thu Jul 2 4 AM run. No new review emails in last 24h. Newest unanswered 5*: Patrick Williams (Jun 25, now 7 days), reply recommended.",
-    "note": "No new Google/Yelp review notification emails in last 24h. Newest unanswered 5* still open: Patrick Williams (Jun 25, rating only) -- now 7 days old, reply overdue.",
+    "note": "[CARRIED -- Gmail search down at 7 AM run] No new Google/Yelp review notification emails in last 24h. Newest unanswered 5* still open: Patrick Williams (Jun 25, rating only) -- now 7 days old, reply overdue.",
     "unanswered": [
       {
         "platform": "Google",
@@ -665,7 +665,7 @@
   "yelpInquiries": {
     "lastUpdated": "2026-07-02",
     "actionable": [],
-    "note": "No actionable Yelp customer inquiries in last 24h at the Thu Jul 2 4 AM run. Only two marketing blasts (skipped)."
+    "note": "[CARRIED -- Gmail search down at 7 AM run] No actionable Yelp customer inquiries in last 24h at the Thu Jul 2 4 AM run. Only two marketing blasts (skipped)."
   },
   "businessProfile": {
     "lastUpdated": "2026-06-13",
@@ -673,5 +673,5 @@
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-02T04:00:00-07:00"
+  "lastUpdated": "2026-07-02T07:05:00-07:00"
 }
