@@ -2,109 +2,110 @@
  "date": "Sunday, July 5",
  "systemStatus": {
   "level": "ok",
-  "headline": "Sun Jul 5 4 AM run -- email sources refreshed. TOAST: Sat Jul 4 summary NOT yet delivered (expected ~6:30-7:40 AM PT); Fri Jul 3 now CONFIRMED with exact location-level $: Net $10,051.43 (+34.9% SDLW) / Gross $10,306.30 / 384 guests / 206 orders / 216 checks / Labor $1,409.84 (14.0%) / Discounts $254.87 / Voids $179.50 / Refunds $0. SLING: Sun Jul 5 report not yet delivered (typ. ~7 AM); Sat Jul 4 was 10 emp / 41.57 hrs / 0 uncovered / 0 OT. GOOGLE ADS: 2 report-ready emails Jul 4, no disapprovals/budget alerts; live dashboard not re-scraped (figures as of Jul 4). YELP: 2 marketing blasts only, nothing actionable. No TripAdvisor email. REVIEWS: no new emails in 7d; Patrick Williams 5* (Jun 25) unanswered 10 days. OPEN ITEMS carried forward: Google Ads unauthorized-activity banner + billing user; World Cup HQ 2026 paused-but-spent; 1 GBP management request pending; Isael Narciso placeholder shift.",
-  "detail": "Sun Jul 5 4 AM run -- email sources refreshed. TOAST: Sat Jul 4 summary NOT yet delivered (expected ~6:30-7:40 AM PT); Fri Jul 3 now CONFIRMED with exact location-level $: Net $10,051.43 (+34.9% SDLW) / Gross $10,306.30 / 384 guests / 206 orders / 216 checks / Labor $1,409.84 (14.0%) / Discounts $254.87 / Voids $179.50 / Refunds $0. SLING: Sun Jul 5 report not yet delivered (typ. ~7 AM); Sat Jul 4 was 10 emp / 41.57 hrs / 0 uncovered / 0 OT. GOOGLE ADS: 2 report-ready emails Jul 4, no disapprovals/budget alerts; live dashboard not re-scraped (figures as of Jul 4). YELP: 2 marketing blasts only, nothing actionable. No TripAdvisor email. REVIEWS: no new emails in 7d; Patrick Williams 5* (Jun 25) unanswered 10 days. OPEN ITEMS carried forward: Google Ads unauthorized-activity banner + billing user; World Cup HQ 2026 paused-but-spent; 1 GBP management request pending; Isael Narciso placeholder shift.",
+  "headline": "Sun Jul 5 ~7:15 AM run -- all sources refreshed. TOAST: Sat Jul 4 GROUP summary delivered: Net $3,829.55 / Gross $3,958.40 / 188 guests / 112 orders / Labor 22.8% / Discounts 3.3% -- notably soft for a Saturday holiday (-61.9% vs Fri Jul 3 net $10,051.43), consistent with light early roster; location-level email still pending. SLING: Sun Jul 5 delivered 7:00 AM: 11 emp / 11 shifts / 69.50 hrs / 0 uncovered / 0 OT; Isael Narciso placeholder shift again (4:32A-4:32A). GOOGLE ADS LIVE: Jul 4 cost $64.88 / 12,207 impr / 231 clicks / 0 conversions; unauthorized-activity banner STILL displayed; PMax-2 'Limited by budget' (rec: +92.49 conv/wk). YELP ADS LIVE: last 30d 33.9k ad impr / 427 clicks / 539 page visits / 132 leads; billing Jul 1-4 $57.38 @ $1.02 CPC / $3.19 CPL. No TripAdvisor email. OPEN ITEMS carried forward: Google Ads unauthorized-activity banner + billing user; World Cup HQ 2026 paused; 1 GBP management request pending; Patrick Williams 5* review unanswered 10 days.",
+  "detail": "Sun Jul 5 ~7:15 AM run -- all sources refreshed. TOAST: Sat Jul 4 GROUP summary delivered: Net $3,829.55 / Gross $3,958.40 / 188 guests / 112 orders / Labor 22.8% / Discounts 3.3% -- notably soft for a Saturday holiday (-61.9% vs Fri Jul 3 net $10,051.43), consistent with light early roster; location-level email still pending. SLING: Sun Jul 5 delivered 7:00 AM: 11 emp / 11 shifts / 69.50 hrs / 0 uncovered / 0 OT; Isael Narciso placeholder shift again (4:32A-4:32A). GOOGLE ADS LIVE: Jul 4 cost $64.88 / 12,207 impr / 231 clicks / 0 conversions; unauthorized-activity banner STILL displayed; PMax-2 'Limited by budget' (rec: +92.49 conv/wk). YELP ADS LIVE: last 30d 33.9k ad impr / 427 clicks / 539 page visits / 132 leads; billing Jul 1-4 $57.38 @ $1.02 CPC / $3.19 CPL. No TripAdvisor email. OPEN ITEMS carried forward: Google Ads unauthorized-activity banner + billing user; World Cup HQ 2026 paused; 1 GBP management request pending; Patrick Williams 5* review unanswered 10 days.",
   "affected": [
-   "GOOGLE ADS: 'unauthorized activity' banner + new billing user (~May 30) -- verify login/billing access (not re-checked this run).",
-   "GOOGLE ADS: 'World Cup HQ 2026' Paused but $26.19 spend Jun 27-Jul 3 -- verify pause intended (not re-checked this run).",
+   "GOOGLE ADS: 'Protect your account from unauthorized activity' banner still displayed at Sun Jul 5 live scrape -- verify login/billing access.",
+   "GOOGLE ADS: 'Local store visits and promotions-Performance Max-2' Limited by budget; in-UI rec says raising budget could add 92.49 conversions/wk -- review.",
+   "GOOGLE ADS: 'World Cup HQ 2026' Paused ($0 spend Jul 4) -- verify pause intended.",
+   "TOAST: Sat Jul 4 net $3,829.55 was -61.9% vs Fri Jul 3 -- soft holiday performance, review if unexpected.",
+   "TOAST: Sat Jul 4 location-level email (exact labor/discount $) not yet delivered -- labor/discount $ are derived from percentages.",
    "BUSINESS PROFILE: 1 management request still pending -- verify/approve or deny.",
    "REVIEWS: Patrick Williams 5* (Jun 25) unanswered -- 10 days, reply overdue.",
-   "SLING: Sun Jul 5 daily report pending at 4 AM; Isael Salvador Narciso placeholder shift 4:34A-4:34A on Jul 4 roster -- verify.",
-   "TOAST: Sat Jul 4 (holiday) summary pending -- expected ~6:30-7:40 AM PT."
+   "SLING: Isael Salvador Narciso placeholder shift 4:32A-4:32A on Sun Jul 5 roster -- verify."
   ],
   "githubPat": "OK (200)",
-  "as_of": "2026-07-05T04:13:00-07:00"
+  "as_of": "2026-07-05T07:16:00-07:00"
  },
  "toast": {
-  "date": "Friday, July 3",
+  "date": "Saturday, July 4",
   "pending": false,
-  "source": "Location-level Daily Performance Summary '229 West Montecito Street - Friday, July 3' (delivered Jul 4 7:40 AM PT), parsed at Sun Jul 5 4 AM run. Exact $ values now confirmed.",
-  "gross": 10306.3,
-  "net": 10051.43,
-  "guests": 384,
+  "source": "Group-level Daily Performance Summary 'The Brewhouse Santa Barbara Group - Saturday, July 4' (delivered Jul 5 6:22 AM PT), parsed at Sun Jul 5 ~7:15 AM run. Location-level email not yet delivered; labor $ and discount $ derived from percentages.",
+  "gross": 3958.4,
+  "net": 3829.55,
+  "guests": 188,
   "guestsDerived": false,
-  "orders": 206,
+  "orders": 112,
   "ordersDerived": false,
-  "checks": 216,
-  "avgPerGuest": 26.18,
-  "avgPerOrder": 48.79,
-  "avgPerCheck": 46.53,
-  "netSDLW": 7451.9,
-  "grossSDLW": 7747.9,
-  "netChangeVsSDLWPct": 34.9,
-  "grossChangeVsSDLWPct": 33.0,
-  "net4wkAvg": 8200.59,
-  "gross4wkAvg": 8460.75,
-  "net4wkChangePct": 22.6,
-  "gross4wkChangePct": 21.8,
-  "laborPct": 14.0,
-  "laborCost": 1409.84,
-  "laborCostDerived": false,
-  "discountPct": 2.5,
-  "discounts": 254.87,
-  "discountsDerived": false,
-  "voidItems": 17,
-  "voidAmount": 179.5,
+  "checks": null,
+  "avgPerGuest": 20.37,
+  "avgPerOrder": 34.19,
+  "avgPerCheck": null,
+  "netSDLW": null,
+  "grossSDLW": null,
+  "netChangeVsSDLWPct": null,
+  "grossChangeVsSDLWPct": null,
+  "net4wkAvg": null,
+  "gross4wkAvg": null,
+  "net4wkChangePct": null,
+  "gross4wkChangePct": null,
+  "laborPct": 22.8,
+  "laborCost": 873.14,
+  "laborCostDerived": true,
+  "discountPct": 3.3,
+  "discounts": 130.63,
+  "discountsDerived": true,
+  "voidItems": 7,
+  "voidAmount": null,
   "refunds": 0.0,
   "deferredSales": 0.0,
   "giftCards": 0.0,
-  "guestsSDLW": 272,
-  "guestsSDLWDerived": false,
-  "ordersSDLW": 163,
-  "ordersSDLWDerived": false,
+  "guestsSDLW": null,
+  "guestsSDLWDerived": null,
+  "ordersSDLW": null,
+  "ordersSDLWDerived": null,
   "nextDayPending": true,
-  "note": "Fri Jul 3 LOCATION-level summary confirmed exact values: Net $10,051.43 (+34.9% vs SDLW $7,451.90; +22.6% vs 4-wk Fri avg $8,200.59) / Gross $10,306.30 / 384 guests (SDLW 272, +41.2%) / 206 orders (SDLW 163) / 216 checks (avg check $46.53) / Hourly labor $1,409.84 = 14.0% of net (SDLW 12.3%, 4-wk 13.5%) / Discounts $254.87 (SDLW $296.00) / Voids $179.50 (SDLW $120.00) / Refunds $0 / Deferred $0. SAT JUL 4 SUMMARY NOT YET DELIVERED at Sun Jul 5 4 AM run -- expected ~6:30-7:40 AM PT.",
+  "orderTypes": {
+   "takeoutOrders": 23,
+   "takeoutSales": 177.5,
+   "deliveryOrders": 0,
+   "deliverySales": 0.0,
+   "dineInOrders": 4,
+   "dineInSales": 20.5
+  },
+  "closeout": {
+   "cardPayments": 89,
+   "remainingOpenOrders": 0,
+   "autoClockedOutUsers": "None"
+  },
+  "note": "Sat Jul 4 (Independence Day) GROUP summary delivered 6:22 AM PT Jul 5: Net $3,829.55 / Gross $3,958.40 / 188 guests / 112 orders / Avg $34.19 per order, $20.37 per guest / Labor 22.8% of net (~$873 derived) / Discounts 3.3% of gross (~$131 derived) / 7 void items / $0 refunds / $0 gift cards. NOTABLY SOFT for a Saturday holiday: net is -61.9% vs Fri Jul 3 ($10,051.43) -- consistent with the light early roster (10 emp / 41.57 hrs, last shift 6:30P). SDLW comparison not available from group email. Location-level email (with exact labor/discount $) pending; Sun Jul 5 summary expected tomorrow ~6:30-7:40 AM PT.",
   "stale": false
  },
  "toastLastKnown": {
-  "date": "Friday, July 3",
-  "gross": 10306.3,
-  "net": 10051.43,
-  "guests": 384,
-  "orders": 206,
-  "avgPerGuest": 26.18,
-  "avgPerOrder": 48.79,
-  "laborPct": 14.0,
-  "laborCost": 1409.84,
-  "discountPct": 2.5,
-  "discounts": 254.87,
-  "voidItems": 17,
-  "voidAmount": 179.5,
+  "date": "Saturday, July 4",
+  "gross": 3958.4,
+  "net": 3829.55,
+  "guests": 188,
+  "orders": 112,
+  "avgPerGuest": 20.37,
+  "avgPerOrder": 34.19,
+  "laborPct": 22.8,
+  "laborCost": 873.14,
+  "discountPct": 3.3,
+  "discounts": 130.63,
+  "voidItems": 7,
+  "voidAmount": null,
   "refunds": 0.0,
   "giftCards": 0.0,
-  "netChangeVsSDLWPct": 34.9,
-  "grossChangeVsSDLWPct": 33.0
+  "netChangeVsSDLWPct": null,
+  "grossChangeVsSDLWPct": null
  },
  "sling": {
   "date": "Sunday, July 5",
-  "pending": true,
-  "nextDayPending": false,
-  "count": null,
-  "hours": null,
-  "shifts": null,
-  "uncovered": null,
-  "overtime": null,
-  "employeesOff": null,
-  "note": "PENDING: Sun Jul 5 Sling daily report not yet delivered at 4 AM run (typically ~7 AM PT). Yesterday (Sat Jul 4): 10 emp / 41.57 hrs / 0 uncovered / 0 OT; open item: Isael Salvador Narciso (Cook) placeholder shift 4:34A-4:34A.",
-  "staff": [],
-  "stale": false
- },
- "slingLastKnown": {
-  "date": "Saturday, July 4",
   "pending": false,
   "nextDayPending": false,
-  "count": 10,
-  "hours": 41.57,
-  "shifts": 10,
+  "count": 11,
+  "hours": 69.5,
+  "shifts": 11,
   "uncovered": 0,
   "overtime": 0,
   "employeesOff": 0,
-  "note": "TODAY (Sat Jul 4 / 4th of July) Sling daily report delivered 7:01 AM PT: 10 employees / 10 shifts / 41.57 hrs / 0 uncovered / 0 OT / 0 off. Notably light + early roster for July 4th -- last scheduled shift ends 6:30P (vs 13 emp / 65.16 hrs Fri). Placeholder/all-day shift to verify: Isael Salvador Narciso (Cook) 4:34A-4:34A.",
+  "note": "TODAY (Sun Jul 5) Sling daily report delivered 7:00 AM PT: 11 employees / 11 shifts / 69.50 hrs / 0 uncovered / 0 OT / 0 off. Fuller roster than Sat (10 emp / 41.57 hrs); coverage runs to 10:00P. Placeholder/all-day shift to verify: Isael Salvador Narciso (Cook) 4:32A-4:32A (recurring daily).",
   "staff": [
    {
     "name": "Isael Salvador Narciso",
     "role": "Cook",
-    "time": "4:34A-4:34A"
+    "time": "4:32A-4:32A"
    },
    {
     "name": "Julianna Ornelas",
@@ -114,73 +115,203 @@
    {
     "name": "Katharine Brown",
     "role": "Bartender",
-    "time": "10:15A-2:30P"
+    "time": "10:15A-7:30P"
    },
    {
     "name": "Daniel Rodriguez",
     "role": "Server",
-    "time": "10:45A-2:45P"
+    "time": "10:45A-7:00P"
    },
    {
-    "name": "Augustine Arroyo",
+    "name": "James Hernadez",
     "role": "Server",
-    "time": "12:00P-4:00P"
+    "time": "12:00P-8:00P"
+   },
+   {
+    "name": "Mateo Torres",
+    "role": "Busser",
+    "time": "1:00P-7:30P"
    },
    {
     "name": "Cal Carter",
     "role": "Barback",
-    "time": "1:00P-5:00P"
+    "time": "1:00P-8:00P"
    },
    {
-    "name": "Osmar Beltran",
+    "name": "Augustine Arroyo",
     "role": "Server",
-    "time": "1:00P-6:00P"
-   },
-   {
-    "name": "Bea Southern",
-    "role": "Busser",
-    "time": "1:30P-6:00P"
-   },
-   {
-    "name": "Bri Kelley",
-    "role": "Server",
-    "time": "1:30P-6:00P"
+    "time": "2:30P-9:30P"
    },
    {
     "name": "Moe Danely",
     "role": "Bartender",
-    "time": "2:00P-6:30P"
+    "time": "2:30P-10:00P"
+   },
+   {
+    "name": "Bea Southern",
+    "role": "Busser",
+    "time": "3:00P-9:30P"
+   },
+   {
+    "name": "Bri Kelley",
+    "role": "Server",
+    "time": "3:00P-9:30P"
    }
   ],
   "stale": false
  },
+ "slingLastKnown": {
+  "date": "Sunday, July 5",
+  "pending": false,
+  "nextDayPending": false,
+  "count": 11,
+  "hours": 69.5,
+  "shifts": 11,
+  "uncovered": 0,
+  "overtime": 0,
+  "employeesOff": 0,
+  "note": "TODAY (Sun Jul 5) Sling daily report delivered 7:00 AM PT: 11 employees / 11 shifts / 69.50 hrs / 0 uncovered / 0 OT / 0 off. Fuller roster than Sat (10 emp / 41.57 hrs); coverage runs to 10:00P. Placeholder/all-day shift to verify: Isael Salvador Narciso (Cook) 4:32A-4:32A (recurring daily).",
+  "staff": [
+   {
+    "name": "Isael Salvador Narciso",
+    "role": "Cook",
+    "time": "4:32A-4:32A"
+   },
+   {
+    "name": "Julianna Ornelas",
+    "role": "Barista",
+    "time": "6:30A-2:30P"
+   },
+   {
+    "name": "Katharine Brown",
+    "role": "Bartender",
+    "time": "10:15A-7:30P"
+   },
+   {
+    "name": "Daniel Rodriguez",
+    "role": "Server",
+    "time": "10:45A-7:00P"
+   },
+   {
+    "name": "James Hernadez",
+    "role": "Server",
+    "time": "12:00P-8:00P"
+   },
+   {
+    "name": "Mateo Torres",
+    "role": "Busser",
+    "time": "1:00P-7:30P"
+   },
+   {
+    "name": "Cal Carter",
+    "role": "Barback",
+    "time": "1:00P-8:00P"
+   },
+   {
+    "name": "Augustine Arroyo",
+    "role": "Server",
+    "time": "2:30P-9:30P"
+   },
+   {
+    "name": "Moe Danely",
+    "role": "Bartender",
+    "time": "2:30P-10:00P"
+   },
+   {
+    "name": "Bea Southern",
+    "role": "Busser",
+    "time": "3:00P-9:30P"
+   },
+   {
+    "name": "Bri Kelley",
+    "role": "Server",
+    "time": "3:00P-9:30P"
+   }
+  ]
+ },
  "slingToday": {
   "date": "Sunday, July 5",
-  "pending": true,
-  "note": "Sun Jul 5 Sling daily report not yet delivered at 4 AM run (typically arrives ~7 AM PT). Last known roster below is SATURDAY JUL 4.",
-  "staff": []
+  "pending": false,
+  "note": "TODAY (Sun Jul 5) Sling daily report delivered 7:00 AM PT: 11 employees / 11 shifts / 69.50 hrs / 0 uncovered / 0 OT / 0 off. Fuller roster than Sat (10 emp / 41.57 hrs); coverage runs to 10:00P. Placeholder/all-day shift to verify: Isael Salvador Narciso (Cook) 4:32A-4:32A (recurring daily).",
+  "staff": [
+   {
+    "name": "Isael Salvador Narciso",
+    "role": "Cook",
+    "time": "4:32A-4:32A"
+   },
+   {
+    "name": "Julianna Ornelas",
+    "role": "Barista",
+    "time": "6:30A-2:30P"
+   },
+   {
+    "name": "Katharine Brown",
+    "role": "Bartender",
+    "time": "10:15A-7:30P"
+   },
+   {
+    "name": "Daniel Rodriguez",
+    "role": "Server",
+    "time": "10:45A-7:00P"
+   },
+   {
+    "name": "James Hernadez",
+    "role": "Server",
+    "time": "12:00P-8:00P"
+   },
+   {
+    "name": "Mateo Torres",
+    "role": "Busser",
+    "time": "1:00P-7:30P"
+   },
+   {
+    "name": "Cal Carter",
+    "role": "Barback",
+    "time": "1:00P-8:00P"
+   },
+   {
+    "name": "Augustine Arroyo",
+    "role": "Server",
+    "time": "2:30P-9:30P"
+   },
+   {
+    "name": "Moe Danely",
+    "role": "Bartender",
+    "time": "2:30P-10:00P"
+   },
+   {
+    "name": "Bea Southern",
+    "role": "Busser",
+    "time": "3:00P-9:30P"
+   },
+   {
+    "name": "Bri Kelley",
+    "role": "Server",
+    "time": "3:00P-9:30P"
+   }
+  ]
  },
  "googleAds": {
-  "lastUpdated": "LIVE Chrome scrape Sat Jul 4 ~7 AM run PT (acct 343-687-4835).",
+  "lastUpdated": "LIVE Chrome scrape Sun Jul 5 ~7:10 AM run PT (acct 343-687-4835).",
   "yesterday": {
-   "date": "July 3, 2026",
-   "spend": 70.09,
-   "clicks": 219,
+   "date": "July 4, 2026",
+   "spend": 64.88,
+   "clicks": 231,
    "clicksDerived": false,
-   "impressions": 11019,
-   "cpc": 0.32,
-   "ctr": 1.99,
+   "impressions": 12207,
+   "cpc": 0.28,
+   "ctr": 1.89,
    "conversions": 0.0,
    "avgTargetCpa": null,
    "costChangeVsLastMon": null,
-   "costChangeAbs": 23.64,
-   "note": "LIVE Chrome scrape Sat Jul 4 ~7 AM PT, 'Yesterday' = Jul 3. Cost $70.09 (up $23.64 vs Jul 2 $46.45 -- July-4th-weekend Friday), 11,019 impr, 219 clicks, CTR 1.99%, Avg CPC $0.32, 0.00 conversions shown. Account-level 'Protect your account from unauthorized activity' banner STILL displayed -- verify."
+   "costChangeAbs": -5.21,
+   "note": "LIVE Chrome scrape Sun Jul 5 ~7:10 AM PT, 'Yesterday' = Jul 4 (Independence Day). Cost $64.88 (down $5.21 vs Jul 3 $70.09), 12,207 impr (+1,189), 231 clicks (+12), CTR 1.89%, Avg CPC $0.28, conversions 0.00 (shown as 'calculating projections'). Account-level 'Protect your account from unauthorized activity' banner STILL displayed -- verify. New in-UI recommendation: raising 'Local store visits and promotions-Performance Max-2' budget could increase weekly conversions by 92.49 (campaign flagged 'Limited by budget')."
   },
   "campaigns": [
    {
     "name": "World Cup HQ 2026",
     "status": "Paused",
-    "statusNote": "Paused -- verify intended; showed activity earlier in last-7d window (36 clicks / $26.19 Jun 27-Jul 3)",
+    "statusNote": "Paused -- verify intended; $0.00 / 0 impr on Jul 4",
     "type": "Search",
     "clicks": 0,
     "impressions": 0,
@@ -209,11 +340,11 @@
     "statusNote": "All asset groups limited by policy; Limited by budget",
     "type": "Performance Max",
     "optimizationScore": 84.8,
-    "clicks": 206,
-    "impressions": 10683,
-    "ctr": 1.93,
-    "cpc": 0.28,
-    "cost": 58.49,
+    "clicks": 203,
+    "impressions": 11762,
+    "ctr": 1.73,
+    "cpc": 0.19,
+    "cost": 38.44,
     "budgetPerDay": 43.37,
     "bidStrategy": "Maximize conversions (Target CPA)"
    },
@@ -223,11 +354,11 @@
     "statusNote": "Fully Eligible",
     "type": "Search",
     "optimizationScore": 52.5,
-    "clicks": 13,
-    "impressions": 336,
-    "ctr": 3.87,
-    "cpc": 0.89,
-    "cost": 11.6,
+    "clicks": 28,
+    "impressions": 445,
+    "ctr": 6.29,
+    "cpc": 0.94,
+    "cost": 26.44,
     "budgetPerDay": 15.0,
     "bidStrategy": "Maximize conversions"
    }
@@ -237,11 +368,11 @@
    "searchChangeWoWPct": null,
    "pmaxConversions": null,
    "pmaxChangeWoWPct": null,
-   "conversions": 174.0,
-   "cost": 382.29,
-   "impressions": 65497,
-   "clicks": 1324,
-   "note": "Last 7 days (Jun 27-Jul 3) account totals from LIVE scrape Sat Jul 4: 65,497 impr (up 4,606) / cost $382.29 (down $4.19) / 174.00 conversions (down 233.27 vs prior period) / 1,324 clicks (up 125)."
+   "conversions": 280.62,
+   "cost": 376.04,
+   "impressions": 67211,
+   "clicks": 1346,
+   "note": "Last 7 days (Jun 28-Jul 4) account totals from LIVE scrape Sun Jul 5: 67,211 impr (up 6,906) / cost $376.04 (down $21.75) / 280.62 conversions (down 147.38 vs prior period) / 1,346 clicks (up 139)."
   },
   "balance": 423.15,
   "nextPayment": "Jun 1, 2026",
@@ -270,50 +401,47 @@
   "note_jul5": "Sun Jul 5 4 AM run (email-only): 2 Google Ads report-ready notifications received Jul 4 ('Campaign performance' 5:31 AM PT, 'Brewhouse Daily Campaign Report' 8:48 AM PT). No disapproval or budget alerts in last 24h. Live dashboard NOT re-scraped this run; campaign/spend figures below are as of Sat Jul 4 ~7 AM. Open items carried forward: 'unauthorized activity' banner + new billing user (verify), World Cup HQ 2026 paused-but-spending (verify)."
  },
  "yelpAds": {
-  "lastUpdated": "LIVE Chrome scrape Sat Jul 4 ~7 AM run PT.",
+  "lastUpdated": "LIVE Chrome scrape Sun Jul 5 ~7:12 AM run PT.",
   "last30d": {
-   "impressionsFromAds": 34600,
-   "impressionsTotal": 44900,
-   "impressionsAdShare": 77,
-   "pageVisitsFromAds": 534,
-   "pageVisitsTotal": 930,
-   "pageVisitsAdShare": 57,
-   "leadsFromAds": 128,
-   "leadsTotal": 187,
+   "impressionsFromAds": 33900,
+   "impressionsTotal": 44400,
+   "impressionsAdShare": 76,
+   "pageVisitsFromAds": 539,
+   "pageVisitsTotal": 921,
+   "pageVisitsAdShare": 59,
+   "leadsFromAds": 132,
+   "leadsTotal": 195,
    "leadsAdShare": 68,
-   "adImpressions": 34600,
-   "adClicks": 433
+   "adImpressions": 33900,
+   "adClicks": 427
   },
   "last12mo": {
-   "leadsAds": 1035,
-   "leadsOrganic": 667,
-   "leadsTotal": 1702,
+   "leadsAds": 1042,
+   "leadsOrganic": 672,
+   "leadsTotal": 1714,
    "adShare": 61,
-   "pageVisits12mo": 8200,
-   "forecastLeads": 172,
+   "pageVisits12mo": 8300,
+   "forecastLeads": 170,
    "leadsBreakdown": {
-    "directionsAndMapViews": 738,
-    "calls": 112,
-    "websiteVisits": 828,
+    "directionsAndMapViews": 742,
+    "calls": 114,
+    "websiteVisits": 834,
     "ctaClicks": 24
    }
   },
   "billingPeriod": {
-   "label": "Jul 1 - Jul 3, 2026",
-   "adSpend": 47.24,
-   "avgCpc": 1.07,
-   "avgCpl": 4.29,
-   "note": "Billing period Jul 1-Jul 3, 2026: ad spend $47.24, Avg CPC $1.07, Avg CPL $4.29. LIVE from Yelp Ads dashboard Sat Jul 4 ~7 AM."
+   "label": "Jul 1 - Jul 4, 2026",
+   "adSpend": 57.38,
+   "avgCpc": 1.02,
+   "avgCpl": 3.19,
+   "note": "Billing period Jul 1-Jul 4, 2026: ad spend $57.38 (+$10.14 vs Jul 1-3), Avg CPC $1.02, Avg CPL $3.19. LIVE from Yelp Ads dashboard Sun Jul 5 ~7:12 AM."
   },
-  "note": "Sat Jul 4 ~7 AM LIVE Chrome scrape. Last 30d: 34.6k ad impr (77% of 44.9k), 433 ad clicks, 534 ad page visits (57% of 930), 128 ad leads (68% of 187). Billing period Jul 1-Jul 3 = $47.24 spend / $1.07 CPC / $4.29 CPL (spend +$21.54 vs Jul 1-2). 12mo: Ads 1,035 leads (61%) / Organic 667 (39%) / Total 1,702; forecast 172; 12mo ad page visits 8.2k. Leads breakdown: Directions/Map 738, Calls 112, Website 828, CTA 24. Bonus budget remaining not shown on dashboard. Yelp inbox badge shows 15. NOT re-scraped at Sun Jul 5 4 AM run; figures as of Sat Jul 4.",
-  "stale": false,
-  "authError": false,
-  "budgetPerDayAvg": 22.0
+  "note": "Sun Jul 5 ~7:12 AM LIVE Chrome scrape. Last 30d: 33.9k ad impr (76% of 44.4k), 427 ad clicks, 539 ad page visits (59% of 921), 132 ad leads (68% of 195). Billing period Jul 1-Jul 4 = $57.38 spend / $1.02 CPC / $3.19 CPL. 12mo: Ads 1,042 leads (61%) / Organic 672 (39%) / Total 1,714; breakdown: 742 directions/map, 114 calls, 834 website visits, 24 CTA clicks; forecast 170. Bonus-budget module not shown on dashboard this run."
  },
  "tripAdvisor": {
   "lastUpdated": "2026-07-05",
   "adEmailPresent": false,
-  "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at Sun Jul 5 4 AM run."
+  "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at Sun Jul 5 ~7:15 AM run."
  },
  "reservations": {
   "lastUpdated": "2026-07-05",
@@ -534,5 +662,5 @@
   "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
   "severity": "verify"
  },
- "lastUpdated": "2026-07-05T04:13:00-07:00"
+ "lastUpdated": "2026-07-05T07:16:00-07:00"
 }
