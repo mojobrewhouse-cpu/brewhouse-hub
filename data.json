@@ -1,163 +1,89 @@
 {
   "date": "Sunday, July 12",
   "systemStatus": {
-    "level": "warn",
-    "headline": "Sun Jul 12 4 AM run: Sat Jul 11 Toast summary and Sun Jul 12 Sling schedule have NOT arrived yet (they land ~6:30-7:40 AM PT). Friday Jul 10 numbers are now FINAL.",
-    "detail": "Sun Jul 12 4 AM run. TOAST: no Sat Jul 11 summary yet -- the 4 AM run fires before Toast sends (~6:23-7:39 AM PT). What IS new: the LOCATION-level Fri Jul 10 email arrived Sat 7:39 AM PT and fills the two gaps flagged yesterday -- Voids $82.50 and Checks 197 (avg check $36.50). Fri Jul 10 final: net $7,190.00 / gross $7,321.40 / 289 guests / 177 orders / labor 19.8% of net, net -28.3% vs SDLW (Fri Jul 3 = July 4th holiday Friday, inflated baseline) and -16.9% vs prior-4-Friday avg. SLING: no Sun Jul 12 report yet; latest is Sat Jul 11 (11 employees / 60.50 hrs / 0 uncovered / 0 OT). GOOGLE ADS: 2 report-ready emails in last 24h, no disapprovals or budget alerts. YELP: 4 emails, all consumer marketing -- nothing actionable. TRIPADVISOR: 1 email (Jul 12) but it is a marketing promo, not an ad-performance report. REVIEWS: no new reviews in last 24h; 4 still unanswered, Patrick Williams 5* now 17 days old."
+    "level": "ok",
+    "headline": "Sun Jul 12 7 AM run: all four live sources refreshed. Sat Jul 11 was a strong day -- $10,005.52 net on 16.9% labor.",
+    "detail": "Sun Jul 12 7 AM run -- full refresh, no gaps except the ones noted. TOAST: Sat Jul 11 group summary arrived 6:29 AM PT. Net $10,005.52 / gross $10,229.70 / 403 guests / 235 orders / avg per guest $24.83 / labor 16.9% of net ($1,690.93 derived) / 22 void items / 0 open orders. Best labor percentage in over a week. Net is +161.3% vs SDLW, but SDLW (Sat Jul 4) was the July 4th holiday at only $3,829.55 net -- treat that swing as noise, not signal. Checks / avg check / void $ still pending the location-level email (~7:39 AM PT). SLING: Sun Jul 12 report delivered 7:00 AM PT -- 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 OT / 1 off. GOOGLE ADS (live scrape): Jul 11 spend $68.99, the week's highest, on 7,193 impressions and only 138 clicks -- CPC jumped to $0.50 from $0.33. PMax-2 is still limited by budget AND has all asset groups limited by policy; that policy flag has persisted about a week and is the single clearest thing to fix. YELP (live scrape): billing period Jul 1-11 spend $152.11, CPC $0.99, CPL $3.31; 117 leads from ads in the last 30 days. TRIPADVISOR: 1 email, marketing promo only, no ad data. REVIEWS: unchanged from the 4 AM run -- 4 unanswered, Patrick Williams 5* now 17 days old (OVERDUE)."
   },
   "toast": {
-    "date": "Friday, July 10",
-    "net": 7190.0,
-    "gross": 7321.4,
-    "guests": 289,
+    "date": "Saturday, July 11",
+    "net": 10005.52,
+    "gross": 10229.7,
+    "guests": 403,
     "guestsDerived": false,
-    "orders": 177,
+    "orders": 235,
     "ordersDerived": false,
-    "checks": 197,
-    "avgPerCheck": 36.5,
-    "avgPerOrder": 40.62,
-    "avgPerGuest": 24.88,
-    "laborPct": 19.8,
-    "laborCost": 1420.03,
-    "laborCostDerived": false,
-    "discounts": 131.4,
-    "discountsDerived": false,
-    "discountPct": 1.8,
+    "checks": null,
+    "avgPerCheck": null,
+    "avgPerOrder": 42.58,
+    "avgPerGuest": 24.83,
+    "laborPct": 16.9,
+    "laborCost": 1690.93,
+    "laborCostDerived": true,
+    "discounts": 225.05,
+    "discountsDerived": true,
+    "discountPct": 2.2,
     "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": 82.5,
-    "voidItems": 11,
-    "cardPayments": 156,
+    "voidAmount": null,
+    "voidItems": 22,
+    "cardPayments": 213,
     "openOrders": 0,
     "autoClockedOut": [
-      "Harmony Willson"
+      "Grant Danely"
     ],
+    "takeoutOrders": 1,
+    "takeoutSales": 58.0,
     "sdlw": {
-      "date": "Friday, July 3",
-      "net": 10051.43,
-      "gross": 10306.3,
-      "discounts": 257.66,
+      "date": "Saturday, July 4",
+      "net": 3829.55,
+      "gross": 3958.4,
+      "discounts": 130.63,
+      "discountPct": 3.3,
       "voids": null,
-      "voidItems": 17,
-      "avgPerGuest": 26.18,
-      "avgPerOrder": 48.79,
-      "avgPerCheck": 48.79,
-      "laborCost": 1407.2
+      "voidItems": 7,
+      "guests": 188,
+      "orders": 112,
+      "avgPerGuest": 20.37,
+      "avgPerOrder": 34.19,
+      "avgPerCheck": null,
+      "laborPct": 22.8,
+      "laborCost": 873.14,
+      "cardPayments": 89
     },
-    "prev4FriAvg": {
-      "net": 8655.44,
-      "gross": 8906.29,
-      "discounts": 251.05,
-      "voids": null,
-      "voidItems": 12.75,
-      "avgPerGuest": 26.91,
-      "avgPerOrder": 48.16,
-      "avgPerCheck": 48.16,
-      "laborCost": 1190.03
-    },
-    "netChangeVsSDLWPct": -28.3,
-    "grossChangeVsSDLWPct": -29.0,
-    "netChangeVsPrev4Pct": -16.9,
-    "source": "LOCATION-level Daily Performance Summary email (229 West Montecito Street, Fri Jul 10), parsed from HTML on Sun Jul 12 4 AM run. Supersedes the group-level parse.",
-    "note": "FRI JUL 10 FINAL (location-level email): Net $7,190.00 / Gross $7,321.40 / Discounts $131.40 / Voids $82.50 / 289 guests / 177 orders / 197 checks / avg check $36.50 / labor $1,420.03 = 19.8% of net. Net -28.3% vs SDLW (Fri Jul 3) and -16.9% vs prior-4-Friday avg -- but Jul 3 was the July 4th holiday Friday ($10,051 net), so SDLW is an inflated baseline. Labor % of net +40.4% vs SDLW: labor cost held flat (+0.7%) while sales fell.",
+    "prev4SatAvg": null,
+    "netChangeVsSDLWPct": 161.3,
+    "grossChangeVsSDLWPct": 158.4,
+    "netChangeVsPrev4Pct": null,
+    "source": "GROUP-level Daily Performance Summary email (The Brewhouse Santa Barbara Group, Sat Jul 11), parsed from HTML on the Sun Jul 12 7 AM run.",
+    "note": "SAT JUL 11 (group email, 6:29 AM PT): Net $10,005.52 / Gross $10,229.70 / 403 guests / 235 orders / avg per guest $24.83 / avg per order $42.58 / discounts 2.2% of gross ($225.05 derived) / labor 16.9% of net ($1,690.93 derived) / refunds $0 / 22 void items / 213 card payments / 0 open orders. Auto-clocked out: Grant Danely. Net +161.3% vs SDLW, but SDLW (Sat Jul 4) was the July 4th holiday at only $3,829.55 net -- a heavily depressed baseline, so that % swing is not a real trend. Checks, avg check and void $ amount are NOT in the group email; the LOCATION-level email (~7:39 AM PT) will fill them tomorrow.",
     "pending": false,
     "pendingFor": null
   },
   "toastLastKnown": {
-    "date": "Friday, July 10",
-    "net": 7190.0,
-    "gross": 7321.4,
-    "guests": 289,
-    "orders": 177,
-    "checks": 197,
-    "avgPerGuest": 24.88,
-    "avgPerOrder": 40.62,
-    "avgPerCheck": 36.5,
-    "laborPct": 19.8,
-    "laborCost": 1420.03,
-    "discountPct": 1.8,
-    "discounts": 131.4,
+    "date": "Saturday, July 11",
+    "net": 10005.52,
+    "gross": 10229.7,
+    "guests": 403,
+    "orders": 235,
+    "checks": null,
+    "avgPerGuest": 24.83,
+    "avgPerOrder": 42.58,
+    "avgPerCheck": null,
+    "laborPct": 16.9,
+    "laborCost": 1690.93,
+    "discountPct": 2.2,
+    "discounts": 225.05,
     "refunds": 0.0,
-    "voidAmount": 82.5,
-    "netChangeVsSDLWPct": -28.3,
-    "grossChangeVsSDLWPct": -29.0
+    "voidAmount": null,
+    "netChangeVsSDLWPct": 161.3,
+    "grossChangeVsSDLWPct": 158.4
   },
   "sling": {
-    "date": "Saturday, July 11",
+    "date": "Sunday, July 12",
     "count": 11,
-    "shifts": 11,
-    "hours": 60.5,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 1,
-    "pending": true,
-    "nextDayPending": false,
-    "stale": true,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook",
-        "time": "4:31A - 4:31A"
-      },
-      {
-        "name": "Sarah Palmer",
-        "role": "Barista",
-        "time": "6:30A - 12:30P"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender",
-        "time": "10:15A - 5:30P"
-      },
-      {
-        "name": "Daniel Rodriguez",
-        "role": "Server",
-        "time": "10:45A - 3:00P"
-      },
-      {
-        "name": "Osmar Beltran",
-        "role": "Server",
-        "time": "12:00P - 4:00P"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Server",
-        "time": "3:30P - 11:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "4:00P - 11:30P"
-      },
-      {
-        "name": "Bea Southern",
-        "role": "Busser",
-        "time": "4:00P - 11:30P"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Bartender",
-        "time": "4:00P - 11:30P"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender",
-        "time": "4:30P - 11:30P"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Server",
-        "time": "5:00P - 11:30P"
-      }
-    ],
-    "note": "Sun Jul 12 report NOT yet delivered at the 4 AM run (Sling sends ~7:00 AM PT). Showing LAST KNOWN schedule: Sat Jul 11 -- 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
-    "pendingFor": "Sunday, July 12"
-  },
-  "slingLastKnown": {
-    "date": "Saturday, July 11",
-    "count": 11,
-    "shifts": 11,
-    "hours": 60.5,
+    "shifts": 12,
+    "hours": 54.08,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
@@ -168,7 +94,7 @@
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "4:31A - 4:31A"
+        "time": "4:34A - 4:34A"
       },
       {
         "name": "Sarah Palmer",
@@ -176,70 +102,75 @@
         "time": "6:30A - 12:30P"
       },
       {
-        "name": "Andrew Turner",
+        "name": "Christine Vargas",
         "role": "Bartender",
-        "time": "10:15A - 5:30P"
+        "time": "10:15A - 4:00P"
       },
       {
         "name": "Daniel Rodriguez",
         "role": "Server",
-        "time": "10:45A - 3:00P"
+        "time": "10:45A - 3:30P"
       },
       {
-        "name": "Osmar Beltran",
+        "name": "Piper Clayton",
         "role": "Server",
         "time": "12:00P - 4:00P"
       },
       {
-        "name": "Cal Carter",
-        "role": "Server",
-        "time": "3:30P - 11:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "4:00P - 11:30P"
-      },
-      {
-        "name": "Bea Southern",
+        "name": "Sarah Palmer",
         "role": "Busser",
-        "time": "4:00P - 11:30P"
+        "time": "1:00P - 3:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "3:00P - 9:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 9:00P"
       },
       {
         "name": "Moe Danely",
         "role": "Bartender",
-        "time": "4:00P - 11:30P"
+        "time": "3:30P - 10:00P"
       },
       {
-        "name": "Katharine Brown",
-        "role": "Bartender",
-        "time": "4:30P - 11:30P"
+        "name": "Cal Carter",
+        "role": "Barback",
+        "time": "3:30P - 9:30P"
       },
       {
-        "name": "Fred De Leon",
+        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "5:00P - 11:30P"
+        "time": "3:45P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:00P - 9:30P"
       }
     ],
-    "note": "TODAY (Sat Jul 11) Sling daily report delivered 7:01 AM PT: 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
+    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
     "pendingFor": null
   },
-  "slingToday": {
-    "date": "Saturday, July 11",
+  "slingLastKnown": {
+    "date": "Sunday, July 12",
     "count": 11,
-    "shifts": 11,
-    "hours": 60.5,
+    "shifts": 12,
+    "hours": 54.08,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
-    "pending": true,
+    "pending": false,
     "nextDayPending": false,
-    "stale": true,
+    "stale": false,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "4:31A - 4:31A"
+        "time": "4:34A - 4:34A"
       },
       {
         "name": "Sarah Palmer",
@@ -247,71 +178,152 @@
         "time": "6:30A - 12:30P"
       },
       {
-        "name": "Andrew Turner",
+        "name": "Christine Vargas",
         "role": "Bartender",
-        "time": "10:15A - 5:30P"
+        "time": "10:15A - 4:00P"
       },
       {
         "name": "Daniel Rodriguez",
         "role": "Server",
-        "time": "10:45A - 3:00P"
+        "time": "10:45A - 3:30P"
       },
       {
-        "name": "Osmar Beltran",
+        "name": "Piper Clayton",
         "role": "Server",
         "time": "12:00P - 4:00P"
       },
       {
-        "name": "Cal Carter",
-        "role": "Server",
-        "time": "3:30P - 11:30P"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server",
-        "time": "4:00P - 11:30P"
-      },
-      {
-        "name": "Bea Southern",
+        "name": "Sarah Palmer",
         "role": "Busser",
-        "time": "4:00P - 11:30P"
+        "time": "1:00P - 3:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "3:00P - 9:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 9:00P"
       },
       {
         "name": "Moe Danely",
         "role": "Bartender",
-        "time": "4:00P - 11:30P"
+        "time": "3:30P - 10:00P"
       },
       {
-        "name": "Katharine Brown",
-        "role": "Bartender",
-        "time": "4:30P - 11:30P"
+        "name": "Cal Carter",
+        "role": "Barback",
+        "time": "3:30P - 9:30P"
       },
       {
-        "name": "Fred De Leon",
+        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "5:00P - 11:30P"
+        "time": "3:45P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:00P - 9:30P"
       }
     ],
-    "note": "Sun Jul 12 report NOT yet delivered at the 4 AM run (Sling sends ~7:00 AM PT). Showing LAST KNOWN schedule: Sat Jul 11 -- 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
-    "pendingFor": "Sunday, July 12"
+    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
+    "pendingFor": null
+  },
+  "slingToday": {
+    "date": "Sunday, July 12",
+    "count": 11,
+    "shifts": 12,
+    "hours": 54.08,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "pending": false,
+    "nextDayPending": false,
+    "stale": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:34A - 4:34A"
+      },
+      {
+        "name": "Sarah Palmer",
+        "role": "Barista",
+        "time": "6:30A - 12:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A - 4:00P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "10:45A - 3:30P"
+      },
+      {
+        "name": "Piper Clayton",
+        "role": "Server",
+        "time": "12:00P - 4:00P"
+      },
+      {
+        "name": "Sarah Palmer",
+        "role": "Busser",
+        "time": "1:00P - 3:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "3:00P - 9:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 9:00P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Cal Carter",
+        "role": "Barback",
+        "time": "3:30P - 9:30P"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server",
+        "time": "3:45P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:00P - 9:30P"
+      }
+    ],
+    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
+    "pendingFor": null
   },
   "googleAds": {
-    "lastUpdated": "LIVE Chrome scrape Sat Jul 11 ~7:05 AM PT.",
+    "lastUpdated": "LIVE Chrome scrape Sun Jul 12 ~7:10 AM PT.",
     "yesterday": {
-      "date": "July 10, 2026",
-      "spend": 58.31,
-      "impressions": 8426,
-      "clicks": 176,
+      "date": "July 11, 2026",
+      "spend": 68.99,
+      "impressions": 7193,
+      "clicks": 138,
       "conversions": 0.0,
-      "cpc": 0.33,
-      "ctr": 2.09,
-      "costChangeAbs": 3.4,
-      "impressionsChangeAbs": -353,
-      "clicksChangeAbs": 48,
+      "cpc": 0.5,
+      "ctr": 1.92,
+      "costChangeAbs": 10.69,
+      "impressionsChangeAbs": -1233,
+      "clicksChangeAbs": -38,
       "clicksDerived": false,
       "avgTargetCpa": null,
       "costChangeVsLastMon": null,
-      "note": "LIVE Chrome scrape Sat Jul 11 ~7:05 AM PT, 'Yesterday' = Jul 10 (Fri). Cost $58.31 (up $3.40), 8,426 impr (down 353), 176 clicks (up 48), CTR 2.09%, avg CPC $0.33. Conversions 0.00 -- Google shows 'calculating projections'."
+      "note": "LIVE Chrome scrape Sun Jul 12 ~7:10 AM PT, 'Yesterday' = Jul 11 (Sat). Cost $68.99 (up $10.69), 7,193 impr (down 1,233), 138 clicks (down 38), CTR 1.92%, avg CPC $0.50. Conversions 0.00 -- Google still shows 'calculating projections'."
     },
     "campaigns": [
       {
@@ -321,11 +333,11 @@
         "budget": "$43.37/day",
         "bidStrategy": "Target CPA",
         "optimizationScore": 85,
-        "impressions": 8086,
-        "clicks": 165,
-        "interactionRate": 2.04,
-        "avgCpc": 0.29,
-        "cost": 47.98,
+        "impressions": 6809,
+        "clicks": 127,
+        "interactionRate": 1.87,
+        "avgCpc": 0.38,
+        "cost": 47.99,
         "conversions": 0.0
       },
       {
@@ -334,12 +346,12 @@
         "status": "Eligible",
         "budget": "$15.00/day",
         "bidStrategy": "Maximize conversions",
-        "optimizationScore": 48.2,
-        "impressions": 340,
+        "optimizationScore": 46.6,
+        "impressions": 384,
         "clicks": 11,
-        "interactionRate": 3.24,
-        "avgCpc": 0.94,
-        "cost": 10.33,
+        "interactionRate": 2.86,
+        "avgCpc": 1.91,
+        "cost": 21.01,
         "conversions": 0.0
       },
       {
@@ -376,23 +388,22 @@
       "searchChangeWoWPct": null,
       "pmaxConversions": null,
       "pmaxChangeWoWPct": null,
-      "conversions": 359.33,
-      "cost": 399.38,
-      "impressions": 66369,
-      "clicks": 1269,
-      "note": "Jul 4-10, 2026 account totals from LIVE scrape Sat Jul 11: 66,369 impr (up 873), $399.38 cost (up $16.97), 1,269 clicks (down 56), 359.33 conversions (down 166.81)."
+      "conversions": 353.17,
+      "cost": 403.49,
+      "impressions": 61355,
+      "clicks": 1176,
+      "note": "Jul 5-11, 2026 account totals from LIVE scrape Sun Jul 12: 61,355 impr (down 5,856), $403.49 cost (up $27.34), 1,176 clicks (down 171), 353.17 conversions (down 198.96)."
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
-    "note": "LIVE Chrome scrape Sat Jul 11 ~7:05 AM PT. Yesterday (Jul 10): $58.31 / 8,426 impr / 176 clicks / 0 conv. Only 2 of 4 campaigns are running: PMax-2 (limited by budget) and BHC Coffee Search. World Cup HQ 2026 and Oldest SB Brewery on Tap are both PAUSED.",
+    "note": "LIVE Chrome scrape Sun Jul 12 ~7:10 AM PT. Yesterday (Jul 11): $68.99 / 7,193 impr / 138 clicks / 0 conv. Only 2 of 4 campaigns running: PMax-2 (still Limited by budget AND all asset groups limited by policy) and BHC Coffee Search (opt score slipped to 46.6% from 48.2%). World Cup HQ 2026 and Oldest SB Brewery on Tap remain PAUSED. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4,
     "accountChangeAlert": true,
-    "reportsNote": "Sat Jul 11 ~7:05 AM LIVE Chrome scrape (campaign/spend figures live for Jul 10).",
     "disapprovals": 0,
     "accountBudgetPerDay": 58.37,
     "note_jul5": "Sun Jul 5 4 AM run (email-only): 2 Google Ads report-ready notifications received Jul 4 ('Campaign performance' 5:31 AM PT, 'Brewhouse Daily Campaign Report' 8:48 AM PT). No disapproval or budget alerts in last 24h. Live dashboard NOT re-scraped this run; campaign/spend figures below are as of Sat Jul 4 ~7 AM. Open items carried forward: 'unauthorized activity' banner + new billing user (verify), World Cup HQ 2026 paused-but-spending (verify).",
@@ -414,47 +425,43 @@
     },
     "note_20260711": "Sat Jul 11 ~7:05 AM LIVE scrape: Yesterday (Jul 10) $58.31 (up $3.40) / 8,426 impr (down 353) / 176 clicks (up 48) / CTR 2.09% / CPC $0.33 / 0 conversions. NEW: 'BHC Coffee | Search | P1 Launch' campaign now live ($15/day, 48.2% opt score). 'World Cup HQ 2026' is now Paused.",
     "reportEmails24h": 2,
-    "alerts": "No disapprovals or budget alerts in last 24h. Standing flag: 'Local store visits and promotions-Performance Max-2' still shows 'Limited by budget; all asset groups limited by policy'.",
-    "note24h": "Sun Jul 12 4 AM run: 2 Google Ads report-ready emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance). No disapprovals. Campaign metrics below are from the Sat Jul 11 live scrape and were NOT refreshed this run."
+    "alerts": "No disapprovals or budget alerts. Standing flags: PMax-2 'Limited by budget; all asset groups limited by policy' (persisting ~1 week); 'Review your campaign targets' banner (Aug 17, 2026 deadline).",
+    "note24h": "Sun Jul 12 7 AM run: Google Ads figures below come from a LIVE Chrome scrape this run (Jul 11 data).",
+    "note_20260712": "Sun Jul 12 ~7:10 AM LIVE scrape: Yesterday (Jul 11) $68.99 (up $10.69) / 7,193 impr (down 1,233) / 138 clicks (down 38) / CTR 1.92% / CPC $0.50 / 0 conversions (calculating). PMax-2: 6,809 impr, 127 clicks, $47.99, opt 85%. BHC Coffee: 384 impr, 11 clicks, $21.01, opt 46.6%. Highest daily spend of the week on the fewest clicks -- CPC up to $0.50 from $0.33 on Jul 10."
   },
   "yelpAds": {
-    "lastUpdated": "LIVE Chrome scrape Sat Jul 11 ~7:08 AM PT.",
+    "lastUpdated": "LIVE Chrome scrape Sun Jul 12 ~7:12 AM PT.",
     "last30d": {
-      "adImpressions": 28700,
-      "impressionsFromAds": 28700,
-      "impressionsTotal": 39700,
+      "adImpressions": 29200,
+      "impressionsFromAds": 29200,
+      "impressionsTotal": 40200,
       "impressionsAdShare": 72,
-      "adClicks": 392,
-      "pageVisitsFromAds": 506,
-      "pageVisitsTotal": 897,
-      "pageVisitsAdShare": 56,
+      "adClicks": 399,
+      "pageVisitsFromAds": 512,
+      "pageVisitsTotal": 928,
+      "pageVisitsAdShare": 55,
       "leadsFromAds": 117,
-      "leadsTotal": 195,
-      "leadsAdShare": 60
+      "leadsTotal": 199,
+      "leadsAdShare": 59
     },
     "last12mo": {
-      "leadsAds": 1063,
-      "leadsOrganic": 693,
-      "leadsTotal": 1756,
-      "adShare": 61,
-      "forecastLeads": 135,
-      "pageVisits12mo": 8400,
-      "leadsBreakdown": {
-        "directionsAndMapViews": 756,
-        "calls": 119,
-        "websiteVisits": 857,
-        "ctaClicks": 24
-      }
+      "leadsAds": 1070,
+      "leadsOrganic": 699,
+      "leadsTotal": 1769,
+      "adShare": 60,
+      "forecastLeads": 133,
+      "pageVisits12mo": 8500,
+      "leadsBreakdown": null
     },
     "billingPeriod": {
-      "label": "Jul 1 - Jul 10, 2026",
-      "adSpend": 130.54,
-      "avgCpc": 0.97,
-      "avgCpl": 3.35,
-      "note": "Billing period Jul 1-Jul 10, 2026: ad spend $130.54, Avg CPC $0.97, Avg CPL $3.35."
+      "label": "Jul 1 - Jul 11, 2026",
+      "adSpend": 152.11,
+      "avgCpc": 0.99,
+      "avgCpl": 3.31,
+      "note": "Billing period Jul 1-Jul 11, 2026: ad spend $152.11, Avg CPC $0.99, Avg CPL $3.31."
     },
     "bonusBudgetRemaining": null,
-    "note": "Sat Jul 11 ~7:08 AM LIVE Chrome scrape. Last 30d: 28.7k ad impr (72% of 39.7k total), 392 ad clicks, 506 page visits from ads (56% of 897), 117 leads from ads (60% of 195). Billing period Jul 1-10: $130.54 spend, $0.97 CPC, $3.35 CPL. Bonus budget remaining is not surfaced on the ads dashboard.",
+    "note": "Sun Jul 12 ~7:12 AM LIVE Chrome scrape. Last 30d: 29.2k ad impressions (72% of 40.2k total), 399 ad clicks, 512 page visits from ads (55% of 928), 117 leads from ads (59% of 199). Billing period Jul 1-11: $152.11 spend, $0.99 CPC, $3.31 CPL -- that is $21.57 added on Jul 11 alone vs a ~$13/day running average, so Saturday ran hot on Yelp too. Bonus budget remaining is still not surfaced anywhere on the ads dashboard.",
     "stale": false,
     "authError": false,
     "budgetPerDayAvg": 22.0
@@ -462,7 +469,7 @@
   "tripAdvisor": {
     "adEmailPresent": false,
     "lastUpdated": "2026-07-12",
-    "note": "1 TripAdvisor email in last 24h (Jul 12, 'Connect with your diners--for free') but it is a marketing promo, not an ad-performance report. No ad performance data this run."
+    "note": "1 TripAdvisor email from analytics@hm2.tripadvisor.com in the last 24h (Jul 12, 'Connect with your diners -- for free') but it is a marketing promo, not an ad-performance report. No TripAdvisor ad performance data this run."
   },
   "reservations": {
     "lastUpdated": "2026-07-12",
@@ -689,26 +696,28 @@
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-12T04:00:00-07:00",
+  "lastUpdated": "2026-07-12T07:15:00-07:00",
   "toastPrevDay": {
-    "date": "Thursday, July 9",
-    "net": 5660.6,
-    "gross": 5805.1,
-    "guests": 231,
-    "orders": 135,
-    "avgPerGuest": 24.5,
-    "avgPerOrder": 41.93,
-    "laborPct": 21.6,
-    "laborCost": 1221.83,
-    "discounts": 144.5,
+    "date": "Friday, July 10",
+    "net": 7190.0,
+    "gross": 7321.4,
+    "guests": 289,
+    "orders": 177,
+    "checks": 197,
+    "avgPerGuest": 24.88,
+    "avgPerOrder": 40.62,
+    "avgPerCheck": 36.5,
+    "laborPct": 19.8,
+    "laborCost": 1420.03,
+    "discounts": 131.4,
     "refunds": 0.0,
-    "voidAmount": 62.0,
-    "voidItems": null,
-    "source": "GROUP Daily Performance Summary (Thu Jul 9). Carried from prior run as prev-day comparison.",
-    "note": "THU JUL 9: Net $5,660.60 / Gross $5,805.10 / 231 guests / 135 orders / labor 21.6%."
+    "voidAmount": 82.5,
+    "voidItems": 11,
+    "source": "LOCATION-level Daily Performance Summary (Fri Jul 10). Carried forward as prev-day comparison.",
+    "note": "FRI JUL 10 FINAL: Net $7,190.00 / Gross $7,321.40 / 289 guests / 177 orders / labor 19.8% of net."
   },
   "toastPending": {
-    "pendingFor": "Saturday, July 11",
-    "reason": "4 AM run fires before Toast sends the daily summary (~6:23-7:39 AM PT). Saturday's numbers will be in tomorrow's brief."
+    "pendingFor": "Sunday, July 12",
+    "reason": "Sunday's numbers arrive in tomorrow's (Mon Jul 13) Toast summary. Still awaiting the LOCATION-level Sat Jul 11 email (~7:39 AM PT) for checks / avg check / void $ amount."
   }
 }
