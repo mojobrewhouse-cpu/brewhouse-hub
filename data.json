@@ -1,9 +1,9 @@
 {
-  "date": "Saturday, July 11",
+  "date": "Sunday, July 12",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Sat Jul 11 7 AM run: all sources fresh. Toast (Fri Jul 10) and Sling (Sat Jul 11) arrived; Google Ads + Yelp Ads scraped live.",
-    "detail": "Sat Jul 11 7 AM run -- full refresh. TOAST: Fri Jul 10 group summary in (net $7,190.00, down 28.5% vs Fri Jul 3, but Jul 3 was the July 4th holiday Friday). SLING: Sat Jul 11 schedule in (11 employees / 60.50 hrs / 0 uncovered / 0 OT). GOOGLE ADS: live scrape, Jul 10 spend $58.31, 0 conversions; new 'BHC Coffee | Search | P1 Launch' campaign live, 'World Cup HQ 2026' now paused. YELP ADS: live scrape, $130.54 spend Jul 1-10. TRIPADVISOR: no ad email in last 24h. Gaps: Toast void-$ and check count are not in the group-level email; Yelp bonus-budget remaining is not shown on the ads dashboard."
+    "level": "warn",
+    "headline": "Sun Jul 12 4 AM run: Sat Jul 11 Toast summary and Sun Jul 12 Sling schedule have NOT arrived yet (they land ~6:30-7:40 AM PT). Friday Jul 10 numbers are now FINAL.",
+    "detail": "Sun Jul 12 4 AM run. TOAST: no Sat Jul 11 summary yet -- the 4 AM run fires before Toast sends (~6:23-7:39 AM PT). What IS new: the LOCATION-level Fri Jul 10 email arrived Sat 7:39 AM PT and fills the two gaps flagged yesterday -- Voids $82.50 and Checks 197 (avg check $36.50). Fri Jul 10 final: net $7,190.00 / gross $7,321.40 / 289 guests / 177 orders / labor 19.8% of net, net -28.3% vs SDLW (Fri Jul 3 = July 4th holiday Friday, inflated baseline) and -16.9% vs prior-4-Friday avg. SLING: no Sun Jul 12 report yet; latest is Sat Jul 11 (11 employees / 60.50 hrs / 0 uncovered / 0 OT). GOOGLE ADS: 2 report-ready emails in last 24h, no disapprovals or budget alerts. YELP: 4 emails, all consumer marketing -- nothing actionable. TRIPADVISOR: 1 email (Jul 12) but it is a marketing promo, not an ad-performance report. REVIEWS: no new reviews in last 24h; 4 still unanswered, Patrick Williams 5* now 17 days old."
   },
   "toast": {
     "date": "Friday, July 10",
@@ -13,19 +13,19 @@
     "guestsDerived": false,
     "orders": 177,
     "ordersDerived": false,
-    "checks": null,
-    "avgPerCheck": null,
+    "checks": 197,
+    "avgPerCheck": 36.5,
     "avgPerOrder": 40.62,
     "avgPerGuest": 24.88,
     "laborPct": 19.8,
-    "laborCost": 1423.62,
-    "laborCostDerived": true,
-    "discounts": 131.79,
-    "discountsDerived": true,
+    "laborCost": 1420.03,
+    "laborCostDerived": false,
+    "discounts": 131.4,
+    "discountsDerived": false,
     "discountPct": 1.8,
     "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": null,
+    "voidAmount": 82.5,
     "voidItems": 11,
     "cardPayments": 156,
     "openOrders": 0,
@@ -55,11 +55,11 @@
       "avgPerCheck": 48.16,
       "laborCost": 1190.03
     },
-    "netChangeVsSDLWPct": -28.5,
+    "netChangeVsSDLWPct": -28.3,
     "grossChangeVsSDLWPct": -29.0,
     "netChangeVsPrev4Pct": -16.9,
-    "source": "GROUP Daily Performance Summary email (Fri Jul 10), parsed from HTML on Sat Jul 11 7 AM run.",
-    "note": "FRI JUL 10 group summary delivered 6:23 AM PT. Net $7,190.00 / Gross $7,321.40 / 289 guests / 177 orders / labor 19.8% of net. Down 28.5% vs SDLW (Fri Jul 3) and down 16.9% vs prior-4-Friday avg -- but Jul 3 was the July 4th holiday Friday ($10,051 net), so SDLW is an inflated baseline. Void $ amount and check count are not in the group-level email (location-level email arrives ~7:39 AM PT).",
+    "source": "LOCATION-level Daily Performance Summary email (229 West Montecito Street, Fri Jul 10), parsed from HTML on Sun Jul 12 4 AM run. Supersedes the group-level parse.",
+    "note": "FRI JUL 10 FINAL (location-level email): Net $7,190.00 / Gross $7,321.40 / Discounts $131.40 / Voids $82.50 / 289 guests / 177 orders / 197 checks / avg check $36.50 / labor $1,420.03 = 19.8% of net. Net -28.3% vs SDLW (Fri Jul 3) and -16.9% vs prior-4-Friday avg -- but Jul 3 was the July 4th holiday Friday ($10,051 net), so SDLW is an inflated baseline. Labor % of net +40.4% vs SDLW: labor cost held flat (+0.7%) while sales fell.",
     "pending": false,
     "pendingFor": null
   },
@@ -69,15 +69,17 @@
     "gross": 7321.4,
     "guests": 289,
     "orders": 177,
+    "checks": 197,
     "avgPerGuest": 24.88,
     "avgPerOrder": 40.62,
+    "avgPerCheck": 36.5,
     "laborPct": 19.8,
-    "laborCost": 1423.62,
+    "laborCost": 1420.03,
     "discountPct": 1.8,
-    "discounts": 131.79,
+    "discounts": 131.4,
     "refunds": 0.0,
-    "voidAmount": null,
-    "netChangeVsSDLWPct": -28.5,
+    "voidAmount": 82.5,
+    "netChangeVsSDLWPct": -28.3,
     "grossChangeVsSDLWPct": -29.0
   },
   "sling": {
@@ -88,9 +90,9 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
-    "pending": false,
+    "pending": true,
     "nextDayPending": false,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -148,8 +150,8 @@
         "time": "5:00P - 11:30P"
       }
     ],
-    "note": "TODAY (Sat Jul 11) Sling daily report delivered 7:01 AM PT: 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
-    "pendingFor": null
+    "note": "Sun Jul 12 report NOT yet delivered at the 4 AM run (Sling sends ~7:00 AM PT). Showing LAST KNOWN schedule: Sat Jul 11 -- 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
+    "pendingFor": "Sunday, July 12"
   },
   "slingLastKnown": {
     "date": "Saturday, July 11",
@@ -230,9 +232,9 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
-    "pending": false,
+    "pending": true,
     "nextDayPending": false,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -290,8 +292,8 @@
         "time": "5:00P - 11:30P"
       }
     ],
-    "note": "TODAY (Sat Jul 11) Sling daily report delivered 7:01 AM PT: 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
-    "pendingFor": null
+    "note": "Sun Jul 12 report NOT yet delivered at the 4 AM run (Sling sends ~7:00 AM PT). Showing LAST KNOWN schedule: Sat Jul 11 -- 11 employees / 11 shifts / 60.50 hours / 0 uncovered / 0 overtime / 1 employee off.",
+    "pendingFor": "Sunday, July 12"
   },
   "googleAds": {
     "lastUpdated": "LIVE Chrome scrape Sat Jul 11 ~7:05 AM PT.",
@@ -382,8 +384,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "LIVE Chrome scrape Sat Jul 11 ~7:05 AM PT. Yesterday (Jul 10): $58.31 / 8,426 impr / 176 clicks / 0 conv. Only 2 of 4 campaigns are running: PMax-2 (limited by budget) and BHC Coffee Search. World Cup HQ 2026 and Oldest SB Brewery on Tap are both PAUSED.",
     "stale": false,
     "authError": false,
@@ -391,18 +393,7 @@
     "reportsLast48h": 4,
     "accountChangeAlert": true,
     "reportsNote": "Sat Jul 11 ~7:05 AM LIVE Chrome scrape (campaign/spend figures live for Jul 10).",
-    "disapprovals": [
-      {
-        "present": true,
-        "campaign": "World Cup HQ 2026",
-        "campaignId": "23922005039",
-        "status": "Eligible",
-        "policies": [],
-        "emailDate": "2026-06-09T00:20:23Z",
-        "severity": "resolved",
-        "detail": "Previously Disapproved (Destination not working HTTP 404 iOS + Copyrighted content, Jun 9). As of the Sat Jun 27 live scrape this campaign is fully 'Eligible' (no longer Limited) and served Jun 26 (913 impr, 38 clicks, $26.72). Appears fully recovered; confirm destination URL fix held."
-      }
-    ],
+    "disapprovals": 0,
     "accountBudgetPerDay": 58.37,
     "note_jul5": "Sun Jul 5 4 AM run (email-only): 2 Google Ads report-ready notifications received Jul 4 ('Campaign performance' 5:31 AM PT, 'Brewhouse Daily Campaign Report' 8:48 AM PT). No disapproval or budget alerts in last 24h. Live dashboard NOT re-scraped this run; campaign/spend figures below are as of Sat Jul 4 ~7 AM. Open items carried forward: 'unauthorized activity' banner + new billing user (verify), World Cup HQ 2026 paused-but-spending (verify).",
     "note_jul6": "Mon Jul 6 4 AM run (email-only): 2 Google Ads report-ready notifications received Jul 5 ('Campaign performance' 5:31 AM PT, 'Brewhouse Daily Campaign Report' 8:48 AM PT). No disapproval or budget-alert emails in last 24h. Live dashboard NOT re-scraped this run; campaign/spend figures are as of Sun Jul 5 ~7:10 AM scrape. Open items carried forward: unauthorized-activity banner, PMax-2 limited by budget, World Cup HQ 2026 paused.",
@@ -421,7 +412,10 @@
       "budgetAlerts": 0,
       "note": "2 routine report-ready emails. No disapprovals, no budget alerts, no policy notices in the last 24h. PMax-2 'Limited by budget' flag from Jul 10 scrape still stands -- verify in-console."
     },
-    "note_20260711": "Sat Jul 11 ~7:05 AM LIVE scrape: Yesterday (Jul 10) $58.31 (up $3.40) / 8,426 impr (down 353) / 176 clicks (up 48) / CTR 2.09% / CPC $0.33 / 0 conversions. NEW: 'BHC Coffee | Search | P1 Launch' campaign now live ($15/day, 48.2% opt score). 'World Cup HQ 2026' is now Paused."
+    "note_20260711": "Sat Jul 11 ~7:05 AM LIVE scrape: Yesterday (Jul 10) $58.31 (up $3.40) / 8,426 impr (down 353) / 176 clicks (up 48) / CTR 2.09% / CPC $0.33 / 0 conversions. NEW: 'BHC Coffee | Search | P1 Launch' campaign now live ($15/day, 48.2% opt score). 'World Cup HQ 2026' is now Paused.",
+    "reportEmails24h": 2,
+    "alerts": "No disapprovals or budget alerts in last 24h. Standing flag: 'Local store visits and promotions-Performance Max-2' still shows 'Limited by budget; all asset groups limited by policy'.",
+    "note24h": "Sun Jul 12 4 AM run: 2 Google Ads report-ready emails in last 24h (Brewhouse Daily Campaign Report + Campaign performance). No disapprovals. Campaign metrics below are from the Sat Jul 11 live scrape and were NOT refreshed this run."
   },
   "yelpAds": {
     "lastUpdated": "LIVE Chrome scrape Sat Jul 11 ~7:08 AM PT.",
@@ -467,8 +461,8 @@
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "2026-07-11",
-    "note": "No analytics@hm2.tripadvisor.com ad-performance email in last 24h at Sat Jul 11 7 AM run."
+    "lastUpdated": "2026-07-12",
+    "note": "1 TripAdvisor email in last 24h (Jul 12, 'Connect with your diners--for free') but it is a marketing promo, not an ad-performance report. No ad performance data this run."
   },
   "reservations": {
     "lastUpdated": "2026-07-12",
@@ -497,8 +491,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-11 -- Sat Jul 11 4 AM run. NEW: Jay Roston 5* (Jul 10, Brewhouse Coffee profile). Oldest unanswered 5*: Patrick Williams (Jun 25, now 16 days).",
-    "note": "Sat Jul 11 4 AM run: 1 NEW review in last 24h -- Jay Roston 5* (Jul 10) on the BREWHOUSE COFFEE profile. Joan 5* (Jul 9) still unanswered 2 days. Time2Go 4* (Jul 7) unanswered 4 days. Patrick Williams 5* (Jun 25) unanswered 16 days -- overdue.",
+    "lastUpdated": "2026-07-12 -- Sun Jul 12 4 AM run. NO new reviews in last 24h.",
+    "note": "Sun Jul 12 4 AM run: 0 new reviews in last 24h. Still unanswered: Jay Roston 5* (Jul 10, Brewhouse Coffee profile, 2 days), Joan 5* (Jul 9, 3 days), Time2Go 4* (Jul 7, 5 days), Patrick Williams 5* (Jun 25, 17 days -- OVERDUE).",
     "unanswered": [
       {
         "platform": "Google",
@@ -506,8 +500,8 @@
         "date": "2026-07-10",
         "stars": 5,
         "snippet": "Some of the bast coffee drinks in Santa Barbara. Great grab and go breakfast items too! Dog...",
-        "ageDays": 1,
-        "isNew": true,
+        "ageDays": 2,
+        "isNew": false,
         "profile": "Brewhouse Coffee",
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       },
@@ -517,7 +511,7 @@
         "date": "2026-07-09",
         "stars": 5,
         "snippet": "Went for dinner had the schnitzel it was awesome! We also stayed to watch a world cup match.",
-        "ageDays": 2,
+        "ageDays": 3,
         "isNew": false
       },
       {
@@ -526,7 +520,7 @@
         "date": "2026-07-07",
         "stars": 4,
         "snippet": "Everything was delicious, salmon salad, fish and chips, burger, and fries. the location was very...",
-        "ageDays": 4,
+        "ageDays": 5,
         "isNew": false
       },
       {
@@ -535,7 +529,7 @@
         "date": "2026-06-25",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 16,
+        "ageDays": 17,
         "isNew": false
       },
       {
@@ -685,9 +679,9 @@
     ]
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-07-11",
+    "lastUpdated": "2026-07-12",
     "actionable": [],
-    "note": "No actionable Yelp customer inquiries in last 24h at Sat Jul 11 4 AM run (marketing newsletters only)."
+    "note": "No actionable Yelp customer inquiries in last 24h at Sun Jul 12 4 AM run (4 consumer marketing emails only)."
   },
   "businessProfile": {
     "lastUpdated": "2026-06-13",
@@ -695,7 +689,7 @@
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-11T07:00:00-07:00",
+  "lastUpdated": "2026-07-12T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Thursday, July 9",
     "net": 5660.6,
@@ -712,5 +706,9 @@
     "voidItems": null,
     "source": "GROUP Daily Performance Summary (Thu Jul 9). Carried from prior run as prev-day comparison.",
     "note": "THU JUL 9: Net $5,660.60 / Gross $5,805.10 / 231 guests / 135 orders / labor 21.6%."
+  },
+  "toastPending": {
+    "pendingFor": "Saturday, July 11",
+    "reason": "4 AM run fires before Toast sends the daily summary (~6:23-7:39 AM PT). Saturday's numbers will be in tomorrow's brief."
   }
 }
