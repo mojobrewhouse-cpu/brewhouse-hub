@@ -1,9 +1,9 @@
 {
-  "date": "Sunday, July 12",
+  "date": "Monday, July 13",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Sun Jul 12 7 AM run: all four live sources refreshed. Sat Jul 11 was a strong day -- $10,005.52 net on 16.9% labor.",
-    "detail": "Sun Jul 12 7 AM run -- full refresh, no gaps except the ones noted. TOAST: Sat Jul 11 group summary arrived 6:29 AM PT. Net $10,005.52 / gross $10,229.70 / 403 guests / 235 orders / avg per guest $24.83 / labor 16.9% of net ($1,690.93 derived) / 22 void items / 0 open orders. Best labor percentage in over a week. Net is +161.3% vs SDLW, but SDLW (Sat Jul 4) was the July 4th holiday at only $3,829.55 net -- treat that swing as noise, not signal. Checks / avg check / void $ still pending the location-level email (~7:39 AM PT). SLING: Sun Jul 12 report delivered 7:00 AM PT -- 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 OT / 1 off. GOOGLE ADS (live scrape): Jul 11 spend $68.99, the week's highest, on 7,193 impressions and only 138 clicks -- CPC jumped to $0.50 from $0.33. PMax-2 is still limited by budget AND has all asset groups limited by policy; that policy flag has persisted about a week and is the single clearest thing to fix. YELP (live scrape): billing period Jul 1-11 spend $152.11, CPC $0.99, CPL $3.31; 117 leads from ads in the last 30 days. TRIPADVISOR: 1 email, marketing promo only, no ad data. REVIEWS: unchanged from the 4 AM run -- 4 unanswered, Patrick Williams 5* now 17 days old (OVERDUE)."
+    "level": "warn",
+    "headline": "Mon Jul 13 4 AM run (email-only). Sunday Jul 12 Toast numbers have NOT landed yet -- they arrive ~6:30-7:39 AM PT. Sat Jul 11 is now FINAL and complete.",
+    "detail": "Mon Jul 13 4 AM run. TOAST: The LOCATION-level Sat Jul 11 email arrived Jul 12 7:39 AM PT and filled the gaps flagged yesterday -- checks 261, avg check $38.34, void amount $223.70, actual discounts $224.18, actual labor cost $1,692.17. Sat Jul 11 FINAL: net $10,005.52 / gross $10,229.70 / 403 guests / 235 orders / 261 checks / labor 16.9%. vs 4-WEEK AVG (the honest comparison): net +27.0% ($7,881.13), labor 16.9% vs 19.6%. SDLW (Sat Jul 4) was the July 4th holiday at $3,829.55 -- the +161.3% swing is noise. SUNDAY JUL 12 TOAST NOT AVAILABLE at 4 AM -- arrives with today's summary email. SLING: today's (Mon Jul 13) report also not delivered yet (~7:00 AM PT); schedule shown is Sun Jul 12 carried forward. REVIEWS: 0 new in last 24h. 4 still unanswered; Patrick Williams 5* now 18 days old (OVERDUE). GOOGLE ADS: 2 routine report-ready emails (Jul 12). No disapprovals, no budget alerts. Standing flag: PMax-2 limited by budget AND all asset groups limited by policy (~1 week) -- still the single clearest fix. No live scrape this run; ads/Yelp figures carried forward from Sun Jul 12. YELP: marketing blasts only, nothing actionable. TRIPADVISOR: no ad performance report."
   },
   "toast": {
     "date": "Saturday, July 11",
@@ -13,19 +13,19 @@
     "guestsDerived": false,
     "orders": 235,
     "ordersDerived": false,
-    "checks": null,
-    "avgPerCheck": null,
+    "checks": 261,
+    "avgPerCheck": 38.34,
     "avgPerOrder": 42.58,
     "avgPerGuest": 24.83,
     "laborPct": 16.9,
-    "laborCost": 1690.93,
-    "laborCostDerived": true,
-    "discounts": 225.05,
-    "discountsDerived": true,
+    "laborCost": 1692.17,
+    "laborCostDerived": false,
+    "discounts": 224.18,
+    "discountsDerived": false,
     "discountPct": 2.2,
     "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": null,
+    "voidAmount": 223.7,
     "voidItems": 22,
     "cardPayments": 213,
     "openOrders": 0,
@@ -38,25 +38,86 @@
       "date": "Saturday, July 4",
       "net": 3829.55,
       "gross": 3958.4,
-      "discounts": 130.63,
-      "discountPct": 3.3,
-      "voids": null,
-      "voidItems": 7,
+      "discounts": 128.85,
+      "voids": 61.0,
       "guests": 188,
       "orders": 112,
+      "checks": 121,
       "avgPerGuest": 20.37,
       "avgPerOrder": 34.19,
-      "avgPerCheck": null,
+      "avgPerCheck": 31.65,
       "laborPct": 22.8,
-      "laborCost": 873.14,
-      "cardPayments": 89
+      "laborCost": 874.87
     },
-    "prev4SatAvg": null,
+    "fourWeekAvg": {
+      "net": 7881.13,
+      "gross": 8204.38,
+      "discounts": 323.24,
+      "voids": 204.8,
+      "guests": 312,
+      "orders": 180,
+      "checks": 188,
+      "avgPerGuest": 25.26,
+      "avgPerOrder": 43.78,
+      "avgPerCheck": 41.92,
+      "laborPct": 19.6,
+      "laborCost": 1540.87
+    },
+    "dayparts": [
+      {
+        "name": "Lunch",
+        "gross": 5183.95,
+        "discounts": 15.25,
+        "net": 5168.7,
+        "netPerOrder": 48.31
+      },
+      {
+        "name": "Dinner",
+        "gross": 4679.75,
+        "discounts": 205.93,
+        "net": 4473.82,
+        "netPerOrder": 44.74
+      },
+      {
+        "name": "Espresso Service",
+        "gross": 366.0,
+        "discounts": 3.0,
+        "net": 363.0,
+        "netPerOrder": 12.1
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Dining Room",
+        "net": 5396.62,
+        "netPerOrder": 36.46
+      },
+      {
+        "name": "Back Room",
+        "net": 1647.8,
+        "netPerOrder": 82.39
+      },
+      {
+        "name": "Patio",
+        "net": 1399.65,
+        "netPerOrder": 77.76
+      },
+      {
+        "name": "Front Patio",
+        "net": 1178.7,
+        "netPerOrder": 73.67
+      },
+      {
+        "name": "Espresso Bar",
+        "net": 382.75,
+        "netPerOrder": 10.94
+      }
+    ],
     "netChangeVsSDLWPct": 161.3,
     "grossChangeVsSDLWPct": 158.4,
-    "netChangeVsPrev4Pct": null,
-    "source": "GROUP-level Daily Performance Summary email (The Brewhouse Santa Barbara Group, Sat Jul 11), parsed from HTML on the Sun Jul 12 7 AM run.",
-    "note": "SAT JUL 11 (group email, 6:29 AM PT): Net $10,005.52 / Gross $10,229.70 / 403 guests / 235 orders / avg per guest $24.83 / avg per order $42.58 / discounts 2.2% of gross ($225.05 derived) / labor 16.9% of net ($1,690.93 derived) / refunds $0 / 22 void items / 213 card payments / 0 open orders. Auto-clocked out: Grant Danely. Net +161.3% vs SDLW, but SDLW (Sat Jul 4) was the July 4th holiday at only $3,829.55 net -- a heavily depressed baseline, so that % swing is not a real trend. Checks, avg check and void $ amount are NOT in the group email; the LOCATION-level email (~7:39 AM PT) will fill them tomorrow.",
+    "netChangeVsPrev4Pct": 27.0,
+    "source": "LOCATION-level Daily Performance Summary (229 West Montecito Street, Sat Jul 11), received Jul 12 7:39 AM PT. Parsed from HTML on the Mon Jul 13 4 AM run. This is the FINAL, complete Sat Jul 11 record.",
+    "note": "SAT JUL 11 FINAL: Net $10,005.52 / Gross $10,229.70 / 403 guests / 235 orders / 261 checks / avg guest $24.83 / avg order $42.58 / avg check $38.34 / discounts $224.18 / voids $223.70 (22 items) / refunds $0 / labor $1,692.17 = 16.9% of net. vs 4-week avg: net +27.0%, labor 16.9% vs 19.6% -- a genuinely strong Saturday on the right cost line. vs SDLW (Sat Jul 4, July 4th holiday, $3,829.55): +161.3% -- ignore, depressed baseline. Lunch outsold Dinner: $5,168.70 vs $4,473.82 net. Back Room had the highest net/order at $82.39.",
     "pending": false,
     "pendingFor": null
   },
@@ -66,16 +127,16 @@
     "gross": 10229.7,
     "guests": 403,
     "orders": 235,
-    "checks": null,
+    "checks": 261,
     "avgPerGuest": 24.83,
     "avgPerOrder": 42.58,
-    "avgPerCheck": null,
+    "avgPerCheck": 38.34,
     "laborPct": 16.9,
-    "laborCost": 1690.93,
+    "laborCost": 1692.17,
     "discountPct": 2.2,
-    "discounts": 225.05,
+    "discounts": 224.18,
     "refunds": 0.0,
-    "voidAmount": null,
+    "voidAmount": 223.7,
     "netChangeVsSDLWPct": 161.3,
     "grossChangeVsSDLWPct": 158.4
   },
@@ -88,8 +149,8 @@
     "overtime": 0,
     "employeesOff": 1,
     "pending": false,
-    "nextDayPending": false,
-    "stale": false,
+    "nextDayPending": true,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -152,8 +213,8 @@
         "time": "4:00P - 9:30P"
       }
     ],
-    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
-    "pendingFor": null
+    "note": "CARRIED FORWARD from Sun Jul 12. Today's (Mon Jul 13) Sling daily report has NOT been delivered yet -- it arrives ~7:00 AM PT, after this 4 AM run. Last known (Sun Jul 12): 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 off.",
+    "pendingFor": "Monday, July 13"
   },
   "slingLastKnown": {
     "date": "Sunday, July 12",
@@ -164,8 +225,8 @@
     "overtime": 0,
     "employeesOff": 1,
     "pending": false,
-    "nextDayPending": false,
-    "stale": false,
+    "nextDayPending": true,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -228,8 +289,8 @@
         "time": "4:00P - 9:30P"
       }
     ],
-    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
-    "pendingFor": null
+    "note": "CARRIED FORWARD from Sun Jul 12. Today's (Mon Jul 13) Sling daily report has NOT been delivered yet -- it arrives ~7:00 AM PT, after this 4 AM run. Last known (Sun Jul 12): 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 off.",
+    "pendingFor": "Monday, July 13"
   },
   "slingToday": {
     "date": "Sunday, July 12",
@@ -240,8 +301,8 @@
     "overtime": 0,
     "employeesOff": 1,
     "pending": false,
-    "nextDayPending": false,
-    "stale": false,
+    "nextDayPending": true,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -304,8 +365,8 @@
         "time": "4:00P - 9:30P"
       }
     ],
-    "note": "TODAY (Sun Jul 12) Sling daily report delivered 7:00 AM PT: 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 employee off. Sarah Palmer covers two shifts (Barista 6:30A-12:30P and Busser 1:00P-3:00P), which is why 11 people map to 12 shifts. Hours down 6.42 vs Sat Jul 11 (60.50).",
-    "pendingFor": null
+    "note": "CARRIED FORWARD from Sun Jul 12. Today's (Mon Jul 13) Sling daily report has NOT been delivered yet -- it arrives ~7:00 AM PT, after this 4 AM run. Last known (Sun Jul 12): 11 employees / 12 shifts / 54.08 hours / 0 uncovered / 0 overtime / 1 off.",
+    "pendingFor": "Monday, July 13"
   },
   "googleAds": {
     "lastUpdated": "LIVE Chrome scrape Sun Jul 12 ~7:10 AM PT.",
@@ -396,10 +457,10 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
-    "conversionTag": "Reservation Form Submission — not yet verified on website",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "conversionTag": "Reservation Form Submission \u2014 not yet verified on website",
     "note": "LIVE Chrome scrape Sun Jul 12 ~7:10 AM PT. Yesterday (Jul 11): $68.99 / 7,193 impr / 138 clicks / 0 conv. Only 2 of 4 campaigns running: PMax-2 (still Limited by budget AND all asset groups limited by policy) and BHC Coffee Search (opt score slipped to 46.6% from 48.2%). World Cup HQ 2026 and Oldest SB Brewery on Tap remain PAUSED. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress.",
-    "stale": false,
+    "stale": true,
     "authError": false,
     "reportsLast24h": 2,
     "reportsLast48h": 4,
@@ -413,21 +474,22 @@
     "note_20260709": "LIVE scrape Thu Jul 9 ~7:10 AM PT. Yesterday (Jul 8): $67.94 (up $17.08) / 9,110 impr (down 445) / 164 clicks (down 9) / 0.00 conv (calculating). PMax-2 Eligible(Limited)+Limited by budget ($43.37/day, 8,920 impr, 155 clicks, $52.55, opt 85%); BHC Coffee Eligible ($15/day, 190 impr, 9 clicks, $15.39, opt 50.1%). Both paused campaigns (World Cup HQ 2026, Oldest SB Brewery) at 0. 7-day Jul 2-8: 70,374 impr / $402.72 / 411 conv / 1,375 clicks. Account budget $58.37/day.",
     "note_20260710": "Fri Jul 10 ~7:12 AM LIVE scrape: Yesterday (Jul 9) $54.90 (down $13.04) / 8,780 impr (down 328) / 128 clicks (down 36) / 0.00 conv (calculating). PMax-2 Limited by budget; BHC Coffee opt 50.8%. 'Review campaign targets' banner deadline Aug 17, 2026.",
     "emailCheck": {
-      "date": "2026-07-11",
+      "date": "2026-07-13",
       "reportEmailsLast24h": 2,
       "reports": [
-        "Brewhouse Daily Campaign Report (Jul 10)",
-        "Campaign performance (Jul 10)"
+        "Campaign performance (Jul 12, 5:31 AM PT)",
+        "Brewhouse Daily Campaign Report (Jul 12, 8:48 AM PT)"
       ],
       "disapprovals": 0,
       "budgetAlerts": 0,
-      "note": "2 routine report-ready emails. No disapprovals, no budget alerts, no policy notices in the last 24h. PMax-2 'Limited by budget' flag from Jul 10 scrape still stands -- verify in-console."
+      "note": "Mon Jul 13 4 AM run (email-only): 2 routine report-ready emails. No disapprovals, no budget alerts, no policy notices in last 24h. NOT re-scraped this run -- campaign/spend figures below are as of the Sun Jul 12 ~7:10 AM scrape (Jul 11 data)."
     },
     "note_20260711": "Sat Jul 11 ~7:05 AM LIVE scrape: Yesterday (Jul 10) $58.31 (up $3.40) / 8,426 impr (down 353) / 176 clicks (up 48) / CTR 2.09% / CPC $0.33 / 0 conversions. NEW: 'BHC Coffee | Search | P1 Launch' campaign now live ($15/day, 48.2% opt score). 'World Cup HQ 2026' is now Paused.",
     "reportEmails24h": 2,
     "alerts": "No disapprovals or budget alerts. Standing flags: PMax-2 'Limited by budget; all asset groups limited by policy' (persisting ~1 week); 'Review your campaign targets' banner (Aug 17, 2026 deadline).",
     "note24h": "Sun Jul 12 7 AM run: Google Ads figures below come from a LIVE Chrome scrape this run (Jul 11 data).",
-    "note_20260712": "Sun Jul 12 ~7:10 AM LIVE scrape: Yesterday (Jul 11) $68.99 (up $10.69) / 7,193 impr (down 1,233) / 138 clicks (down 38) / CTR 1.92% / CPC $0.50 / 0 conversions (calculating). PMax-2: 6,809 impr, 127 clicks, $47.99, opt 85%. BHC Coffee: 384 impr, 11 clicks, $21.01, opt 46.6%. Highest daily spend of the week on the fewest clicks -- CPC up to $0.50 from $0.33 on Jul 10."
+    "note_20260712": "Sun Jul 12 ~7:10 AM LIVE scrape: Yesterday (Jul 11) $68.99 (up $10.69) / 7,193 impr (down 1,233) / 138 clicks (down 38) / CTR 1.92% / CPC $0.50 / 0 conversions (calculating). PMax-2: 6,809 impr, 127 clicks, $47.99, opt 85%. BHC Coffee: 384 impr, 11 clicks, $21.01, opt 46.6%. Highest daily spend of the week on the fewest clicks -- CPC up to $0.50 from $0.33 on Jul 10.",
+    "note_20260713": "Mon Jul 13 4 AM run: email-only, no live scrape. 2 report-ready notifications (Jul 12). Standing flags unchanged: PMax-2 Eligible(Limited) -- limited by budget AND all asset groups limited by policy (persisting ~1 week); 'Review your campaign targets' banner (deadline Aug 17, 2026); conversion tag 'Reservation Form Submission' still unverified, which is why conversions read 0."
   },
   "yelpAds": {
     "lastUpdated": "LIVE Chrome scrape Sun Jul 12 ~7:12 AM PT.",
@@ -468,8 +530,8 @@
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "2026-07-12",
-    "note": "1 TripAdvisor email from analytics@hm2.tripadvisor.com in the last 24h (Jul 12, 'Connect with your diners -- for free') but it is a marketing promo, not an ad-performance report. No TripAdvisor ad performance data this run."
+    "lastUpdated": "2026-07-13",
+    "note": "Mon Jul 13 4 AM run: no new TripAdvisor email in the last 24h and no ad-performance report. Last TripAdvisor mail was the Jul 12 marketing promo ('Connect with your diners -- for free')."
   },
   "reservations": {
     "lastUpdated": "2026-07-13",
@@ -508,8 +570,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-12 -- Sun Jul 12 4 AM run. NO new reviews in last 24h.",
-    "note": "Sun Jul 12 4 AM run: 0 new reviews in last 24h. Still unanswered: Jay Roston 5* (Jul 10, Brewhouse Coffee profile, 2 days), Joan 5* (Jul 9, 3 days), Time2Go 4* (Jul 7, 5 days), Patrick Williams 5* (Jun 25, 17 days -- OVERDUE).",
+    "lastUpdated": "2026-07-13 -- Mon Jul 13 4 AM run. NO new reviews in last 24h.",
+    "note": "Mon Jul 13 4 AM run: 0 new reviews in last 24h. Still unanswered: Jay Roston 5* (Jul 10, Brewhouse Coffee profile, 3 days), Joan 5* (Jul 9, 4 days), Time2Go 4* (Jul 7, 6 days), Patrick Williams 5* (Jun 25, 18 days -- OVERDUE).",
     "unanswered": [
       {
         "platform": "Google",
@@ -517,7 +579,7 @@
         "date": "2026-07-10",
         "stars": 5,
         "snippet": "Some of the bast coffee drinks in Santa Barbara. Great grab and go breakfast items too! Dog...",
-        "ageDays": 2,
+        "ageDays": 3,
         "isNew": false,
         "profile": "Brewhouse Coffee",
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
@@ -528,7 +590,7 @@
         "date": "2026-07-09",
         "stars": 5,
         "snippet": "Went for dinner had the schnitzel it was awesome! We also stayed to watch a world cup match.",
-        "ageDays": 3,
+        "ageDays": 4,
         "isNew": false
       },
       {
@@ -537,7 +599,7 @@
         "date": "2026-07-07",
         "stars": 4,
         "snippet": "Everything was delicious, salmon salad, fish and chips, burger, and fries. the location was very...",
-        "ageDays": 5,
+        "ageDays": 6,
         "isNew": false
       },
       {
@@ -546,7 +608,7 @@
         "date": "2026-06-25",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 17,
+        "ageDays": 18,
         "isNew": false
       },
       {
@@ -555,7 +617,7 @@
         "date": "2026-06-21",
         "stars": 5,
         "snippet": "sodas and music what isn't to like",
-        "ageDays": 20,
+        "ageDays": 21,
         "isNew": false
       },
       {
@@ -564,7 +626,7 @@
         "date": "2026-06-13",
         "stars": 5,
         "snippet": "The new coffee bar is great!",
-        "ageDays": 28,
+        "ageDays": 29,
         "isNew": false
       },
       {
@@ -573,7 +635,7 @@
         "date": "2026-06-04",
         "stars": 5,
         "snippet": "Can't rave enough! We have a small RV and 2 doodles and trying to park in Santa Barbara is no easy...",
-        "ageDays": 37,
+        "ageDays": 38,
         "isNew": false
       },
       {
@@ -582,7 +644,7 @@
         "date": "2026-06-02",
         "stars": 5,
         "snippet": "Really nice people. Awesome service",
-        "ageDays": 39,
+        "ageDays": 40,
         "isNew": false
       },
       {
@@ -591,7 +653,7 @@
         "date": "2026-05-28",
         "stars": 3,
         "snippet": "Had their macadamia nut crusted halibut. Best part of the meal was the crunchy sugar snap peas. The...",
-        "ageDays": 44,
+        "ageDays": 45,
         "isNew": false
       },
       {
@@ -600,7 +662,7 @@
         "date": "2026-05-26",
         "stars": 5,
         "snippet": "Smash burgers and wings were great but the steak bite appetizer was amazing. Go on Tuesday through...",
-        "ageDays": 46,
+        "ageDays": 47,
         "isNew": false
       },
       {
@@ -609,7 +671,7 @@
         "date": "2026-05-22",
         "stars": 5,
         "snippet": "A few blocks from the beach and worth the walk! Live music was great the night we were there and the...",
-        "ageDays": 50,
+        "ageDays": 51,
         "isNew": false
       },
       {
@@ -618,7 +680,7 @@
         "date": "2026-05-16",
         "stars": 5,
         "snippet": "Excellent salmon burger. Wonderful selection of beer tasters",
-        "ageDays": 56,
+        "ageDays": 57,
         "isNew": false
       },
       {
@@ -627,7 +689,7 @@
         "date": "2026-05-15",
         "stars": 5,
         "snippet": "Came up to Santa Barbara from Santa Monica for my husband's birthday. Stumbled upon the Brewhouse...",
-        "ageDays": 57,
+        "ageDays": 58,
         "isNew": false
       },
       {
@@ -636,7 +698,7 @@
         "date": "2026-05-14",
         "stars": 5,
         "snippet": "This was our second visit to the Brewhouse. Fantastic place, great atmosphere, excellent staff and...",
-        "ageDays": 58,
+        "ageDays": 59,
         "isNew": false
       },
       {
@@ -645,7 +707,7 @@
         "date": "2026-05-10",
         "stars": 5,
         "snippet": "The margaritas were the best! Food was great too. But the margaritas!",
-        "ageDays": 62,
+        "ageDays": 63,
         "isNew": false
       },
       {
@@ -654,7 +716,7 @@
         "date": "2026-04-24",
         "stars": 4,
         "snippet": "Great help with the glutenfree meal",
-        "ageDays": 78,
+        "ageDays": 79,
         "isNew": false
       },
       {
@@ -663,7 +725,7 @@
         "date": "2026-04-22",
         "stars": 5,
         "snippet": "What a find! Toured a lot of California and Las Vegas, but this was definitely our favourite find.",
-        "ageDays": 80,
+        "ageDays": 81,
         "isNew": false
       },
       {
@@ -672,7 +734,7 @@
         "date": "2026-04-19",
         "stars": 5,
         "snippet": "I ordered the Brewhouse burger with fries and it was delicious. I also got a classic margarita and...",
-        "ageDays": 83,
+        "ageDays": 84,
         "isNew": false
       },
       {
@@ -681,7 +743,7 @@
         "date": "2026-04-15",
         "stars": 5,
         "snippet": "Great food and amazing beer nice atmosphere",
-        "ageDays": 87,
+        "ageDays": 88,
         "isNew": false
       },
       {
@@ -690,15 +752,15 @@
         "date": "2026-04-11",
         "stars": 5,
         "snippet": "(rating only, no text)",
-        "ageDays": 91,
+        "ageDays": 92,
         "isNew": false
       }
     ]
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-07-12",
+    "lastUpdated": "2026-07-13",
     "actionable": [],
-    "note": "No actionable Yelp customer inquiries in last 24h at Sun Jul 12 4 AM run (4 consumer marketing emails only)."
+    "note": "No actionable Yelp customer inquiries in the last 24h at the Mon Jul 13 4 AM run (consumer marketing blasts only)."
   },
   "businessProfile": {
     "lastUpdated": "2026-06-13",
@@ -706,28 +768,125 @@
     "note": "1 Google Business Profile 'management request' email still pending (businessprofile-noreply@google.com, Jun 9). Plus an earlier request (Jun 4) noted in prior runs. SECURITY: review and deny if the requester is not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-12T07:15:00-07:00",
+  "lastUpdated": "2026-07-13T04:15:00-07:00",
   "toastPrevDay": {
-    "date": "Friday, July 10",
-    "net": 7190.0,
-    "gross": 7321.4,
-    "guests": 289,
-    "orders": 177,
-    "checks": 197,
-    "avgPerGuest": 24.88,
-    "avgPerOrder": 40.62,
-    "avgPerCheck": 36.5,
-    "laborPct": 19.8,
-    "laborCost": 1420.03,
-    "discounts": 131.4,
+    "date": "Saturday, July 11",
+    "net": 10005.52,
+    "gross": 10229.7,
+    "guests": 403,
+    "guestsDerived": false,
+    "orders": 235,
+    "ordersDerived": false,
+    "checks": 261,
+    "avgPerCheck": 38.34,
+    "avgPerOrder": 42.58,
+    "avgPerGuest": 24.83,
+    "laborPct": 16.9,
+    "laborCost": 1692.17,
+    "laborCostDerived": false,
+    "discounts": 224.18,
+    "discountsDerived": false,
+    "discountPct": 2.2,
+    "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": 82.5,
-    "voidItems": 11,
-    "source": "LOCATION-level Daily Performance Summary (Fri Jul 10). Carried forward as prev-day comparison.",
-    "note": "FRI JUL 10 FINAL: Net $7,190.00 / Gross $7,321.40 / 289 guests / 177 orders / labor 19.8% of net."
+    "voidAmount": 223.7,
+    "voidItems": 22,
+    "cardPayments": 213,
+    "openOrders": 0,
+    "autoClockedOut": [
+      "Grant Danely"
+    ],
+    "takeoutOrders": 1,
+    "takeoutSales": 58.0,
+    "sdlw": {
+      "date": "Saturday, July 4",
+      "net": 3829.55,
+      "gross": 3958.4,
+      "discounts": 128.85,
+      "voids": 61.0,
+      "guests": 188,
+      "orders": 112,
+      "checks": 121,
+      "avgPerGuest": 20.37,
+      "avgPerOrder": 34.19,
+      "avgPerCheck": 31.65,
+      "laborPct": 22.8,
+      "laborCost": 874.87
+    },
+    "fourWeekAvg": {
+      "net": 7881.13,
+      "gross": 8204.38,
+      "discounts": 323.24,
+      "voids": 204.8,
+      "guests": 312,
+      "orders": 180,
+      "checks": 188,
+      "avgPerGuest": 25.26,
+      "avgPerOrder": 43.78,
+      "avgPerCheck": 41.92,
+      "laborPct": 19.6,
+      "laborCost": 1540.87
+    },
+    "dayparts": [
+      {
+        "name": "Lunch",
+        "gross": 5183.95,
+        "discounts": 15.25,
+        "net": 5168.7,
+        "netPerOrder": 48.31
+      },
+      {
+        "name": "Dinner",
+        "gross": 4679.75,
+        "discounts": 205.93,
+        "net": 4473.82,
+        "netPerOrder": 44.74
+      },
+      {
+        "name": "Espresso Service",
+        "gross": 366.0,
+        "discounts": 3.0,
+        "net": 363.0,
+        "netPerOrder": 12.1
+      }
+    ],
+    "rooms": [
+      {
+        "name": "Dining Room",
+        "net": 5396.62,
+        "netPerOrder": 36.46
+      },
+      {
+        "name": "Back Room",
+        "net": 1647.8,
+        "netPerOrder": 82.39
+      },
+      {
+        "name": "Patio",
+        "net": 1399.65,
+        "netPerOrder": 77.76
+      },
+      {
+        "name": "Front Patio",
+        "net": 1178.7,
+        "netPerOrder": 73.67
+      },
+      {
+        "name": "Espresso Bar",
+        "net": 382.75,
+        "netPerOrder": 10.94
+      }
+    ],
+    "netChangeVsSDLWPct": 161.3,
+    "grossChangeVsSDLWPct": 158.4,
+    "netChangeVsPrev4Pct": 27.0,
+    "source": "LOCATION-level Daily Performance Summary (229 West Montecito Street, Sat Jul 11), received Jul 12 7:39 AM PT. Parsed from HTML on the Mon Jul 13 4 AM run. This is the FINAL, complete Sat Jul 11 record.",
+    "note": "SAT JUL 11 FINAL: Net $10,005.52 / Gross $10,229.70 / 403 guests / 235 orders / 261 checks / avg guest $24.83 / avg order $42.58 / avg check $38.34 / discounts $224.18 / voids $223.70 (22 items) / refunds $0 / labor $1,692.17 = 16.9% of net. vs 4-week avg: net +27.0%, labor 16.9% vs 19.6% -- a genuinely strong Saturday on the right cost line. vs SDLW (Sat Jul 4, July 4th holiday, $3,829.55): +161.3% -- ignore, depressed baseline. Lunch outsold Dinner: $5,168.70 vs $4,473.82 net. Back Room had the highest net/order at $82.39.",
+    "pending": false,
+    "pendingFor": null
   },
   "toastPending": {
     "pendingFor": "Sunday, July 12",
-    "reason": "Sunday's numbers arrive in tomorrow's (Mon Jul 13) Toast summary. Still awaiting the LOCATION-level Sat Jul 11 email (~7:39 AM PT) for checks / avg check / void $ amount."
+    "reason": "Sunday Jul 12 numbers arrive in today's (Mon Jul 13) Toast summary emails, ~6:30 AM PT (group) and ~7:39 AM PT (location). Not available at the 4 AM run."
   }
 }
