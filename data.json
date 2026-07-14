@@ -367,8 +367,8 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
-    "conversionTag": "Reservation Form Submission \u2014 still not verified on website (this is why conversions read 0)",
+    "paymentMethod": "Amex •••• 1004",
+    "conversionTag": "Reservation Form Submission — still not verified on website (this is why conversions read 0)",
     "note": "LIVE Chrome scrape Tue Jul 14 ~7:25 AM PT. Yesterday (Jul 13): $58.41 / 7,159 impr / 140 clicks / 0 conv. *** BHC Coffee | Search | P1 Launch is the problem line: 174 impressions and 9 clicks cost $27.09 -- an avg CPC of $3.01, which is 12.5x the $0.24 the PMax campaign pays. It burned 46% of the day's spend for 6% of the clicks, and its optimization score has now fallen to 38.9% (was 46.9% on Jul 13, 50.8% on Jul 10 -- a steady week-long slide). PMax-2 remains Eligible (Limited): limited by budget AND all asset groups limited by policy. World Cup HQ 2026 and Oldest SB Brewery on Tap still paused. 2 drafts in progress.",
     "stale": false,
     "authError": false,
@@ -446,12 +446,22 @@
     "note": "Tue Jul 14 7 AM run: no TripAdvisor ad performance report in the last 24h. The only TripAdvisor email was a Jul 13 consumer marketing push ('Continue planning for Puerto Vallarta'), not a business report."
   },
   "reservations": {
-    "lastUpdated": "2026-07-14 (carried from the 4 AM run -- SpotHopper is not one of the sources this task refreshes)",
+    "lastUpdated": "2026-07-14",
     "source": "All Sources",
     "today": {
       "date": "Tue, Jul 14",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 3,
+      "bookings": [
+        {
+          "time": "11:45 AM",
+          "name": "Mark Sartan",
+          "guests": 3,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(929) 910-2545",
+          "notes": ""
+        }
+      ]
     },
     "tomorrow": {
       "date": "Wed, Jul 15",
