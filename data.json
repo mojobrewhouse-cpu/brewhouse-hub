@@ -418,39 +418,38 @@
     "note": "Thu Jul 16 7 AM run: no TripAdvisor ad performance report from analytics@hm2.tripadvisor.com in the last 24h."
   },
   "reservations": {
-    "lastUpdated": "2026-07-17",
+    "lastUpdated": "2026-07-18",
     "source": "All Sources",
     "today": {
-      "date": "Fri, Jul 17",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Sat, Jul 18",
       "totalGuests": 0,
       "bookings": []
     },
+    "tomorrow": {
+      "date": "Sun, Jul 19",
+      "totalGuests": 10,
+      "bookings": [
+        {
+          "time": "11:00 AM",
+          "name": "Ruju Patel",
+          "guests": 4,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(973) 689-4989",
+          "notes": ""
+        },
+        {
+          "time": "11:00 AM",
+          "name": "Jason Price",
+          "guests": 6,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(661) 621-4679",
+          "notes": "Two families coming together to watch the World Cup Final!"
+        }
+      ]
+    },
     "upcoming": [
-      {
-        "time": "11:00 AM",
-        "name": "Ruju Patel",
-        "guests": 4,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(973) 689-4989",
-        "notes": "",
-        "date": "Sun, Jul 19"
-      },
-      {
-        "time": "11:00 AM",
-        "name": "Jason Price",
-        "guests": 6,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(661) 621-4679",
-        "notes": "Two families coming together to watch the World Cup Final!",
-        "date": "Sun, Jul 19"
-      },
       {
         "time": "6:30 PM",
         "name": "Diane Webber",
