@@ -1,9 +1,9 @@
 {
-  "date": "Saturday, July 18",
+  "date": "Sunday, July 19",
   "systemStatus": {
-    "level": "ok",
-    "headline": "Sat Jul 18, 7 AM run. ALL SOURCES FRESH. Toast advanced to Fri Jul 17: net $7,074.87, labor 16.7% (best in recent memory), -1.6% vs SDLW. Sling now on TODAY Sat Jul 18: 13 staff / 76.98 hrs / 0 uncovered / 0 OT. Google Ads LIVE (Jul 17): $68.62, 6,665 impr, 132 clicks, 0 conversions. Yelp LIVE: Jul 1-17 spend $228.50, CPL $2.72. WORLD CUP FINAL TOMORROW (Sun Jul 19) and the World Cup HQ campaign is still PAUSED.",
-    "detail": "Sat Jul 18 07:05 AM PT run. Every source refreshed this cycle -- no stale carry-forwards.\n\nTOAST (Fri Jul 17, group-level): net $7,074.87 / gross $7,274.25 / 282 guests / 163 orders / avg guest $25.09 / avg order $43.40. Labor 16.7% of net ($1,181.50 derived) -- the standout number, 4.4 pts better than Thu Jul 16. Discounts 2.7% ($196.40), 18 void items, refunds $0, gift cards $30.00. vs SDLW Fri Jul 10: net -1.6%, gross -0.6%, guests -2.4%, orders -7.9%. Fewer, larger tickets on much leaner labor. Location-level email (labor $, void $, dayparts) had not landed at run time.\n\nSLING (TODAY Sat Jul 18, delivered 7:00 AM): 13 staff / 14 shifts / 76.98 hrs / 0 uncovered / 0 OT / 0 off. Biggest staffing day of the week, +16.8 hrs vs Friday. Malformed 24-hr shifts persist: Isael Salvador Narciso (Cook) 4:31A-4:31A and now Julianna Ornelas (Barista) 6:33A-6:33A -- the bug moved off Casey Smith, so it is a schedule-entry pattern, not one employee's record. Julianna is also double-booked Barista AM + Runner 1:30-5P.\n\nGOOGLE ADS (LIVE scrape, Jul 17): $68.62 spend, 6,665 impr (-482), 132 clicks (+13), CTR 1.98%, CPC $0.52, conversions 0.00 (-17.00). Google's own banner flags PMax-2 and BHC Coffee conversions down 56.6%. Zero daily conversions across multiple runs -- verify conversion tracking. NEW campaign 'Oldest SB Brewery on Tap' (PMax, $10.80/day) is present but PAUSED with all asset groups limited by policy. 'World Cup HQ 2026' ($20/day) is STILL PAUSED with the Final tomorrow.\n\nYELP (LIVE scrape): last 30d 29.4k ad impressions (72% of total), 392 clicks, 523 ad page visits (58%), 133 ad leads (58% of 229). Billing Jul 1-17 $228.50, CPC $0.98, CPL $2.72 (~$13.44/day). Bonus budget remaining still not surfaced. Inbox shows 15 unread.\n\nTRIPADVISOR: no ad report in 72h.\n\nREVIEWS / BUSINESS PROFILE / RESERVATIONS: carried from the 4 AM run (not in this cycle's scope). 1 unreplied Google review (Thuy Anh Le, 5-star photo-only). Sun Jul 19 World Cup Final: 10 guests booked across 2 parties, both 11 AM.\n\nACTION ITEMS: (1) World Cup HQ campaign paused on the eve of the Final. (2) Google Ads conversion tracking reporting 0.00. (3) 'Oldest SB Brewery on Tap' blocked by asset-group policy. (4) Recurring Sling malformed-shift bug."
+    "level": "warn",
+    "headline": "Sun Jul 19, 4 AM run. WORLD CUP FINAL IS TODAY and the 'World Cup HQ 2026' campaign ($20/day) is STILL PAUSED -- 2 confirmed 11:00 AM parties already on the books (10 guests), one explicitly for the Final. Toast Sat Jul 18 summary and the Sling Jul 19 schedule both land ~7 AM, after this run: sales and staffing below are LAST KNOWN (Fri Jul 17 / Sat Jul 18), not yesterday's actuals. Reviews: 1 unreplied (Thuy Anh Le, The Brewhouse); Brewhouse Coffee clean at 0.",
+    "detail": "Sun Jul 19 04:00 AM PT run.\n\nTIMING: This is the 4 AM cycle. Toast's Sat Jul 18 Daily Performance Summary arrives ~7:39 AM and Sling's Jul 19 schedule ~7:00 AM -- neither existed at run time. Sales and staffing below are LAST KNOWN, not yesterday's actuals.\n\nTOAST (last known, Fri Jul 17, group-level): net $7,074.87 / gross $7,274.25 / 282 guests / 163 orders / avg guest $25.09 / avg order $43.40 / labor 16.7%. vs SDLW Fri Jul 10: net -1.6%, gross -0.6%, guests -2.4%, orders -7.9%. Unchanged from the Sat Jul 18 run.\n\nSLING (last known, Sat Jul 18): 13 staff / 14 shifts / 76.98 hrs / 0 uncovered / 0 OT. Malformed 24-hr shift entries persist -- Isael Salvador Narciso (Cook) 4:31A-4:31A and Julianna Ornelas (Barista) 6:33A-6:33A; Julianna also double-booked Barista AM + Runner 1:30-5P. Schedule-template issue, not one employee's record.\n\nREVIEWS: No new Google Business or SpotHopper review notifications since the Sat Jul 18 live scrape. Carrying that state forward: THE BREWHOUSE 4.5 stars / 517 reviews, ONE unreplied (Thuy Anh Le, 5-star photo-only, Jul 17, 4 photos). BREWHOUSE COFFEE 5.0 stars / 2 reviews, ZERO unreplied. Direct load of the Unreplied tabs did not render this run (Google served the search-embedded merchant view), so this is carried and delta-checked against email, not re-scraped.\n\nGOOGLE ADS: 2 report emails in 24h (Brewhouse Daily Campaign Report, Campaign performance) -- reports only, no disapprovals or budget alerts. Standing issues still open from the last live scrape: conversions 0.00 for multiple consecutive days (tracking suspect), 'Oldest SB Brewery on Tap' PAUSED with all asset groups policy-limited, 'World Cup HQ 2026' PAUSED on Final day.\n\nYELP: 2 emails in 24h, both consumer marketing blasts. Nothing actionable.\n\nTRIPADVISOR: no ad report in 72h.\n\nRESERVATIONS: Sun Jul 19 -- 10 guests across 2 confirmed 11:00 AM bookings (Ruju Patel 4; Jason Price 6 -- 'Two families coming together to watch the World Cup Final')."
   },
   "toast": {
     "date": "Friday, July 17",
@@ -48,9 +48,9 @@
     "grossChangeVsSDLWPct": -0.6,
     "netChangeVsPrev4Pct": null,
     "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Fri Jul 17), email received Sat Jul 18 6:27 AM PT. LOCATION-level email (labor $, void $, dayparts, rooms) had not landed at run time. SDLW computed locally against the Fri Jul 10 GROUP email.",
-    "note": "FRI JUL 17: Net $7,074.87 / Gross $7,274.25 / 282 guests / 163 orders / avg guest $25.09 / avg order $43.40. Labor 16.7% of net ($1,181.50 derived) -- BEST in recent memory, well below the 18-19% band and 4.4 pts better than Thu Jul 16's 21.1%. Discounts 2.7% ($196.40 derived), 18 void items, refunds $0, gift cards $30.00, 145 card payments, 0 open orders, no auto-clock-outs. Takeout 24 orders / $203.50. vs SDLW (Fri Jul 10): net -$115.13 (-1.6%), gross -0.6%, guests -7 (-2.4%), orders -14 (-7.9%) -- slightly softer traffic but bigger tickets (avg/order +$2.78) and much better labor (16.7% vs 19.8%).",
-    "pending": false,
-    "pendingFor": null
+    "note": "PENDING at the 4 AM run -- Sat Jul 18 Daily Performance Summary had not been delivered (lands ~7:39 AM PT). Figures shown are LAST KNOWN: Fri Jul 17. Net $7,074.87 / Gross $7,274.25 / 282 guests / 163 orders / avg guest $25.09 / avg order $43.40 / labor 16.7%.",
+    "pending": true,
+    "pendingFor": "Saturday, July 18"
   },
   "toastLastKnown": {
     "date": "Friday, July 17",
@@ -79,9 +79,9 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
-    "pending": false,
+    "pending": true,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -154,7 +154,7 @@
         "time": "5:00P - 11:30P"
       }
     ],
-    "note": "TODAY (Sat Jul 18), email delivered 7:00 AM PT. 13 employees / 14 shifts / 76.98 hrs / 0 uncovered / 0 OT / 0 off -- biggest day of the week and +16.8 hrs over Fri Jul 17's 60.16. TWO malformed 24-hour shifts again: Isael Salvador Narciso (Cook) 4:31A-4:31A and Julianna Ornelas (Barista) 6:33A-6:33A. Note the second malformed shift moved from Casey Smith (GM) to Julianna -- the Sling entry bug is not tied to one person, so it is a schedule-entry pattern worth fixing at the source. Casey Smith is not on today's schedule. Julianna is double-booked (Barista AM + Runner 1:30-5P)."
+    "note": "Jul 19 daily report NOT yet delivered at the 4 AM run (lands ~7:00 AM PT). Showing LAST KNOWN: Sat Jul 18 -- 13 employees / 14 shifts / 76.98 hrs / 0 uncovered / 0 OT. Today's actual staffing is unconfirmed."
   },
   "slingLastKnown": {
     "date": "Saturday, July 18",
@@ -327,7 +327,7 @@
     "note": "TODAY (Sat Jul 18), email delivered 7:00 AM PT. 13 employees / 14 shifts / 76.98 hrs / 0 uncovered / 0 OT / 0 off -- biggest day of the week and +16.8 hrs over Fri Jul 17's 60.16. TWO malformed 24-hour shifts again: Isael Salvador Narciso (Cook) 4:31A-4:31A and Julianna Ornelas (Barista) 6:33A-6:33A. Note the second malformed shift moved from Casey Smith (GM) to Julianna -- the Sling entry bug is not tied to one person, so it is a schedule-entry pattern worth fixing at the source. Casey Smith is not on today's schedule. Julianna is double-booked (Barista AM + Runner 1:30-5P)."
   },
   "googleAds": {
-    "lastUpdated": "LIVE Chrome scrape Sat Jul 18 ~7:00 AM PT. Account 343-687-4835, date range Yesterday = Jul 17, 2026.",
+    "lastUpdated": "2026-07-19 04:00 PT -- email-notification check only: 2 report emails in 24h, no disapprovals or budget alerts. Performance figures below are carried from the Sat Jul 18 live scrape (Jul 17 data).",
     "yesterday": {
       "date": "July 17, 2026",
       "spend": 68.62,
@@ -415,7 +415,7 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
     "note": "4 campaigns, 2 active. NEW since last run: 'Oldest SB Brewery on Tap' (PMax, $10.80/day) exists but is PAUSED with all asset groups limited by policy. 'World Cup HQ 2026' ($20/day Search) is STILL PAUSED -- the World Cup Final is tomorrow (Sun Jul 19) and this campaign has 0 impressions. PMax-2 remains Limited by budget at $43.37/day. Total account budget $58.37/day. 2 drafts in progress.",
     "stale": false,
@@ -493,7 +493,7 @@
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "2026-07-18",
+    "lastUpdated": "2026-07-19 -- no ad performance report in 72h.",
     "note": "Sat Jul 18 7 AM run: no TripAdvisor ad performance report from analytics@hm2.tripadvisor.com in the last 72h. Only consumer marketing mail from updates@mp1.tripadvisor.com."
   },
   "reservations": {
@@ -552,8 +552,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-18 -- Sat Jul 18 4 AM run. LIVE scrape of both Google Business Profiles (Unreplied tab).",
-    "note": "LIVE SCRAPE this run (not email-inferred). THE BREWHOUSE: 4.5 stars / 517 reviews; exactly ONE unreplied -- Thuy Anh Le, 5 stars, photo-only (no text), posted Jul 17 with 4 photos. Joe's 5-star farm-burger review was replied to ~20 hrs ago. BREWHOUSE COFFEE: 5.0 stars / 2 reviews; ZERO unreplied -- Fleur Smits van Oyen and Jay Roston both answered. CORRECTION to prior runs: Matthew Lourie, David Makosch, Fleur, Jay Roston have all been replied to, and 'Matt Powers' does not appear on the Coffee listing at all -- the email-inferred backlog was overstated. Live Unreplied tab is authoritative.",
+    "lastUpdated": "2026-07-19 -- Sun Jul 19 4 AM run. Carried from the Sat Jul 18 live scrape; Gmail delta check found no new review notifications.",
+    "note": "CARRIED FORWARD, not re-scraped this run. Direct load of both Unreplied tabs returned Google's search-embedded merchant view, so the review lists did not render. Gmail checks against businessprofile-noreply@google.com and no-reply@spothopperapp.com found NO new review notifications since the Sat Jul 18 live scrape. THE BREWHOUSE: 4.5 stars / 517 reviews; ONE unreplied -- Thuy Anh Le, 5 stars, photo-only, Jul 17, 4 photos. BREWHOUSE COFFEE: 5.0 stars / 2 reviews; ZERO unreplied (Fleur Smits van Oyen and Jay Roston both answered). Both listings accounted for.",
     "unanswered": [
       {
         "platform": "Google",
@@ -582,7 +582,7 @@
       },
       "totalUnanswered": 1,
       "checkedBothListings": true,
-      "method": "live scrape"
+      "method": "carried from Sat Jul 18 live scrape + Gmail delta check (no new notifications)"
     }
   },
   "yelpInquiries": {
@@ -596,7 +596,7 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-18T07:05:00-07:00",
+  "lastUpdated": "2026-07-19T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Thursday, July 16",
     "net": 6069.6,
@@ -643,10 +643,7 @@
     "pending": false,
     "pendingFor": null
   },
-  "toastPending": {
-    "pendingFor": "Saturday, July 18",
-    "reason": "Sat Jul 18 summary arrives Sun Jul 19 morning. Fri Jul 17 (this record) is the most recent available."
-  },
+  "toastPending": true,
   "payroll": {
     "lastUpdated": "2026-07-16",
     "dueToday": false,
