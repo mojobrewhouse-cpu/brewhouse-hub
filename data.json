@@ -339,15 +339,25 @@
     "stale": true
   },
   "reservations": {
-    "lastUpdated": "2026-07-20",
+    "lastUpdated": "2026-07-21",
     "source": "All Sources",
     "today": {
-      "date": "Mon, Jul 20",
-      "totalGuests": 0,
-      "bookings": []
+      "date": "Tue, Jul 21",
+      "totalGuests": 10,
+      "bookings": [
+        {
+          "time": "6:30 PM",
+          "name": "Amy Vallejos",
+          "guests": 10,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(949) 521-3654",
+          "notes": "Inside or outside table ok."
+        }
+      ]
     },
     "tomorrow": {
-      "date": "Tue, Jul 21",
+      "date": "Wed, Jul 22",
       "totalGuests": 0,
       "bookings": []
     },
