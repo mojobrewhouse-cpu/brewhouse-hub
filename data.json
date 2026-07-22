@@ -428,24 +428,9 @@
     "note": "Tue Jul 21 7 AM run: an ad-engagement email from analytics@hm2.tripadvisor.com arrived Mon Jul 20 12:30 PM PT (subject 'Your Ads are getting some MAJOR attention!' / 'Guess how many diners visited your listing'). It is a teaser with no parseable impression/click/spend figures -- the numbers are only visible after clicking through to the TripAdvisor dashboard, which this job does not do. Recorded as present but without hard data."
   },
   "reservations": {
-    "lastUpdated": "2026-07-21",
+    "lastUpdated": "2026-07-22",
     "source": "All Sources",
     "today": {
-      "date": "Tue, Jul 21",
-      "totalGuests": 10,
-      "bookings": [
-        {
-          "time": "6:30 PM",
-          "name": "Amy Vallejos",
-          "guests": 10,
-          "status": "confirmed",
-          "source": "SpotHopper",
-          "phone": "(949) 521-3654",
-          "notes": "Inside or outside table ok."
-        }
-      ]
-    },
-    "tomorrow": {
       "date": "Wed, Jul 22",
       "totalGuests": 2,
       "bookings": [
@@ -456,6 +441,21 @@
           "status": "confirmed",
           "source": "SpotHopper",
           "phone": "(408) 464-8001",
+          "notes": ""
+        }
+      ]
+    },
+    "tomorrow": {
+      "date": "Thu, Jul 23",
+      "totalGuests": 3,
+      "bookings": [
+        {
+          "time": "6:30 PM",
+          "name": "Diane Webber",
+          "guests": 3,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 284-5930",
           "notes": ""
         }
       ]
@@ -490,16 +490,6 @@
         "phone": "(650) 740-6593",
         "notes": "",
         "date": "Sat, Jul 25"
-      },
-      {
-        "time": "6:30 PM",
-        "name": "Diane Webber",
-        "guests": 3,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(805) 284-5930",
-        "notes": "",
-        "date": "Thu, Jul 23"
       }
     ]
   },
