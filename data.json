@@ -392,7 +392,7 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "paymentMethod": "Amex •••• 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
     "note": "LIVE scrape Fri Jul 24 ~7:10 AM PT. Yesterday (Jul 23): $50.01 / 5,616 impr / 94 clicks / 0 conv (calculating). PMax-2: 5,413 impr, 88 clicks, $43.18, opt 85%, still 'Limited by budget' + all asset groups limited by policy. BHC Coffee Search: 203 impr, 6 clicks, $6.82, opt 44.2%. 'World Cup HQ 2026' ($20/day) and 'Oldest SB Brewery on Tap' ($10.80/day) both still paused, 0 impressions. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts still unpublished. 7-day totals (Jul 17-23): 44,989 impr / $395.27 / 298.50 conv / 942 clicks.",
     "stale": false,
@@ -484,8 +484,18 @@
     "source": "All Sources",
     "today": {
       "date": "Fri, Jul 24",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "6:15 PM",
+          "name": "Mara Pyzel",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(808) 546-0365",
+          "notes": "I like being in the sun, my friend likes the shade :)"
+        }
+      ]
     },
     "tomorrow": {
       "date": "Sat, Jul 25",
