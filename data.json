@@ -377,7 +377,7 @@
     },
     "balance": 423.15,
     "nextPayment": "Jun 1, 2026",
-    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
+    "paymentMethod": "Amex •••• 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
     "note": "LIVE scrape Sat Jul 25 ~7:10 AM PT. Yesterday (Jul 24): $72.82 / 4,297 impr / 88 clicks / 0 conv (calculating). PMax-2: 4,020 impr, 69 clicks, $46.32, opt 85%, still 'Limited by budget' + all asset groups limited by policy. BHC Coffee Search: 277 impr, 19 clicks, $26.50, opt 44.2%. 'World Cup HQ 2026' ($20/day) and 'Oldest SB Brewery on Tap' ($10.80/day) both still paused, 0 impressions. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts still unpublished. 7-day totals (Jul 18-24): 42,621 impr / $399.48 / 251.31 conv / 898 clicks. Balance/payment method not re-verified this run (billing page not visited).",
     "stale": false,
@@ -512,8 +512,18 @@
     },
     "tomorrow": {
       "date": "Sun, Jul 26",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "5:00 PM",
+          "name": "Michelle Jordanhazy",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 890-4304",
+          "notes": ""
+        }
+      ]
     },
     "upcoming": [
       {
