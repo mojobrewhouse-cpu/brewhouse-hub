@@ -1,9 +1,9 @@
 {
-  "date": "Friday, July 24",
+  "date": "Sunday, July 26",
   "systemStatus": {
     "level": "info",
-    "headline": "Fri Jul 24 4 AM run: Gmail sweep + live Google Business Profile check (both listings). Toast's summary for Thu Jul 23 has NOT arrived yet (typically lands ~6:24 AM PT) -- showing last confirmed day (Wed Jul 22). Sling's schedule for Fri Jul 24 has NOT arrived yet (typically ~7:01 AM PT) -- showing last confirmed day (Thu Jul 23). Google Ads / Yelp Ads dashboards were not re-scraped live this run (email-only check); those sections carried forward from the last live scrape. Both Google Business Profile listings re-checked live via Unreplied tabs -- no new reviews since last check.",
-    "detail": "Fri Jul 24 ~4:00 AM PT run (Gmail search + live Google Business Profile Unreplied-tab check on both listings; no live Google Ads / Yelp Ads Chrome scrape this run).\n\nTOAST: No new Daily Performance Summary email found for Thu Jul 23 as of this run (search window: from:no-reply@toasttab.com, last 48h). Most recent confirmed data remains WED JUL 22 (net $5,479.27 / gross $5,603.60 / 215 guests / 129 orders / labor 20.9% / 8 void items) -- unchanged from prior run. toastPending set true.\n\nSLING: No new daily report email found for FRI JUL 24 as of this run. Most recent confirmed schedule remains THU JUL 23 (9 staff / 9 shifts / 43.40 hrs / 0 uncovered / 0 OT / 1 off) -- unchanged from prior run.\n\nGOOGLE ADS / YELP ADS: Not re-scraped live this run (Gmail-only pass). Google Ads: 4 report-ready notifications observed in the last 48h ('Brewhouse Daily Campaign Report' x2, 'Campaign performance' x2), no disapproval or budget-alert language in any subject/snippet. Figures below carried from the last live scrape (Thu Jul 23 ~7:15 AM PT).\n\nTRIPADVISOR: No new ad-performance email in this run's window.\n\nGOOGLE BUSINESS PROFILE REVIEWS: Both listings (The Brewhouse + Brewhouse Coffee) checked LIVE via business.google.com Unreplied tabs, per standing instruction to check both every day. THE BREWHOUSE: still only Nate B (5 stars) unanswered, rating 4.5 (519 reviews). BREWHOUSE COFFEE: still only Christie Hahn (5 stars) unanswered, rating 5.0 (3 reviews). No new reviews since last check. Nothing posted -- Joal approves every reply before it goes out."
+    "headline": "Sun Jul 26 4 AM run: No new Toast or Sling emails yet (both still showing Fri Jul 24 sales / Sat Jul 25 schedule -- next reports typically land ~6:30-7:40 AM PT). LIVE browser check of BOTH Google Business Profile Unreplied tabs -- 2 NEW unanswered reviews found (1 per listing). Google Ads and Yelp Ads checked via Gmail notification counts only this run (not re-scraped live) -- no disapprovals. No new TripAdvisor ad email.",
+    "detail": "Sun Jul 26 ~4:10 AM PT automated run (Gmail search for Toast/Toast IQ/Sling/Google review notifications/Yelp/Google Ads/TripAdvisor + LIVE Chrome check of both Google Business Profile Unreplied tabs).\n\nTOAST: No new Daily Performance Summary since Fri Jul 24 data (received Sat Jul 25 6:40 AM PT) -- Sat Jul 25 sales report has not landed yet as of this run (usually arrives ~6:30-7:40 AM PT the following morning). Showing most recent available: Net $8,292.25 / Gross $8,598.20 / 311 guests / 199 orders / labor 14.4%.\n\nSLING: No new daily schedule email since Sat Jul 25 (received 7:01 AM PT) -- today's (Sun Jul 26) schedule has not landed yet as of this 4 AM run. Showing most recent available: 12 employees / 65.82 hrs / 0 uncovered / 0 OT for Sat Jul 25.\n\nREVIEWS: LIVE browser check of business.google.com Unreplied tab for BOTH profile IDs, per standing instruction (never skip Brewhouse Coffee). THE BREWHOUSE: now 4.5 stars / 520 reviews -- Nate B (5 stars, Jul 23, carried forward) still unanswered, PLUS NEW review from Suzanne Palaszewski (5 stars, Jul 25, rating only/no text). BREWHOUSE COFFEE: now 5.0 stars / 4 reviews -- Christie Hahn (5 stars, Jul 19, carried forward) still unanswered, PLUS NEW review from Paul Chounet (5 stars, Jul 25, \"Great place for a cup of coffee and a pastry. Great service and staff!\"). 4 total unanswered across both listings. Draft replies prepared in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.\n\nGOOGLE ADS: Checked via Gmail notification count only this run (4 'report ready' emails in the last 48h, none flagged as disapproval or budget alert in subject line) -- dashboard NOT re-scraped live this run, campaign/spend figures below carried forward from last known live scrape (Sat Jul 25 ~7:10 AM PT).\n\nYELP: 3 marketing/newsletter emails in window ('Neighbors love these delivery spots', 'Your Monthly Restaurant Industry Insights', 'Your perfect morning starts here') -- 0 actionable customer inquiries. Yelp Ads dashboard not re-scraped live this run; figures carried forward from last known (Sat Jul 25 ~7:15 AM PT).\n\nTRIPADVISOR: No new ad-performance email found in this run's window. Most recent remains Mon Jul 20.\n\nOUT OF SCOPE THIS RUN: Reservations, Business Profile management requests, and Payroll were not re-checked this run (not part of this task's data sources) -- those sections are carried forward unchanged from the last update."
   },
   "toast": {
     "date": "Friday, July 24",
@@ -42,7 +42,7 @@
     "grossChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
     "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Fri Jul 24), email received Sat Jul 25 6:28 AM PT.",
-    "note": "[Sat Jul 25 7 AM run] Fri Jul 24 GROUP email parsed live. Net $8,292.25 / gross $8,598.20 / 311 guests / 199 orders / labor 14.4% / discounts 3.6% / refunds $0 / 24 void items / 171 card payments / 1 open order / auto-clocked out: Katharine Brown (Brewhouse Admin). Takeout: 15 orders $133.25; delivery 0 orders $0; dine-in 2 orders $4.50 (order-type breakdown doesn't reconcile to the 199 total orders -- same reporting artifact seen on prior GROUP rollups). Labor $ and discount $ derived from percentages. NOTE: big swing vs Thu Jul 23 -- gross up ~64% ($5,256.30 to $8,598.20), guests up ~39% (223 to 311), labor % dropped sharply to 14.4% from 31.9% -- worth flagging for review, may reflect a strong Friday night or a reporting variance. [Fri Jul 24 4 AM run] No newer Toast summary (Thu Jul 23) received yet as of this run -- figures above remain Wed Jul 22, last confirmed."
+    "note": "[Sat Jul 25 7 AM run] Fri Jul 24 GROUP email parsed live. Net $8,292.25 / gross $8,598.20 / 311 guests / 199 orders / labor 14.4% / discounts 3.6% / refunds $0 / 24 void items / 171 card payments / 1 open order / auto-clocked out: Katharine Brown (Brewhouse Admin). Takeout: 15 orders $133.25; delivery 0 orders $0; dine-in 2 orders $4.50 (order-type breakdown doesn't reconcile to the 199 total orders -- same reporting artifact seen on prior GROUP rollups). Labor $ and discount $ derived from percentages. [Sun Jul 26 4 AM run] Checked again -- no newer Toast summary received; Sat Jul 25 sales report not yet in inbox. NOTE: big swing vs Thu Jul 23 -- gross up ~64% ($5,256.30 to $8,598.20), guests up ~39% (223 to 311), labor % dropped sharply to 14.4% from 31.9% -- worth flagging for review, may reflect a strong Friday night or a reporting variance."
   },
   "toastLastKnown": {
     "date": "Friday, July 24",
@@ -136,7 +136,7 @@
         "time": "5:00P - 11:30P"
       }
     ],
-    "note": "TODAY (Sat Jul 25), email delivered 7:01 AM PT. 12 employees / 12 shifts / 65.82 hrs / 0 uncovered / 0 OT / 3 off. Coverage: Julianna Ornelas opens coffee/bar 6:30A-12:30P, Harmony Willson bar 10:15A-4:30P, James Hernadez server 10:45A-4:30P, Bea Southern server 12:30P-5:00P, evening crew Osmar Beltran (server) 3:30-11:00P, Katharine Brown (bar) 4:00-11:45P, Gabriel Lopez galindo (server) 4:30-11:00P, Fred De Leon (bar) 4:30-11:45P, Bri Kelley (server) 5:00-11:30P, Sarah Palmer (runner) 5:00-10:00P, Cal Carter (busser) 5:00-11:30P. Isael Salvador Narciso (Cook, 4:34A-4:34A) shows a zero-length placeholder entry -- clock-in artifact rather than a real shift, same pattern as prior days."
+    "note": "TODAY (Sat Jul 25), email delivered 7:01 AM PT. 12 employees / 12 shifts / 65.82 hrs / 0 uncovered / 0 OT / 3 off. Coverage: Julianna Ornelas opens coffee/bar 6:30A-12:30P, Harmony Willson bar 10:15A-4:30P, James Hernadez server 10:45A-4:30P, Bea Southern server 12:30P-5:00P, evening crew Osmar Beltran (server) 3:30-11:00P, Katharine Brown (bar) 4:00-11:45P, Gabriel Lopez galindo (server) 4:30-11:00P, Fred De Leon (bar) 4:30-11:45P, Bri Kelley (server) 5:00-11:30P, Sarah Palmer (runner) 5:00-10:00P, Cal Carter (busser) 5:00-11:30P. Isael Salvador Narciso (Cook, 4:34A-4:34A) shows a zero-length placeholder entry -- clock-in artifact rather than a real shift, same pattern as prior days. [Sun Jul 26 4 AM run] Checked again -- no newer Sling report received; today's (Sun Jul 26) schedule not yet in inbox as of 4 AM."
   },
   "slingLastKnown": {
     "date": "Saturday, July 25",
@@ -289,7 +289,7 @@
     "note": "TODAY (Sat Jul 25), email delivered 7:01 AM PT. 12 employees / 12 shifts / 65.82 hrs / 0 uncovered / 0 OT / 3 off. Coverage: Julianna Ornelas opens coffee/bar 6:30A-12:30P, Harmony Willson bar 10:15A-4:30P, James Hernadez server 10:45A-4:30P, Bea Southern server 12:30P-5:00P, evening crew Osmar Beltran (server) 3:30-11:00P, Katharine Brown (bar) 4:00-11:45P, Gabriel Lopez galindo (server) 4:30-11:00P, Fred De Leon (bar) 4:30-11:45P, Bri Kelley (server) 5:00-11:30P, Sarah Palmer (runner) 5:00-10:00P, Cal Carter (busser) 5:00-11:30P. Isael Salvador Narciso (Cook, 4:34A-4:34A) shows a zero-length placeholder entry -- clock-in artifact rather than a real shift, same pattern as prior days."
   },
   "googleAds": {
-    "lastUpdated": "LIVE Chrome scrape Sat Jul 25 ~7:10 AM PT (campaigns page, date range = Yesterday/Jul 24; 7-day totals Jul 18-24).",
+    "lastUpdated": "Email-only check Sun Jul 26 ~4:10 AM PT (dashboard not re-scraped live this run); campaign/spend figures carried forward from last live scrape Sat Jul 25 ~7:10 AM PT.",
     "yesterday": {
       "date": "July 24, 2026",
       "spend": 72.82,
@@ -379,11 +379,11 @@
     "nextPayment": "Jun 1, 2026",
     "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
-    "note": "LIVE scrape Sat Jul 25 ~7:10 AM PT. Yesterday (Jul 24): $72.82 / 4,297 impr / 88 clicks / 0 conv (calculating). PMax-2: 4,020 impr, 69 clicks, $46.32, opt 85%, still 'Limited by budget' + all asset groups limited by policy. BHC Coffee Search: 277 impr, 19 clicks, $26.50, opt 44.2%. 'World Cup HQ 2026' ($20/day) and 'Oldest SB Brewery on Tap' ($10.80/day) both still paused, 0 impressions. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts still unpublished. 7-day totals (Jul 18-24): 42,621 impr / $399.48 / 251.31 conv / 898 clicks. Balance/payment method not re-verified this run (billing page not visited).",
+    "note": "Sun Jul 26 4 AM run: 4 Google Ads 'report ready' emails in the last 48h (2x 'Campaign performance', 2x 'Brewhouse Daily Campaign Report'), none flagged as disapproval or budget alert in the subject line. Dashboard NOT re-scraped live this run -- campaign/spend figures below are carried forward from the last live scrape (Sat Jul 25 ~7:10 AM PT).",
     "stale": false,
     "authError": false,
-    "reportsLast24h": 1,
-    "reportsLast48h": 3,
+    "reportsLast24h": 2,
+    "reportsLast48h": 4,
     "accountChangeAlert": false,
     "disapprovals": 0,
     "accountBudgetPerDay": 58.37,
@@ -462,8 +462,8 @@
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "2026-07-25",
-    "note": "Sat Jul 25 7 AM run: no new TripAdvisor ad-performance email found (from:analytics@hm2.tripadvisor.com) in the search window. Most recent ad-performance email remains the one from Mon Jul 20, 12:30 PM PT ('Your Ads are getting some MAJOR attention!')."
+    "lastUpdated": "2026-07-26",
+    "note": "Sun Jul 26 4 AM run: no new TripAdvisor ad-performance email found (from:analytics@hm2.tripadvisor.com) in the search window. Most recent ad-performance email remains the one from Mon Jul 20, 12:30 PM PT ('Your Ads are getting some MAJOR attention!')."
   },
   "reservations": {
     "lastUpdated": "2026-07-26",
@@ -521,8 +521,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-24 -- Fri Jul 24 4 AM run. LIVE browser check of both Google Business Profile Unreplied tabs (source of truth, per standing instruction -- both listings rendered successfully this run).",
-    "note": "BOTH GOOGLE LISTINGS CHECKED LIVE via business.google.com Unreplied tabs. THE BREWHOUSE: only Nate B (5 stars, posted Jul 23) remains unanswered -- unchanged since last check. BREWHOUSE COFFEE: Christie Hahn (5 stars, posted Jul 19) still unanswered -- unchanged since last check. No new reviews on either listing. NOTHING POSTED -- Joal approves every reply before it goes out.",
+    "lastUpdated": "2026-07-26 -- Sun Jul 26 4 AM run. LIVE browser check of both Google Business Profile Unreplied tabs (source of truth, per standing instruction -- both listings rendered successfully this run).",
+    "note": "BOTH GOOGLE LISTINGS CHECKED LIVE via business.google.com Unreplied tabs. THE BREWHOUSE: Nate B (5 stars, posted Jul 23) still unanswered, PLUS NEW review from Suzanne Palaszewski (5 stars, posted Jul 25, rating only -- no written text). BREWHOUSE COFFEE: Christie Hahn (5 stars, posted Jul 19) still unanswered, PLUS NEW review from Paul Chounet (5 stars, posted Jul 25). Draft replies prepared in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.",
     "unanswered": [
       {
         "platform": "Google",
@@ -530,8 +530,19 @@
         "date": "2026-07-23",
         "stars": 5,
         "snippet": "I really enjoyed this place. The burger was good. Great beer selection. Service was great. Prices were reasonable. I would definitely recommend this place.",
-        "ageDays": 2,
+        "ageDays": 3,
         "isNew": false,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
+      },
+      {
+        "platform": "Google",
+        "author": "Suzanne Palaszewski",
+        "date": "2026-07-25",
+        "stars": 5,
+        "snippet": "(Rating only -- no written review text.)",
+        "ageDays": 1,
+        "isNew": true,
         "profile": "The Brewhouse",
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
       },
@@ -541,8 +552,19 @@
         "date": "2026-07-19",
         "stars": 5,
         "snippet": "A Perfect 10/10 Experience! If you are looking for a spot that takes both its craft and its hospitality seriously, this is it. The Coffee: Absolute perfection -- smooth, perfectly dialed-in espresso with velvety, flawless microfoam. The Service: incredibly welcoming and genuinely friendly staff.",
-        "ageDays": 6,
+        "ageDays": 7,
         "isNew": false,
+        "profile": "Brewhouse Coffee",
+        "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
+      },
+      {
+        "platform": "Google",
+        "author": "Paul Chounet",
+        "date": "2026-07-25",
+        "stars": 5,
+        "snippet": "Great place for a cup of coffee and a pastry. Great service and staff!",
+        "ageDays": 1,
+        "isNew": true,
         "profile": "Brewhouse Coffee",
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       }
@@ -550,25 +572,25 @@
     "summary": {
       "theBrewhouse": {
         "rating": 4.5,
-        "count": 519,
-        "unanswered": 1,
+        "count": 520,
+        "unanswered": 2,
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
       },
       "brewhouseCoffee": {
         "rating": 5.0,
-        "count": 3,
-        "unanswered": 1,
+        "count": 4,
+        "unanswered": 2,
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       },
-      "totalUnanswered": 2,
+      "totalUnanswered": 4,
       "checkedBothListings": true,
       "method": "Live browser check of business.google.com Unreplied tab for both profile IDs (rendered successfully this run)."
     }
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-07-25",
+    "lastUpdated": "2026-07-26",
     "actionable": [],
-    "note": "Sat Jul 25 4 AM run: 2 Yelp marketing newsletters in window ('Your perfect morning starts here', 'You're so close to your new go-to') -- 0 actionable customer inquiries."
+    "note": "Sun Jul 26 4 AM run: 3 Yelp marketing newsletters in window ('Neighbors love these delivery spots', 'Your Monthly Restaurant Industry Insights', 'Your perfect morning starts here') -- 0 actionable customer inquiries."
   },
   "businessProfile": {
     "lastUpdated": "2026-07-17",
@@ -576,7 +598,7 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-24T04:00:00-07:00",
+  "lastUpdated": "2026-07-26T04:09:00-07:00",
   "toastPrevDay": {
     "date": "Thursday, July 23",
     "net": 5156.7,
