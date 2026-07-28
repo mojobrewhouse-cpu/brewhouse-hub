@@ -2,82 +2,72 @@
   "date": "Tuesday, July 28",
   "systemStatus": {
     "level": "warn",
-    "headline": "Tue Jul 28, 4 AM email-only run. Toast Monday Jul 27 report and Sling Tuesday Jul 28 schedule have NOT landed yet (both vendors send after this run's 4 AM window) -- dashboard still shows Sunday Jul 26 Toast / Monday Jul 27 Sling as most recent actuals. NEW 1-star Google review from John Rinaldo (The Brewhouse, no text) needs a reply. Also a 1-star SpotHopper alert from Keelan Elliott (\"God Bless America\") that could not be matched to a listing with certainty -- flagged for manual check. Live browser check of the Google review pages failed this run (redirected to a generic search result, no authenticated session), so review data relies on Gmail notifications only -- less reliable than the live Unreplied-tab check. 4 Google Ads report-ready emails came in overnight; no disapproval language seen in notifications, but reports weren't opened for numbers this run. No TripAdvisor ad-engagement email in the window. GitHub PAT is working.",
-    "detail": "TUE JUL 28 4:00 AM PT run (email-only, no live Chrome session).\n\nTOAST: No Monday Jul 27 Daily Performance Summary in inbox yet -- Toast typically sends ~6:30-7:40 AM PT, after this run. Most recent actuals remain Sunday Jul 26 (net $7,599.05 / 310 guests / 190 orders / labor 19.3%), already reflected in this dashboard from the prior run. Nothing to update.\n\nSLING: No Tuesday Jul 28 daily report in inbox yet -- Sling sends ~7:00 AM PT, after this run. Most recent schedule remains Monday Jul 27 (7 employees / 7 shifts / 24.75 hrs / 0 uncovered), already reflected in this dashboard. Nothing to update.\n\nREVIEWS: Live browser check of business.google.com Unreplied tabs was attempted but failed this run (page redirected to a generic Google search results page rather than the profile's review dashboard -- likely no authenticated Google session available to this run). Fell back to Gmail notification search per standing instructions. Found ONE new Google review notification since the last dashboard update (Mon Jul 27 7:25 AM PT): John Rinaldo, 1 star, The Brewhouse, rating only (no written text), received Jul 27 6:19 PM PT. Also found a SpotHopper-mirrored 1-star review from Keelan Elliott (\"God Bless America\", received Jul 27 8:13 PM PT) that has NOT yet triggered its own Google Business Profile notification email and whose listing (Brewhouse vs Coffee) could not be confirmed from the SpotHopper alert alone -- tentatively bucketed under The Brewhouse pending manual confirmation. Previously-tracked unanswered reviews (Thuy Anh Le, Brewhouse, photo-only 5-star; Paul Chounet, Brewhouse Coffee, 5-star) are carried forward unchanged since they could not be re-verified live this run. NONE of these replies have been posted -- Joal approves every reply before it goes out.\n\nGOOGLE ADS: 4 'report ready' notification emails overnight (2x Brewhouse Daily Campaign Report, 2x Campaign performance). No disapproval or policy-violation language in the notification snippets. Reports were not opened/scraped for live numbers this run -- most recent live campaign data remains the Jul 26 scrape already in this dashboard.\n\nYELP: 3 marketing/newsletter emails in the window (recommendation digests) -- 0 actionable customer inquiries. No new billing data pulled this run.\n\nTRIPADVISOR: No ad-engagement email from analytics@hm2.tripadvisor.com in the last 48 hours this run.\n\nNOT REFRESHED THIS RUN (out of scope for this job -- covers Toast/Sling/Google reviews/Yelp/Google Ads/TripAdvisor only): reservations, business profile management requests, payroll."
+    "headline": "Tue Jul 28 7 AM run: Toast (Mon Jul 27) and Sling (Tue Jul 28) both landed and parsed cleanly. Google Ads and Yelp Ads refreshed via live Chrome scrape. Yelp's billing sub-page (spend/CPC/CPL/bonus budget) hit a login/password wall this run -- those figures are carried forward from Jul 27 rather than re-entering credentials. No TripAdvisor ad-engagement email in the window. Reviews/reservations/business-profile data was not re-checked this run (out of scope for this data refresh) and reflects the last run's values. GitHub PAT is working.",
+    "detail": "TUE JUL 28 ~7:15 AM PT run (Toast + Sling email parse, live Chrome scrape for Google Ads + Yelp Ads).\n\nTOAST: Group-level Daily Performance Summary for Monday, July 27 landed at 6:25 AM PT and parsed cleanly: Net $4,081.05 / Gross $4,152.65 / 230 guests / 116 orders / labor 14.7%. Rolled prior 'toast' (Sun Jul 26) to toastPrevDay.\n\nSLING: Daily report for Tuesday, July 28 landed at 7:01 AM PT: 8 employees / 8 shifts / 37.83 scheduled hours / 0 uncovered / 0 overtime.\n\nGOOGLE ADS: LIVE scrape of campaigns page (343-687-4835). Yesterday (Jul 27): $50.50 / 7,385 impr / 146 clicks / 0.00 conversions. 7-day totals (Jul 21-27): $399.55 / 42,429 impr / 846 clicks / 205.31 conversions. Billing summary: balance $69.85 (dropped after a $500 threshold charge posted Jul 26), next auto-payment Aug 1 (or $500 threshold), Amex ...1004. No disapprovals seen.\n\nYELP ADS: LIVE scrape of ad performance page. Last 30d: 36k ad impressions (76% of 47.7k total) / 538 ad page visits (57% of 939) / 148 ad leads (60% of 248). 12-month leads: 1,167 ads (61%) vs 757 organic. Attempted to open the billing page for spend/CPC/CPL/bonus-budget figures but it redirected to a Yelp login/password-verification screen (session not fully authenticated for that sub-page) -- did not enter credentials per policy; those figures are carried forward unchanged from the Jul 27 run and flagged for Joal.\n\nTRIPADVISOR: No ad-engagement email from analytics@hm2.tripadvisor.com in the last 24h.\n\nREVIEWS/RESERVATIONS/BUSINESS PROFILE/PAYROLL: Not in scope for this run's data sources; values carried forward unchanged from the prior update."
   },
   "toast": {
-    "date": "Sunday, July 26",
-    "net": 7599.05,
-    "gross": 8037.3,
-    "guests": 310,
+    "date": "Monday, July 27",
+    "net": 4081.05,
+    "gross": 4152.65,
+    "guests": 230,
     "guestsDerived": false,
-    "orders": 190,
+    "orders": 116,
     "ordersDerived": false,
     "checks": null,
     "avgPerCheck": null,
-    "avgPerOrder": 40.0,
-    "avgPerGuest": 24.51,
-    "laborPct": 19.3,
-    "laborCost": 1466.62,
+    "avgPerOrder": 35.18,
+    "avgPerGuest": 17.74,
+    "laborPct": 14.7,
+    "laborCost": 599.91,
     "laborCostDerived": true,
-    "discounts": 442.05,
+    "discounts": 70.6,
     "discountsDerived": true,
-    "discountPct": 5.5,
+    "discountPct": 1.7,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "voidAmount": null,
-    "voidItems": 13,
-    "cardPayments": 149,
+    "voidItems": 6,
+    "cardPayments": 97,
     "openOrders": 1,
-    "autoClockedOut": [
-      "Katharine Brown"
-    ],
-    "takeoutOrders": 21,
-    "takeoutSales": 236.75,
-    "sdlw": {
-      "date": "Sunday, July 19",
-      "net": 12115.62,
-      "gross": 12708.3,
-      "guests": 439,
-      "orders": 254,
-      "voidAmount": null,
-      "voidItems": 29
-    },
+    "autoClockedOut": [],
+    "takeoutOrders": 20,
+    "takeoutSales": 182.0,
+    "sdlw": null,
     "fourWeekAvg": null,
     "dayparts": [],
     "rooms": [],
-    "netChangeVsSDLWPct": -37.3,
-    "grossChangeVsSDLWPct": -36.8,
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
-    "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Sun Jul 26), email received Mon Jul 27 6:28 AM PT. LOCATION-level email (labor $, void $, dayparts, rooms, checks) had not landed at the 7 AM run. SDLW computed locally against the Sun Jul 19 GROUP email.",
-    "note": "SUN JUL 26 ACTUALS (group-level). Net $7,599.05 / Gross $8,037.30 / 310 guests / 190 orders / avg guest $24.51 / avg order $40.00. Labor 19.3% of net (~$1,466.62) -- a healthy ratio for a Sunday. Discounts 5.5% (~$442.05), refunds $0, deferred $0, 13 void items, 149 card payments. ONE order left open at close; Katharine Brown auto-clocked out. vs SDLW (Sun Jul 19): net -$4,516.57 (-37.3%), gross -36.8%, guests -129 (-29.4%), orders -64 (-25.2%). A much quieter Sunday than the week prior -- Jul 19 was an unusually strong outlier Sunday, so this drop reads as reversion to normal rather than a red flag.",
+    "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group), email sent Tue Jul 28 6:25 AM PT, for Monday, July 27",
+    "note": "MON JUL 27 ACTUALS (group-level, all locations). Net $4,081.05 / Gross $4,152.65 / 230 guests / 116 orders / labor 14.7% ($599.91 derived) / discount 1.7% ($70.60 derived). Refunds $0.00. Order type: 20 takeout orders ($182.00), 0 delivery, 3 dine-in ($30.00). 97 card payments, 1 remaining open order, no auto-clocked-out users. No SDLW comparison table included in this email.",
     "pending": false,
     "pendingFor": null
   },
   "toastLastKnown": {
-    "date": "Sunday, July 26",
-    "net": 7599.05,
-    "gross": 8037.3,
-    "guests": 310,
-    "orders": 190,
+    "date": "Monday, July 27",
+    "net": 4081.05,
+    "gross": 4152.65,
+    "guests": 230,
+    "orders": 116,
     "checks": null,
-    "avgPerGuest": 24.51,
-    "avgPerOrder": 40.0,
+    "avgPerGuest": 17.74,
+    "avgPerOrder": 35.18,
     "avgPerCheck": null,
-    "laborPct": 19.3,
-    "laborCost": 1466.62,
-    "discountPct": 5.5,
-    "discounts": 442.05,
+    "laborPct": 14.7,
+    "laborCost": 599.91,
+    "discountPct": 1.7,
+    "discounts": 70.6,
     "refunds": 0.0,
     "voidAmount": null,
-    "netChangeVsSDLWPct": -37.3,
-    "grossChangeVsSDLWPct": -36.8
+    "netChangeVsSDLWPct": null,
+    "grossChangeVsSDLWPct": null
   },
   "sling": {
-    "date": "Monday, July 27",
-    "count": 7,
-    "shifts": 7,
-    "hours": 24.75,
+    "date": "Tuesday, July 28",
+    "count": 8,
+    "shifts": 8,
+    "hours": 37.83,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -86,48 +76,53 @@
     "stale": false,
     "staff": [
       {
-        "name": "Casey Smith",
-        "role": "General Manager",
-        "time": "6:02A - 6:02A"
-      },
-      {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "6:02A - 6:02A"
+        "time": "4:34A - 4:34A"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Sarah Palmer",
         "role": "Barista",
         "time": "6:30A - 12:30P"
       },
       {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A - 4:00P"
+      },
+      {
         "name": "Christine Vargas",
-        "role": "Bartender",
-        "time": "10:15A - 3:30P"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "time": "3:30P - 9:30P"
-      },
-      {
-        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "4:00P - 8:30P"
+        "time": "11:15A - 2:30P"
       },
       {
-        "name": "Bea Southern",
+        "name": "Augustine Arroyo",
         "role": "Server",
-        "time": "5:00P - 8:30P"
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P - 11:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:30P - 10:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "5:30P - 9:30P"
       }
     ],
-    "note": "TODAY (Mon Jul 27), email delivered 7:00 AM PT. 7 employees / 7 shifts / 24.75 hrs / 0 uncovered / 0 OT / 0 off -- the lightest weekday build seen recently. TWO malformed zero-length entries: Casey Smith (General Manager) 6:02A-6:02A and Rafael Patricio (Cook) 6:02A-6:02A -- both look like clock-in placeholders rather than real shifts, which means there is NO cook shift showing real hours today. Coverage: Julianna Ornelas opens on coffee/bar (6:30A-12:30P), Christine Vargas covers bar 10:15A-3:30P, then Harmony Willson (bartender, 3:30P-9:30P), Osmar Beltran (server, 4:00P-8:30P) and Bea Southern (server, 5:00P-8:30P) close out. There is a coverage gap between 12:30P (Julianna's shift ends) and 3:30P, and no visible kitchen coverage all day given the malformed Cook entry -- worth confirming Rafael Patricio's actual shift time in Sling."
+    "note": "TODAY (Tue Jul 28), email delivered 7:01 AM PT. 8 employees / 8 shifts / 37.83 hrs / 0 uncovered / 0 OT."
   },
   "slingLastKnown": {
-    "date": "Monday, July 27",
-    "count": 7,
-    "shifts": 7,
-    "hours": 24.75,
+    "date": "Tuesday, July 28",
+    "count": 8,
+    "shifts": 8,
+    "hours": 37.83,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -136,48 +131,53 @@
     "stale": false,
     "staff": [
       {
-        "name": "Casey Smith",
-        "role": "General Manager",
-        "time": "6:02A - 6:02A"
-      },
-      {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "6:02A - 6:02A"
+        "time": "4:34A - 4:34A"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Sarah Palmer",
         "role": "Barista",
         "time": "6:30A - 12:30P"
       },
       {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A - 4:00P"
+      },
+      {
         "name": "Christine Vargas",
-        "role": "Bartender",
-        "time": "10:15A - 3:30P"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "time": "3:30P - 9:30P"
-      },
-      {
-        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "4:00P - 8:30P"
+        "time": "11:15A - 2:30P"
       },
       {
-        "name": "Bea Southern",
+        "name": "Augustine Arroyo",
         "role": "Server",
-        "time": "5:00P - 8:30P"
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P - 11:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:30P - 10:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "5:30P - 9:30P"
       }
     ],
-    "note": "TODAY (Mon Jul 27), email delivered 7:00 AM PT. 7 employees / 7 shifts / 24.75 hrs / 0 uncovered / 0 OT / 0 off -- the lightest weekday build seen recently. TWO malformed zero-length entries: Casey Smith (General Manager) 6:02A-6:02A and Rafael Patricio (Cook) 6:02A-6:02A -- both look like clock-in placeholders rather than real shifts, which means there is NO cook shift showing real hours today. Coverage: Julianna Ornelas opens on coffee/bar (6:30A-12:30P), Christine Vargas covers bar 10:15A-3:30P, then Harmony Willson (bartender, 3:30P-9:30P), Osmar Beltran (server, 4:00P-8:30P) and Bea Southern (server, 5:00P-8:30P) close out. There is a coverage gap between 12:30P (Julianna's shift ends) and 3:30P, and no visible kitchen coverage all day given the malformed Cook entry -- worth confirming Rafael Patricio's actual shift time in Sling."
+    "note": "TODAY (Tue Jul 28), email delivered 7:01 AM PT. 8 employees / 8 shifts / 37.83 hrs / 0 uncovered / 0 OT."
   },
   "slingToday": {
-    "date": "Monday, July 27",
-    "count": 7,
-    "shifts": 7,
-    "hours": 24.75,
+    "date": "Tuesday, July 28",
+    "count": 8,
+    "shifts": 8,
+    "hours": 37.83,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -186,60 +186,65 @@
     "stale": false,
     "staff": [
       {
-        "name": "Casey Smith",
-        "role": "General Manager",
-        "time": "6:02A - 6:02A"
-      },
-      {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook",
-        "time": "6:02A - 6:02A"
+        "time": "4:34A - 4:34A"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Sarah Palmer",
         "role": "Barista",
         "time": "6:30A - 12:30P"
       },
       {
+        "name": "Tony Rincon",
+        "role": "Bartender",
+        "time": "10:15A - 4:00P"
+      },
+      {
         "name": "Christine Vargas",
-        "role": "Bartender",
-        "time": "10:15A - 3:30P"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender",
-        "time": "3:30P - 9:30P"
-      },
-      {
-        "name": "Osmar Beltran",
         "role": "Server",
-        "time": "4:00P - 8:30P"
+        "time": "11:15A - 2:30P"
       },
       {
-        "name": "Bea Southern",
+        "name": "Augustine Arroyo",
         "role": "Server",
-        "time": "5:00P - 8:30P"
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender",
+        "time": "3:30P - 11:00P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server",
+        "time": "4:30P - 10:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "5:30P - 9:30P"
       }
     ],
-    "note": "TODAY (Mon Jul 27), email delivered 7:00 AM PT. 7 employees / 7 shifts / 24.75 hrs / 0 uncovered / 0 OT / 0 off -- the lightest weekday build seen recently. TWO malformed zero-length entries: Casey Smith (General Manager) 6:02A-6:02A and Rafael Patricio (Cook) 6:02A-6:02A -- both look like clock-in placeholders rather than real shifts, which means there is NO cook shift showing real hours today. Coverage: Julianna Ornelas opens on coffee/bar (6:30A-12:30P), Christine Vargas covers bar 10:15A-3:30P, then Harmony Willson (bartender, 3:30P-9:30P), Osmar Beltran (server, 4:00P-8:30P) and Bea Southern (server, 5:00P-8:30P) close out. There is a coverage gap between 12:30P (Julianna's shift ends) and 3:30P, and no visible kitchen coverage all day given the malformed Cook entry -- worth confirming Rafael Patricio's actual shift time in Sling."
+    "note": "TODAY (Tue Jul 28), email delivered 7:01 AM PT. 8 employees / 8 shifts / 37.83 hrs / 0 uncovered / 0 OT."
   },
   "googleAds": {
-    "lastUpdated": "LIVE Chrome scrape Mon Jul 27 ~7:15 AM PT (campaigns page, date range = Yesterday/Jul 26).",
+    "lastUpdated": "LIVE Chrome scrape Tue Jul 28 ~7:10 AM PT (campaigns page, date range = Yesterday + Last 7 days; billing summary page)",
     "yesterday": {
-      "date": "July 26, 2026",
-      "spend": 56.31,
-      "impressions": 6157,
-      "clicks": 138,
+      "date": "July 27, 2026",
+      "spend": 50.5,
+      "impressions": 7385,
+      "clicks": 146,
       "conversions": 0.0,
-      "cpc": 0.41,
-      "ctr": 2.24,
-      "costChangeAbs": -0.29,
-      "impressionsChangeAbs": -1001,
-      "clicksChangeAbs": 4,
+      "cpc": 0.35,
+      "ctr": 1.98,
+      "costChangeAbs": -5.81,
+      "impressionsChangeAbs": 1228,
+      "clicksChangeAbs": 8,
       "clicksDerived": false,
       "avgTargetCpa": null,
       "costChangeVsLastMon": null,
-      "note": "LIVE scrape Mon Jul 27 ~7:15 AM PT. Yesterday = Jul 26. $56.31 (down $0.29), 6,157 impr (down 1,001), 138 clicks (up 4, +2.99%), interaction rate 2.24%, CPC $0.41. Conversions read 0.00 and are 'calculating projections' -- same tracking caveat as prior runs; do not treat 0 as a true zero."
+      "note": "LIVE scrape Tue Jul 28 ~7 AM PT. Yesterday = Jul 27. $50.50 (down $5.81), 7,385 impr (up 1,228), 146 clicks (up 8), $0.35 avg CPC, 1.98% CTR, 0.00 conversions."
     },
     "campaigns": [
       {
@@ -247,13 +252,13 @@
         "type": "Performance Max",
         "status": "Eligible (Limited) - Limited by budget; all asset groups limited by policy",
         "budget": "$43.37/day",
-        "bidStrategy": "Maximize conversions (Target CPA)",
+        "bidStrategy": "Target CPA",
         "optimizationScore": 85,
-        "impressions": 5966,
-        "clicks": 121,
-        "interactionRate": 2.03,
+        "impressions": 7191,
+        "clicks": 130,
+        "interactionRate": 1.81,
         "avgCpc": null,
-        "cost": null,
+        "cost": 36.35,
         "conversions": 0.0
       },
       {
@@ -263,39 +268,11 @@
         "budget": "$15.00/day",
         "bidStrategy": "Maximize conversions",
         "optimizationScore": 44.4,
-        "impressions": 191,
-        "clicks": 17,
-        "interactionRate": 8.9,
+        "impressions": 194,
+        "clicks": 16,
+        "interactionRate": 8.25,
         "avgCpc": null,
-        "cost": null,
-        "conversions": 0.0
-      },
-      {
-        "name": "World Cup HQ 2026",
-        "type": "Search",
-        "status": "Paused",
-        "budget": "$20.00/day",
-        "bidStrategy": null,
-        "optimizationScore": null,
-        "impressions": 0,
-        "clicks": 0,
-        "interactionRate": 0.0,
-        "avgCpc": null,
-        "cost": null,
-        "conversions": 0.0
-      },
-      {
-        "name": "Oldest SB Brewery on Tap",
-        "type": "Performance Max",
-        "status": "Paused - all asset groups limited by policy",
-        "budget": "$10.80/day",
-        "bidStrategy": null,
-        "optimizationScore": null,
-        "impressions": 0,
-        "clicks": 0,
-        "interactionRate": 0.0,
-        "avgCpc": null,
-        "cost": null,
+        "cost": 14.15,
         "conversions": 0.0
       }
     ],
@@ -304,17 +281,17 @@
       "searchChangeWoWPct": null,
       "pmaxConversions": null,
       "pmaxChangeWoWPct": null,
-      "conversions": 179.81,
-      "cost": 398.22,
-      "impressions": 41957,
-      "clicks": 836,
-      "note": "7-day account totals Jul 20-26 (live): 41,957 impr (down 6,469) / $398.22 (down $39.49) / 836 clicks (down 162) / 179.81 conversions."
+      "conversions": 205.31,
+      "cost": 399.55,
+      "impressions": 42429,
+      "clicks": 846,
+      "note": "7-day account totals Jul 21-26 (live): 42,429 impr / $399.55 / 846 clicks / 205.31 conversions / 1.99% CTR."
     },
-    "balance": 423.15,
-    "nextPayment": "Jun 1, 2026",
+    "balance": 69.85,
+    "nextPayment": "Aug 1, 2026 (or when balance reaches $500)",
     "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
-    "note": "LIVE scrape Mon Jul 27 7:15 AM PT. 4 campaigns, 2 served yesterday. 'World Cup HQ 2026' ($20/day, Search) remains PAUSED with 0 impressions, over a week after the World Cup Final -- still the highest-leverage stale item to archive. 'Oldest SB Brewery on Tap' ($10.80/day, PMax) also paused, all asset groups limited by policy. PMax-2 delivered 5,966 of 6,157 impr (97%) and 121 of 138 clicks, still both 'Limited by budget' AND policy-limited on all asset groups. BHC Coffee Search opt score 44.4%. Account daily budget $58.37/day; 2 drafts still unpublished. 'Review your campaign targets' banner active (deadline Aug 17, 2026).",
+    "note": "LIVE scrape Tue Jul 28 ~7:10 AM PT. 4 campaigns (2 drafts paused), 2 served yesterday. Balance dropped to $69.85 after $500 threshold charge posted Jul 26. No disapprovals seen on campaigns page.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -358,29 +335,30 @@
     "note_20260725": "Sat Jul 25 ~7:10 AM LIVE scrape (campaigns + 7-day totals): Yesterday (Jul 24) $72.82 (up $22.82) / 4,297 impr (down 1,319) / 88 clicks (down 6) / CTR 2.05% / CPC $0.83 / 0 conv (calculating). PMax-2 opt 85%, still Limited by budget + policy. BHC Coffee opt 44.2%. Both paused campaigns still at 0/0. No disapprovals observed. Balance/payment method not re-verified this run (billing page not visited). Email check: 1 report-ready email in last 24h (Campaign performance, 5:31 AM PT), 3 in last 48h (adds Brewhouse Daily Campaign Report from Jul 24, 8:48 AM PT). 0 disapproval/policy-violation emails.",
     "note_20260726": "Sun Jul 26 ~7 AM LIVE scrape: Yesterday (Jul 25) $56.60 (down $16.22) / 7,159 impr (up 2,862) / 134 clicks (up 46) / CTR 1.87% / CPC $0.42 / 0 conv (calculating). PMax-2: 6,911 impr, 118 clicks, $43.47, opt 85%, Limited by budget + policy. BHC Coffee: 248 impr, 16 clicks, $13.13, opt 44.2%. World Cup HQ 2026 and Oldest SB Brewery still paused (0/0). No disapprovals observed. 7-day Jul 19-25: 42,848 impr / $400.82 / 220.63 conv / 877 clicks.",
     "note_20260727": "Mon Jul 27 7:15 AM LIVE scrape: Yesterday (Jul 26) $56.31 / 6,157 impr / 138 clicks / 0 conv (calculating). PMax-2 5,966 impr / 121 clicks / opt 85% / Limited by budget + policy. BHC Coffee 191 impr / 17 clicks / opt 44.4%. World Cup HQ 2026 and Oldest SB Brewery still paused (0/0) -- World Cup HQ 2026 has now been paused with 0 impressions for over a week since the Final; still worth archiving to reclaim the $20/day budget line.",
-    "note_2026_07_28": "Tue Jul 28 4 AM run: 4 'report ready' notification emails overnight (2x Brewhouse Daily Campaign Report, 2x Campaign performance). No disapproval language in notification snippets. Not opened for live numbers this run -- figures above remain the Jul 26 live scrape."
+    "note_2026_07_28": "Tue Jul 28 4 AM run: 4 'report ready' notification emails overnight (2x Brewhouse Daily Campaign Report, 2x Campaign performance). No disapproval language in notification snippets. Not opened for live numbers this run -- figures above remain the Jul 26 live scrape.",
+    "note_20260728": "Tue Jul 28 ~7:10 AM LIVE scrape: Yesterday (Jul 27) $50.50 (down $5.81) / 7,385 impr (up 1,228) / 146 clicks (up 8) / $0.35 avg CPC / 1.98% CTR / 0.00 conversions. 7-day totals (Jul 21-27): $399.55 / 42,429 impr / 846 clicks / 205.31 conversions. Balance $69.85, next auto-payment Aug 1 (or $500 threshold), Amex ...1004."
   },
   "yelpAds": {
-    "lastUpdated": "LIVE Chrome scrape Mon Jul 27 ~7:20 AM PT (ad performance + settings + billing all read this run; billing page was NOT password-gated).",
+    "lastUpdated": "LIVE Chrome scrape Tue Jul 28 ~7:15 AM PT (ad performance page); billing page hit a re-login wall this run",
     "last30d": {
-      "adImpressions": 34400,
-      "impressionsFromAds": 34400,
-      "impressionsTotal": 46000,
-      "impressionsAdShare": 75,
+      "adImpressions": 36000,
+      "impressionsFromAds": 36000,
+      "impressionsTotal": 47700,
+      "impressionsAdShare": 76,
       "adClicks": 410,
-      "pageVisitsFromAds": 533,
-      "pageVisitsTotal": 945,
-      "pageVisitsAdShare": 56,
+      "pageVisitsFromAds": 538,
+      "pageVisitsTotal": 939,
+      "pageVisitsAdShare": 57,
       "leadsFromAds": 148,
-      "leadsTotal": 250,
-      "leadsAdShare": 59
+      "leadsTotal": 248,
+      "leadsAdShare": 60
     },
     "last12mo": {
-      "leadsAds": 1159,
-      "leadsOrganic": 755,
-      "leadsTotal": 1914,
+      "leadsAds": 1167,
+      "leadsOrganic": 757,
+      "leadsTotal": 1924,
       "adShare": 61,
-      "forecastLeads": 41,
+      "forecastLeads": 34,
       "pageVisits12mo": 9000,
       "leadsBreakdown": null
     },
@@ -389,19 +367,19 @@
       "adSpend": 364.93,
       "avgCpc": 0.98,
       "avgCpl": 2.7,
-      "note": "LIVE read Mon Jul 27 ~7:20 AM PT -- billing page was accessible (no password wall). Jul 1-26: $364.93 ad spend, avg CPC $0.98, avg CPL $2.70."
+      "note": "CARRIED FORWARD from last successful scrape (Mon Jul 27 ~7:20 AM PT) -- billing page redirected to a login/password wall this run (Tue Jul 28), so no fresh spend/CPC/CPL figures were pulled. Credential entry is not permitted; flagging for Joal to re-authenticate the Yelp session if fresh billing figures are needed."
     },
     "bonusBudgetRemaining": null,
-    "note": "LIVE scrape Mon Jul 27 ~7:20 AM PT. Last 30d: 34.4k ad impressions (75% of 46k), 410 ad clicks, 533 page visits from ads (56% of 945), 148 leads from ads (59% of 250). 12-mo ad contribution 1,159 ad leads vs 755 organic (61/39); forecast 41. Ad Settings 'Estimated audience size' still reads 'Ideal.' Budget $13/day average ($390/month max, est. 398 clicks/month), 5-mile radius. Billing page was accessible this run (no password wall): Jul 1-26 ad spend $364.93, avg CPC $0.98, avg CPL $2.70. Bonus budget remaining STILL not surfaced anywhere on the dashboard -- treat as unavailable, not zero. Yelp Inbox shows 15 unread.",
+    "note": "LIVE scrape Tue Jul 28 ~7:15 AM PT. Last 30d: 36k ad impressions (76% of 47.7k total), 538 ad page visits (57% of 939), 148 ad leads (60% of 248). 12mo leads: 1,167 ads (61%) vs 757 organic (39%), total 1,924, forecast 34. Billing page (spend/CPC/CPL/bonus budget) could not be refreshed -- redirected to Yelp login/password verification; figures carried forward from Jul 27.",
     "stale": false,
-    "authError": false,
+    "authError": true,
     "budgetPerDayAvg": 13.0,
     "audienceSize": "Ideal"
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "2026-07-28 4 AM run -- no ad-engagement email from analytics@hm2.tripadvisor.com in the last 48h.",
-    "note": "Tue Jul 28 4 AM run: no email from analytics@hm2.tripadvisor.com found in the last 48 hours (search window newer_than:2d). Consistent with prior runs; most recent ad-performance email remains from the week of Jul 20."
+    "lastUpdated": "2026-07-28 7 AM run -- no ad-engagement email from analytics@hm2.tripadvisor.com found in the last 24h",
+    "note": "Tue Jul 28 7 AM run: no email from analytics@hm2.tripadvisor.com in the last 24h. Only consumer travel-newsletter emails from updates@mp1.tripadvisor.com (Puerto Vallarta trip suggestions) were present -- not business ad reports, so not counted."
   },
   "reservations": {
     "lastUpdated": "2026-07-28",
@@ -557,43 +535,53 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-28T04:00:00-07:00",
+  "lastUpdated": "2026-07-28T07:15:00-07:00",
   "toastPrevDay": {
-    "date": "Saturday, July 25",
-    "net": 7523.05,
-    "gross": 7746.05,
-    "guests": 290,
+    "date": "Sunday, July 26",
+    "net": 7599.05,
+    "gross": 8037.3,
+    "guests": 310,
     "guestsDerived": false,
-    "orders": 169,
+    "orders": 190,
     "ordersDerived": false,
     "checks": null,
     "avgPerCheck": null,
-    "avgPerOrder": 44.52,
-    "avgPerGuest": 25.94,
-    "laborPct": 17.0,
-    "laborCost": 1278.92,
+    "avgPerOrder": 40.0,
+    "avgPerGuest": 24.51,
+    "laborPct": 19.3,
+    "laborCost": 1466.62,
     "laborCostDerived": true,
-    "discounts": 224.64,
+    "discounts": 442.05,
     "discountsDerived": true,
-    "discountPct": 2.9,
+    "discountPct": 5.5,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "voidAmount": null,
     "voidItems": 13,
-    "cardPayments": 144,
-    "openOrders": 0,
-    "autoClockedOut": [],
+    "cardPayments": 149,
+    "openOrders": 1,
+    "autoClockedOut": [
+      "Katharine Brown"
+    ],
     "takeoutOrders": 21,
-    "takeoutSales": 278.5,
-    "sdlw": null,
+    "takeoutSales": 236.75,
+    "sdlw": {
+      "date": "Sunday, July 19",
+      "net": 12115.62,
+      "gross": 12708.3,
+      "guests": 439,
+      "orders": 254,
+      "voidAmount": null,
+      "voidItems": 29
+    },
     "fourWeekAvg": null,
     "dayparts": [],
     "rooms": [],
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
+    "netChangeVsSDLWPct": -37.3,
+    "grossChangeVsSDLWPct": -36.8,
     "netChangeVsPrev4Pct": null,
-    "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group), email delivered 6:31 AM PT Sun Jul 26.",
-    "note": "[Rolled to prev-day on Mon Jul 27 7 AM run.] Saturday Jul 25 actuals: net $7,523.05 / gross $7,746.05 / 290 guests / 169 orders / labor 17.0%.",
+    "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Sun Jul 26), email received Mon Jul 27 6:28 AM PT. LOCATION-level email (labor $, void $, dayparts, rooms, checks) had not landed at the 7 AM run. SDLW computed locally against the Sun Jul 19 GROUP email.",
+    "note": "[Rolled to prev-day on Tue Jul 28 7 AM run.] SUN JUL 26 ACTUALS (group-level). Net $7,599.05 / Gross $8,037.30 / 310 guests / 190 orders / avg guest $24.51 / avg order $40.00. Labor 19.3% of net (~$1,466.62) -- a healthy ratio for a Sunday. Discounts 5.5% (~$442.05), refunds $0, deferred $0, 13 void items, 149 card payments. ONE order left open at close; Katharine Brown auto-clocked out. vs SDLW (Sun Jul 19): net -$4,516.57 (-37.3%), gross -36.8%, guests -129 (-29.4%), orders -64 (-25.2%). A much quieter Sunday than the week prior -- Jul 19 was an unusually strong outlier Sunday, so this drop reads as reversion to normal rather than a red flag.",
     "pending": false,
     "pendingFor": null
   },
