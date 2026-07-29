@@ -1,9 +1,9 @@
 {
-  "date": "Tuesday, July 28",
+  "date": "Wednesday, July 29",
   "systemStatus": {
     "level": "warn",
-    "headline": "Tue Jul 28 7 AM run: Toast (Mon Jul 27) and Sling (Tue Jul 28) both landed and parsed cleanly. Google Ads and Yelp Ads refreshed via live Chrome scrape. Yelp's billing sub-page (spend/CPC/CPL/bonus budget) hit a login/password wall this run -- those figures are carried forward from Jul 27 rather than re-entering credentials. No TripAdvisor ad-engagement email in the window. Reviews/reservations/business-profile data was not re-checked this run (out of scope for this data refresh) and reflects the last run's values. GitHub PAT is working.",
-    "detail": "TUE JUL 28 ~7:15 AM PT run (Toast + Sling email parse, live Chrome scrape for Google Ads + Yelp Ads).\n\nTOAST: Group-level Daily Performance Summary for Monday, July 27 landed at 6:25 AM PT and parsed cleanly: Net $4,081.05 / Gross $4,152.65 / 230 guests / 116 orders / labor 14.7%. Rolled prior 'toast' (Sun Jul 26) to toastPrevDay.\n\nSLING: Daily report for Tuesday, July 28 landed at 7:01 AM PT: 8 employees / 8 shifts / 37.83 scheduled hours / 0 uncovered / 0 overtime.\n\nGOOGLE ADS: LIVE scrape of campaigns page (343-687-4835). Yesterday (Jul 27): $50.50 / 7,385 impr / 146 clicks / 0.00 conversions. 7-day totals (Jul 21-27): $399.55 / 42,429 impr / 846 clicks / 205.31 conversions. Billing summary: balance $69.85 (dropped after a $500 threshold charge posted Jul 26), next auto-payment Aug 1 (or $500 threshold), Amex ...1004. No disapprovals seen.\n\nYELP ADS: LIVE scrape of ad performance page. Last 30d: 36k ad impressions (76% of 47.7k total) / 538 ad page visits (57% of 939) / 148 ad leads (60% of 248). 12-month leads: 1,167 ads (61%) vs 757 organic. Attempted to open the billing page for spend/CPC/CPL/bonus-budget figures but it redirected to a Yelp login/password-verification screen (session not fully authenticated for that sub-page) -- did not enter credentials per policy; those figures are carried forward unchanged from the Jul 27 run and flagged for Joal.\n\nTRIPADVISOR: No ad-engagement email from analytics@hm2.tripadvisor.com in the last 24h.\n\nREVIEWS/RESERVATIONS/BUSINESS PROFILE/PAYROLL: Not in scope for this run's data sources; values carried forward unchanged from the prior update."
+    "headline": "Wed Jul 29 4 AM run: email-only (no Chrome-authenticated session available this run, so Google/Yelp Ads live scrape and Business Profile Unreplied-tab check both fell back to Gmail). Toast most recent available is still Mon Jul 27 (Tue Jul 28 summary email not sent yet at 4 AM). Sling most recent available is still Tue Jul 28 (Wed Jul 29 schedule email not sent yet at 4 AM). Reviews: checked BOTH Google Business Profile listings via Gmail notification search back 30 days -- Brewhouse Coffee had a previously-missed unanswered review (Christie Hahn, Jul 19) now added. Keelan Elliott review confirmed as The Brewhouse via direct Business Profile email (no longer unconfirmed/SpotHopper-only). GitHub PAT working.",
+    "detail": "WED JUL 29 4 AM run (Gmail-only, no live browser/Chrome authenticated session this run).\n\nTOAST: No new Daily Performance Summary email for Tuesday, July 28 as of 4 AM (Toast typically sends ~6:30 AM PT, after this run). Most recent complete day remains Monday, July 27: Net $4,081.05 / Gross $4,152.65 / 230 guests / 116 orders / labor 14.7% / 6 voids / $0 refunds. Same-day-last-week (Mon Jul 20) comparison could not be pulled this run due to email size limits.\n\nSLING: No new daily report for Wednesday, July 29 as of 4 AM (Sling typically sends ~7 AM PT, after this run). Most recent schedule remains Tuesday, July 28: 8 employees / 8 shifts / 37.83 hours / 0 uncovered / 0 OT.\n\nGOOGLE ADS / YELP ADS: Not re-scraped this run (no authenticated Chrome session available in this automated run) -- all figures carried forward unchanged from Jul 28.\n\nTRIPADVISOR: No ad-engagement email from analytics@hm2.tripadvisor.com in the window.\n\nGOOGLE REVIEWS: Checked BOTH listings this run via Gmail search (businessprofile-noreply@google.com, 30-day window) since live browser check hit the same no-auth wall as prior runs (redirected to generic Google search results, not the Business Profile manager). THE BREWHOUSE: Keelan Elliott (1-star, 'God Bless America', Jul 28) -- now CONFIRMED as The Brewhouse via direct email (previously flagged unconfirmed/SpotHopper-only), Suzanne Palaszewski (5-star, rating only, Jul 25) and Nate B (5-star, burger/beer review, Jul 23) added as newly-found unanswered items; John Rinaldo and Thuy Anh Le carried forward. BREWHOUSE COFFEE: Christie Hahn (5-star, 'Perfect 10/10 Experience', Jul 19) found and added -- this was previously missed entirely; Paul Chounet (5-star, Jul 25) carried forward. Draft replies for all unanswered items prepared in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.\n\nYELP: 1 actionable inquiry this run -- Vicki A. asking about fish used in tacos (needs Joal's input on current stock before replying; draft avoids naming a specific fish per standing rule)."
   },
   "toast": {
     "date": "Monday, July 27",
@@ -73,7 +73,7 @@
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -183,7 +183,7 @@
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -289,7 +289,7 @@
     },
     "balance": 69.85,
     "nextPayment": "Aug 1, 2026 (or when balance reaches $500)",
-    "paymentMethod": "Amex •••• 1004",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission -- yesterday reads 0, but the 7-day account total now shows 230.17 conversions, so attribution is flowing at the account level.",
     "note": "LIVE scrape Tue Jul 28 ~7:10 AM PT. 4 campaigns (2 drafts paused), 2 served yesterday. Balance dropped to $69.85 after $500 threshold charge posted Jul 26. No disapprovals seen on campaigns page.",
     "stale": false,
@@ -447,8 +447,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-28 -- Tue Jul 28 4 AM email-only run. Live browser check of both Google Business Profile Unreplied tabs FAILED this run (redirected to generic search results, no authenticated session) -- fell back to Gmail notifications per standing instruction. Two new items found (John Rinaldo, Keelan Elliott/SpotHopper); two previously-tracked items (Thuy Anh Le, Paul Chounet) carried forward unverified.",
-    "note": "EMAIL FALLBACK THIS RUN (live browser check failed). THE BREWHOUSE: Thuy Anh Le (5-star, photo-only, carried forward, unverified) + NEW John Rinaldo (1-star, no text, Jul 27) + NEW/UNCONFIRMED Keelan Elliott (1-star, \"God Bless America\", via SpotHopper, listing not confirmed). BREWHOUSE COFFEE: Paul Chounet (5-star, Jul 25, carried forward, unverified) still unanswered. Draft replies prepared in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.",
+    "lastUpdated": "2026-07-29 -- Wed Jul 29 4 AM email-only run. Live browser check of both Google Business Profile Unreplied tabs again redirected to generic search results (no authenticated session) -- fell back to Gmail notification search across a 30-day window for both listings per standing instruction. Found 2 new/updated items on The Brewhouse and 1 previously-missed item on Brewhouse Coffee.",
+    "note": "EMAIL FALLBACK THIS RUN (live browser check failed, same as prior runs). THE BREWHOUSE: Thuy Anh Le (5-star, photo-only, carried forward, unverified) + John Rinaldo (1-star, no text, Jul 27, carried forward) + Keelan Elliott (1-star, \"God Bless America\", Jul 28 -- CONFIRMED via direct Business Profile email, no longer SpotHopper-only/unconfirmed) + NEW Suzanne Palaszewski (5-star, rating only, Jul 25) + NEW Nate B (5-star, burger/beer/service review, Jul 23). BREWHOUSE COFFEE: Paul Chounet (5-star, Jul 25, carried forward) + NEW Christie Hahn (5-star, \"Perfect 10/10 Experience\", Jul 19 -- previously missed entirely). Draft replies prepared in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.",
     "unanswered": [
       {
         "platform": "Google",
@@ -456,8 +456,53 @@
         "date": "2026-07-20",
         "stars": 5,
         "snippet": "(Photo-only submission -- no written review text, 2 photos of the dining room attached.)",
-        "ageDays": 7,
+        "ageDays": 9,
         "isNew": false,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
+      },
+      {
+        "platform": "Google",
+        "author": "John Rinaldo",
+        "date": "2026-07-27",
+        "stars": 1,
+        "snippet": "(No written review text -- rating only.)",
+        "ageDays": 2,
+        "isNew": false,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
+      },
+      {
+        "platform": "Google",
+        "author": "Keelan Elliott",
+        "date": "2026-07-28",
+        "stars": 1,
+        "snippet": "God Bless America \ud83c\uddfa\ud83c\uddf8 (no other review text)",
+        "ageDays": 1,
+        "isNew": false,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
+        "needsVerification": false
+      },
+      {
+        "platform": "Google",
+        "author": "Suzanne Palaszewski",
+        "date": "2026-07-25",
+        "stars": 5,
+        "snippet": "(No written review text -- rating only.)",
+        "ageDays": 4,
+        "isNew": true,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
+      },
+      {
+        "platform": "Google",
+        "author": "Nate B",
+        "date": "2026-07-23",
+        "stars": 5,
+        "snippet": "I really enjoyed this place. The burger was good. Great beer selection. Service was great. Prices were reasonable. I would definitely recommend this place.",
+        "ageDays": 6,
+        "isNew": true,
         "profile": "The Brewhouse",
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
       },
@@ -467,57 +512,54 @@
         "date": "2026-07-25",
         "stars": 5,
         "snippet": "Great place for a cup of coffee and a pastry. Great service and staff!",
-        "ageDays": 2,
+        "ageDays": 4,
         "isNew": false,
         "profile": "Brewhouse Coffee",
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       },
       {
         "platform": "Google",
-        "author": "John Rinaldo",
-        "date": "2026-07-27",
-        "stars": 1,
-        "snippet": "(No written review text -- rating only.)",
-        "ageDays": 1,
+        "author": "Christie Hahn",
+        "date": "2026-07-19",
+        "stars": 5,
+        "snippet": "A Perfect 10/10 Experience! If you are looking for a spot that takes both its craft and its... (truncated in email notification)",
+        "ageDays": 10,
         "isNew": true,
-        "profile": "The Brewhouse",
-        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
-      },
-      {
-        "platform": "Google (via SpotHopper alert)",
-        "author": "Keelan Elliott",
-        "date": "2026-07-27",
-        "stars": 1,
-        "snippet": "God Bless America 🇺🇸 (text truncated in SpotHopper alert; full review not visible)",
-        "ageDays": 1,
-        "isNew": true,
-        "profile": "The Brewhouse (UNCONFIRMED -- no separate Google Business Profile notification found for this review; listing inferred, needs manual verification)",
-        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
-        "needsVerification": true
+        "profile": "Brewhouse Coffee",
+        "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       }
     ],
     "summary": {
       "theBrewhouse": {
         "rating": 4.5,
         "count": 520,
-        "unanswered": 3,
+        "unanswered": 5,
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
       },
       "brewhouseCoffee": {
         "rating": 5.0,
         "count": 4,
-        "unanswered": 1,
+        "unanswered": 2,
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       },
-      "totalUnanswered": 4,
-      "checkedBothListings": false,
-      "method": "Live browser check FAILED this run (redirected to generic Google search, no authenticated session). Fell back to Gmail notification search for businessprofile-noreply@google.com and SpotHopper alerts. Two previously-tracked unanswered reviews carried forward unverified."
+      "totalUnanswered": 7,
+      "checkedBothListings": true,
+      "method": "Live browser check FAILED this run (redirected to generic Google search, no authenticated session) -- same failure mode as prior runs. Fell back to Gmail notification search (businessprofile-noreply@google.com, 30-day window) for BOTH listings explicitly. Rating/count figures carried forward unverified (not re-scraped live)."
     }
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-07-28",
-    "actionable": [],
-    "note": "Tue Jul 28 4 AM run: 3 Yelp marketing/newsletter emails in window (recommendation digests) -- 0 actionable customer inquiries."
+    "lastUpdated": "2026-07-29",
+    "actionable": [
+      {
+        "from": "Vicki A.",
+        "location": "Quartz Hill, CA",
+        "date": "2026-07-28",
+        "question": "What fish do you use for your tacos?",
+        "note": "Needs Joal's input on current fish in stock before replying -- draft response avoids naming a specific fish per standing rule.",
+        "link": "https://biz.yelp.com/login/passwordless/redirect/MLAeaf0a8d95b184bb1874643cd35aec868?return_url=%2Fmessaging%2FFTFaEinJgzqY0ZHQMUSpQQ%2Fthread%2FMjADF1lgoV98sdF4DKsamw"
+      }
+    ],
+    "note": "Wed Jul 29 4 AM run: 3 Yelp marketing/newsletter emails in window (recommendation digests, skipped) -- 1 actionable customer inquiry (Vicki A., fish question)."
   },
   "businessProfile": {
     "lastUpdated": "2026-07-17",
@@ -525,7 +567,7 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-28T07:15:00-07:00",
+  "lastUpdated": "2026-07-29T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Sunday, July 26",
     "net": 7599.05,
@@ -575,7 +617,7 @@
     "pending": false,
     "pendingFor": null
   },
-  "toastPending": false,
+  "toastPending": true,
   "payroll": {
     "lastUpdated": "2026-07-16",
     "dueToday": false,
