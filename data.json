@@ -1,9 +1,9 @@
 {
-  "date": "Friday, July 31",
+  "date": "Saturday, August 1",
   "systemStatus": {
     "level": "warn",
-    "headline": "Fri Jul 31 7:15 AM run: Toast unchanged since 4 AM (Thu Jul 30 GROUP report still latest -- $5,656.00 net / 225 guests / 141 orders / 24.7% labor; LOCATION-level email still hasn't landed). Sling's TODAY (Fri Jul 31) schedule has now landed: 12 employees / 13 shifts / 60.73 hours / 0 uncovered / 0 OT / 2 off -- no longer carried-forward. LIVE Chrome scrape succeeded for both ad platforms this run: Google Ads yesterday (Jul 30) $64.60 spend / 5,231 impr / 0.00 conv (calculating), balance $253.57; a new on-page alert flags PMax-2 and BHC Coffee conversions down ~65% this period (worth a look, may be attribution lag). Yelp Ads last 30d: 38.6k ad impressions, 410 clicks, 155 leads from ads (60% share); Jul 1-30 spend $390. No TripAdvisor ad-engagement email in 5 days. Reviews/business profile/reservations/payroll were NOT re-checked this run (out of scope -- carried forward from last refresh). GitHub PAT is working.",
-    "detail": "FRI JUL 31 7:15 AM RUN (Gmail search for Toast/Sling/TripAdvisor; LIVE Chrome scrape for Google Ads and Yelp Ads).\n\nTOAST: No new Toast email since the 4 AM run. Thursday Jul 30 GROUP-level report remains the latest data on file (received Fri Jul 31 6:35 AM PT): Net $5,656.00 / Gross $5,805.75 / 225 guests / 141 orders / avg guest $25.14 / avg order $40.11 / labor 24.7% / discount 2.6% / 13 void items / 120 card payments / 2 open orders / 3 auto-clocked-out users. LOCATION-level email (labor $, void $, dayparts, rooms, checks, native SDLW) still has not landed.\n\nSLING: TODAY'S (Fri Jul 31) schedule landed at 7:01 AM PT -- 12 scheduled employees, 13 scheduled shifts, 60.73 scheduled hours, 0 uncovered, 0 overtime, 2 off. This is confirmed current data, not a carried-forward reference. Note Julianna Ornelas is double-booked today (Barista 6:30A-12:30P, then Runner 6:00P-9:30P).\n\nGOOGLE ADS: LIVE scrape succeeded (Campaigns + Billing pages). Yesterday (Jul 30): $64.60 spend (up $4.89), 5,231 impressions (down 3,063), avg CPC $0.60 (up $0.21), 0.00 conversions (still calculating -- 7-day account conversions are real at 203.00). 7-day (Jul 24-30): 44,488 impr / $419.77 / 862 clicks / 203.00 conversions. Campaign statuses: World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0, worth archiving); 'Local store visits and promotions-Performance Max-2' still Eligible (Limited) -- limited by budget + all asset groups limited by policy, $58.37/day, opt score 84.9%; 'BHC Coffee | Search | P1 Launch' now shows 'Bid strategy learning' status with opt score 57% (up from the 44-52% range seen on recent runs). NEW: an on-page performance alert states PMax-2 and BHC Coffee conversions decreased 64.99% and 65.79% respectively this period -- flagged for Joal to review, though this may partly reflect the same day-of-week attribution lag seen elsewhere (daily conversions account-wide are reading 0.00/'calculating'). Balance $253.57 (up from $129.34 at last check), next automatic payment Aug 1 or at the $500 threshold, Amex ...1004. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign impressions/clicks/cost breakdown was not re-confirmed this run since the campaigns table's visible columns (Conv value/Conversions/Conv rate/Cost per conv) were all pending attribution -- account-level yesterday and 7-day totals above are live and current.\n\nYELP ADS: LIVE scrape succeeded on the Ad performance tab. Last 30 days: 38.6k ad impressions (76% of 50.6k total), 410 ad clicks, 562 page visits from ads (60% of 944 total), 155 leads from ads (60% of 257 total). 12-month ad contribution: 1,179 ad leads vs 765 organic (61/39 split, 1,944 total); forecast leads 9 (down from 17 last run). Jul 1-30 billing period: $390 ad spend, avg CPC $0.95, avg CPL $2.52. The Billing page redirected to a Yelp password-verification wall -- not entered per standing policy against submitting credentials at login walls, so bonus budget remaining is still unconfirmed.\n\nTRIPADVISOR: No email from analytics@hm2.tripadvisor.com found in the last 5 days. Most recent on file remains from Jul 20.\n\nNOT REFRESHED THIS RUN (out of scope per task instructions): reviews, businessProfile, reservations, payroll, yelpInquiries -- all carried forward unchanged from the prior refresh."
+    "headline": "Sat Aug 1 4 AM run: Toast still on Thu Jul 30 GROUP data ($5,656 net / 225 guests / 141 orders / 24.7% labor) -- Fri Jul 31 hasn't landed. Sling still on Fri Jul 31 schedule (12 employees / 13 shifts / 60.73 hrs / 0 uncovered) -- Sat Aug 1 hasn't landed. Google Business Profile console not authenticated (no live Unreplied-tab check) -- cross-checked via Maps + Gmail instead: NEW 5-star unreplied review from Jo Mingam at The Brewhouse (522 reviews, 4.5 stars); 2 previously-flagged items carried forward unconfirmed. Brewhouse Coffee unchanged at 5.0 stars / 4 reviews, no new review email. Google Ads: 4 report-ready emails, no disapprovals, no live scrape this run. No TripAdvisor ad email. GitHub PAT working.",
+    "detail": "SAT AUG 1 4 AM RUN (Gmail search for Toast/Sling/Reviews/Yelp/Google Ads/TripAdvisor; Google Maps used as a fallback source for review ratings/counts since the Business Profile console redirected to a logged-out search page).\n\nTOAST: No new Toast email since Thu Jul 30 GROUP-level report. That remains the latest data on file.\n\nSLING: No new Sling report for Sat Aug 1 at run time (4 AM) -- Fri Jul 31 schedule (12 employees, 13 shifts, 60.73 hours, 0 uncovered, 0 OT, 2 off) is the most recent confirmed data.\n\nREVIEWS: Business Profile console not authenticated (redirected to logged-out Google Search when navigating to the reviews URL). Fell back to public Google Maps listings for both profiles: The Brewhouse 4.5 stars / 522 reviews (up 1 from last check), Brewhouse Coffee 5.0 stars / 4 reviews (unchanged). Gmail confirms a NEW unreplied 5-star review from Jo Mingam on The Brewhouse (posted Jul 31, dinner visit). No Brewhouse Coffee review notification in the last 3 days. Carried forward 2 previously-flagged unreplied Brewhouse items (John Rinaldo 1-star, Matthew Lourie 5-star) since the Unreplied tab couldn't be directly re-checked -- Joal should verify these are still open.\n\nGOOGLE ADS: Gmail-only this run -- 4 report-ready notification emails, no disapprovals or billing alerts. Did not perform a live Chrome scrape, so performance figures are carried forward from Fri Jul 31.\n\nTRIPADVISOR: No ad-engagement email in the last 2 days.\n\nYELP: 1 marketing email only, no new actionable inquiries. Vicki A.'s open question carried forward.\n\nGitHub PAT is working."
   },
   "toast": {
     "date": "Thursday, July 30",
@@ -44,7 +44,7 @@
     "grossChangeVsSDLWPct": 10.45,
     "netChangeVsPrev4Pct": null,
     "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Thu Jul 30), email received Thu Jul 30 1:35 PM PT (13:35:54 local per header) / 20:35:54 UTC.",
-    "note": "THU JUL 30 ACTUALS (group-level). Net $5,656.00 / Gross $5,805.75 / 225 guests / 141 orders / avg guest $25.14 / avg order $40.11. Labor 24.7% of net, discounts 2.6% of gross, refunds $0, deferred $0, 13 void items (up from 7 prior day -- worth a glance), 120 card payments, 2 open orders, 3 auto-clocked-out users (Harmony Willson, Fabian Victoria, Brewhouse Admin). Takeout 3 orders/$42.00, dine-in 1 order/$8.50, delivery 0. vs SAME DAY LAST WEEK (Thu Jul 23: net $5,156.70 / gross $5,256.30 / 223 guests / 132 orders / labor 31.9%): net +9.7%, gross +10.5%, guests +2, orders +9, labor pct improved ~7.2 pts. Fri Jul 31 4 AM run: LOCATION-level email (labor $, void $, dayparts, rooms, checks, SDLW-native) had not landed at run time -- group-level only. [Fri Jul 31 7:15 AM run: re-checked Gmail, no new Toast email since the 4 AM run -- LOCATION-level email for Thu Jul 30 (labor $, void $, dayparts, rooms, checks, SDLW-native) still has not landed. GROUP-level figures above remain the latest available.]",
+    "note": "THU JUL 30 ACTUALS (group-level). Net $5,656.00 / Gross $5,805.75 / 225 guests / 141 orders / avg guest $25.14 / avg order $40.11. Labor 24.7% of net, discounts 2.6% of gross, refunds $0, deferred $0, 13 void items (up from 7 prior day -- worth a glance), 120 card payments, 2 open orders, 3 auto-clocked-out users (Harmony Willson, Fabian Victoria, Brewhouse Admin). Takeout 3 orders/$42.00, dine-in 1 order/$8.50, delivery 0. vs SAME DAY LAST WEEK (Thu Jul 23: net $5,156.70 / gross $5,256.30 / 223 guests / 132 orders / labor 31.9%): net +9.7%, gross +10.5%, guests +2, orders +9, labor pct improved ~7.2 pts. Fri Jul 31 4 AM run: LOCATION-level email (labor $, void $, dayparts, rooms, checks, SDLW-native) had not landed at run time -- group-level only. [Fri Jul 31 7:15 AM run: re-checked Gmail, no new Toast email since the 4 AM run -- LOCATION-level email for Thu Jul 30 (labor $, void $, dayparts, rooms, checks, SDLW-native) still has not landed. GROUP-level figures above remain the latest available.] [Sat Aug 1 4 AM run: re-checked Gmail, still no new Toast email since Thu Jul 30 GROUP report -- Fri Jul 31 data has not landed at run time. GROUP-level Thu Jul 30 figures remain latest available.]",
     "pending": true,
     "pendingFor": "Friday, July 31"
   },
@@ -99,9 +99,9 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 2,
-    "pending": false,
-    "nextDayPending": false,
-    "stale": false,
+    "pending": true,
+    "nextDayPending": true,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -169,7 +169,7 @@
         "time": "6:00P - 11:45P"
       }
     ],
-    "note": "Fri Jul 31 ~7:15 AM PT run: Sling daily report for TODAY (Fri Jul 31) landed at 7:01 AM PT (14:01:20 UTC) -- 12 scheduled employees / 13 scheduled shifts / 60.73 scheduled hours / 0 uncovered / 0 overtime / 2 employees off. Confirmed current, not carried forward."
+    "note": "Fri Jul 31 ~7:15 AM PT run: Sling daily report for TODAY (Fri Jul 31) landed at 7:01 AM PT (14:01:20 UTC) -- 12 scheduled employees / 13 scheduled shifts / 60.73 scheduled hours / 0 uncovered / 0 overtime / 2 employees off. Confirmed current, not carried forward. [Sat Aug 1 4 AM run: no new Sling report for TODAY (Sat Aug 1) has landed yet -- Fri Jul 31 schedule above is the most recent confirmed data. Sling typically sends ~7 AM PT.]"
   },
   "slingLastKnown": {
     "date": "Friday, July 31",
@@ -259,9 +259,9 @@
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 2,
-    "pending": false,
-    "nextDayPending": false,
-    "stale": false,
+    "pending": true,
+    "nextDayPending": true,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -329,10 +329,10 @@
         "time": "6:00P - 11:45P"
       }
     ],
-    "note": "Fri Jul 31 ~7:15 AM PT run: Sling daily report for TODAY (Fri Jul 31) landed at 7:01 AM PT (14:01:20 UTC) -- 12 scheduled employees / 13 scheduled shifts / 60.73 scheduled hours / 0 uncovered / 0 overtime / 2 employees off. Confirmed current, not carried forward."
+    "note": "Fri Jul 31 ~7:15 AM PT run: Sling daily report for TODAY (Fri Jul 31) landed at 7:01 AM PT (14:01:20 UTC) -- 12 scheduled employees / 13 scheduled shifts / 60.73 scheduled hours / 0 uncovered / 0 overtime / 2 employees off. Confirmed current, not carried forward. [Sat Aug 1 4 AM run: no new Sling report for TODAY (Sat Aug 1) has landed yet -- Fri Jul 31 schedule above is the most recent confirmed data. Sling typically sends ~7 AM PT.]"
   },
   "googleAds": {
-    "lastUpdated": "Fri Jul 31 ~7:15 AM PT run: LIVE Chrome scrape (Campaigns + Billing pages, logged in and read successfully).",
+    "lastUpdated": "Sat Aug 1 4 AM run: Gmail-only check (no live Chrome scrape performed this run). 4 'Your Google Ads report is ready' notification emails in the last ~36 hours (Brewhouse Daily Campaign Report x2, Campaign performance x2). No disapproval or billing-alert emails found. Performance figures below are carried forward from the last live scrape (Fri Jul 31 ~7:15 AM PT) -- not refreshed this run.",
     "yesterday": {
       "date": "July 30, 2026",
       "spend": 64.6,
@@ -420,9 +420,9 @@
     },
     "balance": 253.57,
     "nextPayment": "Aug 1, 2026 (or when balance reaches $500.00)",
-    "paymentMethod": "Amex •••• 1004",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "conversionTag": "Reservation Form Submission -- daily figures still read 0.00 ('calculating projections'), but 7-day and account-level totals show real conversion volume (189.00 in the last 7 days), so attribution is flowing at the account level, just not same-day.",
-    "note": "LIVE scrape Fri Jul 31 ~7:15 AM PT (campaigns + billing). NEW ALERT: an on-page banner flagged 'Local store visits and promotions-Performance Max-2' and 'BHC Coffee | Search | P1 Launch' conversions down 64.99% and 65.79% respectively this period -- worth a look, though daily conversions are still showing as 'calculating' account-wide so this may partly be an attribution-lag artifact. BHC Coffee's optimization score jumped to 57% (from ~44-52% on recent runs) and its status now reads 'Bid strategy learning' (was cycling Paused/Eligible in prior days) -- reactivation appears intentional/stable. PMax-2 unchanged: $58.37/day, opt 84.9%, still Limited by budget + all asset groups limited by policy. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. Balance $253.57 (up from $129.34), next auto-payment Aug 1 or at $500 threshold, Amex ••1004. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign impressions/clicks/cost were not re-confirmed this run (campaign table columns showed Conv value/Conversions/Conv rate/Cost-per-conv only, all reading 0.00 pending attribution) -- account-level yesterday and 7-day figures above are live and current.",
+    "note": "LIVE scrape Fri Jul 31 ~7:15 AM PT (campaigns + billing). NEW ALERT: an on-page banner flagged 'Local store visits and promotions-Performance Max-2' and 'BHC Coffee | Search | P1 Launch' conversions down 64.99% and 65.79% respectively this period -- worth a look, though daily conversions are still showing as 'calculating' account-wide so this may partly be an attribution-lag artifact. BHC Coffee's optimization score jumped to 57% (from ~44-52% on recent runs) and its status now reads 'Bid strategy learning' (was cycling Paused/Eligible in prior days) -- reactivation appears intentional/stable. PMax-2 unchanged: $58.37/day, opt 84.9%, still Limited by budget + all asset groups limited by policy. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. Balance $253.57 (up from $129.34), next auto-payment Aug 1 or at $500 threshold, Amex \u2022\u20221004. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign impressions/clicks/cost were not re-confirmed this run (campaign table columns showed Conv value/Conversions/Conv rate/Cost-per-conv only, all reading 0.00 pending attribution) -- account-level yesterday and 7-day figures above are live and current.",
     "stale": false,
     "authError": false,
     "reportsLast24h": 2,
@@ -470,7 +470,7 @@
     "note_20260728": "Tue Jul 28 ~7:10 AM LIVE scrape: Yesterday (Jul 27) $50.50 (down $5.81) / 7,385 impr (up 1,228) / 146 clicks (up 8) / $0.35 avg CPC / 1.98% CTR / 0.00 conversions. 7-day totals (Jul 21-27): $399.55 / 42,429 impr / 846 clicks / 205.31 conversions. Balance $69.85, next auto-payment Aug 1 (or $500 threshold), Amex ...1004.",
     "note_20260729": "Wed Jul 29 ~7:15 AM LIVE scrape (follow-up to 4 AM email-only pass): Yesterday (Jul 28) $59.51 (up $9.01) / 5,969 impr (down 1,415) / 141 clicks (up ~3) / CTR 2.36% / CPC $0.42 / 0 conv (calculating). PMax-2 budget now $58.37/day (was $43.37/day) -- 5,966 impr, 141 clicks, opt 85%, Limited by budget + policy. BHC Coffee now PAUSED (was Eligible as of Jul 27) -- 0/0 yesterday but 1,308 impr/85 clicks/23 conv over the last 7 days. World Cup HQ 2026 and Oldest SB Brewery still paused (0/0). Billing: balance $129.34 (up from $69.85 at 4 AM) after $500 threshold charge Jul 26; next payment Aug 1.",
     "note_20260730": "Thu Jul 30 ~7:15 AM LIVE scrape (follow-up to 4 AM email-only pass): Yesterday (Jul 29) $59.71 (up $0.20) / 8,294 impr (up 2,325) / ~153 clicks (derived, up ~12) / CPC $0.39 (down $0.03) / 0 conv (calculating). NOTABLE: 'BHC Coffee | Search | P1 Launch' status now reads 'Bid strategy learning' -- back from Paused as of the Jul 29 scrape; worth confirming this reactivation was intentional. 'Local store visits and promotions-Performance Max-2' still Eligible (Limited) / Limited by budget, opt score 84.9%, $58.37/day. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused. Per-campaign yesterday cost/impr breakdown and 7-day totals were not re-read this run (campaigns table showed conv/conv-value columns only); balance/billing page also not re-visited -- those figures below are carried forward from the Jul 29 ~7:15 AM scrape.",
-    "note_20260731": "LIVE scrape Fri Jul 31 ~7:15 AM PT (campaigns + billing). NEW ALERT: an on-page banner flagged 'Local store visits and promotions-Performance Max-2' and 'BHC Coffee | Search | P1 Launch' conversions down 64.99% and 65.79% respectively this period -- worth a look, though daily conversions are still showing as 'calculating' account-wide so this may partly be an attribution-lag artifact. BHC Coffee's optimization score jumped to 57% (from ~44-52% on recent runs) and its status now reads 'Bid strategy learning' (was cycling Paused/Eligible in prior days) -- reactivation appears intentional/stable. PMax-2 unchanged: $58.37/day, opt 84.9%, still Limited by budget + all asset groups limited by policy. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. Balance $253.57 (up from $129.34), next auto-payment Aug 1 or at $500 threshold, Amex ••1004. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign impressions/clicks/cost were not re-confirmed this run (campaign table columns showed Conv value/Conversions/Conv rate/Cost-per-conv only, all reading 0.00 pending attribution) -- account-level yesterday and 7-day figures above are live and current."
+    "note_20260731": "LIVE scrape Fri Jul 31 ~7:15 AM PT (campaigns + billing). NEW ALERT: an on-page banner flagged 'Local store visits and promotions-Performance Max-2' and 'BHC Coffee | Search | P1 Launch' conversions down 64.99% and 65.79% respectively this period -- worth a look, though daily conversions are still showing as 'calculating' account-wide so this may partly be an attribution-lag artifact. BHC Coffee's optimization score jumped to 57% (from ~44-52% on recent runs) and its status now reads 'Bid strategy learning' (was cycling Paused/Eligible in prior days) -- reactivation appears intentional/stable. PMax-2 unchanged: $58.37/day, opt 84.9%, still Limited by budget + all asset groups limited by policy. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. Balance $253.57 (up from $129.34), next auto-payment Aug 1 or at $500 threshold, Amex \u2022\u20221004. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign impressions/clicks/cost were not re-confirmed this run (campaign table columns showed Conv value/Conversions/Conv rate/Cost-per-conv only, all reading 0.00 pending attribution) -- account-level yesterday and 7-day figures above are live and current."
   },
   "yelpAds": {
     "lastUpdated": "Fri Jul 31 ~7:15 AM PT run: LIVE Chrome scrape (Ad performance tab read successfully). Billing page redirected to a Yelp password-verification wall -- per standing policy we do not enter credentials there, so bonus budget remaining is still unconfirmed.",
@@ -512,8 +512,8 @@
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "Fri Jul 31 ~7:15 AM PT run: no ad-engagement email from analytics@hm2.tripadvisor.com in the last 5 days.",
-    "note": "Fri Jul 31 7:15 AM run: no email from analytics@hm2.tripadvisor.com found in the last 5 days (search window newer_than:5d). Most recent TripAdvisor email on file remains from Jul 20."
+    "lastUpdated": "Sat Aug 1 4 AM run: no email from analytics@hm2.tripadvisor.com found in the last 2 days.",
+    "note": "Sat Aug 1 4 AM run: no TripAdvisor ad-engagement email found (search window newer_than:2d). Most recent TripAdvisor email on file remains from Jul 20."
   },
   "reservations": {
     "lastUpdated": "2026-08-01",
@@ -552,16 +552,27 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-07-31 -- Fri Jul 31 4 AM run. Chrome browser session was NOT authenticated to Google Business Profile this run (navigating to the reviews URL redirected to a logged-out Google Search results page) -- could not independently re-verify the Unreplied tabs today.",
-    "note": "COULD NOT LIVE-VERIFY THIS RUN -- Chrome was not logged into the Business Profile, so this is the carried-forward state from the last successful live check (Thu Jul 30 4 AM). THE BREWHOUSE (4.5 stars, 521 reviews as of last check): 2 unreplied -- John Rinaldo (1-star, rating-only, posted Jul 27) and Matthew Lourie (5-star, rating-only, posted Jul 16). BREWHOUSE COFFEE (5.0 stars, 4 reviews as of last check): 0 unreplied. Joal should confirm both Unreplied tabs directly today since this wasn't re-verified live. Draft replies for the 2 open Brewhouse items are in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.",
+    "lastUpdated": "2026-08-01 -- Sat Aug 1 4 AM run. Chrome was NOT authenticated to the Business Profile console (business.google.com redirected to a logged-out Google Search results page). Cross-checked both listings via public Google Maps instead: The Brewhouse now shows 4.5 stars / 522 reviews (up from 521), Brewhouse Coffee shows 5.0 stars / 4 reviews (unchanged). Gmail confirms one NEW unreplied review: Jo Mingam, 5-star, The Brewhouse, posted Jul 31 (confirmed via both the Business Profile notification and the SpotHopper suggested-response email). No Brewhouse Coffee review notification email in the last 3 days. The 2 previously-flagged Brewhouse items (John Rinaldo, Matthew Lourie) could not be re-confirmed as replied/unreplied since the Unreplied tab itself wasn't accessible -- carried forward as still open.",
+    "note": "COULD NOT LIVE-VERIFY THE UNREPLIED TAB THIS RUN -- Business Profile console redirected to logged-out Google Search. THE BREWHOUSE (4.5 stars, 522 reviews): 3 unreplied carried/confirmed -- Jo Mingam (5-star, NEW, posted Jul 31, dinner review) + John Rinaldo (1-star, rating-only, posted Jul 27, carried forward) + Matthew Lourie (5-star, rating-only, posted Jul 16, carried forward). BREWHOUSE COFFEE (5.0 stars, 4 reviews): 0 unreplied, no new review email found in 3 days -- carried forward, not independently re-verified via console today. Joal should confirm both Unreplied tabs directly. Draft replies for all 3 open Brewhouse items are in this morning's brief email -- NOTHING POSTED, Joal approves every reply before it goes out.",
     "unanswered": [
+      {
+        "platform": "Google",
+        "author": "Jo Mingam",
+        "date": "2026-07-31",
+        "stars": 5,
+        "snippet": "We visited for dinner this time last year and really enjoyed it. So much so, we went back last night on our first night back in Santa Barbara. It did not disappoint! The food was delicious, we had the special salad, tacos and a wet burrito. All highly recommended.",
+        "ageDays": 1,
+        "isNew": true,
+        "profile": "The Brewhouse",
+        "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
+      },
       {
         "platform": "Google",
         "author": "John Rinaldo",
         "date": "2026-07-27",
         "stars": 1,
         "snippet": "(No written review text -- rating only. Sub-scores: Food 1/5, Service 1/5, Atmosphere 1/5.)",
-        "ageDays": 3,
+        "ageDays": 5,
         "isNew": false,
         "profile": "The Brewhouse",
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
@@ -572,7 +583,7 @@
         "date": "2026-07-16",
         "stars": 5,
         "snippet": "(No written review text -- rating only. Local Guide, 26 reviews, 156 photos.)",
-        "ageDays": 14,
+        "ageDays": 16,
         "isNew": false,
         "profile": "The Brewhouse",
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
@@ -581,8 +592,8 @@
     "summary": {
       "theBrewhouse": {
         "rating": 4.5,
-        "count": 521,
-        "unanswered": 2,
+        "count": 522,
+        "unanswered": 3,
         "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews"
       },
       "brewhouseCoffee": {
@@ -591,13 +602,13 @@
         "unanswered": 0,
         "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews"
       },
-      "totalUnanswered": 2,
-      "checkedBothListings": false,
-      "method": "NOT independently re-verified this run (Chrome not authenticated to Business Profile) -- carried forward from last successful live check on Thu Jul 30 4 AM. Recommend Joal spot-check both Unreplied tabs directly today."
+      "totalUnanswered": 3,
+      "checkedBothListings": true,
+      "method": "Business Profile console not authenticated this run -- cross-checked both listings via public Google Maps (ratings/counts) plus Gmail (new review notifications). Not a full Unreplied-tab re-verification; recommend Joal spot-check both tabs directly."
     }
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-07-31",
+    "lastUpdated": "2026-08-01",
     "actionable": [
       {
         "from": "Vicki A.",
@@ -608,7 +619,7 @@
         "link": "https://biz.yelp.com/login/passwordless/redirect/MLAeaf0a8d95b184bb1874643cd35aec868?return_url=%2Fmessaging%2FFTFaEinJgzqY0ZHQMUSpQQ%2Fthread%2FMjADF1lgoV98sdF4DKsamw"
       }
     ],
-    "note": "Fri Jul 31 4 AM run: Gmail search for Yelp turned up only 2 marketing/newsletter blasts (skipped), no new actionable customer inquiries. Vicki A.'s fish-for-tacos question (Jul 28) may still be open in the Yelp inbox -- carried forward below since it wasn't reconfirmed as resolved."
+    "note": "Sat Aug 1 4 AM run: Gmail search for Yelp turned up only 1 marketing/newsletter blast (skipped), no new actionable customer inquiries surfaced. Vicki A.'s fish-for-tacos question (Jul 28) may still be open in the Yelp inbox -- carried forward since not reconfirmed as resolved."
   },
   "businessProfile": {
     "lastUpdated": "2026-07-17",
@@ -616,7 +627,7 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-07-31T07:14:24-07:00",
+  "lastUpdated": "2026-08-01T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Wednesday, July 29",
     "net": 5242.85,
