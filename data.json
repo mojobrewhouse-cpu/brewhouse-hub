@@ -1,9 +1,9 @@
 {
-  "date": "Sunday, August 2",
+  "date": "Monday, August 3",
   "systemStatus": {
     "level": "attention",
-    "headline": "Sun Aug 2 7 AM run: Toast Aug 1 GROUP report landed ($8,822.62 net / 354 guests / 225 orders), up 17.3% vs SDLW (Sat Jul 25). Labor 18.5% (up from 17.0% SDLW) despite the stronger day. Sling Aug 2 (today) schedule landed: 11 employees, 51.5 hrs, 0 uncovered, 0 OT.",
-    "detail": "SUN AUG 2 7 AM PT run (Gmail search for Toast/Sling/TripAdvisor; live Chrome check for Google Ads and Yelp Ads). Toast Aug 1 (Saturday) GROUP report received Sun Aug 2 ~6:32 AM PT -- now latest actual, Fri Jul 31 rolled to prev-day. Sling Aug 2 (today) schedule delivered ~7:01 AM PT -- Monday Aug 3 schedule not yet available. No TripAdvisor ad-engagement email in the last 48h. Reviews, Business Profile, Reservations, Yelp Inquiries, and Payroll were not re-checked this run (outside the scope of this data refresh) -- values shown are carried over from the prior run."
+    "headline": "Mon Aug 3 4 AM run: No new Toast day landed (Sat Aug 1 net $8,822.62 / 354 guests still latest actual; Sun Aug 2 report not yet in). Sling schedule also unchanged -- still showing Sun Aug 2 (11 employees, 51.5 hrs, 0 uncovered); Mon Aug 3 schedule not yet delivered. Reviews/Ads not re-verified live this run (Gmail-only, no Chrome access in automated mode) -- values carried from last live check (Sun Aug 2).",
+    "detail": "MON AUG 3 4 AM PT run (Gmail-only: Toast/Sling/Google review notifications/SpotHopper/Yelp/Google Ads/TripAdvisor emails). No live Chrome browser check available in this unattended run, so Google Ads, Yelp Ads, and the Google Business 'Unreplied' review tabs were NOT re-verified live -- all such values are carried over from the prior run (Sun Aug 2 7 AM, which did have live Chrome access) and should be treated as potentially stale. Gmail this run surfaced 3 additional SpotHopper 'new review' notifications for The Brewhouse (William 4-star, alicia thomas 5-star, Jo Mingam 5-star) beyond the 2 known-unreplied (Seanit Rover, John Rinaldo) -- reply status for these 3 could not be confirmed without live Chrome access; Joal should verify on the dashboard directly."
   },
   "toast": {
     "date": "Saturday, August 1",
@@ -54,7 +54,7 @@
     "grossChangeVsSDLWPct": 17.3,
     "netChangeVsPrev4Pct": null,
     "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Sat Aug 1), email received Sun Aug 2.",
-    "note": "SAT AUG 1 ACTUALS (group-level, latest available as of Sun Aug 2 7 AM run). Net $8,822.62 / Gross $9,086.10 / 354 guests / 225 orders / avg guest $24.92 / labor 18.5%. Vs SDLW (Sat Jul 25): net up 17.27%, gross up 17.3%, guests up 64 (+22.1%), orders up 56 (+33.1%), labor % up 1.5pts (17.0% -> 18.5%) despite the much stronger day. Voids improved (13 -> 11).",
+    "note": "SAT AUG 1 ACTUALS (group-level, latest available as of Sun Aug 2 7 AM run). Net $8,822.62 / Gross $9,086.10 / 354 guests / 225 orders / avg guest $24.92 / labor 18.5%. Vs SDLW (Sat Jul 25): net up 17.27%, gross up 17.3%, guests up 64 (+22.1%), orders up 56 (+33.1%), labor % up 1.5pts (17.0% -> 18.5%) despite the much stronger day. Voids improved (13 -> 11). [Confirmed still latest as of Mon Aug 3 4 AM run -- no Sun Aug 2 Toast email received yet.]",
     "pending": true,
     "pendingFor": "Sunday, August 2"
   },
@@ -107,7 +107,7 @@
     "grossChangeVsSDLWPct": 17.3,
     "netChangeVsPrev4Pct": null,
     "source": "GROUP-level Daily Performance Summary (The Brewhouse Santa Barbara Group, Sat Aug 1), email received Sun Aug 2.",
-    "note": "SAT AUG 1 ACTUALS (group-level, latest available as of Sun Aug 2 7 AM run). Net $8,822.62 / Gross $9,086.10 / 354 guests / 225 orders / avg guest $24.92 / labor 18.5%. Vs SDLW (Sat Jul 25): net up 17.27%, gross up 17.3%, guests up 64 (+22.1%), orders up 56 (+33.1%), labor % up 1.5pts (17.0% -> 18.5%) despite the much stronger day. Voids improved (13 -> 11).",
+    "note": "SAT AUG 1 ACTUALS (group-level, latest available as of Sun Aug 2 7 AM run). Net $8,822.62 / Gross $9,086.10 / 354 guests / 225 orders / avg guest $24.92 / labor 18.5%. Vs SDLW (Sat Jul 25): net up 17.27%, gross up 17.3%, guests up 64 (+22.1%), orders up 56 (+33.1%), labor % up 1.5pts (17.0% -> 18.5%) despite the much stronger day. Voids improved (13 -> 11). [Confirmed still latest as of Mon Aug 3 4 AM run -- no Sun Aug 2 Toast email received yet.]",
     "pending": true,
     "pendingFor": "Sunday, August 2"
   },
@@ -121,7 +121,7 @@
     "employeesOff": 2,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -179,7 +179,7 @@
         "time": "4:30P - 10:00P"
       }
     ],
-    "note": "SUN AUG 2 schedule (today's), email delivered 7:01 AM PT, latest available as of Sun Aug 2 7 AM run. 0 uncovered shifts, 0 OT flags. Monday Aug 3 schedule not yet delivered."
+    "note": "SUN AUG 2 schedule (unchanged) -- carried forward as of Mon Aug 3 4 AM run. Monday Aug 3 schedule email not yet delivered (Sling typically sends ~7 AM PT, after this run)."
   },
   "slingLastKnown": {
     "date": "Sunday, August 2",
@@ -191,7 +191,7 @@
     "employeesOff": 2,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -249,7 +249,7 @@
         "time": "4:30P - 10:00P"
       }
     ],
-    "note": "SUN AUG 2 schedule (today's), email delivered 7:01 AM PT, latest available as of Sun Aug 2 7 AM run. 0 uncovered shifts, 0 OT flags. Monday Aug 3 schedule not yet delivered."
+    "note": "SUN AUG 2 schedule (unchanged) -- carried forward as of Mon Aug 3 4 AM run. Monday Aug 3 schedule email not yet delivered (Sling typically sends ~7 AM PT, after this run)."
   },
   "slingToday": {
     "date": "Sunday, August 2",
@@ -261,7 +261,7 @@
     "employeesOff": 2,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "staff": [
       {
         "name": "Isael Salvador Narciso",
@@ -319,7 +319,7 @@
         "time": "4:30P - 10:00P"
       }
     ],
-    "note": "SUN AUG 2 schedule (today's), email delivered 7:01 AM PT, latest available as of Sun Aug 2 7 AM run. 0 uncovered shifts, 0 OT flags. Monday Aug 3 schedule not yet delivered."
+    "note": "SUN AUG 2 schedule (unchanged) -- carried forward as of Mon Aug 3 4 AM run. Monday Aug 3 schedule email not yet delivered (Sling typically sends ~7 AM PT, after this run)."
   },
   "googleAds": {
     "lastUpdated": "LIVE Chrome scrape Sun Aug 2 ~7:15 AM PT (Campaigns table read successfully this run).",
@@ -484,8 +484,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-08-02 -- Sun Aug 2 4 AM run. Live browser check of BOTH Google Business Profile 'Unreplied' tabs via Chrome MCP (source of truth, not email fallback).",
-    "note": "LIVE VERIFIED THIS RUN. THE BREWHOUSE (4.5 stars, 522 reviews): 2 unreplied. BREWHOUSE COFFEE (5.0 stars, 4 reviews): 0 unreplied -- Google's own UI confirmed 'You've replied to new reviews.'",
+    "lastUpdated": "2026-08-03 -- Mon Aug 3 4 AM run. Gmail-only (no live Chrome check available in automated mode) -- values carried from last live-verified check (Sun Aug 2).",
+    "note": "CARRIED FORWARD from last live check (Sun Aug 2): THE BREWHOUSE (4.5 stars, 522 reviews): 2 confirmed unreplied (Seanit Rover, John Rinaldo). BREWHOUSE COFFEE (5.0 stars, 4 reviews): 0 unreplied as of last live check. NEW THIS RUN (Gmail/SpotHopper notifications, NOT live-verified): William (4-star, 'Good burgers. Good beer selection.'), alicia thomas (5-star, husband's 70th birthday), Jo Mingam (5-star, returning guest) -- reply status unconfirmed without live Chrome access, Joal should check dashboard directly.",
     "unanswered": [
       {
         "platform": "Google",
@@ -549,7 +549,7 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-08-02T07:13:00-07:00",
+  "lastUpdated": "2026-08-03T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Friday, July 31",
     "net": 7140.44,
