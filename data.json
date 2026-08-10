@@ -1,133 +1,340 @@
 {
-  "date": "Sunday, August 9",
+  "date": "Monday, August 10",
   "systemStatus": {
     "level": "attention",
-    "headline": "Sun Aug 9 ~4 AM run: No new Toast or Sling emails since the last run -- still showing Toast's Fri Aug 7 summary (net $9,606.90 / 399 guests / 255 orders) and Sling's Sat Aug 8 schedule (15 employees / 73.74 hrs / 0 OT); both should refresh later this morning. LIVE-verified Google reviews via Chrome: The Brewhouse has 2 unanswered (Donald Clay 1-star botulism claim, John Rinaldo 1-star no-text) with drafts ready; Brewhouse Coffee has 0 unanswered. Google Ads payment-method alert from Aug 8 is UNRESOLVED and not re-verified this run -- still needs Joal's attention. No new TripAdvisor ad-engagement email.",
-    "detail": "SUN AUG 9 ~4:00 AM RUN.\n\nTOAST: No new Daily Performance Summary email received since Fri Aug 7's report (landed Sat Aug 8 6:28 AM PT). Yesterday's (Aug 8) summary typically lands ~6:30-7 AM, after this run -- so figures below are still Fri Aug 7's: Net $9,606.90 (gross $10,003.98), 399 guests, 255 orders, labor 22.2% of net, 20 void items. Will refresh on next run once Toast sends it.\n\nSLING: No new schedule email received since Sat Aug 8's report (received 7:01 AM PT, before this run window). Today's (Sun Aug 9) schedule email typically lands ~7 AM, after this run -- so figures below are still Sat Aug 8's: 15 scheduled employees, 15 shifts, 73.74 scheduled hours, 0 uncovered, 0 overtime, 0 off.\n\nREVIEWS: LIVE-verified via Chrome (business.google.com Unreplied tab) for BOTH profiles this run -- source of truth, not just email. The Brewhouse: 2 unanswered -- Donald Clay (1-star, Aug 7, claims botulism from a taco) and John Rinaldo (1-star, ~2 weeks old, no written text, just low category ratings). alicia thomas's 5-star (Aug 3) review, carried forward as unanswered in the prior run, is now CONFIRMED replied and removed from the list. Brewhouse Coffee: LIVE-verified 0 unanswered (Google explicitly showed 'You've replied to new reviews'). Star ratings unchanged: Brewhouse 4.5/524 reviews, Coffee 5.0/4 reviews.\n\nGOOGLE ADS: Not re-scraped live this run (email-only monitoring). 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance') -- no disapproval language in subjects/snippets. IMPORTANT: the red 'New form of payment required' banner flagged on Sat Aug 8 has NOT been re-verified as resolved -- treat as still open until confirmed.\n\nYELP ADS: No new actionable emails found (only a delivery-recs marketing blast, skipped per standing rule). Yelp for Business session status not re-checked this run; last known state (Aug 8) was logged out.\n\nTRIPADVISOR: No ad-engagement email from analytics@hm2.tripadvisor.com in the last 2 days.\n\nGitHub PAT working."
+    "headline": "Mon Aug 10 4AM run: Sat Aug 8 Toast summary landed -- net $11,235 (+27.3% vs SDLW), 377 guests, but VOIDS $2,121.50 (vs $69 SDLW) need manager review. Sunday's Toast report + Monday's Sling schedule land ~7 AM. LIVE-verified reviews: Brewhouse 2 unanswered (Donald Clay botulism 1-star, John Rinaldo 1-star), Coffee 0 unanswered. Google Ads 'payment method' alert from Aug 8 still unresolved -- URGENT.",
+    "detail": "MON AUG 10 ~4:00 AM RUN.\n\nTOAST: Sat Aug 8 Daily Performance Summary received Sun Aug 9 7:39 AM PT. Net $11,235.00 / Gross $11,611.00 (+27.3%/+27.8% vs Sat Aug 1), 377 guests / 249 orders / 255 checks (derived from exact per-guest/order/check averages), hourly labor $1,935.50 (17.2% of net). VOID ANOMALY: $2,121.50 voided vs $69.00 SDLW (+2,974.6%). Sun Aug 9's report pending (~7 AM).\n\nSLING: Latest schedule is Sun Aug 9 (12 emp / 63.07 hrs / 0 uncovered / 0 OT, full roster captured). Mon Aug 10's email pending (~7 AM). Isael Narciso's 4:30A-4:30A cook shift looks like an entry error.\n\nREVIEWS: LIVE-verified both profiles via Chrome Unreplied tabs. Brewhouse (4.5/524): Donald Clay 1-star (Aug 7, botulism claim) + John Rinaldo 1-star (~Jul 26, no text) unanswered, drafts ready for Joal's approval. Coffee (5.0/4): 0 unanswered. rich walter updated his 5-star review; owner reply intact.\n\nGOOGLE ADS: 2 report emails Sun Aug 9, no disapprovals. Payment-method alert from Aug 8 NOT re-verified -- treat as open/URGENT.\n\nYELP: marketing blasts only. Vicki A. inquiry still open. TRIPADVISOR: nothing.\n\nGitHub PAT working."
   },
   "toast": {
-    "date": "Friday, August 7",
-    "net": 9606.9,
-    "gross": 10003.98,
-    "guests": 399,
-    "guestsDerived": false,
-    "orders": 255,
-    "ordersDerived": false,
-    "checks": null,
-    "avgPerCheck": null,
-    "avgPerOrder": 37.67,
-    "avgPerGuest": 24.08,
-    "laborPct": 22.2,
-    "laborCost": null,
+    "date": "Saturday, August 8",
+    "net": 11235.0,
+    "gross": 11611.0,
+    "guests": 377,
+    "guestsDerived": true,
+    "orders": 249,
+    "ordersDerived": true,
+    "checks": 255,
+    "avgPerCheck": 44.06,
+    "avgPerOrder": 45.12,
+    "avgPerGuest": 29.8,
+    "laborPct": 17.2,
+    "laborCost": 1935.5,
     "laborCostDerived": false,
     "discounts": null,
     "discountsDerived": false,
-    "discountPct": 4.0,
+    "discountPct": null,
     "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": null,
-    "voidItems": 20,
-    "cardPayments": 205,
-    "openOrders": 3,
-    "autoClockedOut": [
-      "Julianna Ornelas"
-    ],
-    "takeoutOrders": 18,
-    "takeoutSales": 208.03,
-    "sdlw": null,
-    "fourWeekAvg": null,
+    "voidAmount": 2121.5,
+    "voidItems": null,
+    "cardPayments": null,
+    "openOrders": null,
+    "autoClockedOut": [],
+    "takeoutOrders": null,
+    "takeoutSales": null,
+    "sdlw": {
+      "net": 8822.62,
+      "gross": 9086.1,
+      "guests": 354,
+      "orders": 225,
+      "laborCost": 1633.74,
+      "voidAmount": 69.0
+    },
+    "fourWeekAvg": {
+      "net": 8897.26,
+      "gross": 9174.68,
+      "guests": 352,
+      "orders": 204,
+      "laborCost": 1594.64,
+      "voidAmount": 129.55
+    },
     "dayparts": [],
     "rooms": [],
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
-    "netChangeVsPrev4Pct": null,
-    "source": "The Brewhouse Santa Barbara Group email (Fri Aug 7 Daily Performance Summary: All Locations), received Sat Aug 8 6:28 AM PT",
-    "note": "SAT AUG 8 ~7AM run: Toast Daily Performance Summary landed for Fri Aug 7. Net $9,606.90 / Gross $10,003.98, 399 guests, 255 orders, labor 22.2% of net, discount 4.0% of gross, 20 void items, 205 card payments, 3 remaining open orders, 1 auto-clocked-out (Julianna Ornelas). Order type breakdown: 18 takeout orders ($208.03), 3 dine-in orders ($11.25), 0 delivery -- consistent with the recurring template quirk where takeout/dine-in totals don't fully reconcile to the 255 order / 399 guest totals; noting for awareness, not corrected.",
+    "netChangeVsSDLWPct": 27.3,
+    "grossChangeVsSDLWPct": 27.8,
+    "netChangeVsPrev4Pct": 26.3,
+    "source": "Toast Daily Performance Summary email for Saturday, August 8 (received Sun Aug 9 7:39 AM PT)",
+    "note": "MON AUG 10 4AM run: Sat Aug 8 was a big night -- net $11,235.00 (+27.3% vs Sat Aug 1's $8,822.62, +26.3% vs prior-4-Saturday avg), gross $11,611.00 (+27.8%). Guests/orders/checks derived from Toast's exact per-guest/per-order/per-check figures ($29.80/$45.12/$44.06): 377 guests (vs 354 SDLW), 249 orders (vs 225), 255 checks (vs 233). Hourly labor $1,935.50 = 17.2% of net (healthy for the volume). FLAG: voids $2,121.50 vs $69.00 SDLW (+2,974.6%) -- 18.9% of net, needs manager review. Sunday Aug 9's report had not landed at run time (~4 AM; typically arrives ~7 AM).",
     "pending": false,
     "pendingFor": null
   },
   "toastLastKnown": {
-    "date": "Friday, August 7",
-    "net": 9606.9,
-    "gross": 10003.98,
-    "guests": 399,
-    "guestsDerived": false,
-    "orders": 255,
-    "ordersDerived": false,
-    "checks": null,
-    "avgPerCheck": null,
-    "avgPerOrder": 37.67,
-    "avgPerGuest": 24.08,
-    "laborPct": 22.2,
-    "laborCost": null,
+    "date": "Saturday, August 8",
+    "net": 11235.0,
+    "gross": 11611.0,
+    "guests": 377,
+    "guestsDerived": true,
+    "orders": 249,
+    "ordersDerived": true,
+    "checks": 255,
+    "avgPerCheck": 44.06,
+    "avgPerOrder": 45.12,
+    "avgPerGuest": 29.8,
+    "laborPct": 17.2,
+    "laborCost": 1935.5,
     "laborCostDerived": false,
     "discounts": null,
     "discountsDerived": false,
-    "discountPct": 4.0,
+    "discountPct": null,
     "deferredSales": 0.0,
     "refunds": 0.0,
-    "voidAmount": null,
-    "voidItems": 20,
-    "cardPayments": 205,
-    "openOrders": 3,
-    "autoClockedOut": [
-      "Julianna Ornelas"
-    ],
-    "takeoutOrders": 18,
-    "takeoutSales": 208.03,
-    "sdlw": null,
-    "fourWeekAvg": null,
+    "voidAmount": 2121.5,
+    "voidItems": null,
+    "cardPayments": null,
+    "openOrders": null,
+    "autoClockedOut": [],
+    "takeoutOrders": null,
+    "takeoutSales": null,
+    "sdlw": {
+      "net": 8822.62,
+      "gross": 9086.1,
+      "guests": 354,
+      "orders": 225,
+      "laborCost": 1633.74,
+      "voidAmount": 69.0
+    },
+    "fourWeekAvg": {
+      "net": 8897.26,
+      "gross": 9174.68,
+      "guests": 352,
+      "orders": 204,
+      "laborCost": 1594.64,
+      "voidAmount": 129.55
+    },
     "dayparts": [],
     "rooms": [],
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
-    "netChangeVsPrev4Pct": null,
-    "source": "The Brewhouse Santa Barbara Group email (Fri Aug 7 Daily Performance Summary: All Locations), received Sat Aug 8 6:28 AM PT",
-    "note": "SAT AUG 8 ~7AM run: Toast Daily Performance Summary landed for Fri Aug 7. Net $9,606.90 / Gross $10,003.98, 399 guests, 255 orders, labor 22.2% of net, discount 4.0% of gross, 20 void items, 205 card payments, 3 remaining open orders, 1 auto-clocked-out (Julianna Ornelas). Order type breakdown: 18 takeout orders ($208.03), 3 dine-in orders ($11.25), 0 delivery -- consistent with the recurring template quirk where takeout/dine-in totals don't fully reconcile to the 255 order / 399 guest totals; noting for awareness, not corrected.",
+    "netChangeVsSDLWPct": 27.3,
+    "grossChangeVsSDLWPct": 27.8,
+    "netChangeVsPrev4Pct": 26.3,
+    "source": "Toast Daily Performance Summary email for Saturday, August 8 (received Sun Aug 9 7:39 AM PT)",
+    "note": "MON AUG 10 4AM run: Sat Aug 8 was a big night -- net $11,235.00 (+27.3% vs Sat Aug 1's $8,822.62, +26.3% vs prior-4-Saturday avg), gross $11,611.00 (+27.8%). Guests/orders/checks derived from Toast's exact per-guest/per-order/per-check figures ($29.80/$45.12/$44.06): 377 guests (vs 354 SDLW), 249 orders (vs 225), 255 checks (vs 233). Hourly labor $1,935.50 = 17.2% of net (healthy for the volume). FLAG: voids $2,121.50 vs $69.00 SDLW (+2,974.6%) -- 18.9% of net, needs manager review. Sunday Aug 9's report had not landed at run time (~4 AM; typically arrives ~7 AM).",
     "pending": false,
     "pendingFor": null
   },
   "sling": {
-    "date": "Saturday, August 8",
-    "count": 15,
-    "shifts": 15,
-    "hours": 73.74,
+    "date": "Sunday, August 9",
+    "count": 12,
+    "shifts": 12,
+    "hours": 63.07,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
-    "staff": [],
-    "note": "SAT AUG 8 ~7AM run: Sling's Sat Aug 8 daily schedule landed (received 7:01 AM PT). 15 scheduled employees, 15 scheduled shifts, 73.74 scheduled hours, 0 uncovered shifts, 0 overtime, 0 employees off. Per-employee shift roster not captured this run (email body exceeded parse size limit) -- summary metrics only."
+    "stale": true,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:30A - 4:30A"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista",
+        "time": "6:30A - 12:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A - 3:30P"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server",
+        "time": "10:45A - 4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "12:00P - 7:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "2:30P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server",
+        "time": "3:45P - 10:00P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P - 6:30P"
+      }
+    ],
+    "note": "MON AUG 10 4AM run: Monday Aug 10's Sling schedule email had not arrived at run time (typically lands ~7 AM PT). Latest is SUNDAY Aug 9: 12 employees / 12 shifts / 63.07 hrs / 0 uncovered / 0 OT. Full roster captured. FLAG: Isael Salvador Narciso's cook shift shows 4:30A - 4:30A (24-hr span) -- likely a Sling entry error worth fixing."
   },
   "slingLastKnown": {
-    "date": "Saturday, August 8",
-    "count": 15,
-    "shifts": 15,
-    "hours": 73.74,
+    "date": "Sunday, August 9",
+    "count": 12,
+    "shifts": 12,
+    "hours": 63.07,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
-    "staff": [],
-    "note": "SAT AUG 8 ~7AM run: Sling's Sat Aug 8 daily schedule landed (received 7:01 AM PT). 15 scheduled employees, 15 scheduled shifts, 73.74 scheduled hours, 0 uncovered shifts, 0 overtime, 0 employees off. Per-employee shift roster not captured this run (email body exceeded parse size limit) -- summary metrics only."
+    "stale": true,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:30A - 4:30A"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista",
+        "time": "6:30A - 12:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A - 3:30P"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server",
+        "time": "10:45A - 4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "12:00P - 7:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "2:30P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server",
+        "time": "3:45P - 10:00P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P - 6:30P"
+      }
+    ],
+    "note": "MON AUG 10 4AM run: Monday Aug 10's Sling schedule email had not arrived at run time (typically lands ~7 AM PT). Latest is SUNDAY Aug 9: 12 employees / 12 shifts / 63.07 hrs / 0 uncovered / 0 OT. Full roster captured. FLAG: Isael Salvador Narciso's cook shift shows 4:30A - 4:30A (24-hr span) -- likely a Sling entry error worth fixing."
   },
   "slingToday": {
-    "date": "Saturday, August 8",
-    "count": 15,
-    "shifts": 15,
-    "hours": 73.74,
+    "date": "Sunday, August 9",
+    "count": 12,
+    "shifts": 12,
+    "hours": 63.07,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
-    "staff": [],
-    "note": "SAT AUG 8 ~7AM run: Sling's Sat Aug 8 daily schedule landed (received 7:01 AM PT). 15 scheduled employees, 15 scheduled shifts, 73.74 scheduled hours, 0 uncovered shifts, 0 overtime, 0 employees off. Per-employee shift roster not captured this run (email body exceeded parse size limit) -- summary metrics only."
+    "stale": true,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook",
+        "time": "4:30A - 4:30A"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista",
+        "time": "6:30A - 12:30P"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender",
+        "time": "10:15A - 3:30P"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server",
+        "time": "10:45A - 4:30P"
+      },
+      {
+        "name": "Daniel Rodriguez",
+        "role": "Server",
+        "time": "12:00P - 7:00P"
+      },
+      {
+        "name": "Mateo Torres",
+        "role": "Busser",
+        "time": "2:30P - 9:30P"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Katharine Brown",
+        "role": "Bartender",
+        "time": "3:30P - 10:30P"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "time": "3:30P - 10:00P"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server",
+        "time": "3:45P - 10:00P"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender",
+        "time": "4:00P - 6:30P"
+      }
+    ],
+    "note": "MON AUG 10 4AM run: Monday Aug 10's Sling schedule email had not arrived at run time (typically lands ~7 AM PT). Latest is SUNDAY Aug 9: 12 employees / 12 shifts / 63.07 hrs / 0 uncovered / 0 OT. Full roster captured. FLAG: Isael Salvador Narciso's cook shift shows 4:30A - 4:30A (24-hr span) -- likely a Sling entry error worth fixing."
   },
   "googleAds": {
     "lastUpdated": "LIVE scrape Sat Aug 8 ~7:12 AM PT (Campaigns dashboard read successfully).",
@@ -218,21 +425,22 @@
     },
     "balance": 370.07,
     "nextPayment": "Sep 1, 2026",
-    "paymentMethod": "Amex •••• 1004",
+    "paymentMethod": "Amex \u2022\u2022\u2022\u2022 1004",
     "stale": false,
     "authError": false,
     "disapprovals": 0,
     "accountChangeAlert": false,
     "accountBudgetPerDay": 73.37,
     "draftsInProgress": 2,
-    "note": "LIVE scrape Mon Aug 3 ~7:20 AM PT (campaigns + billing). Last payment: $332.99 charged Aug 1 (balance dropped from $253.57+accrued to $160.53 post-payment). Next auto-payment Sep 1 or at $500 threshold, Amex ••••1004. Campaign statuses unchanged: World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. PMax-2 Eligible (Limited), Limited by budget + all asset groups limited by policy, opt score 84.9%, $58.37/day. BHC Coffee still 'Bid strategy learning', opt score 44.4%, $15/day. Account budget total $73.37/day. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign yesterday impressions/clicks/cost not re-confirmed this run (campaign table columns showed conv/conv-value only) -- account-level yesterday and 7-day figures above are live and current.",
-    "note_20260803": "LIVE scrape Mon Aug 3 ~7:20 AM PT (campaigns + billing). Last payment: $332.99 charged Aug 1 (balance dropped from $253.57+accrued to $160.53 post-payment). Next auto-payment Sep 1 or at $500 threshold, Amex ••••1004. Campaign statuses unchanged: World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. PMax-2 Eligible (Limited), Limited by budget + all asset groups limited by policy, opt score 84.9%, $58.37/day. BHC Coffee still 'Bid strategy learning', opt score 44.4%, $15/day. Account budget total $73.37/day. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign yesterday impressions/clicks/cost not re-confirmed this run (campaign table columns showed conv/conv-value only) -- account-level yesterday and 7-day figures above are live and current.",
+    "note": "LIVE scrape Mon Aug 3 ~7:20 AM PT (campaigns + billing). Last payment: $332.99 charged Aug 1 (balance dropped from $253.57+accrued to $160.53 post-payment). Next auto-payment Sep 1 or at $500 threshold, Amex \u2022\u2022\u2022\u20221004. Campaign statuses unchanged: World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. PMax-2 Eligible (Limited), Limited by budget + all asset groups limited by policy, opt score 84.9%, $58.37/day. BHC Coffee still 'Bid strategy learning', opt score 44.4%, $15/day. Account budget total $73.37/day. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign yesterday impressions/clicks/cost not re-confirmed this run (campaign table columns showed conv/conv-value only) -- account-level yesterday and 7-day figures above are live and current.",
+    "note_20260803": "LIVE scrape Mon Aug 3 ~7:20 AM PT (campaigns + billing). Last payment: $332.99 charged Aug 1 (balance dropped from $253.57+accrued to $160.53 post-payment). Next auto-payment Sep 1 or at $500 threshold, Amex \u2022\u2022\u2022\u20221004. Campaign statuses unchanged: World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0) -- still worth archiving to reclaim budget. PMax-2 Eligible (Limited), Limited by budget + all asset groups limited by policy, opt score 84.9%, $58.37/day. BHC Coffee still 'Bid strategy learning', opt score 44.4%, $15/day. Account budget total $73.37/day. 'Review your campaign targets' banner still active (deadline Aug 17, 2026). 2 drafts in progress. Per-campaign yesterday impressions/clicks/cost not re-confirmed this run (campaign table columns showed conv/conv-value only) -- account-level yesterday and 7-day figures above are live and current.",
     "note_20260804": "Tue Aug 4 ~7:20 AM LIVE scrape (campaigns + 7-day totals + billing): Yesterday (Aug 3) $62.88 / 9,041 impr / 172 clicks / CTR 1.90% / CPC $0.37 / 0 conv (calculating). PMax-2 opt 85%, Limited by budget + policy. BHC Coffee back to 'Eligible' status (was 'Bid strategy learning' as of the Aug 3 4am carry-forward), opt 44.4%. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0). No disapprovals observed. Billing: balance $223.36 (up from $160.53), last payment $332.99 on Aug 1 (Amex ...1004), next automatic payment Sep 1. Billing model appears to be a straightforward monthly cycle now rather than the earlier $500-threshold trigger.",
     "note_20260806": "Thu Aug 6 ~7:15 AM LIVE scrape (campaigns + 7-day totals + billing): Yesterday (Aug 5) $88.06 / 6,319 impr / 113 clicks / CTR 1.79% / CPC ~$0.78 / 0 conv (calculating). PMax-2 opt 84.9%, Limited by budget + policy, $62.99 spend. BHC Coffee Eligible, opt 44.4%, $25.07 spend. World Cup HQ 2026 and Oldest SB Brewery on Tap remain paused (0/0). No disapprovals observed, 'Review your campaign targets' banner still active. 2 drafts in progress. Billing: balance jumped to $370.07 (from $223.36, reflecting accrued spend since the Aug 1 payment) -- last payment still $332.99 on Aug 1 (Amex ...1004), next automatic payment Sep 1 or at $500 threshold.",
     "note_20260807": "FRI AUG 7 4AM run: email-only monitoring (no live Chrome scrape this run). 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance') -- no disapproval or budget-alert language in subjects/snippets. Figures below are carried forward from the last live scrape (Thu Aug 6) and have not been re-verified this run.",
     "note_20260808": "SAT AUG 8 ~7:12 AM PT LIVE scrape (Campaigns overview only; did not re-scrape per-campaign table, 7-day totals, or billing this run). FLAG: red account banner now reads 'New form of payment required - Your current payment methods can't be charged' with a 'Fix it' CTA -- this is new since the Aug 6 scrape and was not present then. This could pause ad delivery if not resolved. Per-campaign/7-day/billing figures below are carried forward from the Aug 6 live scrape and not re-verified this run.",
     "paymentAlert": true,
-    "note_20260809": "SUN AUG 9 4AM run: email-only monitoring (no live Chrome scrape this run). 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance') -- no disapproval or budget-alert language in subjects/snippets. The 'New form of payment required' banner flagged Aug 8 has NOT been re-verified as resolved this run -- figures and paymentAlert flag carried forward from Aug 8, treat as still open."
+    "note_20260809": "SUN AUG 9 4AM run: email-only monitoring (no live Chrome scrape this run). 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance') -- no disapproval or budget-alert language in subjects/snippets. The 'New form of payment required' banner flagged Aug 8 has NOT been re-verified as resolved this run -- figures and paymentAlert flag carried forward from Aug 8, treat as still open.",
+    "note_20260810": "MON AUG 10 4AM run: email-only monitoring. 2 'report ready' emails Sun Aug 9 (Brewhouse Daily Campaign Report + Campaign performance) -- no disapproval/budget-alert language. URGENT CARRY-FORWARD: the 'New form of payment required' banner first flagged Sat Aug 8 has still NOT been re-verified as resolved -- ads could stop serving if the card can't be charged. Needs Joal to check ads.google.com billing."
   },
   "yelpAds": {
     "lastUpdated": "SAT AUG 8 ~7:13 AM PT run: Chrome scrape FAILED -- biz.yelp.com/ads/.../dashboard redirected to the Yelp for Business login page (session expired). No live data pulled this run; figures below carried forward from the Fri Aug 7 live scrape, unverified.",
@@ -282,12 +490,13 @@
     "audienceSize": "Ideal",
     "note_20260807": "FRI AUG 7 4AM run: email-only monitoring (no live Chrome scrape this run). No new actionable Yelp Ads/billing emails found; figures below carried forward from Thu Aug 6 live scrape and have not been re-verified this run.",
     "note_20260808": "SAT AUG 8 run: Yelp for Business session not authenticated (redirected to /login). Per standing policy, credentials were not entered. Flagged to Joal via email draft -- needs manual re-login at biz.yelp.com.",
-    "note_20260809": "SUN AUG 9 4AM run: email-only monitoring. No new actionable Yelp emails (only a marketing/delivery-recs blast, skipped per standing rule). Login/session status not re-checked this run; last known state (Aug 8) was logged out of biz.yelp.com."
+    "note_20260809": "SUN AUG 9 4AM run: email-only monitoring. No new actionable Yelp emails (only a marketing/delivery-recs blast, skipped per standing rule). Login/session status not re-checked this run; last known state (Aug 8) was logged out of biz.yelp.com.",
+    "note_20260810": "MON AUG 10 4AM run: email-only. Only marketing blasts in the last 2 days (skipped). Session to biz.yelp.com still assumed logged out (last known Aug 8). Vicki A. fish-tacos inquiry (Jul 28) still open pending Joal's input."
   },
   "tripAdvisor": {
     "adEmailPresent": false,
-    "lastUpdated": "SUN AUG 9 ~4AM run: no email from analytics@hm2.tripadvisor.com found in the last 2 days.",
-    "note": "Still nothing as of Sun Aug 9 ~4AM run."
+    "lastUpdated": "MON AUG 10 ~4AM run: no email from analytics@hm2.tripadvisor.com in the last 2 days.",
+    "note": "Still nothing as of Mon Aug 10 ~4AM run."
   },
   "reservations": {
     "lastUpdated": "2026-08-10",
@@ -326,8 +535,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-08-09 -- Sun Aug 9 4 AM run. LIVE-verified via Chrome (business.google.com Unreplied tab) for both profiles.",
-    "note": "LIVE-VERIFIED this run via the Unreplied tab on business.google.com for BOTH profiles (source of truth). THE BREWHOUSE: 2 unanswered -- Donald Clay (1-star, Aug 7, claims botulism from a taco) and John Rinaldo (1-star, ~2 weeks old, no written review text, just low Food/Service/Atmosphere ratings). alicia thomas's 5-star review (Aug 3), carried forward as unanswered from the prior run, is CONFIRMED replied now and has been removed from this list. BREWHOUSE COFFEE: LIVE-verified 0 unanswered reviews -- Google's Unreplied tab explicitly showed 'You've replied to new reviews.' Star ratings unchanged: Brewhouse 4.5/524, Coffee 5.0/4. Seanit Rover's review (removed by Google for a policy violation, Aug 7 email) remains informational only, no reply needed.",
+    "lastUpdated": "2026-08-10 -- Mon Aug 10 4 AM run. LIVE-verified via Chrome (business.google.com Unreplied tab) for both profiles.",
+    "note": "LIVE-VERIFIED Mon Aug 10 via the Unreplied tab for BOTH profiles. THE BREWHOUSE (4.5/524): 2 unanswered -- Donald Clay (1-star, Aug 7, botulism claim) and John Rinaldo (1-star, ~Jul 26, no written text). Also noted: rich walter UPDATED his 5-star review ~10 hrs ago; existing owner reply still attached, no action needed. BREWHOUSE COFFEE (5.0/4): LIVE-verified 0 unanswered ('You've replied to new reviews'). Ratings unchanged: Brewhouse 4.5/524, Coffee 5.0/4.",
     "brewhouse": {
       "profile": "The Brewhouse",
       "stars": 4.5,
@@ -379,36 +588,36 @@
     "note": "4 NEW photos added to The Brewhouse profile by Thuy Anh Le (Fri Jul 17). 1 Google Business Profile 'management request' still pending -- verify/deny if requester not recognized.",
     "severity": "verify"
   },
-  "lastUpdated": "2026-08-09T04:00:00-07:00",
+  "lastUpdated": "2026-08-10T04:00:00-07:00",
   "toastPrevDay": {
-    "date": "Thursday, August 6",
-    "net": 5212.5,
-    "gross": 5350.7,
-    "guests": 203,
+    "date": "Friday, August 7",
+    "net": 9606.9,
+    "gross": 10003.98,
+    "guests": 399,
     "guestsDerived": false,
-    "orders": 134,
+    "orders": 255,
     "ordersDerived": false,
     "checks": null,
     "avgPerCheck": null,
-    "avgPerOrder": 38.9,
-    "avgPerGuest": 25.68,
-    "laborPct": 26.3,
+    "avgPerOrder": 37.67,
+    "avgPerGuest": 24.08,
+    "laborPct": 22.2,
     "laborCost": null,
     "laborCostDerived": false,
     "discounts": null,
     "discountsDerived": false,
-    "discountPct": 2.6,
+    "discountPct": 4.0,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "voidAmount": null,
-    "voidItems": 7,
-    "cardPayments": 113,
-    "openOrders": 0,
+    "voidItems": 20,
+    "cardPayments": 205,
+    "openOrders": 3,
     "autoClockedOut": [
-      "Christine Vargas"
+      "Julianna Ornelas"
     ],
-    "takeoutOrders": 0,
-    "takeoutSales": 0.0,
+    "takeoutOrders": 18,
+    "takeoutSales": 208.03,
     "sdlw": null,
     "fourWeekAvg": null,
     "dayparts": [],
@@ -416,8 +625,8 @@
     "netChangeVsSDLWPct": null,
     "grossChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
-    "source": "The Brewhouse Santa Barbara Group email (Thu Aug 6 Daily Performance Summary: All Locations), received Fri Aug 7 6:35 AM PT",
-    "note": "FRI AUG 7 ~7AM run: new Toast Daily Performance Summary landed for Thu Aug 6 (received Fri Aug 7 6:35 AM PT, via the 'Group' email template, which this time carried full location-level metrics for 229 West Montecito Street). Flag: the Order Type breakdown in this email again shows an apparent template glitch (Takeout/Delivery/Dine-in all listed as 0 orders/$0.00 vs 134 total orders/203 guests) -- noting for awareness, not corrected. Fri Aug 7's own report has not landed yet as of this run. [SAT AUG 8 run: superseded by Fri Aug 7 report, now confirmed final.]",
+    "source": "The Brewhouse Santa Barbara Group email (Fri Aug 7 Daily Performance Summary: All Locations), received Sat Aug 8 6:28 AM PT",
+    "note": "SAT AUG 8 ~7AM run: Toast Daily Performance Summary landed for Fri Aug 7. Net $9,606.90 / Gross $10,003.98, 399 guests, 255 orders, labor 22.2% of net, discount 4.0% of gross, 20 void items, 205 card payments, 3 remaining open orders, 1 auto-clocked-out (Julianna Ornelas). Order type breakdown: 18 takeout orders ($208.03), 3 dine-in orders ($11.25), 0 delivery -- consistent with the recurring template quirk where takeout/dine-in totals don't fully reconcile to the 255 order / 399 guest totals; noting for awareness, not corrected.",
     "pending": false,
     "pendingFor": null
   },
