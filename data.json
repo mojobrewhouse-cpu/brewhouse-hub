@@ -586,8 +586,18 @@
     "source": "All Sources",
     "today": {
       "date": "Fri, Aug 21",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 4,
+      "bookings": [
+        {
+          "time": "6:00 PM",
+          "name": "Isabel Acosta",
+          "guests": 4,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(323) 627-8962",
+          "notes": ""
+        }
+      ]
     },
     "tomorrow": {
       "date": "Sat, Aug 22",
@@ -595,6 +605,16 @@
       "bookings": []
     },
     "upcoming": [
+      {
+        "time": "5:30 PM",
+        "name": "Gail Gelber",
+        "guests": 5,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(908) 400-5453",
+        "notes": "",
+        "date": "Sat, Oct 10"
+      },
       {
         "time": "6:30 PM",
         "name": "Christina Eliopoulos",
