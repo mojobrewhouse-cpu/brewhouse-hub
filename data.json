@@ -475,17 +475,27 @@
     "note": "Nothing from analytics@hm2.tripadvisor.com in the last 48h. No TripAdvisor ad reporting to fold in this run."
   },
   "reservations": {
-    "lastUpdated": "2026-08-24",
+    "lastUpdated": "2026-08-25",
     "source": "All Sources",
     "today": {
-      "date": "Mon, Aug 24",
+      "date": "Tue, Aug 25",
       "totalGuests": 0,
       "bookings": []
     },
     "tomorrow": {
-      "date": "Tue, Aug 25",
-      "totalGuests": 0,
-      "bookings": []
+      "date": "Wed, Aug 26",
+      "totalGuests": 10,
+      "bookings": [
+        {
+          "time": "7:00 PM",
+          "name": "Rich Davis",
+          "guests": 10,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(805) 680-6405",
+          "notes": "Birthday dinner"
+        }
+      ]
     },
     "upcoming": [
       {
@@ -497,16 +507,6 @@
         "phone": "(908) 400-5453",
         "notes": "",
         "date": "Sat, Oct 10"
-      },
-      {
-        "time": "7:00 PM",
-        "name": "Rich Davis",
-        "guests": 10,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(805) 680-6405",
-        "notes": "Birthday dinner",
-        "date": "Wed, Aug 26"
       }
     ]
   },
