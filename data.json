@@ -1,8 +1,8 @@
 {
-  "date": "Saturday, August 29",
+  "date": "Sunday, August 30",
   "systemStatus": {
     "level": "attention",
-    "headline": "SAT AUG 29, 4:00 AM RUN. Reviews: LIVE checked both listings this run -- The Brewhouse 4.5 stars/528 reviews/2 unreplied, Brewhouse Coffee 5.0 stars/6 reviews/2 unreplied, 4 total unanswered with drafts ready for Joal's approval. FLAG: prior dashboard notes referenced a 1-star 'Donald Clay' (botulism allegation, day 20) and 1-star 'John Rinaldo' (day 34) review on The Brewhouse listing -- neither is findable on the live profile this run (checked All/Replied/Unreplied, scrolled). Review count unchanged at 528, so nothing was deleted; most likely they were replied to outside this automation, but this needs Joal's manual confirmation since a food-safety allegation is high stakes. SALES: most recent available is Thursday Aug 27 (net $3,967.19, 171 guests, 137 orders, 26.3% labor) -- this is unchanged from the last run since the Friday Aug 28 Toast email had not landed as of this 4:00 AM run. Vs same day last week (Thu Aug 20: net $5,211.35, 189 guests, 130 orders, 20.6% labor), Thursday net sales were down 23.9% and labor was up 5.7 points. STAFF SCHEDULE: most recent Sling report on file is for Friday Aug 28 (11 employees / 13 shifts / 56 hours / 0 uncovered / 0 OT) -- today's (Saturday Aug 29) Sling report had not arrived by this 4:00 AM run; Sling typically sends ~7 AM PT, after this automation runs. GOOGLE ADS: 4 'report ready' notification emails in the last 2 days, no disapproval flagged in the subject lines -- this run did not do a live Google Ads dashboard scrape (email-only check per this run's scope), so treat ad spend/CPC figures from the prior run as the most recent verified numbers. YELP: only a consumer marketing email in the last 2 days, no actionable business inquiry. TRIPADVISOR: no analytics/ad performance email in the last 2 days.",
+    "headline": "SUN AUG 30, 4:00 AM RUN. Reviews: LIVE re-checked both listings this run -- The Brewhouse 4.5 stars/528 reviews/2 unreplied (Justin Ladner, R. Muller -- same two as Aug 29 run, no new reviews), Brewhouse Coffee 5.0 stars/6 reviews/2 unreplied (Debra Wedlake, Geoff Lay -- also unchanged). 4 total unanswered, drafts ready for Joal's approval, nothing posted. UNRESOLVED CARRYOVER FLAG (day 2): the Aug 29 run could not find the previously-referenced 1-star 'Donald Clay' (botulism allegation) or 1-star 'John Rinaldo' review anywhere on the live Brewhouse profile (All/Replied/Unreplied). Still not found this run either. Review count still 528, so nothing was deleted -- most likely explanation remains that these were replied to outside this automation, but given the food-safety allegation this still needs Joal's manual confirmation. SALES: most recent available remains Friday Aug 28 (net $8,667.00, 350 guests, 240 orders, 16.5% labor) -- the Group email for Sat Aug 29 had not landed as of this 4:00 AM run (typically lands ~1-2 PM PT the following day), so sales data is unchanged from the last run and now a full day behind. STAFF SCHEDULE: most recent Sling report on file is for Saturday Aug 29 (12 employees / 12 shifts / 59.83 hours / 0 uncovered / 0 OT) -- today's (Sunday Aug 30) Sling report had not arrived by this 4:00 AM run; Sling typically sends ~7 AM PT, after this automation runs. GOOGLE ADS: 4 more 'report ready' notification emails landed in the last 24h (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance'), no disapproval flagged in the subject lines -- this run did not do a live Google Ads dashboard scrape (email-only check per this run's scope), so treat the spend/CPC/campaign figures already on file from the prior live scrape as the most recent verified numbers. YELP: only consumer marketing email in the last 24h ('Your brunch plans here!'), no actionable business inquiry -- inbox unread count not re-verified live this run. TRIPADVISOR: no analytics/ad performance email in the last 24h.",
     "salesDataLag": true,
     "schedDataLag": true,
     "reviewDiscrepancyFlag": true
@@ -538,8 +538,8 @@
     "draftsInProgress": 2,
     "policyBlockFlag": true,
     "note": "LIVE scrape Sat Aug 29 ~7:30 AM PT, account 343-687-4835, signed in as mojobrewhouse@gmail.com. HEADLINE: yesterday's spend normalized to $7.27 (48% of the $15/day budget) after Aug 27's 2x-budget $30.00 spike; impressions doubled to 277 on fewer, cheaper clicks. TWO PERFORMANCE MAX CAMPAIGNS REMAIN BLOCKED by 'All asset groups limited by policy' and are both also paused -- now day 12 of the block. 'World Cup HQ 2026' ($20/day, Search) is paused with no policy block. A NEW DRAFT CAMPAIGN, 'Brewhouse Lunch | Search | Aug 2026' ($25/day), has appeared, fully paused -- not yet reviewed or launched. 2 drafts in progress.",
-    "carriedForward": false,
-    "emailReports24h": null,
+    "carriedForward": true,
+    "emailReports24h": 4,
     "policyBlockDays": 12,
     "budgetCapHitFlag": false,
     "last7d": {
@@ -555,7 +555,8 @@
       "avgCpcChangeAbs": 0.0,
       "conversionsChangeAbs": -4.0,
       "note": "Week-over-week (Aug 22-28 vs Aug 21-27): impressions +47, clicks -2, spend -$2.75, conversions -4.00. Broadly flat vs the prior week -- the account has stabilized after the prior week's steep pullback."
-    }
+    },
+    "emailReports24hNote": "4 'report ready' notification emails from ads-account-noreply@google.com in the last 24h (2x 'Brewhouse Daily Campaign Report', 2x 'Campaign performance'), no disapproval language in any subject line. Live dashboard figures below are carried forward from the last live scrape (Aug 29) -- not re-scraped this run."
   },
   "yelpAds": {
     "lastUpdated": "2026-08-29T07:45:00-07:00 -- LIVE scrape of both the Ad performance and Ad settings tabs.",
@@ -627,11 +628,11 @@
     }
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-08-29T07:00:00-07:00",
+    "lastUpdated": "2026-08-30T04:00:00-07:00",
     "actionable": false,
     "adReports24h": 0,
     "items": [],
-    "note": "No TripAdvisor ANALYTICS mail in the window -- nothing from analytics@hm2.tripadvisor.com in the last ~48h search. No action."
+    "note": "No TripAdvisor ANALYTICS mail in the window -- nothing from analytics@hm2.tripadvisor.com in the last 24h search. No action."
   },
   "reservations": {
     "lastUpdated": "2026-08-30",
@@ -660,8 +661,8 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-08-29T04:00:00-07:00 -- BOTH LISTINGS OPENED AND CHECKED LIVE this run (All / Replied / Unreplied tabs, scrolled to confirm no additional rows).",
-    "note": "LIVE CHECKED THIS RUN, BOTH LISTINGS. THE BREWHOUSE 4.5 stars / 528 reviews / 2 UNREPLIED (Justin Ladner, R. Muller). BREWHOUSE COFFEE 5.0 stars / 6 reviews / 2 UNREPLIED (Debra Wedlake, Geoff Lay). FOUR UNANSWERED TOTAL. IMPORTANT DISCREPANCY: prior dashboard data referenced a 1-star 'Donald Clay' review (day 20 unanswered, botulism allegation) and a 1-star 'John Rinaldo' review (day 34) on The Brewhouse listing. Neither name appears anywhere on the live profile this run -- not in Unreplied, not in Replied, not in All (sorted Newest), even after scrolling. Review count (528) is unchanged from the prior run, so nothing was deleted from the total. Most likely explanation: those two items were resolved/replied outside this automation (e.g. Joal replied via the Google Maps app) and the prior note was carried forward without being live-reverified, or the prior note was in error. Flagging for Joal to confirm rather than asserting either way. NOTHING POSTED THIS RUN -- Joal approves every Google and Yelp reply before it goes live.",
+    "lastUpdated": "2026-08-30T04:00:00-07:00 -- BOTH LISTINGS OPENED AND CHECKED LIVE this run (Unreplied tab confirmed on each, cross-checked against Aug 29 run).",
+    "note": "LIVE CHECKED THIS RUN, BOTH LISTINGS, DAY 2. THE BREWHOUSE 4.5 stars / 528 reviews / 2 UNREPLIED (Justin Ladner, R. Muller) -- identical to the Aug 29 run, no new reviews landed. BREWHOUSE COFFEE 5.0 stars / 6 reviews / 2 UNREPLIED (Debra Wedlake, Geoff Lay) -- also identical. FOUR UNANSWERED TOTAL, same four as yesterday. CARRYOVER DISCREPANCY STILL UNRESOLVED: the 1-star 'Donald Clay' (botulism allegation) and 1-star 'John Rinaldo' reviews referenced in older dashboard notes are still not findable anywhere on the live Brewhouse profile (checked Unreplied, Replied, All-sorted-Newest). Review count unchanged at 528. Flagging again for Joal to confirm manually -- given the food-safety allegation this should not just keep rolling forward unconfirmed. NOTHING POSTED THIS RUN -- Joal approves every Google and Yelp reply before it goes live.",
     "discrepancyFlag": true,
     "brewhouse": {
       "profile": "The Brewhouse",
@@ -671,7 +672,7 @@
       "unansweredConfirmedOnScreen": true,
       "liveVerified": true,
       "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
-      "note": "LIVE CHECKED 2026-08-29. Panel header confirms 4.5 stars / 528 reviews, unchanged. Unreplied tab: Justin Ladner (5-star, rating only, 6 days ago) and R. Muller (5-star, 'Always looking for great coffee spots...muffins fresh out of the oven', 7 days ago). No 1-star reviews found in Unreplied, Replied, or All tabs this run.",
+      "note": "LIVE CHECKED 2026-08-30. Panel header confirms 4.5 stars / 528 reviews, unchanged from Aug 29. Unreplied tab: Justin Ladner (5-star, rating only, 7 days ago) and R. Muller (5-star, 'Always looking for great coffee spots...muffins fresh out of the oven', 1 week ago) -- same two reviews as the prior run. No 1-star reviews found in Unreplied, Replied, or All tabs this run either.",
       "unanswered": [
         {
           "reviewer": "Justin Ladner",
@@ -697,7 +698,7 @@
       "unansweredConfirmedOnScreen": true,
       "liveVerified": true,
       "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews",
-      "note": "LIVE CHECKED 2026-08-29 -- CHECKED, NOT SKIPPED. Panel header confirms 5.0 stars / 6 reviews. Unreplied tab: Debra Wedlake (5-star, 'Delicious coffee and pastries!', 5 days ago) and Geoff Lay (5-star, Horchata Latte praise, 2 weeks ago).",
+      "note": "LIVE CHECKED 2026-08-30 -- CHECKED, NOT SKIPPED. Panel header confirms 5.0 stars / 6 reviews, unchanged. Unreplied tab: Debra Wedlake (5-star, 'Delicious coffee and pastries!', 6 days ago) and Geoff Lay (5-star, Horchata Latte praise, 2 weeks ago) -- same two reviews as the prior run.",
       "unanswered": [
         {
           "reviewer": "Debra Wedlake",
@@ -717,10 +718,10 @@
     }
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-08-28T04:00:00-07:00",
+    "lastUpdated": "2026-08-30T04:00:00-07:00",
     "count": 0,
     "items": [],
-    "note": "No actionable Yelp business email in the last 24h -- the only Yelp mail is consumer marketing ('So close and not at all far away' Aug 27, 'Chill pubs in Central Coast' Aug 26). Skipped. INBOX CARRIED FORWARD: 15 unread as of the Aug 27 live check, now DAY 7 if untouched. At $3.72 per paid Yelp lead and 101 ad leads in 30 days, 15 unread is potentially two weeks of paid leads going cold. Needs a manual pass.",
+    "note": "No actionable Yelp business email in the last 24h -- only consumer marketing mail ('Your brunch plans here!' Aug 29). Skipped. Inbox unread count carried forward from prior run, not re-verified live this run.",
     "carriedForward": true,
     "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-08-27T07:14:00-07:00",
@@ -738,7 +739,7 @@
     "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-08-25T07:10:00-07:00"
   },
-  "lastUpdated": "2026-08-29T07:30:00-07:00",
+  "lastUpdated": "2026-08-30T04:00:00-07:00",
   "toastPrevDay": {
     "date": "Thursday, August 27",
     "net": 3967.19,
