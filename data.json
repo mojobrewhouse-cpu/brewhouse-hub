@@ -1,11 +1,11 @@
 {
-  "date": "Wednesday, September 2",
+  "date": "Thursday, September 3",
   "systemStatus": {
     "level": "attention",
-    "headline": "WED SEP 2, ~7:13 AM PT FOLLOW-UP RUN (second run today; first run was ~4:15 AM PT before the morning emails landed). TOAST: Tuesday Sep 1's Group (all-locations) summary arrived at 6:20 AM PT -- $3,653.00 net, $3,740.40 gross, 118 orders, 163 guests, 34.0% labor. The single-location FULL DETAIL email (with dayparts/SDLW/categories) has NOT arrived yet, so this is partial data -- stored as toast/toastPartial with partial:true; will backfill with full detail when it lands. Unlike the prior carried anomaly, guests (163) vs orders (118) here looks internally consistent (avg/guest $22.41). SLING: Wednesday Sep 2's own report arrived at 7:00 AM PT -- 8 employees / 8 shifts / 36.66 hours / 0 uncovered / 0 OT / 0 off, no longer stale. KITCHEN COVERAGE FLAG persists -- only one cook (Isael Salvador Narciso) scheduled, third consecutive day. GOOGLE ADS: LIVE-scraped this run. Yesterday (Sep 1): $13.88 spend / 233 impr / 7 clicks / 3.00% CTR / 0.00 conversions -- spend down sharply from Aug 31's $20.89. BHC Coffee remains the only real spender ($13.85 of the $13.88). Brewhouse Lunch and both Performance Max campaigns remain policy-limited/paused; World Cup HQ 2026 still paused, no policy issue. 7-day trend (Aug 26-Sep 1): 1,762 impr / 77 clicks / $116.22 / 22.00 conversions, flat vs. prior week. YELP ADS: LIVE-scraped this run. Last 30 days: 32.5k ad impressions (77% of total), 390 ad page visits (56%), 101 ad leads (65%), 316 ad clicks, avg CPC $1.33. Bonus budget panel still not surfaced for this account -- 11th consecutive run absent, treated as not offered rather than a scrape failure. Audience size still 'Ideal', budget still $13/day average. TRIPADVISOR: no analytics mail in the last 2 days, no action. REVIEWS/RESERVATIONS/PAYROLL/BUSINESS PROFILE: not in scope for this run, carried forward unchanged -- see those sections' own lastUpdated timestamps. GITHUB: dashboard pushed successfully this run.",
-    "salesDataLag": false,
-    "schedDataLag": false,
-    "reviewDiscrepancyFlag": false,
+    "headline": "THU SEP 3, ~4:15 AM PT MORNING RUN. TOAST: No new Group summary has landed yet this run -- most recent available is still Tuesday Sep 1's data ($3,653.00 net, $3,740.40 gross, 118 orders, 163 guests, 34.0% labor), same as last night's push. Wednesday Sep 2's report typically lands ~7:40 AM PT, after this run -- will backfill on next run. SLING: No Sep 3 schedule email has landed yet either (usually ~7:00 AM PT); most recent known schedule is Tuesday Sep 2's (8 employees / 36.66 hours / 0 uncovered / 0 OT). KITCHEN COVERAGE FLAG persists -- only one cook (Isael Salvador Narciso) on recent schedules; re-verify once today's Sling report lands. REVIEWS: Live-checked both Business Profiles via Chrome MCP this run. THE BREWHOUSE Unreplied tab now shows only 2 unreplied (Justin Ladner, R. Muller) -- DOWN from 6 tracked as of the Sep 2 run, which included Donald Clay's urgent 1-star botulism claim and John Rinaldo, sergio salazar, Betty Chambers. Could not scroll/paginate the embedded review panel to independently confirm the other 4 now show under Replied (technical limitation this run) -- FLAGGED for Joal to manually confirm those were actually replied to, especially the Donald Clay botulism review, rather than assume the panel is simply filtering differently. BREWHOUSE COFFEE: 5.0 stars / 6 reviews, 2 unreplied (Debra Wedlake, Geoff Lay), unchanged from prior runs. GOOGLE ADS: not live-scraped this run (Gmail-only pass) -- 4 'report ready' notification emails in the last 2 days (2x Brewhouse Daily Campaign Report, 2x Campaign performance), no disapproval language in any subject line. TRIPADVISOR: no analytics mail in the last 3 days, no action. YELP: only marketing newsletters in inbox, no actionable customer inquiries. GITHUB: dashboard pushed successfully this run.",
+    "salesDataLag": true,
+    "schedDataLag": true,
+    "reviewDiscrepancyFlag": true,
     "chromeUnavailableThisRun": false
   },
   "toast": {
@@ -605,19 +605,19 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-09-02T04:10:00-07:00 -- LIVE VERIFIED THIS RUN via Chrome MCP (both Business Profiles, Unreplied tab, scrolled to end of list on both).",
-    "note": "WED SEP 2 RUN: CARRYOVER DISCREPANCY RESOLVED. Directly re-checked the Unreplied tab end-to-end on both profiles. THE BREWHOUSE: 4.5 stars / 527 reviews, 6 unreplied (up from 2 tracked in recent runs) -- Justin Ladner and R. Muller carry over, PLUS sergio salazar and Betty Chambers (both new, not previously tracked) and Donald Clay + John Rinaldo (both 1-star, previously flagged as carryover-unverified -- CONFIRMED still unreplied on the live profile). Donald Clay's review alleges botulism from a taco; flagged URGENT for Joal, draft reply prepared but this likely needs more than a review reply. BREWHOUSE COFFEE: 5.0 stars / 6 reviews, unchanged, 2 unreplied (Debra Wedlake, Geoff Lay), same as prior runs. EIGHT UNANSWERED TOTAL across both listings, draft replies prepared in this morning's brief -- Joal to approve before posting. NOTHING POSTED THIS RUN OR EVER WITHOUT APPROVAL.",
-    "discrepancyFlag": false,
+    "lastUpdated": "2026-09-03T04:15:00-07:00 -- LIVE checked via Chrome MCP (both Business Profiles, Unreplied tab). Could not scroll the embedded panel past the Unreplied tab's own filtered results this run (technical limitation) -- treating Google's own Unreplied filter as authoritative since it showed no scrollbar/more content on either profile.",
+    "note": "THU SEP 3 RUN: THE BREWHOUSE Unreplied tab shows only 2 unreplied (Justin Ladner, R. Muller) vs. 6 tracked as of the Sep 2 dashboard push (which also had sergio salazar, Betty Chambers, and two 1-star reviews -- Donald Clay's botulism claim [URGENT] and John Rinaldo). This LOOKS like those 4 were replied to since yesterday, but this run could not independently verify via the Replied tab (panel wouldn't scroll/paginate for confirmation). Joal: please confirm the Donald Clay botulism review specifically got a real response, not just a UI quirk. BREWHOUSE COFFEE unchanged: 5.0 stars / 6 reviews, 2 unreplied (Debra Wedlake, Geoff Lay). Draft replies for all 4 currently-visible unreplied reviews are in this morning's email brief -- nothing posted without Joal's approval, as always.",
+    "discrepancyFlag": true,
     "brewhouse": {
       "profile": "The Brewhouse",
       "stars": 4.5,
       "reviewCount": 527,
-      "unansweredCount": 6,
+      "unansweredCount": 2,
       "unanswered": [
         {
           "name": "Justin Ladner",
           "stars": 5,
-          "age": "1 week ago",
+          "age": "2 weeks ago",
           "text": "(no written comment) Food 5/5, Service 5/5, Atmosphere 5/5",
           "urgent": false
         },
@@ -627,37 +627,31 @@
           "age": "2 weeks ago",
           "text": "Breakfast. Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
           "urgent": false
-        },
+        }
+      ],
+      "url": "https://business.google.com/n/14883478205426286749/reviews",
+      "possiblyResolvedSinceLastRun": [
         {
           "name": "sergio salazar",
           "stars": 5,
-          "age": "2 weeks ago",
-          "text": "$10-20. great food staff was on point very friendly, I highly recommend it and definitely driving 3 hours to go back.",
-          "urgent": false
+          "note": "tracked unreplied as of Sep 2 run; not showing on live Unreplied tab today"
         },
         {
           "name": "Betty Chambers",
           "stars": 5,
-          "age": "3 weeks ago",
-          "text": "$10-20. We were looking for a dog friendly restaurant on our way home to san diego. The food was great and our dog loved what you had. The waitress was great.",
-          "urgent": false
+          "note": "tracked unreplied as of Sep 2 run; not showing on live Unreplied tab today"
         },
         {
           "name": "Donald Clay",
           "stars": 1,
-          "age": "4 weeks ago",
-          "text": "Lunch, $20-30. Beer was not good at all. Got botulism from taco. Recovering now. Avoid this place.",
-          "urgent": true
+          "note": "URGENT botulism claim; tracked unreplied as of Sep 2 run; not showing on live Unreplied tab today -- PLEASE CONFIRM THIS WAS ACTUALLY ANSWERED"
         },
         {
           "name": "John Rinaldo",
           "stars": 1,
-          "age": "5 weeks ago",
-          "text": "(no written comment) Food 1/5, Service 1/5, Atmosphere 1/5",
-          "urgent": false
+          "note": "tracked unreplied as of Sep 2 run; not showing on live Unreplied tab today"
         }
-      ],
-      "url": "https://business.google.com/n/14883478205426286749/reviews"
+      ]
     },
     "coffee": {
       "profile": "Brewhouse Coffee",
@@ -705,7 +699,7 @@
     "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-08-25T07:10:00-07:00"
   },
-  "lastUpdated": "2026-09-02T14:13:53Z",
+  "lastUpdated": "2026-09-03T11:15:00Z",
   "toastPrevDay": {
     "date": "Monday, August 31",
     "net": 3107.65,
