@@ -2,11 +2,11 @@
   "date": "Saturday, September 5",
   "systemStatus": {
     "level": "attention",
-    "headline": "SAT SEP 5, ~4:09 AM PT MORNING RUN. TOAST: Thu Sep 3 single-location FULL DETAIL arrived 7:39 AM PT Fri Sep 4 and has been backfilled into 'toast' (net $3,984.37 SDLW +1.1%, gross $4,161.65, 178 guests, 126 orders, labor 31.3% of net vs SDLW 26.5%). VOID FLAG: $130.00 across 13 items/10 orders, +188.9% vs SDLW -- worth a look. SLING: no new schedule email beyond Fri Sep 4 (11 employees/12 shifts/55.99 hours/0 uncovered/0 OT) -- carried forward unchanged, Sat Sep 5 schedule email not yet received. REVIEWS: Chrome MCP could not reach the signed-in Business Profile dashboards this run (redirected to public search) -- sourced from Gmail only. THE BREWHOUSE has 3 unreplied (Justin Ladner, R. Muller carried forward + NEW Isabel Osmundsen 5-star). BREWHOUSE COFFEE carried forward at 2 unreplied (Debra Wedlake, Geoff Lay), not independently re-verified. GOOGLE ADS: 4 'report ready' notification emails Sep 3-4, no disapprovals in subject lines; live spend/impression figures NOT re-scraped this run (carried forward from last live check). YELP ADS: not re-scraped this run, carried forward. YELP INQUIRIES: only marketing newsletters in inbox, nothing actionable. TRIPADVISOR: no analytics mail this run, consistent with prior runs. GITHUB: dashboard push in progress this run.",
-    "salesDataLag": false,
+    "headline": "SAT SEP 5, ~7:42 AM PT UPDATE RUN. TOAST: Fri Sep 4 Group (all-locations) rollup arrived 6:30 AM PT (net $5,984.90, gross $6,168.15, 222 guests, 138 orders, labor 21.4% of net) -- single-location full detail not yet in, 'toast' field still shows Thu Sep 3 full detail ($3,984.37 net). SLING: Sat Sep 5 schedule arrived 7:00 AM PT (12 employees/12 shifts/60.48 hours/0 uncovered/0 OT/1 off), up from Friday's 55.99 hours. KITCHEN COVERAGE FLAG: single cook (Isael Salvador Narciso) again. GOOGLE ADS: LIVE re-scrape, Sep 4 spend down to $12.10 (-$7.74 vs Sep 3) on 537 impressions / 22 clicks (both up); conversions still calculating. YELP ADS: LIVE re-scrape succeeded this run (dashboard reachable again) -- last 30 days 30.9k impressions / 99 leads from ads, billing period spend $54.01 (Sep 1-4). Bonus budget panel still not surfaced (14th consecutive run). TRIPADVISOR: no analytics mail, consistent with prior runs. REVIEWS/BUSINESS PROFILE/YELP INQUIRIES: not re-checked this run (out of scope for this update), carried forward from prior run. GITHUB: dashboard push completed this run.",
+    "salesDataLag": true,
     "schedDataLag": false,
     "reviewDiscrepancyFlag": true,
-    "chromeUnavailableThisRun": true
+    "chromeUnavailableThisRun": false
   },
   "toast": {
     "date": "Thursday, September 3",
@@ -424,13 +424,13 @@
     "note": "DATA ANOMALY CARRIED: 927 guests vs 102 orders / $3.35 avg-per-guest looks inconsistent -- flagged for Joal to sanity-check against POS, unresolved."
   },
   "sling": {
-    "date": "Friday, September 4",
-    "count": 11,
+    "date": "Saturday, September 5",
+    "count": 12,
     "shifts": 12,
-    "hours": 55.99,
+    "hours": 60.48,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 0,
+    "employeesOff": 1,
     "pending": false,
     "nextDayPending": true,
     "stale": false,
@@ -442,88 +442,27 @@
         "role": "Cook"
       },
       {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
         "name": "Julianna Ornelas",
         "role": "Barista"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Server"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Bartender"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Nathan Smith",
-        "role": "Bartender"
-      },
-      {
-        "name": "Nathan Smith",
-        "role": "Server"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Busser"
-      }
-    ],
-    "note": "LIVE from the Sling daily report for Fri Sep 4, received 2026-09-04T14:00:27Z (7:00 AM PT). 11 employees / 12 shifts / 55.99 hours / 0 uncovered / 0 overtime / 0 employees off. Hours up sharply from Thursday's 40.16 (+15.83 hrs, +39.4%) -- consistent with Friday volume. KITCHEN COVERAGE FLAG: only ONE cook (Isael Salvador Narciso) scheduled today -- back on the roster after Rafael Patricio covered Thu Sep 3; single-cook coverage continues. Nathan Smith is double-booked across two roles (Bartender and Server), accounting for 12 shifts across 11 unique employees."
-  },
-  "slingLastKnown": {
-    "date": "Thursday, September 3",
-    "count": 10,
-    "shifts": 10,
-    "hours": 40.16,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "pending": true,
-    "nextDayPending": true,
-    "stale": true,
-    "kitchenCoverageFlag": true,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook"
       },
       {
         "name": "Sarah Palmer",
         "role": "Barista"
       },
       {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
-        "name": "Tony Rincon",
+        "name": "Andrew Turner",
         "role": "Bartender"
       },
       {
-        "name": "Christine Vargas",
+        "name": "Emily Lanzel",
         "role": "Server"
       },
       {
-        "name": "Harmony Willson",
+        "name": "James Hernadez",
+        "role": "Server"
+      },
+      {
+        "name": "Moe Danely",
         "role": "Bartender"
       },
       {
@@ -531,21 +470,25 @@
         "role": "Server"
       },
       {
-        "name": "Bri Kelley",
+        "name": "Nathan Smith",
         "role": "Server"
       },
       {
-        "name": "Julianna Ornelas",
-        "role": "Barback"
+        "name": "Fred De Leon",
+        "role": "Bartender"
       },
       {
-        "name": "Cal Carter",
+        "name": "Gabriel Lopez galindo",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
         "role": "Busser"
       }
     ],
-    "note": "LIVE from the Sling daily report for Thu Sep 3, received 2026-09-03T14:00:23Z (7:00 AM PT). 10 employees / 10 shifts / 40.16 hours / 0 uncovered / 0 overtime / 0 employees off. Hours up from Wednesday's 36.66 (+3.5 hrs, +9.5%). KITCHEN COVERAGE FLAG: only ONE cook (Rafael Patricio) scheduled today -- a different cook than Isael Salvador Narciso, who covered the prior several days; single-cook coverage continues."
+    "note": "LIVE from the Sling daily report for Sat Sep 5, received 2026-09-05T14:00:24Z (7:00 AM PT). 12 employees / 12 shifts / 60.48 hours / 0 uncovered / 0 overtime / 1 employee off. Hours up from Friday's 55.99 (+4.49 hrs, +8.0%). KITCHEN COVERAGE FLAG: only ONE cook (Isael Salvador Narciso) scheduled today -- single-cook coverage continues."
   },
-  "slingToday": {
+  "slingLastKnown": {
     "date": "Friday, September 4",
     "count": 11,
     "shifts": 12,
@@ -610,25 +553,90 @@
     ],
     "note": "LIVE from the Sling daily report for Fri Sep 4, received 2026-09-04T14:00:27Z (7:00 AM PT). 11 employees / 12 shifts / 55.99 hours / 0 uncovered / 0 overtime / 0 employees off. Hours up sharply from Thursday's 40.16 (+15.83 hrs, +39.4%) -- consistent with Friday volume. KITCHEN COVERAGE FLAG: only ONE cook (Isael Salvador Narciso) scheduled today -- back on the roster after Rafael Patricio covered Thu Sep 3; single-cook coverage continues. Nathan Smith is double-booked across two roles (Bartender and Server), accounting for 12 shifts across 11 unique employees."
   },
+  "slingToday": {
+    "date": "Saturday, September 5",
+    "count": 12,
+    "shifts": 12,
+    "hours": 60.48,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "pending": false,
+    "nextDayPending": true,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Sarah Palmer",
+        "role": "Barista"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Server"
+      },
+      {
+        "name": "Moe Danely",
+        "role": "Bartender"
+      },
+      {
+        "name": "Osmar Beltran",
+        "role": "Server"
+      },
+      {
+        "name": "Nathan Smith",
+        "role": "Server"
+      },
+      {
+        "name": "Fred De Leon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server"
+      },
+      {
+        "name": "Noel Nunez",
+        "role": "Busser"
+      }
+    ],
+    "note": "LIVE from the Sling daily report for Sat Sep 5, received 2026-09-05T14:00:24Z (7:00 AM PT). 12 employees / 12 shifts / 60.48 hours / 0 uncovered / 0 overtime / 1 employee off. Hours up from Friday's 55.99 (+4.49 hrs, +8.0%). KITCHEN COVERAGE FLAG: only ONE cook (Isael Salvador Narciso) scheduled today -- single-cook coverage continues."
+  },
   "googleAds": {
-    "lastUpdated": "2026-09-04T14:10:00Z -- LIVE scrape via Chrome MCP, account 343-687-4835, signed in as mojobrewhouse@gmail.com.",
+    "lastUpdated": "2026-09-05T14:20:00Z -- LIVE scrape via Chrome MCP, account 343-687-4835, signed in as mojobrewhouse@gmail.com.",
     "yesterday": {
-      "date": "September 3, 2026",
-      "spend": 19.84,
-      "impressions": 277,
-      "clicks": 8,
+      "date": "September 4, 2026",
+      "spend": 12.1,
+      "impressions": 537,
+      "clicks": 22,
       "conversions": 0.0,
-      "cpc": 2.48,
-      "ctr": 2.89,
-      "costChangeAbs": 6.01,
-      "impressionsChangeAbs": 21,
-      "clicksChangeAbs": 2,
+      "cpc": 0.55,
+      "ctr": 4.1,
+      "costChangeAbs": -7.74,
+      "impressionsChangeAbs": 260,
+      "clicksChangeAbs": 14,
       "conversionsChangeAbs": 0.0,
-      "avgCpcChangeAbs": 0.17,
+      "avgCpcChangeAbs": -1.93,
       "clicksDerived": false,
       "conversionsCalculating": true,
-      "comparisonBasis": "vs Wednesday Sep 2 (prior run's recorded live values: 256 impr / 6 clicks / $13.83 / $2.31 CPC / 2.34% CTR).",
-      "note": "LIVE read, date range Yesterday (Sep 3, 2026). Spend up to $19.84 vs Sep 2's $13.83 (+$6.01). Impressions up to 277 (+21), clicks up to 8 (+2). CTR 2.89% (account-wide). CONVERSIONS 0.00 -- treat as pending/calculating, not confirmed zero. BHC Coffee remained the primary spend driver ($19.76 of $19.84); Brewhouse Lunch registered its first spend in a while ($0.08 on 2 clicks). Brewhouse Dinner | Search | Sep 2026 grew from 1 impression (first appearance last run) to 15 impressions, still $0 spend, still policy-limited. Two Performance Max campaigns remain fully paused and policy-limited; World Cup HQ 2026 remains paused with no policy issue."
+      "comparisonBasis": "vs Thursday Sep 3 (prior run's recorded live values: 277 impr / 8 clicks / $19.84 / $2.48 CPC / 2.89% CTR).",
+      "note": "LIVE read, date range Yesterday (Sep 4, 2026). Spend down to $12.10 vs Sep 3's $19.84 (-$7.74). Impressions up to 537 (+260), clicks up to 22 (+14), driven mainly by BHC Coffee. CTR 4.10% (account-wide). CONVERSIONS 0.00 -- treat as pending/calculating, not confirmed zero. BHC Coffee remained the primary spend driver ($10.39 of $12.10, 11 clicks); Brewhouse Lunch picked up 7 clicks / $1.22; Brewhouse Dinner picked up its first clicks in a while (4 clicks, $0.49) though still policy-limited. Two Performance Max campaigns remain fully paused and policy-limited; World Cup HQ 2026 remains paused with no policy issue."
     },
     "accountDailyBudgetServing": 15.0,
     "campaigns": [
@@ -638,13 +646,13 @@
         "status": "Eligible (Limited)",
         "statusDetail": "Limited by search volume",
         "budget": "$15.00/day",
-        "impressions": 96,
-        "clicks": 6,
-        "ctr": 6.25,
-        "avgCpc": 3.29,
-        "cost": 19.76,
+        "impressions": 222,
+        "clicks": 11,
+        "ctr": 4.95,
+        "avgCpc": 0.94,
+        "cost": 10.39,
         "conversions": 0.0,
-        "changedSincePriorRun": "Impressions down to 96 from Sep 2's 121 (-25), clicks flat at 6, cost up to $19.76 from $13.83 (+$5.93) -- higher CPC this run."
+        "changedSincePriorRun": "Impressions up to 222 from Sep 3's 96 (+126), clicks up to 11 from 6 (+5), cost down to $10.39 from $19.76 (-$9.37) -- much lower CPC this run."
       },
       {
         "name": "Brewhouse Lunch | Search | Aug 2026",
@@ -652,13 +660,13 @@
         "status": "Eligible (Limited)",
         "statusDetail": "All ads limited by policy, Limited by search volume",
         "budget": "$25.00/day",
-        "impressions": 166,
-        "clicks": 2,
-        "ctr": 1.2,
-        "avgCpc": 0.04,
-        "cost": 0.08,
+        "impressions": 194,
+        "clicks": 7,
+        "ctr": 3.61,
+        "avgCpc": 0.17,
+        "cost": 1.22,
         "conversions": 0.0,
-        "changedSincePriorRun": "Impressions up from Sep 2's 134 to 166 (+32), 2 clicks / $0.08 spend vs Sep 2's zero clicks/spend. Still policy-limited overall."
+        "changedSincePriorRun": "Impressions down from Sep 3's 166 to 194 (+28), clicks up to 7 from 2 (+5), cost up to $1.22 from $0.08 (+$1.14). Still policy-limited overall."
       },
       {
         "name": "Brewhouse Dinner | Search | Sep 2026",
@@ -666,13 +674,13 @@
         "status": "Eligible (Limited)",
         "statusDetail": "All ads limited by policy",
         "budget": "$15.00/day",
-        "impressions": 15,
-        "clicks": 0,
-        "ctr": 0.0,
-        "avgCpc": null,
-        "cost": 0.0,
+        "impressions": 121,
+        "clicks": 4,
+        "ctr": 3.31,
+        "avgCpc": 0.12,
+        "cost": 0.49,
         "conversions": 0.0,
-        "changedSincePriorRun": "Impressions up to 15 from Sep 2's 1 (+14). Still no clicks/spend, still policy-limited."
+        "changedSincePriorRun": "Impressions up to 121 from Sep 3's 15 (+106). First clicks/spend recorded this run (4 clicks / $0.49) vs zero previously. Still policy-limited."
       },
       {
         "name": "Oldest SB Brewery on Tap",
@@ -686,7 +694,7 @@
         "avgCpc": null,
         "cost": 0.0,
         "conversions": 0.0,
-        "changedSincePriorRun": "Unchanged -- paused AND policy-limited, now day 18 of the block."
+        "changedSincePriorRun": "No change -- remains paused, policy-limited."
       },
       {
         "name": "Local store visits and promotions-Performance Max-2",
@@ -700,7 +708,7 @@
         "avgCpc": null,
         "cost": 0.0,
         "conversions": 0.0,
-        "changedSincePriorRun": "Unchanged -- paused AND policy-limited, now day 18 of the block."
+        "changedSincePriorRun": "No change -- remains paused, policy-limited."
       },
       {
         "name": "World Cup HQ 2026",
@@ -714,113 +722,63 @@
         "avgCpc": null,
         "cost": 0.0,
         "conversions": 0.0,
-        "changedSincePriorRun": "Unchanged -- still paused, no policy issue."
+        "changedSincePriorRun": "No change -- remains paused, no policy issue."
       }
-    ],
-    "draftsInProgress": 2,
-    "policyBlockFlag": true,
-    "note": "LIVE scrape Fri Sep 4 ~7:10 AM PT via Chrome MCP, account 343-687-4835. HEADLINE: yesterday's (Sep 3) spend rose to $19.84 (+$6.01 vs Sep 2). BHC Coffee ($19.76, 96 impr, 6 clicks) remains the primary spend driver. Brewhouse Lunch got its first clicks/spend in a while ($0.08, 2 clicks). Brewhouse Dinner | Search | Sep 2026 grew to 15 impressions (still $0 spend, still policy-limited). Two Performance Max campaigns remain fully paused and policy-limited, now day 18 of the block. World Cup HQ 2026 stays paused with no policy issue. 2 drafts still in progress. No disapproval or policy-alert banners observed on the Campaigns page this run. || SAT SEP 5 RUN: Chrome dashboard unavailable, not re-scraped live. 4 'Your Google Ads report is ready' emails received Sep 3-4 (Campaign performance x2, Brewhouse Daily Campaign Report x2) -- no disapproval or budget-alert language in any subject line, no action flagged. Figures above carried forward from last live check (Fri Sep 4).",
-    "carriedForward": false,
-    "policyBlockDays": 18,
-    "budgetCapHitFlag": false,
-    "last7d": {
-      "range": "Aug 27 - Sep 2, 2026",
-      "impressions": 1838,
-      "clicks": 79,
-      "cost": 126.16,
-      "avgCpc": 1.6,
-      "conversions": 28.0,
-      "conversionsIncludeProjected": true,
-      "impressionsChangeAbs": 221,
-      "clicksChangeAbs": 5,
-      "costChangeAbs": 45.4,
-      "avgCpcChangeAbs": 0.51,
-      "conversionsChangeAbs": -15.0,
-      "note": "Week-over-week (Aug 27-Sep 2 vs prior 7d): impressions +221, clicks +5, spend +$45.40, avg CPC +$0.51, conversions -15.0. Account banner separately flagged BHC Coffee's own conversions were down 34% WoW despite the account-wide conversion count of 28. || Not re-verified live this run -- carried forward from last check."
-    },
-    "liveVerifiedThisRun": false
+    ]
   },
   "yelpAds": {
-    "lastUpdated": "2026-09-04T14:10:00Z -- LIVE scrape via Chrome MCP -- Ad performance tab and Ad settings tab both read live.",
+    "lastUpdated": "2026-09-05T14:35:00Z -- LIVE scrape via Chrome MCP -- Ad performance tab and Ad settings tab both read live.",
     "last30d": {
-      "adImpressions": 31200,
-      "adImpressionsDisplay": "31.2k",
-      "totalImpressions": 40400,
-      "totalImpressionsDisplay": "40.4k",
-      "impressionSharePct": 77,
-      "pageVisitsFromAds": 375,
-      "totalPageVisits": 682,
-      "pageVisitSharePct": 55,
-      "leadsFromAds": 95,
-      "totalLeads": 148,
-      "leadSharePct": 64,
-      "adClicks": 310,
-      "avgCpc": 1.55,
-      "costPerLead": 7.21,
+      "adImpressions": 30900,
+      "adImpressionsDisplay": "30.9k",
+      "totalImpressions": 40500,
+      "totalImpressionsDisplay": "40.5k",
+      "impressionSharePct": 76,
+      "pageVisitsFromAds": 374,
+      "totalPageVisits": 688,
+      "pageVisitSharePct": 54,
+      "leadsFromAds": 99,
+      "totalLeads": 151,
+      "leadSharePct": 66,
+      "adClicks": 309,
+      "avgCpc": 1.42,
+      "costPerLead": 4.91,
       "avgCpcCarriedForward": false,
       "costPerLeadCarriedForward": false
     },
     "last12mo": {
-      "adLeads": 1300,
-      "organicLeads": 663,
-      "total": 1963,
+      "adLeads": 1304,
+      "organicLeads": 665,
+      "total": 1969,
       "adSharePct": 66,
       "organicSharePct": 34,
-      "forecast": 141,
-      "leadsBreakdown": [
-        {
-          "type": "Website Visits",
-          "count": 962,
-          "pct": 48
-        },
-        {
-          "type": "Directions & Map Views",
-          "count": 891,
-          "pct": 44
-        },
-        {
-          "type": "Calls",
-          "count": 130,
-          "pct": 6
-        },
-        {
-          "type": "CTA Clicks",
-          "count": 26,
-          "pct": 1
-        }
-      ],
+      "forecast": 136,
+      "leadsBreakdown": null,
       "leadsBreakdownCarriedForward": true
     },
     "billingPeriod": {
-      "range": "current billing period, Sep 1 - Sep 3, 2026",
-      "spend": 43.27,
+      "range": "current billing period, Sep 1 - Sep 4, 2026",
+      "spend": 54.01,
       "perDayAvg": null,
-      "note": "LIVE this run -- 'Ad spend this billing period' panel read directly: $43.27 as of Sep 3, 2026 (range Sep 1 - Sep 3), avg cost-per-click $1.55, avg cost-per-lead $7.21."
+      "note": "LIVE this run -- 'Ad spend this billing period' panel read directly: $54.01 as of Sep 4, 2026 (range Sep 1 - Sep 4), avg cost-per-click $1.42, avg cost-per-lead $4.91."
     },
     "budgetSetting": "$13/day average",
-    "audienceSize": "Typical",
+    "audienceSize": "Ideal",
     "audienceSizeFlag": false,
     "bonusBudgetRemaining": null,
-    "bonusBudgetNote": "Still not surfaced. THIRTEENTH consecutive run with no bonus-budget panel anywhere on the Yelp Ads dashboard for this account. Treat it as absent for this account, not as a scrape failure.",
-    "note": "LIVE scrape Fri Sep 4 ~7:10 AM PT via Chrome MCP -- session authenticated, both Ad performance tab (last 30 days impressions/page visits/leads/clicks + current billing-period spend) and Ad settings tab (budget, audience size) read live this run. Last 30 days ad impressions ticked down slightly to 31.2k (from 31.9k), leads from ads down to 95 (from 100) -- both still comfortably the majority share of total (77% impressions, 64% leads). Billing period spend now $43.27 across Sep 1-3 (up from $28.98 across Sep 1-2, i.e. ~$14.29 for Sep 3 alone). || SAT SEP 5 RUN: not re-scraped live (Chrome dashboard unavailable). Figures above carried forward from last live check (Fri Sep 4).",
-    "carriedForward": true,
-    "audienceSizeChanged": "LIVE this run -- Ad settings tab now reads 'You're targeting a typical audience size for similar businesses in your area' (previously recorded as 'Ideal'). Likely just Yelp's wording/tier-label update, not a real targeting change -- worth a sanity check if it persists.",
-    "calls": {
-      "received": 109,
-      "answeredPct": 98,
-      "avgDuration": "0m 31s",
-      "window": "last 12 months",
-      "mostRecent": "Aug 24, 2026 4:36 PM"
-    },
-    "last30dSpendNote": "Ad impressions/page visits/leads/clicks/avg CPC/cost-per-lead AND Ad settings (budget, audience size) are all LIVE this run (Fri Sep 4). Calls data (last 12 months) not re-checked this run -- carried forward from the last live check.",
-    "liveVerifiedThisRun": false
+    "bonusBudgetNote": "Still not surfaced. FOURTEENTH consecutive run with no bonus-budget panel anywhere on the Yelp Ads dashboard for this account. Treat it as absent for this account, not as a scrape failure.",
+    "note": "LIVE scrape Sat Sep 5 ~7:35 AM PT via Chrome MCP -- session authenticated, both Ad performance tab (last 30 days impressions/page visits/leads/clicks + current billing-period spend) and Ad settings tab (audience size) read live this run, unlike the prior run where the dashboard was unreachable. Last 30 days ad impressions ticked down slightly to 30.9k (from 31.2k), leads from ads up to 99 (from 95) -- both still comfortably the majority share of total (76% impressions, 66% leads). Billing period spend now $54.01 across Sep 1-4 (up from $43.27 across Sep 1-3, i.e. ~$10.74 for Sep 4 alone). Audience size reads 'Ideal' again this run.",
+    "carriedForward": false,
+    "audienceSizeChanged": "LIVE this run -- Ad settings tab reads 'Ideal' (back from last run's 'typical audience size' wording) -- likely just Yelp's label toggling, not a real targeting change.",
+    "liveVerifiedThisRun": true,
+    "lastVerifiedLive": "2026-09-05T14:35:00Z"
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-09-05T11:09:09Z",
+    "lastUpdated": "2026-09-05T14:42:03Z",
     "actionable": false,
     "adReports24h": 0,
     "items": [],
-    "note": "No TripAdvisor analytics mail from analytics@hm2.tripadvisor.com found via Gmail search this run (checked newer_than 2d and 14d). No action."
+    "note": "No TripAdvisor analytics mail from analytics@hm2.tripadvisor.com found via Gmail search this run (checked newer_than 2d). Consistent with prior runs. No action."
   },
   "reservations": {
     "lastUpdated": "2026-09-05",
@@ -962,53 +920,53 @@
     "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-08-25T07:10:00-07:00"
   },
-  "lastUpdated": "2026-09-05T11:09:09Z",
+  "lastUpdated": "2026-09-05T14:42:03Z",
   "toastPrevDay": {
-    "date": "Thursday, September 3",
-    "net": 3984.37,
-    "netSales": 3984.37,
-    "gross": 4151.65,
-    "grossSales": 4151.65,
-    "guests": 178,
+    "date": "Friday, September 4",
+    "net": 5984.9,
+    "netSales": 5984.9,
+    "gross": 6168.15,
+    "grossSales": 6168.15,
+    "guests": 222,
     "guestsDerived": false,
-    "orders": 126,
+    "orders": 138,
     "ordersDerived": false,
     "checks": null,
-    "avgPerOrder": 31.62,
-    "avgOrder": 31.62,
-    "avgPerGuest": 22.38,
+    "avgPerOrder": 43.37,
+    "avgOrder": 43.37,
+    "avgPerGuest": 26.96,
     "avgPerCheck": null,
     "avgCheck": null,
-    "laborPct": 31.3,
-    "laborPctOfNet": 31.3,
+    "laborPct": 21.4,
+    "laborPctOfNet": 21.4,
     "laborCost": null,
     "laborCostDerived": true,
     "discounts": null,
     "discountsDerived": true,
-    "discountPct": 4.0,
+    "discountPct": 3.0,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "voidAmount": null,
     "voidAmountDerived": true,
     "voidItems": 13,
     "voidOrders": null,
-    "cardPayments": 91,
-    "openOrders": 2,
+    "cardPayments": 119,
+    "openOrders": 0,
     "autoClockedOut": [],
     "takeoutOrders": 2,
-    "takeoutSales": 51.5,
+    "takeoutSales": 39.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "dineInOrders": 2,
-    "dineInSales": 17.0,
-    "source": "The Brewhouse Santa Barbara Group (All Locations) Daily Performance Summary for Thu Sep 3, received 2026-09-04T13:34:49Z (6:34 AM PT). GROUP SUMMARY ONLY -- single-location full detail (SDLW, 4-week avg, dayparts, revenue centers, categories) has not arrived yet.",
+    "dineInOrders": 3,
+    "dineInSales": 32.75,
+    "source": "The Brewhouse Santa Barbara Group (All Locations) Daily Performance Summary for Fri Sep 4, received 2026-09-05T13:30:15Z (6:30 AM PT). GROUP SUMMARY ONLY -- single-location full detail (SDLW, 4-week avg, dayparts, revenue centers, categories) has not arrived yet.",
     "partial": true,
-    "note": "PARTIAL DATA: only the Group (all-locations) rollup email has arrived for Thu Sep 3 -- no dayparts/SDLW/revenue-center/category breakdown available this run. checks, laborCost, discounts, voidAmount, voidOrders not reported in the Group email format (left null). Net $3,984.37 (+17.4% vs Wed Sep 2's $3,394.95), 178 guests (+24.5%), 126 orders (+40.0%). Labor 31.3% of net, down from Wed's 37.4%. Will backfill with full single-location detail when/if it arrives. || RESOLVED as of Sat Sep 5 run: single-location full detail for Thu Sep 3 arrived 2026-09-04T14:39:42Z (7:39 AM PT), backfilled into the 'toast' field with dayparts/SDLW/revenue-center/category/void detail."
+    "note": "PARTIAL DATA: only the Group (all-locations) rollup email has arrived for Fri Sep 4 -- no dayparts/SDLW/revenue-center/category breakdown available this run. checks, laborCost, discounts, voidAmount, voidOrders not reported in the Group email format (left null). Net $5,984.90 (+50.2% vs Thu Sep 3's $3,984.37), 222 guests (+24.7%), 138 orders (+9.5%). Labor 21.4% of net, down sharply from Thu's 31.3%. Will backfill with full single-location detail when/if it arrives."
   },
   "toastPending": {
-    "pending": false,
-    "pendingFor": null,
-    "note": "RESOLVED as of Sat Sep 5 run -- Thu Sep 3 single-location Daily Performance Summary (229 W Montecito St) arrived 2026-09-04T14:39:42Z (7:39 AM PT), full detail now in 'toast'."
+    "pending": true,
+    "pendingFor": "Friday, September 4 single-location full detail",
+    "note": "Group (all-locations) rollup for Fri Sep 4 arrived 2026-09-05T13:30:15Z (6:30 AM PT) but the single-location Daily Performance Summary (229 W Montecito St, with SDLW/4-week avg/dayparts/revenue centers/categories/voids) has not arrived yet. 'toast' field remains Thu Sep 3 (full detail) until backfilled."
   },
   "payroll": {
     "lastUpdated": "2026-08-27T07:14:00-07:00",
@@ -1334,15 +1292,22 @@
       "shifts": 12,
       "hours": 55.99,
       "overtime": 0
+    },
+    {
+      "date": "Saturday, September 5",
+      "count": 12,
+      "shifts": 12,
+      "hours": 60.48,
+      "overtime": 0
     }
   ],
   "slingPending": {
     "pending": false,
     "pendingFor": null,
-    "note": "RESOLVED as of this run (~7:10 AM PT) -- Sling daily report for Fri Sep 4 arrived at 7:00 AM PT, confirming today's roster (11 employees / 12 shifts / 55.99 hours / 0 uncovered / 0 OT)."
+    "note": "RESOLVED as of this run (~7:42 AM PT) -- Sling daily report for Sat Sep 5 arrived at 7:00 AM PT, confirming today's roster (12 employees / 12 shifts / 60.48 hours / 0 uncovered / 0 OT / 1 employee off)."
   },
   "toastPartial": {
-    "resolved": true,
-    "note": "RESOLVED as of Sat Sep 5 run -- Thu Sep 3 full single-location detail (SDLW, 4-week avg, dayparts, revenue centers, categories, voids) received and backfilled. VOID FLAG: $130.00 across 13 items / 10 orders, +188.9% vs SDLW ($45.00) -- worth a look. Labor 31.3% of net, up from SDLW's 26.5%."
+    "resolved": false,
+    "note": "PARTIAL as of Sat Sep 5 run -- Fri Sep 4 Group (all-locations) rollup received, single-location full detail still outstanding. VOID FLAG: 13 items flagged again (amount not reported in Group format). Labor 21.4% of net, down sharply from Thu Sep 3's 31.3%."
   }
 }
