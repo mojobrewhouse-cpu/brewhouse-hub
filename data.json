@@ -1,1142 +1,1161 @@
 {
- "date": "Tuesday, September 8",
- "systemStatus": {
-  "level": "action",
-  "headline": "TUE SEP 8, 7:35 AM PT RUN (second pass today; supersedes the 4:00 AM run). PAYROLL IS DUE TODAY AND STILL NOT SUBMITTED -- Aug 23-Sep 5 cycle, est. $29,853.57 (treat as a ceiling; last cycle came in $10.5k under), pay date Fri Sep 11. Two blocking action items remain: 14 days of unapproved tip pools and auto-clockouts on 3 employees. That second item likely GREW overnight -- Monday's Toast summary shows Harmony Willson auto-clocked out again, after also being auto-clocked out Sunday. Funding must clear today. This is the one thing that has to happen. TOAST: Monday Sep 7 (Labor Day) group summary has now landed -- net $2,950.25 on 92 orders / 118 guests, labor 25.4% of net, 1 order left OPEN at closeout. Single-location detail still pending (~14:40Z), so no SDLW read on the holiday yet. Sunday Sep 6 is confirmed complete and was a RECORD: net $10,559.19, +140.8% vs SDLW and +83.4% vs the 4-Sunday average on 438 guests, with labor FLEXING CORRECTLY down to 24.7% of net -- the opposite of the Saturday Sep 5 problem. Beverage outsold food; Back Room ran $92.45 net per order, suggesting a booked group; voids ($220.50 / 17 orders) and discounts ($324.71) both spiked with volume and are worth a comp-log check. SLING: no longer pending -- Tue Sep 8 is live at 7 employees / 31.75 h, 0 uncovered, 0 OT, but STILL ONLY ONE COOK (Isael today, Rafael Monday). ADS DETERIORATING: Google Ads Sep 7 spend $41.54, up 72% from Sep 6's $24.21, on 17% FEWER impressions and 27% fewer clicks -- CPC has more than doubled to ~$1.73 across two days. Both live campaigns are still 'all ads limited by policy', and BHC Coffee -- the account's best CTR performer and Sep 6's main spend line -- is now PAUSED; confirm that was intentional. YELP: headline efficiency looks better (CPC $1.30 to $1.22, cost-per-lead $3.62 to $3.46) but that is an artifact -- billing-period spend is UNCHANGED at $100.33, meaning roughly ZERO Yelp ad spend on Sep 7. Confirm the ad actually served on Labor Day. BONUS BUDGET QUESTION CLOSED: the settings panel rendered in full for the first time in sixteen runs and there is no bonus-budget field at all -- the prior runs were chasing a UI bug; recommend dropping it from the dashboard. REVIEWS: not re-checked at 7:35; the 4:00 AM authenticated read stands -- Brewhouse 4.5 / 529 (Luke Mayer new) with 4 unanswered, Coffee 5.0 / 6 with 2 unanswered, six drafts written, NOTHING POSTED. Yelp still shows 15 unread inbox items (~9 days) and 3 reviews needing attention, plus a 'finish setting up your ad' banner pointing at ad text. TRIPADVISOR: nothing actionable. OPEN RISK: Google Business Profile management request still pending -- DAY 48, eight consecutive runs without live verification.",
-  "salesDataLag": true,
-  "schedDataLag": false,
-  "reviewDiscrepancyFlag": false,
-  "chromeUnavailableThisRun": false,
-  "chromeAuthenticatedReviewTabReached": false,
-  "runNote": "Second run of Sep 8. Rebased on the 4:00 AM push (sha 2b7ddad) rather than the pre-dawn state, so the authenticated review verification and full payroll action-item detail from that run are preserved intact. Also repaired slingHistory: the 4:00 AM push had dropped Sep 3-6 and left the series unsorted; those four days are restored from the prior state and the whole series is now deduplicated and in chronological order."
- },
- "toast": {
-  "date": "Monday, September 7",
-  "net": 2950.25,
-  "netSales": 2950.25,
-  "gross": 3038.85,
-  "grossSales": 3038.85,
-  "guests": 118,
-  "guestsDerived": false,
-  "orders": 92,
-  "ordersDerived": false,
-  "checks": null,
-  "avgPerOrder": 32.07,
-  "avgOrder": 32.07,
-  "avgPerGuest": 25.0,
-  "avgPerCheck": null,
-  "avgCheck": null,
-  "laborPct": 25.4,
-  "laborPctOfNet": 25.4,
-  "laborCost": 749.36,
-  "laborCostDerived": true,
-  "discounts": 88.6,
-  "discountsDerived": true,
-  "discountPct": 2.9,
-  "deferredSales": 0.0,
-  "refunds": 0.0,
-  "voidAmount": null,
-  "voidAmountDerived": false,
-  "voidItems": 4,
-  "voidOrders": null,
-  "cardPayments": 70,
-  "openOrders": 1,
-  "autoClockedOut": [
-   "Harmony Willson"
-  ],
-  "takeoutOrders": 0,
-  "takeoutSales": 0.0,
-  "deliveryOrders": 0,
-  "deliverySales": 0.0,
-  "dineInOrders": 0,
-  "dineInSales": 0.0,
-  "source": "The Brewhouse Santa Barbara Group - Monday, September 7 group Daily Performance Summary, received 2026-09-08T13:27Z. GROUP-LEVEL ONLY -- the single-location full-detail email for Sep 7 had not arrived at this run (those land ~14:40Z).",
-  "partial": true,
-  "sdlw": null,
-  "fourWeekAvg": null,
-  "dayparts": [],
-  "revenueCenters": [],
-  "salesCategories": [],
-  "note": "PARTIAL -- group summary only, and this was LABOR DAY. Net $2,950.25 on 92 orders / 118 guests, avg $32.07 per order and $25.00 per guest. Labor 25.4% of net (~$749 derived from the percentage; the group email does not carry the dollar figure). Discounts 2.9% of gross. Coming off Sunday's record $10,559, Monday fell back to a quiet holiday trade. Missing until the single-location email lands: checks, void dollars, void orders, SDLW and 4-week comparisons, dayparts, revenue centers, sales categories -- so the Labor-Day-vs-normal-Monday read is not yet possible. TWO OPERATIONAL FLAGS: 1 order left OPEN at closeout, and Harmony Willson AUTO-CLOCKED OUT again (she was also auto-clocked-out Sun Sep 6). That repeat auto-clockout is not just a tidiness issue -- auto-clockouts on 3 employees are one of the two action items currently BLOCKING today's payroll submission."
- },
- "toastLastKnown": {
-  "date": "Monday, September 7",
-  "net": 2950.25,
-  "netSales": 2950.25,
-  "gross": 3038.85,
-  "grossSales": 3038.85,
-  "guests": 118,
-  "guestsDerived": false,
-  "orders": 92,
-  "ordersDerived": false,
-  "checks": null,
-  "avgPerOrder": 32.07,
-  "avgOrder": 32.07,
-  "avgPerGuest": 25.0,
-  "avgPerCheck": null,
-  "avgCheck": null,
-  "laborPct": 25.4,
-  "laborPctOfNet": 25.4,
-  "laborCost": 749.36,
-  "laborCostDerived": true,
-  "discounts": 88.6,
-  "discountsDerived": true,
-  "discountPct": 2.9,
-  "deferredSales": 0.0,
-  "refunds": 0.0,
-  "voidAmount": null,
-  "voidAmountDerived": false,
-  "voidItems": 4,
-  "voidOrders": null,
-  "cardPayments": 70,
-  "openOrders": 1,
-  "autoClockedOut": [
-   "Harmony Willson"
-  ],
-  "takeoutOrders": 0,
-  "takeoutSales": 0.0,
-  "deliveryOrders": 0,
-  "deliverySales": 0.0,
-  "dineInOrders": 0,
-  "dineInSales": 0.0,
-  "source": "The Brewhouse Santa Barbara Group - Monday, September 7 group Daily Performance Summary, received 2026-09-08T13:27Z. GROUP-LEVEL ONLY -- the single-location full-detail email for Sep 7 had not arrived at this run (those land ~14:40Z).",
-  "partial": true,
-  "sdlw": null,
-  "fourWeekAvg": null,
-  "dayparts": [],
-  "revenueCenters": [],
-  "salesCategories": [],
-  "note": "PARTIAL -- group summary only, and this was LABOR DAY. Net $2,950.25 on 92 orders / 118 guests, avg $32.07 per order and $25.00 per guest. Labor 25.4% of net (~$749 derived from the percentage; the group email does not carry the dollar figure). Discounts 2.9% of gross. Coming off Sunday's record $10,559, Monday fell back to a quiet holiday trade. Missing until the single-location email lands: checks, void dollars, void orders, SDLW and 4-week comparisons, dayparts, revenue centers, sales categories -- so the Labor-Day-vs-normal-Monday read is not yet possible. TWO OPERATIONAL FLAGS: 1 order left OPEN at closeout, and Harmony Willson AUTO-CLOCKED OUT again (she was also auto-clocked-out Sun Sep 6). That repeat auto-clockout is not just a tidiness issue -- auto-clockouts on 3 employees are one of the two action items currently BLOCKING today's payroll submission."
- },
- "sling": {
   "date": "Tuesday, September 8",
-  "count": 7,
-  "shifts": 7,
-  "hours": 31.75,
-  "uncovered": 0,
-  "overtime": 0,
-  "employeesOff": 0,
-  "pending": false,
-  "nextDayPending": false,
-  "stale": false,
-  "kitchenCoverageFlag": true,
-  "overtimeFlag": false,
-  "staff": [
-   {
-    "name": "Isael Salvador Narciso",
-    "role": "Cook"
-   },
-   {
-    "name": "Julianna Ornelas",
-    "role": "Barista"
-   },
-   {
-    "name": "Tony Rincon",
-    "role": "Bartender"
-   },
-   {
-    "name": "Augustine Arroyo",
-    "role": "Server"
-   },
-   {
-    "name": "Andrew Turner",
-    "role": "Bartender"
-   },
-   {
-    "name": "Bri Kelley",
-    "role": "Server"
-   },
-   {
-    "name": "Bea Southern",
-    "role": "Busser"
-   }
-  ],
-  "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
- },
- "slingLastKnown": {
-  "date": "Tuesday, September 8",
-  "count": 7,
-  "shifts": 7,
-  "hours": 31.75,
-  "uncovered": 0,
-  "overtime": 0,
-  "employeesOff": 0,
-  "pending": false,
-  "nextDayPending": false,
-  "stale": false,
-  "kitchenCoverageFlag": true,
-  "overtimeFlag": false,
-  "staff": [
-   {
-    "name": "Isael Salvador Narciso",
-    "role": "Cook"
-   },
-   {
-    "name": "Julianna Ornelas",
-    "role": "Barista"
-   },
-   {
-    "name": "Tony Rincon",
-    "role": "Bartender"
-   },
-   {
-    "name": "Augustine Arroyo",
-    "role": "Server"
-   },
-   {
-    "name": "Andrew Turner",
-    "role": "Bartender"
-   },
-   {
-    "name": "Bri Kelley",
-    "role": "Server"
-   },
-   {
-    "name": "Bea Southern",
-    "role": "Busser"
-   }
-  ],
-  "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
- },
- "slingToday": {
-  "date": "Tuesday, September 8",
-  "count": 7,
-  "shifts": 7,
-  "hours": 31.75,
-  "uncovered": 0,
-  "overtime": 0,
-  "employeesOff": 0,
-  "pending": false,
-  "nextDayPending": false,
-  "stale": false,
-  "kitchenCoverageFlag": true,
-  "overtimeFlag": false,
-  "staff": [
-   {
-    "name": "Isael Salvador Narciso",
-    "role": "Cook"
-   },
-   {
-    "name": "Julianna Ornelas",
-    "role": "Barista"
-   },
-   {
-    "name": "Tony Rincon",
-    "role": "Bartender"
-   },
-   {
-    "name": "Augustine Arroyo",
-    "role": "Server"
-   },
-   {
-    "name": "Andrew Turner",
-    "role": "Bartender"
-   },
-   {
-    "name": "Bri Kelley",
-    "role": "Server"
-   },
-   {
-    "name": "Bea Southern",
-    "role": "Busser"
-   }
-  ],
-  "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
- },
- "googleAds": {
-  "lastUpdated": "2026-09-08T14:35:00Z -- LIVE scrape via Chrome MCP, account 343-687-4835, date range 'Yesterday' (Sep 7, 2026).",
-  "yesterday": {
-   "date": "September 7, 2026",
-   "spend": 41.54,
-   "impressions": 1033,
-   "clicks": 24,
-   "conversions": 1.0,
-   "cpc": 1.73,
-   "ctr": 2.32,
-   "costChangeAbs": 17.33,
-   "impressionsChangeAbs": -208,
-   "clicksChangeAbs": null,
-   "conversionsChangeAbs": null,
-   "avgCpcChangeAbs": null,
-   "clicksDerived": false,
-   "conversionsCalculating": true,
-   "comparisonBasis": "Google Ads' own vs-prior-period deltas on the scorecards: impressions -208 (-16.76%), cost +$17.33.",
-   "note": "LIVE read, date range Yesterday (Sep 7, 2026). Spend $41.54, up $17.33 on the prior period, while impressions FELL to 1,033 (-208, -16.76%) -- paying more for less reach. Clicks 24 at a 2.32% CTR and roughly $1.73 average CPC, up sharply from the $1.07 CPC on Sep 5. Conversions show 1.00 but are still flagged pending/calculating, so treat as provisional. Account daily budget serving $40.00/day across the two live Search campaigns. STRUCTURAL FLAG UNCHANGED: both live campaigns (Brewhouse Lunch, Brewhouse Dinner) still read 'All ads limited by policy, Limited by search volume' -- the policy limitation has now persisted for multiple runs and is capping delivery. Four campaigns remain paused, including both Performance Max campaigns ('all asset groups limited by policy') and World Cup HQ 2026. TREND vs the Sep 6 read ($24.21, 1,241 impr, 33 clicks, $0.73 CPC): spend is UP 72% while impressions are DOWN 17% and clicks DOWN 27%, and CPC has more than doubled from $0.73 to ~$1.73. Two straight days of deteriorating efficiency. Per-campaign cost columns were not readable this run, so the driver campaign cannot be pinned down from this read alone -- on Sep 6 the spend concentrated in BHC Coffee ($18.12), which is now paused, so the cost has shifted onto the two policy-limited campaigns."
+  "systemStatus": {
+    "level": "action",
+    "headline": "TUE SEP 8, 7:35 AM PT RUN (second pass today; supersedes the 4:00 AM run). PAYROLL IS DUE TODAY AND STILL NOT SUBMITTED -- Aug 23-Sep 5 cycle, est. $29,853.57 (treat as a ceiling; last cycle came in $10.5k under), pay date Fri Sep 11. Two blocking action items remain: 14 days of unapproved tip pools and auto-clockouts on 3 employees. That second item likely GREW overnight -- Monday's Toast summary shows Harmony Willson auto-clocked out again, after also being auto-clocked out Sunday. Funding must clear today. This is the one thing that has to happen. TOAST: Monday Sep 7 (Labor Day) group summary has now landed -- net $2,950.25 on 92 orders / 118 guests, labor 25.4% of net, 1 order left OPEN at closeout. Single-location detail still pending (~14:40Z), so no SDLW read on the holiday yet. Sunday Sep 6 is confirmed complete and was a RECORD: net $10,559.19, +140.8% vs SDLW and +83.4% vs the 4-Sunday average on 438 guests, with labor FLEXING CORRECTLY down to 24.7% of net -- the opposite of the Saturday Sep 5 problem. Beverage outsold food; Back Room ran $92.45 net per order, suggesting a booked group; voids ($220.50 / 17 orders) and discounts ($324.71) both spiked with volume and are worth a comp-log check. SLING: no longer pending -- Tue Sep 8 is live at 7 employees / 31.75 h, 0 uncovered, 0 OT, but STILL ONLY ONE COOK (Isael today, Rafael Monday). ADS DETERIORATING: Google Ads Sep 7 spend $41.54, up 72% from Sep 6's $24.21, on 17% FEWER impressions and 27% fewer clicks -- CPC has more than doubled to ~$1.73 across two days. Both live campaigns are still 'all ads limited by policy', and BHC Coffee -- the account's best CTR performer and Sep 6's main spend line -- is now PAUSED; confirm that was intentional. YELP: headline efficiency looks better (CPC $1.30 to $1.22, cost-per-lead $3.62 to $3.46) but that is an artifact -- billing-period spend is UNCHANGED at $100.33, meaning roughly ZERO Yelp ad spend on Sep 7. Confirm the ad actually served on Labor Day. BONUS BUDGET QUESTION CLOSED: the settings panel rendered in full for the first time in sixteen runs and there is no bonus-budget field at all -- the prior runs were chasing a UI bug; recommend dropping it from the dashboard. REVIEWS: not re-checked at 7:35; the 4:00 AM authenticated read stands -- Brewhouse 4.5 / 529 (Luke Mayer new) with 4 unanswered, Coffee 5.0 / 6 with 2 unanswered, six drafts written, NOTHING POSTED. Yelp still shows 15 unread inbox items (~9 days) and 3 reviews needing attention, plus a 'finish setting up your ad' banner pointing at ad text. TRIPADVISOR: nothing actionable. OPEN RISK: Google Business Profile management request still pending -- DAY 48, eight consecutive runs without live verification.",
+    "salesDataLag": true,
+    "schedDataLag": false,
+    "reviewDiscrepancyFlag": false,
+    "chromeUnavailableThisRun": false,
+    "chromeAuthenticatedReviewTabReached": false,
+    "runNote": "Second run of Sep 8. Rebased on the 4:00 AM push (sha 2b7ddad) rather than the pre-dawn state, so the authenticated review verification and full payroll action-item detail from that run are preserved intact. Also repaired slingHistory: the 4:00 AM push had dropped Sep 3-6 and left the series unsorted; those four days are restored from the prior state and the whole series is now deduplicated and in chronological order."
   },
-  "accountDailyBudgetServing": 40.0,
-  "campaigns": [
-   {
-    "name": "Brewhouse Lunch | Search | Aug 2026",
-    "type": "Search",
-    "status": "Eligible (Limited)",
-    "statusDetail": "All ads limited by policy, Limited by search volume",
-    "budget": "$25.00/day",
-    "impressions": 798,
-    "clicks": 15,
-    "ctr": 1.88,
-    "avgCpc": null,
-    "cost": null,
-    "conversions": null,
-    "changedSincePriorRun": "Now the volume driver at 798 impressions / 15 clicks, but the WEAKEST CTR in the account at 1.88%. Still policy-limited."
-   },
-   {
-    "name": "Brewhouse Dinner | Search | Sep 2026",
-    "type": "Search",
-    "status": "Eligible (Limited)",
-    "statusDetail": "All ads limited by policy, Limited by search volume",
-    "budget": "$15.00/day",
-    "impressions": 178,
-    "clicks": 6,
-    "ctr": 3.37,
-    "avgCpc": null,
-    "cost": null,
-    "conversions": null,
-    "changedSincePriorRun": "178 impressions / 6 clicks at 3.37% CTR. Delivery is thin against a $15/day budget."
-   },
-   {
-    "name": "BHC Coffee | Search | P1 Launch",
-    "type": "Search",
-    "status": "Paused",
-    "statusDetail": "Limited by search volume",
-    "budget": "$15.00/day",
-    "impressions": 57,
-    "clicks": 3,
-    "ctr": 5.26,
-    "avgCpc": null,
-    "cost": null,
-    "conversions": null,
-    "changedSincePriorRun": "NOW PAUSED -- was Eligible and the account's best performer on Sep 5 (347 impr, 21 clicks, 6.05% CTR). Only 57 residual impressions on Sep 7. Best CTR in the account at 5.26% even while paused. Worth confirming this pause was intentional."
-   },
-   {
-    "name": "Oldest SB Brewery on Tap",
-    "type": "Performance Max",
-    "status": "Paused",
-    "statusDetail": "All asset groups limited by policy",
-    "budget": "$10.80/day",
-    "impressions": 0,
-    "clicks": 0,
-    "ctr": null,
-    "avgCpc": null,
-    "cost": 0.0,
-    "conversions": 0.0,
-    "changedSincePriorRun": "Unchanged -- paused, all asset groups policy-limited, zero delivery."
-   },
-   {
-    "name": "Local store visits and promotions-Performance Max-2",
-    "type": "Performance Max",
-    "status": "Paused",
-    "statusDetail": "All asset groups limited by policy",
-    "budget": "$58.37/day",
-    "impressions": 0,
-    "clicks": 0,
-    "ctr": null,
-    "avgCpc": null,
-    "cost": 0.0,
-    "conversions": 0.0,
-    "changedSincePriorRun": "Unchanged -- paused, all asset groups policy-limited, zero delivery."
-   },
-   {
-    "name": "World Cup HQ 2026",
-    "type": "Search",
-    "status": "Paused",
-    "statusDetail": null,
-    "budget": "$20.00/day",
-    "impressions": 0,
-    "clicks": 0,
-    "ctr": null,
-    "avgCpc": null,
-    "cost": 0.0,
-    "conversions": 0.0,
-    "changedSincePriorRun": "Unchanged -- paused, zero delivery."
-   }
-  ],
-  "emailNotifications24h": 0,
-  "disapprovals24h": 0,
-  "budgetAlerts24h": 0,
-  "note24h": "No Google Ads disapproval or budget-alert emails in the last 24h. Per-campaign cost and CPC columns were NOT captured this run -- the campaign table's horizontal scroll would not advance to the Cost column and the date range reset on reload; per-campaign cost is recorded as null rather than estimated. Account-level cost ($41.54) and all impression/click/CTR figures were read directly and are reliable.",
-  "priorRead": {
-   "date": "September 6, 2026",
-   "spend": 24.21,
-   "impressions": 1241,
-   "clicks": 33,
-   "ctr": 2.66,
-   "cpc": 0.73,
-   "note": "Sep 6 live read from this morning's 4:00 AM run, retained for trend: $24.21 / 1,241 impr / 33 clicks / 2.66% CTR / $0.73 CPC."
-  }
- },
- "yelpAds": {
-  "lastUpdated": "2026-09-08T14:35:00Z -- LIVE scrape via Chrome MCP, both Ad performance AND Ad settings tabs read cleanly.",
-  "last30d": {
-   "adImpressions": 30000,
-   "adImpressionsDisplay": "30k",
-   "totalImpressions": 39700,
-   "totalImpressionsDisplay": "39.7k",
-   "impressionSharePct": 76,
-   "pageVisitsFromAds": 384,
-   "totalPageVisits": 706,
-   "pageVisitSharePct": 54,
-   "leadsFromAds": 103,
-   "totalLeads": 156,
-   "leadSharePct": 66,
-   "adClicks": 308,
-   "avgCpc": 1.22,
-   "costPerLead": 3.46
+  "toast": {
+    "date": "Monday, September 7",
+    "net": 2950.25,
+    "netSales": 2950.25,
+    "gross": 3038.85,
+    "grossSales": 3038.85,
+    "guests": 118,
+    "guestsDerived": false,
+    "orders": 92,
+    "ordersDerived": false,
+    "checks": null,
+    "avgPerOrder": 32.07,
+    "avgOrder": 32.07,
+    "avgPerGuest": 25.0,
+    "avgPerCheck": null,
+    "avgCheck": null,
+    "laborPct": 25.4,
+    "laborPctOfNet": 25.4,
+    "laborCost": 749.36,
+    "laborCostDerived": true,
+    "discounts": 88.6,
+    "discountsDerived": true,
+    "discountPct": 2.9,
+    "deferredSales": 0.0,
+    "refunds": 0.0,
+    "voidAmount": null,
+    "voidAmountDerived": false,
+    "voidItems": 4,
+    "voidOrders": null,
+    "cardPayments": 70,
+    "openOrders": 1,
+    "autoClockedOut": [
+      "Harmony Willson"
+    ],
+    "takeoutOrders": 0,
+    "takeoutSales": 0.0,
+    "deliveryOrders": 0,
+    "deliverySales": 0.0,
+    "dineInOrders": 0,
+    "dineInSales": 0.0,
+    "source": "The Brewhouse Santa Barbara Group - Monday, September 7 group Daily Performance Summary, received 2026-09-08T13:27Z. GROUP-LEVEL ONLY -- the single-location full-detail email for Sep 7 had not arrived at this run (those land ~14:40Z).",
+    "partial": true,
+    "sdlw": null,
+    "fourWeekAvg": null,
+    "dayparts": [],
+    "revenueCenters": [],
+    "salesCategories": [],
+    "note": "PARTIAL -- group summary only, and this was LABOR DAY. Net $2,950.25 on 92 orders / 118 guests, avg $32.07 per order and $25.00 per guest. Labor 25.4% of net (~$749 derived from the percentage; the group email does not carry the dollar figure). Discounts 2.9% of gross. Coming off Sunday's record $10,559, Monday fell back to a quiet holiday trade. Missing until the single-location email lands: checks, void dollars, void orders, SDLW and 4-week comparisons, dayparts, revenue centers, sales categories -- so the Labor-Day-vs-normal-Monday read is not yet possible. TWO OPERATIONAL FLAGS: 1 order left OPEN at closeout, and Harmony Willson AUTO-CLOCKED OUT again (she was also auto-clocked-out Sun Sep 6). That repeat auto-clockout is not just a tidiness issue -- auto-clockouts on 3 employees are one of the two action items currently BLOCKING today's payroll submission."
   },
-  "last12mo": {
-   "adLeads": 1323,
-   "organicLeads": 669,
-   "total": 1992,
-   "adSharePct": 66,
-   "organicSharePct": 34,
-   "forecast": 124,
-   "leadsBreakdown": "Ads 1,323 (66%) / Organic 669 (34%) / Total 1,992; forecast 124.",
-   "leadsBreakdownCarriedForward": false
+  "toastLastKnown": {
+    "date": "Monday, September 7",
+    "net": 2950.25,
+    "netSales": 2950.25,
+    "gross": 3038.85,
+    "grossSales": 3038.85,
+    "guests": 118,
+    "guestsDerived": false,
+    "orders": 92,
+    "ordersDerived": false,
+    "checks": null,
+    "avgPerOrder": 32.07,
+    "avgOrder": 32.07,
+    "avgPerGuest": 25.0,
+    "avgPerCheck": null,
+    "avgCheck": null,
+    "laborPct": 25.4,
+    "laborPctOfNet": 25.4,
+    "laborCost": 749.36,
+    "laborCostDerived": true,
+    "discounts": 88.6,
+    "discountsDerived": true,
+    "discountPct": 2.9,
+    "deferredSales": 0.0,
+    "refunds": 0.0,
+    "voidAmount": null,
+    "voidAmountDerived": false,
+    "voidItems": 4,
+    "voidOrders": null,
+    "cardPayments": 70,
+    "openOrders": 1,
+    "autoClockedOut": [
+      "Harmony Willson"
+    ],
+    "takeoutOrders": 0,
+    "takeoutSales": 0.0,
+    "deliveryOrders": 0,
+    "deliverySales": 0.0,
+    "dineInOrders": 0,
+    "dineInSales": 0.0,
+    "source": "The Brewhouse Santa Barbara Group - Monday, September 7 group Daily Performance Summary, received 2026-09-08T13:27Z. GROUP-LEVEL ONLY -- the single-location full-detail email for Sep 7 had not arrived at this run (those land ~14:40Z).",
+    "partial": true,
+    "sdlw": null,
+    "fourWeekAvg": null,
+    "dayparts": [],
+    "revenueCenters": [],
+    "salesCategories": [],
+    "note": "PARTIAL -- group summary only, and this was LABOR DAY. Net $2,950.25 on 92 orders / 118 guests, avg $32.07 per order and $25.00 per guest. Labor 25.4% of net (~$749 derived from the percentage; the group email does not carry the dollar figure). Discounts 2.9% of gross. Coming off Sunday's record $10,559, Monday fell back to a quiet holiday trade. Missing until the single-location email lands: checks, void dollars, void orders, SDLW and 4-week comparisons, dayparts, revenue centers, sales categories -- so the Labor-Day-vs-normal-Monday read is not yet possible. TWO OPERATIONAL FLAGS: 1 order left OPEN at closeout, and Harmony Willson AUTO-CLOCKED OUT again (she was also auto-clocked-out Sun Sep 6). That repeat auto-clockout is not just a tidiness issue -- auto-clockouts on 3 employees are one of the two action items currently BLOCKING today's payroll submission."
   },
-  "billingPeriod": {
-   "range": "Sep 1 - Sep 7, 2026",
-   "spend": 100.33,
-   "perDayAvg": 14.33,
-   "note": "LIVE. $100.33 across the first 7 days of the September billing period = $14.33/day, still running ABOVE the $13/day average budget setting, though the overage has narrowed from $15.91/day at the Sep 5 read. NOTABLE: total billing-period spend is UNCHANGED at $100.33 between the Sep 1-6 read and this Sep 1-7 read -- meaning Yelp recorded effectively ZERO ad spend on Sunday Sep 7. That is why the per-day average fell from $16.72 to $14.33; it is a pause or delivery gap, not a genuine efficiency gain. Worth confirming the ad served at all on Labor Day."
+  "sling": {
+    "date": "Tuesday, September 8",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "pending": false,
+    "nextDayPending": false,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser"
+      }
+    ],
+    "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
   },
-  "budgetSetting": "$13/day average",
-  "audienceSize": "Ideal",
-  "audienceSizeFlag": false,
-  "bonusBudgetRemaining": null,
-  "bonusBudgetNote": "RESOLVED AS 'NOT PRESENT', not as a loading failure. For the first time in sixteen runs the Ad settings 'All settings' panel rendered COMPLETELY -- keywords, location, budget ($13/day average), ad photo, ad goal, ad text, slideshow, call to action, business highlights and estimated audience size all populated. There is simply NO bonus-budget field in this account's ad settings. The previous fifteen runs' endless skeleton loader was a rendering bug; the underlying conclusion is that no bonus budget is being offered here. Recommend dropping bonus budget from the dashboard unless Yelp surfaces it again.",
-  "note": "LIVE scrape Tue Sep 8 ~7:35 AM PT via Chrome MCP -- session authenticated, both tabs read. Last 30 days: 30k ad impressions (76% of 39.7k total), 384 page visits from ads (54% of 706), 103 leads from ads (66% of 156), 308 ad clicks at $1.22 avg CPC and $3.46 cost-per-lead. All three efficiency metrics IMPROVED vs the Sep 6 read: CPC down from $1.30 to $1.22 and cost-per-lead down from $3.62 to $3.46, while page visits from ads rose from 369 to 384. Billing period Sep 1-7 spend $100.33 ($14.33/day). Ad settings confirmed: keywords span Bars / Brew Pubs / Corned Beef / Dinner / Fish / Gastropubs / Lunch / Microbrewery / Outdoor Dining / Pub / Restaurant / Restaurant Near Me; targeting 5 miles around the business; audience size 'Ideal'; smart selection on for photo and goal. OPEN ITEM: a persistent banner reads 'Finish setting up your ad -- you have 1 thing remaining', and the Ad text field still reads 'Turn on smart selection to let Yelp optimize your text' -- that is almost certainly the unfinished step. Yelp profile now shows 775 reviews at 3.8 stars. Sidebar badges: 15 unread inbox items and 3 reviews needing attention, both still open.",
-  "carriedForward": false,
-  "audienceSizeChanged": false,
-  "liveVerifiedThisRun": true,
-  "lastVerifiedLive": "2026-09-08T14:35:00Z"
- },
- "tripAdvisor": {
-  "lastUpdated": "2026-09-08T14:35:00Z",
-  "actionable": false,
-  "adReports24h": 0,
-  "items": [],
-  "note": "No mail from analytics@hm2.tripadvisor.com in the last 24h -- zero ad performance reports. The only recent TripAdvisor mail is a consumer marketing blast from inspiration@mp1.tripadvisor.com on Sep 6 ('6 college towns that shine in the fall'). Nothing to action."
- },
- "reservations": {
-  "lastUpdated": "2026-09-08",
-  "source": "All Sources",
-  "today": {
-   "date": "Tue, Sep 8",
-   "totalGuests": 0,
-   "bookings": []
+  "slingLastKnown": {
+    "date": "Tuesday, September 8",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "pending": false,
+    "nextDayPending": false,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser"
+      }
+    ],
+    "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
   },
-  "tomorrow": {
-   "date": "Wed, Sep 9",
-   "totalGuests": 0,
-   "bookings": []
+  "slingToday": {
+    "date": "Tuesday, September 8",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "pending": false,
+    "nextDayPending": false,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Bri Kelley",
+        "role": "Server"
+      },
+      {
+        "name": "Bea Southern",
+        "role": "Busser"
+      }
+    ],
+    "note": "LIVE for today -- resolves this morning's pending placeholder. The Tue Sep 8 Sling report arrived 14:00Z: 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 0 off. KITCHEN COVERAGE FLAG PERSISTS: only ONE cook (Isael Salvador Narciso) against 2 bartenders, 2 servers, 1 barista and 1 busser. Note the cook rotated -- Monday's single cook was Rafael Patricio, today it is Isael. The exposure is structural, not personal: any single call-out leaves no kitchen. Hours are light at 31.75 h (vs 70.41 h Sunday, 24.50 h Monday), appropriate for a Tuesday but with no slack."
   },
-  "upcoming": [
-   {
-    "time": "6:00 PM",
-    "name": "Rachel Trana",
-    "guests": 4,
-    "status": "confirmed",
-    "source": "SpotHopper",
-    "phone": "(773) 706-1372",
-    "notes": "",
-    "date": "Mon, Sep 14"
-   }
-  ]
- },
- "reviews": {
-  "lastUpdated": "2026-09-08T11:15:00Z",
-  "note": "TUE SEP 8 RUN -- BOTH LISTINGS CHECKED LIVE. Chrome reached the AUTHENTICATED 'Unreplied' tab on both profiles this run. THE BREWHOUSE 4.5 stars / 529 reviews (up 1 from 528). BREWHOUSE COFFEE 5.0 stars / 6 reviews (unchanged). Brewhouse Unreplied tab, newest-first, showed Luke Mayer (NEW, 15h) and Isabel Osmundsen (4 days) at the top; the panel could not be scrolled past the second entry, so Justin Ladner and R. Muller are CARRIED FORWARD as unconfirmed rather than declared resolved. Coffee Unreplied tab showed exactly two: Debra Wedlake and Geoff Lay -- complete, since Coffee has only 6 reviews total. NOTHING POSTED -- Joal approves every Google and Yelp reply before it goes live. || 7:35 AM PT: NOT re-checked this run -- Chrome time went to Google Ads and Yelp, both read live. The 4:00 AM authenticated verification above stands as the current state: Brewhouse 4.5 / 529 with 4 unanswered (Luke Mayer and Isabel Osmundsen confirmed, Justin Ladner and R. Muller carried forward unconfirmed), Coffee 5.0 / 6 with 2 unanswered. Six drafts written, NOTHING POSTED.",
-  "discrepancyFlag": true,
-  "brewhouse": {
-   "profile": "The Brewhouse",
-   "stars": 4.5,
-   "reviewCount": 529,
-   "unansweredCount": 4,
-   "unanswered": [
-    {
-     "name": "Luke Mayer (Cheez boi)",
-     "stars": 5,
-     "age": "Sep 7 (new, ~15h)",
-     "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft an chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg, bacon, avocado, sour cream, breakfast potato, cheese, and salsa on the side. Food 5/5, Service 5/5, Atmosphere 5/5. Brunch, $10-20.",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": true
+  "googleAds": {
+    "lastUpdated": "2026-09-08T14:35:00Z -- LIVE scrape via Chrome MCP, account 343-687-4835, date range 'Yesterday' (Sep 7, 2026).",
+    "yesterday": {
+      "date": "September 7, 2026",
+      "spend": 41.54,
+      "impressions": 1033,
+      "clicks": 24,
+      "conversions": 1.0,
+      "cpc": 1.73,
+      "ctr": 2.32,
+      "costChangeAbs": 17.33,
+      "impressionsChangeAbs": -208,
+      "clicksChangeAbs": null,
+      "conversionsChangeAbs": null,
+      "avgCpcChangeAbs": null,
+      "clicksDerived": false,
+      "conversionsCalculating": true,
+      "comparisonBasis": "Google Ads' own vs-prior-period deltas on the scorecards: impressions -208 (-16.76%), cost +$17.33.",
+      "note": "LIVE read, date range Yesterday (Sep 7, 2026). Spend $41.54, up $17.33 on the prior period, while impressions FELL to 1,033 (-208, -16.76%) -- paying more for less reach. Clicks 24 at a 2.32% CTR and roughly $1.73 average CPC, up sharply from the $1.07 CPC on Sep 5. Conversions show 1.00 but are still flagged pending/calculating, so treat as provisional. Account daily budget serving $40.00/day across the two live Search campaigns. STRUCTURAL FLAG UNCHANGED: both live campaigns (Brewhouse Lunch, Brewhouse Dinner) still read 'All ads limited by policy, Limited by search volume' -- the policy limitation has now persisted for multiple runs and is capping delivery. Four campaigns remain paused, including both Performance Max campaigns ('all asset groups limited by policy') and World Cup HQ 2026. TREND vs the Sep 6 read ($24.21, 1,241 impr, 33 clicks, $0.73 CPC): spend is UP 72% while impressions are DOWN 17% and clicks DOWN 27%, and CPC has more than doubled from $0.73 to ~$1.73. Two straight days of deteriorating efficiency. Per-campaign cost columns were not readable this run, so the driver campaign cannot be pinned down from this read alone -- on Sep 6 the spend concentrated in BHC Coffee ($18.12), which is now paused, so the cost has shifted onto the two policy-limited campaigns."
     },
-    {
-     "name": "Isabel Osmundsen",
-     "stars": 5,
-     "age": "Sep 4",
-     "text": "(rating only, no written comment)",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": true
-    },
-    {
-     "name": "Justin Ladner",
-     "stars": 5,
-     "age": "Aug 24",
-     "text": "(rating only, no written comment)",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": false,
-     "note": "Carried forward -- below the visible fold on the Unreplied tab this run, could not confirm either way."
-    },
-    {
-     "name": "R. Muller",
-     "stars": 5,
-     "age": "Aug 22",
-     "text": "Breakfast. Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": false,
-     "note": "Carried forward -- below the visible fold on the Unreplied tab this run, could not confirm either way."
+    "accountDailyBudgetServing": 40.0,
+    "campaigns": [
+      {
+        "name": "Brewhouse Lunch | Search | Aug 2026",
+        "type": "Search",
+        "status": "Eligible (Limited)",
+        "statusDetail": "All ads limited by policy, Limited by search volume",
+        "budget": "$25.00/day",
+        "impressions": 798,
+        "clicks": 15,
+        "ctr": 1.88,
+        "avgCpc": null,
+        "cost": null,
+        "conversions": null,
+        "changedSincePriorRun": "Now the volume driver at 798 impressions / 15 clicks, but the WEAKEST CTR in the account at 1.88%. Still policy-limited."
+      },
+      {
+        "name": "Brewhouse Dinner | Search | Sep 2026",
+        "type": "Search",
+        "status": "Eligible (Limited)",
+        "statusDetail": "All ads limited by policy, Limited by search volume",
+        "budget": "$15.00/day",
+        "impressions": 178,
+        "clicks": 6,
+        "ctr": 3.37,
+        "avgCpc": null,
+        "cost": null,
+        "conversions": null,
+        "changedSincePriorRun": "178 impressions / 6 clicks at 3.37% CTR. Delivery is thin against a $15/day budget."
+      },
+      {
+        "name": "BHC Coffee | Search | P1 Launch",
+        "type": "Search",
+        "status": "Paused",
+        "statusDetail": "Limited by search volume",
+        "budget": "$15.00/day",
+        "impressions": 57,
+        "clicks": 3,
+        "ctr": 5.26,
+        "avgCpc": null,
+        "cost": null,
+        "conversions": null,
+        "changedSincePriorRun": "NOW PAUSED -- was Eligible and the account's best performer on Sep 5 (347 impr, 21 clicks, 6.05% CTR). Only 57 residual impressions on Sep 7. Best CTR in the account at 5.26% even while paused. Worth confirming this pause was intentional."
+      },
+      {
+        "name": "Oldest SB Brewery on Tap",
+        "type": "Performance Max",
+        "status": "Paused",
+        "statusDetail": "All asset groups limited by policy",
+        "budget": "$10.80/day",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "avgCpc": null,
+        "cost": 0.0,
+        "conversions": 0.0,
+        "changedSincePriorRun": "Unchanged -- paused, all asset groups policy-limited, zero delivery."
+      },
+      {
+        "name": "Local store visits and promotions-Performance Max-2",
+        "type": "Performance Max",
+        "status": "Paused",
+        "statusDetail": "All asset groups limited by policy",
+        "budget": "$58.37/day",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "avgCpc": null,
+        "cost": 0.0,
+        "conversions": 0.0,
+        "changedSincePriorRun": "Unchanged -- paused, all asset groups policy-limited, zero delivery."
+      },
+      {
+        "name": "World Cup HQ 2026",
+        "type": "Search",
+        "status": "Paused",
+        "statusDetail": null,
+        "budget": "$20.00/day",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "avgCpc": null,
+        "cost": 0.0,
+        "conversions": 0.0,
+        "changedSincePriorRun": "Unchanged -- paused, zero delivery."
+      }
+    ],
+    "emailNotifications24h": 0,
+    "disapprovals24h": 0,
+    "budgetAlerts24h": 0,
+    "note24h": "No Google Ads disapproval or budget-alert emails in the last 24h. Per-campaign cost and CPC columns were NOT captured this run -- the campaign table's horizontal scroll would not advance to the Cost column and the date range reset on reload; per-campaign cost is recorded as null rather than estimated. Account-level cost ($41.54) and all impression/click/CTR figures were read directly and are reliable.",
+    "priorRead": {
+      "date": "September 6, 2026",
+      "spend": 24.21,
+      "impressions": 1241,
+      "clicks": 33,
+      "ctr": 2.66,
+      "cpc": 0.73,
+      "note": "Sep 6 live read from this morning's 4:00 AM run, retained for trend: $24.21 / 1,241 impr / 33 clicks / 2.66% CTR / $0.73 CPC."
     }
-   ],
-   "url": "https://business.google.com/n/14883478205426286749/reviews",
-   "liveVerifiedThisRun": true,
-   "ratingVerifiedThisRun": true
   },
-  "coffee": {
-   "profile": "Brewhouse Coffee",
-   "stars": 5.0,
-   "reviewCount": 6,
-   "unansweredCount": 2,
-   "unanswered": [
+  "yelpAds": {
+    "lastUpdated": "2026-09-08T14:35:00Z -- LIVE scrape via Chrome MCP, both Ad performance AND Ad settings tabs read cleanly.",
+    "last30d": {
+      "adImpressions": 30000,
+      "adImpressionsDisplay": "30k",
+      "totalImpressions": 39700,
+      "totalImpressionsDisplay": "39.7k",
+      "impressionSharePct": 76,
+      "pageVisitsFromAds": 384,
+      "totalPageVisits": 706,
+      "pageVisitSharePct": 54,
+      "leadsFromAds": 103,
+      "totalLeads": 156,
+      "leadSharePct": 66,
+      "adClicks": 308,
+      "avgCpc": 1.22,
+      "costPerLead": 3.46
+    },
+    "last12mo": {
+      "adLeads": 1323,
+      "organicLeads": 669,
+      "total": 1992,
+      "adSharePct": 66,
+      "organicSharePct": 34,
+      "forecast": 124,
+      "leadsBreakdown": "Ads 1,323 (66%) / Organic 669 (34%) / Total 1,992; forecast 124.",
+      "leadsBreakdownCarriedForward": false
+    },
+    "billingPeriod": {
+      "range": "Sep 1 - Sep 7, 2026",
+      "spend": 100.33,
+      "perDayAvg": 14.33,
+      "note": "LIVE. $100.33 across the first 7 days of the September billing period = $14.33/day, still running ABOVE the $13/day average budget setting, though the overage has narrowed from $15.91/day at the Sep 5 read. NOTABLE: total billing-period spend is UNCHANGED at $100.33 between the Sep 1-6 read and this Sep 1-7 read -- meaning Yelp recorded effectively ZERO ad spend on Sunday Sep 7. That is why the per-day average fell from $16.72 to $14.33; it is a pause or delivery gap, not a genuine efficiency gain. Worth confirming the ad served at all on Labor Day."
+    },
+    "budgetSetting": "$13/day average",
+    "audienceSize": "Ideal",
+    "audienceSizeFlag": false,
+    "bonusBudgetRemaining": null,
+    "bonusBudgetNote": "RESOLVED AS 'NOT PRESENT', not as a loading failure. For the first time in sixteen runs the Ad settings 'All settings' panel rendered COMPLETELY -- keywords, location, budget ($13/day average), ad photo, ad goal, ad text, slideshow, call to action, business highlights and estimated audience size all populated. There is simply NO bonus-budget field in this account's ad settings. The previous fifteen runs' endless skeleton loader was a rendering bug; the underlying conclusion is that no bonus budget is being offered here. Recommend dropping bonus budget from the dashboard unless Yelp surfaces it again.",
+    "note": "LIVE scrape Tue Sep 8 ~7:35 AM PT via Chrome MCP -- session authenticated, both tabs read. Last 30 days: 30k ad impressions (76% of 39.7k total), 384 page visits from ads (54% of 706), 103 leads from ads (66% of 156), 308 ad clicks at $1.22 avg CPC and $3.46 cost-per-lead. All three efficiency metrics IMPROVED vs the Sep 6 read: CPC down from $1.30 to $1.22 and cost-per-lead down from $3.62 to $3.46, while page visits from ads rose from 369 to 384. Billing period Sep 1-7 spend $100.33 ($14.33/day). Ad settings confirmed: keywords span Bars / Brew Pubs / Corned Beef / Dinner / Fish / Gastropubs / Lunch / Microbrewery / Outdoor Dining / Pub / Restaurant / Restaurant Near Me; targeting 5 miles around the business; audience size 'Ideal'; smart selection on for photo and goal. OPEN ITEM: a persistent banner reads 'Finish setting up your ad -- you have 1 thing remaining', and the Ad text field still reads 'Turn on smart selection to let Yelp optimize your text' -- that is almost certainly the unfinished step. Yelp profile now shows 775 reviews at 3.8 stars. Sidebar badges: 15 unread inbox items and 3 reviews needing attention, both still open.",
+    "carriedForward": false,
+    "audienceSizeChanged": false,
+    "liveVerifiedThisRun": true,
+    "lastVerifiedLive": "2026-09-08T14:35:00Z"
+  },
+  "tripAdvisor": {
+    "lastUpdated": "2026-09-08T14:35:00Z",
+    "actionable": false,
+    "adReports24h": 0,
+    "items": [],
+    "note": "No mail from analytics@hm2.tripadvisor.com in the last 24h -- zero ad performance reports. The only recent TripAdvisor mail is a consumer marketing blast from inspiration@mp1.tripadvisor.com on Sep 6 ('6 college towns that shine in the fall'). Nothing to action."
+  },
+  "reservations": {
+    "lastUpdated": "2026-09-08",
+    "source": "All Sources",
+    "today": {
+      "date": "Tue, Sep 8",
+      "totalGuests": 0,
+      "bookings": []
+    },
+    "tomorrow": {
+      "date": "Wed, Sep 9",
+      "totalGuests": 4,
+      "bookings": [
+        {
+          "time": "6:00 PM",
+          "name": "Maiya Cardwell",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(447) 580-2543",
+          "notes": ""
+        },
+        {
+          "time": "7:00 PM",
+          "name": "Maiya Cardwell",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(447) 580-2543",
+          "notes": ""
+        }
+      ]
+    },
+    "upcoming": [
+      {
+        "time": "6:00 PM",
+        "name": "Rachel Trana",
+        "guests": 4,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(773) 706-1372",
+        "notes": "",
+        "date": "Mon, Sep 14"
+      }
+    ]
+  },
+  "reviews": {
+    "lastUpdated": "2026-09-08T11:15:00Z",
+    "note": "TUE SEP 8 RUN -- BOTH LISTINGS CHECKED LIVE. Chrome reached the AUTHENTICATED 'Unreplied' tab on both profiles this run. THE BREWHOUSE 4.5 stars / 529 reviews (up 1 from 528). BREWHOUSE COFFEE 5.0 stars / 6 reviews (unchanged). Brewhouse Unreplied tab, newest-first, showed Luke Mayer (NEW, 15h) and Isabel Osmundsen (4 days) at the top; the panel could not be scrolled past the second entry, so Justin Ladner and R. Muller are CARRIED FORWARD as unconfirmed rather than declared resolved. Coffee Unreplied tab showed exactly two: Debra Wedlake and Geoff Lay -- complete, since Coffee has only 6 reviews total. NOTHING POSTED -- Joal approves every Google and Yelp reply before it goes live. || 7:35 AM PT: NOT re-checked this run -- Chrome time went to Google Ads and Yelp, both read live. The 4:00 AM authenticated verification above stands as the current state: Brewhouse 4.5 / 529 with 4 unanswered (Luke Mayer and Isabel Osmundsen confirmed, Justin Ladner and R. Muller carried forward unconfirmed), Coffee 5.0 / 6 with 2 unanswered. Six drafts written, NOTHING POSTED.",
+    "discrepancyFlag": true,
+    "brewhouse": {
+      "profile": "The Brewhouse",
+      "stars": 4.5,
+      "reviewCount": 529,
+      "unansweredCount": 4,
+      "unanswered": [
+        {
+          "name": "Luke Mayer (Cheez boi)",
+          "stars": 5,
+          "age": "Sep 7 (new, ~15h)",
+          "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft an chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg, bacon, avocado, sour cream, breakfast potato, cheese, and salsa on the side. Food 5/5, Service 5/5, Atmosphere 5/5. Brunch, $10-20.",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": true
+        },
+        {
+          "name": "Isabel Osmundsen",
+          "stars": 5,
+          "age": "Sep 4",
+          "text": "(rating only, no written comment)",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": true
+        },
+        {
+          "name": "Justin Ladner",
+          "stars": 5,
+          "age": "Aug 24",
+          "text": "(rating only, no written comment)",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": false,
+          "note": "Carried forward -- below the visible fold on the Unreplied tab this run, could not confirm either way."
+        },
+        {
+          "name": "R. Muller",
+          "stars": 5,
+          "age": "Aug 22",
+          "text": "Breakfast. Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": false,
+          "note": "Carried forward -- below the visible fold on the Unreplied tab this run, could not confirm either way."
+        }
+      ],
+      "url": "https://business.google.com/n/14883478205426286749/reviews",
+      "liveVerifiedThisRun": true,
+      "ratingVerifiedThisRun": true
+    },
+    "coffee": {
+      "profile": "Brewhouse Coffee",
+      "stars": 5.0,
+      "reviewCount": 6,
+      "unansweredCount": 2,
+      "unanswered": [
+        {
+          "name": "Debra Wedlake",
+          "stars": 5,
+          "age": "~2 weeks ago (Aug 24)",
+          "text": "Delicious coffee and pastries!",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": true
+        },
+        {
+          "name": "Geoff Lay",
+          "stars": 5,
+          "age": "~3 weeks ago (Aug 15)",
+          "text": "Wow. Horchata Latte? Yes please. Excellent service, even better Baristas. A must stop when in SB.",
+          "urgent": false,
+          "confirmedUnrepliedThisRun": true
+        }
+      ],
+      "url": "https://business.google.com/n/8047304414448442897/reviews",
+      "liveVerifiedThisRun": true,
+      "ratingVerifiedThisRun": true
+    }
+  },
+  "yelpInquiries": {
+    "lastUpdated": "2026-09-08T14:35:00Z",
+    "count": 0,
+    "items": [],
+    "note": "No actionable Yelp customer inquiries in the last 3 days. Sidebar badges READ LIVE this run: 15 unread inbox items and 3 Yelp reviews needing attention -- both unchanged from the Sep 6 read, so the inbox backlog is now ~9 days old and static. Separately, the Yelp Ads page carries a persistent 'Finish setting up your ad -- 1 thing remaining' banner; the Ad settings tab points at Ad text, which still reads 'Turn on smart selection to let Yelp optimize your text'.",
+    "carriedForward": false,
+    "liveVerifiedThisRun": true,
+    "lastVerifiedLive": "2026-09-08T14:35:00Z",
+    "inboxUnread": 15,
+    "inboxUnreadDays": 9,
+    "yelpReviewsNeedingAttention": 3
+  },
+  "businessProfile": {
+    "lastUpdated": "2026-08-26",
+    "managementRequestsPending": 1,
+    "severity": "verify",
+    "pendingDays": 48,
+    "note": "CARRIED FORWARD, not re-verified this run. 1 Google Business Profile 'management request' still recorded as pending -- now DAY 41. Verify or deny the requester; a stale management request is a standing access risk on a profile with 528 reviews. Last opened Aug 25. STILL CARRIED FORWARD as of Tue Sep 1 run -- not re-verified live (Chrome time spent on reviews instead). Now day 42. STILL CARRIED FORWARD as of Wed Sep 2 run -- not re-verified live. Now day 44. STILL CARRIED FORWARD as of Fri Sep 4 run -- not re-verified live. Now day 45. STILL CARRIED FORWARD as of Sun Sep 6 run -- not re-verified live (Chrome time spent on reviews instead). Now day 46. STILL CARRIED FORWARD as of Mon Sep 7 run -- not re-verified live. Now DAY 47. STILL CARRIED FORWARD as of Tue Sep 8 run -- not re-verified live. Now DAY 48.",
+    "carriedForward": true,
+    "liveVerifiedThisRun": false,
+    "lastVerifiedLive": "2026-08-25T07:10:00-07:00"
+  },
+  "lastUpdated": "2026-09-08T14:35:00Z",
+  "toastPrevDay": {
+    "date": "Sunday, September 6",
+    "net": 10559.19,
+    "netSales": 10559.19,
+    "gross": 10883.9,
+    "grossSales": 10883.9,
+    "guests": 438,
+    "guestsDerived": false,
+    "orders": 345,
+    "ordersDerived": false,
+    "checks": 364,
+    "checksAvailable": true,
+    "avgPerOrder": 30.61,
+    "avgOrder": 30.61,
+    "avgPerGuest": 24.11,
+    "avgPerCheck": 29.01,
+    "avgCheck": 29.01,
+    "laborPct": 24.7,
+    "laborPctOfNet": 24.7,
+    "laborCost": 2608.37,
+    "laborCostDerived": false,
+    "discounts": 324.71,
+    "discountsDerived": false,
+    "discountPct": 2.98,
+    "deferredSales": 0.0,
+    "refunds": 0.0,
+    "voidAmount": 220.5,
+    "voidAmountDerived": false,
+    "voidAmountAvailable": true,
+    "voidItems": 22,
+    "voidOrders": 17,
+    "cardPayments": 268,
+    "openOrders": 0,
+    "autoClockedOut": [
+      "Julianna Ornelas",
+      "Harmony Willson"
+    ],
+    "takeoutOrders": 13,
+    "takeoutSales": 120.75,
+    "deliveryOrders": 0,
+    "deliverySales": 0.0,
+    "dineInOrders": 8,
+    "dineInSales": 61.0,
+    "source": "The Brewhouse Santa Barbara - 229 West Montecito Street SINGLE-LOCATION full-detail Daily Performance Summary for Sun Sep 6, received 2026-09-07T14:40Z. FULL DETAIL NOW LOADED -- backfills every field the Mon Sep 7 run had to derive. Actual labor cost $2,608.37 (derived estimate was $2,608.12) and actual discounts $324.71 (derived estimate was $326.52) -- both derivations were accurate.",
+    "partial": false,
+    "partialMissing": [],
+    "sdlw": {
+      "label": "Same Day Last Week (Sun Aug 30)",
+      "net": 4385.3,
+      "netPct": 140.8,
+      "gross": 4530.0,
+      "grossPct": 140.3,
+      "guests": 200,
+      "guestsPct": 119.0,
+      "orders": 141,
+      "ordersPct": 144.7,
+      "checks": 144,
+      "checksPct": 152.8,
+      "avgCheck": 30.45,
+      "avgCheckPct": -4.7,
+      "avgPerGuest": 21.93,
+      "avgPerGuestPct": 9.9,
+      "avgOrder": 31.1,
+      "avgOrderPct": -1.6,
+      "laborCost": 1173.22,
+      "laborCostPct": 122.3,
+      "laborPct": 26.8,
+      "laborPctDeltaPct": -7.8,
+      "discounts": 144.7,
+      "voids": 67.0
+    },
+    "fourWeekAvg": {
+      "net": 5756.66,
+      "netPct": 83.4,
+      "gross": 6000.94,
+      "grossPct": 81.4,
+      "guests": 238,
+      "guestsPct": 84.0,
+      "orders": 164,
+      "ordersPct": 110.4,
+      "checks": 172,
+      "checksPct": 111.6,
+      "avgCheck": 33.47,
+      "avgCheckPct": -13.3,
+      "avgPerGuest": 24.19,
+      "avgPerGuestPct": -0.3,
+      "avgOrder": 35.1,
+      "avgOrderPct": -12.8,
+      "laborCost": 1513.28,
+      "laborCostPct": 72.4,
+      "laborPct": 26.3,
+      "laborPctDeltaPct": -6.1,
+      "discounts": 244.28,
+      "voids": 114.44
+    },
+    "vsPriorDay": {
+      "label": "Prior Day (Sat Sep 5)",
+      "net": 6547.0,
+      "netPct": 61.3,
+      "gross": 6623.2,
+      "grossPct": 64.3,
+      "guests": 288,
+      "guestsPct": 52.1,
+      "orders": 168,
+      "ordersPct": 105.4,
+      "laborPct": 25.7,
+      "laborPctDelta": -1.0
+    },
+    "dayparts": [
+      {
+        "name": "Dinner",
+        "gross": 5944.6,
+        "discounts": 114.46,
+        "net": 5830.14,
+        "pctNet": 55.2,
+        "netPerOrder": 27.63
+      },
+      {
+        "name": "Lunch",
+        "gross": 4552.55,
+        "discounts": 200.25,
+        "net": 4352.3,
+        "pctNet": 41.2,
+        "netPerOrder": 44.87
+      },
+      {
+        "name": "Expresso Service",
+        "gross": 386.75,
+        "discounts": 10.0,
+        "net": 376.75,
+        "pctNet": 3.5,
+        "netPerOrder": 10.18
+      }
+    ],
+    "revenueCenters": [
+      {
+        "name": "Dining Room",
+        "net": 7633.04,
+        "pctNet": 72.2,
+        "netPerOrder": 29.25
+      },
+      {
+        "name": "Patio",
+        "net": 1375.6,
+        "pctNet": 13.0,
+        "netPerOrder": 59.81
+      },
+      {
+        "name": "Back Room",
+        "net": 832.05,
+        "pctNet": 7.8,
+        "netPerOrder": 92.45
+      },
+      {
+        "name": "Espresso Bar",
+        "net": 438.25,
+        "pctNet": 4.1,
+        "netPerOrder": 9.53
+      },
+      {
+        "name": "Front Patio",
+        "net": 280.25,
+        "pctNet": 2.6,
+        "netPerOrder": 46.71
+      }
+    ],
+    "salesCategories": [
+      {
+        "name": "Food",
+        "net": 3849.69,
+        "pctNet": 36.4,
+        "items": 255
+      },
+      {
+        "name": "Draft Beer",
+        "net": 2628.0,
+        "pctNet": 24.8,
+        "items": 336
+      },
+      {
+        "name": "Liquor",
+        "net": 2297.5,
+        "pctNet": 21.7,
+        "items": 179
+      },
+      {
+        "name": "Wine",
+        "net": 700.0,
+        "pctNet": 6.6,
+        "items": 67
+      },
+      {
+        "name": "Espresso Service",
+        "net": 447.5,
+        "pctNet": 4.2,
+        "items": 88
+      },
+      {
+        "name": "Bottled Beer",
+        "net": 350.0,
+        "pctNet": 3.3,
+        "items": 52
+      },
+      {
+        "name": "NA Beverage",
+        "net": 158.0,
+        "pctNet": 1.4,
+        "items": 31
+      },
+      {
+        "name": "No sales category",
+        "net": 128.5,
+        "pctNet": 1.2,
+        "items": 7
+      }
+    ]
+  },
+  "toastPending": {
+    "pending": true,
+    "pendingFor": "Monday, September 7 (single-location full-detail Daily Performance Summary)",
+    "note": "The Mon Sep 7 GROUP summary arrived 13:27Z and is now loaded. The single-location full-detail email for Sep 7 -- which carries checks, void dollars, SDLW / 4-week comparisons, dayparts, revenue centers and sales categories -- had still not landed by this 14:35Z run (they typically arrive ~14:40Z). Next run should backfill it."
+  },
+  "payroll": {
+    "lastUpdated": "2026-09-08T14:35:00Z",
+    "dueToday": true,
+    "period": "Aug 23 - Sep 5, 2026",
+    "dueDate": "2026-09-08",
+    "payDate": "2026-09-11",
+    "estimatedTotal": 29853.57,
+    "actualWithdrawal": null,
+    "directDeposits": null,
+    "taxes": null,
+    "submitted": false,
+    "submittedAt": null,
+    "withdrawalDate": null,
+    "actionItems": 2,
+    "insights": 2,
+    "resolved": false,
+    "severity": "urgent",
+    "actionItemsDetail": [
+      {
+        "item": "Unapproved tip pools",
+        "detail": "14 days"
+      },
+      {
+        "item": "Auto-clockouts",
+        "detail": "3 employees"
+      }
+    ],
+    "insightsDetail": [
+      {
+        "item": "No timesheets",
+        "detail": "10 employees"
+      },
+      {
+        "item": "No direct deposit",
+        "detail": "26 employees"
+      }
+    ],
+    "reviewUrl": "https://payroll.toasttab.com/sbbrewhouse/payroll/cb3be908-af7c-11f0-a967-02b7bc716955/paycycle/review",
+    "note": "DUE TODAY, TUE SEP 8. Biweekly cycle Aug 23 - Sep 5, estimated $29,853.57, pay date Fri Sep 11. NOT YET SUBMITTED. Two action items must clear first: 14 days of UNAPPROVED TIP POOLS and AUTO-CLOCKOUTS on 3 employees (Julianna Ornelas and Harmony Willson were both auto-clocked-out Sunday Sep 6 and worked again Monday -- their hours are almost certainly among these). Two insights: 10 employees with no timesheets and 26 with no direct deposit. Prior cycle ran $10.5k under its running estimate, so treat $29,853.57 as a ceiling, not a cash reservation. || 7:35 AM PT UPDATE: still NOT SUBMITTED. Toast sent a second 'Payroll due today' reminder at 11:06Z. Both action items remain open. Monday Sep 7's group summary shows Harmony Willson AUTO-CLOCKED OUT AGAIN, so the auto-clockout action item has likely grown rather than shrunk since the 4:00 AM read -- expect to reconcile her Sunday AND Monday shifts. Funding must clear today for the Friday Sep 11 pay date.",
+    "withdrawalCompleted": false,
+    "vendorOutreach": {
+      "from": "Shelby, Toast Payroll Success Partner (payrollsuccess@toasttab.com)",
+      "receivedAt": "2026-08-26T10:42:00-07:00",
+      "type": "account check-in / voicemail follow-up",
+      "actionable": false
+    }
+  },
+  "toastSaturdayAug22": {
+    "date": "Saturday, August 22",
+    "net": 16721.45,
+    "netSales": 16721.45,
+    "gross": 16946.75,
+    "grossSales": 16946.75,
+    "guests": 278,
+    "guestsDerived": false,
+    "orders": 181,
+    "ordersDerived": false,
+    "checks": 190,
+    "avgPerOrder": 92.38,
+    "avgOrder": 92.38,
+    "avgPerGuest": 60.15,
+    "avgPerCheck": 88.01,
+    "avgCheck": 88.01,
+    "laborPct": 13.3,
+    "laborPctOfNet": 13.3,
+    "laborCost": 2228.66,
+    "laborCostDerived": false,
+    "discounts": 225.3,
+    "discountsDerived": false,
+    "discountPct": 1.33,
+    "deferredSales": 0.0,
+    "refunds": 0.0,
+    "voidAmount": 259.5,
+    "voidAmountDerived": false,
+    "voidItems": 24,
+    "voidOrders": 16,
+    "openOrders": 0,
+    "autoClockedOut": [],
+    "takeoutOrders": 34,
+    "takeoutSales": 437.25,
+    "deliveryOrders": 0,
+    "deliverySales": 0.0,
+    "dineInOrders": 3,
+    "dineInSales": 50.75,
+    "source": "single-location Daily Performance Summary (229 W Montecito St), received 2026-08-23 07:39 PT - BACKFILLED on the Tue Aug 25 run",
+    "partial": false,
+    "sdlw": {
+      "date": "Saturday, August 15",
+      "net": 8393.24,
+      "netSales": 8393.24,
+      "gross": 8612.44,
+      "grossSales": 8612.44,
+      "guests": 305,
+      "orders": 204,
+      "checks": 217,
+      "avgCheck": 38.68,
+      "avgPerCheck": 38.68,
+      "avgOrder": 41.14,
+      "avgPerOrder": 41.14,
+      "avgPerGuest": 27.52,
+      "discounts": 219.2,
+      "voids": 76.0,
+      "laborCost": 1589.59,
+      "laborPct": 18.9,
+      "laborPctOfNet": 18.9,
+      "basis": "Same Day Last Week per Toast single-location email."
+    },
+    "fourWeekAvg": {
+      "net": 8987.98,
+      "gross": 9283.4,
+      "guests": 331,
+      "orders": 211,
+      "checks": 220,
+      "avgOrder": 42.6,
+      "avgCheck": 40.85,
+      "avgPerGuest": 27.15,
+      "discounts": 295.42,
+      "voids": 599.75,
+      "laborCost": 1507.5,
+      "laborPct": 16.8,
+      "basis": "Average of previous 4 Saturdays, per Toast single-location email."
+    },
+    "netChangeVsSDLWPct": 99.2,
+    "grossChangeVsSDLWPct": 96.8,
+    "guestsChangeVsSDLWPct": -8.9,
+    "ordersChangeVsSDLWPct": -11.3,
+    "netChangeVsPrev4Pct": 86.0,
+    "dayparts": [
+      {
+        "name": "Dinner",
+        "gross": 14207.85,
+        "discounts": 141.0,
+        "net": 14066.85,
+        "pctNet": 84.1,
+        "netPerOrder": 148.07
+      },
+      {
+        "name": "Lunch",
+        "gross": 2263.9,
+        "discounts": 35.8,
+        "net": 2228.1,
+        "pctNet": 13.3,
+        "netPerOrder": 43.69
+      },
+      {
+        "name": "Expresso Service",
+        "gross": 475.0,
+        "discounts": 48.5,
+        "net": 426.5,
+        "pctNet": 2.5,
+        "netPerOrder": 11.53
+      }
+    ],
+    "revenueCenters": [
+      {
+        "name": "Dining Room",
+        "net": 13588.7,
+        "pctNet": 81.2,
+        "netPerOrder": 123.53
+      },
+      {
+        "name": "Front Patio",
+        "net": 1710.85,
+        "pctNet": 10.2,
+        "netPerOrder": 77.77
+      },
+      {
+        "name": "Patio",
+        "net": 807.15,
+        "pctNet": 4.8,
+        "netPerOrder": 100.89
+      },
+      {
+        "name": "Espresso Bar",
+        "net": 441.75,
+        "pctNet": 2.6,
+        "netPerOrder": 10.77
+      },
+      {
+        "name": "Back Room",
+        "net": 173.0,
+        "pctNet": 1.0,
+        "netPerOrder": 86.5
+      }
+    ],
+    "salesCategories": [
+      {
+        "name": "Food",
+        "net": 7999.2,
+        "pctNet": 47.8,
+        "items": 365
+      },
+      {
+        "name": "Liquor",
+        "net": 4425.0,
+        "pctNet": 26.4,
+        "items": 289
+      },
+      {
+        "name": "Bottled Beer",
+        "net": 2011.0,
+        "pctNet": 12.0,
+        "items": 329
+      },
+      {
+        "name": "Draft Beer",
+        "net": 1402.5,
+        "pctNet": 8.3,
+        "items": 191
+      },
+      {
+        "name": "Espresso Service",
+        "net": 441.75,
+        "pctNet": 2.6,
+        "items": 87
+      },
+      {
+        "name": "NA Beverage",
+        "net": 246.0,
+        "pctNet": 1.4,
+        "items": 46
+      },
+      {
+        "name": "Wine",
+        "net": 179.0,
+        "pctNet": 1.0,
+        "items": 16
+      },
+      {
+        "name": "No sales category",
+        "net": 17.0,
+        "pctNet": 0.1,
+        "items": 1
+      }
+    ],
+    "note": "RECORD DAY. Net $16,721.45 is +99.2% vs Saturday Aug 15 and +86.0% vs the 4-Saturday average, on FEWER guests (278, -8.9%) and FEWER orders (181, -11.3%). Avg check $88.01 vs $38.68 SDLW (+127.5%). The lift is almost entirely Dining Room ($13,588.70 net, 81.2% of the day, $123.53 net/order) and it is beverage-led: Liquor $4,425 on 289 items and Bottled Beer $2,011 on 329 items, both far above a normal Saturday. This has the shape of a large private/buyout event in the Dining Room, not organic walk-in volume -- confirm before treating it as a trend. Labor landed at 13.3% of net (best ratio in the file) purely because the revenue denominator exploded; the roster was a normal 13 people / 82.25 hrs. Voids $259.50 across 16 orders (+241% vs SDLW) is the one cost flag."
+  },
+  "slingHistory": [
     {
-     "name": "Debra Wedlake",
-     "stars": 5,
-     "age": "~2 weeks ago (Aug 24)",
-     "text": "Delicious coffee and pastries!",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": true
+      "date": "Saturday, August 22",
+      "count": 13,
+      "shifts": 13,
+      "hours": 82.25,
+      "overtime": 5.25
     },
     {
-     "name": "Geoff Lay",
-     "stars": 5,
-     "age": "~3 weeks ago (Aug 15)",
-     "text": "Wow. Horchata Latte? Yes please. Excellent service, even better Baristas. A must stop when in SB.",
-     "urgent": false,
-     "confirmedUnrepliedThisRun": true
+      "date": "Sunday, August 23",
+      "count": 11,
+      "shifts": 13,
+      "hours": 55.5,
+      "overtime": 5.25
+    },
+    {
+      "date": "Monday, August 24",
+      "count": 6,
+      "shifts": 6,
+      "hours": 25.5,
+      "overtime": 0
+    },
+    {
+      "date": "Tuesday, August 25",
+      "count": 8,
+      "shifts": 8,
+      "hours": 37.66,
+      "overtime": 0
+    },
+    {
+      "date": "Wednesday, August 26",
+      "count": 8,
+      "shifts": 8,
+      "hours": 36.0,
+      "overtime": 0
+    },
+    {
+      "date": "Thursday, August 27",
+      "count": 10,
+      "shifts": 11,
+      "hours": 40.57,
+      "overtime": 0
+    },
+    {
+      "date": "Friday, August 28",
+      "count": 11,
+      "shifts": 13,
+      "hours": 56.0,
+      "overtime": 0
+    },
+    {
+      "date": "Saturday, August 29",
+      "count": 12,
+      "shifts": 12,
+      "hours": 59.83,
+      "overtime": 0
+    },
+    {
+      "date": "Sunday, August 30",
+      "count": 11,
+      "shifts": 12,
+      "hours": 52.41,
+      "overtime": 0
+    },
+    {
+      "date": "Monday, August 31",
+      "count": 8,
+      "shifts": 8,
+      "hours": 27.83,
+      "overtime": 0
+    },
+    {
+      "date": "Tuesday, September 1",
+      "count": 9,
+      "shifts": 9,
+      "hours": 37.16,
+      "overtime": 0
+    },
+    {
+      "date": "Wednesday, September 2",
+      "count": 8,
+      "shifts": 8,
+      "hours": 36.66,
+      "overtime": 0
+    },
+    {
+      "date": "Thursday, September 3",
+      "count": 10,
+      "shifts": 10,
+      "hours": 40.16,
+      "overtime": 0
+    },
+    {
+      "date": "Friday, September 4",
+      "count": 11,
+      "shifts": 12,
+      "hours": 55.99,
+      "overtime": 0
+    },
+    {
+      "date": "Saturday, September 5",
+      "count": 12,
+      "shifts": 12,
+      "hours": 60.48,
+      "overtime": 0
+    },
+    {
+      "date": "Sunday, September 6",
+      "count": 13,
+      "shifts": 13,
+      "hours": 70.41,
+      "overtime": 0
+    },
+    {
+      "date": "Monday, September 7",
+      "count": 6,
+      "shifts": 6,
+      "hours": 24.5,
+      "uncovered": 0,
+      "overtime": 0
+    },
+    {
+      "date": "Tuesday, September 8",
+      "count": 7,
+      "shifts": 7,
+      "hours": 31.75,
+      "overtime": 0
     }
-   ],
-   "url": "https://business.google.com/n/8047304414448442897/reviews",
-   "liveVerifiedThisRun": true,
-   "ratingVerifiedThisRun": true
+  ],
+  "slingPending": {
+    "pending": false,
+    "pendingFor": null,
+    "note": "Resolved -- the Tue Sep 8 Sling report arrived 14:00Z, ahead of this 14:35Z run."
+  },
+  "toastPartial": {
+    "resolved": false,
+    "note": "Sunday Sep 6 is fully loaded and confirmed. NEW partial: Monday Sep 7 (Labor Day) is group-level only -- missing checks, void dollars, SDLW, 4-week average, dayparts, revenue centers and sales categories."
   }
- },
- "yelpInquiries": {
-  "lastUpdated": "2026-09-08T14:35:00Z",
-  "count": 0,
-  "items": [],
-  "note": "No actionable Yelp customer inquiries in the last 3 days. Sidebar badges READ LIVE this run: 15 unread inbox items and 3 Yelp reviews needing attention -- both unchanged from the Sep 6 read, so the inbox backlog is now ~9 days old and static. Separately, the Yelp Ads page carries a persistent 'Finish setting up your ad -- 1 thing remaining' banner; the Ad settings tab points at Ad text, which still reads 'Turn on smart selection to let Yelp optimize your text'.",
-  "carriedForward": false,
-  "liveVerifiedThisRun": true,
-  "lastVerifiedLive": "2026-09-08T14:35:00Z",
-  "inboxUnread": 15,
-  "inboxUnreadDays": 9,
-  "yelpReviewsNeedingAttention": 3
- },
- "businessProfile": {
-  "lastUpdated": "2026-08-26",
-  "managementRequestsPending": 1,
-  "severity": "verify",
-  "pendingDays": 48,
-  "note": "CARRIED FORWARD, not re-verified this run. 1 Google Business Profile 'management request' still recorded as pending -- now DAY 41. Verify or deny the requester; a stale management request is a standing access risk on a profile with 528 reviews. Last opened Aug 25. STILL CARRIED FORWARD as of Tue Sep 1 run -- not re-verified live (Chrome time spent on reviews instead). Now day 42. STILL CARRIED FORWARD as of Wed Sep 2 run -- not re-verified live. Now day 44. STILL CARRIED FORWARD as of Fri Sep 4 run -- not re-verified live. Now day 45. STILL CARRIED FORWARD as of Sun Sep 6 run -- not re-verified live (Chrome time spent on reviews instead). Now day 46. STILL CARRIED FORWARD as of Mon Sep 7 run -- not re-verified live. Now DAY 47. STILL CARRIED FORWARD as of Tue Sep 8 run -- not re-verified live. Now DAY 48.",
-  "carriedForward": true,
-  "liveVerifiedThisRun": false,
-  "lastVerifiedLive": "2026-08-25T07:10:00-07:00"
- },
- "lastUpdated": "2026-09-08T14:35:00Z",
- "toastPrevDay": {
-  "date": "Sunday, September 6",
-  "net": 10559.19,
-  "netSales": 10559.19,
-  "gross": 10883.9,
-  "grossSales": 10883.9,
-  "guests": 438,
-  "guestsDerived": false,
-  "orders": 345,
-  "ordersDerived": false,
-  "checks": 364,
-  "checksAvailable": true,
-  "avgPerOrder": 30.61,
-  "avgOrder": 30.61,
-  "avgPerGuest": 24.11,
-  "avgPerCheck": 29.01,
-  "avgCheck": 29.01,
-  "laborPct": 24.7,
-  "laborPctOfNet": 24.7,
-  "laborCost": 2608.37,
-  "laborCostDerived": false,
-  "discounts": 324.71,
-  "discountsDerived": false,
-  "discountPct": 2.98,
-  "deferredSales": 0.0,
-  "refunds": 0.0,
-  "voidAmount": 220.5,
-  "voidAmountDerived": false,
-  "voidAmountAvailable": true,
-  "voidItems": 22,
-  "voidOrders": 17,
-  "cardPayments": 268,
-  "openOrders": 0,
-  "autoClockedOut": [
-   "Julianna Ornelas",
-   "Harmony Willson"
-  ],
-  "takeoutOrders": 13,
-  "takeoutSales": 120.75,
-  "deliveryOrders": 0,
-  "deliverySales": 0.0,
-  "dineInOrders": 8,
-  "dineInSales": 61.0,
-  "source": "The Brewhouse Santa Barbara - 229 West Montecito Street SINGLE-LOCATION full-detail Daily Performance Summary for Sun Sep 6, received 2026-09-07T14:40Z. FULL DETAIL NOW LOADED -- backfills every field the Mon Sep 7 run had to derive. Actual labor cost $2,608.37 (derived estimate was $2,608.12) and actual discounts $324.71 (derived estimate was $326.52) -- both derivations were accurate.",
-  "partial": false,
-  "partialMissing": [],
-  "sdlw": {
-   "label": "Same Day Last Week (Sun Aug 30)",
-   "net": 4385.3,
-   "netPct": 140.8,
-   "gross": 4530.0,
-   "grossPct": 140.3,
-   "guests": 200,
-   "guestsPct": 119.0,
-   "orders": 141,
-   "ordersPct": 144.7,
-   "checks": 144,
-   "checksPct": 152.8,
-   "avgCheck": 30.45,
-   "avgCheckPct": -4.7,
-   "avgPerGuest": 21.93,
-   "avgPerGuestPct": 9.9,
-   "avgOrder": 31.1,
-   "avgOrderPct": -1.6,
-   "laborCost": 1173.22,
-   "laborCostPct": 122.3,
-   "laborPct": 26.8,
-   "laborPctDeltaPct": -7.8,
-   "discounts": 144.7,
-   "voids": 67.0
-  },
-  "fourWeekAvg": {
-   "net": 5756.66,
-   "netPct": 83.4,
-   "gross": 6000.94,
-   "grossPct": 81.4,
-   "guests": 238,
-   "guestsPct": 84.0,
-   "orders": 164,
-   "ordersPct": 110.4,
-   "checks": 172,
-   "checksPct": 111.6,
-   "avgCheck": 33.47,
-   "avgCheckPct": -13.3,
-   "avgPerGuest": 24.19,
-   "avgPerGuestPct": -0.3,
-   "avgOrder": 35.1,
-   "avgOrderPct": -12.8,
-   "laborCost": 1513.28,
-   "laborCostPct": 72.4,
-   "laborPct": 26.3,
-   "laborPctDeltaPct": -6.1,
-   "discounts": 244.28,
-   "voids": 114.44
-  },
-  "vsPriorDay": {
-   "label": "Prior Day (Sat Sep 5)",
-   "net": 6547.0,
-   "netPct": 61.3,
-   "gross": 6623.2,
-   "grossPct": 64.3,
-   "guests": 288,
-   "guestsPct": 52.1,
-   "orders": 168,
-   "ordersPct": 105.4,
-   "laborPct": 25.7,
-   "laborPctDelta": -1.0
-  },
-  "dayparts": [
-   {
-    "name": "Dinner",
-    "gross": 5944.6,
-    "discounts": 114.46,
-    "net": 5830.14,
-    "pctNet": 55.2,
-    "netPerOrder": 27.63
-   },
-   {
-    "name": "Lunch",
-    "gross": 4552.55,
-    "discounts": 200.25,
-    "net": 4352.3,
-    "pctNet": 41.2,
-    "netPerOrder": 44.87
-   },
-   {
-    "name": "Expresso Service",
-    "gross": 386.75,
-    "discounts": 10.0,
-    "net": 376.75,
-    "pctNet": 3.5,
-    "netPerOrder": 10.18
-   }
-  ],
-  "revenueCenters": [
-   {
-    "name": "Dining Room",
-    "net": 7633.04,
-    "pctNet": 72.2,
-    "netPerOrder": 29.25
-   },
-   {
-    "name": "Patio",
-    "net": 1375.6,
-    "pctNet": 13.0,
-    "netPerOrder": 59.81
-   },
-   {
-    "name": "Back Room",
-    "net": 832.05,
-    "pctNet": 7.8,
-    "netPerOrder": 92.45
-   },
-   {
-    "name": "Espresso Bar",
-    "net": 438.25,
-    "pctNet": 4.1,
-    "netPerOrder": 9.53
-   },
-   {
-    "name": "Front Patio",
-    "net": 280.25,
-    "pctNet": 2.6,
-    "netPerOrder": 46.71
-   }
-  ],
-  "salesCategories": [
-   {
-    "name": "Food",
-    "net": 3849.69,
-    "pctNet": 36.4,
-    "items": 255
-   },
-   {
-    "name": "Draft Beer",
-    "net": 2628.0,
-    "pctNet": 24.8,
-    "items": 336
-   },
-   {
-    "name": "Liquor",
-    "net": 2297.5,
-    "pctNet": 21.7,
-    "items": 179
-   },
-   {
-    "name": "Wine",
-    "net": 700.0,
-    "pctNet": 6.6,
-    "items": 67
-   },
-   {
-    "name": "Espresso Service",
-    "net": 447.5,
-    "pctNet": 4.2,
-    "items": 88
-   },
-   {
-    "name": "Bottled Beer",
-    "net": 350.0,
-    "pctNet": 3.3,
-    "items": 52
-   },
-   {
-    "name": "NA Beverage",
-    "net": 158.0,
-    "pctNet": 1.4,
-    "items": 31
-   },
-   {
-    "name": "No sales category",
-    "net": 128.5,
-    "pctNet": 1.2,
-    "items": 7
-   }
-  ]
- },
- "toastPending": {
-  "pending": true,
-  "pendingFor": "Monday, September 7 (single-location full-detail Daily Performance Summary)",
-  "note": "The Mon Sep 7 GROUP summary arrived 13:27Z and is now loaded. The single-location full-detail email for Sep 7 -- which carries checks, void dollars, SDLW / 4-week comparisons, dayparts, revenue centers and sales categories -- had still not landed by this 14:35Z run (they typically arrive ~14:40Z). Next run should backfill it."
- },
- "payroll": {
-  "lastUpdated": "2026-09-08T14:35:00Z",
-  "dueToday": true,
-  "period": "Aug 23 - Sep 5, 2026",
-  "dueDate": "2026-09-08",
-  "payDate": "2026-09-11",
-  "estimatedTotal": 29853.57,
-  "actualWithdrawal": null,
-  "directDeposits": null,
-  "taxes": null,
-  "submitted": false,
-  "submittedAt": null,
-  "withdrawalDate": null,
-  "actionItems": 2,
-  "insights": 2,
-  "resolved": false,
-  "severity": "urgent",
-  "actionItemsDetail": [
-   {
-    "item": "Unapproved tip pools",
-    "detail": "14 days"
-   },
-   {
-    "item": "Auto-clockouts",
-    "detail": "3 employees"
-   }
-  ],
-  "insightsDetail": [
-   {
-    "item": "No timesheets",
-    "detail": "10 employees"
-   },
-   {
-    "item": "No direct deposit",
-    "detail": "26 employees"
-   }
-  ],
-  "reviewUrl": "https://payroll.toasttab.com/sbbrewhouse/payroll/cb3be908-af7c-11f0-a967-02b7bc716955/paycycle/review",
-  "note": "DUE TODAY, TUE SEP 8. Biweekly cycle Aug 23 - Sep 5, estimated $29,853.57, pay date Fri Sep 11. NOT YET SUBMITTED. Two action items must clear first: 14 days of UNAPPROVED TIP POOLS and AUTO-CLOCKOUTS on 3 employees (Julianna Ornelas and Harmony Willson were both auto-clocked-out Sunday Sep 6 and worked again Monday -- their hours are almost certainly among these). Two insights: 10 employees with no timesheets and 26 with no direct deposit. Prior cycle ran $10.5k under its running estimate, so treat $29,853.57 as a ceiling, not a cash reservation. || 7:35 AM PT UPDATE: still NOT SUBMITTED. Toast sent a second 'Payroll due today' reminder at 11:06Z. Both action items remain open. Monday Sep 7's group summary shows Harmony Willson AUTO-CLOCKED OUT AGAIN, so the auto-clockout action item has likely grown rather than shrunk since the 4:00 AM read -- expect to reconcile her Sunday AND Monday shifts. Funding must clear today for the Friday Sep 11 pay date.",
-  "withdrawalCompleted": false,
-  "vendorOutreach": {
-   "from": "Shelby, Toast Payroll Success Partner (payrollsuccess@toasttab.com)",
-   "receivedAt": "2026-08-26T10:42:00-07:00",
-   "type": "account check-in / voicemail follow-up",
-   "actionable": false
-  }
- },
- "toastSaturdayAug22": {
-  "date": "Saturday, August 22",
-  "net": 16721.45,
-  "netSales": 16721.45,
-  "gross": 16946.75,
-  "grossSales": 16946.75,
-  "guests": 278,
-  "guestsDerived": false,
-  "orders": 181,
-  "ordersDerived": false,
-  "checks": 190,
-  "avgPerOrder": 92.38,
-  "avgOrder": 92.38,
-  "avgPerGuest": 60.15,
-  "avgPerCheck": 88.01,
-  "avgCheck": 88.01,
-  "laborPct": 13.3,
-  "laborPctOfNet": 13.3,
-  "laborCost": 2228.66,
-  "laborCostDerived": false,
-  "discounts": 225.3,
-  "discountsDerived": false,
-  "discountPct": 1.33,
-  "deferredSales": 0.0,
-  "refunds": 0.0,
-  "voidAmount": 259.5,
-  "voidAmountDerived": false,
-  "voidItems": 24,
-  "voidOrders": 16,
-  "openOrders": 0,
-  "autoClockedOut": [],
-  "takeoutOrders": 34,
-  "takeoutSales": 437.25,
-  "deliveryOrders": 0,
-  "deliverySales": 0.0,
-  "dineInOrders": 3,
-  "dineInSales": 50.75,
-  "source": "single-location Daily Performance Summary (229 W Montecito St), received 2026-08-23 07:39 PT - BACKFILLED on the Tue Aug 25 run",
-  "partial": false,
-  "sdlw": {
-   "date": "Saturday, August 15",
-   "net": 8393.24,
-   "netSales": 8393.24,
-   "gross": 8612.44,
-   "grossSales": 8612.44,
-   "guests": 305,
-   "orders": 204,
-   "checks": 217,
-   "avgCheck": 38.68,
-   "avgPerCheck": 38.68,
-   "avgOrder": 41.14,
-   "avgPerOrder": 41.14,
-   "avgPerGuest": 27.52,
-   "discounts": 219.2,
-   "voids": 76.0,
-   "laborCost": 1589.59,
-   "laborPct": 18.9,
-   "laborPctOfNet": 18.9,
-   "basis": "Same Day Last Week per Toast single-location email."
-  },
-  "fourWeekAvg": {
-   "net": 8987.98,
-   "gross": 9283.4,
-   "guests": 331,
-   "orders": 211,
-   "checks": 220,
-   "avgOrder": 42.6,
-   "avgCheck": 40.85,
-   "avgPerGuest": 27.15,
-   "discounts": 295.42,
-   "voids": 599.75,
-   "laborCost": 1507.5,
-   "laborPct": 16.8,
-   "basis": "Average of previous 4 Saturdays, per Toast single-location email."
-  },
-  "netChangeVsSDLWPct": 99.2,
-  "grossChangeVsSDLWPct": 96.8,
-  "guestsChangeVsSDLWPct": -8.9,
-  "ordersChangeVsSDLWPct": -11.3,
-  "netChangeVsPrev4Pct": 86.0,
-  "dayparts": [
-   {
-    "name": "Dinner",
-    "gross": 14207.85,
-    "discounts": 141.0,
-    "net": 14066.85,
-    "pctNet": 84.1,
-    "netPerOrder": 148.07
-   },
-   {
-    "name": "Lunch",
-    "gross": 2263.9,
-    "discounts": 35.8,
-    "net": 2228.1,
-    "pctNet": 13.3,
-    "netPerOrder": 43.69
-   },
-   {
-    "name": "Expresso Service",
-    "gross": 475.0,
-    "discounts": 48.5,
-    "net": 426.5,
-    "pctNet": 2.5,
-    "netPerOrder": 11.53
-   }
-  ],
-  "revenueCenters": [
-   {
-    "name": "Dining Room",
-    "net": 13588.7,
-    "pctNet": 81.2,
-    "netPerOrder": 123.53
-   },
-   {
-    "name": "Front Patio",
-    "net": 1710.85,
-    "pctNet": 10.2,
-    "netPerOrder": 77.77
-   },
-   {
-    "name": "Patio",
-    "net": 807.15,
-    "pctNet": 4.8,
-    "netPerOrder": 100.89
-   },
-   {
-    "name": "Espresso Bar",
-    "net": 441.75,
-    "pctNet": 2.6,
-    "netPerOrder": 10.77
-   },
-   {
-    "name": "Back Room",
-    "net": 173.0,
-    "pctNet": 1.0,
-    "netPerOrder": 86.5
-   }
-  ],
-  "salesCategories": [
-   {
-    "name": "Food",
-    "net": 7999.2,
-    "pctNet": 47.8,
-    "items": 365
-   },
-   {
-    "name": "Liquor",
-    "net": 4425.0,
-    "pctNet": 26.4,
-    "items": 289
-   },
-   {
-    "name": "Bottled Beer",
-    "net": 2011.0,
-    "pctNet": 12.0,
-    "items": 329
-   },
-   {
-    "name": "Draft Beer",
-    "net": 1402.5,
-    "pctNet": 8.3,
-    "items": 191
-   },
-   {
-    "name": "Espresso Service",
-    "net": 441.75,
-    "pctNet": 2.6,
-    "items": 87
-   },
-   {
-    "name": "NA Beverage",
-    "net": 246.0,
-    "pctNet": 1.4,
-    "items": 46
-   },
-   {
-    "name": "Wine",
-    "net": 179.0,
-    "pctNet": 1.0,
-    "items": 16
-   },
-   {
-    "name": "No sales category",
-    "net": 17.0,
-    "pctNet": 0.1,
-    "items": 1
-   }
-  ],
-  "note": "RECORD DAY. Net $16,721.45 is +99.2% vs Saturday Aug 15 and +86.0% vs the 4-Saturday average, on FEWER guests (278, -8.9%) and FEWER orders (181, -11.3%). Avg check $88.01 vs $38.68 SDLW (+127.5%). The lift is almost entirely Dining Room ($13,588.70 net, 81.2% of the day, $123.53 net/order) and it is beverage-led: Liquor $4,425 on 289 items and Bottled Beer $2,011 on 329 items, both far above a normal Saturday. This has the shape of a large private/buyout event in the Dining Room, not organic walk-in volume -- confirm before treating it as a trend. Labor landed at 13.3% of net (best ratio in the file) purely because the revenue denominator exploded; the roster was a normal 13 people / 82.25 hrs. Voids $259.50 across 16 orders (+241% vs SDLW) is the one cost flag."
- },
- "slingHistory": [
-  {
-   "date": "Saturday, August 22",
-   "count": 13,
-   "shifts": 13,
-   "hours": 82.25,
-   "overtime": 5.25
-  },
-  {
-   "date": "Sunday, August 23",
-   "count": 11,
-   "shifts": 13,
-   "hours": 55.5,
-   "overtime": 5.25
-  },
-  {
-   "date": "Monday, August 24",
-   "count": 6,
-   "shifts": 6,
-   "hours": 25.5,
-   "overtime": 0
-  },
-  {
-   "date": "Tuesday, August 25",
-   "count": 8,
-   "shifts": 8,
-   "hours": 37.66,
-   "overtime": 0
-  },
-  {
-   "date": "Wednesday, August 26",
-   "count": 8,
-   "shifts": 8,
-   "hours": 36.0,
-   "overtime": 0
-  },
-  {
-   "date": "Thursday, August 27",
-   "count": 10,
-   "shifts": 11,
-   "hours": 40.57,
-   "overtime": 0
-  },
-  {
-   "date": "Friday, August 28",
-   "count": 11,
-   "shifts": 13,
-   "hours": 56.0,
-   "overtime": 0
-  },
-  {
-   "date": "Saturday, August 29",
-   "count": 12,
-   "shifts": 12,
-   "hours": 59.83,
-   "overtime": 0
-  },
-  {
-   "date": "Sunday, August 30",
-   "count": 11,
-   "shifts": 12,
-   "hours": 52.41,
-   "overtime": 0
-  },
-  {
-   "date": "Monday, August 31",
-   "count": 8,
-   "shifts": 8,
-   "hours": 27.83,
-   "overtime": 0
-  },
-  {
-   "date": "Tuesday, September 1",
-   "count": 9,
-   "shifts": 9,
-   "hours": 37.16,
-   "overtime": 0
-  },
-  {
-   "date": "Wednesday, September 2",
-   "count": 8,
-   "shifts": 8,
-   "hours": 36.66,
-   "overtime": 0
-  },
-  {
-   "date": "Thursday, September 3",
-   "count": 10,
-   "shifts": 10,
-   "hours": 40.16,
-   "overtime": 0
-  },
-  {
-   "date": "Friday, September 4",
-   "count": 11,
-   "shifts": 12,
-   "hours": 55.99,
-   "overtime": 0
-  },
-  {
-   "date": "Saturday, September 5",
-   "count": 12,
-   "shifts": 12,
-   "hours": 60.48,
-   "overtime": 0
-  },
-  {
-   "date": "Sunday, September 6",
-   "count": 13,
-   "shifts": 13,
-   "hours": 70.41,
-   "overtime": 0
-  },
-  {
-   "date": "Monday, September 7",
-   "count": 6,
-   "shifts": 6,
-   "hours": 24.5,
-   "uncovered": 0,
-   "overtime": 0
-  },
-  {
-   "date": "Tuesday, September 8",
-   "count": 7,
-   "shifts": 7,
-   "hours": 31.75,
-   "overtime": 0
-  }
- ],
- "slingPending": {
-  "pending": false,
-  "pendingFor": null,
-  "note": "Resolved -- the Tue Sep 8 Sling report arrived 14:00Z, ahead of this 14:35Z run."
- },
- "toastPartial": {
-  "resolved": false,
-  "note": "Sunday Sep 6 is fully loaded and confirmed. NEW partial: Monday Sep 7 (Labor Day) is group-level only -- missing checks, void dollars, SDLW, 4-week average, dayparts, revenue centers and sales categories."
- }
 }
