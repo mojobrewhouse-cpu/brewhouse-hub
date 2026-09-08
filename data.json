@@ -8,7 +8,7 @@
   "reviewDiscrepancyFlag": false,
   "chromeUnavailableThisRun": false,
   "chromeAuthenticatedReviewTabReached": false,
-  "runNote": "Second run of Sep 8. Rebased on the 4:00 AM push (sha 2b7ddad) rather than the pre-dawn state, so the authenticated review verification and full payroll action-item detail from that run are preserved intact."
+  "runNote": "Second run of Sep 8. Rebased on the 4:00 AM push (sha 2b7ddad) rather than the pre-dawn state, so the authenticated review verification and full payroll action-item detail from that run are preserved intact. Also repaired slingHistory: the 4:00 AM push had dropped Sep 3-6 and left the series unsorted; those four days are restored from the prior state and the whole series is now deduplicated and in chronological order."
  },
  "toast": {
   "date": "Monday, September 7",
@@ -1003,28 +1003,6 @@
  },
  "slingHistory": [
   {
-   "date": "Monday, September 7",
-   "count": 6,
-   "shifts": 6,
-   "hours": 24.5,
-   "uncovered": 0,
-   "overtime": 0
-  },
-  {
-   "date": "Friday, August 28",
-   "count": 11,
-   "shifts": 13,
-   "hours": 56.0,
-   "overtime": 0
-  },
-  {
-   "date": "Thursday, August 27",
-   "count": 10,
-   "shifts": 11,
-   "hours": 40.57,
-   "overtime": 0
-  },
-  {
    "date": "Saturday, August 22",
    "count": 13,
    "shifts": 13,
@@ -1060,6 +1038,20 @@
    "overtime": 0
   },
   {
+   "date": "Thursday, August 27",
+   "count": 10,
+   "shifts": 11,
+   "hours": 40.57,
+   "overtime": 0
+  },
+  {
+   "date": "Friday, August 28",
+   "count": 11,
+   "shifts": 13,
+   "hours": 56.0,
+   "overtime": 0
+  },
+  {
    "date": "Saturday, August 29",
    "count": 12,
    "shifts": 12,
@@ -1092,6 +1084,42 @@
    "count": 8,
    "shifts": 8,
    "hours": 36.66,
+   "overtime": 0
+  },
+  {
+   "date": "Thursday, September 3",
+   "count": 10,
+   "shifts": 10,
+   "hours": 40.16,
+   "overtime": 0
+  },
+  {
+   "date": "Friday, September 4",
+   "count": 11,
+   "shifts": 12,
+   "hours": 55.99,
+   "overtime": 0
+  },
+  {
+   "date": "Saturday, September 5",
+   "count": 12,
+   "shifts": 12,
+   "hours": 60.48,
+   "overtime": 0
+  },
+  {
+   "date": "Sunday, September 6",
+   "count": 13,
+   "shifts": 13,
+   "hours": 70.41,
+   "overtime": 0
+  },
+  {
+   "date": "Monday, September 7",
+   "count": 6,
+   "shifts": 6,
+   "hours": 24.5,
+   "uncovered": 0,
    "overtime": 0
   },
   {
