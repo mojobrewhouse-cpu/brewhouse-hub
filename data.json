@@ -563,8 +563,18 @@
     "source": "All Sources",
     "today": {
       "date": "Fri, Sep 11",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "4:00 PM",
+          "name": "Stephanie Davis",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(281) 460-5443",
+          "notes": "Close to tv with us open on"
+        }
+      ]
     },
     "tomorrow": {
       "date": "Sat, Sep 12",
@@ -572,6 +582,16 @@
       "bookings": []
     },
     "upcoming": [
+      {
+        "time": "12:30 PM",
+        "name": "Renee Bennett",
+        "guests": 6,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(580) 695-9659",
+        "notes": "Watching OU/Texas football game",
+        "date": "Sat, Oct 10"
+      },
       {
         "time": "6:00 PM",
         "name": "Rachel Trana",
