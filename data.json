@@ -1,1462 +1,1402 @@
 {
-  "date": "Tuesday, September 15",
-  "systemStatus": {
-    "level": "attention",
-    "runTime": "2026-09-15T14:10:00Z",
-    "runLabel": "TUE SEP 15, 7:10 AM PT DATA REFRESH",
-    "headline": "TUE SEP 15, 7:10 AM PT. Both overnight gaps from the 4 AM run are now CLOSED. Mon Sep 14 Toast landed (group email 13:25Z): net $4,135.75 / gross $4,239.75, 158 guests, 116 orders, $26.18 per guest, labor 25.0%, 11 void items -- net +40.2% vs Mon Sep 7 and -45.0% vs Sunday, a normal Monday shape. Tue Sep 15 Sling landed (14:00Z): 8 staff / 8 shifts / 37.53 hrs / 1 cook / 0 uncovered / 0 OT. Google Ads read LIVE for Sep 14: $41.68 vs the $40/day cap -- only 4.2% over, down from $61.21, with impressions up to 820 and CPC down to $1.44, but ZERO conversions. Yelp read LIVE: $195.12 Sep 1-14 ($13.94/day vs $13 budget), 104 ad leads at $3.83 each; audience size slipped back to 'Limited'. TripAdvisor: nothing. Still open: the Toast single-location detail email and the 13 unreplied Google reviews.",
-    "resolvedThisRun": [
-      "Mon Sep 14 Toast received (group email 13:25Z) and merged with a Mon Sep 7 SDLW comparison built from the matching group email.",
-      "Tue Sep 15 Sling received (14:00Z) and merged -- 8 staff / 37.53 hrs / 1 cook / 0 uncovered / 0 OT. slingPending cleared.",
-      "Google Ads read LIVE for Sep 14 (date range switched to Yesterday, all 6 campaigns + account total captured).",
-      "Yelp Ads read LIVE -- Ad performance and Ad settings panels both fully rendered this run.",
-      "Google Ads daily spend back near cap: $41.68 vs $40, down 31.9% from Sep 13. Brewhouse Lunch came in UNDER its $25 budget at $22.52."
-    ],
-    "needsJoal": [
-      "DONALD CLAY 1-STAR (Brewhouse) -- public foodborne-illness allegation, now ~6 weeks unanswered. Post the neutral take-it-offline reply and loop insurer/counsel. Still the single highest-risk item on the board. Carried forward, reviews not re-read this run.",
-      "13 unreplied Google reviews total (10 Brewhouse + 3 Coffee) -- drafts ready in the 4 AM brief; every reply needs Joal's OK before posting. Carried forward, not re-read this run.",
-      "GOOGLE ADS -- spend is back under control ($41.68 vs $40 cap) but Sep 14 produced ZERO conversions off 29 clicks and $41.68. Both live campaigns remain 'All ads limited by policy', which is the real ceiling. Fixing the policy limitation is now higher value than another budget cut.",
-      "YELP -- audience size regressed from 'Ideal' back to 'Limited' this run. The 5-mile radius plus 12 manual keywords is the likely cause; widening either should lower CPC.",
-      "Mon Sep 14 Toast single-location detail email still pending -- void $, dayparts, revenue centres and the 4-week average will fill in when it arrives (~14:40Z).",
-      "GBP management request pending ~56 days (carried forward, not re-verified).",
-      "YELP -- 3 reviews needing attention; inbox 15 unread (seen in the sidebar this run, not opened)."
-    ],
-    "carriedForwardNotVerified": [
-      "Mon Sep 14 Toast single-location full detail -- not yet sent at 14:10Z.",
-      "Google/Yelp review counts and reply backlog -- last read live 2026-09-15T11:05Z.",
-      "Google Business Profile management request -- last live 2026-08-25.",
-      "Reservations -- last read 2026-09-14.",
-      "Payroll -- settled; next cycle due 2026-09-22.",
-      "Yelp inbox unread count (15) read off the sidebar, threads not opened."
-    ]
-  },
-  "toast": {
-    "date": "Monday, September 14",
-    "net": 4135.75,
-    "netSales": 4135.75,
-    "gross": 4239.75,
-    "grossSales": 4239.75,
-    "guests": 158,
-    "guestsDerived": false,
-    "orders": 116,
-    "ordersDerived": false,
-    "checks": null,
-    "avgPerOrder": 35.65,
-    "avgOrder": 35.65,
-    "avgPerGuest": 26.18,
-    "avgPerCheck": null,
-    "avgCheck": null,
-    "laborPct": 25.0,
-    "laborPctOfNet": 25.0,
-    "laborCost": 1033.94,
-    "laborCostDerived": true,
-    "discounts": 105.99,
-    "discountsDerived": true,
-    "discountPct": 2.5,
-    "deferredSales": 0.0,
-    "refunds": 0.0,
-    "voidAmount": null,
-    "voidAmountDerived": false,
-    "voidItems": 11,
-    "voidOrders": null,
-    "cardPayments": 87,
-    "openOrders": 0,
-    "autoClockedOut": [],
-    "takeoutOrders": 0,
-    "takeoutSales": 0.0,
-    "deliveryOrders": 0,
-    "deliverySales": 0.0,
-    "dineInOrders": 0,
-    "dineInSales": 0.0,
-    "source": "group all-locations Daily Performance Summary email 2026-09-15T13:25Z. Single-location full-detail email (dayparts, revenue centres, sales categories, void $, 4-week avg) had NOT arrived at this run -- it normally lands ~14:40Z.",
-    "partial": true,
-    "detailPending": true,
-    "sdlw": {
-      "date": "Monday, September 7",
-      "net": 2950.25,
-      "gross": 3038.85,
-      "guests": 118,
-      "orders": 92,
-      "laborPct": 25.4,
-      "laborCost": 749.36,
-      "discounts": 88.13,
-      "voidItems": 4,
-      "netChangePct": 40.2,
-      "grossChangePct": 39.5,
-      "guestsChangePct": 33.9,
-      "ordersChangePct": 26.1,
-      "avgPerGuestChangePct": 4.7,
-      "avgOrderChangePct": 11.2,
-      "source": "group all-locations Daily Performance Summary email 2026-09-08T13:27Z"
-    },
-    "fourWeekAvg": null,
-    "serviceType": [],
-    "revenueCenter": [],
-    "salesCategory": [],
-    "orderType": [],
-    "orderSource": [],
-    "netChangeVsPrevDayPct": -45.0,
-    "netChangeVsSDLWPct": 40.2,
-    "grossChangeVsSDLWPct": 39.5,
-    "guestsChangeVsSDLWPct": 33.9,
-    "ordersChangeVsSDLWPct": 26.1,
-    "netChangeVsPrev4Pct": null,
-    "note": "Mon Sep 14 PARTIAL (group email 13:25Z). Net $4,135.75 / gross $4,239.75, 158 guests, 116 orders, $35.65 avg/order, $26.18 avg/guest, labor 25.0% of net (~$1,033.94 derived), discounts 2.5% of gross (~$105.99 derived), 11 void items, 87 card payments, 0 open orders, no auto-clock-outs. Net +40.2% vs Mon Sep 7 SDLW ($2,950.25) and -45.0% vs Sun Sep 13. Order-type row reads all zeros in the group email as usual. Void $, dayparts, revenue centres, sales categories and the 4-week average are all still pending the single-location email."
-  },
-  "toastLastKnown": {
-    "date": "Monday, September 14",
-    "net": 4135.75,
-    "netSales": 4135.75,
-    "gross": 4239.75,
-    "grossSales": 4239.75,
-    "guests": 158,
-    "guestsDerived": false,
-    "orders": 116,
-    "ordersDerived": false,
-    "checks": null,
-    "avgPerOrder": 35.65,
-    "avgOrder": 35.65,
-    "avgPerGuest": 26.18,
-    "avgPerCheck": null,
-    "avgCheck": null,
-    "laborPct": 25.0,
-    "laborPctOfNet": 25.0,
-    "laborCost": 1033.94,
-    "laborCostDerived": true,
-    "discounts": 105.99,
-    "discountsDerived": true,
-    "discountPct": 2.5,
-    "deferredSales": 0.0,
-    "refunds": 0.0,
-    "voidAmount": null,
-    "voidAmountDerived": false,
-    "voidItems": 11,
-    "voidOrders": null,
-    "cardPayments": 87,
-    "openOrders": 0,
-    "autoClockedOut": [],
-    "takeoutOrders": 0,
-    "takeoutSales": 0.0,
-    "deliveryOrders": 0,
-    "deliverySales": 0.0,
-    "dineInOrders": 0,
-    "dineInSales": 0.0,
-    "source": "group all-locations Daily Performance Summary email 2026-09-15T13:25Z. Single-location full-detail email (dayparts, revenue centres, sales categories, void $, 4-week avg) had NOT arrived at this run -- it normally lands ~14:40Z.",
-    "partial": true,
-    "detailPending": true,
-    "sdlw": {
-      "date": "Monday, September 7",
-      "net": 2950.25,
-      "gross": 3038.85,
-      "guests": 118,
-      "orders": 92,
-      "laborPct": 25.4,
-      "laborCost": 749.36,
-      "discounts": 88.13,
-      "voidItems": 4,
-      "netChangePct": 40.2,
-      "grossChangePct": 39.5,
-      "guestsChangePct": 33.9,
-      "ordersChangePct": 26.1,
-      "avgPerGuestChangePct": 4.7,
-      "avgOrderChangePct": 11.2,
-      "source": "group all-locations Daily Performance Summary email 2026-09-08T13:27Z"
-    },
-    "fourWeekAvg": null,
-    "serviceType": [],
-    "revenueCenter": [],
-    "salesCategory": [],
-    "orderType": [],
-    "orderSource": [],
-    "netChangeVsPrevDayPct": -45.0,
-    "netChangeVsSDLWPct": 40.2,
-    "grossChangeVsSDLWPct": 39.5,
-    "guestsChangeVsSDLWPct": 33.9,
-    "ordersChangeVsSDLWPct": 26.1,
-    "netChangeVsPrev4Pct": null,
-    "note": "Mon Sep 14 PARTIAL (group email 13:25Z). Net $4,135.75 / gross $4,239.75, 158 guests, 116 orders, $35.65 avg/order, $26.18 avg/guest, labor 25.0% of net (~$1,033.94 derived), discounts 2.5% of gross (~$105.99 derived), 11 void items, 87 card payments, 0 open orders, no auto-clock-outs. Net +40.2% vs Mon Sep 7 SDLW ($2,950.25) and -45.0% vs Sun Sep 13. Order-type row reads all zeros in the group email as usual. Void $, dayparts, revenue centres, sales categories and the 4-week average are all still pending the single-location email."
-  },
-  "sling": {
-    "date": "Tuesday, September 15",
-    "count": 8,
-    "shifts": 8,
-    "hours": 37.53,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "pending": false,
-    "nextDayPending": false,
-    "stale": false,
-    "kitchenCoverageFlag": false,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Server"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      }
-    ],
-    "note": "LIVE Tue Sep 15 (received 2026-09-15T14:00Z): 8 employees / 8 shifts / 37.53 hrs, 1 cook (Isael Salvador Narciso), 2 bartenders, 3 servers, 1 barista, 1 busser. 0 uncovered, 0 OT, 0 off. Up from 7 staff / 29.75 hrs Mon. Still single-cook cover -- no backup if Isael calls out."
-  },
-  "slingLastKnown": {
-    "date": "Monday, September 14",
-    "count": 7,
-    "shifts": 7,
-    "hours": 29.75,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "pending": false,
-    "nextDayPending": false,
-    "stale": false,
-    "kitchenCoverageFlag": false,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook"
-      },
-      {
-        "name": "Sarah Palmer",
-        "role": "Barista"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Bartender"
-      },
-      {
-        "name": "Harmony Willson",
-        "role": "Bartender"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Barback"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Server"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Server"
-      }
-    ],
-    "note": "LIVE Mon Sep 14 (received 2026-09-14T14:00Z): 7 employees / 7 shifts / 29.75 hrs, 1 cook (Rafael Patricio), 2 bartenders, 2 servers, 1 barista, 1 barback. 0 uncovered, 0 OT, 0 off. Light Monday -- down from 11/53 hrs Sun."
-  },
-  "slingToday": {
-    "date": "Tuesday, September 15",
-    "count": 8,
-    "shifts": 8,
-    "hours": 37.53,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
-    "pending": false,
-    "nextDayPending": false,
-    "stale": false,
-    "kitchenCoverageFlag": false,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Andrew Turner",
-        "role": "Bartender"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Server"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      }
-    ],
-    "note": "LIVE Tue Sep 15 (received 2026-09-15T14:00Z): 8 employees / 8 shifts / 37.53 hrs, 1 cook (Isael Salvador Narciso), 2 bartenders, 3 servers, 1 barista, 1 busser. 0 uncovered, 0 OT, 0 off. Up from 7 staff / 29.75 hrs Mon. Still single-cook cover -- no backup if Isael calls out."
-  },
-  "googleAds": {
-    "lastUpdated": "2026-09-15T14:10:00Z",
-    "accountDailyBudget": 40.0,
-    "yesterday": {
-      "date": "September 14, 2026",
-      "spend": 41.68,
-      "impressions": 820,
-      "clicks": 29,
-      "conversions": 0.0,
-      "cpc": 1.44,
-      "ctr": 3.54,
-      "costChangeAbs": -19.53,
-      "costChangePct": -31.9,
-      "impressionsChangeAbs": 368,
-      "clicksChangeAbs": 11,
-      "conversionsChangeAbs": -1.0,
-      "avgCpcChangeAbs": -1.96,
-      "clicksDerived": false,
-      "conversionsCalculating": false,
-      "comparisonBasis": "Deltas vs the Sep 13 live read stored in data.json (Sep 13: $61.21 / 452 impr / 18 clicks / 1 conv / $3.40 CPC). Google's own tooltip confirms Avg CPC -$1.96 (-57.74%) vs prior period.",
-      "overBudgetFlag": true,
-      "note": "LIVE read 2026-09-15T14:05Z, date range Yesterday (Sep 14, 2026). $41.68 against the $40.00/day account budget -- only 4.2% over and a sharp improvement on Sep 13's $61.21 (-31.9%). Sixth straight day above cap, but the streak is now $60.83, $76.07, $76.47, $58.65, $61.21, $41.68. Impressions rebounded to 820 (+368), clicks 29 (+11), CTR 3.54%, CPC down to $1.44 from $3.40. ZERO conversions though, after Sep 13's single conversion. Brewhouse Lunch: $22.52 on $25/day -- UNDER budget for the first time in days, 594 impr, 19 clicks, 3.20% CTR, 0 conv. Brewhouse Dinner: $19.15 on $15/day, 226 impr, 10 clicks, 4.42% CTR, 0 conv. Both live campaigns still 'All ads limited by policy'. 4 paused, 2 drafts in progress."
-    },
-    "campaigns": [
-      {
-        "name": "Brewhouse Lunch | Search | Aug 2026",
-        "budget": 25.0,
-        "status": "Eligible (Limited)",
-        "limitation": "All ads limited by policy",
-        "impressions": 594,
-        "clicks": 19,
-        "ctr": 3.2,
-        "cost": 22.52,
-        "conversions": 0.0
-      },
-      {
-        "name": "Brewhouse Dinner | Search | Sep 2026",
-        "budget": 15.0,
-        "status": "Eligible (Limited)",
-        "limitation": "All ads limited by policy",
-        "impressions": 226,
-        "clicks": 10,
-        "ctr": 4.42,
-        "cost": 19.15,
-        "conversions": 0.0
-      },
-      {
-        "name": "Oldest SB Brewery on Tap",
-        "budget": 10.8,
-        "status": "Paused",
-        "limitation": "All asset groups limited by policy",
-        "impressions": 0,
-        "clicks": 0,
-        "ctr": null,
-        "cost": 0.0,
-        "conversions": 0.0
-      },
-      {
-        "name": "Local store visits and promotions-Performance Max-2",
-        "budget": 58.37,
-        "status": "Paused",
-        "limitation": "All asset groups limited by policy",
-        "impressions": 0,
-        "clicks": 0,
-        "ctr": null,
-        "cost": 0.0,
-        "conversions": 0.0
-      },
-      {
-        "name": "BHC Coffee | Search | P1 Launch",
-        "budget": 15.0,
-        "status": "Paused",
-        "limitation": "Missing enough relevant keywords",
-        "impressions": 0,
-        "clicks": 0,
-        "ctr": null,
-        "cost": 0.0,
-        "conversions": 0.0
-      },
-      {
-        "name": "World Cup HQ 2026",
-        "budget": 20.0,
-        "status": "Paused",
-        "limitation": null,
-        "impressions": 0,
-        "clicks": 0,
-        "ctr": null,
-        "cost": 0.0,
-        "conversions": 0.0
-      }
-    ],
-    "campaignsLive": 2,
-    "campaignsPaused": 4,
-    "draftsInProgress": 2,
-    "policyLimitationFlag": true,
-    "campaignNote": "Sep 13: Lunch finally converted (1) but at $49.99 -- 2x its $25 budget. Dinner efficient again (4.60% CTR, $1.40 CPC) but 0 conv. Impressions fell sharply account-wide (452 vs 1,009).",
-    "accountNote": "In-product notice (unchanged): from Aug 17, 2026 campaigns with bid targets may stay budget-limited even after budget adjustments; Google asks that targets be reviewed. Both live campaigns are Eligible (Limited) / All ads limited by policy.",
-    "last7d": {
-      "range": "Sep 6 - Sep 12, 2026",
-      "spend": 370.56,
-      "spendChangeAbs": 230.54,
-      "impressions": 7113,
-      "impressionsChangeAbs": 4109,
-      "conversions": 5.0,
-      "conversionsCalculating": true,
-      "note": "Not re-read this run (page opened on Yesterday range); Sep 6-12 values carried from prior run."
-    },
-    "emailReports24h": 4,
-    "emailNote": "4 Google Ads emails in last 24h: 2 'report is ready' (Campaign performance 12:31Z, Brewhouse Daily Campaign Report 15:48Z), 1 quarterly terms-and-policies reminder, 1 Google Tag marketing promo. No disapprovals, no budget alerts. Live campaign numbers NOT re-read this run (4 AM run is email-scan only) -- Sep 13 overspend flag carried forward.",
-    "emails24h": 6,
-    "disapprovals24h": 0,
-    "emailsNote": "6 Google Ads emails in the last 24h, no disapprovals: 2 scheduled report-ready notices, 'You received 12 conversions from your ads last week', a quarterly terms reminder, and 2 promos."
-  },
-  "yelpAds": {
-    "lastUpdated": "2026-09-15T14:10:00Z -- LIVE, biz.yelp.com Ad performance + Ad settings panels both fully rendered",
-    "last30d": {
-      "adImpressions": 27200,
-      "adImpressionsDisplay": "27.2k",
-      "totalImpressions": 37000,
-      "totalImpressionsDisplay": "37k",
-      "impressionSharePct": 73,
-      "pageVisitsFromAds": 353,
-      "totalPageVisits": 691,
-      "pageVisitSharePct": 51,
-      "leadsFromAds": 104,
-      "totalLeads": 159,
-      "leadSharePct": 65,
-      "adClicks": 285,
-      "avgCpc": 1.31,
-      "costPerLead": 3.83
-    },
-    "last12mo": {
-      "adLeads": 1345,
-      "organicLeads": 681,
-      "total": 2026,
-      "adSharePct": 66,
-      "organicSharePct": 34,
-      "forecast": 85,
-      "leadsBreakdown": "Ads 1,345 (66%) / Organic 681 (34%) / Total 2,026; forecast 85.",
-      "leadsBreakdownCarriedForward": false
-    },
-    "leadsByType12mo": [
-      {
-        "name": "Website Visits",
-        "count": 970,
-        "pct": 48
-      },
-      {
-        "name": "Directions & Map Views",
-        "count": 900,
-        "pct": 44
-      },
-      {
-        "name": "Calls",
-        "count": 129,
-        "pct": 6
-      },
-      {
-        "name": "CTA Clicks",
-        "count": 26,
-        "pct": 1
-      }
-    ],
-    "billingPeriod": {
-      "range": "Sep 1 - Sep 14, 2026",
-      "spend": 195.12,
-      "perDayAvg": 13.94,
-      "note": "LIVE. $195.12 across the first 14 days of September = $13.94/day against a $13/day average budget, ~7% ahead of pace (was $14.44/day). Sep 14 cost ~$7.45 -- the cheapest day of the month so far, which pulled the pace back toward budget."
-    },
-    "budgetSetting": "$13/day average",
-    "audienceSize": "Limited",
-    "audienceSizeFlag": true,
-    "audienceSizePrevious": "Ideal",
-    "audienceSizeNote": "REGRESSED -- the Ad settings gauge reads 'Limited' again after one run at 'Ideal'. Yelp's copy: 'Control features can limit how often your ad shows and lead to a higher cost-per-click.' The likely lever is the 5-mile radius plus the 12 manual keywords. Ad preview: Live.",
-    "keywords": [
-      "Bars",
-      "Brew Pubs",
-      "Corned Beef",
-      "Dinner",
-      "Fish",
-      "Gastropubs",
-      "Lunch",
-      "Microbrewery",
-      "Outdoor Dining",
-      "Pub",
-      "Restaurant",
-      "Restaurant Near Me"
-    ],
-    "locationRadius": "5 miles around your business",
-    "callToAction": "Discover SB Spot",
-    "adPhoto": "Smart selection on",
-    "adText": "Smart selection OFF -- Yelp prompts to turn it on to let Yelp optimize your text",
-    "adGoal": "Yelp is optimizing your goal",
-    "slideshow": "Your slideshow is set up",
-    "businessHighlights": 6,
-    "setupIncomplete": true,
-    "setupRemainingItems": 1,
-    "bonusBudgetRemaining": null,
-    "bonusBudgetNote": "No bonus budget line visible on the dashboard or the Ad settings panel this run.",
-    "yelpListingRating": 775,
-    "yelpListingNote": "Yelp ad preview shows The Brewhouse at 775 reviews, American/Seafood/Brewpubs, 229 W Montecito St, $$, 'Locally owned & operated', 'Established in 1998'. Preview status: Live.",
-    "carriedForward": false,
-    "liveVerifiedThisRun": true,
-    "lastVerifiedLive": "2026-09-14T14:25:00Z",
-    "staleHours": 0,
-    "note": "FLAT. Vs Sep 12 read: ad impressions 28.2k (was 28.8k), page visits from ads 369 (was 363), leads from ads 104 (was 105), ad clicks 301 (was 303), CPC $1.31 (was $1.32), cost/lead $3.75 (was $3.81). Billing-period spend $187.67 through Sep 13. Audience size flipped Limited -> Ideal. Reviews badge: 3 needing attention."
-  },
-  "tripAdvisor": {
-    "lastUpdated": "2026-09-15T14:10:00Z",
-    "actionable": false,
-    "adReports24h": 0,
-    "items": [],
-    "note": "No email from analytics@hm2.tripadvisor.com in the last 72h. Only a consumer marketing newsletter from inspiration@mp1.tripadvisor.com on Sep 13."
-  },
-  "reservations": {
-    "lastUpdated": "2026-09-16",
-    "source": "All Sources",
-    "today": {
-      "date": "Wed, Sep 16",
-      "totalGuests": 2,
-      "bookings": [
-        {
-          "time": "11:15 AM",
-          "name": "Patty Foote",
-          "guests": 2,
-          "status": "confirmed",
-          "source": "SpotHopper",
-          "phone": "(661) 618-3471",
-          "notes": ""
-        }
-      ]
-    },
-    "tomorrow": {
-      "date": "Thu, Sep 17",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "upcoming": [
-      {
-        "time": "12:30 PM",
-        "name": "Renee Bennett",
-        "guests": 6,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(580) 695-9659",
-        "notes": "Watching OU/Texas football game",
-        "date": "Sat, Oct 10"
-      },
-      {
-        "time": "7:00 PM",
-        "name": "Terry Rhoderick",
-        "guests": 3,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(301) 655-6320",
-        "notes": "",
-        "date": "Sat, Oct 17"
-      }
-    ]
-  },
-  "reviews": {
-    "lastUpdated": "2026-09-15T11:05:00Z",
-    "note": "LIVE read 2026-09-15 ~4 AM PT, both listings. The Brewhouse 4.5 / 531 reviews, 10 unreplied (6 flagged NEW by GBP). Brewhouse Coffee 5.0 / 7 reviews, 3 unreplied. Donald Clay 1-star foodborne-illness allegation still public and unanswered at ~6 weeks -- highest-priority item on the board.",
-    "discrepancyFlag": false,
-    "discrepancyDetail": "Live GBP read Tue Sep 15 ~4 AM PT on BOTH listings. The Brewhouse Unreplied tab: Greg Quinn (5*) and M (3*) at top; Replied tab shows nothing replied newer than 5 weeks ago (rich walter), confirming the 10-item backlog. Brewhouse Coffee Unreplied tab: Levi Powe (5*) and Debra Wedlake (5*) visible; Geoff Lay carried forward below the fold.",
-    "brewhouse": {
-      "profile": "The Brewhouse",
-      "stars": 4.5,
-      "reviewCount": 531,
-      "unansweredCount": 10,
-      "unanswered": [
-        {
-          "name": "Greg Quinn",
-          "rating": 5,
-          "age": "2 days ago (Sun Sep 13)",
-          "text": "The Brewhouse has amazing, fresh food menu selections at very reasonable prices and the adult beverages hit the spot. I am a pilsner/lager guy and the one I had was so good I ordered one more. I thought the nachos were on point and the Schnitzel comes with 3 sauce options that are gourmet. Fresh seafood will be my go to next time. The staff is awesome and I even got to meet one of the owners who informed me The Brewhouse is the longest-running bar in SB, and soon they'll be able to craft their own spirits!",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Lunch, $10-20, Local Guide 10 reviews",
-          "severity": "positive",
-          "isNew": true,
-          "draftReply": "Greg, a pilsner guy going back for a second round is the highest praise a brewery can get. Glad the nachos and the schnitzel sauces hit the mark too, and thanks for the kind words about the crew. Come back for the seafood and we'll pour you a cold one. -- Joal, The Brewhouse",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
-        },
-        {
-          "name": "M",
-          "rating": 3,
-          "age": "3 days ago (Sat Sep 12)",
-          "text": "(rating only, no text)",
-          "context": "Local Guide, 363 reviews, 259 photos",
-          "severity": "neutral",
-          "isNew": false,
-          "draftReply": "Hi M, thanks for stopping by and for the rating. Three stars tells us something was just okay, and we'd like to know what so we can fix it. If you're up for it, email us at mojobrewhouse@gmail.com. Hope to see you again. -- Joal, The Brewhouse",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
-        },
-        {
-          "name": "Luke Mayer (Cheez boi)",
-          "rating": 5,
-          "age": "7 days ago",
-          "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft an chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg, bacon, avocado, sour cream, breakfast potato, cheese, and salsa on the side.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Brunch, $10-20",
-          "severity": "positive",
-          "draftReply": "Luke, that may be the most thorough bagel review we have ever received and we are keeping it. Glad the burrito ratio landed right too. Come back hungry.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "Isabel Osmundsen",
-          "rating": 5,
-          "age": "1 week ago",
-          "text": "(rating only, no text)",
-          "context": "Local Guide, 14 reviews",
-          "severity": "positive",
-          "draftReply": "Isabel, thank you for the five stars. Next time you are in, tell us what you had so we can make sure it keeps being that good. See you soon.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "Justin Ladner",
-          "rating": 5,
-          "age": "3 weeks ago",
-          "text": "(rating only, no text)",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Local Guide, 44 reviews, 51 photos",
-          "severity": "positive",
-          "draftReply": "Justin, five out of five on food, service and atmosphere is about as good as it gets. Thanks for taking the time to rate us. Hope to see you back on Montecito soon.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "R. Muller",
-          "rating": 5,
-          "age": "3 weeks ago",
-          "text": "Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Breakfast, 3-4 people, Local Guide 57 reviews",
-          "severity": "positive",
-          "draftReply": "Thank you for the coffee shout out, and glad the kids hit the muffins fresh out of the oven. That is the best window of the day around here. Come see us again.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "sergio salazar",
-          "rating": 5,
-          "age": "4 weeks ago",
-          "text": "great food staff was on point very friendly, I highly recommend it and definitely driving 3 hours to go back.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "$10-20, Local Guide 17 reviews",
-          "severity": "positive",
-          "draftReply": "Sergio, driving three hours to come back is the biggest compliment we get. Glad the staff took good care of you. We will be ready when you make the trip.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "Betty Chambers",
-          "rating": 5,
-          "age": "5 weeks ago",
-          "text": "We were looking for a dog friendly restaurant on our way home to san diego. The food was great and our dog loved what you had. The waitress was great.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "severity": "positive",
-          "draftReply": "Betty, we are glad your dog approved. Thanks for stopping with us on the way to San Diego, and for the kind words about your server. Come back through anytime.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "Donald Clay",
-          "rating": 1,
-          "age": "5 weeks ago",
-          "text": "Beer was not good at all. Got botulism from taco. Recovering now. Avoid this place.",
-          "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
-          "context": "Lunch, $20-30, 2 people, outdoor patio",
-          "severity": "critical",
-          "escalate": "~6 WEEKS PUBLIC AND UNANSWERED. Public foodborne-illness allegation. Do NOT admit or deny in the public reply. Take it offline, notify insurer/counsel, and check whether SB County Public Health has any record before posting anything.",
-          "draftReply": "Donald, we take any report of illness seriously and we want to look into this properly. Please reach us directly at (805) 884-4664 or mojobrewhouse@gmail.com so we can get the details of your visit. -- Joal, owner",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        },
-        {
-          "name": "John Rinaldo",
-          "rating": 1,
-          "age": "7 weeks ago",
-          "text": "(rating only, no text)",
-          "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
-          "severity": "negative",
-          "draftReply": "John, a one star with no details leaves us guessing and we would rather know. If something went wrong, email us at mojobrewhouse@gmail.com and we will make it right.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        }
-      ],
-      "url": "https://business.google.com/n/14883478205426286749/reviews",
-      "liveVerifiedThisRun": true,
-      "ratingVerifiedThisRun": true,
-      "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
-      "newBadge": "7 new reviews",
-      "liveVerified": "header + 'Reply to reviews' walk-through (1 of 10 .. 10 of 10) read live 2026-09-14 ~4:10 AM PT.",
-      "lastVerifiedLive": "2026-09-15T11:05:00Z",
-      "newFlaggedByGoogle": 6
-    },
-    "coffee": {
-      "profile": "Brewhouse Coffee",
-      "stars": 5.0,
-      "reviewCount": 7,
-      "unansweredCount": 3,
-      "unanswered": [
-        {
-          "name": "Levi Powe",
-          "rating": 5,
-          "age": "2 days ago (Sat Sep 12)",
-          "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "1 review",
-          "severity": "positive",
-          "isNew": false,
-          "draftReply": "Levi, thank you! Top-quality coffee and friendly service is the whole plan, so it's great to hear both landed. Come see us again soon. -- Brewhouse Coffee",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
-        },
-        {
-          "name": "Debra Wedlake",
-          "rating": 5,
-          "age": "3 weeks ago",
-          "text": "Delicious coffee and pastries!",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "severity": "positive",
-          "draftReply": "Debra, coffee and pastries is exactly the morning we are going for. Thank you for the five stars. See you at the bar.",
-          "liveConfirmed": "2026-09-15T11:05:00Z",
-          "isNew": false
-        },
-        {
-          "name": "Geoff Lay",
-          "rating": 5,
-          "age": "4 weeks ago",
-          "text": "Wow. Horchata Latte? Yes please. Excellent service, even better Baristas. A must stop when in SB",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Local Guide, 197 reviews",
-          "severity": "positive",
-          "draftReply": "Geoff, the Horchata Latte has a following and you are clearly in it. Even better baristas is going straight to the team. Come see us next time you are through SB.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
-        }
-      ],
-      "url": "https://business.google.com/n/8047304414448442897/reviews",
-      "liveVerifiedThisRun": true,
-      "ratingVerifiedThisRun": true,
-      "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews",
-      "newBadge": "3 new reviews",
-      "liveVerified": "header + 'Reply to reviews' walk-through (1 of 3 .. 3 of 3) read live 2026-09-14 ~4:10 AM PT: 7 reviews, 3 unreplied, no new since Sat Sep 12.",
-      "lastVerifiedLive": "2026-09-15T11:05:00Z",
-      "newFlaggedByGoogle": 2
-    },
-    "carriedForward": false,
-    "liveVerifiedThisRun": true,
-    "lastVerifiedLive": "2026-09-15T11:05:00Z",
-    "carriedForwardThisRun": false
-  },
-  "yelpInquiries": {
-    "lastUpdated": "2026-09-15T11:05:00Z",
-    "count": 0,
-    "items": [],
-    "note": "Gmail 'from:yelp' last 72h: 3 marketing blasts only (Trending business alert, buffet newsletter, brunch newsletter). No customer inquiries. Inbox unread / reviews-needing-attention carried forward from Sep 12.",
-    "carriedForward": true,
-    "liveVerifiedThisRun": false,
-    "lastVerifiedLive": "2026-09-12T14:15:00Z",
-    "inboxUnread": 15,
-    "inboxUnreadDays": 14,
-    "yelpReviewsNeedingAttention": 3
-  },
-  "businessProfile": {
-    "lastUpdated": "2026-08-26",
-    "managementRequestsPending": 1,
-    "severity": "verify",
-    "pendingDays": 53,
-    "note": "CARRIED FORWARD, not re-verified this run. GBP management request pending 53 days (last verified live 2026-08-25).",
-    "carriedForward": true,
-    "liveVerifiedThisRun": false,
-    "lastVerifiedLive": "2026-08-25T07:10:00-07:00",
-    "carriedForwardThisRun": true
-  },
-  "lastUpdated": "2026-09-15T14:10:00Z",
-  "toastPrevDay": {
-    "date": "Sunday, September 13",
-    "net": 7515.85,
-    "netSales": 7515.85,
-    "gross": 7862.35,
-    "grossSales": 7862.35,
-    "guests": 310,
-    "guestsDerived": false,
-    "orders": 195,
-    "ordersDerived": false,
-    "checks": 214,
-    "avgPerOrder": 38.54,
-    "avgOrder": 38.54,
-    "avgPerGuest": 24.24,
-    "avgPerCheck": 35.12,
-    "avgCheck": 35.12,
-    "laborPct": 18.6,
-    "laborPctOfNet": 18.6,
-    "laborCost": 1399.5,
-    "laborCostDerived": false,
-    "discounts": 346.5,
-    "discountsDerived": false,
-    "discountPct": 4.41,
-    "deferredSales": 0.0,
-    "refunds": 0.0,
-    "voidAmount": 141.45,
-    "voidAmountDerived": false,
-    "voidItems": 17,
-    "voidOrders": 9,
-    "cardPayments": 171,
-    "openOrders": 0,
-    "autoClockedOut": [],
-    "takeoutOrders": 9,
-    "takeoutSales": 62.75,
-    "deliveryOrders": 0,
-    "deliverySales": 0.0,
-    "dineInOrders": 0,
-    "dineInSales": 0.0,
-    "source": "single-location full-detail Daily Performance Summary email 2026-09-14T14:40Z (+ group summary 13:33Z)",
-    "partial": false,
-    "detailPending": false,
-    "sdlw": {
-      "date": "Sunday, September 6",
-      "net": 10559.19,
-      "gross": 10883.9,
-      "guests": 438,
-      "orders": 345,
-      "checks": 364,
-      "laborPct": 24.1,
-      "laborCost": 2539.88,
-      "voids": 220.5,
-      "discounts": 324.71,
-      "netChangePct": -28.8,
-      "grossChangePct": -27.8,
-      "guestsChangePct": -29.2,
-      "ordersChangePct": -43.5,
-      "checksChangePct": -41.2,
-      "avgPerGuestChangePct": 0.5,
-      "avgOrderChangePct": 25.9,
-      "avgCheckChangePct": 21.1,
-      "laborCostChangePct": -44.9,
-      "laborPctChangePct": -22.8
-    },
-    "fourWeekAvg": {
-      "net": 6346.14,
-      "gross": 6550.91,
-      "guests": 268,
-      "orders": 194,
-      "checks": 204,
-      "laborPct": 25.6,
-      "laborCost": 1626.32,
-      "voids": 135.88,
-      "discounts": 204.77,
-      "netChangePct": 18.4,
-      "grossChangePct": 20.0,
-      "guestsChangePct": 15.7,
-      "ordersChangePct": 0.5,
-      "checksChangePct": 4.9,
-      "avgPerGuestChangePct": 2.4,
-      "avgOrderChangePct": 17.8,
-      "avgCheckChangePct": 12.9,
-      "laborCostChangePct": -13.9,
-      "discountsChangePct": 69.2
-    },
-    "serviceType": [
-      {
-        "name": "Dinner",
-        "net": 3563.65,
-        "pct": 47.4
-      },
-      {
-        "name": "Lunch",
-        "net": 2981.5,
-        "pct": 39.6
-      },
-      {
-        "name": "Expresso Service",
-        "net": 970.7,
-        "pct": 12.9
-      }
-    ],
-    "revenueCenter": [
-      {
-        "name": "Dining Room",
-        "net": 5162.0,
-        "pct": 68.6
-      },
-      {
-        "name": "Patio",
-        "net": 783.85,
-        "pct": 10.4
-      },
-      {
-        "name": "Back Room",
-        "net": 678.5,
-        "pct": 9.0
-      },
-      {
-        "name": "Front Patio",
-        "net": 473.0,
-        "pct": 6.2
-      },
-      {
-        "name": "Espresso Bar",
-        "net": 418.5,
-        "pct": 5.5
-      }
-    ],
-    "salesCategory": [
-      {
-        "name": "Food",
-        "net": 3584.35,
-        "pct": 47.6,
-        "items": 269
-      },
-      {
-        "name": "Liquor",
-        "net": 1618.5,
-        "pct": 21.5,
-        "items": 130
-      },
-      {
-        "name": "Draft Beer",
-        "net": 1142.5,
-        "pct": 15.2,
-        "items": 149
-      },
-      {
-        "name": "Espresso Service",
-        "net": 423.0,
-        "pct": 5.6,
-        "items": 83
-      },
-      {
-        "name": "Wine",
-        "net": 394.0,
-        "pct": 5.2,
-        "items": 45
-      },
-      {
-        "name": "Bottled Beer",
-        "net": 211.0,
-        "pct": 2.8,
-        "items": 35
-      },
-      {
-        "name": "NA Beverage",
-        "net": 102.5,
-        "pct": 1.3,
-        "items": 20
-      },
-      {
-        "name": "No sales category",
-        "net": 40.0,
-        "pct": 0.5,
-        "items": 2
-      }
-    ],
-    "orderType": [
-      {
-        "name": "No Dining Option Behavior",
-        "net": 7453.1,
-        "pct": 99.1
-      },
-      {
-        "name": "Take-Out",
-        "net": 62.75,
-        "pct": 0.8
-      }
-    ],
-    "orderSource": [
-      {
-        "name": "In Store",
-        "net": 7515.85,
-        "pct": 100.0
-      }
-    ],
-    "netChangeVsPrevDayPct": -13.0,
-    "netChangeVsSDLWPct": -28.8,
-    "grossChangeVsSDLWPct": -27.8,
-    "guestsChangeVsSDLWPct": -29.2,
-    "ordersChangeVsSDLWPct": -43.5,
-    "netChangeVsPrev4Pct": 18.4,
-    "note": "Sun Sep 13 FULL DETAIL now on the board (single-location email 14:40Z). Net $7,515.85 / gross $7,862.35, 310 guests, 195 orders, 214 checks, $35.12 avg check, $24.24/guest. Labor $1,399.50 = 18.6% of net (SDLW 24.1%). Discounts $346.50 (4.4% of gross; +69.2% vs 4-wk avg). Voids $141.45 / 17 items / 9 orders. Net -28.8% vs Sun Sep 6 ($10,559) but +18.4% vs 4-week Sunday avg ($6,346) -- Sep 6 was the outlier, not Sep 13. Dinner 47.4% / Lunch 39.6% / Espresso 12.9%."
-  },
-  "toastPending": {
-    "pending": true,
-    "pendingFor": "Monday, September 14 -- single-location full-detail Daily Performance Summary (normally ~14:40Z)",
-    "note": "Group all-locations email for Mon Sep 14 received 13:25Z and merged. The richer single-location email had not landed by 14:10Z; it carries void $, dayparts, revenue centres, sales categories and the 4-week average."
-  },
-  "payroll": {
-    "lastUpdated": "2026-09-09T16:20:00Z",
-    "dueToday": false,
-    "period": "Aug 23 - Sep 5, 2026",
-    "dueDate": "2026-09-08",
-    "payDate": "2026-09-11",
-    "estimatedTotal": 29853.57,
-    "actualWithdrawal": 17991.53,
-    "directDeposits": 8345.5,
-    "taxes": 9002.03,
-    "submitted": true,
-    "submittedAt": "2026-09-09T14:33:35Z",
-    "withdrawalDate": "2026-09-09",
-    "actionItems": 2,
-    "insights": 2,
-    "resolved": true,
-    "severity": "resolved",
-    "actionItemsDetail": [
-      {
-        "item": "Unapproved tip pools",
-        "detail": "14 days"
-      },
-      {
-        "item": "Auto-clockouts",
-        "detail": "3 employees"
-      }
-    ],
-    "insightsDetail": [
-      {
-        "item": "No timesheets",
-        "detail": "10 employees"
-      },
-      {
-        "item": "No direct deposit",
-        "detail": "26 employees"
-      }
-    ],
-    "reviewUrl": "https://payroll.toasttab.com/sbbrewhouse/payroll/cb3be908-af7c-11f0-a967-02b7bc716955/paycycle/review",
-    "note": "SETTLED. Aug 23 - Sep 5 payroll was submitted 2026-09-09T14:33Z and pay date (Sep 11) has passed. $17,991.53 withdrawn ($8,345.50 direct deposits + $9,002.03 taxes). Next cycle (Sep 6 - Sep 19) is due 2026-09-22. Not re-verified this run.",
-    "withdrawalCompleted": false,
-    "vendorOutreach": {
-      "from": "Shelby, Toast Payroll Success Partner (payrollsuccess@toasttab.com)",
-      "receivedAt": "2026-08-26T10:42:00-07:00",
-      "type": "account check-in / voicemail follow-up",
-      "actionable": false
-    },
-    "overdue": false,
-    "daysPastDue": 0,
-    "payrollSaasFee": 644.0,
-    "monthlySaasFee": 644.0,
-    "employeeCount": 46,
-    "withdrawalTime": "09:33 AM CST on Sep 9, 2026",
-    "postedLate": true,
-    "carriedForwardThisRun": true
-  },
-  "toastSaturdayAug22": {
-    "date": "Saturday, August 22",
-    "net": 16721.45,
-    "netSales": 16721.45,
-    "gross": 16946.75,
-    "grossSales": 16946.75,
-    "guests": 278,
-    "guestsDerived": false,
-    "orders": 181,
-    "ordersDerived": false,
-    "checks": 190,
-    "avgPerOrder": 92.38,
-    "avgOrder": 92.38,
-    "avgPerGuest": 60.15,
-    "avgPerCheck": 88.01,
-    "avgCheck": 88.01,
-    "laborPct": 13.3,
-    "laborPctOfNet": 13.3,
-    "laborCost": 2228.66,
-    "laborCostDerived": false,
-    "discounts": 225.3,
-    "discountsDerived": false,
-    "discountPct": 1.33,
-    "deferredSales": 0.0,
-    "refunds": 0.0,
-    "voidAmount": 259.5,
-    "voidAmountDerived": false,
-    "voidItems": 24,
-    "voidOrders": 16,
-    "openOrders": 0,
-    "autoClockedOut": [],
-    "takeoutOrders": 34,
-    "takeoutSales": 437.25,
-    "deliveryOrders": 0,
-    "deliverySales": 0.0,
-    "dineInOrders": 3,
-    "dineInSales": 50.75,
-    "source": "single-location Daily Performance Summary (229 W Montecito St), received 2026-08-23 07:39 PT - BACKFILLED on the Tue Aug 25 run",
-    "partial": false,
-    "sdlw": {
-      "date": "Saturday, August 15",
-      "net": 8393.24,
-      "netSales": 8393.24,
-      "gross": 8612.44,
-      "grossSales": 8612.44,
-      "guests": 305,
-      "orders": 204,
-      "checks": 217,
-      "avgCheck": 38.68,
-      "avgPerCheck": 38.68,
-      "avgOrder": 41.14,
-      "avgPerOrder": 41.14,
-      "avgPerGuest": 27.52,
-      "discounts": 219.2,
-      "voids": 76.0,
-      "laborCost": 1589.59,
-      "laborPct": 18.9,
-      "laborPctOfNet": 18.9,
-      "basis": "Same Day Last Week per Toast single-location email."
-    },
-    "fourWeekAvg": {
-      "net": 8987.98,
-      "gross": 9283.4,
-      "guests": 331,
-      "orders": 211,
-      "checks": 220,
-      "avgOrder": 42.6,
-      "avgCheck": 40.85,
-      "avgPerGuest": 27.15,
-      "discounts": 295.42,
-      "voids": 599.75,
-      "laborCost": 1507.5,
-      "laborPct": 16.8,
-      "basis": "Average of previous 4 Saturdays, per Toast single-location email."
-    },
-    "netChangeVsSDLWPct": 99.2,
-    "grossChangeVsSDLWPct": 96.8,
-    "guestsChangeVsSDLWPct": -8.9,
-    "ordersChangeVsSDLWPct": -11.3,
-    "netChangeVsPrev4Pct": 86.0,
-    "dayparts": [
-      {
-        "name": "Dinner",
-        "gross": 14207.85,
-        "discounts": 141.0,
-        "net": 14066.85,
-        "pctNet": 84.1,
-        "netPerOrder": 148.07
-      },
-      {
-        "name": "Lunch",
-        "gross": 2263.9,
-        "discounts": 35.8,
-        "net": 2228.1,
-        "pctNet": 13.3,
-        "netPerOrder": 43.69
-      },
-      {
-        "name": "Expresso Service",
-        "gross": 475.0,
-        "discounts": 48.5,
-        "net": 426.5,
-        "pctNet": 2.5,
-        "netPerOrder": 11.53
-      }
-    ],
-    "revenueCenters": [
-      {
-        "name": "Dining Room",
-        "net": 13588.7,
-        "pctNet": 81.2,
-        "netPerOrder": 123.53
-      },
-      {
-        "name": "Front Patio",
-        "net": 1710.85,
-        "pctNet": 10.2,
-        "netPerOrder": 77.77
-      },
-      {
-        "name": "Patio",
-        "net": 807.15,
-        "pctNet": 4.8,
-        "netPerOrder": 100.89
-      },
-      {
-        "name": "Espresso Bar",
-        "net": 441.75,
-        "pctNet": 2.6,
-        "netPerOrder": 10.77
-      },
-      {
-        "name": "Back Room",
-        "net": 173.0,
-        "pctNet": 1.0,
-        "netPerOrder": 86.5
-      }
-    ],
-    "salesCategories": [
-      {
-        "name": "Food",
-        "net": 7999.2,
-        "pctNet": 47.8,
-        "items": 365
-      },
-      {
-        "name": "Liquor",
-        "net": 4425.0,
-        "pctNet": 26.4,
-        "items": 289
-      },
-      {
-        "name": "Bottled Beer",
-        "net": 2011.0,
-        "pctNet": 12.0,
-        "items": 329
-      },
-      {
-        "name": "Draft Beer",
-        "net": 1402.5,
-        "pctNet": 8.3,
-        "items": 191
-      },
-      {
-        "name": "Espresso Service",
-        "net": 441.75,
-        "pctNet": 2.6,
-        "items": 87
-      },
-      {
-        "name": "NA Beverage",
-        "net": 246.0,
-        "pctNet": 1.4,
-        "items": 46
-      },
-      {
-        "name": "Wine",
-        "net": 179.0,
-        "pctNet": 1.0,
-        "items": 16
-      },
-      {
-        "name": "No sales category",
-        "net": 17.0,
-        "pctNet": 0.1,
-        "items": 1
-      }
-    ],
-    "note": "RECORD DAY. Net $16,721.45 is +99.2% vs Saturday Aug 15 and +86.0% vs the 4-Saturday average, on FEWER guests (278, -8.9%) and FEWER orders (181, -11.3%). Avg check $88.01 vs $38.68 SDLW (+127.5%). The lift is almost entirely Dining Room ($13,588.70 net, 81.2% of the day, $123.53 net/order) and it is beverage-led: Liquor $4,425 on 289 items and Bottled Beer $2,011 on 329 items, both far above a normal Saturday. This has the shape of a large private/buyout event in the Dining Room, not organic walk-in volume -- confirm before treating it as a trend. Labor landed at 13.3% of net (best ratio in the file) purely because the revenue denominator exploded; the roster was a normal 13 people / 82.25 hrs. Voids $259.50 across 16 orders (+241% vs SDLW) is the one cost flag."
-  },
-  "slingHistory": [
-    {
-      "date": "Saturday, August 22",
-      "count": 13,
-      "shifts": 13,
-      "hours": 82.25,
-      "overtime": 5.25
-    },
-    {
-      "date": "Sunday, August 23",
-      "count": 11,
-      "shifts": 13,
-      "hours": 55.5,
-      "overtime": 5.25
-    },
-    {
-      "date": "Monday, August 24",
-      "count": 6,
-      "shifts": 6,
-      "hours": 25.5,
-      "overtime": 0
-    },
-    {
-      "date": "Tuesday, August 25",
-      "count": 8,
-      "shifts": 8,
-      "hours": 37.66,
-      "overtime": 0
-    },
-    {
-      "date": "Wednesday, August 26",
-      "count": 8,
-      "shifts": 8,
-      "hours": 36.0,
-      "overtime": 0
-    },
-    {
-      "date": "Thursday, August 27",
-      "count": 10,
-      "shifts": 11,
-      "hours": 40.57,
-      "overtime": 0
-    },
-    {
-      "date": "Friday, August 28",
-      "count": 11,
-      "shifts": 13,
-      "hours": 56.0,
-      "overtime": 0
-    },
-    {
-      "date": "Saturday, August 29",
-      "count": 12,
-      "shifts": 12,
-      "hours": 59.83,
-      "overtime": 0
-    },
-    {
-      "date": "Sunday, August 30",
-      "count": 11,
-      "shifts": 12,
-      "hours": 52.41,
-      "overtime": 0
-    },
-    {
-      "date": "Monday, August 31",
-      "count": 8,
-      "shifts": 8,
-      "hours": 27.83,
-      "overtime": 0
-    },
-    {
-      "date": "Tuesday, September 1",
-      "count": 9,
-      "shifts": 9,
-      "hours": 37.16,
-      "overtime": 0
-    },
-    {
-      "date": "Wednesday, September 2",
-      "count": 8,
-      "shifts": 8,
-      "hours": 36.66,
-      "overtime": 0
-    },
-    {
-      "date": "Thursday, September 3",
-      "count": 10,
-      "shifts": 10,
-      "hours": 40.16,
-      "overtime": 0
-    },
-    {
-      "date": "Friday, September 4",
-      "count": 11,
-      "shifts": 12,
-      "hours": 55.99,
-      "overtime": 0
-    },
-    {
-      "date": "Saturday, September 5",
-      "count": 12,
-      "shifts": 12,
-      "hours": 60.48,
-      "overtime": 0
-    },
-    {
-      "date": "Sunday, September 6",
-      "count": 13,
-      "shifts": 13,
-      "hours": 70.41,
-      "overtime": 0
-    },
-    {
-      "date": "Monday, September 7",
-      "count": 6,
-      "shifts": 6,
-      "hours": 24.5,
-      "uncovered": 0,
-      "overtime": 0
-    },
-    {
-      "date": "Tuesday, September 8",
-      "count": 7,
-      "shifts": 7,
-      "hours": 31.75,
-      "overtime": 0
-    },
-    {
-      "date": "Wednesday, September 9",
-      "count": 8,
-      "shifts": 9,
-      "hours": 33.75,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    },
-    {
-      "date": "Thursday, September 10",
-      "count": 8,
-      "shifts": 8,
-      "hours": 38.75,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 0
-    },
-    {
-      "date": "Friday, September 11",
-      "count": 12,
-      "shifts": 14,
-      "hours": 63.75,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    },
-    {
-      "date": "Saturday, September 12",
-      "count": 11,
-      "shifts": 12,
-      "hours": 60.0,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    },
-    {
-      "date": "Sunday, September 13",
-      "count": 11,
-      "shifts": 12,
-      "hours": 53.0,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    },
-    {
-      "date": "Monday, September 14",
-      "count": 7,
-      "shifts": 7,
-      "hours": 29.75,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    },
-    {
-      "date": "Tuesday, September 15",
-      "count": 8,
-      "shifts": 8,
-      "hours": 37.53,
-      "uncovered": 0,
-      "overtime": 0,
-      "cooks": 1
-    }
+ "date": "Wednesday, September 16",
+ "systemStatus": {
+  "level": "attention",
+  "runTime": "2026-09-15T14:10:00Z",
+  "runLabel": "TUE SEP 15, 7:10 AM PT DATA REFRESH",
+  "headline": "TUE SEP 15, 7:10 AM PT. Both overnight gaps from the 4 AM run are now CLOSED. Mon Sep 14 Toast landed (group email 13:25Z): net $4,135.75 / gross $4,239.75, 158 guests, 116 orders, $26.18 per guest, labor 25.0%, 11 void items -- net +40.2% vs Mon Sep 7 and -45.0% vs Sunday, a normal Monday shape. Tue Sep 15 Sling landed (14:00Z): 8 staff / 8 shifts / 37.53 hrs / 1 cook / 0 uncovered / 0 OT. Google Ads read LIVE for Sep 14: $41.68 vs the $40/day cap -- only 4.2% over, down from $61.21, with impressions up to 820 and CPC down to $1.44, but ZERO conversions. Yelp read LIVE: $195.12 Sep 1-14 ($13.94/day vs $13 budget), 104 ad leads at $3.83 each; audience size slipped back to 'Limited'. TripAdvisor: nothing. Still open: the Toast single-location detail email and the 13 unreplied Google reviews.",
+  "resolvedThisRun": [
+   "Mon Sep 14 Toast received (group email 13:25Z) and merged with a Mon Sep 7 SDLW comparison built from the matching group email.",
+   "Tue Sep 15 Sling received (14:00Z) and merged -- 8 staff / 37.53 hrs / 1 cook / 0 uncovered / 0 OT. slingPending cleared.",
+   "Google Ads read LIVE for Sep 14 (date range switched to Yesterday, all 6 campaigns + account total captured).",
+   "Yelp Ads read LIVE -- Ad performance and Ad settings panels both fully rendered this run.",
+   "Google Ads daily spend back near cap: $41.68 vs $40, down 31.9% from Sep 13. Brewhouse Lunch came in UNDER its $25 budget at $22.52."
   ],
-  "slingPending": {
-    "pending": false,
-    "pendingFor": null,
-    "note": "Tue Sep 15 Sling daily report received 2026-09-15T14:00Z and merged."
+  "needsJoal": [
+   "DONALD CLAY 1-STAR (Brewhouse) -- public foodborne-illness allegation, now ~6 weeks unanswered. Post the neutral take-it-offline reply and loop insurer/counsel. Still the single highest-risk item on the board. Carried forward, reviews not re-read this run.",
+   "13 unreplied Google reviews total (10 Brewhouse + 3 Coffee) -- drafts ready in the 4 AM brief; every reply needs Joal's OK before posting. Carried forward, not re-read this run.",
+   "GOOGLE ADS -- spend is back under control ($41.68 vs $40 cap) but Sep 14 produced ZERO conversions off 29 clicks and $41.68. Both live campaigns remain 'All ads limited by policy', which is the real ceiling. Fixing the policy limitation is now higher value than another budget cut.",
+   "YELP -- audience size regressed from 'Ideal' back to 'Limited' this run. The 5-mile radius plus 12 manual keywords is the likely cause; widening either should lower CPC.",
+   "Mon Sep 14 Toast single-location detail email still pending -- void $, dayparts, revenue centres and the 4-week average will fill in when it arrives (~14:40Z).",
+   "GBP management request pending ~56 days (carried forward, not re-verified).",
+   "YELP -- 3 reviews needing attention; inbox 15 unread (seen in the sidebar this run, not opened)."
+  ],
+  "carriedForwardNotVerified": [
+   "Mon Sep 14 Toast single-location full detail -- not yet sent at 14:10Z.",
+   "Google/Yelp review counts and reply backlog -- last read live 2026-09-15T11:05Z.",
+   "Google Business Profile management request -- last live 2026-08-25.",
+   "Reservations -- last read 2026-09-14.",
+   "Payroll -- settled; next cycle due 2026-09-22.",
+   "Yelp inbox unread count (15) read off the sidebar, threads not opened."
+  ],
+  "lastRun": "2026-09-16T11:10:00Z",
+  "lastRunLabel": "Wednesday, September 16 4:00 AM PT",
+  "githubPushOk": true,
+  "gaps": [
+   "Sling Wed Sep 16 report not yet delivered at run time",
+   "The Brewhouse GBP review panel would not scroll past 2 items; older unreplied carried forward"
+  ]
+ },
+ "toast": {
+  "date": "Tuesday, September 15",
+  "net": 4135.75,
+  "netSales": 3218.8,
+  "gross": 4239.75,
+  "grossSales": 3438.25,
+  "guests": 132,
+  "guestsDerived": false,
+  "orders": 107,
+  "ordersDerived": false,
+  "checks": null,
+  "avgPerOrder": 35.65,
+  "avgOrder": 35.65,
+  "avgPerGuest": 26.18,
+  "avgPerCheck": null,
+  "avgCheck": null,
+  "laborPct": 25.0,
+  "laborPctOfNet": 51.8,
+  "laborCost": 1033.94,
+  "laborCostDerived": true,
+  "discounts": 105.99,
+  "discountsDerived": true,
+  "discountPct": 6.4,
+  "deferredSales": 0.0,
+  "refunds": 0.0,
+  "voidAmount": null,
+  "voidAmountDerived": false,
+  "voidItems": 5,
+  "voidOrders": null,
+  "cardPayments": 74,
+  "openOrders": 0,
+  "autoClockedOut": [
+   "Julianna Ornelas"
+  ],
+  "takeoutOrders": 15,
+  "takeoutSales": 189.55,
+  "deliveryOrders": 0,
+  "deliverySales": 0.0,
+  "dineInOrders": 2,
+  "dineInSales": 12.75,
+  "source": "Toast Group nightly email received 2026-09-16T13:22Z",
+  "partial": true,
+  "detailPending": true,
+  "sdlw": {
+   "date": "Monday, September 7",
+   "net": 2950.25,
+   "gross": 3038.85,
+   "guests": 118,
+   "orders": 92,
+   "laborPct": 25.4,
+   "laborCost": 749.36,
+   "discounts": 88.13,
+   "voidItems": 4,
+   "netChangePct": 40.2,
+   "grossChangePct": 39.5,
+   "guestsChangePct": 33.9,
+   "ordersChangePct": 26.1,
+   "avgPerGuestChangePct": 4.7,
+   "avgOrderChangePct": 11.2,
+   "source": "group all-locations Daily Performance Summary email 2026-09-08T13:27Z"
   },
-  "toastPartial": {
-    "resolved": false,
-    "note": "Mon Sep 14 is on the board from the group email only. Awaiting the single-location full-detail email for void $, dayparts, revenue centres, categories and 4-week comparison."
+  "fourWeekAvg": null,
+  "serviceType": [],
+  "revenueCenter": [],
+  "salesCategory": [],
+  "orderType": [],
+  "orderSource": [],
+  "netChangeVsPrevDayPct": -45.0,
+  "netChangeVsSDLWPct": 40.2,
+  "grossChangeVsSDLWPct": 39.5,
+  "guestsChangeVsSDLWPct": 33.9,
+  "ordersChangeVsSDLWPct": 26.1,
+  "netChangeVsPrev4Pct": null,
+  "note": "Tue Sep 15: Net $3,218.80 / Gross $3,438.25, 132 guests, 107 orders, $24.38 per guest. LABOR 51.8% OF NET -- up 18.3 points from 33.5% same day last week and far above a workable line. Net -14.4% and guests -21.0% vs Tue Sep 8. Discounts 6.4% (up from 3.9%), 5 voids (up from 3). Julianna Ornelas auto-clocked out again -- second time this week per Toast closeout.",
+  "dateISO": "2026-09-15",
+  "giftCards": 0.0,
+  "refundTotal": 0.0,
+  "avgSalesPerOrder": 30.08,
+  "avgSalesPerGuest": 24.38,
+  "pending": false,
+  "stale": false,
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "comparison": {
+   "basis": "Same day last week (Tuesday, September 8, 2026)",
+   "prevGross": 3914.15,
+   "prevNet": 3761.05,
+   "prevGuests": 167,
+   "prevOrders": 120,
+   "prevLaborPct": 33.5,
+   "prevVoids": 3,
+   "netChangeAbs": -542.25,
+   "netChangePct": -14.4,
+   "grossChangeAbs": -475.9,
+   "grossChangePct": -12.2,
+   "guestsChangeAbs": -35,
+   "guestsChangePct": -21.0,
+   "ordersChangeAbs": -13,
+   "ordersChangePct": -10.8,
+   "laborChangePts": 18.3
+  },
+  "laborFlag": true,
+  "laborSeverity": "urgent"
+ },
+ "toastLastKnown": {
+  "date": "Tuesday, September 15",
+  "net": 4135.75,
+  "netSales": 3218.8,
+  "gross": 4239.75,
+  "grossSales": 3438.25,
+  "guests": 132,
+  "guestsDerived": false,
+  "orders": 107,
+  "ordersDerived": false,
+  "checks": null,
+  "avgPerOrder": 35.65,
+  "avgOrder": 35.65,
+  "avgPerGuest": 26.18,
+  "avgPerCheck": null,
+  "avgCheck": null,
+  "laborPct": 25.0,
+  "laborPctOfNet": 51.8,
+  "laborCost": 1033.94,
+  "laborCostDerived": true,
+  "discounts": 105.99,
+  "discountsDerived": true,
+  "discountPct": 6.4,
+  "deferredSales": 0.0,
+  "refunds": 0.0,
+  "voidAmount": null,
+  "voidAmountDerived": false,
+  "voidItems": 5,
+  "voidOrders": null,
+  "cardPayments": 74,
+  "openOrders": 0,
+  "autoClockedOut": [
+   "Julianna Ornelas"
+  ],
+  "takeoutOrders": 15,
+  "takeoutSales": 189.55,
+  "deliveryOrders": 0,
+  "deliverySales": 0.0,
+  "dineInOrders": 2,
+  "dineInSales": 12.75,
+  "source": "Toast Group nightly email received 2026-09-16T13:22Z",
+  "partial": true,
+  "detailPending": true,
+  "sdlw": {
+   "date": "Monday, September 7",
+   "net": 2950.25,
+   "gross": 3038.85,
+   "guests": 118,
+   "orders": 92,
+   "laborPct": 25.4,
+   "laborCost": 749.36,
+   "discounts": 88.13,
+   "voidItems": 4,
+   "netChangePct": 40.2,
+   "grossChangePct": 39.5,
+   "guestsChangePct": 33.9,
+   "ordersChangePct": 26.1,
+   "avgPerGuestChangePct": 4.7,
+   "avgOrderChangePct": 11.2,
+   "source": "group all-locations Daily Performance Summary email 2026-09-08T13:27Z"
+  },
+  "fourWeekAvg": null,
+  "serviceType": [],
+  "revenueCenter": [],
+  "salesCategory": [],
+  "orderType": [],
+  "orderSource": [],
+  "netChangeVsPrevDayPct": -45.0,
+  "netChangeVsSDLWPct": 40.2,
+  "grossChangeVsSDLWPct": 39.5,
+  "guestsChangeVsSDLWPct": 33.9,
+  "ordersChangeVsSDLWPct": 26.1,
+  "netChangeVsPrev4Pct": null,
+  "note": "Tue Sep 15: Net $3,218.80 / Gross $3,438.25, 132 guests, 107 orders, $24.38 per guest. LABOR 51.8% OF NET -- up 18.3 points from 33.5% same day last week and far above a workable line. Net -14.4% and guests -21.0% vs Tue Sep 8. Discounts 6.4% (up from 3.9%), 5 voids (up from 3). Julianna Ornelas auto-clocked out again -- second time this week per Toast closeout.",
+  "dateISO": "2026-09-15",
+  "giftCards": 0.0,
+  "refundTotal": 0.0,
+  "avgSalesPerOrder": 30.08,
+  "avgSalesPerGuest": 24.38,
+  "pending": false,
+  "stale": false,
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "comparison": {
+   "basis": "Same day last week (Tuesday, September 8, 2026)",
+   "prevGross": 3914.15,
+   "prevNet": 3761.05,
+   "prevGuests": 167,
+   "prevOrders": 120,
+   "prevLaborPct": 33.5,
+   "prevVoids": 3,
+   "netChangeAbs": -542.25,
+   "netChangePct": -14.4,
+   "grossChangeAbs": -475.9,
+   "grossChangePct": -12.2,
+   "guestsChangeAbs": -35,
+   "guestsChangePct": -21.0,
+   "ordersChangeAbs": -13,
+   "ordersChangePct": -10.8,
+   "laborChangePts": 18.3
+  },
+  "laborFlag": true,
+  "laborSeverity": "urgent"
+ },
+ "sling": {
+  "date": "Wednesday, September 16",
+  "count": 8,
+  "shifts": 8,
+  "hours": 37.53,
+  "uncovered": 0,
+  "overtime": 0,
+  "employeesOff": 0,
+  "pending": true,
+  "nextDayPending": false,
+  "stale": true,
+  "kitchenCoverageFlag": false,
+  "kitchenCoverageSeverity": "watch",
+  "cooksScheduled": 1,
+  "overtimeFlag": false,
+  "staff": [
+   {
+    "name": "Isael Salvador Narciso",
+    "role": "Cook"
+   },
+   {
+    "name": "Julianna Ornelas",
+    "role": "Barista"
+   },
+   {
+    "name": "Tony Rincon",
+    "role": "Bartender"
+   },
+   {
+    "name": "Andrew Turner",
+    "role": "Bartender"
+   },
+   {
+    "name": "Christine Vargas",
+    "role": "Server"
+   },
+   {
+    "name": "Augustine Arroyo",
+    "role": "Server"
+   },
+   {
+    "name": "Bri Kelley",
+    "role": "Server"
+   },
+   {
+    "name": "Cal Carter",
+    "role": "Busser"
+   }
+  ],
+  "note": "Today's Sling daily report (Wed Sep 16) had NOT arrived at 4 AM PT run time -- it lands ~7:00 AM PT. Figures below are the last delivered report, Tue Sep 15: 8 employees / 8 shifts / 37.53 hrs, 1 cook (Isael Salvador Narciso), 2 bartenders, 3 servers, 1 barista, 1 busser. 0 uncovered, 0 OT, 0 off. Single-cook cover continues -- no backup if Isael calls out.",
+  "lastUpdated": "2026-09-16T11:10:00Z"
+ },
+ "slingLastKnown": {
+  "date": "Monday, September 14",
+  "count": 7,
+  "shifts": 7,
+  "hours": 29.75,
+  "uncovered": 0,
+  "overtime": 0,
+  "employeesOff": 0,
+  "pending": false,
+  "nextDayPending": false,
+  "stale": false,
+  "kitchenCoverageFlag": false,
+  "kitchenCoverageSeverity": "watch",
+  "cooksScheduled": 1,
+  "overtimeFlag": false,
+  "staff": [
+   {
+    "name": "Rafael Patricio",
+    "role": "Cook"
+   },
+   {
+    "name": "Sarah Palmer",
+    "role": "Barista"
+   },
+   {
+    "name": "Christine Vargas",
+    "role": "Bartender"
+   },
+   {
+    "name": "Harmony Willson",
+    "role": "Bartender"
+   },
+   {
+    "name": "Gabriel Lopez galindo",
+    "role": "Barback"
+   },
+   {
+    "name": "Julianna Ornelas",
+    "role": "Server"
+   },
+   {
+    "name": "Emily Lanzel",
+    "role": "Server"
+   }
+  ],
+  "note": "LIVE Mon Sep 14 (received 2026-09-14T14:00Z): 7 employees / 7 shifts / 29.75 hrs, 1 cook (Rafael Patricio), 2 bartenders, 2 servers, 1 barista, 1 barback. 0 uncovered, 0 OT, 0 off. Light Monday -- down from 11/53 hrs Sun."
+ },
+ "slingToday": {
+  "date": "Wednesday, September 16",
+  "count": 8,
+  "shifts": 8,
+  "hours": 37.53,
+  "uncovered": 0,
+  "overtime": 0,
+  "employeesOff": 0,
+  "pending": true,
+  "nextDayPending": false,
+  "stale": true,
+  "kitchenCoverageFlag": false,
+  "kitchenCoverageSeverity": "watch",
+  "cooksScheduled": 1,
+  "overtimeFlag": false,
+  "staff": [
+   {
+    "name": "Isael Salvador Narciso",
+    "role": "Cook"
+   },
+   {
+    "name": "Julianna Ornelas",
+    "role": "Barista"
+   },
+   {
+    "name": "Tony Rincon",
+    "role": "Bartender"
+   },
+   {
+    "name": "Andrew Turner",
+    "role": "Bartender"
+   },
+   {
+    "name": "Christine Vargas",
+    "role": "Server"
+   },
+   {
+    "name": "Augustine Arroyo",
+    "role": "Server"
+   },
+   {
+    "name": "Bri Kelley",
+    "role": "Server"
+   },
+   {
+    "name": "Cal Carter",
+    "role": "Busser"
+   }
+  ],
+  "note": "Today's Sling daily report (Wed Sep 16) had NOT arrived at 4 AM PT run time -- it lands ~7:00 AM PT. Figures below are the last delivered report, Tue Sep 15: 8 employees / 8 shifts / 37.53 hrs, 1 cook (Isael Salvador Narciso), 2 bartenders, 3 servers, 1 barista, 1 busser. 0 uncovered, 0 OT, 0 off. Single-cook cover continues -- no backup if Isael calls out.",
+  "lastUpdated": "2026-09-16T11:10:00Z"
+ },
+ "googleAds": {
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "accountDailyBudget": 40.0,
+  "yesterday": {
+   "date": "September 14, 2026",
+   "spend": 41.68,
+   "impressions": 820,
+   "clicks": 29,
+   "conversions": 0.0,
+   "cpc": 1.44,
+   "ctr": 3.54,
+   "costChangeAbs": -19.53,
+   "costChangePct": -31.9,
+   "impressionsChangeAbs": 368,
+   "clicksChangeAbs": 11,
+   "conversionsChangeAbs": -1.0,
+   "avgCpcChangeAbs": -1.96,
+   "clicksDerived": false,
+   "conversionsCalculating": false,
+   "comparisonBasis": "Deltas vs the Sep 13 live read stored in data.json (Sep 13: $61.21 / 452 impr / 18 clicks / 1 conv / $3.40 CPC). Google's own tooltip confirms Avg CPC -$1.96 (-57.74%) vs prior period.",
+   "overBudgetFlag": true,
+   "note": "LIVE read 2026-09-15T14:05Z, date range Yesterday (Sep 14, 2026). $41.68 against the $40.00/day account budget -- only 4.2% over and a sharp improvement on Sep 13's $61.21 (-31.9%). Sixth straight day above cap, but the streak is now $60.83, $76.07, $76.47, $58.65, $61.21, $41.68. Impressions rebounded to 820 (+368), clicks 29 (+11), CTR 3.54%, CPC down to $1.44 from $3.40. ZERO conversions though, after Sep 13's single conversion. Brewhouse Lunch: $22.52 on $25/day -- UNDER budget for the first time in days, 594 impr, 19 clicks, 3.20% CTR, 0 conv. Brewhouse Dinner: $19.15 on $15/day, 226 impr, 10 clicks, 4.42% CTR, 0 conv. Both live campaigns still 'All ads limited by policy'. 4 paused, 2 drafts in progress."
+  },
+  "campaigns": [
+   {
+    "name": "Brewhouse Lunch | Search | Aug 2026",
+    "budget": 25.0,
+    "status": "Eligible (Limited)",
+    "limitation": "All ads limited by policy",
+    "impressions": 594,
+    "clicks": 19,
+    "ctr": 3.2,
+    "cost": 22.52,
+    "conversions": 0.0
+   },
+   {
+    "name": "Brewhouse Dinner | Search | Sep 2026",
+    "budget": 15.0,
+    "status": "Eligible (Limited)",
+    "limitation": "All ads limited by policy",
+    "impressions": 226,
+    "clicks": 10,
+    "ctr": 4.42,
+    "cost": 19.15,
+    "conversions": 0.0
+   },
+   {
+    "name": "Oldest SB Brewery on Tap",
+    "budget": 10.8,
+    "status": "Paused",
+    "limitation": "All asset groups limited by policy",
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": null,
+    "cost": 0.0,
+    "conversions": 0.0
+   },
+   {
+    "name": "Local store visits and promotions-Performance Max-2",
+    "budget": 58.37,
+    "status": "Paused",
+    "limitation": "All asset groups limited by policy",
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": null,
+    "cost": 0.0,
+    "conversions": 0.0
+   },
+   {
+    "name": "BHC Coffee | Search | P1 Launch",
+    "budget": 15.0,
+    "status": "Paused",
+    "limitation": "Missing enough relevant keywords",
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": null,
+    "cost": 0.0,
+    "conversions": 0.0
+   },
+   {
+    "name": "World Cup HQ 2026",
+    "budget": 20.0,
+    "status": "Paused",
+    "limitation": null,
+    "impressions": 0,
+    "clicks": 0,
+    "ctr": null,
+    "cost": 0.0,
+    "conversions": 0.0
+   }
+  ],
+  "campaignsLive": 2,
+  "campaignsPaused": 4,
+  "draftsInProgress": 2,
+  "policyLimitationFlag": true,
+  "campaignNote": "Sep 13: Lunch finally converted (1) but at $49.99 -- 2x its $25 budget. Dinner efficient again (4.60% CTR, $1.40 CPC) but 0 conv. Impressions fell sharply account-wide (452 vs 1,009).",
+  "accountNote": "In-product notice (unchanged): from Aug 17, 2026 campaigns with bid targets may stay budget-limited even after budget adjustments; Google asks that targets be reviewed. Both live campaigns are Eligible (Limited) / All ads limited by policy.",
+  "last7d": {
+   "range": "Sep 6 - Sep 12, 2026",
+   "spend": 370.56,
+   "spendChangeAbs": 230.54,
+   "impressions": 7113,
+   "impressionsChangeAbs": 4109,
+   "conversions": 5.0,
+   "conversionsCalculating": true,
+   "note": "Not re-read this run (page opened on Yesterday range); Sep 6-12 values carried from prior run."
+  },
+  "emailReports24h": 4,
+  "emailNote": "4 Google Ads emails in last 24h: 2 'report is ready' (Campaign performance 12:31Z, Brewhouse Daily Campaign Report 15:48Z), 1 quarterly terms-and-policies reminder, 1 Google Tag marketing promo. No disapprovals, no budget alerts. Live campaign numbers NOT re-read this run (4 AM run is email-scan only) -- Sep 13 overspend flag carried forward.",
+  "emails24h": 6,
+  "disapprovals24h": 0,
+  "emailsNote": "6 Google Ads emails in the last 24h, no disapprovals: 2 scheduled report-ready notices, 'You received 12 conversions from your ads last week', a quarterly terms reminder, and 2 promos.",
+  "reportEmails24h": 2,
+  "disapprovals": 0,
+  "note24h": "2 Google Ads report emails in the last 24h (Campaign performance 09/16, Brewhouse Daily Campaign Report 09/15). No disapprovals and no budget-alert emails. Standing issue unchanged: both live campaigns still flagged 'All ads limited by policy', and spend has run over the $40/day account cap six days running. Also in the pile: a quarterly Ads terms reminder and a Google Tag webinar promo -- neither needs action."
+ },
+ "yelpAds": {
+  "lastUpdated": "2026-09-15T14:10:00Z -- LIVE, biz.yelp.com Ad performance + Ad settings panels both fully rendered",
+  "last30d": {
+   "adImpressions": 27200,
+   "adImpressionsDisplay": "27.2k",
+   "totalImpressions": 37000,
+   "totalImpressionsDisplay": "37k",
+   "impressionSharePct": 73,
+   "pageVisitsFromAds": 353,
+   "totalPageVisits": 691,
+   "pageVisitSharePct": 51,
+   "leadsFromAds": 104,
+   "totalLeads": 159,
+   "leadSharePct": 65,
+   "adClicks": 285,
+   "avgCpc": 1.31,
+   "costPerLead": 3.83
+  },
+  "last12mo": {
+   "adLeads": 1345,
+   "organicLeads": 681,
+   "total": 2026,
+   "adSharePct": 66,
+   "organicSharePct": 34,
+   "forecast": 85,
+   "leadsBreakdown": "Ads 1,345 (66%) / Organic 681 (34%) / Total 2,026; forecast 85.",
+   "leadsBreakdownCarriedForward": false
+  },
+  "leadsByType12mo": [
+   {
+    "name": "Website Visits",
+    "count": 970,
+    "pct": 48
+   },
+   {
+    "name": "Directions & Map Views",
+    "count": 900,
+    "pct": 44
+   },
+   {
+    "name": "Calls",
+    "count": 129,
+    "pct": 6
+   },
+   {
+    "name": "CTA Clicks",
+    "count": 26,
+    "pct": 1
+   }
+  ],
+  "billingPeriod": {
+   "range": "Sep 1 - Sep 14, 2026",
+   "spend": 195.12,
+   "perDayAvg": 13.94,
+   "note": "LIVE. $195.12 across the first 14 days of September = $13.94/day against a $13/day average budget, ~7% ahead of pace (was $14.44/day). Sep 14 cost ~$7.45 -- the cheapest day of the month so far, which pulled the pace back toward budget."
+  },
+  "budgetSetting": "$13/day average",
+  "audienceSize": "Limited",
+  "audienceSizeFlag": true,
+  "audienceSizePrevious": "Ideal",
+  "audienceSizeNote": "REGRESSED -- the Ad settings gauge reads 'Limited' again after one run at 'Ideal'. Yelp's copy: 'Control features can limit how often your ad shows and lead to a higher cost-per-click.' The likely lever is the 5-mile radius plus the 12 manual keywords. Ad preview: Live.",
+  "keywords": [
+   "Bars",
+   "Brew Pubs",
+   "Corned Beef",
+   "Dinner",
+   "Fish",
+   "Gastropubs",
+   "Lunch",
+   "Microbrewery",
+   "Outdoor Dining",
+   "Pub",
+   "Restaurant",
+   "Restaurant Near Me"
+  ],
+  "locationRadius": "5 miles around your business",
+  "callToAction": "Discover SB Spot",
+  "adPhoto": "Smart selection on",
+  "adText": "Smart selection OFF -- Yelp prompts to turn it on to let Yelp optimize your text",
+  "adGoal": "Yelp is optimizing your goal",
+  "slideshow": "Your slideshow is set up",
+  "businessHighlights": 6,
+  "setupIncomplete": true,
+  "setupRemainingItems": 1,
+  "bonusBudgetRemaining": null,
+  "bonusBudgetNote": "No bonus budget line visible on the dashboard or the Ad settings panel this run.",
+  "yelpListingRating": 775,
+  "yelpListingNote": "Yelp ad preview shows The Brewhouse at 775 reviews, American/Seafood/Brewpubs, 229 W Montecito St, $$, 'Locally owned & operated', 'Established in 1998'. Preview status: Live.",
+  "carriedForward": false,
+  "liveVerifiedThisRun": true,
+  "lastVerifiedLive": "2026-09-14T14:25:00Z",
+  "staleHours": 0,
+  "note": "FLAT. Vs Sep 12 read: ad impressions 28.2k (was 28.8k), page visits from ads 369 (was 363), leads from ads 104 (was 105), ad clicks 301 (was 303), CPC $1.31 (was $1.32), cost/lead $3.75 (was $3.81). Billing-period spend $187.67 through Sep 13. Audience size flipped Limited -> Ideal. Reviews badge: 3 needing attention."
+ },
+ "tripAdvisor": {
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "actionable": false,
+  "adReports24h": 0,
+  "items": [],
+  "note": "No email from analytics@hm2.tripadvisor.com in the last 72h. Only consumer marketing: 'Get more reviews' (reviews@hm2) Sep 15 and travel newsletters Sep 13/15. Nothing to action."
+ },
+ "reservations": {
+  "lastUpdated": "2026-09-16",
+  "source": "All Sources",
+  "today": {
+   "date": "Wed, Sep 16",
+   "totalGuests": 2,
+   "bookings": [
+    {
+     "time": "11:15 AM",
+     "name": "Patty Foote",
+     "guests": 2,
+     "status": "confirmed",
+     "source": "SpotHopper",
+     "phone": "(661) 618-3471",
+     "notes": ""
+    }
+   ]
+  },
+  "tomorrow": {
+   "date": "Thu, Sep 17",
+   "totalGuests": 0,
+   "bookings": []
+  },
+  "upcoming": [
+   {
+    "time": "12:30 PM",
+    "name": "Renee Bennett",
+    "guests": 6,
+    "status": "confirmed",
+    "source": "SpotHopper",
+    "phone": "(580) 695-9659",
+    "notes": "Watching OU/Texas football game",
+    "date": "Sat, Oct 10"
+   },
+   {
+    "time": "7:00 PM",
+    "name": "Terry Rhoderick",
+    "guests": 3,
+    "status": "confirmed",
+    "source": "SpotHopper",
+    "phone": "(301) 655-6320",
+    "notes": "",
+    "date": "Sat, Oct 17"
+   }
+  ]
+ },
+ "reviews": {
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "note": "LIVE read 2026-09-16 ~4 AM PT, BOTH listings confirmed in the GBP Unreplied tab. The Brewhouse 4.5 / 532 reviews, 11 unreplied (Andy Watts is new since yesterday; GBP badge '7 new reviews'). Brewhouse Coffee 5.0 / 7 reviews, 2 unreplied -- Geoff Lay cleared. Donald Clay 1-star foodborne-illness allegation is now ~6 weeks public and still unanswered -- highest-priority item on the board.",
+  "discrepancyFlag": false,
+  "discrepancyDetail": "Both listings opened live. The Brewhouse Unreplied tab confirmed Andy Watts (5*) and Greg Quinn (5*) at the top, newest-first; the panel would not scroll past the fold in the automated session, so the 9 older unreplied items are carried forward from the Sep 15 live read and should be eyeballed once in the panel. Brewhouse Coffee Unreplied tab was fully visible: 2 items, no scroll needed.",
+  "brewhouse": {
+   "profile": "The Brewhouse",
+   "stars": 4.5,
+   "reviewCount": 532,
+   "unansweredCount": 11,
+   "unanswered": [
+    {
+     "name": "Andy Watts",
+     "rating": 5,
+     "age": "14 hours ago (Tue Sep 15 eve)",
+     "text": "We had fish and chips, oh my days, stunnning. And great service too. Best fish and chips Ive experienced.",
+     "context": "Dinner, $10-20, Local Guide 159 reviews / 188 photos",
+     "severity": "positive",
+     "isNew": true,
+     "draftReply": "Andy, best fish and chips you've had is a hell of a thing to hear -- our cooks will be insufferable now. Thanks for calling out the service too. Come back hungry. -- Joal, The Brewhouse"
+    },
+    {
+     "name": "Greg Quinn",
+     "rating": 5,
+     "age": "2 days ago (Sun Sep 13)",
+     "text": "The Brewhouse has amazing, fresh food menu selections at very reasonable prices and the adult beverages hit the spot. I am a pilsner/lager guy and the one I had was so good I ordered one more. I thought the nachos were on point and the Schnitzel comes with 3 sauce options that are gourmet. Fresh seafood will be my go to next time. The staff is awesome and I even got to meet one of the owners who informed me The Brewhouse is the longest-running bar in SB, and soon they'll be able to craft their own spirits!",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "Lunch, $10-20, Local Guide 10 reviews",
+     "severity": "positive",
+     "isNew": true,
+     "draftReply": "Greg, a pilsner guy going back for a second round is the highest praise a brewery can get. Glad the nachos and the schnitzel sauces hit the mark too, and thanks for the kind words about the crew. Come back for the seafood and we'll pour you a cold one. -- Joal, The Brewhouse",
+     "liveConfirmed": "2026-09-15T11:05:00Z"
+    },
+    {
+     "name": "M",
+     "rating": 3,
+     "age": "3 days ago (Sat Sep 12)",
+     "text": "(rating only, no text)",
+     "context": "Local Guide, 363 reviews, 259 photos",
+     "severity": "neutral",
+     "isNew": false,
+     "draftReply": "Hi M, thanks for stopping by and for the rating. Three stars tells us something was just okay, and we'd like to know what so we can fix it. If you're up for it, email us at mojobrewhouse@gmail.com. Hope to see you again. -- Joal, The Brewhouse",
+     "liveConfirmed": "2026-09-15T11:05:00Z"
+    },
+    {
+     "name": "Luke Mayer (Cheez boi)",
+     "rating": 5,
+     "age": "7 days ago",
+     "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft an chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg, bacon, avocado, sour cream, breakfast potato, cheese, and salsa on the side.",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "Brunch, $10-20",
+     "severity": "positive",
+     "draftReply": "Luke, that may be the most thorough bagel review we have ever received and we are keeping it. Glad the burrito ratio landed right too. Come back hungry.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "Isabel Osmundsen",
+     "rating": 5,
+     "age": "1 week ago",
+     "text": "(rating only, no text)",
+     "context": "Local Guide, 14 reviews",
+     "severity": "positive",
+     "draftReply": "Isabel, thank you for the five stars. Next time you are in, tell us what you had so we can make sure it keeps being that good. See you soon.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "Justin Ladner",
+     "rating": 5,
+     "age": "3 weeks ago",
+     "text": "(rating only, no text)",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "Local Guide, 44 reviews, 51 photos",
+     "severity": "positive",
+     "draftReply": "Justin, five out of five on food, service and atmosphere is about as good as it gets. Thanks for taking the time to rate us. Hope to see you back on Montecito soon.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "R. Muller",
+     "rating": 5,
+     "age": "3 weeks ago",
+     "text": "Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "Breakfast, 3-4 people, Local Guide 57 reviews",
+     "severity": "positive",
+     "draftReply": "Thank you for the coffee shout out, and glad the kids hit the muffins fresh out of the oven. That is the best window of the day around here. Come see us again.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "sergio salazar",
+     "rating": 5,
+     "age": "4 weeks ago",
+     "text": "great food staff was on point very friendly, I highly recommend it and definitely driving 3 hours to go back.",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "$10-20, Local Guide 17 reviews",
+     "severity": "positive",
+     "draftReply": "Sergio, driving three hours to come back is the biggest compliment we get. Glad the staff took good care of you. We will be ready when you make the trip.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "Betty Chambers",
+     "rating": 5,
+     "age": "5 weeks ago",
+     "text": "We were looking for a dog friendly restaurant on our way home to san diego. The food was great and our dog loved what you had. The waitress was great.",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "severity": "positive",
+     "draftReply": "Betty, we are glad your dog approved. Thanks for stopping with us on the way to San Diego, and for the kind words about your server. Come back through anytime.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "Donald Clay",
+     "rating": 1,
+     "age": "5 weeks ago",
+     "text": "Beer was not good at all. Got botulism from taco. Recovering now. Avoid this place.",
+     "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
+     "context": "Lunch, $20-30, 2 people, outdoor patio",
+     "severity": "critical",
+     "escalate": "~6 WEEKS PUBLIC AND UNANSWERED. Public foodborne-illness allegation. Do NOT admit or deny in the public reply. Take it offline, notify insurer/counsel, and check whether SB County Public Health has any record before posting anything.",
+     "draftReply": "Donald, we take any report of illness seriously and we want to look into this properly. Please reach us directly at (805) 884-4664 or mojobrewhouse@gmail.com so we can get the details of your visit. -- Joal, owner",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    },
+    {
+     "name": "John Rinaldo",
+     "rating": 1,
+     "age": "7 weeks ago",
+     "text": "(rating only, no text)",
+     "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
+     "severity": "negative",
+     "draftReply": "John, a one star with no details leaves us guessing and we would rather know. If something went wrong, email us at mojobrewhouse@gmail.com and we will make it right.",
+     "liveConfirmed": "2026-09-14T11:10:00Z",
+     "isNew": false
+    }
+   ],
+   "url": "https://business.google.com/n/14883478205426286749/reviews",
+   "liveVerifiedThisRun": true,
+   "ratingVerifiedThisRun": true,
+   "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
+   "newBadge": "7 new reviews",
+   "liveVerified": true,
+   "lastVerifiedLive": "2026-09-15T11:05:00Z",
+   "newFlaggedByGoogle": 6
+  },
+  "coffee": {
+   "profile": "Brewhouse Coffee",
+   "stars": 5.0,
+   "reviewCount": 7,
+   "unansweredCount": 2,
+   "unanswered": [
+    {
+     "name": "Levi Powe",
+     "rating": 5,
+     "age": "2 days ago (Sat Sep 12)",
+     "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "context": "1 review",
+     "severity": "positive",
+     "isNew": false,
+     "draftReply": "Levi, thank you! Top-quality coffee and friendly service is the whole plan, so it's great to hear both landed. Come see us again soon. -- Brewhouse Coffee",
+     "liveConfirmed": "2026-09-15T11:05:00Z"
+    },
+    {
+     "name": "Debra Wedlake",
+     "rating": 5,
+     "age": "3 weeks ago",
+     "text": "Delicious coffee and pastries!",
+     "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+     "severity": "positive",
+     "draftReply": "Debra, coffee and pastries is exactly the morning we are going for. Thank you for the five stars. See you at the bar.",
+     "liveConfirmed": "2026-09-15T11:05:00Z",
+     "isNew": false
+    }
+   ],
+   "url": "https://business.google.com/n/8047304414448442897/reviews",
+   "liveVerifiedThisRun": true,
+   "ratingVerifiedThisRun": true,
+   "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews",
+   "newBadge": "3 new reviews",
+   "liveVerified": true,
+   "lastVerifiedLive": "2026-09-15T11:05:00Z",
+   "newFlaggedByGoogle": 2,
+   "note": "Live Unreplied tab read Wed Sep 16 ~4 AM PT: exactly 2 items -- Levi Powe (5*, 4 days) and Debra Wedlake (5*, 3 weeks). Geoff Lay no longer appears; treated as replied. GBP badge shows '2 new reviews'."
+  },
+  "carriedForward": false,
+  "liveVerifiedThisRun": true,
+  "lastVerifiedLive": "2026-09-16T04:05:00-07:00",
+  "carriedForwardThisRun": false
+ },
+ "yelpInquiries": {
+  "lastUpdated": "2026-09-16T11:10:00Z",
+  "count": 0,
+  "items": [],
+  "note": "4 Yelp emails in the last 72h, all marketing (patio roundup, buffet listicle, trending-business alert, restaurant webinar). No customer inquiries, no new Yelp reviews.",
+  "carriedForward": true,
+  "liveVerifiedThisRun": false,
+  "lastVerifiedLive": "2026-09-12T14:15:00Z",
+  "inboxUnread": 15,
+  "inboxUnreadDays": 14,
+  "yelpReviewsNeedingAttention": 3,
+  "actionable": false
+ },
+ "businessProfile": {
+  "lastUpdated": "2026-08-26",
+  "managementRequestsPending": 1,
+  "severity": "verify",
+  "pendingDays": 53,
+  "note": "CARRIED FORWARD, not re-verified this run. GBP management request pending 53 days (last verified live 2026-08-25).",
+  "carriedForward": true,
+  "liveVerifiedThisRun": false,
+  "lastVerifiedLive": "2026-08-25T07:10:00-07:00",
+  "carriedForwardThisRun": true
+ },
+ "lastUpdated": "2026-09-16T11:10:00Z",
+ "toastPrevDay": {
+  "date": "Monday, September 14",
+  "net": 4135.75,
+  "netSales": 4135.75,
+  "gross": 4239.75,
+  "grossSales": 4239.75,
+  "guests": 158,
+  "guestsDerived": false,
+  "orders": 116,
+  "ordersDerived": false,
+  "checks": null,
+  "avgPerOrder": 35.65,
+  "avgOrder": 35.65,
+  "avgPerGuest": 26.18,
+  "avgPerCheck": null,
+  "avgCheck": null,
+  "laborPct": 25.0,
+  "laborPctOfNet": 25.0,
+  "laborCost": 1033.94,
+  "laborCostDerived": true,
+  "discounts": 105.99,
+  "discountsDerived": true,
+  "discountPct": 2.5,
+  "deferredSales": 0.0,
+  "refunds": 0.0,
+  "voidAmount": null,
+  "voidAmountDerived": false,
+  "voidItems": 11,
+  "voidOrders": null,
+  "cardPayments": 87,
+  "openOrders": 0,
+  "autoClockedOut": [],
+  "takeoutOrders": 0,
+  "takeoutSales": 0.0,
+  "deliveryOrders": 0,
+  "deliverySales": 0.0,
+  "dineInOrders": 0,
+  "dineInSales": 0.0,
+  "source": "group all-locations Daily Performance Summary email 2026-09-15T13:25Z. Single-location full-detail email (dayparts, revenue centres, sales categories, void $, 4-week avg) had NOT arrived at this run -- it normally lands ~14:40Z.",
+  "partial": true,
+  "detailPending": true,
+  "sdlw": {
+   "date": "Monday, September 7",
+   "net": 2950.25,
+   "gross": 3038.85,
+   "guests": 118,
+   "orders": 92,
+   "laborPct": 25.4,
+   "laborCost": 749.36,
+   "discounts": 88.13,
+   "voidItems": 4,
+   "netChangePct": 40.2,
+   "grossChangePct": 39.5,
+   "guestsChangePct": 33.9,
+   "ordersChangePct": 26.1,
+   "avgPerGuestChangePct": 4.7,
+   "avgOrderChangePct": 11.2,
+   "source": "group all-locations Daily Performance Summary email 2026-09-08T13:27Z"
+  },
+  "fourWeekAvg": null,
+  "serviceType": [],
+  "revenueCenter": [],
+  "salesCategory": [],
+  "orderType": [],
+  "orderSource": [],
+  "netChangeVsPrevDayPct": -45.0,
+  "netChangeVsSDLWPct": 40.2,
+  "grossChangeVsSDLWPct": 39.5,
+  "guestsChangeVsSDLWPct": 33.9,
+  "ordersChangeVsSDLWPct": 26.1,
+  "netChangeVsPrev4Pct": null,
+  "note": "Mon Sep 14 PARTIAL (group email 13:25Z). Net $4,135.75 / gross $4,239.75, 158 guests, 116 orders, $35.65 avg/order, $26.18 avg/guest, labor 25.0% of net (~$1,033.94 derived), discounts 2.5% of gross (~$105.99 derived), 11 void items, 87 card payments, 0 open orders, no auto-clock-outs. Net +40.2% vs Mon Sep 7 SDLW ($2,950.25) and -45.0% vs Sun Sep 13. Order-type row reads all zeros in the group email as usual. Void $, dayparts, revenue centres, sales categories and the 4-week average are all still pending the single-location email."
+ },
+ "toastPending": {
+  "pending": true,
+  "pendingFor": "Monday, September 14 -- single-location full-detail Daily Performance Summary (normally ~14:40Z)",
+  "note": "Group all-locations email for Mon Sep 14 received 13:25Z and merged. The richer single-location email had not landed by 14:10Z; it carries void $, dayparts, revenue centres, sales categories and the 4-week average."
+ },
+ "payroll": {
+  "lastUpdated": "2026-09-09T16:20:00Z",
+  "dueToday": false,
+  "period": "Aug 23 - Sep 5, 2026",
+  "dueDate": "2026-09-08",
+  "payDate": "2026-09-11",
+  "estimatedTotal": 29853.57,
+  "actualWithdrawal": 17991.53,
+  "directDeposits": 8345.5,
+  "taxes": 9002.03,
+  "submitted": true,
+  "submittedAt": "2026-09-09T14:33:35Z",
+  "withdrawalDate": "2026-09-09",
+  "actionItems": 2,
+  "insights": 2,
+  "resolved": true,
+  "severity": "resolved",
+  "actionItemsDetail": [
+   {
+    "item": "Unapproved tip pools",
+    "detail": "14 days"
+   },
+   {
+    "item": "Auto-clockouts",
+    "detail": "3 employees"
+   }
+  ],
+  "insightsDetail": [
+   {
+    "item": "No timesheets",
+    "detail": "10 employees"
+   },
+   {
+    "item": "No direct deposit",
+    "detail": "26 employees"
+   }
+  ],
+  "reviewUrl": "https://payroll.toasttab.com/sbbrewhouse/payroll/cb3be908-af7c-11f0-a967-02b7bc716955/paycycle/review",
+  "note": "SETTLED. Aug 23 - Sep 5 payroll was submitted 2026-09-09T14:33Z and pay date (Sep 11) has passed. $17,991.53 withdrawn ($8,345.50 direct deposits + $9,002.03 taxes). Next cycle (Sep 6 - Sep 19) is due 2026-09-22. Not re-verified this run.",
+  "withdrawalCompleted": false,
+  "vendorOutreach": {
+   "from": "Shelby, Toast Payroll Success Partner (payrollsuccess@toasttab.com)",
+   "receivedAt": "2026-08-26T10:42:00-07:00",
+   "type": "account check-in / voicemail follow-up",
+   "actionable": false
+  },
+  "overdue": false,
+  "daysPastDue": 0,
+  "payrollSaasFee": 644.0,
+  "monthlySaasFee": 644.0,
+  "employeeCount": 46,
+  "withdrawalTime": "09:33 AM CST on Sep 9, 2026",
+  "postedLate": true,
+  "carriedForwardThisRun": true
+ },
+ "toastSaturdayAug22": {
+  "date": "Saturday, August 22",
+  "net": 16721.45,
+  "netSales": 16721.45,
+  "gross": 16946.75,
+  "grossSales": 16946.75,
+  "guests": 278,
+  "guestsDerived": false,
+  "orders": 181,
+  "ordersDerived": false,
+  "checks": 190,
+  "avgPerOrder": 92.38,
+  "avgOrder": 92.38,
+  "avgPerGuest": 60.15,
+  "avgPerCheck": 88.01,
+  "avgCheck": 88.01,
+  "laborPct": 13.3,
+  "laborPctOfNet": 13.3,
+  "laborCost": 2228.66,
+  "laborCostDerived": false,
+  "discounts": 225.3,
+  "discountsDerived": false,
+  "discountPct": 1.33,
+  "deferredSales": 0.0,
+  "refunds": 0.0,
+  "voidAmount": 259.5,
+  "voidAmountDerived": false,
+  "voidItems": 24,
+  "voidOrders": 16,
+  "openOrders": 0,
+  "autoClockedOut": [],
+  "takeoutOrders": 34,
+  "takeoutSales": 437.25,
+  "deliveryOrders": 0,
+  "deliverySales": 0.0,
+  "dineInOrders": 3,
+  "dineInSales": 50.75,
+  "source": "single-location Daily Performance Summary (229 W Montecito St), received 2026-08-23 07:39 PT - BACKFILLED on the Tue Aug 25 run",
+  "partial": false,
+  "sdlw": {
+   "date": "Saturday, August 15",
+   "net": 8393.24,
+   "netSales": 8393.24,
+   "gross": 8612.44,
+   "grossSales": 8612.44,
+   "guests": 305,
+   "orders": 204,
+   "checks": 217,
+   "avgCheck": 38.68,
+   "avgPerCheck": 38.68,
+   "avgOrder": 41.14,
+   "avgPerOrder": 41.14,
+   "avgPerGuest": 27.52,
+   "discounts": 219.2,
+   "voids": 76.0,
+   "laborCost": 1589.59,
+   "laborPct": 18.9,
+   "laborPctOfNet": 18.9,
+   "basis": "Same Day Last Week per Toast single-location email."
+  },
+  "fourWeekAvg": {
+   "net": 8987.98,
+   "gross": 9283.4,
+   "guests": 331,
+   "orders": 211,
+   "checks": 220,
+   "avgOrder": 42.6,
+   "avgCheck": 40.85,
+   "avgPerGuest": 27.15,
+   "discounts": 295.42,
+   "voids": 599.75,
+   "laborCost": 1507.5,
+   "laborPct": 16.8,
+   "basis": "Average of previous 4 Saturdays, per Toast single-location email."
+  },
+  "netChangeVsSDLWPct": 99.2,
+  "grossChangeVsSDLWPct": 96.8,
+  "guestsChangeVsSDLWPct": -8.9,
+  "ordersChangeVsSDLWPct": -11.3,
+  "netChangeVsPrev4Pct": 86.0,
+  "dayparts": [
+   {
+    "name": "Dinner",
+    "gross": 14207.85,
+    "discounts": 141.0,
+    "net": 14066.85,
+    "pctNet": 84.1,
+    "netPerOrder": 148.07
+   },
+   {
+    "name": "Lunch",
+    "gross": 2263.9,
+    "discounts": 35.8,
+    "net": 2228.1,
+    "pctNet": 13.3,
+    "netPerOrder": 43.69
+   },
+   {
+    "name": "Expresso Service",
+    "gross": 475.0,
+    "discounts": 48.5,
+    "net": 426.5,
+    "pctNet": 2.5,
+    "netPerOrder": 11.53
+   }
+  ],
+  "revenueCenters": [
+   {
+    "name": "Dining Room",
+    "net": 13588.7,
+    "pctNet": 81.2,
+    "netPerOrder": 123.53
+   },
+   {
+    "name": "Front Patio",
+    "net": 1710.85,
+    "pctNet": 10.2,
+    "netPerOrder": 77.77
+   },
+   {
+    "name": "Patio",
+    "net": 807.15,
+    "pctNet": 4.8,
+    "netPerOrder": 100.89
+   },
+   {
+    "name": "Espresso Bar",
+    "net": 441.75,
+    "pctNet": 2.6,
+    "netPerOrder": 10.77
+   },
+   {
+    "name": "Back Room",
+    "net": 173.0,
+    "pctNet": 1.0,
+    "netPerOrder": 86.5
+   }
+  ],
+  "salesCategories": [
+   {
+    "name": "Food",
+    "net": 7999.2,
+    "pctNet": 47.8,
+    "items": 365
+   },
+   {
+    "name": "Liquor",
+    "net": 4425.0,
+    "pctNet": 26.4,
+    "items": 289
+   },
+   {
+    "name": "Bottled Beer",
+    "net": 2011.0,
+    "pctNet": 12.0,
+    "items": 329
+   },
+   {
+    "name": "Draft Beer",
+    "net": 1402.5,
+    "pctNet": 8.3,
+    "items": 191
+   },
+   {
+    "name": "Espresso Service",
+    "net": 441.75,
+    "pctNet": 2.6,
+    "items": 87
+   },
+   {
+    "name": "NA Beverage",
+    "net": 246.0,
+    "pctNet": 1.4,
+    "items": 46
+   },
+   {
+    "name": "Wine",
+    "net": 179.0,
+    "pctNet": 1.0,
+    "items": 16
+   },
+   {
+    "name": "No sales category",
+    "net": 17.0,
+    "pctNet": 0.1,
+    "items": 1
+   }
+  ],
+  "note": "RECORD DAY. Net $16,721.45 is +99.2% vs Saturday Aug 15 and +86.0% vs the 4-Saturday average, on FEWER guests (278, -8.9%) and FEWER orders (181, -11.3%). Avg check $88.01 vs $38.68 SDLW (+127.5%). The lift is almost entirely Dining Room ($13,588.70 net, 81.2% of the day, $123.53 net/order) and it is beverage-led: Liquor $4,425 on 289 items and Bottled Beer $2,011 on 329 items, both far above a normal Saturday. This has the shape of a large private/buyout event in the Dining Room, not organic walk-in volume -- confirm before treating it as a trend. Labor landed at 13.3% of net (best ratio in the file) purely because the revenue denominator exploded; the roster was a normal 13 people / 82.25 hrs. Voids $259.50 across 16 orders (+241% vs SDLW) is the one cost flag."
+ },
+ "slingHistory": [
+  {
+   "date": "Saturday, August 22",
+   "count": 13,
+   "shifts": 13,
+   "hours": 82.25,
+   "overtime": 5.25
+  },
+  {
+   "date": "Sunday, August 23",
+   "count": 11,
+   "shifts": 13,
+   "hours": 55.5,
+   "overtime": 5.25
+  },
+  {
+   "date": "Monday, August 24",
+   "count": 6,
+   "shifts": 6,
+   "hours": 25.5,
+   "overtime": 0
+  },
+  {
+   "date": "Tuesday, August 25",
+   "count": 8,
+   "shifts": 8,
+   "hours": 37.66,
+   "overtime": 0
+  },
+  {
+   "date": "Wednesday, August 26",
+   "count": 8,
+   "shifts": 8,
+   "hours": 36.0,
+   "overtime": 0
+  },
+  {
+   "date": "Thursday, August 27",
+   "count": 10,
+   "shifts": 11,
+   "hours": 40.57,
+   "overtime": 0
+  },
+  {
+   "date": "Friday, August 28",
+   "count": 11,
+   "shifts": 13,
+   "hours": 56.0,
+   "overtime": 0
+  },
+  {
+   "date": "Saturday, August 29",
+   "count": 12,
+   "shifts": 12,
+   "hours": 59.83,
+   "overtime": 0
+  },
+  {
+   "date": "Sunday, August 30",
+   "count": 11,
+   "shifts": 12,
+   "hours": 52.41,
+   "overtime": 0
+  },
+  {
+   "date": "Monday, August 31",
+   "count": 8,
+   "shifts": 8,
+   "hours": 27.83,
+   "overtime": 0
+  },
+  {
+   "date": "Tuesday, September 1",
+   "count": 9,
+   "shifts": 9,
+   "hours": 37.16,
+   "overtime": 0
+  },
+  {
+   "date": "Wednesday, September 2",
+   "count": 8,
+   "shifts": 8,
+   "hours": 36.66,
+   "overtime": 0
+  },
+  {
+   "date": "Thursday, September 3",
+   "count": 10,
+   "shifts": 10,
+   "hours": 40.16,
+   "overtime": 0
+  },
+  {
+   "date": "Friday, September 4",
+   "count": 11,
+   "shifts": 12,
+   "hours": 55.99,
+   "overtime": 0
+  },
+  {
+   "date": "Saturday, September 5",
+   "count": 12,
+   "shifts": 12,
+   "hours": 60.48,
+   "overtime": 0
+  },
+  {
+   "date": "Sunday, September 6",
+   "count": 13,
+   "shifts": 13,
+   "hours": 70.41,
+   "overtime": 0
+  },
+  {
+   "date": "Monday, September 7",
+   "count": 6,
+   "shifts": 6,
+   "hours": 24.5,
+   "uncovered": 0,
+   "overtime": 0
+  },
+  {
+   "date": "Tuesday, September 8",
+   "count": 7,
+   "shifts": 7,
+   "hours": 31.75,
+   "overtime": 0
+  },
+  {
+   "date": "Wednesday, September 9",
+   "count": 8,
+   "shifts": 9,
+   "hours": 33.75,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
+  },
+  {
+   "date": "Thursday, September 10",
+   "count": 8,
+   "shifts": 8,
+   "hours": 38.75,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 0
+  },
+  {
+   "date": "Friday, September 11",
+   "count": 12,
+   "shifts": 14,
+   "hours": 63.75,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
+  },
+  {
+   "date": "Saturday, September 12",
+   "count": 11,
+   "shifts": 12,
+   "hours": 60.0,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
+  },
+  {
+   "date": "Sunday, September 13",
+   "count": 11,
+   "shifts": 12,
+   "hours": 53.0,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
+  },
+  {
+   "date": "Monday, September 14",
+   "count": 7,
+   "shifts": 7,
+   "hours": 29.75,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
+  },
+  {
+   "date": "Tuesday, September 15",
+   "count": 8,
+   "shifts": 8,
+   "hours": 37.53,
+   "uncovered": 0,
+   "overtime": 0,
+   "cooks": 1
   }
+ ],
+ "slingPending": {
+  "pending": true,
+  "forDate": "Wednesday, September 16",
+  "reason": "Sling daily email not yet delivered at 4 AM PT run time (arrives ~7 AM PT)."
+ },
+ "toastPartial": {
+  "resolved": false,
+  "note": "Mon Sep 14 is on the board from the group email only. Awaiting the single-location full-detail email for void $, dayparts, revenue centres, categories and 4-week comparison."
+ }
 }
