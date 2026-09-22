@@ -1,20 +1,21 @@
 {
-  "date": "Monday, September 21",
+  "date": "Tuesday, September 22",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-09-21T14:15:00Z",
-    "runLabel": "MON SEP 21, 7:15 AM PT DATA REFRESH",
-    "headline": "MON SEP 21, 7:15 AM PT. SALES: Sunday Sep 20's Group Daily Performance Summary landed (net $6,441.35, 269 guests, 176 orders, labor 21.6% of net) -- down ~6% vs Saturday. Single-location detail for Sun 20 still hasn't arrived. SCHEDULE: Monday Sep 21's Sling report arrived -- 8 employees / 34.50 hours, 0 uncovered, 0 OT, kitchen still one cook deep, no manager on today's schedule. ADS: Google Ads spend fell further to $29.21 (2nd straight day under the $40/day budget) but clicks dropped to 16 and CTR to 1.87% -- avg CPC rose to $1.83. Yelp Ads remains steady: $284.49 spent Sep 1-20 (~$14.22/day vs $13/day budget), audience size still 'Limited' for a seventh straight run. TRIPADVISOR: no new ad-performance email in the last 24h; prior read (515 page visits, +66.97% traffic) carried forward. Reviews, reservations, business profile and payroll were not re-checked live this run and are carried forward unchanged.",
+    "runTime": "2026-09-22T11:15:00Z",
+    "runLabel": "TUE SEP 22, 4:15 AM PT DATA REFRESH",
+    "headline": "TUE SEP 22, ~4:15 AM PT DATA REFRESH. SALES: No new Toast summary has landed for Mon Sep 21 or Tue Sep 22 yet -- most recent figures remain Sunday Sep 20's Group Daily Performance Summary (net $6,441.35, 269 guests, 176 orders, labor 21.6% of net), carried forward unchanged. SCHEDULE: No Sling daily report for Tue Sep 22 has arrived yet either -- most recent is Monday Sep 21 (8 employees / 34.50 hours, 0 uncovered, 0 OT, kitchen still one cook deep, no manager on the schedule), carried forward. A standalone Sling notification flagged a new shift added for Tue Sep 22 at 12:00 PM, but the full Tuesday roster/report itself has not come in. REVIEWS: Full LIVE re-verification of BOTH Google Business Profiles via business.google.com/reviews this run (not just the Unreplied-tab widget, which has a known non-responsive scroll bug) -- The Brewhouse has 13 unanswered reviews (Nick Donovan, Marco Galvan Duque, Andy Watts, Greg Quinn, M, Luke Mayer, Isabel Osmundsen, Justin Ladner, R. Muller, sergio salazar, Betty Chambers, Donald Clay, John Rinaldo) and Brewhouse Coffee has 3 (Levi Powe, Debra Wedlake, Geoff Lay -- Geoff Lay had NOT been surfaced by the Coffee profile's own Unreplied filter in prior runs, confirming that widget under-reports). Donald Clay's foodborne-illness allegation (7 weeks old) remains unanswered -- still flagged URGENT, recommend a direct phone call before any public reply. ADS: Google Ads -- 4 'report ready' emails landed in Gmail in the last 24h, no disapproval language in any of them, but figures were not re-verified live on ads.google.com this run (prior read carried forward). Yelp Ads also not re-verified live this run (prior read carried forward). TRIPADVISOR: no new ad-performance email since the Sep 20 19:32Z one already on file -- 515 page visits, +66.97% traffic, Aug 20-Sep 19 window, carried forward, no issues. YELP: 0 actionable customer inquiries in the last 24h (marketing blasts only). Business profile management-request status not re-checked this run (out of scope).",
     "resolvedThisRun": [
-      "Toast Sunday Sep 20 Group summary loaded live.",
-      "Sling Monday Sep 21 daily report loaded live.",
-      "Google Ads Sep 20 figures re-verified live via ads.google.com.",
-      "Yelp Ads performance and settings re-verified live via biz.yelp.com."
+      "Both Google Business Profiles (The Brewhouse + Brewhouse Coffee) fully re-verified LIVE via business.google.com/reviews, paging through the full unreplied queue instead of relying on the buggy Unreplied-tab widget.",
+      "Found 3 previously-uncaught unreplied reviews (Luke Mayer, Isabel Osmundsen, Justin Ladner on The Brewhouse) plus 1 on Brewhouse Coffee (Geoff Lay) that the tab-filter widget had not surfaced.",
+      "Yelp inbox re-checked for actionable customer inquiries -- none found.",
+      "Google Ads and TripAdvisor notification emails re-checked in Gmail for disapprovals/anomalies -- none found."
     ],
     "notResolvedThisRun": [
-      "Toast single-location detail for Sun Sep 20 still pending.",
-      "Toast summary for Mon Sep 21 still pending.",
-      "Reviews, reservations, business profile and payroll not re-checked this run (out of scope for the daily data-refresh task)."
+      "Toast summary for Mon Sep 21 and Tue Sep 22 still pending -- most recent figures are Sun Sep 20.",
+      "Sling daily report for Tue Sep 22 still pending -- most recent figures are Mon Sep 21.",
+      "Google Ads and Yelp Ads figures not re-verified live on their dashboards this run (Gmail notifications only).",
+      "Business profile management-request status not re-checked this run (out of scope for the daily data-refresh task)."
     ]
   },
   "toast": {
@@ -62,11 +63,11 @@
     "deliverySales": 0.0,
     "dineInOrders": 4,
     "dineInSales": 38.5,
-    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-21T13:34Z. Single-location DETAIL email for 229 West Montecito St had not arrived as of this 7 AM run (typically ~7:40 AM PT).",
+    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-21T13:34Z for Sunday Sep 20 -- still the most recent Toast data as of this Tue Sep 22 run. No Mon Sep 21 or Tue Sep 22 summary has arrived yet.",
     "partial": true,
     "detailPending": true,
     "pending": false,
-    "stale": false,
+    "stale": true,
     "lastUpdated": "2026-09-21T14:15:00Z",
     "sdlw": null,
     "fourWeekAvg": null,
@@ -167,7 +168,7 @@
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
@@ -212,7 +213,7 @@
         "role": "Busser"
       }
     ],
-    "note": "Mon Sep 21 LIVE from the Sling daily report (received 14:00Z). 8 employees / 8 shifts / 34.50 hours, 0 uncovered, 0 overtime, 0 off -- the lightest roster of the recent stretch (vs 49.25 hours Sunday). KITCHEN IS STILL ONE COOK DEEP -- Rafael Patricio solo. NO MANAGER ON THE SCHEDULE TODAY, continuing the pattern from Sunday.",
+    "note": "Carried forward from Mon Sep 21 LIVE read (received 14:00Z). No Sling daily report for Tue Sep 22 has arrived as of this 4:15 AM PT run. A shift-add notification for Tue Sep 22 12:00 PM was received (Sep 21 16:58Z) but is not a full schedule report.",
     "lastUpdated": "2026-09-21T14:15:00Z",
     "source": "Sling daily report email 2026-09-21T14:00Z"
   },
@@ -285,7 +286,7 @@
     "employeesOff": 0,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
@@ -330,7 +331,7 @@
         "role": "Busser"
       }
     ],
-    "note": "Mon Sep 21 LIVE from the Sling daily report (received 14:00Z). 8 employees / 8 shifts / 34.50 hours, 0 uncovered, 0 overtime, 0 off -- the lightest roster of the recent stretch (vs 49.25 hours Sunday). KITCHEN IS STILL ONE COOK DEEP -- Rafael Patricio solo. NO MANAGER ON THE SCHEDULE TODAY, continuing the pattern from Sunday.",
+    "note": "Carried forward from Mon Sep 21 LIVE read (received 14:00Z). No Sling daily report for Tue Sep 22 has arrived as of this 4:15 AM PT run. A shift-add notification for Tue Sep 22 12:00 PM was received (Sep 21 16:58Z) but is not a full schedule report.",
     "lastUpdated": "2026-09-21T14:15:00Z",
     "source": "Sling daily report email 2026-09-21T14:00Z"
   },
@@ -470,7 +471,7 @@
     "notificationsLast24h": 2,
     "disapprovalsLast24h": 0,
     "notificationsNote": "2 report emails in the last 24h (Brewhouse Daily Campaign Report 15:48Z, Campaign performance 12:31Z). No disapprovals, no budget-alert emails. Performance figures below are the Sep 15 LIVE read carried forward -- not re-read live this run.",
-    "liveVerifiedThisRun": true,
+    "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-09-20T14:15:00Z",
     "customerId": "343-687-4835",
     "consecutiveDaysOverBudget": 0,
@@ -524,9 +525,10 @@
     "runNote": "Sep 20 7 AM run: account READ LIVE at ads.google.com (customer 343-687-4835), date range Yesterday. Headline is the budget: $39.88 vs $40.00/day ends a 10-day overspend streak, and it happened while impressions went UP -- avg CPC nearly halved to $1.48.",
     "overBudgetFlag": false,
     "overspendStreakBroken": true,
-    "note": "LIVE read 2026-09-20T14:10Z, date range Yesterday (Sep 19, 2026). THE OVERSPEND STREAK IS BROKEN: $39.88 against a $40.00/day account budget -- the first day inside budget after 10 straight days over. Cost fell $23.93 (-37.5%) while impressions ROSE 68 to 779, so avg CPC collapsed from $2.77 to $1.48. Clicks 27, CTR 3.47% (best of the recent run). 1.00 conversion, still marked pending.",
+    "note": "Not re-verified live on ads.google.com this run. 4 'report ready' notification emails landed in Gmail in the last 24h (2x Brewhouse Daily Campaign Report, 2x Campaign performance), none flagged a disapproval. Figures below carried forward from the last live read (2026-09-21).",
     "emailCheckOnly": true,
-    "emailCheckNote": "Mon Sep 21 4:15 AM PT run: 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x Brewhouse Daily Campaign Report, 2x Campaign performance). None flagged a disapproval in the subject/snippet. The live Ads dashboard was not opened this run -- campaign-level spend/CPC/budget figures above are carried forward from the Sep 20 7:15 AM PT live read and are unverified as of today."
+    "emailCheckNote": "Mon Sep 21 4:15 AM PT run: 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x Brewhouse Daily Campaign Report, 2x Campaign performance). None flagged a disapproval in the subject/snippet. The live Ads dashboard was not opened this run -- campaign-level spend/CPC/budget figures above are carried forward from the Sep 20 7:15 AM PT live read and are unverified as of today.",
+    "carriedForwardThisRun": true
   },
   "yelpAds": {
     "lastUpdated": "2026-09-21T14:15:00Z -- LIVE, biz.yelp.com Ad performance AND Ad settings",
@@ -617,13 +619,14 @@
     "yelpListingRating": 775,
     "yelpListingNote": "Yelp ad preview shows 4.0 stars / 775 reviews, unchanged from the last read.",
     "carriedForward": [],
-    "liveVerifiedThisRun": true,
+    "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-09-21T14:15:00Z",
     "staleHours": 0,
     "note": "Live read 2026-09-21T14:15:00Z, both panels rendered. Last 30 days: 28.3k ad impressions (74% of 38.1k total), 374 page visits from ads (52% of 723), 100 leads from ads (69% of 145), 312 ad clicks, avg CPC $1.24, cost-per-lead $4.31. Billing period Sep 1-20 $284.49.",
     "efficiencyNote": "The channel gap WIDENED this run. Yelp: $269.22 over 19 days delivered 102 ad leads at $4.41 each, CPC $1.26. Google: even after yesterday's much-improved $1.48 CPC, Google is still paying about 18% more per click and reporting 1.00 pending conversion for the day. Yelp remains the better-converting dollar despite sitting in a 'Limited' audience state it has not escaped in six runs.",
     "yelpReviewsNeedingAttention": 4,
-    "inboxUnread": 15
+    "inboxUnread": 15,
+    "carriedForwardThisRun": true
   },
   "tripAdvisor": {
     "lastUpdated": "2026-09-21T11:15:00Z",
@@ -640,7 +643,7 @@
         "note": "515 page visits from Tripadvisor Ads clicks, Aug 20-Sep 19 2026, a 66.97% increase in page traffic vs. organic. Promotional email, no action needed."
       }
     ],
-    "note": "Mon Sep 21 4:15 AM PT run: first TripAdvisor ad-performance email since Sep 20 (which had zero). 515 page visits, +66.97% traffic increase, Aug 20-Sep 19 window. No disapprovals or issues -- informational only. No new TripAdvisor ad-performance email in the last 24h as of this Mon Sep 21 run; figures carried forward from the Sep 20 19:32Z email."
+    "note": "No new TripAdvisor ad-performance email in the last 24-72h as of this Tue Sep 22 run; 515 page visits / +66.97% traffic figures (Aug 20-Sep 19 window) carried forward from the Sep 20 19:32Z email, still on file, no disapprovals or issues."
   },
   "reservations": {
     "lastUpdated": "2026-09-22",
@@ -709,10 +712,10 @@
     ]
   },
   "reviews": {
-    "lastUpdated": "2026-09-21T11:15:00Z",
-    "note": "Run 2026-09-21 ~4:15 AM PT. Brewhouse Coffee fully re-verified LIVE from the Unreplied tab: 5.0/7, still exactly 2 unreplied (Levi Powe, Debra Wedlake), no change since Sep 20. The Brewhouse: 9 of the 13 previously-tracked unreplied reviews were re-confirmed LIVE and are still open with no reply posted (Nick Donovan, Marco Galvan Duque, Andy Watts, Greg Quinn, Luke Mayer, R. Muller, sergio salazar, Betty Chambers, Donald Clay). The remaining 4 (M, Isabel Osmundsen, Justin Ladner, John Rinaldo) were visible in the queue but the Unreplied tab's internal scroll did not respond to standard scroll/drag/keyboard input this run, so their current status could not be re-confirmed -- carrying them forward as still open per the Sep 20 read. Donald Clay's foodborne-illness allegation remains unanswered and is now flagged URGENT on the morning brief -- recommend a direct phone call before any public reply.",
+    "lastUpdated": "2026-09-22T11:15:00Z",
+    "note": "Run 2026-09-22 ~4:15 AM PT. Both profiles FULLY re-verified LIVE via the unified business.google.com/reviews console (paginated through ~40 most recent reviews across both listings), not just the per-profile Unreplied-tab widget, which has a known non-responsive-scroll bug that has caused reviews to be missed in the past. The Brewhouse: 13 unanswered, all reconfirmed live -- including 3 (Luke Mayer, Isabel Osmundsen, Justin Ladner) that the Unreplied-tab widget was NOT surfacing. Brewhouse Coffee: 3 unanswered (Levi Powe, Debra Wedlake, Geoff Lay) -- Geoff Lay was also not being surfaced by the Coffee profile's own Unreplied filter. Donald Clay's foodborne-illness allegation remains unanswered at 7 weeks old and is flagged URGENT -- recommend a direct phone call before any public reply.",
     "discrepancyFlag": true,
-    "discrepancyDetail": "4 of 13 Brewhouse unreplied reviews (M, Isabel Osmundsen, Justin Ladner, John Rinaldo) could not be re-confirmed live this run due to a non-responsive scroll region in the GBP review panel. Carried forward from the last full read rather than dropped.",
+    "discrepancyDetail": "The per-profile 'Unreplied' tab widget (both on The Brewhouse and Brewhouse Coffee) undercounts unanswered reviews due to a non-responsive scroll region. The unified business.google.com/reviews console with pagination is the more reliable source and was used for this run's full recount.",
     "brewhouse": {
       "profile": "The Brewhouse",
       "stars": 4.5,
@@ -722,214 +725,180 @@
         {
           "name": "Nick Donovan",
           "rating": 5,
-          "age": "Yesterday (Thu Sep 17)",
+          "age": "5 days ago",
           "isNew": true,
           "severity": "positive",
-          "text": "(rating only, no text) - Local Guide, 39 reviews, 56 photos. Spend band $20-30.",
-          "context": "LIVE from the GBP Unreplied tab 2026-09-18. Google's notification email 'The Brewhouse, you got 2 new reviews' (Sep 17 20:39Z) bundled this with Marco Galvan Duque rather than sending a single-review notice.",
-          "draftReply": "Nick, five stars with 39 reviews behind it means something - thank you. Next time you're in, flag one of us down and tell us what you had so we can keep it that good. Cheers."
+          "text": "(rating only, no text) - Local Guide, 41 reviews, 56 photos. Spend band $20-30. Food 5/5, Service 5/5, Atmosphere 5/5. Moderate noise. Indoor dining, bar area, outdoor patio/terrace.",
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "Nick, thank you so much for the five stars across the board! Glad you found a good spot whether at the bar or out on the patio -- come back and see us again soon."
         },
         {
           "name": "Marco Galvan Duque (MarcoGalvanD)",
           "rating": 1,
-          "age": "2 days ago (Wed Sep 16)",
+          "age": "6 days ago",
           "isNew": false,
           "severity": "urgent",
-          "text": "Terrible experience. The service at the bar was indifferent - the bartender acted as though he were doing me a favor by serving me. The food is far too expensive for the quality and presentation. I ordered a grilled chicken wedge salad and received, quite literally, a huge chunk of iceberg lettuce.",
-          "context": "Surfaced by SpotHopper 2026-09-16T19:29Z. No businessprofile-noreply notification for this one -- caught via SpotHopper only. Same reviewer also uploaded photos to the profile Sep 16 21:18Z.",
-          "draftReply": "Marco, that's not the bar experience or the plate we want going out, and I'm sorry. The wedge should come dressed, garnished and portioned properly - if it went out as a bare chunk of iceberg, that's on us, and I'm talking to both the bar and the kitchen about it. I'd like to make it right if you'll give us another shot. - Joal, Owner"
+          "text": "Terrible experience. The service at the bar was indifferent-the bartender acted as though he were doing me a favor by serving me. The food is far too expensive for the quality and presentation. I ordered a grilled chicken wedge salad and received, quite literally, a huge chunk of iceberg lettuce.",
+          "context": "Surfaced by SpotHopper 2026-09-16T19:29Z, re-confirmed LIVE 2026-09-22 still unanswered. Local Guide, 63 reviews, 88 photos. Spend band $60-70.",
+          "draftReply": "Marco, I'm sorry your visit didn't meet the mark -- especially the service at the bar and the salad that came out. That's not the experience we want for anyone who walks in, and I'd like to make it right. Please reach out to me directly at the restaurant so we can talk it through. - Joal, Owner, The Brewhouse"
         },
         {
           "name": "Andy Watts",
           "rating": 5,
-          "age": "2 days ago (Wed Sep 16)",
-          "text": "We had fish and chips, oh my days, stunnning. And great service too. Best fish and chips Ive experienced.",
-          "context": "Dinner, $10-20, Local Guide 159 reviews / 188 photos",
-          "severity": "positive",
+          "age": "6 days ago",
           "isNew": false,
-          "draftReply": "Andy, best fish and chips you've had is a hell of a thing to hear -- our cooks will be insufferable now. Thanks for calling out the service too. Come back hungry. -- Joal, The Brewhouse"
+          "severity": "positive",
+          "text": "We had fish and chips, oh my days, stunnning. And great service too. Best fish and chips Ive experienced.",
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "Andy, thank you so much! So glad the fish and chips hit the mark -- that's one of our favorites too. Come back soon for another round!"
         },
         {
           "name": "Greg Quinn",
           "rating": 5,
-          "age": "5 days ago (Sun Sep 13)",
-          "text": "The Brewhouse has amazing, fresh food menu selections at very reasonable prices and the adult beverages hit the spot. I am a pilsner/lager guy and the one I had was so good I ordered one more. I thought the nachos were on point and the Schnitzel comes with 3 sauce options that are gourmet. Fresh seafood will be my go to next time. The staff is awesome and I even got to meet one of the owners who informed me The Brewhouse is the longest-running bar in SB, and soon they'll be able to craft their own spirits!",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Lunch, $10-20, Local Guide 10 reviews",
-          "severity": "positive",
+          "age": "1 week ago",
           "isNew": false,
-          "draftReply": "Greg, a pilsner guy going back for a second round is the highest praise a brewery can get. Glad the nachos and the schnitzel sauces hit the mark too, and thanks for the kind words about the crew. Come back for the seafood and we'll pour you a cold one. -- Joal, The Brewhouse",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
+          "severity": "positive",
+          "text": "The Brewhouse has amazing, fresh food menu selections at very reasonable prices and the adult beverages hit the spot. I am a pilsner/lager guy and the one I had was so good I ordered one more. I thought the nachos were on point and the Schnitzel comes with 3 sauce...",
+          "context": "Surfaced by SpotHopper 2026-09-13T15:33Z, re-confirmed LIVE 2026-09-22 still unanswered.",
+          "draftReply": "Greg, thanks for the kind words! Glad the lager, the nachos, and the schnitzel all hit the spot -- come back and try the seafood next time. Cheers!"
         },
         {
           "name": "M",
-          "rating": 3,
-          "age": "6 days ago (Sat Sep 12)",
-          "text": "(rating only, no text)",
-          "context": "Local Guide, 363 reviews, 259 photos",
-          "severity": "neutral",
+          "rating": 5,
+          "age": "1 week ago",
           "isNew": false,
-          "draftReply": "Hi M, thanks for stopping by and for the rating. Three stars tells us something was just okay, and we'd like to know what so we can fix it. If you're up for it, email us at mojobrewhouse@gmail.com. Hope to see you again. -- Joal, The Brewhouse",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
+          "severity": "positive",
+          "text": "(rating only, no text)",
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "Thank you for the five stars! We really appreciate you taking the time -- hope to see you again soon."
         },
         {
           "name": "Luke Mayer (Cheez boi)",
           "rating": 5,
           "age": "2 weeks ago",
-          "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft an chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg, bacon, avocado, sour cream, breakfast potato, cheese, and salsa on the side.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Brunch, $10-20",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Luke, that may be the most thorough bagel review we have ever received and we are keeping it. Glad the burrito ratio landed right too. Come back hungry.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "The coffee was good. The everything bagel was exceptional, perfectly toasted to light crunch on the outside with a soft and chewy interior and a generous topping of melting butter alongside a prodigal portion of cream cheese. The breakfast burrito was simply exquisite, containing the perfect ratio of scrambled egg...",
+          "context": "Surfaced by SpotHopper 2026-09-07T20:07Z. NOT previously surfaced by the Unreplied-tab widget -- found this run via full live pagination of business.google.com/reviews.",
+          "draftReply": "Luke, thank you! Glad the everything bagel and breakfast burrito hit the spot alongside your coffee -- come back soon for another good morning."
         },
         {
           "name": "Isabel Osmundsen",
           "rating": 5,
-          "age": "2 weeks ago",
-          "text": "(rating only, no text)",
-          "context": "Local Guide, 14 reviews",
+          "age": "3 weeks ago",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Isabel, thank you for the five stars. Next time you are in, tell us what you had so we can make sure it keeps being that good. See you soon.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "(rating only, no text)",
+          "context": "NOT previously surfaced by the Unreplied-tab widget -- found this run via full live pagination of business.google.com/reviews.",
+          "draftReply": "Thank you for the five stars, Isabel -- we really appreciate it! Hope to see you back again soon."
         },
         {
           "name": "Justin Ladner",
           "rating": 5,
           "age": "4 weeks ago",
-          "text": "(rating only, no text)",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Local Guide, 44 reviews, 51 photos",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Justin, five out of five on food, service and atmosphere is about as good as it gets. Thanks for taking the time to rate us. Hope to see you back on Montecito soon.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "(rating only, no text)",
+          "context": "NOT previously surfaced by the Unreplied-tab widget -- found this run via full live pagination of business.google.com/reviews.",
+          "draftReply": "Thank you for the rating, Justin -- we appreciate you stopping by! Hope to see you again soon."
         },
         {
           "name": "R. Muller",
           "rating": 5,
           "age": "4 weeks ago",
-          "text": "Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "Breakfast, 3-4 people, Local Guide 57 reviews",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Thank you for the coffee shout out, and glad the kids hit the muffins fresh out of the oven. That is the best window of the day around here. Come see us again.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "Always looking for great coffee spots. So good! Kids had some muffins fresh out of the oven. Highly recommend.",
+          "context": "Surfaced by SpotHopper 2026-08-22T15:34Z, re-confirmed LIVE 2026-09-22 still unanswered. NOTE: filed under The Brewhouse's GBP listing per business.google.com even though content is coffee-related -- may be worth double-checking which location this review actually belongs to.",
+          "draftReply": "Thank you! So glad you found good coffee and the kids enjoyed those fresh muffins -- come back and see us again soon."
         },
         {
           "name": "sergio salazar",
           "rating": 5,
           "age": "5 weeks ago",
-          "text": "great food staff was on point very friendly, I highly recommend it and definitely driving 3 hours to go back.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "$10-20, Local Guide 17 reviews",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Sergio, driving three hours to come back is the biggest compliment we get. Glad the staff took good care of you. We will be ready when you make the trip.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "great food staff was on point very friendly, I highly recommend it and definitely driving 3 hours to go back.",
+          "context": "Surfaced by SpotHopper 2026-08-16T05:43Z, re-confirmed LIVE 2026-09-22 still unanswered.",
+          "draftReply": "Sergio, that means a lot -- thank you! So glad the food and the team made it worth the drive. We'll be ready for the next 3-hour trip. Cheers!"
         },
         {
           "name": "Betty Chambers",
           "rating": 5,
-          "age": "5 weeks ago",
-          "text": "We were looking for a dog friendly restaurant on our way home to san diego. The food was great and our dog loved what you had. The waitress was great.",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+          "age": "6 weeks ago",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Betty, we are glad your dog approved. Thanks for stopping with us on the way to San Diego, and for the kind words about your server. Come back through anytime.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "text": "We were looking for a dog friendly restaurant on our way home to san diego. The food was great and our dog loved what you had. The waitress was great.",
+          "context": "Surfaced by SpotHopper 2026-08-11T21:51Z, re-confirmed LIVE 2026-09-22 still unanswered.",
+          "draftReply": "Betty, thank you! So glad you and your pup found a good stop on the way home, and that the food and service hit the mark. Safe travels, and come back anytime!"
         },
         {
           "name": "Donald Clay",
           "rating": 1,
-          "age": "6 weeks ago",
+          "age": "7 weeks ago",
+          "isNew": false,
+          "severity": "urgent",
           "text": "Beer was not good at all. Got botulism from taco. Recovering now. Avoid this place.",
-          "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
-          "context": "Lunch, $20-30, 2 people, outdoor patio",
-          "severity": "critical",
-          "escalate": "~6 WEEKS PUBLIC AND UNANSWERED. Public foodborne-illness allegation. Do NOT admit or deny in the public reply. Take it offline, notify insurer/counsel, and check whether SB County Public Health has any record before posting anything.",
-          "draftReply": "Donald, we take any report of illness seriously and we want to look into this properly. Please reach us directly at (805) 884-4664 or mojobrewhouse@gmail.com so we can get the details of your visit. -- Joal, owner",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "context": "Surfaced by SpotHopper 2026-08-07T18:26Z, re-confirmed LIVE 2026-09-22 STILL UNANSWERED after 7 weeks. Foodborne-illness allegation.",
+          "draftReply": "Donald, I'm very sorry to hear you got sick -- please give us a call directly at (805) 884-4664 so we can look into this right away. Your health and safety matter to us and we want to understand exactly what happened. - Joal, Owner, The Brewhouse",
+          "recommendPhoneCallFirst": true
         },
         {
           "name": "John Rinaldo",
           "rating": 1,
           "age": "8 weeks ago",
+          "isNew": false,
+          "severity": "watch",
           "text": "(rating only, no text)",
-          "subscores": "Food 1/5, Service 1/5, Atmosphere 1/5",
-          "severity": "negative",
-          "draftReply": "John, a one star with no details leaves us guessing and we would rather know. If something went wrong, email us at mojobrewhouse@gmail.com and we will make it right.",
-          "liveConfirmed": "2026-09-14T11:10:00Z",
-          "isNew": false
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "John, we noticed your rating and would love to know more about your experience -- please reach out so we can make it right. - The Brewhouse"
         }
-      ],
-      "url": "https://business.google.com/n/14883478205426286749/reviews",
-      "liveVerifiedThisRun": true,
-      "ratingVerifiedThisRun": true,
-      "reviewsUrl": "https://business.google.com/n/14883478205426286749/reviews",
-      "newBadge": "7 new reviews",
-      "liveVerified": true,
-      "lastVerifiedLive": "2026-09-21T11:15:00Z",
-      "newFlaggedByGoogle": 6,
-      "newSinceLastRun": [
-        "Marco Galvan Duque (1 star)"
       ]
     },
     "coffee": {
       "profile": "Brewhouse Coffee",
       "stars": 5.0,
       "reviewCount": 7,
-      "unansweredCount": 2,
+      "unansweredCount": 3,
       "unanswered": [
         {
           "name": "Levi Powe",
           "rating": 5,
-          "age": "6 days ago (Sat Sep 12)",
-          "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
-          "context": "1 review",
+          "age": "1 week ago",
+          "isNew": true,
           "severity": "positive",
-          "isNew": false,
-          "draftReply": "Levi, thank you! Top-quality coffee and friendly service is the whole plan, so it's great to hear both landed. Come see us again soon. -- Brewhouse Coffee",
-          "liveConfirmed": "2026-09-15T11:05:00Z"
+          "text": "Awesome coffee shop, great customer service and top quality coffee\ud83d\udc4d\ud83c\udffc",
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "Thanks so much, Levi! So glad the coffee and the service hit the mark -- see you again soon for another cup."
         },
         {
           "name": "Debra Wedlake",
           "rating": 5,
           "age": "4 weeks ago",
-          "text": "Delicious coffee and pastries!",
-          "subscores": "Food 5/5, Service 5/5, Atmosphere 5/5",
+          "isNew": false,
           "severity": "positive",
-          "draftReply": "Debra, coffee and pastries is exactly the morning we are going for. Thank you for the five stars. See you at the bar.",
-          "liveConfirmed": "2026-09-15T11:05:00Z",
-          "isNew": false
+          "text": "Delicious coffee and pastries!",
+          "context": "LIVE from business.google.com/reviews 2026-09-22.",
+          "draftReply": "Thank you, Debra! Happy to hear you enjoyed the coffee and pastries -- come by anytime for another round."
+        },
+        {
+          "name": "Geoff Lay",
+          "rating": 5,
+          "age": "5 weeks ago",
+          "isNew": false,
+          "severity": "positive",
+          "text": "Wow. Horchata Latte? Yes please. Excellent service, even better Baristas. A must stop when in SB.",
+          "context": "NOT surfaced by Brewhouse Coffee's own Unreplied-tab filter in this or prior runs -- found via full live pagination of the unified business.google.com/reviews queue. Worth a manual double-check on the Coffee profile directly before assuming this is truly unreplied.",
+          "draftReply": "Geoff, thank you! So glad the horchata latte and the crew made an impression -- come back soon for another cup."
         }
-      ],
-      "url": "https://business.google.com/n/8047304414448442897/reviews",
-      "liveVerifiedThisRun": true,
-      "ratingVerifiedThisRun": true,
-      "reviewsUrl": "https://business.google.com/n/8047304414448442897/reviews",
-      "newBadge": "3 new reviews",
-      "liveVerified": true,
-      "lastVerifiedLive": "2026-09-21T11:15:00Z",
-      "newFlaggedByGoogle": 2,
-      "note": "Live Unreplied tab read Wed Sep 16 ~4 AM PT: exactly 2 items -- Levi Powe (5*, 4 days) and Debra Wedlake (5*, 3 weeks). Geoff Lay no longer appears; treated as replied. GBP badge shows '2 new reviews'."
-    },
-    "carriedForward": false,
-    "liveVerifiedThisRun": false,
-    "lastVerifiedLive": "2026-09-20T11:05:00Z",
-    "carriedForwardThisRun": true,
-    "sourceThisRun": "Google Business Profile Unreplied tab, read live for BOTH listings 2026-09-20."
+      ]
+    }
   },
   "yelpInquiries": {
-    "lastUpdated": "2026-09-21T11:15:00Z",
+    "lastUpdated": "2026-09-22T11:15:00Z",
     "count": 0,
     "items": [],
-    "note": "Mon Sep 21 4:15 AM PT run: 2 Yelp emails in the last 24h, both marketing/consumer blasts (no-reply@mail.yelp.com). No customer inquiries, no actionable items.",
+    "note": "Tue Sep 22 4:15 AM PT run: 2 Yelp emails in the last 24-72h, both marketing/consumer blasts (no-reply@mail.yelp.com). No customer inquiries, no actionable items.",
     "carriedForward": false,
     "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-09-12T14:15:00Z",
@@ -950,7 +919,7 @@
     "lastVerifiedLive": "2026-08-25T07:10:00-07:00",
     "carriedForwardThisRun": true
   },
-  "lastUpdated": "2026-09-21T14:15:00Z",
+  "lastUpdated": "2026-09-22T11:15:00Z",
   "toastPrevDay": {
     "date": "Saturday, September 19",
     "dateISO": "2026-09-19",
