@@ -2,20 +2,17 @@
   "date": "Tuesday, September 22",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-09-22T11:15:00Z",
-    "runLabel": "TUE SEP 22, 4:15 AM PT DATA REFRESH",
-    "headline": "TUE SEP 22, ~4:15 AM PT DATA REFRESH. SALES: No new Toast summary has landed for Mon Sep 21 or Tue Sep 22 yet -- most recent figures remain Sunday Sep 20's Group Daily Performance Summary (net $6,441.35, 269 guests, 176 orders, labor 21.6% of net), carried forward unchanged. SCHEDULE: No Sling daily report for Tue Sep 22 has arrived yet either -- most recent is Monday Sep 21 (8 employees / 34.50 hours, 0 uncovered, 0 OT, kitchen still one cook deep, no manager on the schedule), carried forward. A standalone Sling notification flagged a new shift added for Tue Sep 22 at 12:00 PM, but the full Tuesday roster/report itself has not come in. REVIEWS: Full LIVE re-verification of BOTH Google Business Profiles via business.google.com/reviews this run (not just the Unreplied-tab widget, which has a known non-responsive scroll bug) -- The Brewhouse has 13 unanswered reviews (Nick Donovan, Marco Galvan Duque, Andy Watts, Greg Quinn, M, Luke Mayer, Isabel Osmundsen, Justin Ladner, R. Muller, sergio salazar, Betty Chambers, Donald Clay, John Rinaldo) and Brewhouse Coffee has 3 (Levi Powe, Debra Wedlake, Geoff Lay -- Geoff Lay had NOT been surfaced by the Coffee profile's own Unreplied filter in prior runs, confirming that widget under-reports). Donald Clay's foodborne-illness allegation (7 weeks old) remains unanswered -- still flagged URGENT, recommend a direct phone call before any public reply. ADS: Google Ads -- 4 'report ready' emails landed in Gmail in the last 24h, no disapproval language in any of them, but figures were not re-verified live on ads.google.com this run (prior read carried forward). Yelp Ads also not re-verified live this run (prior read carried forward). TRIPADVISOR: no new ad-performance email since the Sep 20 19:32Z one already on file -- 515 page visits, +66.97% traffic, Aug 20-Sep 19 window, carried forward, no issues. YELP: 0 actionable customer inquiries in the last 24h (marketing blasts only). Business profile management-request status not re-checked this run (out of scope).",
+    "runTime": "2026-09-22T14:15:00Z",
+    "runLabel": "TUE SEP 22, ~7:15 AM PT DATA REFRESH",
+    "headline": "TUE SEP 22, ~7:15 AM PT DATA REFRESH. SALES: Still no Toast summary for Mon Sep 21 -- most recent remains Sunday Sep 20 (net $6,441.35, 269 guests, 176 orders, labor 21.6% of net), carried forward. SCHEDULE: Tue Sep 22 Sling daily report HAS landed (received 14:00Z) -- 7 employees / 31.75 hours, 0 uncovered, 0 OT, 1 off. Kitchen still one cook deep (Isael Salvador Narciso), but a General Manager (Joal Clayton) is on shift today, unlike Sun/Mon. ADS: Google Ads re-verified LIVE on ads.google.com for Sep 21 -- $44.01 spend (over the $40/day budget by $4.01), 452 impressions (-402), 24 clicks (+8), CTR up to 5.31%, 0 conversions (pending). Yelp Ads could NOT be re-verified this run -- browser access to biz.yelp.com was declined, so last night's figures are carried forward unchanged. TRIPADVISOR: no new ad-performance email since the Sep 20 19:32Z one already on file -- 515 page visits, +66.97% traffic, carried forward, no issues. Reviews and Yelp inquiries were not re-checked this run (out of scope for this pass).",
     "resolvedThisRun": [
-      "Both Google Business Profiles (The Brewhouse + Brewhouse Coffee) fully re-verified LIVE via business.google.com/reviews, paging through the full unreplied queue instead of relying on the buggy Unreplied-tab widget.",
-      "Found 3 previously-uncaught unreplied reviews (Luke Mayer, Isabel Osmundsen, Justin Ladner on The Brewhouse) plus 1 on Brewhouse Coffee (Geoff Lay) that the tab-filter widget had not surfaced.",
-      "Yelp inbox re-checked for actionable customer inquiries -- none found.",
-      "Google Ads and TripAdvisor notification emails re-checked in Gmail for disapprovals/anomalies -- none found."
+      "Tue Sep 22 Sling daily report arrived and was loaded (7 employees / 31.75 hours, manager on shift).",
+      "Google Ads account-level metrics re-verified LIVE for Sep 21 (spend, impressions, clicks, CPC) -- flagged $4.01 over the $40/day budget."
     ],
     "notResolvedThisRun": [
-      "Toast summary for Mon Sep 21 and Tue Sep 22 still pending -- most recent figures are Sun Sep 20.",
-      "Sling daily report for Tue Sep 22 still pending -- most recent figures are Mon Sep 21.",
-      "Google Ads and Yelp Ads figures not re-verified live on their dashboards this run (Gmail notifications only).",
-      "Business profile management-request status not re-checked this run (out of scope for the daily data-refresh task)."
+      "Toast summary for Mon Sep 21 still pending.",
+      "Yelp Ads could not be re-verified live -- browser access to biz.yelp.com was declined this run.",
+      "Google Ads per-campaign breakdown not re-verified (only account totals refreshed)."
     ]
   },
   "toast": {
@@ -63,7 +60,7 @@
     "deliverySales": 0.0,
     "dineInOrders": 4,
     "dineInSales": 38.5,
-    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-21T13:34Z for Sunday Sep 20 -- still the most recent Toast data as of this Tue Sep 22 run. No Mon Sep 21 or Tue Sep 22 summary has arrived yet.",
+    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-21T13:34Z for Sunday Sep 20 -- still the most recent Toast data as of this Tue Sep 22 ~7:15 AM run. No Mon Sep 21 or Tue Sep 22 summary has arrived yet.",
     "partial": true,
     "detailPending": true,
     "pending": false,
@@ -159,72 +156,13 @@
     "note": "SUN SEP 20 -- Group summary only; single-location detail pending."
   },
   "sling": {
-    "date": "Monday, September 21",
-    "count": 8,
-    "shifts": 8,
-    "hours": 34.5,
+    "date": "Tuesday, September 22",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 0,
-    "pending": false,
-    "nextDayPending": true,
-    "stale": true,
-    "kitchenCoverageFlag": true,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "bartendersScheduled": 2,
-    "serversScheduled": 2,
-    "baristasScheduled": 1,
-    "bussersScheduled": 1,
-    "barbacksScheduled": 1,
-    "managersScheduled": 0,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Rafael Patricio",
-        "role": "Cook"
-      },
-      {
-        "name": "Sarah Palmer",
-        "role": "Barista"
-      },
-      {
-        "name": "Tony Rincon",
-        "role": "Bartender"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Server"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Server"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Barback"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Busser"
-      }
-    ],
-    "note": "Carried forward from Mon Sep 21 LIVE read (received 14:00Z). No Sling daily report for Tue Sep 22 has arrived as of this 4:15 AM PT run. A shift-add notification for Tue Sep 22 12:00 PM was received (Sep 21 16:58Z) but is not a full schedule report.",
-    "lastUpdated": "2026-09-21T14:15:00Z",
-    "source": "Sling daily report email 2026-09-21T14:00Z"
-  },
-  "slingLastKnown": {
-    "date": "Monday, September 21",
-    "count": 8,
-    "shifts": 8,
-    "hours": 34.5,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 0,
+    "employeesOff": 1,
     "pending": false,
     "nextDayPending": true,
     "stale": false,
@@ -234,17 +172,17 @@
     "bartendersScheduled": 2,
     "serversScheduled": 2,
     "baristasScheduled": 1,
-    "bussersScheduled": 1,
-    "barbacksScheduled": 1,
-    "managersScheduled": 0,
+    "bussersScheduled": 0,
+    "barbacksScheduled": 0,
+    "managersScheduled": 1,
     "overtimeFlag": false,
     "staff": [
       {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
-        "name": "Sarah Palmer",
+        "name": "Julianna Ornelas",
         "role": "Barista"
       },
       {
@@ -252,58 +190,54 @@
         "role": "Bartender"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Joal Clayton",
+        "role": "General Manager"
+      },
+      {
+        "name": "Christine Vargas",
         "role": "Bartender"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Augustine Arroyo",
         "role": "Server"
       },
       {
         "name": "Emily Lanzel",
         "role": "Server"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Barback"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Busser"
       }
     ],
-    "note": "Mon Sep 21 LIVE from the Sling daily report (received 14:00Z). 8 employees / 8 shifts / 34.50 hours, 0 uncovered, 0 overtime, 0 off -- the lightest roster of the recent stretch (vs 49.25 hours Sunday). KITCHEN IS STILL ONE COOK DEEP -- Rafael Patricio solo. NO MANAGER ON THE SCHEDULE TODAY, continuing the pattern from Sunday.",
-    "lastUpdated": "2026-09-21T14:15:00Z",
-    "source": "Sling daily report email 2026-09-21T14:00Z"
+    "note": "LIVE from the Sling daily report email received 2026-09-22T14:00Z. 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 1 off. Kitchen still one cook deep (Isael Salvador Narciso solo), but a General Manager (Joal Clayton) is on the schedule today, unlike Mon/Sun.",
+    "lastUpdated": "2026-09-22T14:15:00Z",
+    "source": "Sling daily report email 2026-09-22T14:00Z"
   },
-  "slingToday": {
-    "date": "Monday, September 21",
-    "count": 8,
-    "shifts": 8,
-    "hours": 34.5,
+  "slingLastKnown": {
+    "date": "Tuesday, September 22",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 0,
+    "employeesOff": 1,
     "pending": false,
     "nextDayPending": true,
-    "stale": true,
+    "stale": false,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
     "bartendersScheduled": 2,
     "serversScheduled": 2,
     "baristasScheduled": 1,
-    "bussersScheduled": 1,
-    "barbacksScheduled": 1,
-    "managersScheduled": 0,
+    "bussersScheduled": 0,
+    "barbacksScheduled": 0,
+    "managersScheduled": 1,
     "overtimeFlag": false,
     "staff": [
       {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
-        "name": "Sarah Palmer",
+        "name": "Julianna Ornelas",
         "role": "Barista"
       },
       {
@@ -311,57 +245,108 @@
         "role": "Bartender"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Joal Clayton",
+        "role": "General Manager"
+      },
+      {
+        "name": "Christine Vargas",
         "role": "Bartender"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Augustine Arroyo",
         "role": "Server"
       },
       {
         "name": "Emily Lanzel",
         "role": "Server"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Barback"
-      },
-      {
-        "name": "Moe Danely",
-        "role": "Busser"
       }
     ],
-    "note": "Carried forward from Mon Sep 21 LIVE read (received 14:00Z). No Sling daily report for Tue Sep 22 has arrived as of this 4:15 AM PT run. A shift-add notification for Tue Sep 22 12:00 PM was received (Sep 21 16:58Z) but is not a full schedule report.",
-    "lastUpdated": "2026-09-21T14:15:00Z",
-    "source": "Sling daily report email 2026-09-21T14:00Z"
+    "note": "Tue Sep 22 LIVE from the Sling daily report (received 14:00Z). 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 1 off. Manager on shift today (Joal Clayton).",
+    "lastUpdated": "2026-09-22T14:15:00Z",
+    "source": "Sling daily report email 2026-09-22T14:00Z"
+  },
+  "slingToday": {
+    "date": "Tuesday, September 22",
+    "count": 7,
+    "shifts": 7,
+    "hours": 31.75,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 1,
+    "pending": false,
+    "nextDayPending": true,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "kitchenCoverageSeverity": "watch",
+    "cooksScheduled": 1,
+    "bartendersScheduled": 2,
+    "serversScheduled": 2,
+    "baristasScheduled": 1,
+    "bussersScheduled": 0,
+    "barbacksScheduled": 0,
+    "managersScheduled": 1,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Joal Clayton",
+        "role": "General Manager"
+      },
+      {
+        "name": "Christine Vargas",
+        "role": "Bartender"
+      },
+      {
+        "name": "Augustine Arroyo",
+        "role": "Server"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Server"
+      }
+    ],
+    "note": "LIVE from the Sling daily report email received 2026-09-22T14:00Z. 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 1 off. Kitchen still one cook deep (Isael Salvador Narciso solo), but a General Manager (Joal Clayton) is on the schedule today, unlike Mon/Sun.",
+    "lastUpdated": "2026-09-22T14:15:00Z",
+    "source": "Sling daily report email 2026-09-22T14:00Z"
   },
   "googleAds": {
-    "lastUpdated": "2026-09-21T14:15:00Z",
+    "lastUpdated": "2026-09-22T14:15:00Z",
     "accountDailyBudget": 40.0,
     "yesterday": {
-      "date": "September 20, 2026",
-      "spend": 29.21,
-      "impressions": 854,
-      "clicks": 16,
+      "date": "September 21, 2026",
+      "spend": 44.01,
+      "impressions": 452,
+      "clicks": 24,
       "conversions": 0.0,
       "cpc": 1.83,
-      "ctr": 1.87,
-      "costChangeAbs": -10.67,
-      "costChangePct": -26.8,
-      "impressionsChangeAbs": 75,
-      "impressionsChangePct": 9.6,
-      "clicksChangeAbs": -11,
-      "clicksChangePct": -40.7,
-      "conversionsChangeAbs": -1.0,
-      "avgCpcChangeAbs": 0.35,
-      "ctrChangeAbs": -1.6,
+      "ctr": 5.31,
+      "costChangeAbs": 14.8,
+      "costChangePct": 50.7,
+      "impressionsChangeAbs": -402,
+      "impressionsChangePct": -47.1,
+      "clicksChangeAbs": 8,
+      "clicksChangePct": 50.0,
+      "conversionsChangeAbs": 0.0,
+      "avgCpcChangeAbs": 0.01,
+      "ctrChangeAbs": 3.44,
       "clicksDerived": false,
       "conversionsCalculating": true,
-      "comparisonBasis": "Google's own summary cards for Sep 20: Impr +75, Cost -$10.67. Conversions card reads '(pending)'.",
-      "overBudgetFlag": false,
-      "overBudgetAbs": 0.0,
-      "overBudgetPct": 0.0,
-      "note": "LIVE read 2026-09-21T14:15:00Z, date range Yesterday (Sep 20, 2026). Second straight day inside the $40/day account budget: $29.21. Cost fell further, down $10.67 (-26.8%) even as impressions rose 75 to 854 -- but clicks dropped sharply to 16 (-11, -40.7%), pushing CTR down to 1.87% (from 3.47%) and avg CPC up to $1.83. 0 conversions, still marked pending."
+      "comparisonBasis": "Google's own summary cards for Sep 21: Impr -402, Cost +$14.80, Clicks +8, Avg CPC +$0.01.",
+      "overBudgetFlag": true,
+      "overBudgetAbs": 4.01,
+      "overBudgetPct": 10.0,
+      "note": "LIVE read 2026-09-22T14:15:00Z, date range Yesterday (Sep 21, 2026), account 343-687-4835. Cost $44.01 -- over the $40/day account budget by $4.01. Impressions fell sharply to 452 (-402) but clicks rose to 24 (+8), pushing CTR up to 5.31% and avg CPC flat at $1.83. 0 conversions, still marked pending. NOTE: per-campaign breakdown not re-verified live this run (account-level totals only); prior campaigns array carried forward below."
     },
     "campaigns": [
       {
@@ -626,7 +611,9 @@
     "efficiencyNote": "The channel gap WIDENED this run. Yelp: $269.22 over 19 days delivered 102 ad leads at $4.41 each, CPC $1.26. Google: even after yesterday's much-improved $1.48 CPC, Google is still paying about 18% more per click and reporting 1.00 pending conversion for the day. Yelp remains the better-converting dollar despite sitting in a 'Limited' audience state it has not escaped in six runs.",
     "yelpReviewsNeedingAttention": 4,
     "inboxUnread": 15,
-    "carriedForwardThisRun": true
+    "carriedForwardThisRun": true,
+    "staleFlag": true,
+    "staleNote": "Browser access to biz.yelp.com was declined during this Tue Sep 22 ~7:15 AM run -- could not re-verify live. Figures below carried forward from the prior LIVE read (2026-09-21T14:15:00Z)."
   },
   "tripAdvisor": {
     "lastUpdated": "2026-09-21T11:15:00Z",
@@ -919,7 +906,7 @@
     "lastVerifiedLive": "2026-08-25T07:10:00-07:00",
     "carriedForwardThisRun": true
   },
-  "lastUpdated": "2026-09-22T11:15:00Z",
+  "lastUpdated": "2026-09-22T14:15:00Z",
   "toastPrevDay": {
     "date": "Saturday, September 19",
     "dateISO": "2026-09-19",
@@ -994,8 +981,8 @@
   },
   "toastPending": {
     "date": "Monday, September 21",
-    "note": "Still pending as of Mon Sep 21 ~7:15 AM PT run -- neither the Group nor single-location Toast summary for Mon Sep 21 has arrived (Toast IQ digest for 'yesterday' sales arrived 13:34Z but that's the Sun Sep 20 Group summary, already loaded).",
-    "lastChecked": "2026-09-21T14:15:00Z"
+    "note": "Still pending as of this Tue Sep 22 ~7:15 AM PT run -- no Mon Sep 21 Toast summary (Group or single-location) has arrived. Pattern suggests it typically lands ~14:39 UTC (~7:39 AM PT); current check was 14:06 UTC.",
+    "lastChecked": "2026-09-22T14:15:00Z"
   },
   "payroll": {
     "lastUpdated": "2026-09-20T11:05:00Z",
@@ -1384,8 +1371,8 @@
   ],
   "slingPending": {
     "date": null,
-    "note": "Resolved -- Mon Sep 21 Sling daily report arrived at 14:00Z, loaded above.",
-    "lastChecked": "2026-09-21T14:15:00Z"
+    "note": "Resolved -- Tue Sep 22 Sling daily report arrived at 14:00Z, loaded above.",
+    "lastChecked": "2026-09-22T14:15:00Z"
   },
   "toastPartial": {
     "resolved": false,
