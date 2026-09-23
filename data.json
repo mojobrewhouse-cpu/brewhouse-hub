@@ -2,340 +2,160 @@
   "date": "Wednesday, September 23",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-09-23T11:05:00Z",
-    "runLabel": "WED SEP 23, ~4 AM PT MORNING BRIEF",
-    "headline": "WED SEP 23 4 AM. SALES: Mon Sep 21 net $3,363.22 (-18.7% vs SDLW, +2.9% vs 4-wk avg), 102 orders, labor 25.3%. Tue Sep 22 Toast pending. SCHEDULE: Wed Sling report pending (~7 AM). REVIEWS: Brewhouse 4.5/533, 13 unanswered incl 3 negative (Donald Clay illness claim URGENT); Coffee 5.0/7, 3 unanswered. Google profile still shows discontinued Brunch hours.",
+    "runTime": "2026-09-23T14:10:00Z",
+    "runLabel": "WED SEP 23, ~7 AM PT DATA REFRESH",
+    "headline": "WED SEP 23 7 AM. PAYROLL OVERDUE (Sep 6-19 not started, pay date Fri). SALES: Tue Sep 22 net $3,170.65 (-5.7% vs Mon), 110 orders, LABOR 33.4% HIGH. SCHEDULE: Wed 9 staff / 36.75 hrs / 0 OT, 1 cook. GOOGLE ADS Sep 22: $22.56, 21 clicks, 0 conv (policy-limited). YELP 30d: 100 ad leads @ $4.07, $309 spent Sep 1-22.",
     "resolvedThisRun": [
-      "Mon Sep 21 Toast single-location summary loaded with SDLW + 4-week comps.",
-      "Both Google review profiles re-checked live; 'M' rating corrected to 3 stars."
+      "Tue Sep 22 Toast headline numbers loaded (group summary).",
+      "Wed Sep 23 Sling schedule loaded.",
+      "Google Ads read LIVE for Sep 22.",
+      "Yelp Ads performance read LIVE."
     ],
     "notResolvedThisRun": [
-      "Tue Sep 22 Toast summary not yet arrived.",
-      "Wed Sep 23 Sling report not yet arrived.",
-      "Google Ads / Yelp Ads not re-verified live this run (email check only)."
+      "Tue Sep 22 Toast single-location detail (breakdowns, SDLW comps) not yet arrived.",
+      "Yelp Ad settings (bonus budget) not re-opened.",
+      "Reviews / reservations not re-checked (carried from 4 AM run)."
     ]
   },
   "toast": {
-    "date": "Monday, September 21",
-    "dateISO": "2026-09-21",
-    "net": 3363.22,
-    "netSales": 3363.22,
-    "gross": 3491.0,
-    "grossSales": 3491.0,
-    "guests": 252,
+    "date": "Tuesday, September 22",
+    "dateISO": "2026-09-22",
+    "net": 3170.65,
+    "netSales": 3170.65,
+    "gross": 3316.2,
+    "grossSales": 3316.2,
+    "guests": 141,
     "guestsDerived": false,
-    "orders": 102,
+    "orders": 110,
     "ordersDerived": false,
-    "checks": 102,
-    "avgPerOrder": 32.97,
-    "avgOrder": 32.97,
-    "avgSalesPerOrder": 32.97,
-    "avgPerGuest": 13.35,
-    "avgSalesPerGuest": 13.35,
-    "avgPerCheck": 32.97,
-    "avgCheck": 32.97,
-    "laborPct": 25.3,
-    "laborPctOfNet": 25.3,
-    "laborCost": 849.75,
-    "laborCostDerived": false,
-    "laborFlag": false,
-    "laborSeverity": "ok",
-    "discounts": 127.78,
-    "discountsDerived": false,
-    "discountPct": 3.8,
+    "checks": null,
+    "avgPerOrder": 28.82,
+    "avgOrder": 28.82,
+    "avgSalesPerOrder": 28.82,
+    "avgPerGuest": 22.49,
+    "avgSalesPerGuest": 22.49,
+    "avgPerCheck": null,
+    "avgCheck": null,
+    "laborPct": 33.4,
+    "laborPctOfNet": 33.4,
+    "laborCost": 1059.0,
+    "laborCostDerived": true,
+    "laborFlag": true,
+    "laborSeverity": "high",
+    "discounts": 145.91,
+    "discountsDerived": true,
+    "discountPct": 4.4,
     "deferredSales": 0.0,
     "giftCards": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": 6.0,
+    "voidAmount": null,
     "voidAmountDerived": false,
-    "voidItems": 1,
-    "voidOrders": 1,
-    "cardPayments": 150,
+    "voidItems": 3,
+    "voidOrders": null,
+    "cardPayments": 77,
     "openOrders": 0,
     "autoClockedOut": [],
-    "takeoutOrders": 6,
-    "takeoutSales": 75.75,
+    "takeoutOrders": 11,
+    "takeoutSales": 125.25,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "dineInOrders": 4,
-    "dineInSales": 38.5,
-    "source": "Toast single-location Daily Performance Summary received 2026-09-22T14:39Z for Monday Sep 21.",
-    "partial": false,
-    "detailPending": false,
+    "dineInOrders": 2,
+    "dineInSales": 17.5,
+    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-23T13:22Z for Tuesday Sep 22. Single-location detail email not yet arrived (usually ~14:39Z).",
+    "partial": true,
+    "detailPending": true,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-09-23T11:05:00Z",
-    "sdlw": {
-      "net": 4135.75,
-      "gross": 4239.75,
-      "guests": 158,
-      "orders": 116,
-      "laborPct": 25.0,
-      "laborCost": 1033.59
-    },
-    "fourWeekAvg": {
-      "net": 3268.34,
-      "gross": 3385.54,
-      "guests": 334,
-      "orders": 104,
-      "laborPct": 25.8,
-      "laborCost": 841.68
-    },
-    "serviceType": [
-      {
-        "name": "Dinner",
-        "net": 2462.9,
-        "pct": 73.2
-      },
-      {
-        "name": "Lunch",
-        "net": 511.12,
-        "pct": 15.1
-      },
-      {
-        "name": "Expresso Service",
-        "net": 389.2,
-        "pct": 11.5
-      }
-    ],
-    "revenueCenter": [
-      {
-        "name": "Dining Room",
-        "net": 2010.37,
-        "pct": 59.7
-      },
-      {
-        "name": "Patio",
-        "net": 584.4,
-        "pct": 17.3
-      },
-      {
-        "name": "Espresso Bar",
-        "net": 392.45,
-        "pct": 11.6
-      },
-      {
-        "name": "Front Patio",
-        "net": 376.0,
-        "pct": 11.1
-      }
-    ],
-    "salesCategory": [
-      {
-        "name": "Food",
-        "net": 1597.27,
-        "pct": 47.4
-      },
-      {
-        "name": "Draft Beer",
-        "net": 699.0,
-        "pct": 20.7
-      },
-      {
-        "name": "Liquor",
-        "net": 456.0,
-        "pct": 13.5
-      },
-      {
-        "name": "Espresso Service",
-        "net": 354.45,
-        "pct": 10.5
-      },
-      {
-        "name": "Wine",
-        "net": 133.0,
-        "pct": 3.9
-      },
-      {
-        "name": "Other",
-        "net": 123.5,
-        "pct": 3.6
-      }
-    ],
+    "lastUpdated": "2026-09-23T14:10:00Z",
+    "sdlw": null,
+    "fourWeekAvg": null,
+    "serviceType": [],
+    "revenueCenter": [],
+    "salesCategory": [],
     "orderType": [],
-    "orderSource": [
-      {
-        "name": "In Store",
-        "net": 3363.22,
-        "pct": 100.0
-      }
-    ],
-    "netChangeVsPrevDayPct": -47.8,
-    "grossChangeVsPrevDayPct": -47.1,
-    "guestsChangeVsPrevDayPct": -6.3,
-    "ordersChangeVsPrevDayPct": -42.0,
-    "netChangeVsSDLWPct": -18.7,
-    "grossChangeVsSDLWPct": -17.7,
-    "guestsChangeVsSDLWPct": 59.5,
-    "ordersChangeVsSDLWPct": -12.1,
-    "netChangeVsPrev4Pct": 2.9,
-    "comparison": "Mon Sep 21 vs Mon Sep 14 (SDLW): net -18.7%, orders -12.1%. vs 4-Monday avg: net +2.9%.",
-    "note": "MON SEP 21 -- full single-location detail. Guest count (252) looks inflated vs orders (102) -> avg/guest $13.35 is unreliable; use avg/order $32.97."
+    "orderSource": [],
+    "netChangeVsPrevDayPct": -5.7,
+    "grossChangeVsPrevDayPct": -5.0,
+    "guestsChangeVsPrevDayPct": -44.0,
+    "ordersChangeVsPrevDayPct": 7.8,
+    "netChangeVsSDLWPct": null,
+    "netChangeVsPrev4Pct": null,
+    "comparison": "Tue Sep 22 vs Mon Sep 21: net -5.7%, orders +7.8%. SDLW / 4-week comps pending single-location email.",
+    "note": "TUE SEP 22 -- group summary only (headline numbers). LABOR 33.4% of net is HIGH (~$1,059 derived) on a soft $3.2k day. Service-type/category breakdown + SDLW comps pending the single-location email."
   },
   "toastLastKnown": {
-    "date": "Monday, September 21",
-    "dateISO": "2026-09-21",
-    "net": 3363.22,
-    "netSales": 3363.22,
-    "gross": 3491.0,
-    "grossSales": 3491.0,
-    "guests": 252,
+    "date": "Tuesday, September 22",
+    "dateISO": "2026-09-22",
+    "net": 3170.65,
+    "netSales": 3170.65,
+    "gross": 3316.2,
+    "grossSales": 3316.2,
+    "guests": 141,
     "guestsDerived": false,
-    "orders": 102,
+    "orders": 110,
     "ordersDerived": false,
-    "checks": 102,
-    "avgPerOrder": 32.97,
-    "avgOrder": 32.97,
-    "avgSalesPerOrder": 32.97,
-    "avgPerGuest": 13.35,
-    "avgSalesPerGuest": 13.35,
-    "avgPerCheck": 32.97,
-    "avgCheck": 32.97,
-    "laborPct": 25.3,
-    "laborPctOfNet": 25.3,
-    "laborCost": 849.75,
-    "laborCostDerived": false,
-    "laborFlag": false,
-    "laborSeverity": "ok",
-    "discounts": 127.78,
-    "discountsDerived": false,
-    "discountPct": 3.8,
+    "checks": null,
+    "avgPerOrder": 28.82,
+    "avgOrder": 28.82,
+    "avgSalesPerOrder": 28.82,
+    "avgPerGuest": 22.49,
+    "avgSalesPerGuest": 22.49,
+    "avgPerCheck": null,
+    "avgCheck": null,
+    "laborPct": 33.4,
+    "laborPctOfNet": 33.4,
+    "laborCost": 1059.0,
+    "laborCostDerived": true,
+    "laborFlag": true,
+    "laborSeverity": "high",
+    "discounts": 145.91,
+    "discountsDerived": true,
+    "discountPct": 4.4,
     "deferredSales": 0.0,
     "giftCards": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": 6.0,
+    "voidAmount": null,
     "voidAmountDerived": false,
-    "voidItems": 1,
-    "voidOrders": 1,
-    "cardPayments": 150,
+    "voidItems": 3,
+    "voidOrders": null,
+    "cardPayments": 77,
     "openOrders": 0,
     "autoClockedOut": [],
-    "takeoutOrders": 6,
-    "takeoutSales": 75.75,
+    "takeoutOrders": 11,
+    "takeoutSales": 125.25,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "dineInOrders": 4,
-    "dineInSales": 38.5,
-    "source": "Toast single-location Daily Performance Summary received 2026-09-22T14:39Z for Monday Sep 21.",
-    "partial": false,
-    "detailPending": false,
+    "dineInOrders": 2,
+    "dineInSales": 17.5,
+    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-23T13:22Z for Tuesday Sep 22. Single-location detail email not yet arrived (usually ~14:39Z).",
+    "partial": true,
+    "detailPending": true,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-09-23T11:05:00Z",
-    "sdlw": {
-      "net": 4135.75,
-      "gross": 4239.75,
-      "guests": 158,
-      "orders": 116,
-      "laborPct": 25.0,
-      "laborCost": 1033.59
-    },
-    "fourWeekAvg": {
-      "net": 3268.34,
-      "gross": 3385.54,
-      "guests": 334,
-      "orders": 104,
-      "laborPct": 25.8,
-      "laborCost": 841.68
-    },
-    "serviceType": [
-      {
-        "name": "Dinner",
-        "net": 2462.9,
-        "pct": 73.2
-      },
-      {
-        "name": "Lunch",
-        "net": 511.12,
-        "pct": 15.1
-      },
-      {
-        "name": "Expresso Service",
-        "net": 389.2,
-        "pct": 11.5
-      }
-    ],
-    "revenueCenter": [
-      {
-        "name": "Dining Room",
-        "net": 2010.37,
-        "pct": 59.7
-      },
-      {
-        "name": "Patio",
-        "net": 584.4,
-        "pct": 17.3
-      },
-      {
-        "name": "Espresso Bar",
-        "net": 392.45,
-        "pct": 11.6
-      },
-      {
-        "name": "Front Patio",
-        "net": 376.0,
-        "pct": 11.1
-      }
-    ],
-    "salesCategory": [
-      {
-        "name": "Food",
-        "net": 1597.27,
-        "pct": 47.4
-      },
-      {
-        "name": "Draft Beer",
-        "net": 699.0,
-        "pct": 20.7
-      },
-      {
-        "name": "Liquor",
-        "net": 456.0,
-        "pct": 13.5
-      },
-      {
-        "name": "Espresso Service",
-        "net": 354.45,
-        "pct": 10.5
-      },
-      {
-        "name": "Wine",
-        "net": 133.0,
-        "pct": 3.9
-      },
-      {
-        "name": "Other",
-        "net": 123.5,
-        "pct": 3.6
-      }
-    ],
+    "lastUpdated": "2026-09-23T14:10:00Z",
+    "sdlw": null,
+    "fourWeekAvg": null,
+    "serviceType": [],
+    "revenueCenter": [],
+    "salesCategory": [],
     "orderType": [],
-    "orderSource": [
-      {
-        "name": "In Store",
-        "net": 3363.22,
-        "pct": 100.0
-      }
-    ],
-    "netChangeVsPrevDayPct": -47.8,
-    "grossChangeVsPrevDayPct": -47.1,
-    "guestsChangeVsPrevDayPct": -6.3,
-    "ordersChangeVsPrevDayPct": -42.0,
-    "netChangeVsSDLWPct": -18.7,
-    "grossChangeVsSDLWPct": -17.7,
-    "guestsChangeVsSDLWPct": 59.5,
-    "ordersChangeVsSDLWPct": -12.1,
-    "netChangeVsPrev4Pct": 2.9,
-    "comparison": "Mon Sep 21 vs Mon Sep 14 (SDLW): net -18.7%, orders -12.1%. vs 4-Monday avg: net +2.9%.",
-    "note": "MON SEP 21 -- full single-location detail. Guest count (252) looks inflated vs orders (102) -> avg/guest $13.35 is unreliable; use avg/order $32.97."
+    "orderSource": [],
+    "netChangeVsPrevDayPct": -5.7,
+    "grossChangeVsPrevDayPct": -5.0,
+    "guestsChangeVsPrevDayPct": -44.0,
+    "ordersChangeVsPrevDayPct": 7.8,
+    "netChangeVsSDLWPct": null,
+    "netChangeVsPrev4Pct": null,
+    "comparison": "Tue Sep 22 vs Mon Sep 21: net -5.7%, orders +7.8%. SDLW / 4-week comps pending single-location email.",
+    "note": "TUE SEP 22 -- group summary only (headline numbers). LABOR 33.4% of net is HIGH (~$1,059 derived) on a soft $3.2k day. Service-type/category breakdown + SDLW comps pending the single-location email."
   },
   "sling": {
-    "date": "Tuesday, September 22",
-    "count": 7,
-    "shifts": 7,
-    "hours": 31.75,
+    "date": "Wednesday, September 23",
+    "count": 9,
+    "shifts": 10,
+    "hours": 36.75,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
@@ -346,11 +166,11 @@
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
     "bartendersScheduled": 2,
-    "serversScheduled": 2,
-    "baristasScheduled": 1,
-    "bussersScheduled": 0,
+    "serversScheduled": 3,
+    "baristasScheduled": 2,
+    "bussersScheduled": 1,
     "barbacksScheduled": 0,
-    "managersScheduled": 1,
+    "managersScheduled": 0,
     "overtimeFlag": false,
     "staff": [
       {
@@ -358,7 +178,15 @@
         "role": "Cook"
       },
       {
+        "name": "Sarah Palmer",
+        "role": "Barista"
+      },
+      {
         "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Sarah Palmer",
         "role": "Barista"
       },
       {
@@ -366,25 +194,29 @@
         "role": "Bartender"
       },
       {
-        "name": "Joal Clayton",
-        "role": "General Manager"
+        "name": "Christine Vargas",
+        "role": "Server"
       },
       {
-        "name": "Christine Vargas",
+        "name": "Katharine Brown",
         "role": "Bartender"
       },
       {
-        "name": "Augustine Arroyo",
+        "name": "Gabriel Lopez galindo",
         "role": "Server"
       },
       {
-        "name": "Emily Lanzel",
+        "name": "Bri Kelley",
         "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
       }
     ],
-    "note": "LIVE from the Sling daily report email received 2026-09-22T14:00Z. 7 employees / 7 shifts / 31.75 hours, 0 uncovered, 0 overtime, 1 off. Kitchen still one cook deep (Isael Salvador Narciso solo), but a General Manager (Joal Clayton) is on the schedule today, unlike Mon/Sun.",
-    "lastUpdated": "2026-09-22T14:15:00Z",
-    "source": "Sling daily report email 2026-09-22T14:00Z"
+    "note": "Wed Sep 23: 9 employees / 10 shifts (Sarah Palmer has 2 barista shifts), 36.75 hrs, 0 OT, 0 uncovered, 1 off. Only 1 cook scheduled; no manager listed on the Sling roster.",
+    "lastUpdated": "2026-09-23T14:10:00Z",
+    "source": "Sling daily report email 2026-09-23T14:00Z"
   },
   "slingLastKnown": {
     "date": "Tuesday, September 22",
@@ -443,24 +275,24 @@
   },
   "slingToday": {
     "date": "Wednesday, September 23",
-    "count": 7,
-    "shifts": 7,
-    "hours": 31.75,
+    "count": 9,
+    "shifts": 10,
+    "hours": 36.75,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 1,
-    "pending": true,
+    "pending": false,
     "nextDayPending": true,
-    "stale": true,
+    "stale": false,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
     "bartendersScheduled": 2,
-    "serversScheduled": 2,
-    "baristasScheduled": 1,
-    "bussersScheduled": 0,
+    "serversScheduled": 3,
+    "baristasScheduled": 2,
+    "bussersScheduled": 1,
     "barbacksScheduled": 0,
-    "managersScheduled": 1,
+    "managersScheduled": 0,
     "overtimeFlag": false,
     "staff": [
       {
@@ -468,7 +300,15 @@
         "role": "Cook"
       },
       {
+        "name": "Sarah Palmer",
+        "role": "Barista"
+      },
+      {
         "name": "Julianna Ornelas",
+        "role": "Barista"
+      },
+      {
+        "name": "Sarah Palmer",
         "role": "Barista"
       },
       {
@@ -476,53 +316,47 @@
         "role": "Bartender"
       },
       {
-        "name": "Joal Clayton",
-        "role": "General Manager"
+        "name": "Christine Vargas",
+        "role": "Server"
       },
       {
-        "name": "Christine Vargas",
+        "name": "Katharine Brown",
         "role": "Bartender"
       },
       {
-        "name": "Augustine Arroyo",
+        "name": "Gabriel Lopez galindo",
         "role": "Server"
       },
       {
-        "name": "Emily Lanzel",
+        "name": "Bri Kelley",
         "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
       }
     ],
-    "note": "Wed Sep 23 Sling daily report not yet arrived at 4 AM PT (usually ~14:00Z / 7 AM PT). Showing Tue Sep 22 roster as last known.",
-    "lastUpdated": "2026-09-23T11:05:00Z",
-    "source": "Sling daily report email 2026-09-22T14:00Z"
+    "note": "Wed Sep 23: 9 employees / 10 shifts (Sarah Palmer has 2 barista shifts), 36.75 hrs, 0 OT, 0 uncovered, 1 off. Only 1 cook scheduled; no manager listed on the Sling roster.",
+    "lastUpdated": "2026-09-23T14:10:00Z",
+    "source": "Sling daily report email 2026-09-23T14:00Z"
   },
   "googleAds": {
-    "lastUpdated": "2026-09-22T14:15:00Z",
+    "lastUpdated": "2026-09-23T14:10:00Z",
     "accountDailyBudget": 40.0,
     "yesterday": {
-      "date": "September 21, 2026",
-      "spend": 44.01,
-      "impressions": 452,
-      "clicks": 24,
+      "date": "September 22, 2026",
+      "spend": 22.56,
+      "impressions": 738,
+      "clicks": 21,
       "conversions": 0.0,
-      "cpc": 1.83,
-      "ctr": 5.31,
-      "costChangeAbs": 14.8,
-      "costChangePct": 50.7,
-      "impressionsChangeAbs": -402,
-      "impressionsChangePct": -47.1,
-      "clicksChangeAbs": 8,
-      "clicksChangePct": 50.0,
-      "conversionsChangeAbs": 0.0,
-      "avgCpcChangeAbs": 0.01,
-      "ctrChangeAbs": 3.44,
+      "cpc": 1.07,
+      "ctr": 2.85,
       "clicksDerived": false,
       "conversionsCalculating": true,
-      "comparisonBasis": "Google's own summary cards for Sep 21: Impr -402, Cost +$14.80, Clicks +8, Avg CPC +$0.01.",
-      "overBudgetFlag": true,
-      "overBudgetAbs": 4.01,
-      "overBudgetPct": 10.0,
-      "note": "LIVE read 2026-09-22T14:15:00Z, date range Yesterday (Sep 21, 2026), account 343-687-4835. Cost $44.01 -- over the $40/day account budget by $4.01. Impressions fell sharply to 452 (-402) but clicks rose to 24 (+8), pushing CTR up to 5.31% and avg CPC flat at $1.83. 0 conversions, still marked pending. NOTE: per-campaign breakdown not re-verified live this run (account-level totals only); prior campaigns array carried forward below."
+      "overBudgetFlag": false,
+      "overBudgetAbs": 0.0,
+      "overBudgetPct": 0.0,
+      "note": "LIVE read 2026-09-23T14:05Z, date range Yesterday (Sep 22), account 343-687-4835. $22.56 spend, well under $40/day budget. 738 impr / 21 clicks / 2.85% CTR / $1.07 CPC / 0 conversions."
     },
     "campaigns": [
       {
@@ -530,12 +364,12 @@
         "budget": 25.0,
         "status": "Eligible (Limited)",
         "statusDetail": "All ads limited by policy",
-        "impressions": 680,
-        "clicks": 14,
-        "ctr": 2.06,
-        "cost": 28.57,
+        "impressions": 542,
+        "clicks": 13,
+        "ctr": 2.4,
+        "cost": 19.65,
         "conversions": 0.0,
-        "cpc": 2.04,
+        "cpc": 1.51,
         "limitedByBudget": false
       },
       {
@@ -543,12 +377,12 @@
         "budget": 15.0,
         "status": "Eligible (Limited)",
         "statusDetail": "All ads limited by policy",
-        "impressions": 174,
-        "clicks": 2,
-        "ctr": 1.15,
-        "cost": 0.64,
+        "impressions": 196,
+        "clicks": 8,
+        "ctr": 4.08,
+        "cost": 2.91,
         "conversions": 0.0,
-        "cpc": 0.32,
+        "cpc": 0.36,
         "limitedByBudget": false
       },
       {
@@ -608,7 +442,7 @@
     "campaignsPaused": 4,
     "draftsInProgress": 2,
     "policyLimitationFlag": true,
-    "campaignNote": "Both live campaigns are STILL 'Eligible (Limited) -- All ads limited by policy'. That policy limitation is now the single biggest constraint on the account and has not moved in days. Dinner is the efficiency story: 111 impressions but 8 clicks = 7.21% CTR on $15.81. Lunch carries the volume: 668 impressions, 19 clicks, 2.84% CTR, $24.07. Four campaigns paused at zero spend, including BHC Coffee | Search | P1 Launch -- Google's own recommendation banner notes that campaign drove 84 conversions over the last 30 days and is 'leading overall account performance', yet it sits paused.",
+    "campaignNote": "Sep 22: Lunch 542 impr / 13 clicks / 2.40% CTR / $19.65; Dinner 196 impr / 8 clicks / 4.08% CTR / $2.91. Both live campaigns still 'Eligible (Limited) -- All ads limited by policy'. 4 campaigns paused, 2 drafts in progress.",
     "accountNote": "Account total for Sep 19: 779 impr / 27 clicks / 3.47% CTR / $39.88 / avg CPC $1.48 / 1.00 conversion (pending). Under the $40.00/day budget.",
     "last7d": {
       "range": "Sep 6 - Sep 12, 2026",
@@ -632,8 +466,8 @@
     "notificationsLast24h": 2,
     "disapprovalsLast24h": 0,
     "notificationsNote": "2 report emails in the last 24h (Brewhouse Daily Campaign Report 15:48Z, Campaign performance 12:31Z). No disapprovals, no budget-alert emails. Performance figures below are the Sep 15 LIVE read carried forward -- not re-read live this run.",
-    "liveVerifiedThisRun": false,
-    "lastVerifiedLive": "2026-09-20T14:15:00Z",
+    "liveVerifiedThisRun": true,
+    "lastVerifiedLive": "2026-09-23T14:10:00Z",
     "customerId": "343-687-4835",
     "consecutiveDaysOverBudget": 0,
     "recentDailySpend": [
@@ -680,43 +514,51 @@
       {
         "date": "2026-09-19",
         "spend": 39.88
+      },
+      {
+        "date": "2026-09-21",
+        "spend": 44.01
+      },
+      {
+        "date": "2026-09-22",
+        "spend": 22.56
       }
     ],
     "budgetAlerts24h": 0,
     "runNote": "Sep 20 7 AM run: account READ LIVE at ads.google.com (customer 343-687-4835), date range Yesterday. Headline is the budget: $39.88 vs $40.00/day ends a 10-day overspend streak, and it happened while impressions went UP -- avg CPC nearly halved to $1.48.",
     "overBudgetFlag": false,
     "overspendStreakBroken": true,
-    "note": "Not re-verified live on ads.google.com this run. 4 'report ready' notification emails landed in Gmail in the last 24h (2x Brewhouse Daily Campaign Report, 2x Campaign performance), none flagged a disapproval. Figures below carried forward from the last live read (2026-09-21).",
-    "emailCheckOnly": true,
+    "note": "LIVE read 2026-09-23T14:05Z (Yesterday = Sep 22).",
+    "emailCheckOnly": false,
     "emailCheckNote": "Mon Sep 21 4:15 AM PT run: 4 'report ready' notification emails from ads-account-noreply@google.com in the last 2 days (2x Brewhouse Daily Campaign Report, 2x Campaign performance). None flagged a disapproval in the subject/snippet. The live Ads dashboard was not opened this run -- campaign-level spend/CPC/budget figures above are carried forward from the Sep 20 7:15 AM PT live read and are unverified as of today.",
-    "carriedForwardThisRun": true
+    "carriedForwardThisRun": false
   },
   "yelpAds": {
-    "lastUpdated": "2026-09-21T14:15:00Z -- LIVE, biz.yelp.com Ad performance AND Ad settings",
+    "lastUpdated": "2026-09-23T14:10:00Z -- LIVE, biz.yelp.com Ad performance",
     "last30d": {
-      "adImpressions": 28300,
-      "adImpressionsDisplay": "28.3k",
-      "totalImpressions": 38100,
-      "totalImpressionsDisplay": "38.1k",
+      "adImpressions": 27700,
+      "adImpressionsDisplay": "27.7k",
+      "totalImpressions": 37500,
+      "totalImpressionsDisplay": "37.5k",
       "impressionSharePct": 74,
-      "pageVisitsFromAds": 374,
-      "totalPageVisits": 723,
-      "pageVisitSharePct": 52,
+      "pageVisitsFromAds": 378,
+      "totalPageVisits": 703,
+      "pageVisitSharePct": 54,
       "leadsFromAds": 100,
-      "totalLeads": 145,
-      "leadSharePct": 69,
-      "adClicks": 312,
-      "avgCpc": 1.24,
-      "costPerLead": 4.31
+      "totalLeads": 139,
+      "leadSharePct": 72,
+      "adClicks": 303,
+      "avgCpc": 1.25,
+      "costPerLead": 4.07
     },
     "last12mo": {
-      "adLeads": 1365,
-      "organicLeads": 674,
-      "total": 2039,
+      "adLeads": 1370,
+      "organicLeads": 683,
+      "total": 2053,
       "adSharePct": 67,
       "organicSharePct": 33,
-      "forecast": 45,
-      "leadsBreakdown": "Ads 1,365 (67%) / Organic 674 (33%) / Total 2,039; forecast 45.",
+      "forecast": 37,
+      "leadsBreakdown": "Ads 1,370 (67%) / Organic 683 (33%) / Total 2,053; forecast 37.",
       "leadsBreakdownCarriedForward": false
     },
     "leadsByType12mo": [
@@ -742,10 +584,10 @@
       }
     ],
     "billingPeriod": {
-      "range": "Sep 1 - Sep 20, 2026",
-      "spend": 284.49,
-      "perDayAvg": 14.22,
-      "note": "LIVE. $284.49 across the first 20 days of September = $14.22/day against a $13/day average budget setting -- still running hot, essentially flat with the prior read."
+      "range": "Sep 1 - Sep 22, 2026",
+      "spend": 309.33,
+      "perDayAvg": 14.06,
+      "note": "LIVE. $309.33 over 22 days = $14.06/day vs $13/day avg budget setting -- still running slightly hot."
     },
     "budgetSetting": "$13/day average",
     "audienceSize": "Limited",
@@ -776,25 +618,25 @@
     "setupIncomplete": true,
     "setupRemainingItems": 1,
     "bonusBudgetRemaining": null,
-    "bonusBudgetNote": "No bonus budget line is present on either the Ad performance dashboard or Ad settings this run.",
+    "bonusBudgetNote": "Ad settings panel (bonus budget, audience size, keywords) not re-opened this run; values carried from 2026-09-21 read.",
     "yelpListingRating": 775,
     "yelpListingNote": "Yelp ad preview shows 4.0 stars / 775 reviews, unchanged from the last read.",
     "carriedForward": [],
-    "liveVerifiedThisRun": false,
-    "lastVerifiedLive": "2026-09-21T14:15:00Z",
+    "liveVerifiedThisRun": true,
+    "lastVerifiedLive": "2026-09-23T14:10:00Z",
     "staleHours": 0,
-    "note": "Live read 2026-09-21T14:15:00Z, both panels rendered. Last 30 days: 28.3k ad impressions (74% of 38.1k total), 374 page visits from ads (52% of 723), 100 leads from ads (69% of 145), 312 ad clicks, avg CPC $1.24, cost-per-lead $4.31. Billing period Sep 1-20 $284.49.",
-    "efficiencyNote": "The channel gap WIDENED this run. Yelp: $269.22 over 19 days delivered 102 ad leads at $4.41 each, CPC $1.26. Google: even after yesterday's much-improved $1.48 CPC, Google is still paying about 18% more per click and reporting 1.00 pending conversion for the day. Yelp remains the better-converting dollar despite sitting in a 'Limited' audience state it has not escaped in six runs.",
+    "note": "Live read 2026-09-23T14:05Z. Last 30d: 27.7k ad impressions (74% of 37.5k), 378 page visits from ads (54% of 703), 100 leads from ads (72% of 139), 303 ad clicks, CPC $1.25, cost/lead $4.07. Billing Sep 1-22 $309.33.",
+    "efficiencyNote": "Yelp $1.25 CPC / $4.07 per lead vs Google Sep 22 $1.07 CPC with 0 conversions. Google was cheaper per click yesterday, but Yelp still produces measurable leads.",
     "yelpReviewsNeedingAttention": 4,
     "inboxUnread": 15,
-    "carriedForwardThisRun": true,
-    "staleFlag": true,
-    "staleNote": "Browser access to biz.yelp.com was declined during this Tue Sep 22 ~7:15 AM run -- could not re-verify live. Figures below carried forward from the prior LIVE read (2026-09-21T14:15:00Z)."
+    "carriedForwardThisRun": false,
+    "staleFlag": false,
+    "staleNote": ""
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-09-21T11:15:00Z",
+    "lastUpdated": "2026-09-23T14:10:00Z",
     "actionable": false,
-    "adReports24h": 1,
+    "adReports24h": 0,
     "items": [
       {
         "type": "ad_performance",
@@ -806,7 +648,7 @@
         "note": "515 page visits from Tripadvisor Ads clicks, Aug 20-Sep 19 2026, a 66.97% increase in page traffic vs. organic. Promotional email, no action needed."
       }
     ],
-    "note": "No new TripAdvisor ad-performance email in the last 24-72h as of this Tue Sep 22 run; 515 page visits / +66.97% traffic figures (Aug 20-Sep 19 window) carried forward from the Sep 20 19:32Z email, still on file, no disapprovals or issues."
+    "note": "No TripAdvisor ad-performance email in last 24-48h (only mp1.tripadvisor.com consumer promos). 515 page visits / +66.97% figures (Aug 20-Sep 19) carried forward."
   },
   "reservations": {
     "lastUpdated": "2026-09-23",
@@ -1020,7 +862,7 @@
           "age": "1 week ago",
           "isNew": true,
           "severity": "positive",
-          "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
+          "text": "Awesome coffee shop, great customer service and top quality coffee\ud83d\udc4d\ud83c\udffc",
           "context": "LIVE from business.google.com/reviews 2026-09-22.",
           "draftReply": "Thanks so much, Levi! So glad the coffee and the service hit the mark -- see you again soon for another cup."
         },
@@ -1074,43 +916,43 @@
     "brunchHoursFlag": true,
     "brunchHoursNote": "The Brewhouse Google profile still shows Brunch hours (Sat 11-3, Sun 10-3). Brunch is discontinued -- remove the Brunch 'more hours' entry."
   },
-  "lastUpdated": "2026-09-23T11:05:00Z",
+  "lastUpdated": "2026-09-23T14:10:00Z",
   "toastPrevDay": {
-    "date": "Sunday, September 20",
-    "dateISO": "2026-09-20",
-    "net": 6441.35,
-    "netSales": 6441.35,
-    "gross": 6597.35,
-    "grossSales": 6597.35,
-    "guests": 269,
+    "date": "Monday, September 21",
+    "dateISO": "2026-09-21",
+    "net": 3363.22,
+    "netSales": 3363.22,
+    "gross": 3491.0,
+    "grossSales": 3491.0,
+    "guests": 252,
     "guestsDerived": false,
-    "orders": 176,
+    "orders": 102,
     "ordersDerived": false,
-    "checks": null,
-    "avgPerOrder": 36.6,
-    "avgOrder": 36.6,
-    "avgSalesPerOrder": 36.6,
-    "avgPerGuest": 23.95,
-    "avgSalesPerGuest": 23.95,
-    "avgPerCheck": null,
-    "avgCheck": null,
-    "laborPct": 21.6,
-    "laborPctOfNet": 21.6,
-    "laborCost": 1391.33,
-    "laborCostDerived": true,
+    "checks": 102,
+    "avgPerOrder": 32.97,
+    "avgOrder": 32.97,
+    "avgSalesPerOrder": 32.97,
+    "avgPerGuest": 13.35,
+    "avgSalesPerGuest": 13.35,
+    "avgPerCheck": 32.97,
+    "avgCheck": 32.97,
+    "laborPct": 25.3,
+    "laborPctOfNet": 25.3,
+    "laborCost": 849.75,
+    "laborCostDerived": false,
     "laborFlag": false,
     "laborSeverity": "ok",
-    "discounts": 158.34,
-    "discountsDerived": true,
-    "discountPct": 2.4,
+    "discounts": 127.78,
+    "discountsDerived": false,
+    "discountPct": 3.8,
     "deferredSales": 0.0,
     "giftCards": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": null,
+    "voidAmount": 6.0,
     "voidAmountDerived": false,
-    "voidItems": 11,
-    "voidOrders": null,
+    "voidItems": 1,
+    "voidOrders": 1,
     "cardPayments": 150,
     "openOrders": 0,
     "autoClockedOut": [],
@@ -1120,38 +962,126 @@
     "deliverySales": 0.0,
     "dineInOrders": 4,
     "dineInSales": 38.5,
-    "source": "Toast GROUP Daily Performance Summary (All Locations) received 2026-09-21T13:34Z for Sunday Sep 20 -- still the most recent Toast data as of this Tue Sep 22 ~7:15 AM run. No Mon Sep 21 or Tue Sep 22 summary has arrived yet.",
-    "partial": true,
-    "detailPending": true,
+    "source": "Toast single-location Daily Performance Summary received 2026-09-22T14:39Z for Monday Sep 21.",
+    "partial": false,
+    "detailPending": false,
     "pending": false,
-    "stale": true,
-    "lastUpdated": "2026-09-21T14:15:00Z",
-    "sdlw": null,
-    "fourWeekAvg": null,
-    "serviceType": [],
-    "revenueCenter": [],
-    "salesCategory": [],
+    "stale": false,
+    "lastUpdated": "2026-09-23T11:05:00Z",
+    "sdlw": {
+      "net": 4135.75,
+      "gross": 4239.75,
+      "guests": 158,
+      "orders": 116,
+      "laborPct": 25.0,
+      "laborCost": 1033.59
+    },
+    "fourWeekAvg": {
+      "net": 3268.34,
+      "gross": 3385.54,
+      "guests": 334,
+      "orders": 104,
+      "laborPct": 25.8,
+      "laborCost": 841.68
+    },
+    "serviceType": [
+      {
+        "name": "Dinner",
+        "net": 2462.9,
+        "pct": 73.2
+      },
+      {
+        "name": "Lunch",
+        "net": 511.12,
+        "pct": 15.1
+      },
+      {
+        "name": "Expresso Service",
+        "net": 389.2,
+        "pct": 11.5
+      }
+    ],
+    "revenueCenter": [
+      {
+        "name": "Dining Room",
+        "net": 2010.37,
+        "pct": 59.7
+      },
+      {
+        "name": "Patio",
+        "net": 584.4,
+        "pct": 17.3
+      },
+      {
+        "name": "Espresso Bar",
+        "net": 392.45,
+        "pct": 11.6
+      },
+      {
+        "name": "Front Patio",
+        "net": 376.0,
+        "pct": 11.1
+      }
+    ],
+    "salesCategory": [
+      {
+        "name": "Food",
+        "net": 1597.27,
+        "pct": 47.4
+      },
+      {
+        "name": "Draft Beer",
+        "net": 699.0,
+        "pct": 20.7
+      },
+      {
+        "name": "Liquor",
+        "net": 456.0,
+        "pct": 13.5
+      },
+      {
+        "name": "Espresso Service",
+        "net": 354.45,
+        "pct": 10.5
+      },
+      {
+        "name": "Wine",
+        "net": 133.0,
+        "pct": 3.9
+      },
+      {
+        "name": "Other",
+        "net": 123.5,
+        "pct": 3.6
+      }
+    ],
     "orderType": [],
-    "orderSource": [],
-    "netChangeVsPrevDayPct": -6.2,
-    "grossChangeVsPrevDayPct": -7.1,
-    "guestsChangeVsPrevDayPct": -3.2,
-    "ordersChangeVsPrevDayPct": -2.2,
-    "netChangeVsSDLWPct": null,
-    "grossChangeVsSDLWPct": null,
-    "guestsChangeVsSDLWPct": null,
-    "ordersChangeVsSDLWPct": null,
-    "netChangeVsPrev4Pct": null,
-    "comparison": "Partial. Sun Sep 20 vs Sat Sep 19 only. Same-day-last-week (Sun Sep 13) and the 4-Sunday average arrive with the detail email.",
-    "note": "SUN SEP 20 -- Group summary only; single-location detail pending."
+    "orderSource": [
+      {
+        "name": "In Store",
+        "net": 3363.22,
+        "pct": 100.0
+      }
+    ],
+    "netChangeVsPrevDayPct": -47.8,
+    "grossChangeVsPrevDayPct": -47.1,
+    "guestsChangeVsPrevDayPct": -6.3,
+    "ordersChangeVsPrevDayPct": -42.0,
+    "netChangeVsSDLWPct": -18.7,
+    "grossChangeVsSDLWPct": -17.7,
+    "guestsChangeVsSDLWPct": 59.5,
+    "ordersChangeVsSDLWPct": -12.1,
+    "netChangeVsPrev4Pct": 2.9,
+    "comparison": "Mon Sep 21 vs Mon Sep 14 (SDLW): net -18.7%, orders -12.1%. vs 4-Monday avg: net +2.9%.",
+    "note": "MON SEP 21 -- full single-location detail. Guest count (252) looks inflated vs orders (102) -> avg/guest $13.35 is unreliable; use avg/order $32.97."
   },
   "toastPending": {
     "date": "Tuesday, September 22",
-    "note": "Tue Sep 22 Toast summary not yet arrived as of ~4 AM PT Wed run; typically lands ~14:39Z (~7:40 AM PT).",
-    "lastChecked": "2026-09-23T11:05:00Z"
+    "note": "Headline numbers loaded from group summary; single-location detail (breakdowns, SDLW/4-wk comps) not yet arrived as of 14:07Z.",
+    "lastChecked": "2026-09-23T14:10:00Z"
   },
   "payroll": {
-    "lastUpdated": "2026-09-20T11:05:00Z",
+    "lastUpdated": "2026-09-23T14:10:00Z",
     "dueToday": false,
     "period": "Sep 6 - Sep 19, 2026",
     "dueDate": "2026-09-22",
@@ -1166,7 +1096,7 @@
     "actionItems": 2,
     "insights": 2,
     "resolved": false,
-    "severity": "high",
+    "severity": "critical",
     "actionItemsDetail": [
       {
         "item": "Unapproved tip pools",
@@ -1188,7 +1118,7 @@
       }
     ],
     "reviewUrl": "https://payroll.toasttab.com/sbbrewhouse/payroll/cb3be908-af7c-11f0-a967-02b7bc716955/paycycle/review",
-    "note": "CYCLE CLOSED. The Sep 6 - Sep 19 pay period ended yesterday (Sat Sep 19) and is DUE MONDAY SEP 22 -- tomorrow is the last clear working day. Not submitted as of this run. Prior cycle (Aug 23 - Sep 5) settled: $17,991.53 withdrawn on Sep 9. Standing cleanup items from last cycle: unapproved tip pools, auto-clockouts, 10 employees with no timesheets, 26 with no direct deposit.",
+    "note": "OVERDUE. Toast 'Payroll overdue!' email 2026-09-23T11:01Z: Default Payroll - BIWEEKLY (Sep 6-19) NOT STARTED, due Sep 22, check date Fri Sep 25. Employees may not be paid on time -- post immediately.",
     "withdrawalCompleted": false,
     "vendorOutreach": {
       "from": "Shelby, Toast Payroll Success Partner (payrollsuccess@toasttab.com)",
@@ -1196,14 +1126,14 @@
       "type": "account check-in / voicemail follow-up",
       "actionable": false
     },
-    "overdue": false,
-    "daysPastDue": 0,
+    "overdue": true,
+    "daysPastDue": 1,
     "payrollSaasFee": 644.0,
     "monthlySaasFee": 644.0,
     "employeeCount": 46,
     "withdrawalTime": "09:33 AM CST on Sep 9, 2026",
     "postedLate": true,
-    "carriedForwardThisRun": true,
+    "carriedForwardThisRun": false,
     "liveVerifiedThisRun": false
   },
   "toastSaturdayAug22": {
@@ -1533,15 +1463,23 @@
       "uncovered": 0,
       "overtime": 0,
       "cooks": 1
+    },
+    {
+      "date": "Tuesday, September 22",
+      "count": 7,
+      "shifts": 7,
+      "hours": 31.75,
+      "uncovered": 0,
+      "overtime": 0
     }
   ],
   "slingPending": {
-    "date": "Wednesday, September 23",
+    "date": "Thursday, September 24",
     "note": "Awaiting Sling daily report (~7 AM PT).",
-    "lastChecked": "2026-09-23T11:05:00Z"
+    "lastChecked": "2026-09-23T14:10:00Z"
   },
   "toastPartial": {
-    "resolved": true,
-    "note": "Mon Sep 21 full detail loaded."
+    "resolved": false,
+    "note": "Tue Sep 22 loaded from group summary only; detail pending."
   }
 }
