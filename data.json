@@ -903,30 +903,29 @@
     "note": "No TripAdvisor ad-performance email in last 48h (Oct 3 run)."
   },
   "reservations": {
-    "lastUpdated": "2026-10-29",
+    "lastUpdated": "2026-10-30",
     "source": "All Sources",
     "today": {
-      "date": "Thu, Oct 29",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Fri, Oct 30",
       "totalGuests": 0,
       "bookings": []
     },
-    "upcoming": [
-      {
-        "time": "4:00 PM",
-        "name": "Stacie Sharar",
-        "guests": 6,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(209) 765-5632",
-        "notes": "We have a dog. If that’s not allowed please let me know.",
-        "date": "Sat, Oct 31"
-      }
-    ]
+    "tomorrow": {
+      "date": "Sat, Oct 31",
+      "totalGuests": 6,
+      "bookings": [
+        {
+          "time": "4:00 PM",
+          "name": "Stacie Sharar",
+          "guests": 6,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(209) 765-5632",
+          "notes": "We have a dog. If that’s not allowed please let me know."
+        }
+      ]
+    },
+    "upcoming": []
   },
   "reviews": {
     "lastUpdated": "2026-10-03T11:15:00Z",
