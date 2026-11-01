@@ -1,10 +1,10 @@
 {
-  "date": "Saturday, October 3",
+  "date": "Sunday, November 1",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-10-03T11:15:00Z",
-    "runLabel": "SAT OCT 3, 4 AM PT MORNING BRIEF",
-    "headline": "SAT OCT 3 4 AM. SALES Thu Oct 1 net $3,496 (-32.7% SDLW, -27% vs 4-wk), 118 orders, 153 guests. LABOR 29.5%. REVIEWS: Brewhouse 15 unanswered (no new; Donald Clay illness claim + Marco 1* URGENT), Coffee 3 unanswered. Toast software invoice $1,099 autopays today.",
+    "runTime": "2026-11-01T15:06:32Z",
+    "runLabel": "SUN NOV 1 7 AM REFRESH",
+    "headline": "SAT OCT 31 net $7,737 (+21.4% SDLW), 192 orders, 289 guests, labor 29.3%. Google Ads/Yelp not refreshed (Chrome pages hung).",
     "resolvedThisRun": [
       "Thu Oct 1 Toast single-location detail + SDLW comps loaded.",
       "Fri Oct 2 Sling schedule loaded.",
@@ -17,82 +17,83 @@
     ]
   },
   "toast": {
-    "date": "Thursday, October 1",
-    "dateISO": "2026-10-01",
-    "net": 3496.16,
-    "netSales": 3496.16,
-    "gross": 3698.21,
-    "grossSales": 3698.21,
-    "guests": 153,
+    "date": "Saturday, October 31",
+    "dateISO": "2026-10-31",
+    "net": 7737.15,
+    "netSales": 7737.15,
+    "gross": 7969.15,
+    "grossSales": 7969.15,
+    "guests": 289,
     "guestsDerived": false,
-    "orders": 118,
+    "orders": 192,
     "ordersDerived": false,
-    "checks": 118,
-    "avgPerOrder": 29.63,
-    "avgOrder": 29.63,
-    "avgSalesPerOrder": 29.63,
-    "avgPerGuest": 22.85,
-    "avgSalesPerGuest": 22.85,
-    "avgPerCheck": 29.63,
-    "avgCheck": 29.63,
-    "laborPct": 29.5,
-    "laborPctOfNet": 29.5,
-    "laborCost": 1030.4,
+    "checks": 218,
+    "avgPerOrder": 40.3,
+    "avgOrder": 40.3,
+    "avgSalesPerOrder": 40.3,
+    "avgPerGuest": 26.77,
+    "avgSalesPerGuest": 26.77,
+    "avgPerCheck": 35.49,
+    "avgCheck": 35.49,
+    "laborPct": 29.3,
+    "laborPctOfNet": 29.3,
+    "laborCost": 2265.35,
     "laborCostDerived": false,
     "laborFlag": true,
     "laborSeverity": "watch",
-    "discounts": 202.05,
+    "discounts": 232.0,
     "discountsDerived": false,
-    "discountPct": 5.5,
+    "discountPct": 3.0,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": 50.5,
+    "voidAmount": 72.25,
     "voidAmountDerived": false,
-    "voidItems": 5,
-    "voidOrders": 5,
-    "takeoutSales": 0.0,
+    "voidItems": 9,
+    "voidOrders": 6,
+    "takeoutSales": 17.25,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-10-02T14:39Z",
+    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-01T14:40Z",
     "partial": false,
     "detailPending": false,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-10-03T11:15:00Z",
+    "lastUpdated": "2026-11-01T15:06:32Z",
     "sdlw": {
-      "net": 5198.5,
-      "gross": 5346.0,
-      "guests": 199,
-      "orders": 131,
-      "laborPct": 18.2,
-      "laborCost": 948.11,
-      "discounts": 147.5,
-      "voids": 68.0
+      "net": 6373.57,
+      "gross": 6685.8,
+      "guests": 262,
+      "orders": 178,
+      "laborPct": 27.2,
+      "laborCost": 1732.91,
+      "discounts": 312.23,
+      "voids": 63.75
     },
     "fourWeekAvg": {
-      "net": 4792.26,
-      "gross": 4972.68,
-      "guests": 187,
-      "orders": 131,
-      "laborPct": 23.6,
-      "laborCost": 1130.87
+      "net": 7699.61,
+      "gross": 8065.22,
+      "guests": 305,
+      "orders": 195,
+      "laborPct": 21.7,
+      "laborCost": 1669.32
     },
     "serviceType": [
       {
         "name": "Dinner",
-        "net": 2027.45,
-        "pct": 57.9
+        "net": 5530.9
       },
       {
         "name": "Lunch",
-        "net": 1335.2,
-        "pct": 38.1
+        "net": 1931.75
       },
       {
         "name": "Expresso Service",
-        "net": 133.51,
-        "pct": 3.8
+        "net": 244.5
+      },
+      {
+        "name": "Late Night",
+        "net": 30.0
       }
     ],
     "revenueCenter": [
@@ -186,91 +187,92 @@
       }
     ],
     "netChangeVsPrevDayPct": -8.0,
-    "netChangeVsSDLWPct": -32.7,
-    "netChangeVsPrev4Pct": -27.0,
-    "grossChangeVsSDLWPct": -30.8,
-    "guestsChangeVsSDLWPct": -23.1,
-    "ordersChangeVsSDLWPct": -9.9,
-    "comparison": "Thu Oct 1 vs Thu Sep 24 (SDLW) and prior-4-Thursday avg",
-    "note": "Weak Thursday: net $3,496 (-32.7% SDLW, -27.0% vs 4-wk). Labor 29.5% vs 18.2% SDLW. Avg check $29.63 (-25% SDLW). Front Patio only $117 (vs $723 Wed). Third straight soft weekday vs SDLW except Tue."
+    "netChangeVsSDLWPct": 21.4,
+    "netChangeVsPrev4Pct": 0.5,
+    "grossChangeVsSDLWPct": 19.2,
+    "guestsChangeVsSDLWPct": 10.3,
+    "ordersChangeVsSDLWPct": 7.9,
+    "comparison": "Sat Oct 31 vs Sat Oct 24 (SDLW) and prior-4-Saturday avg",
+    "note": "Sat Oct 31: net $7,737 (+21.4% SDLW, +0.5% vs 4-wk). Labor 29.3% vs 27.2% SDLW / 21.7% 4-wk."
   },
   "toastLastKnown": {
-    "date": "Thursday, October 1",
-    "dateISO": "2026-10-01",
-    "net": 3496.16,
-    "netSales": 3496.16,
-    "gross": 3698.21,
-    "grossSales": 3698.21,
-    "guests": 153,
+    "date": "Saturday, October 31",
+    "dateISO": "2026-10-31",
+    "net": 7737.15,
+    "netSales": 7737.15,
+    "gross": 7969.15,
+    "grossSales": 7969.15,
+    "guests": 289,
     "guestsDerived": false,
-    "orders": 118,
+    "orders": 192,
     "ordersDerived": false,
-    "checks": 118,
-    "avgPerOrder": 29.63,
-    "avgOrder": 29.63,
-    "avgSalesPerOrder": 29.63,
-    "avgPerGuest": 22.85,
-    "avgSalesPerGuest": 22.85,
-    "avgPerCheck": 29.63,
-    "avgCheck": 29.63,
-    "laborPct": 29.5,
-    "laborPctOfNet": 29.5,
-    "laborCost": 1030.4,
+    "checks": 218,
+    "avgPerOrder": 40.3,
+    "avgOrder": 40.3,
+    "avgSalesPerOrder": 40.3,
+    "avgPerGuest": 26.77,
+    "avgSalesPerGuest": 26.77,
+    "avgPerCheck": 35.49,
+    "avgCheck": 35.49,
+    "laborPct": 29.3,
+    "laborPctOfNet": 29.3,
+    "laborCost": 2265.35,
     "laborCostDerived": false,
     "laborFlag": true,
     "laborSeverity": "watch",
-    "discounts": 202.05,
+    "discounts": 232.0,
     "discountsDerived": false,
-    "discountPct": 5.5,
+    "discountPct": 3.0,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": 50.5,
+    "voidAmount": 72.25,
     "voidAmountDerived": false,
-    "voidItems": 5,
-    "voidOrders": 5,
-    "takeoutSales": 0.0,
+    "voidItems": 9,
+    "voidOrders": 6,
+    "takeoutSales": 17.25,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-10-02T14:39Z",
+    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-01T14:40Z",
     "partial": false,
     "detailPending": false,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-10-03T11:15:00Z",
+    "lastUpdated": "2026-11-01T15:06:32Z",
     "sdlw": {
-      "net": 5198.5,
-      "gross": 5346.0,
-      "guests": 199,
-      "orders": 131,
-      "laborPct": 18.2,
-      "laborCost": 948.11,
-      "discounts": 147.5,
-      "voids": 68.0
+      "net": 6373.57,
+      "gross": 6685.8,
+      "guests": 262,
+      "orders": 178,
+      "laborPct": 27.2,
+      "laborCost": 1732.91,
+      "discounts": 312.23,
+      "voids": 63.75
     },
     "fourWeekAvg": {
-      "net": 4792.26,
-      "gross": 4972.68,
-      "guests": 187,
-      "orders": 131,
-      "laborPct": 23.6,
-      "laborCost": 1130.87
+      "net": 7699.61,
+      "gross": 8065.22,
+      "guests": 305,
+      "orders": 195,
+      "laborPct": 21.7,
+      "laborCost": 1669.32
     },
     "serviceType": [
       {
         "name": "Dinner",
-        "net": 2027.45,
-        "pct": 57.9
+        "net": 5530.9
       },
       {
         "name": "Lunch",
-        "net": 1335.2,
-        "pct": 38.1
+        "net": 1931.75
       },
       {
         "name": "Expresso Service",
-        "net": 133.51,
-        "pct": 3.8
+        "net": 244.5
+      },
+      {
+        "name": "Late Night",
+        "net": 30.0
       }
     ],
     "revenueCenter": [
@@ -364,25 +366,25 @@
       }
     ],
     "netChangeVsPrevDayPct": -8.0,
-    "netChangeVsSDLWPct": -32.7,
-    "netChangeVsPrev4Pct": -27.0,
-    "grossChangeVsSDLWPct": -30.8,
-    "guestsChangeVsSDLWPct": -23.1,
-    "ordersChangeVsSDLWPct": -9.9,
-    "comparison": "Thu Oct 1 vs Thu Sep 24 (SDLW) and prior-4-Thursday avg",
-    "note": "Weak Thursday: net $3,496 (-32.7% SDLW, -27.0% vs 4-wk). Labor 29.5% vs 18.2% SDLW. Avg check $29.63 (-25% SDLW). Front Patio only $117 (vs $723 Wed). Third straight soft weekday vs SDLW except Tue."
+    "netChangeVsSDLWPct": 21.4,
+    "netChangeVsPrev4Pct": 0.5,
+    "grossChangeVsSDLWPct": 19.2,
+    "guestsChangeVsSDLWPct": 10.3,
+    "ordersChangeVsSDLWPct": 7.9,
+    "comparison": "Sat Oct 31 vs Sat Oct 24 (SDLW) and prior-4-Saturday avg",
+    "note": "Sat Oct 31: net $7,737 (+21.4% SDLW, +0.5% vs 4-wk). Labor 29.3% vs 27.2% SDLW / 21.7% 4-wk."
   },
   "sling": {
-    "date": "Friday, October 2",
-    "count": 12,
-    "shifts": 12,
-    "hours": 55.75,
+    "date": "Thursday, October 29",
+    "count": 7,
+    "shifts": 7,
+    "hours": 35,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 2,
+    "employeesOff": 1,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
@@ -443,21 +445,21 @@
         "role": "Bartender"
       }
     ],
-    "note": "Fri Oct 2: 12 shifts / 55.75 hrs, 0 OT, 0 uncovered, 2 off. Maggie Burt 2 barista shifts (11 unique people). Only 1 cook on a Friday. Sat Oct 3 Sling report not yet arrived (~7 AM PT).",
-    "lastUpdated": "2026-10-03T11:15:00Z",
-    "source": "Sling daily report email 2026-10-02T14:00Z"
+    "note": "Latest Sling email found is Oct 29 (7 shifts / 35 hrs, 0 OT, 0 uncovered, 1 off). No Sling report for Oct 31-Nov 1 in Gmail.",
+    "lastUpdated": "2026-11-01T15:06:32Z",
+    "source": "Sling daily report email 2026-10-29T14:00Z"
   },
   "slingLastKnown": {
-    "date": "Friday, October 2",
-    "count": 12,
-    "shifts": 12,
-    "hours": 55.75,
+    "date": "Thursday, October 29",
+    "count": 7,
+    "shifts": 7,
+    "hours": 35,
     "uncovered": 0,
     "overtime": 0,
-    "employeesOff": 2,
+    "employeesOff": 1,
     "pending": false,
     "nextDayPending": true,
-    "stale": false,
+    "stale": true,
     "kitchenCoverageFlag": true,
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
@@ -518,9 +520,9 @@
         "role": "Bartender"
       }
     ],
-    "note": "Fri Oct 2: 12 shifts / 55.75 hrs, 0 OT, 0 uncovered, 2 off. Maggie Burt 2 barista shifts (11 unique people). Only 1 cook on a Friday. Sat Oct 3 Sling report not yet arrived (~7 AM PT).",
-    "lastUpdated": "2026-10-03T11:15:00Z",
-    "source": "Sling daily report email 2026-10-02T14:00Z"
+    "note": "Latest Sling email found is Oct 29 (7 shifts / 35 hrs, 0 OT, 0 uncovered, 1 off). No Sling report for Oct 31-Nov 1 in Gmail.",
+    "lastUpdated": "2026-11-01T15:06:32Z",
+    "source": "Sling daily report email 2026-10-29T14:00Z"
   },
   "slingToday": {
     "date": "Thursday, October 1",
@@ -711,7 +713,7 @@
     "notificationsLast24h": 2,
     "disapprovalsLast24h": 0,
     "notificationsNote": "2 report-ready emails in last 24h (Campaign performance 12:31Z, Brewhouse Daily Campaign Report 15:48Z on Sep 28). No disapprovals or budget alerts.",
-    "liveVerifiedThisRun": true,
+    "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-09-28T14:23:08Z",
     "customerId": "343-687-4835",
     "consecutiveDaysOverBudget": 0,
@@ -774,16 +776,17 @@
       }
     ],
     "budgetAlerts24h": 0,
-    "runNote": "Sep 20 7 AM run: account READ LIVE at ads.google.com (customer 343-687-4835), date range Yesterday. Headline is the budget: $39.88 vs $40.00/day ends a 10-day overspend streak, and it happened while impressions went UP -- avg CPC nearly halved to $1.48.",
+    "runNote": "Nov 1 run: ads.google.com page never reached idle in Chrome; metrics carried forward from last live read 2026-09-28T14:23:08Z",
     "overBudgetFlag": false,
     "overspendStreakBroken": true,
     "note": "LIVE read 2026-09-28T14:23:08Z (Yesterday = Sep 27).",
     "emailCheckOnly": true,
     "emailCheckNote": "Oct 1 run: 2 report-ready emails (Brewhouse Daily Campaign Report, Campaign performance), no disapprovals or budget alerts.",
-    "carriedForwardThisRun": false,
+    "carriedForwardThisRun": true,
     "reportEmails48h": 4,
     "notice": "Google Ads email Oct 1: automated promotions extracted from location assets start Oct 12, 2026 -- review/opt out if you don't want auto-promos (check none reference discontinued Brunch).",
-    "noticeLastUpdated": "2026-10-03T11:15:00Z"
+    "noticeLastUpdated": "2026-10-03T11:15:00Z",
+    "staleFlag": true
   },
   "yelpAds": {
     "lastUpdated": "2026-09-28T14:23:08Z -- LIVE, biz.yelp.com Ad performance",
@@ -874,19 +877,19 @@
     "yelpListingRating": 775,
     "yelpListingNote": "Yelp ad preview shows 4.0 stars / 775 reviews, unchanged from the last read.",
     "carriedForward": [],
-    "liveVerifiedThisRun": true,
+    "liveVerifiedThisRun": false,
     "lastVerifiedLive": "2026-09-28T14:23:08Z",
     "staleHours": 0,
     "note": "Live read 2026-09-28T14:23:08Z. Last 30d: 29k ad impressions (75% of 38.9k), 385 page visits from ads (54% of 715), 94 leads from ads (72% of 131), 316 ad clicks.",
     "efficiencyNote": "Yelp $1.25 CPC / $4.07 per lead vs Google Sep 22 $1.07 CPC with 0 conversions. Google was cheaper per click yesterday, but Yelp still produces measurable leads.",
     "yelpReviewsNeedingAttention": 4,
     "inboxUnread": 15,
-    "carriedForwardThisRun": false,
-    "staleFlag": false,
-    "staleNote": ""
+    "carriedForwardThisRun": true,
+    "staleFlag": true,
+    "staleNote": "Nov 1 run: biz.yelp.com page never reached idle in Chrome; carried forward from 2026-09-28T14:23:08Z"
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-10-03T11:15:00Z",
+    "lastUpdated": "2026-11-01T15:06:32Z",
     "actionable": false,
     "adReports24h": 0,
     "items": [
@@ -900,7 +903,7 @@
         "note": "515 page visits from Tripadvisor Ads clicks, Aug 20-Sep 19 2026, a 66.97% increase in page traffic vs. organic. Promotional email, no action needed."
       }
     ],
-    "note": "No TripAdvisor ad-performance email in last 48h (Oct 3 run)."
+    "note": "No TripAdvisor ad-performance email in last 48h (Nov 1 run)."
   },
   "reservations": {
     "lastUpdated": "2026-11-01",
@@ -1093,7 +1096,7 @@
           "age": "3 weeks ago",
           "isNew": true,
           "severity": "positive",
-          "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
+          "text": "Awesome coffee shop, great customer service and top quality coffee\ud83d\udc4d\ud83c\udffc",
           "context": "LIVE from business.google.com/reviews 2026-09-22.",
           "draftReply": "Thanks so much, Levi! So glad the coffee and the service hit the mark -- see you again soon for another cup."
         },
@@ -1155,7 +1158,7 @@
     "brunchHoursNote": "Carried from 2026-10-02 live check: The Brewhouse Google profile still shows Brunch hours (Sat 11 AM-3 PM, Sun 10 AM-3 PM). Brunch is discontinued -- remove from GBP hours. Not re-verified 2026-10-03.",
     "brunchHoursLastVerified": "2026-10-02T11:20:00Z"
   },
-  "lastUpdated": "2026-10-03T11:15:00Z",
+  "lastUpdated": "2026-11-01T15:06:32Z",
   "toastPrevDay": {
     "date": "Wednesday, September 30",
     "dateISO": "2026-09-30",
@@ -1198,7 +1201,7 @@
     "partial": false,
     "detailPending": false,
     "pending": false,
-    "stale": false,
+    "stale": true,
     "lastUpdated": "2026-10-02T11:20:00Z",
     "sdlw": {
       "net": 5115.05,
@@ -1327,7 +1330,7 @@
     "guestsChangeVsSDLWPct": 30.2,
     "ordersChangeVsSDLWPct": -8.5,
     "comparison": "Wed Sep 30 vs Wed Sep 23 (SDLW) and prior-4-Wednesday avg",
-    "note": "Soft Wednesday: net $3,799 (-25.7% SDLW, -12.1% vs 4-wk). Labor 31.2% (above 4-wk 28.5%). Guests 267 vs 107 orders ($14.23/guest) looks like a guest-count entry issue. Draft beer only $659."
+    "note": "STALE (Sep 30). Not refreshed by Nov 1 run."
   },
   "toastPending": {
     "date": "Friday, October 2",
