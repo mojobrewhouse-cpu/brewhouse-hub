@@ -906,30 +906,29 @@
     "note": "No TripAdvisor ad-performance email in last 48h (Nov 1 run)."
   },
   "reservations": {
-    "lastUpdated": "2026-11-02",
+    "lastUpdated": "2026-11-03",
     "source": "All Sources",
     "today": {
-      "date": "Mon, Nov 2",
-      "totalGuests": 0,
-      "bookings": []
-    },
-    "tomorrow": {
       "date": "Tue, Nov 3",
       "totalGuests": 0,
       "bookings": []
     },
-    "upcoming": [
-      {
-        "time": "6:00 PM",
-        "name": "Kelly Long",
-        "guests": 2,
-        "status": "confirmed",
-        "source": "SpotHopper",
-        "phone": "(831) 818-4056",
-        "notes": "THIS IS TO RESERVE FOR THE TEQUILA TASTING :)",
-        "date": "Wed, Nov 4"
-      }
-    ]
+    "tomorrow": {
+      "date": "Wed, Nov 4",
+      "totalGuests": 2,
+      "bookings": [
+        {
+          "time": "6:00 PM",
+          "name": "Kelly Long",
+          "guests": 2,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(831) 818-4056",
+          "notes": "THIS IS TO RESERVE FOR THE TEQUILA TASTING :)"
+        }
+      ]
+    },
+    "upcoming": []
   },
   "reviews": {
     "lastUpdated": "2026-10-03T11:15:00Z",
