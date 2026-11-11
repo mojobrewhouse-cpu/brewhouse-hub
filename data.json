@@ -1,295 +1,341 @@
 {
-  "date": "Saturday, November 7",
+  "date": "Wednesday, November 11",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-11-07T15:05:00Z",
-    "runLabel": "SAT NOV 7 REFRESH (cloud session via desktop shell)",
-    "headline": "FRI NOV 6 net $5,689 (group summary), 230 guests, 146 orders, labor 27.6%. Single-location detail/SDLW pending. Yelp login expired; Sling email missing.",
+    "runTime": "2026-11-11T15:56:41Z",
+    "runLabel": "WED NOV 11 REFRESH",
+    "headline": "TUE NOV 10 net $3,656 (+21% vs SDLW), 140 guests, 94 orders, labor 25.6%. All Google Ads campaigns paused. Yelp login expired.",
     "resolvedThisRun": [
-      "Fri Nov 6 Toast group summary loaded.",
-      "Google Ads live read: $0 / 0 impressions."
+      "Toast Nov 10 single-location detail + SDLW comps loaded (Nov 9 as prev day).",
+      "Sling Nov 11 schedule loaded (7 staff, 32.5 hrs, no OT).",
+      "Google Ads live read: all 6 campaigns paused, $0."
     ],
     "notResolvedThisRun": [
-      "Toast Nov 6 single-location detail + SDLW comps not yet received.",
       "Yelp Ads scrape failed: biz.yelp.com requires re-login.",
-      "No Sling email since Oct 29."
+      "Toast Nov 7-8 not backfilled."
     ]
   },
   "toast": {
-    "date": "Friday, November 6",
-    "dateISO": "2026-11-06",
-    "net": 5689.2,
-    "netSales": 5689.2,
-    "gross": 5871.2,
-    "grossSales": 5871.2,
-    "guests": 230,
+    "date": "Tuesday, November 10",
+    "dateISO": "2026-11-10",
+    "net": 3656.25,
+    "netSales": 3656.25,
+    "gross": 3756.25,
+    "grossSales": 3756.25,
+    "guests": 140,
     "guestsDerived": false,
-    "orders": 146,
+    "orders": 94,
     "ordersDerived": false,
-    "checks": null,
-    "avgPerOrder": 38.97,
-    "avgOrder": 38.97,
-    "avgSalesPerOrder": 38.97,
-    "avgPerGuest": 24.74,
-    "avgSalesPerGuest": 24.74,
-    "avgPerCheck": null,
-    "avgCheck": null,
-    "laborPct": 27.6,
-    "laborPctOfNet": 27.6,
-    "laborCost": 1570.22,
-    "laborCostDerived": true,
+    "checks": 112,
+    "avgPerOrder": 38.9,
+    "avgOrder": 38.9,
+    "avgSalesPerOrder": 38.9,
+    "avgPerGuest": 26.12,
+    "avgSalesPerGuest": 26.12,
+    "avgPerCheck": 32.65,
+    "avgCheck": 32.65,
+    "laborPct": 25.6,
+    "laborPctOfNet": 25.6,
+    "laborCost": 934.69,
+    "laborCostDerived": false,
     "laborFlag": false,
     "laborSeverity": "ok",
-    "discounts": 182.01,
-    "discountPct": 3.1,
+    "discounts": 100.0,
+    "discountPct": 2.7,
+    "discountsDerived": false,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": null,
+    "voidAmount": 31.0,
     "voidAmountDerived": false,
     "voidItems": 3,
-    "voidOrders": null,
+    "voidOrders": 2,
     "takeoutSales": 0.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "source": "Toast group Daily Performance Summary (All Locations) received 2026-11-07T14:33Z; single-location detail email not yet received",
-    "partial": true,
-    "detailPending": true,
+    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-11T15:40Z",
+    "partial": false,
+    "detailPending": false,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-07T15:05:00Z",
-    "sdlw": null,
-    "fourWeekAvg": null,
-    "serviceType": [],
-    "revenueCenter": [],
-    "salesCategory": [],
-    "orderType": [],
-    "orderSource": [],
-    "comparison": "Fri Nov 6 - SDLW/4-wk comps pending single-location email",
-    "netChangeVsPrevDayPct": 81.9,
-    "note": "Fri Nov 6: net $5,689 (gross $5,871). 230 guests, 146 orders, labor 27.6% of net. 1 open order; 7 users auto-clocked out. SDLW comps and breakdowns pending.",
-    "netChangeVsSDLWPct": null,
-    "netChangeVsPrev4Pct": null,
-    "grossChangeVsSDLWPct": null,
-    "guestsChangeVsSDLWPct": null,
-    "ordersChangeVsSDLWPct": null,
-    "discountsDerived": true
+    "lastUpdated": "2026-11-11T15:56:41Z",
+    "sdlw": {
+      "net": 3019.65,
+      "gross": 3184.15,
+      "guests": 121,
+      "orders": 78,
+      "checks": 82,
+      "laborPct": 41.5,
+      "laborCost": 1254.49,
+      "discounts": 164.5,
+      "voids": 9.0
+    },
+    "fourWeekAvg": {
+      "net": 3478.14,
+      "gross": 3624.16,
+      "guests": 139,
+      "orders": 94,
+      "checks": 97,
+      "laborPct": 32.3,
+      "laborCost": 1122.28
+    },
+    "serviceType": [
+      {
+        "name": "Dinner",
+        "net": 2706.25,
+        "pct": 74.0
+      },
+      {
+        "name": "Lunch",
+        "net": 950.0,
+        "pct": 25.9
+      }
+    ],
+    "revenueCenter": [
+      {
+        "name": "Dining Room",
+        "net": 2589.75,
+        "pct": 70.8
+      },
+      {
+        "name": "Back Room",
+        "net": 533.0,
+        "pct": 14.5
+      },
+      {
+        "name": "Patio",
+        "net": 345.0,
+        "pct": 9.4
+      },
+      {
+        "name": "Front Patio",
+        "net": 188.5,
+        "pct": 5.1
+      }
+    ],
+    "salesCategory": [
+      {
+        "name": "Food",
+        "net": 1744.75,
+        "pct": 47.7
+      },
+      {
+        "name": "Liquor",
+        "net": 823.0,
+        "pct": 22.5
+      },
+      {
+        "name": "Draft Beer",
+        "net": 805.5,
+        "pct": 22.0
+      },
+      {
+        "name": "Wine",
+        "net": 179.0,
+        "pct": 4.8
+      },
+      {
+        "name": "No sales category",
+        "net": 63.0,
+        "pct": 1.7
+      },
+      {
+        "name": "NA Beverage",
+        "net": 29.0,
+        "pct": 0.7
+      },
+      {
+        "name": "Bottled Beer",
+        "net": 12.0,
+        "pct": 0.3
+      }
+    ],
+    "orderType": [
+      {
+        "name": "No Dining Option Behavior",
+        "net": 3656.25,
+        "pct": 100.0
+      }
+    ],
+    "orderSource": [
+      {
+        "name": "In Store",
+        "net": 3656.25,
+        "pct": 100.0
+      }
+    ],
+    "comparison": "Tue Nov 10 vs SDLW: net +21.1%, guests +15.7%, orders +20.5%; vs 4-wk avg net +5.1%. Labor 25.6% (SDLW 41.5%).",
+    "netChangeVsPrevDayPct": -14.4,
+    "netChangeVsSDLWPct": 21.1,
+    "netChangeVsPrev4Pct": 5.1,
+    "grossChangeVsSDLWPct": 18.0,
+    "guestsChangeVsSDLWPct": 15.7,
+    "ordersChangeVsSDLWPct": 20.5,
+    "note": "Tue Nov 10: net $3,656 (+21.1% vs SDLW, +5.1% vs 4-wk). 140 guests, 94 orders, labor 25.6% of net ($935)."
   },
   "toastLastKnown": {
-    "date": "Friday, November 6",
-    "dateISO": "2026-11-06",
-    "net": 5689.2,
-    "netSales": 5689.2,
-    "gross": 5871.2,
-    "grossSales": 5871.2,
-    "guests": 230,
+    "date": "Tuesday, November 10",
+    "dateISO": "2026-11-10",
+    "net": 3656.25,
+    "netSales": 3656.25,
+    "gross": 3756.25,
+    "grossSales": 3756.25,
+    "guests": 140,
     "guestsDerived": false,
-    "orders": 146,
+    "orders": 94,
     "ordersDerived": false,
-    "checks": null,
-    "avgPerOrder": 38.97,
-    "avgOrder": 38.97,
-    "avgSalesPerOrder": 38.97,
-    "avgPerGuest": 24.74,
-    "avgSalesPerGuest": 24.74,
-    "avgPerCheck": null,
-    "avgCheck": null,
-    "laborPct": 27.6,
-    "laborPctOfNet": 27.6,
-    "laborCost": 1570.22,
-    "laborCostDerived": true,
+    "checks": 112,
+    "avgPerOrder": 38.9,
+    "avgOrder": 38.9,
+    "avgSalesPerOrder": 38.9,
+    "avgPerGuest": 26.12,
+    "avgSalesPerGuest": 26.12,
+    "avgPerCheck": 32.65,
+    "avgCheck": 32.65,
+    "laborPct": 25.6,
+    "laborPctOfNet": 25.6,
+    "laborCost": 934.69,
+    "laborCostDerived": false,
     "laborFlag": false,
     "laborSeverity": "ok",
-    "discounts": 182.01,
-    "discountPct": 3.1,
+    "discounts": 100.0,
+    "discountPct": 2.7,
+    "discountsDerived": false,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": null,
+    "voidAmount": 31.0,
     "voidAmountDerived": false,
     "voidItems": 3,
-    "voidOrders": null,
+    "voidOrders": 2,
     "takeoutSales": 0.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "source": "Toast group Daily Performance Summary (All Locations) received 2026-11-07T14:33Z; single-location detail email not yet received",
-    "partial": true,
-    "detailPending": true,
+    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-11T15:40Z",
+    "partial": false,
+    "detailPending": false,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-07T15:05:00Z",
-    "sdlw": null,
-    "fourWeekAvg": null,
-    "serviceType": [],
-    "revenueCenter": [],
-    "salesCategory": [],
-    "orderType": [],
-    "orderSource": [],
-    "comparison": "Fri Nov 6 - SDLW/4-wk comps pending single-location email",
-    "netChangeVsPrevDayPct": 81.9,
-    "note": "Fri Nov 6: net $5,689 (gross $5,871). 230 guests, 146 orders, labor 27.6% of net. 1 open order; 7 users auto-clocked out. SDLW comps and breakdowns pending.",
-    "netChangeVsSDLWPct": null,
-    "netChangeVsPrev4Pct": null,
-    "grossChangeVsSDLWPct": null,
-    "guestsChangeVsSDLWPct": null,
-    "ordersChangeVsSDLWPct": null,
-    "discountsDerived": true
+    "lastUpdated": "2026-11-11T15:56:41Z",
+    "sdlw": {
+      "net": 3019.65,
+      "gross": 3184.15,
+      "guests": 121,
+      "orders": 78,
+      "checks": 82,
+      "laborPct": 41.5,
+      "laborCost": 1254.49,
+      "discounts": 164.5,
+      "voids": 9.0
+    },
+    "fourWeekAvg": {
+      "net": 3478.14,
+      "gross": 3624.16,
+      "guests": 139,
+      "orders": 94,
+      "checks": 97,
+      "laborPct": 32.3,
+      "laborCost": 1122.28
+    },
+    "serviceType": [
+      {
+        "name": "Dinner",
+        "net": 2706.25,
+        "pct": 74.0
+      },
+      {
+        "name": "Lunch",
+        "net": 950.0,
+        "pct": 25.9
+      }
+    ],
+    "revenueCenter": [
+      {
+        "name": "Dining Room",
+        "net": 2589.75,
+        "pct": 70.8
+      },
+      {
+        "name": "Back Room",
+        "net": 533.0,
+        "pct": 14.5
+      },
+      {
+        "name": "Patio",
+        "net": 345.0,
+        "pct": 9.4
+      },
+      {
+        "name": "Front Patio",
+        "net": 188.5,
+        "pct": 5.1
+      }
+    ],
+    "salesCategory": [
+      {
+        "name": "Food",
+        "net": 1744.75,
+        "pct": 47.7
+      },
+      {
+        "name": "Liquor",
+        "net": 823.0,
+        "pct": 22.5
+      },
+      {
+        "name": "Draft Beer",
+        "net": 805.5,
+        "pct": 22.0
+      },
+      {
+        "name": "Wine",
+        "net": 179.0,
+        "pct": 4.8
+      },
+      {
+        "name": "No sales category",
+        "net": 63.0,
+        "pct": 1.7
+      },
+      {
+        "name": "NA Beverage",
+        "net": 29.0,
+        "pct": 0.7
+      },
+      {
+        "name": "Bottled Beer",
+        "net": 12.0,
+        "pct": 0.3
+      }
+    ],
+    "orderType": [
+      {
+        "name": "No Dining Option Behavior",
+        "net": 3656.25,
+        "pct": 100.0
+      }
+    ],
+    "orderSource": [
+      {
+        "name": "In Store",
+        "net": 3656.25,
+        "pct": 100.0
+      }
+    ],
+    "comparison": "Tue Nov 10 vs SDLW: net +21.1%, guests +15.7%, orders +20.5%; vs 4-wk avg net +5.1%. Labor 25.6% (SDLW 41.5%).",
+    "netChangeVsPrevDayPct": -14.4,
+    "netChangeVsSDLWPct": 21.1,
+    "netChangeVsPrev4Pct": 5.1,
+    "grossChangeVsSDLWPct": 18.0,
+    "guestsChangeVsSDLWPct": 15.7,
+    "ordersChangeVsSDLWPct": 20.5,
+    "note": "Tue Nov 10: net $3,656 (+21.1% vs SDLW, +5.1% vs 4-wk). 140 guests, 94 orders, labor 25.6% of net ($935)."
   },
   "sling": {
-    "date": "Thursday, October 29",
+    "date": "Wednesday, November 11",
     "count": 7,
     "shifts": 7,
-    "hours": 35,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 1,
-    "pending": false,
-    "nextDayPending": true,
-    "stale": true,
-    "kitchenCoverageFlag": true,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "bartendersScheduled": 3,
-    "serversScheduled": 4,
-    "baristasScheduled": 3,
-    "bussersScheduled": 1,
-    "barbacksScheduled": 0,
-    "managersScheduled": 0,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Bartender"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "James Hernadez",
-        "role": "Server"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Bartender"
-      }
-    ],
-    "note": "No Sling email in last 3 days (Nov 7 run); latest known Oct 29. Check Sling directly.",
-    "lastUpdated": "2026-11-01T15:06:32Z",
-    "source": "Sling daily report email 2026-10-29T14:00Z"
-  },
-  "slingLastKnown": {
-    "date": "Thursday, October 29",
-    "count": 7,
-    "shifts": 7,
-    "hours": 35,
-    "uncovered": 0,
-    "overtime": 0,
-    "employeesOff": 1,
-    "pending": false,
-    "nextDayPending": true,
-    "stale": true,
-    "kitchenCoverageFlag": true,
-    "kitchenCoverageSeverity": "watch",
-    "cooksScheduled": 1,
-    "bartendersScheduled": 3,
-    "serversScheduled": 4,
-    "baristasScheduled": 3,
-    "bussersScheduled": 1,
-    "barbacksScheduled": 0,
-    "managersScheduled": 0,
-    "overtimeFlag": false,
-    "staff": [
-      {
-        "name": "Isael Salvador Narciso",
-        "role": "Cook"
-      },
-      {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
-        "name": "Maggie Burt",
-        "role": "Barista"
-      },
-      {
-        "name": "Julianna Ornelas",
-        "role": "Barista"
-      },
-      {
-        "name": "Christine Vargas",
-        "role": "Bartender"
-      },
-      {
-        "name": "Augustine Arroyo",
-        "role": "Server"
-      },
-      {
-        "name": "James Hernadez",
-        "role": "Server"
-      },
-      {
-        "name": "Katharine Brown",
-        "role": "Bartender"
-      },
-      {
-        "name": "Gabriel Lopez galindo",
-        "role": "Server"
-      },
-      {
-        "name": "Bri Kelley",
-        "role": "Server"
-      },
-      {
-        "name": "Cal Carter",
-        "role": "Busser"
-      },
-      {
-        "name": "Fred De Leon",
-        "role": "Bartender"
-      }
-    ],
-    "note": "No Sling email in last 2 days (Nov 4 run); latest known Oct 29. Check Sling directly.",
-    "lastUpdated": "2026-11-01T15:06:32Z",
-    "source": "Sling daily report email 2026-10-29T14:00Z"
-  },
-  "slingToday": {
-    "date": "Thursday, October 1",
-    "count": 9,
-    "shifts": 9,
-    "hours": 35,
+    "hours": 32.5,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -300,19 +346,19 @@
     "kitchenCoverageSeverity": "watch",
     "cooksScheduled": 1,
     "bartendersScheduled": 2,
-    "serversScheduled": 3,
+    "serversScheduled": 2,
     "baristasScheduled": 1,
     "bussersScheduled": 1,
-    "barbacksScheduled": 1,
+    "barbacksScheduled": 0,
     "managersScheduled": 0,
     "overtimeFlag": false,
     "staff": [
       {
-        "name": "Rafael Patricio",
+        "name": "Isael Salvador Narciso",
         "role": "Cook"
       },
       {
-        "name": "Sarah Palmer",
+        "name": "Emily Lanzel",
         "role": "Barista"
       },
       {
@@ -320,11 +366,11 @@
         "role": "Bartender"
       },
       {
-        "name": "Christine Vargas",
+        "name": "Julianna Ornelas",
         "role": "Server"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Andrew Turner",
         "role": "Bartender"
       },
       {
@@ -332,27 +378,129 @@
         "role": "Server"
       },
       {
-        "name": "Bri Kelley",
+        "name": "James Hernadez",
+        "role": "Busser"
+      }
+    ],
+    "note": "Wed Nov 11: 7 scheduled, 32.5 hrs, 0 uncovered, 0 OT. Only 1 cook scheduled.",
+    "lastUpdated": "2026-11-11T15:56:41Z",
+    "source": "Sling daily report email 2026-11-11T15:00Z"
+  },
+  "slingLastKnown": {
+    "date": "Wednesday, November 11",
+    "count": 7,
+    "shifts": 7,
+    "hours": 32.5,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "pending": false,
+    "nextDayPending": true,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "kitchenCoverageSeverity": "watch",
+    "cooksScheduled": 1,
+    "bartendersScheduled": 2,
+    "serversScheduled": 2,
+    "baristasScheduled": 1,
+    "bussersScheduled": 1,
+    "barbacksScheduled": 0,
+    "managersScheduled": 0,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
+      },
+      {
+        "name": "Julianna Ornelas",
+        "role": "Server"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
         "role": "Server"
       },
       {
         "name": "James Hernadez",
         "role": "Busser"
+      }
+    ],
+    "note": "Wed Nov 11: 7 scheduled, 32.5 hrs, 0 uncovered, 0 OT. Only 1 cook scheduled.",
+    "lastUpdated": "2026-11-11T15:56:41Z",
+    "source": "Sling daily report email 2026-11-11T15:00Z"
+  },
+  "slingToday": {
+    "date": "Wednesday, November 11",
+    "count": 7,
+    "shifts": 7,
+    "hours": 32.5,
+    "uncovered": 0,
+    "overtime": 0,
+    "employeesOff": 0,
+    "pending": false,
+    "nextDayPending": true,
+    "stale": false,
+    "kitchenCoverageFlag": true,
+    "kitchenCoverageSeverity": "watch",
+    "cooksScheduled": 1,
+    "bartendersScheduled": 2,
+    "serversScheduled": 2,
+    "baristasScheduled": 1,
+    "bussersScheduled": 1,
+    "barbacksScheduled": 0,
+    "managersScheduled": 0,
+    "overtimeFlag": false,
+    "staff": [
+      {
+        "name": "Isael Salvador Narciso",
+        "role": "Cook"
+      },
+      {
+        "name": "Emily Lanzel",
+        "role": "Barista"
+      },
+      {
+        "name": "Tony Rincon",
+        "role": "Bartender"
       },
       {
         "name": "Julianna Ornelas",
-        "role": "Barback"
+        "role": "Server"
+      },
+      {
+        "name": "Andrew Turner",
+        "role": "Bartender"
+      },
+      {
+        "name": "Gabriel Lopez galindo",
+        "role": "Server"
+      },
+      {
+        "name": "James Hernadez",
+        "role": "Busser"
       }
     ],
-    "note": "No Sling email in 3+ days as of Nov 7 run; carried forward.",
-    "lastUpdated": "2026-10-02T11:20:00Z",
-    "source": "Sling daily report email 2026-10-01T14:00Z"
+    "note": "Wed Nov 11: 7 scheduled, 32.5 hrs, 0 uncovered, 0 OT. Only 1 cook scheduled.",
+    "lastUpdated": "2026-11-11T15:56:41Z",
+    "source": "Sling daily report email 2026-11-11T15:00Z"
   },
   "googleAds": {
-    "lastUpdated": "2026-11-07T15:05:00Z",
+    "lastUpdated": "2026-11-11T15:56:41Z",
     "accountDailyBudget": 40.0,
     "yesterday": {
-      "date": "November 6, 2026",
+      "date": "November 10, 2026",
       "spend": 0.0,
       "impressions": 0,
       "clicks": 0,
@@ -364,33 +512,33 @@
       "overBudgetFlag": false,
       "overBudgetAbs": 0.0,
       "overBudgetPct": 0.0,
-      "note": "LIVE read 2026-11-07 via Google Ads campaigns page, acct 343-687-4835: 0 impressions/0 clicks/$0.00 across all 6 campaigns. Date-range selector not visually confirmed (page rendered text only)."
+      "note": "LIVE read 2026-11-11, acct 343-687-4835: all 6 campaigns PAUSED; 0 impr/0 clicks/$0.00 for Nov 4-10 (so Nov 10 also $0). Google shows 'None of your ads are running'."
     },
     "campaigns": [
       {
         "name": "Brewhouse Lunch | Search | Aug 2026",
         "budget": 25.0,
-        "status": "Eligible (Limited)",
+        "status": "Paused",
         "statusDetail": "All ads limited by policy",
-        "impressions": 805,
-        "clicks": 16,
-        "ctr": 1.99,
-        "cost": 23.33,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "cost": 0.0,
         "conversions": 0.0,
-        "cpc": 1.46,
+        "cpc": null,
         "limitedByBudget": false
       },
       {
         "name": "Brewhouse Dinner | Search | Sep 2026",
         "budget": 15.0,
-        "status": "Eligible (Limited)",
+        "status": "Paused",
         "statusDetail": "All ads limited by policy",
-        "impressions": 247,
-        "clicks": 8,
-        "ctr": 3.24,
-        "cost": 6.13,
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": null,
+        "cost": 0.0,
         "conversions": 0.0,
-        "cpc": 0.77,
+        "cpc": null,
         "limitedByBudget": false
       },
       {
@@ -547,7 +695,8 @@
     "reportEmails48h": 4,
     "notice": "Google Ads email Oct 1: automated promotions extracted from location assets start Oct 12, 2026 -- review/opt out if you don't want auto-promos (check none reference discontinued Brunch).",
     "noticeLastUpdated": "2026-10-03T11:15:00Z",
-    "staleFlag": false
+    "staleFlag": false,
+    "allPaused": true
   },
   "yelpAds": {
     "lastUpdated": "2026-09-28T14:23:08Z -- LIVE, biz.yelp.com Ad performance",
@@ -648,10 +797,12 @@
     "carriedForwardThisRun": true,
     "staleFlag": true,
     "staleNote": "Nov 7 run: Yelp for Business login expired again; metrics carried forward from 2026-09-28T14:23:08Z.",
-    "runNote": "Nov 7 run: biz.yelp.com redirected to login; carried forward."
+    "runNote": "Nov 7 run: biz.yelp.com redirected to login; carried forward.",
+    "loginExpired": true,
+    "scrapeStatus": "FAILED 2026-11-11: biz.yelp.com redirected to login; values carried forward from 2026-09-28."
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-11-07T15:05:00Z",
+    "lastUpdated": "2026-11-11T15:56:41Z",
     "actionable": false,
     "adReports24h": 0,
     "items": [
@@ -665,7 +816,7 @@
         "note": "515 page visits from Tripadvisor Ads clicks, Aug 20-Sep 19 2026, a 66.97% increase in page traffic vs. organic. Promotional email, no action needed."
       }
     ],
-    "note": "No TripAdvisor ad-performance email in last 48h (Nov 7 run)."
+    "note": "No TripAdvisor ad-performance email in last 24h (Nov 11 run; only a promo email Nov 10)."
   },
   "reservations": {
     "lastUpdated": "2026-11-11",
@@ -951,175 +1102,167 @@
     "brunchHoursNote": "Carried from 2026-10-02 live check: The Brewhouse Google profile still shows Brunch hours (Sat 11 AM-3 PM, Sun 10 AM-3 PM). Brunch is discontinued -- remove from GBP hours. Not re-verified 2026-10-03.",
     "brunchHoursLastVerified": "2026-10-02T11:20:00Z"
   },
-  "lastUpdated": "2026-11-07T15:05:00Z",
+  "lastUpdated": "2026-11-11T15:56:41Z",
   "toastPrevDay": {
-    "date": "Thursday, November 5",
-    "dateISO": "2026-11-05",
-    "net": 3128.45,
-    "netSales": 3128.45,
-    "gross": 3388.25,
-    "grossSales": 3388.25,
-    "guests": 128,
+    "date": "Monday, November 9",
+    "dateISO": "2026-11-09",
+    "net": 4273.5,
+    "netSales": 4273.5,
+    "gross": 4438.5,
+    "grossSales": 4438.5,
+    "guests": 166,
     "guestsDerived": false,
-    "orders": 90,
+    "orders": 100,
     "ordersDerived": false,
-    "checks": 93,
-    "avgPerOrder": 34.76,
-    "avgOrder": 34.76,
-    "avgSalesPerOrder": 34.76,
-    "avgPerGuest": 24.44,
-    "avgSalesPerGuest": 24.44,
-    "avgPerCheck": 33.64,
-    "avgCheck": 33.64,
-    "laborPct": 21.0,
-    "laborPctOfNet": 21.0,
-    "laborCost": 657.48,
+    "checks": 107,
+    "avgPerOrder": 42.74,
+    "avgOrder": 42.74,
+    "avgSalesPerOrder": 42.74,
+    "avgPerGuest": 25.74,
+    "avgSalesPerGuest": 25.74,
+    "avgPerCheck": 39.94,
+    "avgCheck": 39.94,
+    "laborPct": 24.4,
+    "laborPctOfNet": 24.4,
+    "laborCost": 1041.98,
     "laborCostDerived": false,
     "laborFlag": false,
     "laborSeverity": "ok",
-    "discounts": 259.8,
-    "discountPct": 7.7,
+    "discounts": 165.0,
+    "discountPct": 3.7,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
-    "voidAmount": 66.5,
+    "voidAmount": 131.5,
     "voidAmountDerived": false,
-    "voidItems": 7,
-    "voidOrders": 6,
-    "takeoutSales": 56.8,
+    "voidItems": 13,
+    "voidOrders": 12,
+    "takeoutSales": 0.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-06T15:40Z",
+    "source": "Toast single-location Daily Performance Summary (229 W Montecito St) received 2026-11-10T15:40Z",
     "partial": false,
     "detailPending": false,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-06T17:30:00Z",
+    "lastUpdated": "2026-11-11T15:56:41Z",
     "sdlw": {
-      "net": 3516.5,
-      "gross": 3778.6,
-      "guests": 151,
-      "orders": 90,
-      "laborPct": 20.6,
-      "laborCost": 723.45,
-      "discounts": 262.1,
-      "voids": 99.5
+      "net": 3473.85,
+      "gross": 3557.3,
+      "guests": 126,
+      "orders": 92,
+      "laborPct": 22.5,
+      "laborCost": 780.26,
+      "discounts": 83.45,
+      "voids": 206.45
     },
     "fourWeekAvg": {
-      "net": 4287.13,
-      "gross": 4545.32,
-      "guests": 215,
-      "orders": 129,
-      "laborPct": 22.8,
-      "laborCost": 976.97
+      "net": 3509.79,
+      "gross": 3622.91,
+      "guests": 139,
+      "orders": 99,
+      "laborPct": 23.9,
+      "laborCost": 837.91
     },
     "serviceType": [
       {
         "name": "Dinner",
-        "net": 2291.5,
-        "pct": 73.2
+        "net": 3249.05,
+        "pct": 76.0
       },
       {
         "name": "Lunch",
-        "net": 836.95,
-        "pct": 26.7
+        "net": 1024.45,
+        "pct": 23.9
       }
     ],
     "revenueCenter": [
       {
         "name": "Dining Room",
-        "net": 2232.85,
-        "pct": 71.3
+        "net": 3037.8,
+        "pct": 71.0
       },
       {
         "name": "Patio",
-        "net": 463.5,
-        "pct": 14.8
+        "net": 598.8,
+        "pct": 14.0
       },
       {
         "name": "Front Patio",
-        "net": 402.6,
-        "pct": 12.8
+        "net": 493.9,
+        "pct": 11.5
       },
       {
         "name": "Back Room",
-        "net": 29.5,
-        "pct": 0.9
+        "net": 143.0,
+        "pct": 3.3
       }
     ],
     "salesCategory": [
       {
         "name": "Food",
-        "net": 1678.95,
-        "pct": 53.6
+        "net": 2349.0,
+        "pct": 54.9
       },
       {
         "name": "Draft Beer",
-        "net": 586.0,
-        "pct": 18.7
+        "net": 874.0,
+        "pct": 20.4
       },
       {
         "name": "Liquor",
-        "net": 482.0,
+        "net": 660.0,
         "pct": 15.4
       },
       {
         "name": "Wine",
-        "net": 205.0,
-        "pct": 6.5
+        "net": 241.0,
+        "pct": 5.6
       },
       {
         "name": "No sales category",
-        "net": 95.0,
-        "pct": 3.0
+        "net": 70.5,
+        "pct": 1.6
       },
       {
         "name": "Bottled Beer",
-        "net": 56.0,
-        "pct": 1.7
+        "net": 53.0,
+        "pct": 1.2
       },
       {
         "name": "NA Beverage",
-        "net": 21.0,
+        "net": 26.0,
         "pct": 0.6
-      },
-      {
-        "name": "Espresso Service",
-        "net": 4.5,
-        "pct": 0.1
       }
     ],
     "orderType": [
       {
         "name": "No Dining Option Behavior",
-        "net": 3071.65
+        "net": 4224.5,
+        "pct": 98.8
       },
       {
-        "name": "Take-Out",
-        "net": 56.8
+        "name": "Dine-In",
+        "net": 49.0,
+        "pct": 1.1
       }
     ],
     "orderSource": [
       {
         "name": "In Store",
-        "net": 3128.45
+        "net": 4273.5,
+        "pct": 100.0
       }
     ],
-    "comparison": "Thu Nov 5 vs Thu Oct 29 (SDLW) and prior-4-Thursday avg",
-    "netChangeVsPrevDayPct": -42.6,
-    "note": "Thu Nov 5: net $3,128 (-11.0% SDLW, -27.0% vs 4-wk avg). Labor 21.0% of net ($657). 128 guests, 90 orders. Voids $66.50.",
-    "netChangeVsSDLWPct": -11.0,
-    "netChangeVsPrev4Pct": -27.0,
-    "grossChangeVsSDLWPct": -10.3,
-    "guestsChangeVsSDLWPct": -15.2,
-    "ordersChangeVsSDLWPct": 0.0,
-    "discountsDerived": false
+    "netChangeVsSDLWPct": 23.0,
+    "netChangeVsPrev4Pct": 21.8,
+    "note": "Mon Nov 9: net $4,274 (+23.0% vs SDLW). 166 guests, 100 orders, labor 24.4%."
   },
   "toastPending": {
-    "date": "2026-11-06",
-    "note": "Nov 6 single-location detail + SDLW comps pending (group summary loaded).",
-    "lastChecked": "2026-11-07T15:05:00Z",
-    "resolved": false
+    "date": "2026-11-10",
+    "note": "Nov 10 single-location detail loaded.",
+    "lastChecked": "2026-11-11T15:56:41Z",
+    "resolved": true
   },
   "payroll": {
     "lastUpdated": "2026-09-24T11:10:00Z",
@@ -1593,6 +1736,31 @@
       "count": 12,
       "shifts": 12,
       "hours": 55.75,
+      "uncovered": 0,
+      "overtime": 0,
+      "cooks": 1
+    },
+    {
+      "date": "Monday, November 9",
+      "count": 7,
+      "shifts": 7,
+      "hours": 27.0,
+      "uncovered": 0,
+      "overtime": 0
+    },
+    {
+      "date": "Tuesday, November 10",
+      "count": 6,
+      "shifts": 6,
+      "hours": 25.25,
+      "uncovered": 0,
+      "overtime": 0
+    },
+    {
+      "date": "Wednesday, November 11",
+      "count": 7,
+      "shifts": 7,
+      "hours": 32.5,
       "uncovered": 0,
       "overtime": 0,
       "cooks": 1
