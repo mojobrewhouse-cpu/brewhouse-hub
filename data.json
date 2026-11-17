@@ -1,72 +1,73 @@
 {
-  "date": "Monday, November 16",
+  "date": "Tuesday, November 17",
   "systemStatus": {
     "level": "attention",
-    "runTime": "2026-11-16T15:30:00Z",
-    "runLabel": "MON NOV 16 REFRESH",
-    "headline": "SUN NOV 15 net $5,783 (+14.5% vs Sat), 231 guests, 165 orders, labor 24.3%. Mon: 5 staff / 20 hrs, 1 cook (4A-4A again). Payroll ~$25,930 due Nov 17. Yelp login expired; Google Ads not re-read.",
+    "runTime": "2026-11-17T15:10:00Z",
+    "runLabel": "TUE NOV 17 REFRESH",
+    "headline": "MON NOV 16 net $2,155 (-62.7% vs Sun), 75 guests, 60 orders, labor 32.6%. Tue: 5 staff / 23.25 hrs, 1 cook. PAYROLL (~$25,930) DUE TODAY. Google Ads all paused ($0). Yelp still needs re-login.",
     "resolvedThisRun": [
-      "Toast Nov 15 group summary loaded.",
-      "Sling Nov 16 schedule loaded (5 staff, 20 hrs, no OT).",
+      "Toast Nov 16 group summary loaded.",
+      "Sling Nov 17 schedule loaded (5 staff, 23.25 hrs, no OT).",
+      "Google Ads read LIVE: all 6 campaigns paused, $0 for Nov 10-16.",
       "TripAdvisor: no ad email in 24h."
     ],
     "notResolvedThisRun": [
-      "Toast single-location detail (categories, SDLW comps) not parsed.",
+      "Toast single-location detail (categories, SDLW comps) for Nov 16 not yet received.",
       "Yelp Ads scrape failed: biz.yelp.com requires re-login.",
-      "Google Ads page hung on load (2nd day); carried forward Nov 14 (all paused).",
-      "Sling: 1 cook Mon Nov 16, shift 4:00A-4:00A.",
-      "Payroll Nov 1-14 (~$25,929.60) due Nov 17."
+      "Labor 32.6% of net on Mon Nov 16 (above ~30%).",
+      "Sling: 1 cook Tue Nov 17, shift 4:00A-4:00A (3rd day).",
+      "Payroll Nov 1-14 (~$25,929.60) due TODAY Nov 17 -- 2 action items."
     ]
   },
   "toast": {
-    "date": "Sunday, November 15",
-    "dateISO": "2026-11-15",
-    "net": 5782.75,
-    "netSales": 5782.75,
-    "gross": 5998.65,
-    "grossSales": 5998.65,
-    "guests": 231,
+    "date": "Monday, November 16",
+    "dateISO": "2026-11-16",
+    "net": 2154.9,
+    "netSales": 2154.9,
+    "gross": 2304.9,
+    "grossSales": 2304.9,
+    "guests": 75,
     "guestsDerived": false,
-    "orders": 165,
+    "orders": 60,
     "ordersDerived": false,
     "checks": null,
-    "avgPerOrder": 35.05,
-    "avgOrder": 35.05,
-    "avgSalesPerOrder": 35.05,
-    "avgPerGuest": 25.03,
-    "avgSalesPerGuest": 25.03,
+    "avgPerOrder": 35.92,
+    "avgOrder": 35.92,
+    "avgSalesPerOrder": 35.92,
+    "avgPerGuest": 28.73,
+    "avgSalesPerGuest": 28.73,
     "avgPerCheck": null,
     "avgCheck": null,
-    "laborPct": 24.3,
-    "laborPctOfNet": 24.3,
-    "laborCost": 1405.21,
+    "laborPct": 32.6,
+    "laborPctOfNet": 32.6,
+    "laborCost": 702.5,
     "laborCostDerived": true,
-    "laborFlag": false,
-    "laborSeverity": "ok",
-    "discounts": 215.95,
-    "discountPct": 3.6,
+    "laborFlag": true,
+    "laborSeverity": "warn",
+    "discounts": 149.82,
+    "discountPct": 6.5,
     "discountsDerived": true,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
     "voidAmount": null,
     "voidAmountDerived": false,
-    "voidItems": 5,
+    "voidItems": 2,
     "voidOrders": null,
-    "takeoutOrders": 21,
-    "takeoutSales": 274.25,
-    "dineInOrders": 4,
-    "dineInSales": 61.25,
+    "takeoutOrders": 0,
+    "takeoutSales": 0.0,
+    "dineInOrders": 1,
+    "dineInSales": 33.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "cardPayments": 142,
-    "openOrders": 0,
-    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-16T14:35Z",
+    "cardPayments": 44,
+    "openOrders": 1,
+    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-17T14:27Z",
     "partial": true,
     "detailPending": true,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-16T15:30:00Z",
+    "lastUpdated": "2026-11-17T15:10:00Z",
     "sdlw": null,
     "fourWeekAvg": null,
     "serviceType": [],
@@ -74,62 +75,62 @@
     "salesCategory": [],
     "orderType": [],
     "orderSource": [],
-    "netChangeVsPrevDayPct": 14.5,
+    "netChangeVsPrevDayPct": -62.7,
     "netChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
-    "comparison": "Sun Nov 15 vs Sat Nov 14: net +14.5%, guests +3.6%, orders flat (165). SDLW/4-wk comps pending single-location detail.",
-    "note": "Sun Nov 15: net $5,783 (+14.5% vs Sat). 231 guests, 165 orders, labor 24.3% of net (~$1,405). Discounts 3.6%. No auto-clockouts.",
+    "comparison": "Mon Nov 16 vs Sun Nov 15: net -62.7%, guests -67.5%, orders -63.6%. SDLW/4-wk comps pending single-location detail.",
+    "note": "Mon Nov 16: net $2,155 (-62.7% vs Sun). 75 guests, 60 orders, labor 32.6% of net (~$702) -- elevated. Discounts 6.5%. 1 open order left. No auto-clockouts.",
     "autoClockedOut": []
   },
   "toastLastKnown": {
-    "date": "Sunday, November 15",
-    "dateISO": "2026-11-15",
-    "net": 5782.75,
-    "netSales": 5782.75,
-    "gross": 5998.65,
-    "grossSales": 5998.65,
-    "guests": 231,
+    "date": "Monday, November 16",
+    "dateISO": "2026-11-16",
+    "net": 2154.9,
+    "netSales": 2154.9,
+    "gross": 2304.9,
+    "grossSales": 2304.9,
+    "guests": 75,
     "guestsDerived": false,
-    "orders": 165,
+    "orders": 60,
     "ordersDerived": false,
     "checks": null,
-    "avgPerOrder": 35.05,
-    "avgOrder": 35.05,
-    "avgSalesPerOrder": 35.05,
-    "avgPerGuest": 25.03,
-    "avgSalesPerGuest": 25.03,
+    "avgPerOrder": 35.92,
+    "avgOrder": 35.92,
+    "avgSalesPerOrder": 35.92,
+    "avgPerGuest": 28.73,
+    "avgSalesPerGuest": 28.73,
     "avgPerCheck": null,
     "avgCheck": null,
-    "laborPct": 24.3,
-    "laborPctOfNet": 24.3,
-    "laborCost": 1405.21,
+    "laborPct": 32.6,
+    "laborPctOfNet": 32.6,
+    "laborCost": 702.5,
     "laborCostDerived": true,
-    "laborFlag": false,
-    "laborSeverity": "ok",
-    "discounts": 215.95,
-    "discountPct": 3.6,
+    "laborFlag": true,
+    "laborSeverity": "warn",
+    "discounts": 149.82,
+    "discountPct": 6.5,
     "discountsDerived": true,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
     "voidAmount": null,
     "voidAmountDerived": false,
-    "voidItems": 5,
+    "voidItems": 2,
     "voidOrders": null,
-    "takeoutOrders": 21,
-    "takeoutSales": 274.25,
-    "dineInOrders": 4,
-    "dineInSales": 61.25,
+    "takeoutOrders": 0,
+    "takeoutSales": 0.0,
+    "dineInOrders": 1,
+    "dineInSales": 33.0,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "cardPayments": 142,
-    "openOrders": 0,
-    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-16T14:35Z",
+    "cardPayments": 44,
+    "openOrders": 1,
+    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-17T14:27Z",
     "partial": true,
     "detailPending": true,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-16T15:30:00Z",
+    "lastUpdated": "2026-11-17T15:10:00Z",
     "sdlw": null,
     "fourWeekAvg": null,
     "serviceType": [],
@@ -137,18 +138,18 @@
     "salesCategory": [],
     "orderType": [],
     "orderSource": [],
-    "netChangeVsPrevDayPct": 14.5,
+    "netChangeVsPrevDayPct": -62.7,
     "netChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
-    "comparison": "Sun Nov 15 vs Sat Nov 14: net +14.5%, guests +3.6%, orders flat (165). SDLW/4-wk comps pending single-location detail.",
-    "note": "Sun Nov 15: net $5,783 (+14.5% vs Sat). 231 guests, 165 orders, labor 24.3% of net (~$1,405). Discounts 3.6%. No auto-clockouts.",
+    "comparison": "Mon Nov 16 vs Sun Nov 15: net -62.7%, guests -67.5%, orders -63.6%. SDLW/4-wk comps pending single-location detail.",
+    "note": "Mon Nov 16: net $2,155 (-62.7% vs Sun). 75 guests, 60 orders, labor 32.6% of net (~$702) -- elevated. Discounts 6.5%. 1 open order left. No auto-clockouts.",
     "autoClockedOut": []
   },
   "sling": {
-    "date": "Monday, November 16",
+    "date": "Tuesday, November 17",
     "count": 5,
     "shifts": 5,
-    "hours": 20.0,
+    "hours": 23.25,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -177,29 +178,29 @@
         "shift": "10:15A-4:00P"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "shift": "3:00P-9:30P"
+      },
+      {
+        "name": "Andrew Turner",
         "role": "Bartender",
-        "shift": "3:30P-9:30P"
+        "shift": "3:30P-10:30P"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Gabriel Lopez galindo",
         "role": "Server",
-        "shift": "3:30P-9:00P"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Server",
-        "shift": "4:30P-9:00P"
+        "shift": "4:00P-10:00P"
       }
     ],
-    "note": "Mon Nov 16: 5 scheduled, 20 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift again reads 4:00A-4:00A in Sling; verify. No baristas scheduled.",
-    "lastUpdated": "2026-11-16T15:30:00Z"
+    "note": "Tue Nov 17: 5 scheduled, 23.25 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift reads 4:00A-4:00A in Sling for 3rd straight day; verify. No baristas.",
+    "lastUpdated": "2026-11-17T15:10:00Z"
   },
   "slingLastKnown": {
-    "date": "Monday, November 16",
+    "date": "Tuesday, November 17",
     "count": 5,
     "shifts": 5,
-    "hours": 20.0,
+    "hours": 23.25,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -228,29 +229,29 @@
         "shift": "10:15A-4:00P"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "shift": "3:00P-9:30P"
+      },
+      {
+        "name": "Andrew Turner",
         "role": "Bartender",
-        "shift": "3:30P-9:30P"
+        "shift": "3:30P-10:30P"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Gabriel Lopez galindo",
         "role": "Server",
-        "shift": "3:30P-9:00P"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Server",
-        "shift": "4:30P-9:00P"
+        "shift": "4:00P-10:00P"
       }
     ],
-    "note": "Mon Nov 16: 5 scheduled, 20 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift again reads 4:00A-4:00A in Sling; verify. No baristas scheduled.",
-    "lastUpdated": "2026-11-16T15:30:00Z"
+    "note": "Tue Nov 17: 5 scheduled, 23.25 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift reads 4:00A-4:00A in Sling for 3rd straight day; verify. No baristas.",
+    "lastUpdated": "2026-11-17T15:10:00Z"
   },
   "slingToday": {
-    "date": "Monday, November 16",
+    "date": "Tuesday, November 17",
     "count": 5,
     "shifts": 5,
-    "hours": 20.0,
+    "hours": 23.25,
     "uncovered": 0,
     "overtime": 0,
     "employeesOff": 0,
@@ -279,29 +280,29 @@
         "shift": "10:15A-4:00P"
       },
       {
-        "name": "Katharine Brown",
+        "name": "Augustine Arroyo",
+        "role": "Server",
+        "shift": "3:00P-9:30P"
+      },
+      {
+        "name": "Andrew Turner",
         "role": "Bartender",
-        "shift": "3:30P-9:30P"
+        "shift": "3:30P-10:30P"
       },
       {
-        "name": "Julianna Ornelas",
+        "name": "Gabriel Lopez galindo",
         "role": "Server",
-        "shift": "3:30P-9:00P"
-      },
-      {
-        "name": "Emily Lanzel",
-        "role": "Server",
-        "shift": "4:30P-9:00P"
+        "shift": "4:00P-10:00P"
       }
     ],
-    "note": "Mon Nov 16: 5 scheduled, 20 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift again reads 4:00A-4:00A in Sling; verify. No baristas scheduled.",
-    "lastUpdated": "2026-11-16T15:30:00Z"
+    "note": "Tue Nov 17: 5 scheduled, 23.25 hrs, 0 off, 0 uncovered, 0 OT. Only 1 cook (Isael), shift reads 4:00A-4:00A in Sling for 3rd straight day; verify. No baristas.",
+    "lastUpdated": "2026-11-17T15:10:00Z"
   },
   "googleAds": {
-    "lastUpdated": "2026-11-14T15:20:00Z",
+    "lastUpdated": "2026-11-17T15:10:00Z",
     "accountDailyBudget": 40.0,
     "yesterday": {
-      "date": "November 13, 2026",
+      "date": "November 16, 2026",
       "spend": 0.0,
       "impressions": 0,
       "clicks": 0,
@@ -313,7 +314,7 @@
       "overBudgetFlag": false,
       "overBudgetAbs": 0.0,
       "overBudgetPct": 0.0,
-      "note": "NOT refreshed Nov 16: Google Ads campaigns page (acct 343-687-4835) hung on load again (2nd day). Carried from Nov 14 live read: all 6 campaigns paused, $0."
+      "note": "LIVE Nov 17 read (acct 343-687-4835): all 6 campaigns paused, $0 / 0 impr / 0 clicks for Nov 16 and full Nov 10-16 week. Banner: 'None of your ads are running'."
     },
     "campaigns": [
       {
@@ -402,14 +403,11 @@
     "campaignNote": "Sep 27: Lunch 805 impr / 16 clicks / 1.99% CTR / $23.33; Dinner 247 impr / 8 clicks / 3.24% CTR / $6.13.",
     "accountNote": "Account total for Sep 27: 1,052 impr / 24 clicks / 2.28% CTR / $29.46 / avg CPC $1.23.",
     "last7d": {
-      "range": "Sep 6 - Sep 12, 2026",
-      "spend": 370.56,
-      "spendChangeAbs": 230.54,
-      "impressions": 7113,
-      "impressionsChangeAbs": 4109,
-      "conversions": 5.0,
-      "conversionsCalculating": true,
-      "note": "Not re-read this run (page opened on Yesterday range); Sep 6-12 values carried from prior run."
+      "range": "Nov 10 - 16, 2026",
+      "spend": 0.0,
+      "impressions": 0,
+      "clicks": 0,
+      "conversions": 0.0
     },
     "emailReports24h": 3,
     "emailNote": "4 Google Ads emails in last 24h: 2 'report is ready' (Campaign performance 12:31Z, Brewhouse Daily Campaign Report 15:48Z), 1 quarterly terms-and-policies reminder, 1 Google Tag marketing promo. No disapprovals, no budget alerts. Live campaign numbers NOT re-read this run (4 AM run is email-scan only) -- Sep 13 overspend flag carried forward.",
@@ -609,9 +607,9 @@
     "runNote": "Nov 7 run: biz.yelp.com redirected to login; carried forward.",
     "loginExpired": true,
     "scrapeStatus": {
-      "lastAttempt": "2026-11-16T15:30:00Z",
       "ok": false,
-      "reason": "biz.yelp.com redirected to login -- re-login required. Values carried from 2026-09-28."
+      "checkedAt": "2026-11-17T15:10:00Z",
+      "note": "biz.yelp.com redirected to login on Nov 17 run -- needs re-login. Data shown is last live read (Sep 28)."
     },
     "scrapeFailed": true,
     "scrapeError": "biz.yelp.com redirected to login on 2026-11-12 run; values carried from last live read.",
@@ -619,7 +617,7 @@
     "stale": true
   },
   "tripAdvisor": {
-    "lastUpdated": "2026-11-16T15:30:00Z",
+    "lastUpdated": "2026-11-17T15:10:00Z",
     "actionable": false,
     "adReports24h": 0,
     "items": [
@@ -633,7 +631,7 @@
         "note": "515 page visits from Tripadvisor Ads clicks, Aug 20-Sep 19 2026, a 66.97% increase in page traffic vs. organic. Promotional email, no action needed."
       }
     ],
-    "note": "No TripAdvisor ad-performance email in last 24h (Nov 16 run)."
+    "note": "No TripAdvisor ad-performance email in last 24h (Nov 17 run)."
   },
   "reservations": {
     "lastUpdated": "2026-11-17",
@@ -847,7 +845,7 @@
           "age": "3 weeks ago",
           "isNew": true,
           "severity": "positive",
-          "text": "Awesome coffee shop, great customer service and top quality coffee👍🏼",
+          "text": "Awesome coffee shop, great customer service and top quality coffee\ud83d\udc4d\ud83c\udffc",
           "context": "LIVE from business.google.com/reviews 2026-09-22.",
           "draftReply": "Thanks so much, Levi! So glad the coffee and the service hit the mark -- see you again soon for another cup."
         },
@@ -909,56 +907,56 @@
     "brunchHoursNote": "Carried from 2026-10-02 live check: The Brewhouse Google profile still shows Brunch hours (Sat 11 AM-3 PM, Sun 10 AM-3 PM). Brunch is discontinued -- remove from GBP hours. Not re-verified 2026-10-03.",
     "brunchHoursLastVerified": "2026-10-02T11:20:00Z"
   },
-  "lastUpdated": "2026-11-16T15:30:00Z",
+  "lastUpdated": "2026-11-17T15:10:00Z",
   "toastPrevDay": {
-    "date": "Saturday, November 14",
-    "dateISO": "2026-11-14",
-    "net": 5049.9,
-    "netSales": 5049.9,
-    "gross": 5336.4,
-    "grossSales": 5336.4,
-    "guests": 223,
+    "date": "Sunday, November 15",
+    "dateISO": "2026-11-15",
+    "net": 5782.75,
+    "netSales": 5782.75,
+    "gross": 5998.65,
+    "grossSales": 5998.65,
+    "guests": 231,
     "guestsDerived": false,
     "orders": 165,
     "ordersDerived": false,
     "checks": null,
-    "avgPerOrder": 30.61,
-    "avgOrder": 30.61,
-    "avgSalesPerOrder": 30.61,
-    "avgPerGuest": 22.65,
-    "avgSalesPerGuest": 22.65,
+    "avgPerOrder": 35.05,
+    "avgOrder": 35.05,
+    "avgSalesPerOrder": 35.05,
+    "avgPerGuest": 25.03,
+    "avgSalesPerGuest": 25.03,
     "avgPerCheck": null,
     "avgCheck": null,
-    "laborPct": 38.0,
-    "laborPctOfNet": 38.0,
-    "laborCost": 1918.96,
+    "laborPct": 24.3,
+    "laborPctOfNet": 24.3,
+    "laborCost": 1405.21,
     "laborCostDerived": true,
-    "laborFlag": true,
-    "laborSeverity": "alert",
-    "discounts": 288.17,
-    "discountPct": 5.4,
+    "laborFlag": false,
+    "laborSeverity": "ok",
+    "discounts": 215.95,
+    "discountPct": 3.6,
     "discountsDerived": true,
     "deferredSales": 0.0,
     "refunds": 0.0,
     "refundTotal": 0.0,
     "voidAmount": null,
     "voidAmountDerived": false,
-    "voidItems": 12,
+    "voidItems": 5,
     "voidOrders": null,
-    "takeoutOrders": 1,
-    "takeoutSales": 21.5,
-    "dineInOrders": 2,
-    "dineInSales": 26.75,
+    "takeoutOrders": 21,
+    "takeoutSales": 274.25,
+    "dineInOrders": 4,
+    "dineInSales": 61.25,
     "deliveryOrders": 0,
     "deliverySales": 0.0,
-    "cardPayments": 124,
+    "cardPayments": 142,
     "openOrders": 0,
-    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-15T14:40Z",
+    "source": "Toast Group Daily Performance Summary (All Locations) received 2026-11-16T14:35Z",
     "partial": true,
     "detailPending": true,
     "pending": false,
     "stale": false,
-    "lastUpdated": "2026-11-15T15:30:00Z",
+    "lastUpdated": "2026-11-16T15:30:00Z",
     "sdlw": null,
     "fourWeekAvg": null,
     "serviceType": [],
@@ -966,19 +964,17 @@
     "salesCategory": [],
     "orderType": [],
     "orderSource": [],
-    "netChangeVsPrevDayPct": -10.3,
+    "netChangeVsPrevDayPct": 14.5,
     "netChangeVsSDLWPct": null,
     "netChangeVsPrev4Pct": null,
-    "comparison": "Sat Nov 14 vs Fri Nov 13: net -10.3%, guests -6.7%, orders +10.7%. SDLW/4-wk comps pending single-location detail.",
-    "note": "Sat Nov 14: net $5,050 (-10.3% vs Fri). 223 guests, 165 orders, LABOR 38.0% of net (~$1,919) -- well above normal. Discounts 5.4%. Auto-clockout: Julianna Ornelas.",
-    "autoClockedOut": [
-      "Julianna Ornelas"
-    ]
+    "comparison": "Sun Nov 15 vs Sat Nov 14: net +14.5%, guests +3.6%, orders flat (165). SDLW/4-wk comps pending single-location detail.",
+    "note": "Sun Nov 15: net $5,783 (+14.5% vs Sat). 231 guests, 165 orders, labor 24.3% of net (~$1,405). Discounts 3.6%. No auto-clockouts.",
+    "autoClockedOut": []
   },
   "toastPending": {
-    "date": "2026-11-15",
-    "note": "Group summary loaded; single-location detail for Nov 15 not yet received at run time.",
-    "lastChecked": "2026-11-16T15:30:00Z",
+    "date": "2026-11-16",
+    "note": "Group summary loaded; single-location detail for Nov 16 not yet received at run time.",
+    "lastChecked": "2026-11-17T15:10:00Z",
     "resolved": false
   },
   "payroll": {
@@ -1516,6 +1512,15 @@
       "uncovered": 0,
       "overtime": 0,
       "cooks": 1
+    },
+    {
+      "date": "Monday, November 16",
+      "count": 5,
+      "shifts": 5,
+      "hours": 20.0,
+      "uncovered": 0,
+      "overtime": 0,
+      "cooksScheduled": 1
     }
   ],
   "toastPartial": {
@@ -1523,11 +1528,14 @@
     "note": "Wed Sep 23 single-location detail loaded 2026-09-25 4 AM run."
   },
   "payrollUpcoming": {
-    "lastUpdated": "2026-11-16T15:30:00Z",
+    "lastUpdated": "2026-11-17T15:10:00Z",
     "period": "Nov 1 - Nov 14, 2026",
     "estimatedTotal": 25929.6,
     "dueDate": "2026-11-17",
     "payDate": "2026-11-20",
-    "note": "Toast Payroll review email received Nov 15; due tomorrow (Nov 17)."
+    "note": "Toast Payroll 'Payroll due today' email Nov 17 06:08Z: Nov 1-14 BIWEEKLY payroll due TODAY Nov 17, pay date Nov 20. 2 action items, 2 insights. Submit in Toast Payroll.",
+    "dueToday": true,
+    "actionItems": 2,
+    "insights": 2
   }
 }
