@@ -638,8 +638,18 @@
     "source": "All Sources",
     "today": {
       "date": "Tue, Nov 24",
-      "totalGuests": 0,
-      "bookings": []
+      "totalGuests": 3,
+      "bookings": [
+        {
+          "time": "11:45 AM",
+          "name": "George Tan",
+          "guests": 3,
+          "status": "confirmed",
+          "source": "SpotHopper",
+          "phone": "(626) 379-3460",
+          "notes": ""
+        }
+      ]
     },
     "tomorrow": {
       "date": "Wed, Nov 25",
@@ -647,6 +657,16 @@
       "bookings": []
     },
     "upcoming": [
+      {
+        "time": "11:45 AM",
+        "name": "George Tan",
+        "guests": 3,
+        "status": "confirmed",
+        "source": "SpotHopper",
+        "phone": "(626) 379-3460",
+        "notes": "",
+        "date": "Fri, Nov 27"
+      },
       {
         "time": "6:00 PM",
         "name": "Alxandr Li",
